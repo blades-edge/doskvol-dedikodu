@@ -1,3 +1,5 @@
+> Development requires Node.js 24 (`nvm use`) and `npm ci`. The build uses Astro directly; Jampack post-processing was removed because its dependencies have unresolved security advisories.
+
 # AstroPaper 📄
 
 ![AstroPaper](public/astropaper-og.jpg)
