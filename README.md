@@ -12,6 +12,28 @@ This theme follows best practices and provides accessibility out of the box. Lig
 
 This theme is self-documented \_ which means articles/posts in this theme can also be considered as documentations. Read [the blog posts](https://astro-paper.pages.dev/posts/) or check [the README Documentation Section](#-documentation) for more info.
 
+## Doskvol editorial preview and GitHub Pages
+
+```sh
+npm ci
+npm run build
+npm run dev
+```
+
+Open `http://localhost:4321/doskvol-dedikodu/editorial-preview/`.
+Astro uses `/doskvol-dedikodu/` as its base in development and production;
+`SITE.website` is `https://blades-edge.github.io/doskvol-dedikodu/`.
+Keep internal links and public assets under `import.meta.env.BASE_URL`.
+
+The build runs Jampack in compression-only mode because its installed version
+resolves base-prefixed image URLs against the wrong filesystem directory.
+Astro still generates optimized images; Jampack compresses the output without
+rewriting image URLs.
+
+`build.yml` checks pull requests. `pages.yml` deploys only `main`, including
+manual runs. Before publishing, enable **Settings → Pages → Build and deployment
+→ Source: GitHub Actions**. The editorial prototype does not replace the homepage.
+
 ## 🔥 Features
 
 - [x] type-safe markdown
