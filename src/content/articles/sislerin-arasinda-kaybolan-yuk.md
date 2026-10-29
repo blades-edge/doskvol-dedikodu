@@ -2,7 +2,7 @@
 title: "Sislerin arasında kaybolan bir yük"
 description: "Rıhtım defterinde yedi sandık, arabada altı iz var. Yedinciyi indirdiğini söyleyen işçi, ellerini ceplerinden çıkarmıyor."
 section: Dedikodular
-location: Rıhtım
+district: "Rıhtım"
 author: "ruhi-cengel.json"
 issue: "001.json"
 order: 1

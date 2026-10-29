@@ -2,7 +2,7 @@
 title: "Kızıl Kuşaklar Okulu’nda gece yarısı ziyareti"
 description: "Üç isimsiz konuk, ters çalışan bir saat ve sabaha karşı susturulan bir zil. İpekyalı’daki okulun kapısında yaşananları araştırdık."
 section: Haberler
-location: İpekyalı
+district: "İpekyalı"
 author: "mina-karakarga.json"
 issue: "001.json"
 order: 0

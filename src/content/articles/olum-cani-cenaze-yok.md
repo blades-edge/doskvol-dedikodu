@@ -6,9 +6,10 @@ description: Altıkule'de ölüm çanının çaldığı, bir Ölügören Karga'n
 issue: 001.json
 author: ruhi-cengel.json
 section: Dedikodular
-location: Altıkule
+district: Altıkule
 order: 0
 ---
+
 Terzihanenin karşısında oturan Bayan Vey, kuşu penceresinden izlediğini anlatırken ellerini önlüğüne sildi.
 
 > “Üç kere uçtu, üçünde de aynı yere döndü. Saydım. Kocamı almaya geldiklerinde de o çan çalmıştı. İnsan o sesi bir daha karıştırmaz.”
