@@ -128,6 +128,18 @@ export function articlesForIssue(index: EditorialIndex, id: string) {
     .sort((a, b) => a.data.order - b.data.order);
 }
 
+export function groupSerialChapters(articles: EditorialEntry[]) {
+  const groups = new Map<string, EditorialEntry[]>();
+  for (const article of articles) {
+    const id = article.data.series?.id;
+    if (!id) continue;
+    const chapters = groups.get(id);
+    if (chapters) chapters.push(article);
+    else groups.set(id, [article]);
+  }
+  return Array.from(groups, ([seriesId, chapters]) => ({ seriesId, chapters }));
+}
+
 export function chaptersForSeries(index: EditorialIndex, id: string) {
   return index.articles
     .filter(article => article.data.series?.id === id)

@@ -1,6 +1,6 @@
 import assert from "node:assert/strict";
 import test from "node:test";
-import { buildEditorialIndex, articlesForIssue, chaptersForSeries, issueSlug } from "../src/utils/editorial.ts";
+import { buildEditorialIndex, articlesForIssue, chaptersForSeries, groupSerialChapters, issueSlug } from "../src/utils/editorial.ts";
 function fixture() {
   return {
     issues: [
@@ -83,4 +83,13 @@ test("chapter presentation follows selection order while navigation follows epis
 test("lead must be in the issue selection",()=>{
  const data=fixture();data.issues[0].data.articles=[{id:"rumor"}];
  assert.throws(()=>buildEditorialIndex(data),/Manşet/);
+});
+
+test("serial cards group by series ID while preserving selection order",()=>{
+ const chapter=(id,series)=>({id,data:{series:{id:series}}});
+ const a=chapter("a-2","a"), b=chapter("b-1","b"), c=chapter("a-1","a");
+ assert.deepEqual(groupSerialChapters([a,b,c,{id:"news",data:{}}]),[
+   {seriesId:"a",chapters:[a,c]}, {seriesId:"b",chapters:[b]},
+ ]);
+ assert.deepEqual(groupSerialChapters([]),[]);
 });
