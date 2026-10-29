@@ -32,10 +32,17 @@ const headlines = [
       href={`${import.meta.env.BASE_URL}favicon.svg`}
     />
     <meta name="robots" content="noindex, nofollow" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,600;0,6..72,700;1,6..72,400&display=swap"
+      rel="stylesheet"
+    />
     <title>Tasarım Prototipi | Doskvol Dedikoduları</title>
     <style>
       :root {
-        font-family: Georgia, "Times New Roman", serif;
+        font-family: "Newsreader", Georgia, serif;
+        font-optical-sizing: auto;
         color: #211e1a;
         background: #ddd3bf;
       }
@@ -57,9 +64,16 @@ const headlines = [
         box-shadow: 0 12px 48px #332a2050;
         border: 1px solid #b7a78d;
       }
+      h1,
+      h2,
+      h3 {
+        font-family: "Cormorant Garamond", Georgia, serif;
+        font-weight: 600;
+        text-wrap: balance;
+      }
       .eyebrow {
         font:
-          700 0.72rem/1.5 Georgia,
+          600 0.75rem/1.5 "Newsreader",
           serif;
         text-transform: uppercase;
         letter-spacing: 0.16em;
@@ -71,12 +85,11 @@ const headlines = [
         padding: 1.4rem 0 1rem;
       }
       .masthead h1 {
-        font-family: "Old English Text MT", "UnifrakturCook", Georgia, serif;
         font-size: clamp(2.8rem, 7.3vw, 6.5rem);
-        line-height: 1.04;
-        letter-spacing: -0.05em;
+        line-height: 0.98;
+        letter-spacing: -0.025em;
         margin: 0.2rem 0;
-        font-weight: 900;
+        font-weight: 700;
       }
       .tagline {
         font-style: italic;
@@ -88,7 +101,7 @@ const headlines = [
         gap: 1rem;
         padding: 0.55rem 0;
         border-bottom: 1px solid #322b24;
-        font-size: 0.72rem;
+        font-size: 0.75rem;
         letter-spacing: 0.07em;
         text-transform: uppercase;
       }
@@ -113,21 +126,21 @@ const headlines = [
       }
       .lead {
         padding: 2.2rem 0 1.5rem;
-        text-align: center;
+        text-align: left;
         border-bottom: 1px solid #746a5a;
       }
       .lead h2 {
         max-width: 900px;
-        margin: 0.4rem auto;
+        margin: 0.4rem 0;
         font-size: clamp(2.3rem, 5.3vw, 5.3rem);
         line-height: 1.04;
-        letter-spacing: -0.045em;
+        letter-spacing: -0.015em;
       }
       .lead p {
-        max-width: 660px;
-        margin: 0.9rem auto 0;
-        font-size: 1.13rem;
-        line-height: 1.6;
+        max-width: 65ch;
+        margin: 0.9rem 0 0;
+        font-size: 1.25rem;
+        line-height: 1.5;
       }
       .engraving {
         height: clamp(180px, 32vw, 360px);
@@ -146,7 +159,8 @@ const headlines = [
         content: "";
         position: absolute;
         inset: 0;
-        background: linear-gradient(0deg, #171716dd 0%, transparent 65%),
+        background:
+          linear-gradient(0deg, #171716dd 0%, transparent 65%),
           linear-gradient(90deg, #241e18b0, transparent 65%);
       }
       .engraving::after {
@@ -156,12 +170,12 @@ const headlines = [
         left: 22px;
         color: #eee2cc;
         font-size: clamp(2.5rem, 9vw, 7rem);
-        font-weight: 900;
+        font-weight: 700;
         letter-spacing: 0.2em;
         opacity: 0.78;
       }
       .caption {
-        font-size: 0.7rem;
+        font-size: 0.75rem;
         text-align: left;
         font-style: italic;
       }
@@ -180,16 +194,17 @@ const headlines = [
         padding: 0;
       }
       .story h3 {
-        font-size: 1.65rem;
+        font-size: 2rem;
         line-height: 1.14;
         margin: 0.45rem 0;
       }
       .story p {
-        line-height: 1.55;
+        font-size: 1.125rem;
+        line-height: 1.65;
         margin: 0.65rem 0;
       }
       .byline {
-        font-size: 0.73rem;
+        font-size: 0.8125rem;
         font-style: italic;
       }
       .serial {
@@ -202,11 +217,16 @@ const headlines = [
       }
       .serial h2 {
         font-size: 2rem;
+        line-height: 1.14;
         margin: 0.4rem 0;
       }
       .serial p {
-        line-height: 1.55;
+        font-size: 1.125rem;
+        line-height: 1.65;
         margin: 0.3rem 0;
+      }
+      .serial .byline {
+        font-size: 0.8125rem;
       }
       .serial .marker {
         font-size: 3rem;
@@ -231,9 +251,6 @@ const headlines = [
       @media (max-width: 720px) {
         .paper {
           margin: 0.5rem;
-        }
-        .issue {
-          font-size: 0.62rem;
         }
         .columns {
           grid-template-columns: 1fr;
@@ -261,14 +278,15 @@ const headlines = [
       <header>
         <div class="masthead">
           <div class="eyebrow">Akoros'un bağımsız sesi · Doskvol</div>
-          <h1>Doskvol Dedikoduları</h1>
+          <h1>Doskvol<br />Dedikoduları</h1>
           <div class="tagline">
             Duyduğunuza inanmayın. Duymadıklarınızdan korkun.
           </div>
         </div>
         <div class="issue">
           <span>Sayı 001</span><span>Şehrin karanlık sokaklarından</span><span
-            >Bedeli: 2 mangır</span>
+            >Bedeli: 2 mangır</span
+          >
         </div>
         <nav class="nav" aria-label="Yayın bölümleri">
           <a href="#manset">Manşet</a><a href="#dedikodular">Dedikodular</a><a
@@ -279,7 +297,7 @@ const headlines = [
       <main>
         <section id="manset" class="lead" aria-labelledby="lead-title">
           <div class="eyebrow">Bu haftanın manşeti · Özel haber</div>
-          <h2 id="lead-title">Sis Çöktü, Şehir Konuşmaya Başladı</h2>
+          <h2 id="lead-title">Sis çöktü, şehir konuşmaya başladı</h2>
           <p>
             Doskvol'un dar sokaklarında her kapının ardında başka bir hikâye
             saklı. Bazıları doğru, bazıları tehlikeli; hepsi basılmaya değer.
