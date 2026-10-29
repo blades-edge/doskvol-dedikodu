@@ -40,7 +40,6 @@ const older = publication.issues[position + 1];
 <html lang="tr">
   <head><EditorialHead title={`Sayı ${issueSlug(number)} · ${title}`} /></head>
   <body>
-    <div class="notice">Yayın yapısı önizlemesi · Özgün kurgu metinler</div>
     <div class="paper">
       <header>
         <div class="masthead">
@@ -66,7 +65,11 @@ const older = publication.issues[position + 1];
       <main>
         <section id="manset" class="lead" aria-labelledby="lead-title">
           <div class="eyebrow">
-            Bu sayının manşeti · {lead.data.location ?? lead.data.section}
+            Bu sayının manşeti · {
+              [lead.data.district, lead.data.location]
+                .filter(Boolean)
+                .join(" · ") || lead.data.section
+            }
           </div>
           <h2 id="lead-title"><a href={`${prefix}${lead.id}/`}>{title}</a></h2>
           <p>{description}</p>
@@ -132,7 +135,9 @@ const older = publication.issues[position + 1];
                   ) : (
                     <article class="story">
                       <div class="eyebrow">
-                        {article.data.location ?? article.data.section}
+                        {[article.data.district, article.data.location]
+                          .filter(Boolean)
+                          .join(" · ") || article.data.section}
                       </div>
                       <h3>
                         <a href={`${prefix}${article.id}/`}>

@@ -1,15 +1,15 @@
 ---
-import type { CollectionEntry } from "astro:content";
 import EditorialHead from "@components/EditorialHead.astro";
 import {
   articlesForIssue,
   chaptersForSeries,
   issueSlug,
   type EditorialIndex,
+  type EditorialEntry,
 } from "@utils/editorial";
 
 interface Props {
-  article: CollectionEntry<"articles">;
+  article: EditorialEntry;
   publication: EditorialIndex;
 }
 const { article, publication } = Astro.props;
@@ -38,9 +38,6 @@ const related = articlesForIssue(publication, issue.id).find(
   <head><EditorialHead title={title} /></head>
   <body>
     <a class="reading-skip" href="#reading-content">Yazıya geç</a>
-    <div class="notice">
-      Tasarım prototipi · Bu metin bu gazete için yazılmış özgün kurgudur.
-    </div>
     <div class="paper reading-paper">
       <header class="masthead reading-masthead">
         <div class="eyebrow">Akoros’un bağımsız sesi · Doskvol</div>

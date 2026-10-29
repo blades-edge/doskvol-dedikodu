@@ -3,7 +3,9 @@ import { defineCollection, reference } from "astro:content";
 import { z } from "astro/zod";
 import { glob } from "astro/loaders";
 
-const cmsReference = <T extends "articles" | "issues" | "authors" | "serials">(
+const cmsReference = <
+  T extends "articles" | "issues" | "authors" | "serials" | "chapters",
+>(
   collection: T
 ) => z.preprocess(contentReferenceId, reference(collection));
 const optionalText = z.preprocess(emptyToUndefined, z.string().optional());
@@ -31,6 +33,10 @@ const issues = defineCollection({
       price: z.string().min(1),
       draft: z.boolean().default(false),
       lead: z.preprocess(contentReferenceId, reference("articles").optional()),
+      chapters: z.preprocess(
+        emptyToUndefined,
+        z.array(cmsReference("chapters")).default([])
+      ),
       cover: image(),
       coverAlt: z.string().min(1),
       coverCaption: z.string().min(1),
@@ -42,7 +48,8 @@ const articles = defineCollection({
   schema: z.object({
     title: z.string().min(1),
     description: z.string().min(1),
-    section: z.string().min(1),
+    section: z.enum(["Haberler", "Dedikodular"]),
+    district: optionalText,
     location: optionalText,
     author: cmsReference("authors"),
     issue: cmsReference("issues"),
@@ -50,13 +57,20 @@ const articles = defineCollection({
       emptyToUndefined,
       z.number().int().nonnegative().default(1000)
     ),
-    series: z.preprocess(contentReferenceId, reference("serials").optional()),
-    episode: z.preprocess(
-      emptyToUndefined,
-      z.number().int().positive().optional()
-    ),
     spoiler: optionalText,
   }),
 });
 
-export const collections = { authors, serials, issues, articles };
+const chapters = defineCollection({
+  loader: glob({ pattern: "*.md", base: "./src/content/chapters" }),
+  schema: z.object({
+    title: z.string().min(1),
+    description: z.string().min(1),
+    author: cmsReference("authors"),
+    series: cmsReference("serials"),
+    episode: z.number().int().positive(),
+    spoiler: optionalText,
+  }),
+});
+
+export const collections = { authors, serials, issues, articles, chapters };

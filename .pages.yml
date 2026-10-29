@@ -59,6 +59,16 @@ content:
           value: "{name}"
           label: "{fields.title}"
           search: "name,fields.title"
+      - name: chapters
+        label: Bu sayıdaki tefrika bölümleri
+        type: reference
+        description: "Önce Tefrika bölümleri menüsünde bölümü hazırlayın, sonra burada seçin. Seçilmeyen bölümler yayımlanmaz."
+        options:
+          collection: chapters
+          multiple: true
+          value: "{name}"
+          label: "Bölüm {fields.episode} · {fields.title}"
+          search: "name,fields.title,fields.episode"
       - name: cover
         label: Kapak gravürü
         type: image
@@ -113,29 +123,23 @@ content:
           search: "name,fields.name"
       - name: section
         label: Bölüm
-        type: string
+        type: select
         required: true
-        description: "Örneğin Haberler, Dedikodular veya Tefrika. Aynı adı taşıyan yazılar sayı sayfasında birlikte görünür."
-      - { name: location, label: Mahalle / yer, type: string }
+        options:
+          values: [Haberler, Dedikodular]
+        description: "Tefrika metinlerini ayrı Tefrika bölümleri menüsünden ekleyin."
+      - name: district
+        label: Mahalle (isteğe bağlı)
+        type: select
+        options:
+          values: [İpekyalı, Rıhtım, Kömürsırtı, Altıkule]
+        description: "Gazetede kullanılan mahallelerden seçin. Listede olmayan mahalle veya ayrıntılı mekân adını aşağıya yazabilirsiniz."
+      - { name: location, label: Ek yer / serbest mekân adı, type: string }
       - name: order
         label: Sıralama önceliği (isteğe bağlı)
         type: number
         options: { min: 0 }
         description: "Küçük değer önce gelir. Boş bırakırsanız 1000 kabul edilir. Öne almak için 10, 20 gibi değerler verebilirsiniz. Aynı değerler kullanılabilir; eşitlikte dosya adına göre sıralanır. Manşet ayrıca sayı kaydından seçilir."
-      - name: series
-        label: Tefrika
-        type: reference
-        description: "Yalnızca bir serinin bölümü olan yazılarda seçin. Normal haberlerde boş bırakın."
-        options:
-          collection: serials
-          value: "{name}"
-          label: "{fields.title}"
-          search: "name,fields.title"
-      - name: episode
-        label: Tefrika bölüm numarası
-        type: number
-        options: { min: 1 }
-        description: "Tefrika seçtiyseniz girin. Bölüm sırası farklı sayılarda da devam eder."
       - { name: spoiler, label: Spoiler uyarısı, type: text }
       - name: body
         label: Yazı metni
@@ -144,6 +148,54 @@ content:
         options:
           format: markdown
           switcher: true
+
+  - name: chapters
+    label: Tefrika bölümleri
+    type: collection
+    path: src/content/chapters
+    format: yaml-frontmatter
+    subfolders: false
+    filename:
+      template: "{primary}.md"
+      field: create
+    operations:
+      rename: false
+    view:
+      primary: title
+      fields: [title, series, episode, author]
+      sort: [title, episode]
+    fields:
+      - { name: title, label: Bölüm başlığı, type: string, required: true }
+      - { name: description, label: Spot / kısa özet, type: text, required: true }
+      - name: series
+        label: Tefrika
+        type: reference
+        required: true
+        options:
+          collection: serials
+          value: "{name}"
+          label: "{fields.title}"
+          search: "name,fields.title"
+      - name: episode
+        label: Bölüm numarası
+        type: number
+        required: true
+        options: { min: 1 }
+      - name: author
+        label: Yazar
+        type: reference
+        required: true
+        options:
+          collection: authors
+          value: "{name}"
+          label: "{fields.name}"
+          search: "name,fields.name"
+      - { name: spoiler, label: Spoiler uyarısı, type: text }
+      - name: body
+        label: Bölüm metni
+        type: rich-text
+        required: true
+        options: { format: markdown, switcher: true }
 
   - name: authors
     label: Yazarlar

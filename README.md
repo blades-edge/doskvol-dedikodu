@@ -23,9 +23,10 @@ update. Astro generates the optimized images.
 ### Sayılar ve içerikler
 
 - `src/content/issues/*.json`: sayı numarası, tarih, kapak, manşet yazısı ve baskı bilgileri.
-- `src/content/articles/*.md`: haber, dedikodu veya tefrika metni. Her yazı bir `issue` ve bir `author` kaydına bağlanır. `section` bölüm adını belirler. `order` isteğe bağlı sıralama önceliğidir: küçük değer önce gelir; boş değer 1000 kabul edilir. Eşit öncelikler dosya adına göre sıralanır ve derlemeyi durdurmaz.
+- `src/content/articles/*.md`: haber veya dedikodu metni. Her yazı bir `issue` ve bir `author` kaydına bağlanır. `section` bölüm adını belirler. `order` isteğe bağlı sıralama önceliğidir: küçük değer önce gelir; boş değer 1000 kabul edilir. Eşit öncelikler dosya adına göre sıralanır ve derlemeyi durdurmaz.
 - `src/content/authors/*.json`: ortak yazar kayıtları; dosya adı yazar kimliğidir.
-- `src/content/serials/*.json`: birden fazla sayıda sürebilen tefrikalar. Yazıdaki `series` ve `episode` alanları birlikte girilir.
+- `src/content/serials/*.json`: birden fazla sayıda sürebilen tefrikalar. Bölümler ayrı koleksiyonda tutulur.
+- `src/content/chapters/*.md`: tefrika bölümü; `series`, `episode`, yazar ve metin. Sayı bağlantısı burada tutulmaz. Sayı kaydındaki `chapters` listesi yayımlanacak bölümleri seçer; seçilmeyen veya yalnızca taslak sayıya bağlanan bölümler görünmez.
 
 Önizlemenin kökü en yüksek numaralı sayıyı gösterir. Her sayının kalıcı adresi
 `/doskvol-dedikodu/editorial-preview/sayilar/001/` biçimindedir. Arşiv
@@ -50,7 +51,7 @@ kaydetmek main’i değiştirmez ve mevcut yayın akışını tetiklemez. Deneme
 ilişkilerin ve derlemenin hâlâ doğru olduğunu gösterir. Yerel önizlemeye almak
 isterseniz aynı daldayken `git pull --ff-only` çalıştırın.
 
-Menüler: **Sayılar**, **Yazılar**, **Yazarlar**, **Tefrikalar**. Yazar, sayı,
+Menüler: **Sayılar**, **Yazılar**, **Yazarlar**, **Tefrikalar**, **Tefrika bölümleri**. Yazar, sayı,
 manşet ve tefrika alanları aramalı seçimlerle doldurulur. Dosya adları
 ilişkilerin ve yazı adreslerinin kimliğidir; başlık veya imza değiştirmek
 bunları değiştirmez. CMS’de kayıtlı ilişkiler `.json` / `.md` uzantısıyla
@@ -69,9 +70,9 @@ Yeni sayı sırası:
    arşiv ve varsa tefrika bağlantıları otomatik oluşur.
 
 Taslak sayılar ve yazıları önizlemede, arşivde ve tefrika geçişlerinde görünmez.
-Bir tefrika bölümünü normal habere çevirirken hem **Tefrika** hem **Bölüm
-numarası** alanını boşaltın. Bölüm adları serbest metindir; aynı yazılışla
-girilmiş olanlar birlikte gösterilir.
+Haber/dedikodu bölümü sabit seçimdir. Mahalle listesi gazetede kullanılan mevcut adları içerir; serbest mekân alanına listede olmayan mahalle, sokak veya bina yazılabilir. İki alan doluysa birlikte gösterilir.
+
+Tefrika için önce seriyi, ardından **Tefrika bölümleri** menüsünden bölümü hazırlayın. Sonra **Sayılar → Bu sayıdaki tefrika bölümleri** alanında seçin. Bir bölüm yalnızca bir yayımlanmış sayıya bağlanabilir. Aynı seride bölüm numaraları benzersiz olmalıdır. Eski bölümün okuma adresi korunmuştur.
 
 Görseller `src/assets/images` içinde tutulur. CMS, kapak ve metin içi görsel
 alanlarına `../../assets/images/...` yolunu yazar; sayı ve yazı klasörlerinden

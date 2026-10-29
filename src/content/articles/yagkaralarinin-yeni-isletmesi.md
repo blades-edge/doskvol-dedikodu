@@ -2,7 +2,7 @@
 title: "Yağkaralarının yeni işletmesi hakkında söylentiler"
 description: "İpekyalı’daki yeni çamaşırhanenin tabelası gündüz okunuyor, geceleri değişiyor. Komşuların asıl merakı, içeride hiç çamaşır görülmemesi."
 section: Dedikodular
-location: İpekyalı
+district: "İpekyalı"
 author: "isimsiz-tanik.json"
 issue: "001.json"
 order: 2
