@@ -19,7 +19,6 @@ export function buildEditorialIndex(content: EditorialContent) {
   const authorsById = new Map(content.authors.map(entry => [entry.id, entry]));
   const serialsById = new Map(content.serials.map(entry => [entry.id, entry]));
   const numbers = new Set<number>();
-  const positions = new Set<string>();
   const episodes = new Set<string>();
 
   for (const issue of content.issues) {
@@ -32,16 +31,12 @@ export function buildEditorialIndex(content: EditorialContent) {
       throw new Error(`${issue.id}: Manşet bu sayıya ait bir yazı olmalı.`);
   }
   for (const article of content.articles) {
-    const { issue, author, series, episode, order } = article.data;
+    const { issue, author, series, episode } = article.data;
     if (!issuesById.has(issue.id))
       throw new Error(`${article.id}: Sayı bulunamadı: ${issue.id}`);
     if (issuesById.get(issue.id)!.data.draft) continue;
     if (!authorsById.has(author.id))
       throw new Error(`${article.id}: Yazar bulunamadı: ${author.id}`);
-    const position = `${issue.id}:${order}`;
-    if (positions.has(position))
-      throw new Error(`${issue.id}: Yazı sırası tekrarlanıyor: ${order}`);
-    positions.add(position);
     if ((series !== undefined) !== (episode !== undefined))
       throw new Error(
         `${article.id}: Tefrika ve bölüm numarası birlikte girilmeli.`
@@ -79,7 +74,11 @@ export type EditorialIndex = ReturnType<typeof buildEditorialIndex>;
 export function articlesForIssue(index: EditorialIndex, id: string) {
   return index.articles
     .filter(article => article.data.issue.id === id)
-    .sort((a, b) => a.data.order - b.data.order);
+    .sort((a, b) => {
+      const priority = (a.data.order ?? 1000) - (b.data.order ?? 1000);
+      if (priority) return priority;
+      return a.id < b.id ? -1 : a.id > b.id ? 1 : 0;
+    });
 }
 
 export function chaptersForSeries(index: EditorialIndex, id: string) {

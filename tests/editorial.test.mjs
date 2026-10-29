@@ -36,7 +36,6 @@ for (const [name, mutate, message] of [
   ["duplicate issue number", data => data.issues[1].data.number = 1, /sayı numarası/],
   ["missing author", data => data.articles[0].data.author.id = "missing", /Yazar bulunamadı/],
   ["missing issue", data => data.articles[1].data.issue.id = "missing", /Sayı bulunamadı/],
-  ["duplicate article order", data => data.articles[1].data.order = 0, /Yazı sırası/],
   ["missing episode", data => delete data.articles[1].data.episode, /birlikte/],
   ["episode without series", data => delete data.articles[1].data.series, /birlikte/],
   ["missing series", data => data.articles[1].data.series.id = "missing", /Tefrika bulunamadı/],
@@ -65,4 +64,21 @@ test("a published issue still requires its own lead", () => {
   const data = fixture();
   delete data.issues[0].data.lead;
   assert.throws(() => buildEditorialIndex(data), /Manşet/);
+});
+
+test("equal priorities use stable file IDs regardless of input order", () => {
+  const data = fixture();
+  data.articles[1].data.order = 0;
+  const first = articlesForIssue(buildEditorialIndex(data), "one").map(a => a.id);
+  data.articles.reverse();
+  assert.deepEqual(articlesForIssue(buildEditorialIndex(data), "one").map(a => a.id), first);
+  assert.deepEqual(first, ["chapter-one", "news"]);
+});
+
+test("unset priorities go after explicit priorities and ties remain stable", () => {
+  const data = fixture();
+  delete data.articles[1].data.order;
+  assert.deepEqual(articlesForIssue(buildEditorialIndex(data), "one").map(a => a.id), ["news", "chapter-one"]);
+  delete data.articles[2].data.order;
+  assert.deepEqual(articlesForIssue(buildEditorialIndex(data), "one").map(a => a.id), ["chapter-one", "news"]);
 });

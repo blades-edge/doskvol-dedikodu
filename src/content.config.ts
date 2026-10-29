@@ -46,7 +46,10 @@ const articles = defineCollection({
     location: optionalText,
     author: cmsReference("authors"),
     issue: cmsReference("issues"),
-    order: z.number().int().nonnegative(),
+    order: z.preprocess(
+      emptyToUndefined,
+      z.number().int().nonnegative().default(1000)
+    ),
     series: z.preprocess(contentReferenceId, reference("serials").optional()),
     episode: z.preprocess(
       emptyToUndefined,
