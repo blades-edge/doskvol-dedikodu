@@ -10,6 +10,49 @@ const { title } = Astro.props;
 
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
+<script is:inline>
+  (() => {
+    const key = "doskvol-appearance";
+    const valid = value => ["day", "night", "device"].includes(value);
+    const media = window.matchMedia("(prefers-color-scheme: dark)");
+    let preference = "device";
+    try {
+      const saved = localStorage.getItem(key);
+      if (valid(saved)) preference = saved;
+    } catch {
+      // Private browsing may deny storage; the current page still works.
+    }
+    const paint = () => {
+      const dark =
+        preference === "night" || (preference === "device" && media.matches);
+      document.documentElement.dataset.theme = dark ? "dark" : "light";
+      document.querySelectorAll("[data-theme-choice]").forEach(button => {
+        button.setAttribute(
+          "aria-pressed",
+          String(button.dataset.themeChoice === preference)
+        );
+      });
+    };
+    paint();
+    document.addEventListener("DOMContentLoaded", paint, { once: true });
+    media.addEventListener("change", paint);
+    document.addEventListener("doskvol:theme", event => {
+      if (!valid(event.detail)) return;
+      preference = event.detail;
+      try {
+        localStorage.setItem(key, preference);
+      } catch {
+        // Private browsing may deny storage; the current page still works.
+      }
+      paint();
+    });
+    window.addEventListener("storage", event => {
+      if (event.key !== key && event.key !== null) return;
+      preference = valid(event.newValue) ? event.newValue : "device";
+      paint();
+    });
+  })();
+</script>
 <link
   rel="icon"
   type="image/svg+xml"

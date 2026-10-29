@@ -1,4 +1,5 @@
 ---
+import WeatherTheme from "@components/WeatherTheme.astro";
 import EditorialHead from "@components/EditorialHead.astro";
 import {
   articlesForIssue,
@@ -40,6 +41,7 @@ const related = articlesForIssue(publication, issue.id).find(
     <a class="reading-skip" href="#reading-content">Yazıya geç</a>
     <div class="paper reading-paper">
       <header class="masthead reading-masthead">
+        <WeatherTheme />
         <div class="eyebrow">Akoros’un bağımsız sesi · Doskvol</div>
         <a class="reading-wordmark" href={preview}>Doskvol Dedikoduları</a>
         <div class="tagline">

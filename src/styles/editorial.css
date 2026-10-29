@@ -475,3 +475,80 @@ footer {
   height: auto;
   margin: 1.8em 0 0.5em;
 }
+
+/* One print palette, inverted as a whole for the night edition. */
+:root[data-theme="dark"] {
+  filter: invert(0.95);
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    filter: invert(0.95);
+  }
+}
+body {
+  min-height: 100vh;
+}
+.masthead {
+  position: relative;
+  padding-inline: 10rem;
+}
+.weather-theme {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 9rem;
+  padding: 0.4rem;
+  border: 3px double #40392f;
+}
+.weather-caption {
+  font-size: 0.65rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding-bottom: 0.25rem;
+  border-bottom: 1px solid #a79b87;
+}
+.weather-choices {
+  display: flex;
+  gap: 0.15rem;
+  margin-top: 0.3rem;
+}
+.weather-choices button {
+  flex: 1;
+  min-width: 0;
+  border: 3px double transparent;
+  background: transparent;
+  color: inherit;
+  font: inherit;
+  font-size: 0.65rem;
+  padding: 0.1rem;
+  cursor: pointer;
+}
+.weather-choices button[aria-pressed="true"] {
+  border-color: #40392f;
+}
+.weather-choices button:focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: 2px;
+}
+.weather-choices img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1;
+  object-fit: contain;
+}
+.weather-choices span {
+  display: block;
+  margin-top: 0.15rem;
+}
+@media (max-width: 900px) {
+  .masthead {
+    padding-inline: 0;
+  }
+  .weather-theme {
+    position: static;
+    transform: none;
+    margin: 0 0 0.8rem auto;
+  }
+}
