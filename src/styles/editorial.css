@@ -184,6 +184,28 @@ h3 {
   line-height: 1.14;
   margin: 0.4rem 0;
 }
+.serial-chapters {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  min-width: 0;
+}
+.serial-chapter + .serial-chapter {
+  border-top: 1px solid #a79b87;
+  margin-top: 1.3rem;
+  padding-top: 1.3rem;
+}
+.serial-chapter-title {
+  font-size: 1.35rem;
+  line-height: 1.25;
+  margin: 0 0 0.6rem;
+}
+.serial-chapter-title a {
+  text-decoration: none;
+}
+.serial-chapter-title a:hover {
+  text-decoration: underline;
+}
 .serial p {
   font-size: 1.125rem;
   line-height: 1.65;

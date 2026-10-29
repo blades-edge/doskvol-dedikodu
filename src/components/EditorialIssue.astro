@@ -4,6 +4,7 @@ import type { CollectionEntry } from "astro:content";
 import EditorialHead from "./EditorialHead.astro";
 import {
   articlesForIssue,
+  groupSerialChapters,
   issueSlug,
   type EditorialIndex,
 } from "@utils/editorial";
@@ -98,57 +99,79 @@ const older = publication.issues[position + 1];
                     : "columns"
                 }
               >
-                {section.articles.map(article => {
-                  const author = publication.authorsById.get(
-                    article.data.author.id
-                  )!;
-                  const series =
-                    article.data.series &&
-                    publication.serialsById.get(article.data.series.id)!;
-                  return series ? (
-                    <article class="serial">
-                      <div>
-                        <div class="eyebrow">Edebiyat ve tefrika</div>
-                        <div class="marker" aria-hidden="true">
-                          ❦
+                {section.articles.some(article => article.data.series)
+                  ? groupSerialChapters(section.articles).map(group => {
+                      const series = publication.serialsById.get(
+                        group.seriesId
+                      )!;
+                      return (
+                        <article class="serial">
+                          <div>
+                            <div class="eyebrow">Edebiyat ve tefrika</div>
+                            <div class="marker" aria-hidden="true">
+                              ❦
+                            </div>
+                            <h3>
+                              <a href={`${prefix}${group.chapters[0].id}/`}>
+                                {series.data.title}
+                              </a>
+                            </h3>
+                          </div>
+                          <ol
+                            class="serial-chapters"
+                            aria-label={`${series.data.title} — bu sayıdaki bölümler`}
+                          >
+                            {group.chapters.map(chapter => (
+                              <li class="serial-chapter">
+                                <h4 class="serial-chapter-title">
+                                  <a href={`${prefix}${chapter.id}/`}>
+                                    Bölüm {chapter.data.episode} ·{" "}
+                                    {chapter.data.title}
+                                  </a>
+                                </h4>
+                                <p>{chapter.data.description}</p>
+                                <p class="byline">
+                                  —{" "}
+                                  {
+                                    publication.authorsById.get(
+                                      chapter.data.author.id
+                                    )!.data.name
+                                  }
+                                </p>
+                                <a
+                                  class="reading-link"
+                                  href={`${prefix}${chapter.id}/`}
+                                >
+                                  Bölümü oku <span aria-hidden="true">→</span>
+                                </a>
+                              </li>
+                            ))}
+                          </ol>
+                        </article>
+                      );
+                    })
+                  : section.articles.map(article => (
+                      <article class="story">
+                        <div class="eyebrow">
+                          {[article.data.district, article.data.location]
+                            .filter(Boolean)
+                            .join(" · ") || article.data.section}
                         </div>
                         <h3>
                           <a href={`${prefix}${article.id}/`}>
-                            {series.data.title}
+                            {article.data.title}
                           </a>
                         </h3>
-                      </div>
-                      <div>
-                        <div class="eyebrow">
-                          Bölüm {article.data.episode} · {article.data.title}
-                        </div>
                         <p>{article.data.description}</p>
-                        <p class="byline">— {author.data.name}</p>
-                        <a
-                          class="reading-link"
-                          href={`${prefix}${article.id}/`}
-                        >
-                          Bölümü oku <span aria-hidden="true">→</span>
-                        </a>
-                      </div>
-                    </article>
-                  ) : (
-                    <article class="story">
-                      <div class="eyebrow">
-                        {[article.data.district, article.data.location]
-                          .filter(Boolean)
-                          .join(" · ") || article.data.section}
-                      </div>
-                      <h3>
-                        <a href={`${prefix}${article.id}/`}>
-                          {article.data.title}
-                        </a>
-                      </h3>
-                      <p>{article.data.description}</p>
-                      <div class="byline">— {author.data.name}</div>
-                    </article>
-                  );
-                })}
+                        <div class="byline">
+                          —{" "}
+                          {
+                            publication.authorsById.get(article.data.author.id)!
+                              .data.name
+                          }
+                        </div>
+                      </article>
+                    ))}
               </div>
             </section>
           ))
