@@ -4,8 +4,6 @@ description: "Üç isimsiz konuk, ters çalışan bir saat ve sabaha karşı sus
 section: Haberler
 district: "İpekyalı"
 author: "mina-karakarga.json"
-issue: "001.json"
-order: 0
 ---
 
 İpekyalı’da bir kapının gece yarısı açılması haber sayılmaz. Aynı kapının üç kez açılması, her seferinde başka bir yüzün görünmesi ve içerideki saatin her konuktan sonra bir saat geri gitmesi ise matbaamızın mürekkebine değer. Kızıl Kuşaklar Okulu’nun karşısındaki apartmanda oturan üç kişi, dün gece gördüklerini birbirinden habersiz anlattı. Saat konusunda anlaşamadılar. Kapı konusunda hepsi aynı şeyi söyledi: İçeri girenler vardı, çıkan yoktu.

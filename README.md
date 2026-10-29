@@ -23,7 +23,7 @@ update. Astro generates the optimized images.
 ### Sayılar ve içerikler
 
 - `src/content/issues/*.json`: sayı numarası, tarih, kapak, manşet yazısı ve baskı bilgileri.
-- `src/content/articles/*.md`: haber veya dedikodu metni. Her yazı bir `issue` ve bir `author` kaydına bağlanır. `section` bölüm adını belirler. `order` isteğe bağlı sıralama önceliğidir: küçük değer önce gelir; boş değer 1000 kabul edilir. Eşit öncelikler dosya adına göre sıralanır ve derlemeyi durdurmaz.
+- `src/content/articles/*.md`: haber veya dedikodu metni. Yazı yalnızca yazarına bağlıdır; bölüm adı Haberler veya Dedikodular olarak seçilir. Hangi sayıda ve hangi sırada yer alacağını sayı kaydındaki `articles` listesi belirler.
 - `src/content/authors/*.json`: ortak yazar kayıtları; dosya adı yazar kimliğidir.
 - `src/content/serials/*.json`: birden fazla sayıda sürebilen tefrikalar. Bölümler ayrı koleksiyonda tutulur.
 - `src/content/chapters/*.md`: tefrika bölümü; `series`, `episode`, yazar ve metin. Sayı bağlantısı burada tutulmaz. Sayı kaydındaki `chapters` listesi yayımlanacak bölümleri seçer; seçilmeyen veya yalnızca taslak sayıya bağlanan bölümler görünmez.
@@ -33,8 +33,7 @@ update. Astro generates the optimized images.
 `/doskvol-dedikodu/editorial-preview/arsiv/` adresinde oluşur. Yazıların mevcut
 adresleri korunur; yalnızca içerik dosyaları koleksiyona taşınmıştır.
 
-Yeni sayı için mevcut sayı kaydını ve yazılarını örnek alın. Yayıma hazır bir sayının manşeti aynı sayının
-bir yazısı olmalı. Kapak ve arşiv başlığı doğrudan bu yazının başlığından alınır;
+Yeni sayı için mevcut sayı kaydını ve yazılarını örnek alın. Yayıma hazır bir sayının manşeti, o sayının yazı listesinde seçilmiş olmalı. Kapak ve arşiv başlığı doğrudan bu yazının başlığından alınır;
 sayı numaraları ve tefrika içi bölüm numaraları tekrarlanmamalı. Bölümler ve yazar imzaları içerikten oluşur;
 önceki/sonraki tefrika bağlantıları bütün sayılardaki bölüm sırasını izler.
 
@@ -63,8 +62,8 @@ Yeni sayı sırası:
 1. Gerekliyse önce yazar ve tefrika kaydını ekleyin.
 2. **Sayılar** menüsünden yeni sayıyı, **Taslak sayı** açıkken kaydedin.
    Kapak, spot ve tarih bilgilerini girin; manşet henüz boş kalabilir.
-3. **Yazılar** menüsünde metinleri oluşturup bu sayıya ve yazarlarına bağlayın.
-   Sıralama önceliğini boş bırakabilirsiniz. İsterseniz öne almak için 10, 20 gibi değerler girin; aynı değeri kullanmak sorun çıkarmaz.
+3. **Yazılar** menüsünde metinleri oluşturup yazarlarını seçin. Sayı kaydındaki **Bu sayıdaki yazılar** listesine yazıları ekleyin.
+   Gazetede her bölümün içindeki sıralama bu listenin sırasını izler; manşet ayrıca kapakta önce gösterilir.
 4. Sayıya dönüp kendi yazılarından birini **Manşet yazısı** olarak seçin.
 5. **Taslak sayı** seçeneğini kapatıp kaydedin. Derleme kontrolü geçince sayı,
    arşiv ve varsa tefrika bağlantıları otomatik oluşur.
@@ -86,3 +85,7 @@ manual runs. Before publishing, enable **Settings → Pages → Build and deploy
 ## Lisans
 
 MIT. Proje [AstroPaper](https://github.com/satnaing/astro-paper) temelinden geliştirilmiştir; özgün telif bildirimi LICENSE dosyasında korunur.
+
+## Sayı içerik listeleri
+
+Yazılar ve tefrika bölümleri sayı kaydından seçilir; metinler kendi sayılarını belirlemez. Her içerik yalnızca bir yayımlanmış sayıya bağlanabilir. Seçilmemiş içerikler ve taslak sayıya ait içerikler sitede/RSS’te görünmez. Yazılar listesi aynı bölüm içindeki dizilişi, tefrika listesi tefrika kartlarının dizilişini belirler. Haberler/dedikodular bölüm gruplaması korunur; manşet daima kapakta önce gösterilir. Okuma sayfasındaki önceki/sonraki tefrika bağlantıları ise hikâyenin bölüm numaralarını izler.

@@ -4,8 +4,6 @@ description: "Rıhtım defterinde yedi sandık, arabada altı iz var. Yedinciyi 
 section: Dedikodular
 district: "Rıhtım"
 author: "ruhi-cengel.json"
-issue: "001.json"
-order: 1
 ---
 
 Rıhtımdaki terazinin dün gece iki kez tartıldığı, fakat yalnızca bir yükün kayda geçtiği söyleniyor. Yedi sandıkla yanaşan mavnadan sabaha karşı altı sandık indirilmiş. Hamalbaşı bunu bir sayım hatası olarak açıklıyor. Sayımı yapan adamın dün akşamdan beri ortalıkta görünmemesi de ona göre aynı hatanın devamı.

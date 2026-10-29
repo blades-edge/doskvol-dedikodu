@@ -4,8 +4,6 @@ description: "İpekyalı’daki yeni çamaşırhanenin tabelası gündüz okunuy
 section: Dedikodular
 district: "İpekyalı"
 author: "isimsiz-tanik.json"
-issue: "001.json"
-order: 2
 ---
 
 Yağkaraları’nın yeni çamaşırhanesi mahallede bir ihtiyacı karşılayacak gibi görünüyor. Açıldığı günden beri sokağın bütün perdeleri yıkandı. Bu, işletmeye gösterilen rağbetten çok, karşı pencereden içeriyi seyretmek isteyen komşuların bahanesi olabilir.
