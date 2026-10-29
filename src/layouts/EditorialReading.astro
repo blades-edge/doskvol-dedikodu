@@ -1,0 +1,110 @@
+---
+import EditorialHead from "@components/EditorialHead.astro";
+
+interface Props {
+  frontmatter: {
+    title: string;
+    description: string;
+    section: string;
+    author: string;
+    date: string;
+    episode?: number;
+    spoiler?: string;
+  };
+}
+
+const { title, description, section, author, date, episode, spoiler } =
+  Astro.props.frontmatter;
+const preview = `${import.meta.env.BASE_URL}editorial-preview/`;
+const dateLabel = new Intl.DateTimeFormat("tr-TR", {
+  dateStyle: "long",
+  timeZone: "UTC",
+}).format(new Date(`${date}T12:00:00Z`));
+---
+
+<!doctype html>
+<html lang="tr">
+  <head><EditorialHead title={title} /></head>
+  <body>
+    <a class="reading-skip" href="#reading-content">Yazıya geç</a>
+    <div class="notice">
+      Tasarım prototipi · Bu metin bu gazete için yazılmış özgün kurgudur.
+    </div>
+    <div class="paper reading-paper">
+      <header class="masthead reading-masthead">
+        <div class="eyebrow">Akoros’un bağımsız sesi · Doskvol</div>
+        <a class="reading-wordmark" href={preview}>Doskvol Dedikoduları</a>
+        <div class="tagline">
+          Duyduğunuza inanmayın. Duymadıklarınızdan korkun.
+        </div>
+      </header>
+      <nav class="reading-breadcrumb" aria-label="Sayfa yolu">
+        <a href={preview}>Gazeteye dön</a><span aria-hidden="true">
+          /
+        </span><span>{section}</span>
+      </nav>
+      <main id="reading-content">
+        <header class="reading-heading">
+          <div class="eyebrow">{section}{episode && ` · Bölüm ${episode}`}</div>
+          <h1>{title}</h1>
+          <p class="reading-deck">{description}</p>
+          <div class="reading-meta">
+            <span>{author}</span><time datetime={date}>{dateLabel}</time><span
+              >Sayı 001 · Gece baskısı</span
+            >
+          </div>
+        </header>
+        {
+          spoiler && (
+            <aside class="reading-spoiler" aria-label="Spoiler uyarısı">
+              <>
+                <strong>Oyun günlüğü · Spoiler uyarısı</strong>
+                <p>{spoiler}</p>
+              </>
+            </aside>
+          )
+        }
+        <article class="reading-copy" aria-label={title}><slot /></article>
+        {
+          episode ? (
+            <nav
+              class="reading-ending reading-chapters"
+              aria-label="Tefrika bölümleri"
+            >
+              <div>
+                <>
+                  <span class="eyebrow">Önceki bölüm</span>
+                  <p>Serinin ilk bölümü</p>
+                </>
+              </div>
+              <div>
+                <>
+                  <span class="eyebrow">Sonraki bölüm</span>
+                  <p>İkinci bölüm henüz yayımlanmadı.</p>
+                </>
+              </div>
+            </nav>
+          ) : (
+            <aside class="reading-ending">
+              <>
+                <div class="eyebrow">Aynı gecenin öteki yüzü</div>
+                <h2>
+                  <a href={`${preview}kor-noktanin-guncesi/`}>
+                    Kör Nokta’nın Güncesi
+                  </a>
+                </h2>
+                <p>Haberde adı geçmeyen bir tanığın o gece tuttuğu notlar.</p>
+              </>
+            </aside>
+          )
+        }
+        <div class="reading-return">
+          <a href={preview}>← Gazeteye dön</a><a href="#reading-content"
+            >Yazının başına ↑</a
+          >
+        </div>
+      </main>
+      <footer>Doskvol Dedikoduları · Mürekkep kurumadan okuyanlara</footer>
+    </div>
+  </body>
+</html>

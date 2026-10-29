@@ -1,9 +1,12 @@
 ---
+import EditorialHead from "@components/EditorialHead.astro";
+
 const headlines = [
   {
     section: "İPEKYALI",
-    title: "Kızıl Kuşaklar Okulu'nda Gece Yarısı Ziyareti",
-    desc: "Mahalle sakinleri, okulun kapısından çıkan kimliği belirsiz konuklar gördüklerini iddia ediyor.",
+    title: "Kızıl Kuşaklar Okulu’nda gece yarısı ziyareti",
+    href: `${import.meta.env.BASE_URL}editorial-preview/gece-yarisi-ziyareti/`,
+    desc: "Üç isimsiz konuk, ters çalışan bir saat ve sabaha karşı susturulan bir zil. Okul yönetimi açıklama yapmayı reddediyor.",
     byline: "Özel Muhabir",
   },
   {
@@ -24,250 +27,7 @@ const headlines = [
 <!doctype html>
 <html lang="tr">
   <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link
-      rel="icon"
-      type="image/svg+xml"
-      href={`${import.meta.env.BASE_URL}favicon.svg`}
-    />
-    <meta name="robots" content="noindex, nofollow" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,600;0,6..72,700;1,6..72,400&display=swap"
-      rel="stylesheet"
-    />
-    <title>Tasarım Prototipi | Doskvol Dedikoduları</title>
-    <style>
-      :root {
-        font-family: "Newsreader", Georgia, serif;
-        font-optical-sizing: auto;
-        color: #211e1a;
-        background: #ddd3bf;
-      }
-      * {
-        box-sizing: border-box;
-      }
-      body {
-        margin: 0;
-        background: radial-gradient(circle at 30% 20%, #f3e9d6, #d5c8b1);
-      }
-      a {
-        color: inherit;
-      }
-      .paper {
-        max-width: 1160px;
-        margin: 2rem auto;
-        padding: clamp(1.1rem, 4vw, 3.5rem);
-        background: #f1e9d8;
-        box-shadow: 0 12px 48px #332a2050;
-        border: 1px solid #b7a78d;
-      }
-      h1,
-      h2,
-      h3 {
-        font-family: "Cormorant Garamond", Georgia, serif;
-        font-weight: 600;
-        text-wrap: balance;
-      }
-      .eyebrow {
-        font:
-          600 0.75rem/1.5 "Newsreader",
-          serif;
-        text-transform: uppercase;
-        letter-spacing: 0.16em;
-      }
-      .masthead {
-        text-align: center;
-        border-top: 4px double #322b24;
-        border-bottom: 4px double #322b24;
-        padding: 1.4rem 0 1rem;
-      }
-      .masthead h1 {
-        font-size: clamp(2.8rem, 7.3vw, 6.5rem);
-        line-height: 0.98;
-        letter-spacing: -0.025em;
-        margin: 0.2rem 0;
-        font-weight: 700;
-      }
-      .tagline {
-        font-style: italic;
-        font-size: 1rem;
-      }
-      .issue {
-        display: flex;
-        justify-content: space-between;
-        gap: 1rem;
-        padding: 0.55rem 0;
-        border-bottom: 1px solid #322b24;
-        font-size: 0.75rem;
-        letter-spacing: 0.07em;
-        text-transform: uppercase;
-      }
-      .nav {
-        display: flex;
-        justify-content: center;
-        flex-wrap: wrap;
-        gap: 1.4rem;
-        padding: 0.8rem 0;
-        border-bottom: 3px double #322b24;
-        font-size: 0.82rem;
-        font-weight: bold;
-        text-transform: uppercase;
-        letter-spacing: 0.1em;
-      }
-      .nav a {
-        text-decoration: none;
-      }
-      .nav a:hover,
-      .nav a:focus-visible {
-        text-decoration: underline;
-      }
-      .lead {
-        padding: 2.2rem 0 1.5rem;
-        text-align: left;
-        border-bottom: 1px solid #746a5a;
-      }
-      .lead h2 {
-        max-width: 900px;
-        margin: 0.4rem 0;
-        font-size: clamp(2.3rem, 5.3vw, 5.3rem);
-        line-height: 1.04;
-        letter-spacing: -0.015em;
-      }
-      .lead p {
-        max-width: 65ch;
-        margin: 0.9rem 0 0;
-        font-size: 1.25rem;
-        line-height: 1.5;
-      }
-      .engraving {
-        height: clamp(180px, 32vw, 360px);
-        margin: 1.5rem 0 0.6rem;
-        border: 1px solid #554b3d;
-        background: repeating-linear-gradient(
-          163deg,
-          #1c1b19 0 2px,
-          #514c42 2px 3px,
-          #b7aa92 3px 5px
-        );
-        position: relative;
-        overflow: hidden;
-      }
-      .engraving::before {
-        content: "";
-        position: absolute;
-        inset: 0;
-        background:
-          linear-gradient(0deg, #171716dd 0%, transparent 65%),
-          linear-gradient(90deg, #241e18b0, transparent 65%);
-      }
-      .engraving::after {
-        content: "DOSKVOL";
-        position: absolute;
-        bottom: 12px;
-        left: 22px;
-        color: #eee2cc;
-        font-size: clamp(2.5rem, 9vw, 7rem);
-        font-weight: 700;
-        letter-spacing: 0.2em;
-        opacity: 0.78;
-      }
-      .caption {
-        font-size: 0.75rem;
-        text-align: left;
-        font-style: italic;
-      }
-      .columns {
-        display: grid;
-        grid-template-columns: repeat(3, minmax(0, 1fr));
-        gap: 1.5rem;
-        margin: 1.5rem 0;
-      }
-      .story {
-        padding-right: 1.3rem;
-        border-right: 1px solid #a79b87;
-      }
-      .story:last-child {
-        border: 0;
-        padding: 0;
-      }
-      .story h3 {
-        font-size: 2rem;
-        line-height: 1.14;
-        margin: 0.45rem 0;
-      }
-      .story p {
-        font-size: 1.125rem;
-        line-height: 1.65;
-        margin: 0.65rem 0;
-      }
-      .byline {
-        font-size: 0.8125rem;
-        font-style: italic;
-      }
-      .serial {
-        margin-top: 2rem;
-        padding: 1.3rem;
-        border: 3px double #40392f;
-        display: grid;
-        grid-template-columns: 1fr 2fr;
-        gap: 1.3rem;
-      }
-      .serial h2 {
-        font-size: 2rem;
-        line-height: 1.14;
-        margin: 0.4rem 0;
-      }
-      .serial p {
-        font-size: 1.125rem;
-        line-height: 1.65;
-        margin: 0.3rem 0;
-      }
-      .serial .byline {
-        font-size: 0.8125rem;
-      }
-      .serial .marker {
-        font-size: 3rem;
-        line-height: 1;
-      }
-      footer {
-        border-top: 3px double #322b24;
-        margin-top: 2rem;
-        padding-top: 0.8rem;
-        font-size: 0.8rem;
-        text-align: center;
-      }
-      .notice {
-        max-width: 1160px;
-        margin: 1rem auto 0;
-        padding: 0 1rem;
-        font:
-          0.85rem/1.5 system-ui,
-          sans-serif;
-        color: #342e25;
-      }
-      @media (max-width: 720px) {
-        .paper {
-          margin: 0.5rem;
-        }
-        .columns {
-          grid-template-columns: 1fr;
-        }
-        .story {
-          border-right: 0;
-          border-bottom: 1px solid #a79b87;
-          padding: 0 0 1rem;
-        }
-        .story:last-child {
-          border: 0;
-        }
-        .serial {
-          grid-template-columns: 1fr;
-        }
-      }
-    </style>
+    <EditorialHead title="Tasarım prototipi" />
   </head>
   <body>
     <div class="notice">
@@ -297,10 +57,16 @@ const headlines = [
       <main>
         <section id="manset" class="lead" aria-labelledby="lead-title">
           <div class="eyebrow">Bu haftanın manşeti · Özel haber</div>
-          <h2 id="lead-title">Sis çöktü, şehir konuşmaya başladı</h2>
+          <h2 id="lead-title">
+            <a
+              href={`${import.meta.env.BASE_URL}editorial-preview/gece-yarisi-ziyareti/`}
+              >Sis çöktü, şehir konuşmaya başladı</a
+            >
+          </h2>
           <p>
-            Doskvol'un dar sokaklarında her kapının ardında başka bir hikâye
-            saklı. Bazıları doğru, bazıları tehlikeli; hepsi basılmaya değer.
+            Kızıl Kuşaklar Okulu’nun kapıları gece yarısından sonra üç kez
+            açıldı. İçeri girenlerin adları yoktu; çıkışlarıysa hiçbir deftere
+            yazılmadı.
           </p>
           <div
             class="engraving"
@@ -321,7 +87,13 @@ const headlines = [
               headlines.map(item => (
                 <article class="story">
                   <div class="eyebrow">{item.section}</div>
-                  <h3>{item.title}</h3>
+                  <h3>
+                    {"href" in item ? (
+                      <a href={item.href}>{item.title}</a>
+                    ) : (
+                      item.title
+                    )}
+                  </h3>
                   <p>{item.desc}</p>
                   <div class="byline">— {item.byline}</div>
                 </article>
@@ -336,14 +108,24 @@ const headlines = [
               aria-hidden="true"
             >
               ❦
-            </div><h2 id="serial-title">Kör Nokta'nın Güncesi</h2>
+            </div><h2 id="serial-title">
+              <a
+                href={`${import.meta.env.BASE_URL}editorial-preview/kor-noktanin-guncesi/`}
+                >Kör Nokta’nın Güncesi</a
+              >
+            </h2>
           </div>
           <div>
             <div class="eyebrow">Birinci bölüm · Oyun günlüğü</div><p>
-              Şehrin kendi anlatılarıyla oyuncuların kaleme aldığı uzun
-              hikâyeler bu bölümde buluşuyor. Tefrika sayfalarında bölüm sırası,
-              yazar bilgisi ve gerektiğinde spoiler uyarısı bulunacak.
-            </p><p class="byline">Bu metin tasarım örneğidir.</p>
+              Bana, okuldan bir defter almamı söylediler. Bir sayfa koparmamamı,
+              kapağını açmamamı, içinden adım okunursa cevap vermememi de.
+              Ücretin yarısını peşin aldığımda yalnızca ilk iki şartı duymuştum.
+            </p><p class="byline">Birinci bölüm: Adımı bilen kapı</p>
+            <a
+              class="reading-link"
+              href={`${import.meta.env.BASE_URL}editorial-preview/kor-noktanin-guncesi/`}
+              >Birinci bölümü oku <span aria-hidden="true">→</span></a
+            >
           </div>
         </section>
       </main>
