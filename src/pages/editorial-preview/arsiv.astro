@@ -45,7 +45,10 @@ const prefix = `${import.meta.env.BASE_URL}editorial-preview/`;
                       <a
                         href={`${prefix}sayilar/${issueSlug(issue.data.number)}/`}
                       >
-                        {issue.data.title}
+                        {
+                          publication.articlesById.get(issue.data.lead.id)!.data
+                            .title
+                        }
                       </a>
                     </h2>
                     <p>{issue.data.description}</p>

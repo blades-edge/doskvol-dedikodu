@@ -14,19 +14,12 @@ interface Props {
   publication: EditorialIndex;
 }
 const { issue, publication } = Astro.props;
-const {
-  number,
-  title,
-  description,
-  date,
-  price,
-  cover,
-  coverAlt,
-  coverCaption,
-} = issue.data;
+const { number, description, date, price, cover, coverAlt, coverCaption } =
+  issue.data;
 const prefix = `${import.meta.env.BASE_URL}editorial-preview/`;
 const articles = articlesForIssue(publication, issue.id);
 const lead = publication.articlesById.get(issue.data.lead.id)!;
+const title = lead.data.title;
 const remaining = articles.filter(article => article.id !== lead.id);
 const sections = [
   ...new Set(remaining.map(article => article.data.section)),

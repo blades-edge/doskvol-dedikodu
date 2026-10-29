@@ -40,7 +40,6 @@ const issues = defineCollection({
   schema: ({ image }) =>
     z.object({
       number: z.number().int().positive(),
-      title: z.string().min(1),
       description: z.string().min(1),
       date: z.coerce.date(),
       price: z.string().min(1),

@@ -43,7 +43,8 @@ update. Astro generates the optimized images.
 adresleri korunur; yalnızca içerik dosyaları koleksiyona taşınmıştır.
 
 Yeni sayı için mevcut sayı kaydını ve yazılarını örnek alın. Manşet aynı sayının
-bir yazısı olmalı; sayı numaraları, sayı içi yazı sıraları ve tefrika içi bölüm
+bir yazısı olmalı. Kapak ve arşiv başlığı doğrudan bu yazının başlığından alınır;
+sayı numaraları, sayı içi yazı sıraları ve tefrika içi bölüm
 numaraları tekrarlanmamalı. Bölümler ve yazar imzaları içerikten oluşur;
 önceki/sonraki tefrika bağlantıları bütün sayılardaki bölüm sırasını izler.
 
