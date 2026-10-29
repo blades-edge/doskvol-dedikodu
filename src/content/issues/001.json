@@ -8,5 +8,8 @@
   "coverAlt": "Bir kanalın kıyısındaki taş okul, köprüler ve uzaktaki fabrika bacaları; kâğıt üzerinde değişen kalınlıkta mürekkep çizgileri.",
   "coverCaption": "Doskvol’da gece — gazete için hazırlanmış temsili gravür.",
   "draft": false,
-  "chapters": ["kor-noktanin-guncesi.md"]
+  "chapters": [
+    "kor-noktanin-guncesi.md",
+    "benden-once-gelen.md"
+  ]
 }
