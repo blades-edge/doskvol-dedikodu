@@ -86,7 +86,7 @@ content:
       rename: false
     view:
       primary: title
-      fields: [title, issue, section, author]
+      fields: [title, issue, section, order, author]
       sort: [title, order]
       search: [title, description, section]
       default: { sort: title, order: asc }
@@ -118,12 +118,10 @@ content:
         description: "Örneğin Haberler, Dedikodular veya Tefrika. Aynı adı taşıyan yazılar sayı sayfasında birlikte görünür."
       - { name: location, label: Mahalle / yer, type: string }
       - name: order
-        label: Sayı içindeki sıra
+        label: Sıralama önceliği (isteğe bağlı)
         type: number
-        required: true
-        default: 0
         options: { min: 0 }
-        description: "0’dan başlayan tam sayı. Aynı sayıdaki yazılar için farklı sıra değerleri kullanın."
+        description: "Küçük değer önce gelir. Boş bırakırsanız 1000 kabul edilir. Öne almak için 10, 20 gibi değerler verebilirsiniz. Aynı değerler kullanılabilir; eşitlikte dosya adına göre sıralanır. Manşet ayrıca sayı kaydından seçilir."
       - name: series
         label: Tefrika
         type: reference

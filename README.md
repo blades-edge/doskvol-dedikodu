@@ -23,7 +23,7 @@ update. Astro generates the optimized images.
 ### Sayılar ve içerikler
 
 - `src/content/issues/*.json`: sayı numarası, tarih, kapak, manşet yazısı ve baskı bilgileri.
-- `src/content/articles/*.md`: haber, dedikodu veya tefrika metni. Her yazı bir `issue` ve bir `author` kaydına bağlanır. `section` bölüm adını, `order` o sayıdaki sırasını belirler.
+- `src/content/articles/*.md`: haber, dedikodu veya tefrika metni. Her yazı bir `issue` ve bir `author` kaydına bağlanır. `section` bölüm adını belirler. `order` isteğe bağlı sıralama önceliğidir: küçük değer önce gelir; boş değer 1000 kabul edilir. Eşit öncelikler dosya adına göre sıralanır ve derlemeyi durdurmaz.
 - `src/content/authors/*.json`: ortak yazar kayıtları; dosya adı yazar kimliğidir.
 - `src/content/serials/*.json`: birden fazla sayıda sürebilen tefrikalar. Yazıdaki `series` ve `episode` alanları birlikte girilir.
 
@@ -34,8 +34,7 @@ adresleri korunur; yalnızca içerik dosyaları koleksiyona taşınmıştır.
 
 Yeni sayı için mevcut sayı kaydını ve yazılarını örnek alın. Yayıma hazır bir sayının manşeti aynı sayının
 bir yazısı olmalı. Kapak ve arşiv başlığı doğrudan bu yazının başlığından alınır;
-sayı numaraları, sayı içi yazı sıraları ve tefrika içi bölüm
-numaraları tekrarlanmamalı. Bölümler ve yazar imzaları içerikten oluşur;
+sayı numaraları ve tefrika içi bölüm numaraları tekrarlanmamalı. Bölümler ve yazar imzaları içerikten oluşur;
 önceki/sonraki tefrika bağlantıları bütün sayılardaki bölüm sırasını izler.
 
 `npm run test:editorial` ilişkileri ve sayılar arasında devam eden tefrikaları
@@ -64,7 +63,7 @@ Yeni sayı sırası:
 2. **Sayılar** menüsünden yeni sayıyı, **Taslak sayı** açıkken kaydedin.
    Kapak, spot ve tarih bilgilerini girin; manşet henüz boş kalabilir.
 3. **Yazılar** menüsünde metinleri oluşturup bu sayıya ve yazarlarına bağlayın.
-   Her yazıya sayı içinde farklı bir sıra verin.
+   Sıralama önceliğini boş bırakabilirsiniz. İsterseniz öne almak için 10, 20 gibi değerler girin; aynı değeri kullanmak sorun çıkarmaz.
 4. Sayıya dönüp kendi yazılarından birini **Manşet yazısı** olarak seçin.
 5. **Taslak sayı** seçeneğini kapatıp kaydedin. Derleme kontrolü geçince sayı,
    arşiv ve varsa tefrika bağlantıları otomatik oluşur.
