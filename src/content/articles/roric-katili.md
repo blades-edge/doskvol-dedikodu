@@ -5,7 +5,7 @@ issue: 001.json
 author: isimsiz-tanik.json
 section: Dedikodular
 location: Kömürsırtı
-order: 3
+order: 4
 ---
 > Kanalın yanında yürüyordum, iki kişinin bir üçüncüyü Dosk nehrinin siyah suyuna attığını gördüm. Çuval gibi düştü. Neredeyse ses bile çıkmadı. Yaklaşmaya korktum. Sonra ikisi sessizce Ankhayat caddesine doğru yürümeye devam ettiler.
 
