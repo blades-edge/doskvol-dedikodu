@@ -489,27 +489,31 @@ body {
   min-height: 100vh;
 }
 .masthead {
-  position: relative;
-  padding-inline: 10rem;
+  display: grid;
+  grid-template-columns: minmax(0, max-content) 4.2rem;
+  align-items: center;
+  justify-content: center;
+  gap: clamp(0.7rem, 3vw, 2rem);
+  padding-inline: 0;
+}
+.masthead-title {
+  min-width: 0;
 }
 .weather-theme {
-  position: absolute;
-  right: 0;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 9rem;
-  padding: 0.4rem;
+  width: 4.2rem;
+  padding: 0.25rem;
   border: 3px double #40392f;
 }
 .weather-caption {
-  font-size: 0.65rem;
-  letter-spacing: 0.1em;
+  font-size: 0.5rem;
+  letter-spacing: 0;
   text-transform: uppercase;
   padding-bottom: 0.25rem;
   border-bottom: 1px solid #a79b87;
 }
 .weather-choices {
   display: flex;
+  flex-direction: column;
   gap: 0.15rem;
   margin-top: 0.3rem;
 }
@@ -533,22 +537,27 @@ body {
 }
 .weather-choices img {
   display: block;
-  width: 100%;
-  height: auto;
-  aspect-ratio: 1;
+  width: 2rem;
+  height: 2rem;
+  margin-inline: auto;
   object-fit: contain;
 }
 .weather-choices span {
   display: block;
   margin-top: 0.15rem;
 }
-@media (max-width: 900px) {
-  .masthead {
-    padding-inline: 0;
+@media (max-width: 520px) {
+  .masthead h1 {
+    font-size: clamp(1.5rem, 8vw, 2.2rem);
   }
-  .weather-theme {
-    position: static;
-    transform: none;
-    margin: 0 0 0.8rem auto;
+  .masthead-title > .eyebrow {
+    font-size: 0.6rem;
+    letter-spacing: 0.08em;
+  }
+  .masthead .tagline {
+    font-size: 0.85rem;
+  }
+  .reading-wordmark {
+    font-size: clamp(1.5rem, 8vw, 2.2rem);
   }
 }

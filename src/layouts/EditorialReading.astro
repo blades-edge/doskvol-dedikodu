@@ -41,12 +41,14 @@ const related = articlesForIssue(publication, issue.id).find(
     <a class="reading-skip" href="#reading-content">Yazıya geç</a>
     <div class="paper reading-paper">
       <header class="masthead reading-masthead">
-        <WeatherTheme />
-        <div class="eyebrow">Akoros’un bağımsız sesi · Doskvol</div>
-        <a class="reading-wordmark" href={preview}>Doskvol Dedikoduları</a>
-        <div class="tagline">
-          Duyduğunuza inanmayın. Duymadıklarınızdan korkun.
+        <div class="masthead-title">
+          <div class="eyebrow">Akoros’un bağımsız sesi · Doskvol</div>
+          <a class="reading-wordmark" href={preview}>Doskvol Dedikoduları</a>
+          <div class="tagline">
+            Duyduğunuza inanmayın. Duymadıklarınızdan korkun.
+          </div>
         </div>
+        <WeatherTheme />
       </header>
       <nav class="reading-breadcrumb" aria-label="Sayfa yolu">
         <a href={preview}>Sayı {issueSlug(issue.data.number)}</a><span
