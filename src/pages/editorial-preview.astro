@@ -1,4 +1,6 @@
 ---
+import { Image } from "astro:assets";
+import engraving from "@assets/images/doskvol-night-engraving.png";
 import EditorialHead from "@components/EditorialHead.astro";
 
 const headlines = [
@@ -68,14 +70,17 @@ const headlines = [
             açıldı. İçeri girenlerin adları yoktu; çıkışlarıysa hiçbir deftere
             yazılmadı.
           </p>
-          <div
-            class="engraving"
-            role="img"
-            aria-label="Doskvol için gravür görselinin yer tutucusu"
-          >
-          </div>
+          <Image
+            src={engraving}
+            alt="Sisli bir kanalın kıyısındaki karanlık taş yapılar, köprüler ve uzaktaki fabrika bacaları; ortada kapısı aydınlık eski bir okul."
+            class="editorial-engraving"
+            widths={[480, 960, 1440, 2060]}
+            sizes="(max-width: 720px) calc(100vw - 3rem), (max-width: 1160px) 92vw, 1046px"
+            loading="eager"
+            fetchpriority="high"
+          />
           <div class="caption">
-            Doskvol'un gece görünümü — gravür için ayrılmış alan.
+            Doskvol’da gece — gazete için hazırlanmış temsili gravür.
           </div>
         </section>
         <section id="dedikodular" aria-label="Dedikodular">
