@@ -7,7 +7,7 @@ issue: 001.json
 author: ruhi-cengel.json
 section: Dedikodular
 location: Altıkule
-order: 20
+order: 0
 ---
 Terzihanenin karşısında oturan Bayan Vey, kuşu penceresinden izlediğini anlatırken ellerini önlüğüne sildi.
 
