@@ -30,6 +30,27 @@ Keep internal links and public assets under `import.meta.env.BASE_URL`.
 The build uses Astro directly. Jampack was removed with the dependency security
 update. Astro generates the optimized images.
 
+### Sayılar ve içerikler
+
+- `src/content/issues/*.json`: sayı numarası, tarih, kapak, manşet yazısı ve baskı bilgileri.
+- `src/content/articles/*.md`: haber, dedikodu veya tefrika metni. Her yazı bir `issue` ve bir `author` kimliğine bağlanır. `section` bölüm adını, `order` o sayıdaki sırasını belirler.
+- `src/content/authors/*.json`: ortak yazar kayıtları; dosya adı yazar kimliğidir.
+- `src/content/serials/*.json`: birden fazla sayıda sürebilen tefrikalar. Yazıdaki `series` ve `episode` alanları birlikte girilir.
+
+Önizlemenin kökü en yüksek numaralı sayıyı gösterir. Her sayının kalıcı adresi
+`/doskvol-dedikodu/editorial-preview/sayilar/001/` biçimindedir. Arşiv
+`/doskvol-dedikodu/editorial-preview/arsiv/` adresinde oluşur. Yazıların mevcut
+adresleri korunur; yalnızca içerik dosyaları koleksiyona taşınmıştır.
+
+Yeni sayı için mevcut sayı kaydını ve yazılarını örnek alın. Manşet aynı sayının
+bir yazısı olmalı; sayı numaraları, sayı içi yazı sıraları ve tefrika içi bölüm
+numaraları tekrarlanmamalı. Bölümler ve yazar imzaları içerikten oluşur;
+önceki/sonraki tefrika bağlantıları bütün sayılardaki bölüm sırasını izler.
+
+`npm run test:editorial` ilişkileri ve sayılar arasında devam eden tefrikaları
+kontrol eder. Hatalı ilişkiler derleme sırasında da açıklayıcı bir hatayla durur.
+Bu aşama önizlemede kalır; mevcut ana sayfa ve RSS akışı değiştirilmez.
+
 `build.yml` checks pull requests. `pages.yml` deploys only `main`, including
 manual runs. Before publishing, enable **Settings → Pages → Build and deployment
 → Source: GitHub Actions**. The editorial prototype does not replace the homepage.

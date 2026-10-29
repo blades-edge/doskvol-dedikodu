@@ -1,10 +1,11 @@
 ---
-layout: ../../layouts/EditorialReading.astro
 title: "Adımı bilen kapı"
-description: "Kör Nokta’nın Güncesi · Bana okuldan bir defter almamı söylediler. Kapağını açmamamı da. Ücretin yarısını peşin aldığımda yalnızca ilk cümleyi duymuştum."
-section: "Tefrika · Kör Nokta’nın Güncesi"
-author: "Kör Nokta · Oyun günlüğü"
-date: "2026-10-29"
+description: "Bana okuldan bir defter almamı söylediler. Kapağını açmamamı da. Ücretin yarısını peşin aldığımda yalnızca ilk cümleyi duymuştum."
+section: Tefrika
+author: kor-nokta
+issue: "001"
+order: 3
+series: kor-nokta
 episode: 1
 spoiler: "Bu bölüm, Kızıl Kuşaklar Okulu’ndaki gece ziyaretiyle ilgili kurgu sırlarını açığa çıkarır. Haberle aynı olayı başka bir gözden anlatır."
 ---

@@ -145,7 +145,7 @@ h3 {
 }
 .columns {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 250px), 1fr));
   gap: 1.5rem;
   margin: 1.5rem 0;
 }
@@ -179,7 +179,7 @@ h3 {
   grid-template-columns: 1fr 2fr;
   gap: 1.3rem;
 }
-.serial h2 {
+.serial h3 {
   font-size: 2rem;
   line-height: 1.14;
   margin: 0.4rem 0;
@@ -234,12 +234,12 @@ footer {
 
 .lead h2 a,
 .story h3 a,
-.serial h2 a {
+.serial h3 a {
   text-decoration: none;
 }
 .lead h2 a:hover,
 .story h3 a:hover,
-.serial h2 a:hover {
+.serial h3 a:hover {
   text-decoration: underline;
   text-decoration-thickness: 1px;
   text-underline-offset: 0.1em;
@@ -423,4 +423,35 @@ footer {
   .reading-copy {
     line-height: 1.65;
   }
+}
+
+.issue-section-title {
+  margin: 1.5rem 0 0;
+}
+.issue-archive {
+  padding: 0;
+  margin: 0 auto;
+  max-width: 810px;
+  list-style: none;
+}
+.issue-archive li {
+  border-top: 3px double #746a5a;
+  padding: 1.5rem 0;
+}
+.issue-archive h2 {
+  font-size: clamp(2rem, 4vw, 3rem);
+  line-height: 1.1;
+  margin: 0.7rem 0;
+}
+.issue-archive h2 a {
+  text-decoration: none;
+}
+.issue-archive h2 a:hover {
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+}
+.issue-archive p {
+  max-width: 65ch;
+  font-size: 1.125rem;
+  line-height: 1.65;
 }

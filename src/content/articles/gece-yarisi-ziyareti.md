@@ -1,10 +1,11 @@
 ---
-layout: ../../layouts/EditorialReading.astro
 title: "Kızıl Kuşaklar Okulu’nda gece yarısı ziyareti"
 description: "Üç isimsiz konuk, ters çalışan bir saat ve sabaha karşı susturulan bir zil. İpekyalı’daki okulun kapısında yaşananları araştırdık."
-section: "İpekyalı · Özel haber"
-author: "Mina Karakarga · Özel muhabir"
-date: "2026-10-29"
+section: Haberler
+location: İpekyalı
+author: mina-karakarga
+issue: "001"
+order: 0
 ---
 
 İpekyalı’da bir kapının gece yarısı açılması haber sayılmaz. Aynı kapının üç kez açılması, her seferinde başka bir yüzün görünmesi ve içerideki saatin her konuktan sonra bir saat geri gitmesi ise matbaamızın mürekkebine değer. Kızıl Kuşaklar Okulu’nun karşısındaki apartmanda oturan üç kişi, dün gece gördüklerini birbirinden habersiz anlattı. Saat konusunda anlaşamadılar. Kapı konusunda hepsi aynı şeyi söyledi: İçeri girenler vardı, çıkan yoktu.

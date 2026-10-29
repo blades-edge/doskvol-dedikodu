@@ -1,25 +1,36 @@
 ---
+import type { CollectionEntry } from "astro:content";
 import EditorialHead from "@components/EditorialHead.astro";
+import {
+  articlesForIssue,
+  chaptersForSeries,
+  issueSlug,
+  type EditorialIndex,
+} from "@utils/editorial";
 
 interface Props {
-  frontmatter: {
-    title: string;
-    description: string;
-    section: string;
-    author: string;
-    date: string;
-    episode?: number;
-    spoiler?: string;
-  };
+  article: CollectionEntry<"articles">;
+  publication: EditorialIndex;
 }
-
-const { title, description, section, author, date, episode, spoiler } =
-  Astro.props.frontmatter;
-const preview = `${import.meta.env.BASE_URL}editorial-preview/`;
-const dateLabel = new Intl.DateTimeFormat("tr-TR", {
+const { article, publication } = Astro.props;
+const { title, description, section, episode, spoiler } = article.data;
+const author = publication.authorsById.get(article.data.author.id)!;
+const issue = publication.issuesById.get(article.data.issue.id)!;
+const series =
+  article.data.series && publication.serialsById.get(article.data.series.id)!;
+const prefix = `${import.meta.env.BASE_URL}editorial-preview/`;
+const preview = `${prefix}sayilar/${issueSlug(issue.data.number)}/`;
+const dateLabel = issue.data.date.toLocaleDateString("tr-TR", {
   dateStyle: "long",
   timeZone: "UTC",
-}).format(new Date(`${date}T12:00:00Z`));
+});
+const chapters = series ? chaptersForSeries(publication, series.id) : [];
+const chapterIndex = chapters.findIndex(chapter => chapter.id === article.id);
+const previous = chapters[chapterIndex - 1];
+const next = chapters[chapterIndex + 1];
+const related = articlesForIssue(publication, issue.id).find(
+  entry => entry.id !== article.id && entry.data.series
+);
 ---
 
 <!doctype html>
@@ -39,19 +50,23 @@ const dateLabel = new Intl.DateTimeFormat("tr-TR", {
         </div>
       </header>
       <nav class="reading-breadcrumb" aria-label="Sayfa yolu">
-        <a href={preview}>Gazeteye dön</a><span aria-hidden="true">
+        <a href={preview}>Sayı {issueSlug(issue.data.number)}</a><span
+          aria-hidden="true"
+        >
           /
         </span><span>{section}</span>
       </nav>
       <main id="reading-content">
         <header class="reading-heading">
-          <div class="eyebrow">{section}{episode && ` · Bölüm ${episode}`}</div>
+          <div class="eyebrow">
+            {series?.data.title ?? section}{episode && ` · Bölüm ${episode}`}
+          </div>
           <h1>{title}</h1>
           <p class="reading-deck">{description}</p>
           <div class="reading-meta">
-            <span>{author}</span><time datetime={date}>{dateLabel}</time><span
-              >Sayı 001 · Gece baskısı</span
-            >
+            <span>{author.data.name}</span><time
+              datetime={issue.data.date.toISOString()}>{dateLabel}</time
+            ><span>Sayı {issueSlug(issue.data.number)}</span>
           </div>
         </header>
         {
@@ -74,33 +89,53 @@ const dateLabel = new Intl.DateTimeFormat("tr-TR", {
               <div>
                 <>
                   <span class="eyebrow">Önceki bölüm</span>
-                  <p>Serinin ilk bölümü</p>
+                  {previous ? (
+                    <p>
+                      <a href={`${prefix}${previous.id}/`}>
+                        Bölüm {previous.data.episode}: {previous.data.title}
+                      </a>
+                    </p>
+                  ) : (
+                    <p>Serinin ilk bölümü</p>
+                  )}
                 </>
               </div>
               <div>
                 <>
                   <span class="eyebrow">Sonraki bölüm</span>
-                  <p>İkinci bölüm henüz yayımlanmadı.</p>
+                  {next ? (
+                    <p>
+                      <a href={`${prefix}${next.id}/`}>
+                        Bölüm {next.data.episode}: {next.data.title}
+                      </a>
+                    </p>
+                  ) : (
+                    <p>Sonraki bölüm henüz yayımlanmadı.</p>
+                  )}
                 </>
               </div>
             </nav>
-          ) : (
+          ) : related ? (
             <aside class="reading-ending">
-              <>
-                <div class="eyebrow">Aynı gecenin öteki yüzü</div>
-                <h2>
-                  <a href={`${preview}kor-noktanin-guncesi/`}>
-                    Kör Nokta’nın Güncesi
-                  </a>
-                </h2>
-                <p>Haberde adı geçmeyen bir tanığın o gece tuttuğu notlar.</p>
-              </>
+              <div class="eyebrow">Bu sayıdaki tefrika</div>
+              <h2>
+                <a href={`${prefix}${related.id}/`}>
+                  {
+                    publication.serialsById.get(related.data.series!.id)!.data
+                      .title
+                  }
+                </a>
+              </h2>
+              <p>
+                Bölüm {related.data.episode}: {related.data.title}
+              </p>
             </aside>
-          )
+          ) : null
         }
+
         <div class="reading-return">
-          <a href={preview}>← Gazeteye dön</a><a href="#reading-content"
-            >Yazının başına ↑</a
+          <a href={preview}>← Sayı {issueSlug(issue.data.number)}</a><a
+            href="#reading-content">Yazının başına ↑</a
           >
         </div>
       </main>
