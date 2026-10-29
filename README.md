@@ -1,3 +1,5 @@
+> Development requires Node.js 24 (`nvm use`) and `npm ci`. The build uses Astro directly; Jampack post-processing was removed because its dependencies have unresolved security advisories.
+
 # AstroPaper 📄
 
 ![AstroPaper](public/astropaper-og.jpg)
@@ -25,10 +27,8 @@ Astro uses `/doskvol-dedikodu/` as its base in development and production;
 `SITE.website` is `https://blades-edge.github.io/doskvol-dedikodu/`.
 Keep internal links and public assets under `import.meta.env.BASE_URL`.
 
-The build runs Jampack in compression-only mode because its installed version
-resolves base-prefixed image URLs against the wrong filesystem directory.
-Astro still generates optimized images; Jampack compresses the output without
-rewriting image URLs.
+The build uses Astro directly. Jampack was removed with the dependency security
+update. Astro generates the optimized images.
 
 `build.yml` checks pull requests. `pages.yml` deploys only `main`, including
 manual runs. Before publishing, enable **Settings → Pages → Build and deployment

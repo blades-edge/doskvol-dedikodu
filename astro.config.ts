@@ -1,5 +1,6 @@
 import { defineConfig } from "astro/config";
-import tailwind from "@astrojs/tailwind";
+import { unified } from "@astrojs/markdown-remark";
+import tailwindcss from "tailwindcss";
 import react from "@astrojs/react";
 import remarkToc from "remark-toc";
 import remarkCollapse from "remark-collapse";
@@ -11,29 +12,25 @@ export default defineConfig({
   site: SITE.website,
   base: "/doskvol-dedikodu",
   trailingSlash: "always",
-  integrations: [
-    tailwind({
-      applyBaseStyles: false,
-    }),
-    react(),
-    sitemap(),
-  ],
+  integrations: [react(), sitemap()],
   markdown: {
-    remarkPlugins: [
-      remarkToc,
-      [
-        remarkCollapse,
-        {
-          test: "Table of contents",
-        },
+    processor: unified({
+      remarkPlugins: [
+        remarkToc,
+        [
+          remarkCollapse,
+          {
+            test: "Table of contents",
+          },
+        ],
       ],
-    ],
+    }),
     shikiConfig: {
       theme: "one-dark-pro",
-      wrap: true,
     },
   },
   vite: {
+    css: { postcss: { plugins: [tailwindcss()] } },
     optimizeDeps: {
       exclude: ["@resvg/resvg-js"],
     },

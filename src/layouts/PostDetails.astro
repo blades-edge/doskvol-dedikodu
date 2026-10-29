@@ -1,10 +1,11 @@
 ---
+import { getImage } from "astro:assets";
 import Layout from "@layouts/Layout.astro";
 import Header from "@components/Header.astro";
 import Footer from "@components/Footer.astro";
 import Tag from "@components/Tag.astro";
 import Datetime from "@components/Datetime";
-import type { CollectionEntry } from "astro:content";
+import { render, type CollectionEntry } from "astro:content";
 import { slugifyStr } from "@utils/slugify";
 import ShareLinks from "@components/ShareLinks.astro";
 import { SITE } from "@config";
@@ -26,11 +27,27 @@ const {
   tags,
 } = post.data;
 
-const { Content } = await post.render();
+const { Content } = await render(post);
 
-const ogImageUrl = typeof ogImage === "string" ? ogImage : ogImage?.src;
+// Content Layer image metadata is resolved after schema validation.
+if (
+  ogImage &&
+  typeof ogImage !== "string" &&
+  (ogImage.width < 1200 || ogImage.height < 630)
+) {
+  throw new Error(
+    `OpenGraph image for ${post.id} must be at least 1200 X 630 pixels!`
+  );
+}
+
+const ogImageUrl =
+  typeof ogImage === "string"
+    ? ogImage
+    : ogImage
+      ? (await getImage({ src: ogImage })).src
+      : undefined;
 const ogUrl = new URL(
-  ogImageUrl ?? `posts/${slugifyStr(title)}.png`,
+  ogImageUrl ?? `posts/${slugifyStr(title)}/index.png`,
   SITE.website
 ).href;
 
