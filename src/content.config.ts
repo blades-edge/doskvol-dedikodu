@@ -33,6 +33,10 @@ const issues = defineCollection({
       price: z.string().min(1),
       draft: z.boolean().default(false),
       lead: z.preprocess(contentReferenceId, reference("articles").optional()),
+      articles: z.preprocess(
+        emptyToUndefined,
+        z.array(cmsReference("articles")).default([])
+      ),
       chapters: z.preprocess(
         emptyToUndefined,
         z.array(cmsReference("chapters")).default([])
@@ -52,11 +56,6 @@ const articles = defineCollection({
     district: optionalText,
     location: optionalText,
     author: cmsReference("authors"),
-    issue: cmsReference("issues"),
-    order: z.preprocess(
-      emptyToUndefined,
-      z.number().int().nonnegative().default(1000)
-    ),
     spoiler: optionalText,
   }),
 });

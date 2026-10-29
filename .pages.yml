@@ -53,16 +53,26 @@ content:
       - name: lead
         label: Manşet yazısı
         type: reference
-        description: "Önce sayıyı taslak olarak kaydedin, sonra ona bağlı yazıyı ekleyip buradan seçin. Kapak başlığı bu yazıdan alınır."
+        description: "Aşağıdaki yazı listesinde bulunan bir yazıyı seçin. Manşet her zaman kapakta önce gösterilir."
         options:
           collection: articles
+          value: "{name}"
+          label: "{fields.title}"
+          search: "name,fields.title"
+      - name: articles
+        label: Bu sayıdaki yazılar
+        type: reference
+        description: "Seçim listesinin sırası gazeteye yansır; aynı bölümdeki yazılar bu sırayla görünür. Manşeti de listeye ekleyin. Seçilmeyen yazılar yayımlanmaz."
+        options:
+          collection: articles
+          multiple: true
           value: "{name}"
           label: "{fields.title}"
           search: "name,fields.title"
       - name: chapters
         label: Bu sayıdaki tefrika bölümleri
         type: reference
-        description: "Önce Tefrika bölümleri menüsünde bölümü hazırlayın, sonra burada seçin. Seçilmeyen bölümler yayımlanmaz."
+        description: "Önce Tefrika bölümleri menüsünde bölümü hazırlayın, sonra burada seçin. Seçim listesinin sırası gazeteye yansır. Seçilmeyen bölümler yayımlanmaz."
         options:
           collection: chapters
           multiple: true
@@ -96,22 +106,13 @@ content:
       rename: false
     view:
       primary: title
-      fields: [title, issue, section, order, author]
-      sort: [title, order]
+      fields: [title, section, author]
+      sort: [title]
       search: [title, description, section]
       default: { sort: title, order: asc }
     fields:
       - { name: title, label: Başlık, type: string, required: true }
       - { name: description, label: Spot / kısa özet, type: text, required: true }
-      - name: issue
-        label: Ait olduğu sayı
-        type: reference
-        required: true
-        options:
-          collection: issues
-          value: "{name}"
-          label: "Sayı {fields.number}"
-          search: "name,fields.number"
       - name: author
         label: Yazar
         type: reference
@@ -135,11 +136,6 @@ content:
           values: [İpekyalı, Rıhtım, Kömürsırtı, Altıkule]
         description: "Gazetede kullanılan mahallelerden seçin. Listede olmayan mahalle veya ayrıntılı mekân adını aşağıya yazabilirsiniz."
       - { name: location, label: Ek yer / serbest mekân adı, type: string }
-      - name: order
-        label: Sıralama önceliği (isteğe bağlı)
-        type: number
-        options: { min: 0 }
-        description: "Küçük değer önce gelir. Boş bırakırsanız 1000 kabul edilir. Öne almak için 10, 20 gibi değerler verebilirsiniz. Aynı değerler kullanılabilir; eşitlikte dosya adına göre sıralanır. Manşet ayrıca sayı kaydından seçilir."
       - { name: spoiler, label: Spoiler uyarısı, type: text }
       - name: body
         label: Yazı metni
