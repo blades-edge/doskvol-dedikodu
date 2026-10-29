@@ -47,3 +47,22 @@ for (const [name, mutate, message] of [
     assert.throws(() => buildEditorialIndex(data), message);
   });
 }
+
+test("draft issues may omit a lead and never leak articles or future chapters", () => {
+  const data = fixture();
+  data.issues[1].data.draft = true;
+  delete data.issues[1].data.lead;
+  data.articles[0].data.episode = 1; // An unfinished draft may temporarily duplicate an episode.
+  const publication = buildEditorialIndex(data);
+  assert.deepEqual(publication.issues.map(issue => issue.id), ["one"]);
+  assert.equal(publication.issuesById.has("two"), false);
+  assert.equal(publication.articlesById.has("chapter-two"), false);
+  assert.deepEqual(articlesForIssue(publication, "two"), []);
+  assert.deepEqual(chaptersForSeries(publication, "diary").map(article => article.id), ["chapter-one"]);
+});
+
+test("a published issue still requires its own lead", () => {
+  const data = fixture();
+  delete data.issues[0].data.lead;
+  assert.throws(() => buildEditorialIndex(data), /Manşet/);
+});

@@ -3,8 +3,8 @@ title: "Kızıl Kuşaklar Okulu’nda gece yarısı ziyareti"
 description: "Üç isimsiz konuk, ters çalışan bir saat ve sabaha karşı susturulan bir zil. İpekyalı’daki okulun kapısında yaşananları araştırdık."
 section: Haberler
 location: İpekyalı
-author: mina-karakarga
-issue: "001"
+author: "mina-karakarga.json"
+issue: "001.json"
 order: 0
 ---
 
@@ -12,10 +12,9 @@ order: 0
 
 İlk ziyaretçinin yüzünü uzun bir tül örttüğü, ikincisinin boş bir kafes taşıdığı ileri sürülüyor. Üçüncü ziyaretçi içinse tanıklarımızın kullandığı tek ortak sözcük “ıslak”. Oysa mahallede gün boyunca yağmur yağmadı. Okulun taş merdivenlerinde bu sabah gördüğümüz su izleri, sokağa doğru değil, duvara doğru ilerliyordu.
 
-<figure class="reading-figure">
-  <div class="engraving" role="img" aria-label="Okulun servis geçidi için ayrılmış temsili gravür alanı"></div>
-  <figcaption>Okulun kuzey duvarındaki servis geçidi — gravür için ayrılmış alan.</figcaption>
-</figure>
+![Kanal kıyısındaki taş yapıları ve köprüleri gösteren çizgisel Doskvol gravürü.](../../assets/images/doskvol-line-engraving.png)
+
+_Doskvol’da gece — gazete için hazırlanmış temsili gravür._
 
 ## Zil neden dört kez çaldı?
 

@@ -455,3 +455,10 @@ footer {
   font-size: 1.125rem;
   line-height: 1.65;
 }
+
+.reading-copy img {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin: 1.8em 0 0.5em;
+}

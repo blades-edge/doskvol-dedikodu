@@ -14,7 +14,7 @@
     "cz": "cz",
     "prepare": "husky install",
     "lint": "eslint .",
-    "test:editorial": "node --test tests/editorial.test.mjs"
+    "test:editorial": "node --test tests/*.test.mjs"
   },
   "dependencies": {
     "@astrojs/check": "^0.9.9",

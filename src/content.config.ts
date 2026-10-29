@@ -1,7 +1,13 @@
+import { contentReferenceId, emptyToUndefined } from "@utils/contentReference";
 import { SITE } from "@config";
 import { defineCollection, reference } from "astro:content";
 import { z } from "astro/zod";
 import { glob } from "astro/loaders";
+
+const cmsReference = <T extends "articles" | "issues" | "authors" | "serials">(
+  collection: T
+) => z.preprocess(contentReferenceId, reference(collection));
+const optionalText = z.preprocess(emptyToUndefined, z.string().optional());
 
 const blog = defineCollection({
   loader: glob({ pattern: "**/*.{md,mdx}", base: "./src/content/blog" }),
@@ -24,7 +30,7 @@ const blog = defineCollection({
 
 const authors = defineCollection({
   loader: glob({ pattern: "*.json", base: "./src/content/authors" }),
-  schema: z.object({ name: z.string().min(1), bio: z.string().optional() }),
+  schema: z.object({ name: z.string().min(1), bio: optionalText }),
 });
 
 const serials = defineCollection({
@@ -43,7 +49,8 @@ const issues = defineCollection({
       description: z.string().min(1),
       date: z.coerce.date(),
       price: z.string().min(1),
-      lead: reference("articles"),
+      draft: z.boolean().default(false),
+      lead: z.preprocess(contentReferenceId, reference("articles").optional()),
       cover: image(),
       coverAlt: z.string().min(1),
       coverCaption: z.string().min(1),
@@ -56,13 +63,16 @@ const articles = defineCollection({
     title: z.string().min(1),
     description: z.string().min(1),
     section: z.string().min(1),
-    location: z.string().optional(),
-    author: reference("authors"),
-    issue: reference("issues"),
+    location: optionalText,
+    author: cmsReference("authors"),
+    issue: cmsReference("issues"),
     order: z.number().int().nonnegative(),
-    series: reference("serials").optional(),
-    episode: z.number().int().positive().optional(),
-    spoiler: z.string().optional(),
+    series: z.preprocess(contentReferenceId, reference("serials").optional()),
+    episode: z.preprocess(
+      emptyToUndefined,
+      z.number().int().positive().optional()
+    ),
+    spoiler: optionalText,
   }),
 });
 

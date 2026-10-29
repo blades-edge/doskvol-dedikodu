@@ -2,10 +2,10 @@
 title: "Adımı bilen kapı"
 description: "Bana okuldan bir defter almamı söylediler. Kapağını açmamamı da. Ücretin yarısını peşin aldığımda yalnızca ilk cümleyi duymuştum."
 section: Tefrika
-author: kor-nokta
-issue: "001"
+author: "kor-nokta.json"
+issue: "001.json"
 order: 3
-series: kor-nokta
+series: "kor-nokta.json"
 episode: 1
 spoiler: "Bu bölüm, Kızıl Kuşaklar Okulu’ndaki gece ziyaretiyle ilgili kurgu sırlarını açığa çıkarır. Haberle aynı olayı başka bir gözden anlatır."
 ---

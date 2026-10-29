@@ -26,7 +26,8 @@ export function buildEditorialIndex(content: EditorialContent) {
     if (numbers.has(issue.data.number))
       throw new Error(`Tekrarlanan sayı numarası: ${issue.data.number}`);
     numbers.add(issue.data.number);
-    const lead = articlesById.get(issue.data.lead.id);
+    if (issue.data.draft) continue;
+    const lead = issue.data.lead && articlesById.get(issue.data.lead.id);
     if (!lead || lead.data.issue.id !== issue.id)
       throw new Error(`${issue.id}: Manşet bu sayıya ait bir yazı olmalı.`);
   }
@@ -34,6 +35,7 @@ export function buildEditorialIndex(content: EditorialContent) {
     const { issue, author, series, episode, order } = article.data;
     if (!issuesById.has(issue.id))
       throw new Error(`${article.id}: Sayı bulunamadı: ${issue.id}`);
+    if (issuesById.get(issue.id)!.data.draft) continue;
     if (!authorsById.has(author.id))
       throw new Error(`${article.id}: Yazar bulunamadı: ${author.id}`);
     const position = `${issue.id}:${order}`;
@@ -55,11 +57,18 @@ export function buildEditorialIndex(content: EditorialContent) {
       episodes.add(key);
     }
   }
+  const issues = content.issues
+    .filter(issue => !issue.data.draft)
+    .sort((a, b) => b.data.number - a.data.number);
+  const articles = content.articles.filter(
+    article => !issuesById.get(article.data.issue.id)!.data.draft
+  );
   return {
     ...content,
-    issues: [...content.issues].sort((a, b) => b.data.number - a.data.number),
-    issuesById,
-    articlesById,
+    issues,
+    articles,
+    issuesById: new Map(issues.map(issue => [issue.id, issue])),
+    articlesById: new Map(articles.map(article => [article.id, article])),
     authorsById,
     serialsById,
   };
