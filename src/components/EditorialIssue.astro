@@ -1,0 +1,176 @@
+---
+import { Image } from "astro:assets";
+import type { CollectionEntry } from "astro:content";
+import EditorialHead from "./EditorialHead.astro";
+import {
+  articlesForIssue,
+  issueSlug,
+  type EditorialIndex,
+} from "@utils/editorial";
+import { slugifyStr } from "@utils/slugify";
+
+interface Props {
+  issue: CollectionEntry<"issues">;
+  publication: EditorialIndex;
+}
+const { issue, publication } = Astro.props;
+const { number, description, date, price, cover, coverAlt, coverCaption } =
+  issue.data;
+const prefix = `${import.meta.env.BASE_URL}editorial-preview/`;
+const articles = articlesForIssue(publication, issue.id);
+const lead = publication.articlesById.get(issue.data.lead!.id)!;
+const title = lead.data.title;
+const remaining = articles.filter(article => article.id !== lead.id);
+const sections = [
+  ...new Set(remaining.map(article => article.data.section)),
+].map(name => ({
+  name,
+  articles: remaining.filter(article => article.data.section === name),
+}));
+const dateLabel = date.toLocaleDateString("tr-TR", {
+  dateStyle: "long",
+  timeZone: "UTC",
+});
+const position = publication.issues.findIndex(entry => entry.id === issue.id);
+const newer = publication.issues[position - 1];
+const older = publication.issues[position + 1];
+---
+
+<!doctype html>
+<html lang="tr">
+  <head><EditorialHead title={`Sayı ${issueSlug(number)} · ${title}`} /></head>
+  <body>
+    <div class="notice">Yayın yapısı önizlemesi · Özgün kurgu metinler</div>
+    <div class="paper">
+      <header>
+        <div class="masthead">
+          <div class="eyebrow">Akoros’un bağımsız sesi · Doskvol</div>
+          <h1>Doskvol<br />Dedikoduları</h1>
+          <div class="tagline">
+            Duyduğunuza inanmayın. Duymadıklarınızdan korkun.
+          </div>
+        </div>
+        <div class="issue">
+          <span>Sayı {issueSlug(number)}</span><time
+            datetime={date.toISOString()}>{dateLabel}</time
+          ><span>Bedeli: {price}</span>
+        </div>
+        <nav class="nav" aria-label="Yayın bölümleri">
+          <a href="#manset">Manşet</a>{
+            sections.map(section => (
+              <a href={`#${slugifyStr(section.name)}`}>{section.name}</a>
+            ))
+          }<a href={`${prefix}arsiv/`}>Sayı arşivi</a>
+        </nav>
+      </header>
+      <main>
+        <section id="manset" class="lead" aria-labelledby="lead-title">
+          <div class="eyebrow">
+            Bu sayının manşeti · {lead.data.location ?? lead.data.section}
+          </div>
+          <h2 id="lead-title"><a href={`${prefix}${lead.id}/`}>{title}</a></h2>
+          <p>{description}</p>
+          <div class="byline">
+            — {publication.authorsById.get(lead.data.author.id)!.data.name}
+          </div>
+          <Image
+            src={cover}
+            alt={coverAlt}
+            class="editorial-engraving"
+            widths={[480, 960, 1440, 2060]}
+            sizes="(max-width: 720px) calc(100vw - 3rem), (max-width: 1160px) 92vw, 1046px"
+            loading="eager"
+            fetchpriority="high"
+          />
+          <div class="caption">{coverCaption}</div>
+        </section>
+        {
+          sections.map(section => (
+            <section id={slugifyStr(section.name)} aria-label={section.name}>
+              <h2 class="eyebrow issue-section-title">{section.name}</h2>
+              <div
+                class={
+                  section.articles.some(article => article.data.series)
+                    ? "issue-serials"
+                    : "columns"
+                }
+              >
+                {section.articles.map(article => {
+                  const author = publication.authorsById.get(
+                    article.data.author.id
+                  )!;
+                  const series =
+                    article.data.series &&
+                    publication.serialsById.get(article.data.series.id)!;
+                  return series ? (
+                    <article class="serial">
+                      <div>
+                        <div class="eyebrow">Edebiyat ve tefrika</div>
+                        <div class="marker" aria-hidden="true">
+                          ❦
+                        </div>
+                        <h3>
+                          <a href={`${prefix}${article.id}/`}>
+                            {series.data.title}
+                          </a>
+                        </h3>
+                      </div>
+                      <div>
+                        <div class="eyebrow">
+                          Bölüm {article.data.episode} · {article.data.title}
+                        </div>
+                        <p>{article.data.description}</p>
+                        <p class="byline">— {author.data.name}</p>
+                        <a
+                          class="reading-link"
+                          href={`${prefix}${article.id}/`}
+                        >
+                          Bölümü oku <span aria-hidden="true">→</span>
+                        </a>
+                      </div>
+                    </article>
+                  ) : (
+                    <article class="story">
+                      <div class="eyebrow">
+                        {article.data.location ?? article.data.section}
+                      </div>
+                      <h3>
+                        <a href={`${prefix}${article.id}/`}>
+                          {article.data.title}
+                        </a>
+                      </h3>
+                      <p>{article.data.description}</p>
+                      <div class="byline">— {author.data.name}</div>
+                    </article>
+                  );
+                })}
+              </div>
+            </section>
+          ))
+        }
+        <nav class="reading-return" aria-label="Sayılar arasında gezinme">
+          {
+            older ? (
+              <a href={`${prefix}sayilar/${issueSlug(older.data.number)}/`}>
+                ← Sayı {issueSlug(older.data.number)}
+              </a>
+            ) : (
+              <span>İlk sayı</span>
+            )
+          }
+          <a href={`${prefix}arsiv/`}>Bütün sayılar</a>
+          {
+            newer ? (
+              <a href={`${prefix}sayilar/${issueSlug(newer.data.number)}/`}>
+                Sayı {issueSlug(newer.data.number)} →
+              </a>
+            ) : (
+              <span>En yeni sayı</span>
+            )
+          }
+        </nav>
+      </main>
+      <footer>Doskvol Dedikoduları · Mürekkep kurumadan okuyanlara</footer>
+    </div>
+  </body>
+</html>

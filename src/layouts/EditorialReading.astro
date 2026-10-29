@@ -1,0 +1,145 @@
+---
+import type { CollectionEntry } from "astro:content";
+import EditorialHead from "@components/EditorialHead.astro";
+import {
+  articlesForIssue,
+  chaptersForSeries,
+  issueSlug,
+  type EditorialIndex,
+} from "@utils/editorial";
+
+interface Props {
+  article: CollectionEntry<"articles">;
+  publication: EditorialIndex;
+}
+const { article, publication } = Astro.props;
+const { title, description, section, episode, spoiler } = article.data;
+const author = publication.authorsById.get(article.data.author.id)!;
+const issue = publication.issuesById.get(article.data.issue.id)!;
+const series =
+  article.data.series && publication.serialsById.get(article.data.series.id)!;
+const prefix = `${import.meta.env.BASE_URL}editorial-preview/`;
+const preview = `${prefix}sayilar/${issueSlug(issue.data.number)}/`;
+const dateLabel = issue.data.date.toLocaleDateString("tr-TR", {
+  dateStyle: "long",
+  timeZone: "UTC",
+});
+const chapters = series ? chaptersForSeries(publication, series.id) : [];
+const chapterIndex = chapters.findIndex(chapter => chapter.id === article.id);
+const previous = chapters[chapterIndex - 1];
+const next = chapters[chapterIndex + 1];
+const related = articlesForIssue(publication, issue.id).find(
+  entry => entry.id !== article.id && entry.data.series
+);
+---
+
+<!doctype html>
+<html lang="tr">
+  <head><EditorialHead title={title} /></head>
+  <body>
+    <a class="reading-skip" href="#reading-content">Yazıya geç</a>
+    <div class="notice">
+      Tasarım prototipi · Bu metin bu gazete için yazılmış özgün kurgudur.
+    </div>
+    <div class="paper reading-paper">
+      <header class="masthead reading-masthead">
+        <div class="eyebrow">Akoros’un bağımsız sesi · Doskvol</div>
+        <a class="reading-wordmark" href={preview}>Doskvol Dedikoduları</a>
+        <div class="tagline">
+          Duyduğunuza inanmayın. Duymadıklarınızdan korkun.
+        </div>
+      </header>
+      <nav class="reading-breadcrumb" aria-label="Sayfa yolu">
+        <a href={preview}>Sayı {issueSlug(issue.data.number)}</a><span
+          aria-hidden="true"
+        >
+          /
+        </span><span>{section}</span>
+      </nav>
+      <main id="reading-content">
+        <header class="reading-heading">
+          <div class="eyebrow">
+            {series?.data.title ?? section}{episode && ` · Bölüm ${episode}`}
+          </div>
+          <h1>{title}</h1>
+          <p class="reading-deck">{description}</p>
+          <div class="reading-meta">
+            <span>{author.data.name}</span><time
+              datetime={issue.data.date.toISOString()}>{dateLabel}</time
+            ><span>Sayı {issueSlug(issue.data.number)}</span>
+          </div>
+        </header>
+        {
+          spoiler && (
+            <aside class="reading-spoiler" aria-label="Spoiler uyarısı">
+              <>
+                <strong>Oyun günlüğü · Spoiler uyarısı</strong>
+                <p>{spoiler}</p>
+              </>
+            </aside>
+          )
+        }
+        <article class="reading-copy" aria-label={title}><slot /></article>
+        {
+          episode ? (
+            <nav
+              class="reading-ending reading-chapters"
+              aria-label="Tefrika bölümleri"
+            >
+              <div>
+                <>
+                  <span class="eyebrow">Önceki bölüm</span>
+                  {previous ? (
+                    <p>
+                      <a href={`${prefix}${previous.id}/`}>
+                        Bölüm {previous.data.episode}: {previous.data.title}
+                      </a>
+                    </p>
+                  ) : (
+                    <p>Serinin ilk bölümü</p>
+                  )}
+                </>
+              </div>
+              <div>
+                <>
+                  <span class="eyebrow">Sonraki bölüm</span>
+                  {next ? (
+                    <p>
+                      <a href={`${prefix}${next.id}/`}>
+                        Bölüm {next.data.episode}: {next.data.title}
+                      </a>
+                    </p>
+                  ) : (
+                    <p>Sonraki bölüm henüz yayımlanmadı.</p>
+                  )}
+                </>
+              </div>
+            </nav>
+          ) : related ? (
+            <aside class="reading-ending">
+              <div class="eyebrow">Bu sayıdaki tefrika</div>
+              <h2>
+                <a href={`${prefix}${related.id}/`}>
+                  {
+                    publication.serialsById.get(related.data.series!.id)!.data
+                      .title
+                  }
+                </a>
+              </h2>
+              <p>
+                Bölüm {related.data.episode}: {related.data.title}
+              </p>
+            </aside>
+          ) : null
+        }
+
+        <div class="reading-return">
+          <a href={preview}>← Sayı {issueSlug(issue.data.number)}</a><a
+            href="#reading-content">Yazının başına ↑</a
+          >
+        </div>
+      </main>
+      <footer>Doskvol Dedikoduları · Mürekkep kurumadan okuyanlara</footer>
+    </div>
+  </body>
+</html>

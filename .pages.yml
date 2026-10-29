@@ -1,30 +1,188 @@
 media:
-  input: public
-  output: /
+  input: src/assets/images
+  output: ../../assets/images
+  extensions: [png, jpg, jpeg, webp, avif]
+
+settings:
+  content:
+    merge: true
+
 content:
-  - name: posts
-    label: Posts
+  - name: issues
+    label: Sayılar
     type: collection
-    path: src/content/blog
+    path: src/content/issues
+    format: json
+    subfolders: false
+    filename:
+      template: "{number}.json"
+      field: create
+    operations:
+      rename: false
     view:
-      fields: [ title, draft, date ]
+      primary: number
+      fields: [number, date, draft]
+      sort: [number, date]
+      default: { sort: number, order: desc }
     fields:
-      - { name: author, label: Author, type: string }
-      - { name: pubDatetime, label: Date, type: date }
-      - { name: modDatetime, label: Date, type: date }
-      - { name: title, label: Title, type: string, required: true }
-      - { name: ogImage, label: Title, type: string }
-      - { name: slug, label: Slug, type: string }
-      - { name: featured, label: Featured, type: boolean }
-      - { name: draft, label: Draft, type: boolean }
-      - { name: tags, label: Tags, type: string, list: true }
-      - { name: description, label: Description, type: string }
-      - { name: body, label: Body, type: rich-text }
-  - name: about
-    label: About page
-    type: file
-    path: src/pages/about.md
+      - name: number
+        label: Sayı numarası
+        type: number
+        required: true
+        options: { min: 1 }
+        description: "1, 2, 3… Her sayı için farklı bir tam sayı kullanın."
+      - name: draft
+        label: Taslak sayı
+        type: boolean
+        default: true
+        description: "Açıksa sayı ve ona bağlı yazılar sitede görünmez. Manşeti seçtikten ve yazıları tamamladıktan sonra kapatın."
+      - name: date
+        label: Yayın tarihi
+        type: date
+        required: true
+        options: { format: yyyy-MM-dd }
+      - name: description
+        label: Kapak spotu
+        type: text
+        required: true
+      - name: price
+        label: Baskı bedeli
+        type: string
+        required: true
+        default: "2 mangır"
+      - name: lead
+        label: Manşet yazısı
+        type: reference
+        description: "Önce sayıyı taslak olarak kaydedin, sonra ona bağlı yazıyı ekleyip buradan seçin. Kapak başlığı bu yazıdan alınır."
+        options:
+          collection: articles
+          value: "{name}"
+          label: "{fields.title}"
+          search: "name,fields.title"
+      - name: cover
+        label: Kapak gravürü
+        type: image
+        required: true
+      - name: coverAlt
+        label: Görselin kısa betimi
+        type: text
+        required: true
+        description: "Görseli göremeyen okurlar için neyi gösterdiğini anlatın."
+      - name: coverCaption
+        label: Görsel altyazısı
+        type: string
+        required: true
+
+  - name: articles
+    label: Yazılar
+    type: collection
+    path: src/content/articles
+    format: yaml-frontmatter
+    subfolders: false
+    filename:
+      template: "{primary}.md"
+      field: create
+    operations:
+      rename: false
+    view:
+      primary: title
+      fields: [title, issue, section, author]
+      sort: [title, order]
+      search: [title, description, section]
+      default: { sort: title, order: asc }
     fields:
-      - { name: layout, type: string, hidden: true, default: "../layouts/AboutLayout.astro" }
-      - { name: title, label: Title, type: string }
-      - { name: body, label: Body, type: rich-text, options: { input: public/assets, output: /assets } }
+      - { name: title, label: Başlık, type: string, required: true }
+      - { name: description, label: Spot / kısa özet, type: text, required: true }
+      - name: issue
+        label: Ait olduğu sayı
+        type: reference
+        required: true
+        options:
+          collection: issues
+          value: "{name}"
+          label: "Sayı {fields.number}"
+          search: "name,fields.number"
+      - name: author
+        label: Yazar
+        type: reference
+        required: true
+        options:
+          collection: authors
+          value: "{name}"
+          label: "{fields.name}"
+          search: "name,fields.name"
+      - name: section
+        label: Bölüm
+        type: string
+        required: true
+        description: "Örneğin Haberler, Dedikodular veya Tefrika. Aynı adı taşıyan yazılar sayı sayfasında birlikte görünür."
+      - { name: location, label: Mahalle / yer, type: string }
+      - name: order
+        label: Sayı içindeki sıra
+        type: number
+        required: true
+        default: 0
+        options: { min: 0 }
+        description: "0’dan başlayan tam sayı. Aynı sayıdaki yazılar için farklı sıra değerleri kullanın."
+      - name: series
+        label: Tefrika
+        type: reference
+        description: "Yalnızca bir serinin bölümü olan yazılarda seçin. Normal haberlerde boş bırakın."
+        options:
+          collection: serials
+          value: "{name}"
+          label: "{fields.title}"
+          search: "name,fields.title"
+      - name: episode
+        label: Tefrika bölüm numarası
+        type: number
+        options: { min: 1 }
+        description: "Tefrika seçtiyseniz girin. Bölüm sırası farklı sayılarda da devam eder."
+      - { name: spoiler, label: Spoiler uyarısı, type: text }
+      - name: body
+        label: Yazı metni
+        type: rich-text
+        required: true
+        options:
+          format: markdown
+          switcher: true
+
+  - name: authors
+    label: Yazarlar
+    type: collection
+    path: src/content/authors
+    format: json
+    subfolders: false
+    filename:
+      template: "{primary}.json"
+      field: create
+    operations:
+      rename: false
+    view:
+      primary: name
+      fields: [name, bio]
+      sort: [name]
+      default: { sort: name, order: asc }
+    fields:
+      - { name: name, label: Yazar adı / imza, type: string, required: true }
+      - { name: bio, label: Kısa tanıtım, type: text }
+
+  - name: serials
+    label: Tefrikalar
+    type: collection
+    path: src/content/serials
+    format: json
+    subfolders: false
+    filename:
+      template: "{primary}.json"
+      field: create
+    operations:
+      rename: false
+    view:
+      primary: title
+      fields: [title, description]
+      sort: [title]
+      default: { sort: title, order: asc }
+    fields:
+      - { name: title, label: Tefrika adı, type: string, required: true }
+      - { name: description, label: Serinin kısa tanıtımı, type: text, required: true }

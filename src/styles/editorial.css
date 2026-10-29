@@ -1,0 +1,464 @@
+:root {
+  font-family: "Newsreader", Georgia, serif;
+  font-optical-sizing: auto;
+  color: #211e1a;
+  background: #ddd3bf;
+}
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  background: radial-gradient(circle at 30% 20%, #f3e9d6, #d5c8b1);
+}
+a {
+  color: inherit;
+}
+.paper {
+  max-width: 1160px;
+  margin: 2rem auto;
+  padding: clamp(1.1rem, 4vw, 3.5rem);
+  background: #f1e9d8;
+  box-shadow: 0 12px 48px #332a2050;
+  border: 1px solid #b7a78d;
+}
+h1,
+h2,
+h3 {
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-weight: 600;
+  text-wrap: balance;
+}
+.eyebrow {
+  font:
+    600 0.75rem/1.5 "Newsreader",
+    serif;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+}
+.masthead {
+  text-align: center;
+  border-top: 4px double #322b24;
+  border-bottom: 4px double #322b24;
+  padding: 1.4rem 0 1rem;
+}
+.masthead h1 {
+  font-size: clamp(2.8rem, 7.3vw, 6.5rem);
+  line-height: 0.98;
+  letter-spacing: -0.025em;
+  margin: 0.2rem 0;
+  font-weight: 700;
+}
+.tagline {
+  font-style: italic;
+  font-size: 1rem;
+}
+.issue {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.55rem 0;
+  border-bottom: 1px solid #322b24;
+  font-size: 0.75rem;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+}
+.nav {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1.4rem;
+  padding: 0.8rem 0;
+  border-bottom: 3px double #322b24;
+  font-size: 0.82rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+.nav a {
+  text-decoration: none;
+}
+.nav a:hover,
+.nav a:focus-visible {
+  text-decoration: underline;
+}
+.lead {
+  padding: 2.2rem 0 1.5rem;
+  text-align: left;
+  border-bottom: 1px solid #746a5a;
+}
+.lead h2 {
+  max-width: 900px;
+  margin: 0.4rem 0;
+  font-size: clamp(2.3rem, 5.3vw, 5.3rem);
+  line-height: 1.04;
+  letter-spacing: -0.015em;
+}
+.lead p {
+  max-width: 65ch;
+  margin: 0.9rem 0 0;
+  font-size: 1.25rem;
+  line-height: 1.5;
+}
+.editorial-engraving {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin: 1.5rem 0 0.6rem;
+}
+.engraving {
+  height: clamp(180px, 32vw, 360px);
+  margin: 1.5rem 0 0.6rem;
+  border: 1px solid #554b3d;
+  background: repeating-linear-gradient(
+    163deg,
+    #1c1b19 0 2px,
+    #514c42 2px 3px,
+    #b7aa92 3px 5px
+  );
+  position: relative;
+  overflow: hidden;
+}
+.engraving::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(0deg, #171716dd 0%, transparent 65%),
+    linear-gradient(90deg, #241e18b0, transparent 65%);
+}
+.engraving::after {
+  content: "DOSKVOL";
+  position: absolute;
+  bottom: 12px;
+  left: 22px;
+  color: #eee2cc;
+  font-size: clamp(2.5rem, 9vw, 7rem);
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  opacity: 0.78;
+}
+.caption {
+  font-size: 0.75rem;
+  text-align: left;
+  font-style: italic;
+}
+.columns {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 250px), 1fr));
+  gap: 1.5rem;
+  margin: 1.5rem 0;
+}
+.story {
+  padding-right: 1.3rem;
+  border-right: 1px solid #a79b87;
+}
+.story:last-child {
+  border: 0;
+  padding: 0;
+}
+.story h3 {
+  font-size: 2rem;
+  line-height: 1.14;
+  margin: 0.45rem 0;
+}
+.story p {
+  font-size: 1.125rem;
+  line-height: 1.65;
+  margin: 0.65rem 0;
+}
+.byline {
+  font-size: 0.8125rem;
+  font-style: italic;
+}
+.serial {
+  margin-top: 2rem;
+  padding: 1.3rem;
+  border: 3px double #40392f;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 1.3rem;
+}
+.serial h3 {
+  font-size: 2rem;
+  line-height: 1.14;
+  margin: 0.4rem 0;
+}
+.serial p {
+  font-size: 1.125rem;
+  line-height: 1.65;
+  margin: 0.3rem 0;
+}
+.serial .byline {
+  font-size: 0.8125rem;
+}
+.serial .marker {
+  font-size: 3rem;
+  line-height: 1;
+}
+footer {
+  border-top: 3px double #322b24;
+  margin-top: 2rem;
+  padding-top: 0.8rem;
+  font-size: 0.8rem;
+  text-align: center;
+}
+.notice {
+  max-width: 1160px;
+  margin: 1rem auto 0;
+  padding: 0 1rem;
+  font:
+    0.85rem/1.5 system-ui,
+    sans-serif;
+  color: #342e25;
+}
+@media (max-width: 720px) {
+  .paper {
+    margin: 0.5rem;
+  }
+  .columns {
+    grid-template-columns: 1fr;
+  }
+  .story {
+    border-right: 0;
+    border-bottom: 1px solid #a79b87;
+    padding: 0 0 1rem;
+  }
+  .story:last-child {
+    border: 0;
+  }
+  .serial {
+    grid-template-columns: 1fr;
+  }
+}
+
+.lead h2 a,
+.story h3 a,
+.serial h3 a {
+  text-decoration: none;
+}
+.lead h2 a:hover,
+.story h3 a:hover,
+.serial h3 a:hover {
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.1em;
+}
+.reading-link {
+  display: inline-block;
+  margin-top: 0.8rem;
+  text-underline-offset: 0.2em;
+}
+.reading-paper {
+  max-width: 1020px;
+}
+.reading-masthead {
+  padding: 1rem 0;
+}
+.reading-wordmark {
+  display: block;
+  margin: 0.45rem 0;
+  font:
+    700 clamp(2rem, 5vw, 3.5rem)/1.05 "Cormorant Garamond",
+    Georgia,
+    serif;
+  letter-spacing: -0.025em;
+  text-decoration: none;
+  text-wrap: balance;
+}
+.reading-breadcrumb {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  align-items: baseline;
+  padding: 1rem 0;
+  border-bottom: 1px solid #a79b87;
+  font-size: 0.875rem;
+}
+.reading-breadcrumb a,
+.reading-return a {
+  text-underline-offset: 0.2em;
+}
+.reading-heading {
+  margin: 2.5rem auto 2rem;
+  max-width: 810px;
+}
+.reading-heading h1 {
+  margin: 0.65rem 0 1rem;
+  font-size: clamp(2.4rem, 5.6vw, 4.5rem);
+  line-height: 1.04;
+  letter-spacing: -0.02em;
+  text-wrap: pretty;
+}
+.reading-deck {
+  max-width: 58ch;
+  font-size: clamp(1.25rem, 2.5vw, 1.5rem);
+  line-height: 1.45;
+  margin: 0 0 1.5rem;
+}
+.reading-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem 1.5rem;
+  border-top: 3px double #746a5a;
+  border-bottom: 1px solid #a79b87;
+  padding: 0.8rem 0;
+  font-size: 0.875rem;
+  line-height: 1.5;
+}
+.reading-copy {
+  max-width: 62ch;
+  margin: 0 auto;
+  font-size: clamp(1.125rem, 1.6vw, 1.25rem);
+  line-height: 1.7;
+  overflow-wrap: break-word;
+}
+.reading-copy p {
+  margin: 0 0 1.2em;
+}
+.reading-copy > p:first-of-type::first-letter {
+  float: left;
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: 3.8em;
+  font-weight: 600;
+  line-height: 0.85;
+  padding: 0.1em 0.1em 0 0;
+}
+.reading-copy h2 {
+  margin: 1.4em 0 0.5em;
+  font-size: 1.7em;
+  line-height: 1.12;
+}
+.reading-copy blockquote {
+  margin: 1.6em 0;
+  padding: 0.2em 0 0.2em 1em;
+  border-left: 2px solid #746a5a;
+  font-size: 1.2em;
+  font-style: italic;
+  line-height: 1.5;
+}
+.reading-copy blockquote p {
+  margin: 0;
+}
+.reading-copy hr {
+  border: 0;
+  border-top: 1px solid #a79b87;
+  max-width: 5rem;
+  margin: 2em auto;
+}
+.reading-figure {
+  margin: 1.8em 0;
+}
+.reading-figure .engraving {
+  height: clamp(160px, 26vw, 280px);
+  margin: 0;
+}
+.reading-figure figcaption {
+  margin-top: 0.5rem;
+  font-size: 0.8125rem;
+  font-style: italic;
+  line-height: 1.5;
+}
+.reading-spoiler {
+  max-width: 62ch;
+  margin: 0 auto 2rem;
+  padding: 1rem 1.2rem;
+  border: 3px double #746a5a;
+  font-size: 1rem;
+  line-height: 1.55;
+}
+.reading-spoiler p {
+  margin: 0.4rem 0 0;
+}
+.reading-ending {
+  max-width: 62ch;
+  margin: 2.5rem auto 0;
+  padding: 1.3rem 0;
+  border-top: 3px double #746a5a;
+  border-bottom: 1px solid #a79b87;
+}
+.reading-ending h2 {
+  margin: 0.5rem 0;
+  font-size: 2rem;
+  line-height: 1.1;
+}
+.reading-ending p {
+  font-size: 1.125rem;
+  line-height: 1.5;
+  margin: 0.4rem 0 0;
+}
+.reading-chapters {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+}
+.reading-return {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-top: 1.5rem;
+  font-size: 0.875rem;
+}
+.reading-skip {
+  position: absolute;
+  top: 0.5rem;
+  left: 0.5rem;
+  transform: translateY(-200%);
+  background: #f1e9d8;
+  color: #211e1a;
+  padding: 0.8rem;
+  z-index: 1;
+}
+.reading-skip:focus {
+  transform: translateY(0);
+}
+@media (max-width: 720px) {
+  .reading-heading {
+    margin-top: 1.8rem;
+  }
+  .reading-chapters {
+    grid-template-columns: 1fr;
+  }
+  .reading-copy {
+    line-height: 1.65;
+  }
+}
+
+.issue-section-title {
+  margin: 1.5rem 0 0;
+}
+.issue-archive {
+  padding: 0;
+  margin: 0 auto;
+  max-width: 810px;
+  list-style: none;
+}
+.issue-archive li {
+  border-top: 3px double #746a5a;
+  padding: 1.5rem 0;
+}
+.issue-archive h2 {
+  font-size: clamp(2rem, 4vw, 3rem);
+  line-height: 1.1;
+  margin: 0.7rem 0;
+}
+.issue-archive h2 a {
+  text-decoration: none;
+}
+.issue-archive h2 a:hover {
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+}
+.issue-archive p {
+  max-width: 65ch;
+  font-size: 1.125rem;
+  line-height: 1.65;
+}
+
+.reading-copy img {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin: 1.8em 0 0.5em;
+}
