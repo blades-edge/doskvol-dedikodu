@@ -38,7 +38,16 @@ const related = articlesForIssue(publication, issue.id).find(
 
 <!doctype html>
 <html lang="tr">
-  <head><EditorialHead title={title} noindex={publication.preview} /></head>
+  <head
+    ><EditorialHead
+      {title}
+      {description}
+      image={issue.data.cover}
+      imageAlt={issue.data.coverAlt}
+      type="article"
+      noindex={publication.preview}
+    /></head
+  >
   <body>
     {
       publication.preview && (

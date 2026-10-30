@@ -6,12 +6,12 @@
   "description": "Katkıcı akışı için geçici prova sayısı.",
   "price": "2 mangır",
   "lead": "katkici-akis-denemesi.md",
-  "makale": [
+  "cover": "../../assets/images/doskvol-line-engraving.png",
+  "coverAlt": "Kanal kıyısında Doskvol gravürü.",
+  "coverCaption": "Katkıcı denemesi için prova baskısı.",
+  "articles": [
     "katkici-akis-denemesi.md",
     "olum-cani-cenaze-yok.md",
     "roric-katili.md"
-  ],
-  "cover": "../../assets/images/doskvol-line-engraving.png",
-  "coverAlt": "Kanal kıyısında Doskvol gravürü.",
-  "coverCaption": "Katkıcı denemesi için prova baskısı."
+  ]
 }

@@ -46,6 +46,9 @@ const older = publication.issues[position + 1];
   <head
     ><EditorialHead
       title={`Sayı ${issueSlug(number)} · ${title}`}
+      {description}
+      image={cover}
+      imageAlt={coverAlt}
       noindex={publication.preview}
     /></head
   >

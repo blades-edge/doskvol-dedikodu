@@ -64,7 +64,7 @@ content:
           value: "{name}"
           label: "{fields.title}"
           search: "name,fields.title"
-      - name: makale
+      - name: articles
         label: Bu sayıdaki makaleler
         type: reference
         description: "Seçim listesinin sırası gazeteye yansır; aynı bölümdeki makaleler bu sırayla görünür. Manşeti de listeye ekleyin. Seçilmeyen makaleler yayımlanmaz."
@@ -74,7 +74,7 @@ content:
           value: "{name}"
           label: "{fields.title}"
           search: "name,fields.title"
-      - name: bolum
+      - name: chapters
         label: Bu sayıdaki tefrika bölümleri
         type: reference
         description: "Önce Tefrika bölümleri menüsünde bölümü hazırlayın, sonra burada seçin. Seçim listesinin sırası gazeteye yansır. Seçilmeyen bölümler yayımlanmaz."
