@@ -1,6 +1,6 @@
 {
   "number": 2,
-  "draft": true,
+  "draft": false,
   "preview": true,
   "date": "2026-10-30",
   "description": "Katkıcı akışı için geçici prova sayısı.",
@@ -10,8 +10,6 @@
   "coverAlt": "Kanal kıyısında Doskvol gravürü.",
   "coverCaption": "Katkıcı denemesi için prova baskısı.",
   "articles": [
-    "katkici-akis-denemesi.md",
-    "roric-katili.md",
-    "olum-cani-cenaze-yok.md"
+    "katkici-akis-denemesi.md"
   ]
 }
