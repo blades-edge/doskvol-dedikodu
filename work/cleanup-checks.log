@@ -1,0 +1,111 @@
+(node:30176) ExperimentalWarning: CommonJS module /Users/mert/.asdf/installs/nodejs/23.2.0/lib/node_modules/npm/node_modules/debug/src/node.js is loading ES Module /Users/mert/.asdf/installs/nodejs/23.2.0/lib/node_modules/npm/node_modules/supports-color/index.js using require().
+Support for loading ES Module in require() is an experimental feature and might change at any time
+(Use `node --trace-warnings ...` to show where the warning was created)
+npm warn deprecated @humanwhocodes/config-array@0.13.0: Use @eslint/config-array instead
+npm warn deprecated @humanwhocodes/object-schema@2.0.3: Use @eslint/object-schema instead
+npm warn deprecated eslint@8.57.1: This version is no longer supported. Please see https://eslint.org/version-support for other options.
+
+> doskvol-dedikodu@4.2.0 prepare
+> husky install
+
+husky - Git hooks installed
+
+added 758 packages, and audited 759 packages in 8s
+
+293 packages are looking for funding
+  run `npm fund` for details
+
+found 0 vulnerabilities
+
+> doskvol-dedikodu@4.2.0 test:editorial
+> node --test tests/*.test.mjs
+
+(node:30351) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file:///Users/mert/Documents/ChatGPT/Doskvol%20Dedikodular%C4%B1/src/utils/contentReference.ts is not specified and it doesn't parse as CommonJS.
+Reparsing as ES module because module syntax was detected. This incurs a performance overhead.
+To eliminate this warning, add "type": "module" to /Users/mert/Documents/ChatGPT/Doskvol Dedikoduları/package.json.
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ Pages CMS filenames resolve to the same Astro IDs as existing content (0.472125ms)
+✔ clearing optional CMS fields removes references and chapter numbers (0.080166ms)
+✔ invalid input is left to schema validation, not coerced into a valid ID (0.059375ms)
+(node:30352) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file:///Users/mert/Documents/ChatGPT/Doskvol%20Dedikodular%C4%B1/src/utils/editorial.ts is not specified and it doesn't parse as CommonJS.
+Reparsing as ES module because module syntax was detected. This incurs a performance overhead.
+To eliminate this warning, add "type": "module" to /Users/mert/Documents/ChatGPT/Doskvol Dedikoduları/package.json.
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ issues sort newest first; an issue contains only its own articles and authors (1.519625ms)
+✔ chapters follow episode order across issues, independently of file and issue order (0.118084ms)
+✔ rejects foreign lead instead of rendering wrong links (0.208542ms)
+✔ rejects duplicate issue number instead of rendering wrong links (0.078625ms)
+✔ rejects missing author instead of rendering wrong links (0.633084ms)
+✔ rejects missing issue instead of rendering wrong links (0.09575ms)
+✔ rejects duplicate article order instead of rendering wrong links (0.071416ms)
+✔ rejects missing episode instead of rendering wrong links (0.075333ms)
+✔ rejects episode without series instead of rendering wrong links (0.089667ms)
+✔ rejects missing series instead of rendering wrong links (0.107666ms)
+✔ rejects duplicate episode instead of rendering wrong links (0.06425ms)
+✔ draft issues may omit a lead and never leak articles or future chapters (0.0935ms)
+✔ a published issue still requires its own lead (0.066083ms)
+ℹ tests 16
+ℹ suites 0
+ℹ pass 16
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 85.266834
+
+> doskvol-dedikodu@4.2.0 build
+> astro build
+
+20:47:09 [content] Syncing content
+20:47:10 [content] Synced content
+20:47:10 [types] Generated 342ms
+20:47:10 [build] output: "static"
+20:47:10 [build] mode: "static"
+20:47:10 [build] directory: /Users/mert/Documents/ChatGPT/Doskvol Dedikoduları/dist/
+20:47:10 [build] Collecting build info...
+20:47:10 [build] ✓ Completed in 352ms.
+20:47:10 [build] Building static entrypoints...
+20:47:10 [vite] ✓ built in 367ms
+20:47:10 [vite] ✓ built in 9ms
+20:47:10 [build] Rearranging server assets...
+
+ generating static routes 
+20:47:10   ├─ /404.html (+5ms) 
+20:47:10   ├─ /editorial-preview/arsiv/index.html (+3ms) 
+20:47:10   ├─ /editorial-preview/sayilar/001/index.html (+4ms) 
+20:47:10   ├─ /editorial-preview/gece-yarisi-ziyareti/index.html (+2ms) 
+20:47:10   ├─ /editorial-preview/kor-noktanin-guncesi/index.html (+1ms) 
+20:47:10   ├─ /editorial-preview/roric-katili/index.html (+1ms) 
+20:47:10   ├─ /editorial-preview/sislerin-arasinda-kaybolan-yuk/index.html (+1ms) 
+20:47:10   ├─ /editorial-preview/yagkaralarinin-yeni-isletmesi/index.html (+1ms) 
+20:47:10   ├─ /editorial-preview/index.html (+2ms) 
+20:47:10   ├─ /robots.txt (+1ms) 
+20:47:10   ├─ /rss.xml (+23ms) 
+20:47:10   ├─ /index.html (+2ms) 
+20:47:10 ✓ Completed in 64ms.
+
+ generating optimized images 
+20:47:10 [vite] ✓ built in 8ms
+20:47:11   ▶ /_astro/doskvol-line-engraving.Dm_4yufi_2qOCy.webp (before: 2088kB, after: 62kB) (+645ms) (1/4)
+20:47:11   ▶ /_astro/doskvol-line-engraving.Dm_4yufi_ZBfy7A.webp (before: 2088kB, after: 222kB) (+117ms) (2/4)
+20:47:11   ▶ /_astro/doskvol-line-engraving.Dm_4yufi_ZAiKmm.webp (before: 2088kB, after: 437kB) (+458ms) (3/4)
+20:47:12   ▶ /_astro/doskvol-line-engraving.Dm_4yufi_KQ12l.webp (before: 2088kB, after: 848kB) (+646ms) (4/4)
+20:47:12 ✓ Completed in 1.87s.
+
+20:47:12 [build] ✓ Completed in 2.33s.
+20:47:12 [@astrojs/sitemap] `sitemap-index.xml` created at `dist`
+20:47:12 [build] 10 page(s) built in 2.71s
+20:47:12 [build] Complete!
+20:47:13 [content] Syncing content
+20:47:13 [content] Synced content
+20:47:13 [types] Generated 264ms
+20:47:13 [check] Getting diagnostics for Astro files in /Users/mert/Documents/ChatGPT/Doskvol Dedikoduları...
+Result (22 files): 
+- 0 errors
+- 0 warnings
+- 0 hints
+
+
+> doskvol-dedikodu@4.2.0 lint
+> eslint .
+

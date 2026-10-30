@@ -1,0 +1,75 @@
+- generic [active] [ref=f3e1]:
+  - generic [ref=f3e2]: Yayın yapısı önizlemesi · Özgün kurgu metinler
+  - generic [ref=f3e3]:
+    - banner [ref=f3e4]:
+      - generic [ref=f3e5]:
+        - generic [ref=f3e6]: Akoros’un bağımsız sesi · Doskvol
+        - heading "Doskvol Dedikoduları" [level=1] [ref=f3e7]: DoskvolDedikoduları
+        - generic [ref=f3e8]: Duyduğunuza inanmayın. Duymadıklarınızdan korkun.
+      - generic [ref=f3e9]:
+        - generic [ref=f3e10]: Sayı 001
+        - time [ref=f3e11]: 29 Ekim 2026
+        - generic [ref=f3e12]: "Bedeli: 2 mangır"
+      - navigation "Yayın bölümleri" [ref=f3e13]:
+        - link "Manşet" [ref=f3e14] [cursor=pointer]:
+          - /url: "#manset"
+        - link "Dedikodular" [ref=f3e15] [cursor=pointer]:
+          - /url: "#dedikodular"
+        - link "Tefrika" [ref=f3e16] [cursor=pointer]:
+          - /url: "#tefrika"
+        - link "Sayı arşivi" [ref=f3e17] [cursor=pointer]:
+          - /url: /doskvol-dedikodu/editorial-preview/arsiv/
+    - main [ref=f3e18]:
+      - region [ref=f3e19]:
+        - generic [ref=f3e20]: Bu sayının manşeti · İpekyalı
+        - heading [level=2] [ref=f3e21]:
+          - link "Sis çöktü, şehir konuşmaya başladı" [ref=f3e22] [cursor=pointer]:
+            - /url: /doskvol-dedikodu/editorial-preview/gece-yarisi-ziyareti/
+        - paragraph [ref=f3e23]: Kızıl Kuşaklar Okulu’nun kapıları gece yarısından sonra üç kez açıldı. İçeri girenlerin adları yoktu; çıkışlarıysa hiçbir deftere yazılmadı.
+        - generic [ref=f3e24]: — Mina Karakarga
+        - img "Bir kanalın kıyısındaki taş okul, köprüler ve uzaktaki fabrika bacaları; kâğıt üzerinde değişen kalınlıkta mürekkep çizgileri." [ref=f3e25]
+        - generic [ref=f3e26]: Doskvol’da gece — gazete için hazırlanmış temsili gravür.
+      - region "Dedikodular" [ref=f3e27]:
+        - heading "Dedikodular" [level=2] [ref=f3e28]
+        - generic [ref=f3e29]:
+          - article [ref=f3e30]:
+            - generic [ref=f3e31]: Rıhtım
+            - heading [level=3] [ref=f3e32]:
+              - link "Sislerin arasında kaybolan bir yük" [ref=f3e33] [cursor=pointer]:
+                - /url: /doskvol-dedikodu/editorial-preview/sislerin-arasinda-kaybolan-yuk/
+            - paragraph [ref=f3e34]: Rıhtım defterinde yedi sandık, arabada altı iz var. Yedinciyi indirdiğini söyleyen işçi, ellerini ceplerinden çıkarmıyor.
+            - generic [ref=f3e35]: — Ruhi Çengel
+          - article [ref=f3e36]:
+            - generic [ref=f3e37]: İpekyalı
+            - heading [level=3] [ref=f3e38]:
+              - link "Yağkaralarının yeni işletmesi hakkında söylentiler" [ref=f3e39] [cursor=pointer]:
+                - /url: /doskvol-dedikodu/editorial-preview/yagkaralarinin-yeni-isletmesi/
+            - paragraph [ref=f3e40]: İpekyalı’daki yeni çamaşırhanenin tabelası gündüz okunuyor, geceleri değişiyor. Komşuların asıl merakı, içeride hiç çamaşır görülmemesi.
+            - generic [ref=f3e41]: — İsimsiz Bir Tanık
+      - region "Tefrika" [ref=f3e42]:
+        - heading "Tefrika" [level=2] [ref=f3e43]
+        - article [ref=f3e45]:
+          - generic [ref=f3e46]:
+            - generic [ref=f3e47]: Edebiyat ve tefrika
+            - generic [aria-hidden] [ref=f3e48]: ❦
+            - heading [level=3] [ref=f3e49]:
+              - link "Kör Nokta’nın Güncesi" [ref=f3e50] [cursor=pointer]:
+                - /url: /doskvol-dedikodu/editorial-preview/kor-noktanin-guncesi/
+          - generic [ref=f3e51]:
+            - generic [ref=f3e52]: Bölüm 1 · Adımı bilen kapı
+            - paragraph [ref=f3e53]: Bana okuldan bir defter almamı söylediler. Kapağını açmamamı da. Ücretin yarısını peşin aldığımda yalnızca ilk cümleyi duymuştum.
+            - paragraph [ref=f3e54]: — Kör Nokta
+            - link "Bölümü oku" [ref=f3e55] [cursor=pointer]:
+              - /url: /doskvol-dedikodu/editorial-preview/kor-noktanin-guncesi/
+              - text: Bölümü oku →
+      - navigation "Sayılar arasında gezinme" [ref=f3e56]:
+        - generic [ref=f3e57]: İlk sayı
+        - link "Bütün sayılar" [ref=f3e58] [cursor=pointer]:
+          - /url: /doskvol-dedikodu/editorial-preview/arsiv/
+        - generic [ref=f3e59]: En yeni sayı
+    - contentinfo [ref=f3e60]: Doskvol Dedikoduları · Mürekkep kurumadan okuyanlara
+  - generic [ref=f3e63]:
+    - button [ref=f3e64]
+    - button [ref=f3e70]
+    - button [ref=f3e74]
+    - button [ref=f3e79]

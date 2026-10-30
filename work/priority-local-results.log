@@ -1,0 +1,57 @@
+(node:71138) ExperimentalWarning: CommonJS module /Users/mert/.asdf/installs/nodejs/23.2.0/lib/node_modules/npm/node_modules/debug/src/node.js is loading ES Module /Users/mert/.asdf/installs/nodejs/23.2.0/lib/node_modules/npm/node_modules/supports-color/index.js using require().
+Support for loading ES Module in require() is an experimental feature and might change at any time
+(Use `node --trace-warnings ...` to show where the warning was created)
+duplicate: build and issue content passed
+omitted: build and issue content passed
+cleared: build and issue content passed
+Original content restored; final build passed
+
+> doskvol-dedikodu@4.2.0 test:editorial
+> node --test tests/*.test.mjs
+
+(node:71527) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file:///Users/mert/Documents/ChatGPT/Doskvol%20Dedikodular%C4%B1/src/utils/contentReference.ts is not specified and it doesn't parse as CommonJS.
+Reparsing as ES module because module syntax was detected. This incurs a performance overhead.
+To eliminate this warning, add "type": "module" to /Users/mert/Documents/ChatGPT/Doskvol Dedikoduları/package.json.
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ Pages CMS filenames resolve to the same Astro IDs as existing content (0.449041ms)
+✔ clearing optional CMS fields removes references and chapter numbers (0.077542ms)
+✔ invalid input is left to schema validation, not coerced into a valid ID (0.059ms)
+(node:71528) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file:///Users/mert/Documents/ChatGPT/Doskvol%20Dedikodular%C4%B1/src/utils/editorial.ts is not specified and it doesn't parse as CommonJS.
+Reparsing as ES module because module syntax was detected. This incurs a performance overhead.
+To eliminate this warning, add "type": "module" to /Users/mert/Documents/ChatGPT/Doskvol Dedikoduları/package.json.
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ issues sort newest first; an issue contains only its own articles and authors (0.950541ms)
+✔ chapters follow episode order across issues, independently of file and issue order (0.105042ms)
+✔ rejects foreign lead instead of rendering wrong links (0.196709ms)
+✔ rejects duplicate issue number instead of rendering wrong links (0.069792ms)
+✔ rejects missing author instead of rendering wrong links (0.079833ms)
+✔ rejects missing issue instead of rendering wrong links (0.061875ms)
+✔ rejects missing episode instead of rendering wrong links (0.059875ms)
+✔ rejects episode without series instead of rendering wrong links (0.061ms)
+✔ rejects missing series instead of rendering wrong links (0.088125ms)
+✔ rejects duplicate episode instead of rendering wrong links (0.112542ms)
+✔ draft issues may omit a lead and never leak articles or future chapters (0.112458ms)
+✔ a published issue still requires its own lead (0.061708ms)
+✔ equal priorities use stable file IDs regardless of input order (0.084666ms)
+✔ unset priorities go after explicit priorities and ties remain stable (0.080459ms)
+ℹ tests 17
+ℹ suites 0
+ℹ pass 17
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 76.231417
+22:20:23 [content] Syncing content
+22:20:23 [content] Synced content
+22:20:23 [types] Generated 283ms
+22:20:23 [check] Getting diagnostics for Astro files in /Users/mert/Documents/ChatGPT/Doskvol Dedikoduları...
+Result (22 files): 
+- 0 errors
+- 0 warnings
+- 0 hints
+
+
+> doskvol-dedikodu@4.2.0 lint
+> eslint .
+

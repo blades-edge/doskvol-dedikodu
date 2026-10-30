@@ -1,0 +1,164 @@
+(node:75449) ExperimentalWarning: CommonJS module /Users/mert/.asdf/installs/nodejs/23.2.0/lib/node_modules/npm/node_modules/debug/src/node.js is loading ES Module /Users/mert/.asdf/installs/nodejs/23.2.0/lib/node_modules/npm/node_modules/supports-color/index.js using require().
+Support for loading ES Module in require() is an experimental feature and might change at any time
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+> astro-paper@4.2.0 test:editorial
+> node --test tests/editorial.test.mjs
+
+(node:75526) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file:///Users/mert/Documents/ChatGPT/Doskvol%20Dedikodular%C4%B1/src/utils/editorial.ts is not specified and it doesn't parse as CommonJS.
+Reparsing as ES module because module syntax was detected. This incurs a performance overhead.
+To eliminate this warning, add "type": "module" to /Users/mert/Documents/ChatGPT/Doskvol Dedikoduları/package.json.
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ issues sort newest first; an issue contains only its own articles and authors (1.244208ms)
+✔ chapters follow episode order across issues, independently of file and issue order (0.120375ms)
+✔ rejects foreign lead instead of rendering wrong links (0.204416ms)
+✔ rejects duplicate issue number instead of rendering wrong links (0.071916ms)
+✔ rejects missing author instead of rendering wrong links (0.074333ms)
+✔ rejects missing issue instead of rendering wrong links (0.651542ms)
+✔ rejects duplicate article order instead of rendering wrong links (0.09775ms)
+✔ rejects missing episode instead of rendering wrong links (0.082459ms)
+✔ rejects episode without series instead of rendering wrong links (0.104084ms)
+✔ rejects missing series instead of rendering wrong links (0.123458ms)
+✔ rejects duplicate episode instead of rendering wrong links (0.07025ms)
+ℹ tests 11
+ℹ suites 0
+ℹ pass 11
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 85.824375
+
+> astro-paper@4.2.0 build
+> astro build
+
+12:14:56 [content] Syncing content
+12:14:56 [content] Content config changed
+12:14:56 [content] Clearing content store
+12:14:57 [content] Synced content
+12:14:57 [types] Generated 1.10s
+12:14:57 [build] output: "static"
+12:14:57 [build] mode: "static"
+12:14:57 [build] directory: /Users/mert/Documents/ChatGPT/Doskvol Dedikoduları/dist/
+12:14:57 [build] Collecting build info...
+12:14:57 [build] ✓ Completed in 1.12s.
+12:14:57 [build] Building static entrypoints...
+12:14:58 [vite] ✓ built in 460ms
+12:14:58 [vite] ✓ built in 42ms
+12:14:58 [build] Rearranging server assets...
+
+ generating static routes 
+12:15:00   ├─ /404.html (+13ms) 
+12:15:00   ├─ /about/index.html (+5ms) 
+12:15:00   ├─ /editorial-preview/arsiv/index.html (+4ms) 
+12:15:00   ├─ /editorial-preview/sayilar/001/index.html (+5ms) 
+12:15:00   ├─ /editorial-preview/gece-yarisi-ziyareti/index.html (+12ms) 
+12:15:00   ├─ /editorial-preview/kor-noktanin-guncesi/index.html (+2ms) 
+12:15:00   ├─ /editorial-preview/sislerin-arasinda-kaybolan-yuk/index.html (+1ms) 
+12:15:00   ├─ /editorial-preview/yagkaralarinin-yeni-isletmesi/index.html (+1ms) 
+12:15:00   ├─ /editorial-preview/index.html (+2ms) 
+12:15:00   ├─ /og.png (+2.44s) 
+12:15:02   ├─ /posts/adding-new-posts-in-astropaper-theme/index.png (+420ms) 
+12:15:03   ├─ /posts/customizing-astropaper-theme-color-schemes/index.png (+373ms) 
+12:15:03   ├─ /posts/dynamic-og-image-generation-in-astropaper-blog-posts/index.png (+381ms) 
+12:15:04   ├─ /posts/how-do-i-develop-my-portfolio-website--blog/index.png (+381ms) 
+12:15:04   ├─ /posts/how-do-i-develop-my-terminal-portfolio-website-with-react/index.png (+381ms) 
+12:15:04   ├─ /posts/how-to-add-a-new-social-icon-to-astropaper/index.png (+393ms) 
+12:15:05   ├─ /posts/how-to-add-an-estimated-reading-time-in-astropaper/index.png (+397ms) 
+12:15:05   ├─ /posts/how-to-configure-astropaper-theme/index.png (+383ms) 
+12:15:06   ├─ /posts/predefined-color-schemes/index.png (+373ms) 
+12:15:06   ├─ /posts/how-to-use-git-hooks-to-set-created-and-modified-dates/index.png (+447ms) 
+12:15:06   ├─ /posts/tailwind-typography-plugin/index.png (+384ms) 
+12:15:07   ├─ /posts/adding-new-posts-in-astropaper-theme/index.html (+6ms) 
+12:15:07   ├─ /posts/astro-paper-2/index.html (+3ms) 
+12:15:07   ├─ /posts/astro-paper-v3/index.html (+5ms) 
+12:15:07   ├─ /posts/astro-paper-v4/index.html (+2ms) 
+12:15:07   ├─ /posts/customizing-astropaper-theme-color-schemes/index.html (+2ms) 
+12:15:07   ├─ /posts/dynamic-og-image-generation-in-astropaper-blog-posts/index.html (+1ms) 
+12:15:07   ├─ /posts/how-do-i-develop-my-portfolio-and-blog/index.html (+1ms) 
+12:15:07   ├─ /posts/how-do-i-develop-my-terminal-portfolio-website-with-react/index.html (+1ms) 
+12:15:07   ├─ /posts/how-to-add-a-new-social-icon/index.html (+2ms) 
+12:15:07   ├─ /posts/how-to-add-estimated-reading-time/index.html (+2ms) 
+12:15:07   ├─ /posts/how-to-configure-astropaper-theme/index.html (+1ms) 
+12:15:07   ├─ /posts/how-to-connect-astro-paper-blog-with-forestry-cms/index.html (+1ms) 
+12:15:07   ├─ /posts/how-to-update-dependencies/index.html (+1ms) 
+12:15:07   ├─ /posts/predefined-color-schemes/index.html (+1ms) 
+12:15:07   ├─ /posts/setting-dates-via-git-hooks/index.html (+1ms) 
+12:15:07   ├─ /posts/tailwind-typography/index.html (+1ms) 
+12:15:07   ├─ /posts/1/index.html (+2ms) 
+12:15:07   ├─ /posts/2/index.html (+1ms) 
+12:15:07   ├─ /posts/3/index.html (+1ms) 
+12:15:07   ├─ /posts/4/index.html (+1ms) 
+12:15:07   ├─ /posts/5/index.html (+1ms) 
+12:15:07   ├─ /posts/6/index.html (+1ms) 
+12:15:07   ├─ /posts/index.html (+2ms) 
+12:15:07   ├─ /robots.txt (+2ms) 
+12:15:07   ├─ /rss.xml (+32ms) 
+12:15:07   ├─ /search/index.html (+5ms) 
+12:15:07   ├─ /tags/astro/1/index.html (+2ms) 
+12:15:07   ├─ /tags/astro-paper/1/index.html (+1ms) 
+12:15:07   ├─ /tags/blog/1/index.html (+1ms) 
+12:15:07   ├─ /tags/color-schemes/1/index.html (+1ms) 
+12:15:07   ├─ /tags/configuration/1/index.html (+1ms) 
+12:15:07   ├─ /tags/contextapi/1/index.html (+1ms) 
+12:15:07   ├─ /tags/docs/1/index.html (+1ms) 
+12:15:07   ├─ /tags/docs/2/index.html (+1ms) 
+12:15:07   ├─ /tags/faq/1/index.html (+1ms) 
+12:15:07   ├─ /tags/faq/2/index.html (+1ms) 
+12:15:07   ├─ /tags/forestry-cms/1/index.html (+1ms) 
+12:15:07   ├─ /tags/headlesscms/1/index.html (+1ms) 
+12:15:07   ├─ /tags/javascript/1/index.html (+1ms) 
+12:15:07   ├─ /tags/nextjs/1/index.html (+1ms) 
+12:15:07   ├─ /tags/reactjs/1/index.html (+1ms) 
+12:15:07   ├─ /tags/release/1/index.html (+1ms) 
+12:15:07   ├─ /tags/release/2/index.html (+1ms) 
+12:15:07   ├─ /tags/styled-components/1/index.html (+1ms) 
+12:15:07   ├─ /tags/tailwindcss/1/index.html (+1ms) 
+12:15:07   ├─ /tags/typescript/1/index.html (+1ms) 
+12:15:07   ├─ /tags/astro/index.html (+1ms) 
+12:15:07   ├─ /tags/astro-paper/index.html (+1ms) 
+12:15:07   ├─ /tags/blog/index.html (+1ms) 
+12:15:07   ├─ /tags/color-schemes/index.html (+1ms) 
+12:15:07   ├─ /tags/configuration/index.html (+1ms) 
+12:15:07   ├─ /tags/contextapi/index.html (+1ms) 
+12:15:07   ├─ /tags/docs/index.html (+1ms) 
+12:15:07   ├─ /tags/faq/index.html (+1ms) 
+12:15:07   ├─ /tags/forestry-cms/index.html (+1ms) 
+12:15:07   ├─ /tags/headlesscms/index.html (+1ms) 
+12:15:07   ├─ /tags/javascript/index.html (+1ms) 
+12:15:07   ├─ /tags/nextjs/index.html (+6ms) 
+12:15:07   ├─ /tags/reactjs/index.html (+1ms) 
+12:15:07   ├─ /tags/release/index.html (+1ms) 
+12:15:07   ├─ /tags/styled-components/index.html (+1ms) 
+12:15:07   ├─ /tags/tailwindcss/index.html (+1ms) 
+12:15:07   ├─ /tags/typescript/index.html (+1ms) 
+12:15:07   ├─ /tags/index.html (+2ms) 
+12:15:07   ├─ /index.html (+3ms) 
+12:15:07 ✓ Completed in 9.26s.
+
+ generating optimized images 
+12:15:07   ▶ /_astro/doskvol-line-engraving.Dm_4yufi_2qOCy.webp (reused cache entry) (+1ms) (1/6)
+12:15:07   ▶ /_astro/AstroPaper-v3.uaW8qzSG_Z2gT8we.webp (reused cache entry) (+1ms) (2/6)
+12:15:07   ▶ /_astro/AstroPaper-v4.TylavUIc_c6w8P.webp (reused cache entry) (+1ms) (3/6)
+12:15:07   ▶ /_astro/doskvol-line-engraving.Dm_4yufi_ZBfy7A.webp (reused cache entry) (+1ms) (4/6)
+12:15:07   ▶ /_astro/doskvol-line-engraving.Dm_4yufi_ZAiKmm.webp (reused cache entry) (+1ms) (5/6)
+12:15:07   ▶ /_astro/doskvol-line-engraving.Dm_4yufi_KQ12l.webp (reused cache entry) (+2ms) (6/6)
+12:15:07 ✓ Completed in 6ms.
+
+12:15:07 [build] ✓ Completed in 9.79s.
+12:15:07 [@astrojs/sitemap] `sitemap-index.xml` created at `dist`
+12:15:07 [build] 72 page(s) built in 10.94s
+12:15:07 [build] Complete!
+12:15:09 [content] Syncing content
+12:15:09 [content] Synced content
+12:15:09 [types] Generated 297ms
+12:15:09 [check] Getting diagnostics for Astro files in /Users/mert/Documents/ChatGPT/Doskvol Dedikoduları...
+Result (60 files): 
+- 0 errors
+- 0 warnings
+- 0 hints
+
+
+> astro-paper@4.2.0 lint
+> eslint .
+

@@ -1,0 +1,59 @@
+(node:31815) ExperimentalWarning: CommonJS module /Users/mert/.asdf/installs/nodejs/23.2.0/lib/node_modules/npm/node_modules/debug/src/node.js is loading ES Module /Users/mert/.asdf/installs/nodejs/23.2.0/lib/node_modules/npm/node_modules/supports-color/index.js using require().
+Support for loading ES Module in require() is an experimental feature and might change at any time
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+> doskvol-dedikodu@4.2.0 build
+> astro build
+
+20:48:57 [content] Syncing content
+20:48:57 [content] Synced content
+20:48:57 [types] Generated 268ms
+20:48:57 [build] output: "static"
+20:48:57 [build] mode: "static"
+20:48:57 [build] directory: /Users/mert/Documents/ChatGPT/Doskvol Dedikoduları/dist/
+20:48:57 [build] Collecting build info...
+20:48:57 [build] ✓ Completed in 289ms.
+20:48:57 [build] Building static entrypoints...
+20:48:57 [vite] ✓ built in 135ms
+20:48:57 [vite] ✓ built in 9ms
+20:48:57 [build] Rearranging server assets...
+
+ generating static routes 
+20:48:57   ├─ /404.html (+5ms) 
+20:48:57   ├─ /editorial-preview/arsiv/index.html (+3ms) 
+20:48:57   ├─ /editorial-preview/sayilar/001/index.html (+5ms) 
+20:48:57   ├─ /editorial-preview/gece-yarisi-ziyareti/index.html (+2ms) 
+20:48:57   ├─ /editorial-preview/kor-noktanin-guncesi/index.html (+1ms) 
+20:48:57   ├─ /editorial-preview/roric-katili/index.html (+1ms) 
+20:48:57   ├─ /editorial-preview/sislerin-arasinda-kaybolan-yuk/index.html (+1ms) 
+20:48:57   ├─ /editorial-preview/yagkaralarinin-yeni-isletmesi/index.html (+1ms) 
+20:48:57   ├─ /editorial-preview/index.html (+2ms) 
+20:48:57   ├─ /robots.txt (+1ms) 
+20:48:57   ├─ /rss.xml (+25ms) 
+20:48:57   ├─ /index.html (+2ms) 
+20:48:57 ✓ Completed in 66ms.
+
+ generating optimized images 
+20:48:57   ▶ /_astro/doskvol-line-engraving.Dm_4yufi_2qOCy.webp (reused cache entry) (+1ms) (1/4)
+20:48:57   ▶ /_astro/doskvol-line-engraving.Dm_4yufi_ZBfy7A.webp (reused cache entry) (+1ms) (2/4)
+20:48:57   ▶ /_astro/doskvol-line-engraving.Dm_4yufi_ZAiKmm.webp (reused cache entry) (+2ms) (3/4)
+20:48:57   ▶ /_astro/doskvol-line-engraving.Dm_4yufi_KQ12l.webp (reused cache entry) (+3ms) (4/4)
+20:48:57 ✓ Completed in 7ms.
+
+20:48:57 [build] ✓ Completed in 240ms.
+20:48:57 [@astrojs/sitemap] `sitemap-index.xml` created at `dist`
+20:48:57 [build] 10 page(s) built in 536ms
+20:48:57 [build] Complete!
+20:48:58 [content] Syncing content
+20:48:58 [content] Synced content
+20:48:58 [types] Generated 248ms
+20:48:58 [check] Getting diagnostics for Astro files in /Users/mert/Documents/ChatGPT/Doskvol Dedikoduları...
+Result (22 files): 
+- 0 errors
+- 0 warnings
+- 0 hints
+
+
+> doskvol-dedikodu@4.2.0 lint
+> eslint .
+

@@ -1,0 +1,13 @@
+(node:85985) ExperimentalWarning: CommonJS module /Users/mert/.asdf/installs/nodejs/23.2.0/lib/node_modules/npm/node_modules/debug/src/node.js is loading ES Module /Users/mert/.asdf/installs/nodejs/23.2.0/lib/node_modules/npm/node_modules/supports-color/index.js using require().
+Support for loading ES Module in require() is an experimental feature and might change at any time
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+> astro-paper@4.2.0 preview
+> astro preview stop
+
+{"message":"Stopped preview server (pid 83361).","label":"SKIP_FORMAT","level":"info"}
+
+> astro-paper@4.2.0 preview
+> astro preview --host 127.0.0.1 --port 4324
+
+{"message":"Preview server running at http://127.0.0.1:4324 (pid 86150)\n  Stop:   astro preview stop\n  Status: astro preview status\n  Logs:   astro preview logs","label":"SKIP_FORMAT","level":"info"}

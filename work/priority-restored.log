@@ -1,0 +1,43 @@
+
+> doskvol-dedikodu@4.2.0 build
+> astro build
+
+22:20:22 [content] Syncing content
+22:20:22 [content] Synced content
+22:20:22 [types] Generated 315ms
+22:20:22 [build] output: "static"
+22:20:22 [build] mode: "static"
+22:20:22 [build] directory: /Users/mert/Documents/ChatGPT/Doskvol Dedikoduları/dist/
+22:20:22 [build] Collecting build info...
+22:20:22 [build] ✓ Completed in 338ms.
+22:20:22 [build] Building static entrypoints...
+22:20:22 [vite] ✓ built in 127ms
+22:20:22 [vite] ✓ built in 11ms
+22:20:22 [build] Rearranging server assets...
+
+ generating static routes 
+22:20:22   ├─ /404.html (+6ms) 
+22:20:22   ├─ /editorial-preview/arsiv/index.html (+3ms) 
+22:20:22   ├─ /editorial-preview/sayilar/001/index.html (+4ms) 
+22:20:22   ├─ /editorial-preview/gece-yarisi-ziyareti/index.html (+2ms) 
+22:20:22   ├─ /editorial-preview/kor-noktanin-guncesi/index.html (+1ms) 
+22:20:22   ├─ /editorial-preview/roric-katili/index.html (+1ms) 
+22:20:22   ├─ /editorial-preview/sislerin-arasinda-kaybolan-yuk/index.html (+1ms) 
+22:20:22   ├─ /editorial-preview/yagkaralarinin-yeni-isletmesi/index.html (+1ms) 
+22:20:22   ├─ /editorial-preview/index.html (+2ms) 
+22:20:22   ├─ /robots.txt (+1ms) 
+22:20:22   ├─ /rss.xml (+14ms) 
+22:20:22   ├─ /index.html (+2ms) 
+22:20:22 ✓ Completed in 56ms.
+
+ generating optimized images 
+22:20:22   ▶ /_astro/doskvol-line-engraving.Dm_4yufi_2qOCy.webp (reused cache entry) (+1ms) (1/4)
+22:20:22   ▶ /_astro/doskvol-line-engraving.Dm_4yufi_ZBfy7A.webp (reused cache entry) (+0ms) (2/4)
+22:20:22   ▶ /_astro/doskvol-line-engraving.Dm_4yufi_ZAiKmm.webp (reused cache entry) (+1ms) (3/4)
+22:20:22   ▶ /_astro/doskvol-line-engraving.Dm_4yufi_KQ12l.webp (reused cache entry) (+1ms) (4/4)
+22:20:22 ✓ Completed in 3ms.
+
+22:20:22 [build] ✓ Completed in 221ms.
+22:20:22 [@astrojs/sitemap] `sitemap-index.xml` created at `dist`
+22:20:22 [build] 10 page(s) built in 566ms
+22:20:22 [build] Complete!

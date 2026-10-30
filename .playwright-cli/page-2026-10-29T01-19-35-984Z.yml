@@ -1,0 +1,68 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e2]: Tasarım denemesi · Gerçek yayın sayfası değildir · İçerikler yer tutucudur.
+  - generic [ref=e3]:
+    - banner [ref=e4]:
+      - generic [ref=e5]:
+        - generic [ref=e6]: Akoros'un bağımsız sesi · Doskvol
+        - heading "Doskvol Dedikoduları" [level=1] [ref=e7]: DoskvolDedikoduları
+        - generic [ref=e8]: Duyduğunuza inanmayın. Duymadıklarınızdan korkun.
+      - generic [ref=e9]:
+        - generic [ref=e10]: Sayı 001
+        - generic [ref=e11]: Şehrin karanlık sokaklarından
+        - generic [ref=e12]: "Bedeli: 2 mangır"
+      - navigation "Yayın bölümleri" [ref=e13]:
+        - link "Manşet" [ref=e14] [cursor=pointer]:
+          - /url: "#manset"
+        - link "Dedikodular" [ref=e15] [cursor=pointer]:
+          - /url: "#dedikodular"
+        - link "Tefrika" [ref=e16] [cursor=pointer]:
+          - /url: "#tefrika"
+    - main [ref=e17]:
+      - region [ref=e18]:
+        - generic [ref=e19]: Bu haftanın manşeti · Özel haber
+        - heading [level=2] [ref=e20]:
+          - link "Sis çöktü, şehir konuşmaya başladı" [ref=e21] [cursor=pointer]:
+            - /url: /doskvol-dedikodu/editorial-preview/gece-yarisi-ziyareti/
+        - paragraph [ref=e22]: Kızıl Kuşaklar Okulu’nun kapıları gece yarısından sonra üç kez açıldı. İçeri girenlerin adları yoktu; çıkışlarıysa hiçbir deftere yazılmadı.
+        - img "Doskvol için gravür görselinin yer tutucusu" [ref=e23]: DOSKVOL
+        - generic [ref=e24]: Doskvol'un gece görünümü — gravür için ayrılmış alan.
+      - region "Dedikodular" [ref=e25]:
+        - generic [ref=e26]: Şehirden haberler ve dedikodular
+        - generic [ref=e27]:
+          - article [ref=e28]:
+            - generic [ref=e29]: İPEKYALI
+            - heading [level=3] [ref=e30]:
+              - link "Kızıl Kuşaklar Okulu’nda gece yarısı ziyareti" [ref=e31] [cursor=pointer]:
+                - /url: /doskvol-dedikodu/editorial-preview/gece-yarisi-ziyareti/
+            - paragraph [ref=e32]: Üç isimsiz konuk, ters çalışan bir saat ve sabaha karşı susturulan bir zil. Okul yönetimi açıklama yapmayı reddediyor.
+            - generic [ref=e33]: — Özel Muhabir
+          - article [ref=e34]:
+            - generic [ref=e35]: RIHTIM
+            - heading "Sislerin Arasında Kaybolan Bir Yük" [level=3] [ref=e36]
+            - paragraph [ref=e37]: Liman işçileri kayıtlara geçmeyen sandıklar hakkında konuşmaktan kaçınıyor.
+            - generic [ref=e38]: — Rıhtım Muhabirimiz
+          - article [ref=e39]:
+            - generic [ref=e40]: ŞEHİRDEN
+            - heading "Yağkaralarının Yeni İşletmesi Hakkında Söylentiler" [level=3] [ref=e41]
+            - paragraph [ref=e42]: İpekyalı'daki bir binada geceleri duyulan sesler komşuları huzursuz ediyor.
+            - generic [ref=e43]: — İsimsiz Bir Tanık
+      - region [ref=e44]:
+        - generic [ref=e45]:
+          - generic [ref=e46]: Edebiyat ve tefrika
+          - generic [aria-hidden] [ref=e47]: ❦
+          - heading [level=2] [ref=e48]:
+            - link "Kör Nokta’nın Güncesi" [ref=e49] [cursor=pointer]:
+              - /url: /doskvol-dedikodu/editorial-preview/kor-noktanin-guncesi/
+        - generic [ref=e50]:
+          - generic [ref=e51]: Birinci bölüm · Oyun günlüğü
+          - paragraph [ref=e52]: Bana, okuldan bir defter almamı söylediler. Bir sayfa koparmamamı, kapağını açmamamı, içinden adım okunursa cevap vermememi de. Ücretin yarısını peşin aldığımda yalnızca ilk iki şartı duymuştum.
+          - paragraph [ref=e53]: "Birinci bölüm: Adımı bilen kapı"
+          - link "Birinci bölümü oku" [ref=e54] [cursor=pointer]:
+            - /url: /doskvol-dedikodu/editorial-preview/kor-noktanin-guncesi/
+            - text: Birinci bölümü oku →
+    - contentinfo [ref=e55]: Doskvol Dedikoduları · Mürekkep kurumadan okuyanlara
+  - generic [ref=e58]:
+    - button [ref=e59]
+    - button [ref=e65]
+    - button [ref=e69]
+    - button [ref=e74]

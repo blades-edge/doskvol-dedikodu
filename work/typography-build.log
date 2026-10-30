@@ -1,0 +1,118 @@
+(node:14088) ExperimentalWarning: CommonJS module /Users/mert/.asdf/installs/nodejs/23.2.0/lib/node_modules/npm/node_modules/debug/src/node.js is loading ES Module /Users/mert/.asdf/installs/nodejs/23.2.0/lib/node_modules/npm/node_modules/supports-color/index.js using require().
+Support for loading ES Module in require() is an experimental feature and might change at any time
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+> astro-paper@4.2.0 build
+> astro build
+
+04:03:50 [content] Syncing content
+04:03:50 [content] Content config changed
+04:03:50 [content] Clearing content store
+04:03:50 [content] Synced content
+04:03:50 [types] Generated 1.09s
+04:03:50 [build] output: "static"
+04:03:50 [build] mode: "static"
+04:03:50 [build] directory: /Users/mert/Documents/ChatGPT/Doskvol Dedikoduları/dist/
+04:03:50 [build] Collecting build info...
+04:03:50 [build] ✓ Completed in 1.11s.
+04:03:51 [build] Building static entrypoints...
+04:03:51 [vite] ✓ built in 586ms
+04:03:51 [vite] ✓ built in 43ms
+04:03:51 [build] Rearranging server assets...
+
+ generating static routes 
+04:03:54   ├─ /404.html (+7ms) 
+04:03:54   ├─ /about/index.html (+2ms) 
+04:03:54   ├─ /editorial-preview/index.html (+1ms) 
+04:03:54   ├─ /og.png (+2.26s) 
+04:03:56   ├─ /posts/adding-new-posts-in-astropaper-theme/index.png (+398ms) 
+04:03:57   ├─ /posts/customizing-astropaper-theme-color-schemes/index.png (+395ms) 
+04:03:57   ├─ /posts/dynamic-og-image-generation-in-astropaper-blog-posts/index.png (+383ms) 
+04:03:57   ├─ /posts/how-do-i-develop-my-portfolio-website--blog/index.png (+383ms) 
+04:03:58   ├─ /posts/how-do-i-develop-my-terminal-portfolio-website-with-react/index.png (+398ms) 
+04:03:58   ├─ /posts/how-to-add-a-new-social-icon-to-astropaper/index.png (+378ms) 
+04:03:58   ├─ /posts/how-to-add-an-estimated-reading-time-in-astropaper/index.png (+399ms) 
+04:03:59   ├─ /posts/how-to-configure-astropaper-theme/index.png (+378ms) 
+04:03:59   ├─ /posts/predefined-color-schemes/index.png (+376ms) 
+04:04:00   ├─ /posts/how-to-use-git-hooks-to-set-created-and-modified-dates/index.png (+377ms) 
+04:04:00   ├─ /posts/tailwind-typography-plugin/index.png (+381ms) 
+04:04:00   ├─ /posts/adding-new-posts-in-astropaper-theme/index.html (+6ms) 
+04:04:00   ├─ /posts/astro-paper-2/index.html (+2ms) 
+04:04:00   ├─ /posts/astro-paper-v3/index.html (+5ms) 
+04:04:00   ├─ /posts/astro-paper-v4/index.html (+2ms) 
+04:04:00   ├─ /posts/customizing-astropaper-theme-color-schemes/index.html (+2ms) 
+04:04:00   ├─ /posts/dynamic-og-image-generation-in-astropaper-blog-posts/index.html (+1ms) 
+04:04:00   ├─ /posts/how-do-i-develop-my-portfolio-and-blog/index.html (+1ms) 
+04:04:00   ├─ /posts/how-do-i-develop-my-terminal-portfolio-website-with-react/index.html (+1ms) 
+04:04:00   ├─ /posts/how-to-add-a-new-social-icon/index.html (+1ms) 
+04:04:00   ├─ /posts/how-to-add-estimated-reading-time/index.html (+1ms) 
+04:04:00   ├─ /posts/how-to-configure-astropaper-theme/index.html (+1ms) 
+04:04:00   ├─ /posts/how-to-connect-astro-paper-blog-with-forestry-cms/index.html (+1ms) 
+04:04:00   ├─ /posts/how-to-update-dependencies/index.html (+1ms) 
+04:04:00   ├─ /posts/predefined-color-schemes/index.html (+1ms) 
+04:04:00   ├─ /posts/setting-dates-via-git-hooks/index.html (+1ms) 
+04:04:00   ├─ /posts/tailwind-typography/index.html (+1ms) 
+04:04:00   ├─ /posts/1/index.html (+2ms) 
+04:04:00   ├─ /posts/2/index.html (+1ms) 
+04:04:00   ├─ /posts/3/index.html (+1ms) 
+04:04:00   ├─ /posts/4/index.html (+1ms) 
+04:04:00   ├─ /posts/5/index.html (+1ms) 
+04:04:00   ├─ /posts/6/index.html (+1ms) 
+04:04:00   ├─ /posts/index.html (+2ms) 
+04:04:00   ├─ /robots.txt (+1ms) 
+04:04:00   ├─ /rss.xml (+27ms) 
+04:04:00   ├─ /search/index.html (+14ms) 
+04:04:00   ├─ /tags/astro/1/index.html (+2ms) 
+04:04:00   ├─ /tags/astro-paper/1/index.html (+1ms) 
+04:04:00   ├─ /tags/blog/1/index.html (+1ms) 
+04:04:00   ├─ /tags/color-schemes/1/index.html (+2ms) 
+04:04:00   ├─ /tags/configuration/1/index.html (+1ms) 
+04:04:00   ├─ /tags/contextapi/1/index.html (+1ms) 
+04:04:00   ├─ /tags/docs/1/index.html (+1ms) 
+04:04:00   ├─ /tags/docs/2/index.html (+7ms) 
+04:04:00   ├─ /tags/faq/1/index.html (+2ms) 
+04:04:00   ├─ /tags/faq/2/index.html (+1ms) 
+04:04:00   ├─ /tags/forestry-cms/1/index.html (+1ms) 
+04:04:00   ├─ /tags/headlesscms/1/index.html (+1ms) 
+04:04:00   ├─ /tags/javascript/1/index.html (+2ms) 
+04:04:00   ├─ /tags/nextjs/1/index.html (+1ms) 
+04:04:00   ├─ /tags/reactjs/1/index.html (+1ms) 
+04:04:01   ├─ /tags/release/1/index.html (+1ms) 
+04:04:01   ├─ /tags/release/2/index.html (+1ms) 
+04:04:01   ├─ /tags/styled-components/1/index.html (+1ms) 
+04:04:01   ├─ /tags/tailwindcss/1/index.html (+1ms) 
+04:04:01   ├─ /tags/typescript/1/index.html (+1ms) 
+04:04:01   ├─ /tags/astro/index.html (+1ms) 
+04:04:01   ├─ /tags/astro-paper/index.html (+1ms) 
+04:04:01   ├─ /tags/blog/index.html (+1ms) 
+04:04:01   ├─ /tags/color-schemes/index.html (+1ms) 
+04:04:01   ├─ /tags/configuration/index.html (+1ms) 
+04:04:01   ├─ /tags/contextapi/index.html (+1ms) 
+04:04:01   ├─ /tags/docs/index.html (+1ms) 
+04:04:01   ├─ /tags/faq/index.html (+1ms) 
+04:04:01   ├─ /tags/forestry-cms/index.html (+1ms) 
+04:04:01   ├─ /tags/headlesscms/index.html (+1ms) 
+04:04:01   ├─ /tags/javascript/index.html (+1ms) 
+04:04:01   ├─ /tags/nextjs/index.html (+1ms) 
+04:04:01   ├─ /tags/reactjs/index.html (+1ms) 
+04:04:01   ├─ /tags/release/index.html (+1ms) 
+04:04:01   ├─ /tags/styled-components/index.html (+1ms) 
+04:04:01   ├─ /tags/tailwindcss/index.html (+1ms) 
+04:04:01   ├─ /tags/typescript/index.html (+1ms) 
+04:04:01   ├─ /tags/index.html (+2ms) 
+04:04:01   ├─ /index.html (+3ms) 
+04:04:01 ✓ Completed in 9.33s.
+
+ generating optimized images 
+04:04:01   ▶ /_astro/AstroPaper-v3.uaW8qzSG_Z2gT8we.webp (reused cache entry) (+4ms) (1/2)
+04:04:01   ▶ /_astro/AstroPaper-v4.TylavUIc_c6w8P.webp (reused cache entry) (+3ms) (2/2)
+04:04:01 ✓ Completed in 4ms.
+
+04:04:01 [build] ✓ Completed in 9.99s.
+04:04:01 [@astrojs/sitemap] `sitemap-index.xml` created at `dist`
+04:04:01 [build] 66 page(s) built in 11.16s
+04:04:01 [build] Complete!
+
+> astro-paper@4.2.0 lint
+> eslint .
+

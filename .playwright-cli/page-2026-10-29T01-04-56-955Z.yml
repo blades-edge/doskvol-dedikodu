@@ -1,0 +1,59 @@
+- generic [active] [ref=f2e1]:
+  - generic [ref=f2e2]: Tasarım denemesi · Gerçek yayın sayfası değildir · İçerikler yer tutucudur.
+  - generic [ref=f2e3]:
+    - banner [ref=f2e4]:
+      - generic [ref=f2e5]:
+        - generic [ref=f2e6]: Akoros'un bağımsız sesi · Doskvol
+        - heading "Doskvol Dedikoduları" [level=1] [ref=f2e7]: DoskvolDedikoduları
+        - generic [ref=f2e8]: Duyduğunuza inanmayın. Duymadıklarınızdan korkun.
+      - generic [ref=f2e9]:
+        - generic [ref=f2e10]: Sayı 001
+        - generic [ref=f2e11]: Şehrin karanlık sokaklarından
+        - generic [ref=f2e12]: "Bedeli: 2 mangır"
+      - navigation "Yayın bölümleri" [ref=f2e13]:
+        - link "Manşet" [ref=f2e14] [cursor=pointer]:
+          - /url: "#manset"
+        - link "Dedikodular" [ref=f2e15] [cursor=pointer]:
+          - /url: "#dedikodular"
+        - link "Tefrika" [ref=f2e16] [cursor=pointer]:
+          - /url: "#tefrika"
+    - main [ref=f2e17]:
+      - region [ref=f2e18]:
+        - generic [ref=f2e19]: Bu haftanın manşeti · Özel haber
+        - heading "Sis çöktü, şehir konuşmaya başladı" [level=2] [ref=f2e20]
+        - paragraph [ref=f2e21]: Doskvol'un dar sokaklarında her kapının ardında başka bir hikâye saklı. Bazıları doğru, bazıları tehlikeli; hepsi basılmaya değer.
+        - img "Doskvol için gravür görselinin yer tutucusu" [ref=f2e22]: DOSKVOL
+        - generic [ref=f2e23]: Doskvol'un gece görünümü — gravür için ayrılmış alan.
+      - region "Dedikodular" [ref=f2e24]:
+        - generic [ref=f2e25]: Şehirden haberler ve dedikodular
+        - generic [ref=f2e26]:
+          - article [ref=f2e27]:
+            - generic [ref=f2e28]: İPEKYALI
+            - heading "Kızıl Kuşaklar Okulu'nda Gece Yarısı Ziyareti" [level=3] [ref=f2e29]
+            - paragraph [ref=f2e30]: Mahalle sakinleri, okulun kapısından çıkan kimliği belirsiz konuklar gördüklerini iddia ediyor.
+            - generic [ref=f2e31]: — Özel Muhabir
+          - article [ref=f2e32]:
+            - generic [ref=f2e33]: RIHTIM
+            - heading "Sislerin Arasında Kaybolan Bir Yük" [level=3] [ref=f2e34]
+            - paragraph [ref=f2e35]: Liman işçileri kayıtlara geçmeyen sandıklar hakkında konuşmaktan kaçınıyor.
+            - generic [ref=f2e36]: — Rıhtım Muhabirimiz
+          - article [ref=f2e37]:
+            - generic [ref=f2e38]: ŞEHİRDEN
+            - heading "Yağkaralarının Yeni İşletmesi Hakkında Söylentiler" [level=3] [ref=f2e39]
+            - paragraph [ref=f2e40]: İpekyalı'daki bir binada geceleri duyulan sesler komşuları huzursuz ediyor.
+            - generic [ref=f2e41]: — İsimsiz Bir Tanık
+      - region [ref=f2e42]:
+        - generic [ref=f2e43]:
+          - generic [ref=f2e44]: Edebiyat ve tefrika
+          - generic [aria-hidden] [ref=f2e45]: ❦
+          - heading "Kör Nokta'nın Güncesi" [level=2] [ref=f2e46]
+        - generic [ref=f2e47]:
+          - generic [ref=f2e48]: Birinci bölüm · Oyun günlüğü
+          - paragraph [ref=f2e49]: Şehrin kendi anlatılarıyla oyuncuların kaleme aldığı uzun hikâyeler bu bölümde buluşuyor. Tefrika sayfalarında bölüm sırası, yazar bilgisi ve gerektiğinde spoiler uyarısı bulunacak.
+          - paragraph [ref=f2e50]: Bu metin tasarım örneğidir.
+    - contentinfo [ref=f2e51]: Doskvol Dedikoduları · Mürekkep kurumadan okuyanlara
+  - generic [ref=f2e54]:
+    - button [ref=f2e55]
+    - button [ref=f2e61]
+    - button [ref=f2e65]
+    - button [ref=f2e70]
