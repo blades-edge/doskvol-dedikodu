@@ -1,11 +1,11 @@
 import type { CollectionEntry } from "astro:content";
 
 export interface EditorialContent {
-  issues: CollectionEntry<"issues">[];
-  articles: CollectionEntry<"articles">[];
-  authors: CollectionEntry<"authors">[];
-  serials: CollectionEntry<"serials">[];
-  chapters: CollectionEntry<"chapters">[];
+  issues: CollectionEntry<"sayi">[];
+  articles: CollectionEntry<"makale">[];
+  authors: CollectionEntry<"yazar">[];
+  serials: CollectionEntry<"tefrika">[];
+  chapters: CollectionEntry<"bolum">[];
 }
 
 export function issueSlug(number: number) {
@@ -19,8 +19,8 @@ export function buildEditorialIndex(content: EditorialContent) {
   const authorsById = new Map(content.authors.map(entry => [entry.id, entry]));
   const serialsById = new Map(content.serials.map(entry => [entry.id, entry]));
   const numbers = new Set<number>();
-  const selectedArticles = new Map<string, CollectionEntry<"issues">>();
-  const selectedChapters = new Map<string, CollectionEntry<"issues">>();
+  const selectedArticles = new Map<string, CollectionEntry<"sayi">>();
+  const selectedChapters = new Map<string, CollectionEntry<"sayi">>();
   const chaptersById = new Map(
     content.chapters.map(entry => [entry.id, entry])
   );
@@ -78,7 +78,7 @@ export function buildEditorialIndex(content: EditorialContent) {
           series: undefined,
           episode: undefined,
           issue: {
-            collection: "issues" as const,
+            collection: "sayi" as const,
             id: selectedArticles.get(article.id)!.id,
           },
           order: selectedArticles
@@ -101,7 +101,7 @@ export function buildEditorialIndex(content: EditorialContent) {
           district: undefined,
           location: undefined,
           issue: {
-            collection: "issues" as const,
+            collection: "sayi" as const,
             id: selectedChapters.get(chapter.id)!.id,
           },
         },
@@ -149,11 +149,11 @@ export function chaptersForSeries(index: EditorialIndex, id: string) {
 export async function getEditorial() {
   const { getCollection } = await import("astro:content");
   const [issues, articles, authors, serials, chapters] = await Promise.all([
-    getCollection("issues"),
-    getCollection("articles"),
-    getCollection("authors"),
-    getCollection("serials"),
-    getCollection("chapters"),
+    getCollection("sayi"),
+    getCollection("makale"),
+    getCollection("yazar"),
+    getCollection("tefrika"),
+    getCollection("bolum"),
   ]);
   return buildEditorialIndex({ issues, articles, authors, serials, chapters });
 }

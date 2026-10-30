@@ -9,16 +9,17 @@ import {
   issueSlug,
   type EditorialIndex,
 } from "@utils/editorial";
+import { articlePath, issuePath } from "@utils/paths";
 import { slugifyStr } from "@utils/slugify";
 
 interface Props {
-  issue: CollectionEntry<"issues">;
+  issue: CollectionEntry<"sayi">;
   publication: EditorialIndex;
 }
 const { issue, publication } = Astro.props;
 const { number, description, date, price, cover, coverAlt, coverCaption } =
   issue.data;
-const prefix = `${import.meta.env.BASE_URL}editorial-preview/`;
+const prefix = import.meta.env.BASE_URL;
 const articles = articlesForIssue(publication, issue.id);
 const lead = publication.articlesById.get(issue.data.lead!.id)!;
 const title = lead.data.title;
@@ -64,7 +65,9 @@ const older = publication.issues[position + 1];
             sections.map(section => (
               <a href={`#${slugifyStr(section.name)}`}>{section.name}</a>
             ))
-          }<a href={`${prefix}arsiv/`}>Sayı arşivi</a>
+          }<a href={`${prefix}sayi/`}>Sayı arşivi</a><a
+            href={`${prefix}tefrika/`}>Tefrika arşivi</a
+          >
         </nav>
       </header>
       <main>
@@ -76,7 +79,9 @@ const older = publication.issues[position + 1];
                 .join(" · ") || lead.data.section
             }
           </div>
-          <h2 id="lead-title"><a href={`${prefix}${lead.id}/`}>{title}</a></h2>
+          <h2 id="lead-title">
+            <a href={`${prefix}${articlePath(lead)}`}>{title}</a>
+          </h2>
           <p>{description}</p>
           <div class="byline">
             — {publication.authorsById.get(lead.data.author.id)!.data.name}
@@ -116,7 +121,7 @@ const older = publication.issues[position + 1];
                               ❦
                             </div>
                             <h3>
-                              <a href={`${prefix}${group.chapters[0].id}/`}>
+                              <a href={`${prefix}tefrika/${group.seriesId}/`}>
                                 {series.data.title}
                               </a>
                             </h3>
@@ -128,7 +133,7 @@ const older = publication.issues[position + 1];
                             {group.chapters.map(chapter => (
                               <li class="serial-chapter">
                                 <h4 class="serial-chapter-title">
-                                  <a href={`${prefix}${chapter.id}/`}>
+                                  <a href={`${prefix}${articlePath(chapter)}`}>
                                     Bölüm {chapter.data.episode} ·{" "}
                                     {chapter.data.title}
                                   </a>
@@ -144,7 +149,7 @@ const older = publication.issues[position + 1];
                                 </p>
                                 <a
                                   class="reading-link"
-                                  href={`${prefix}${chapter.id}/`}
+                                  href={`${prefix}${articlePath(chapter)}`}
                                 >
                                   Bölümü oku <span aria-hidden="true">→</span>
                                 </a>
@@ -162,7 +167,7 @@ const older = publication.issues[position + 1];
                             .join(" · ") || article.data.section}
                         </div>
                         <h3>
-                          <a href={`${prefix}${article.id}/`}>
+                          <a href={`${prefix}${articlePath(article)}`}>
                             {article.data.title}
                           </a>
                         </h3>
@@ -183,17 +188,17 @@ const older = publication.issues[position + 1];
         <nav class="reading-return" aria-label="Sayılar arasında gezinme">
           {
             older ? (
-              <a href={`${prefix}sayilar/${issueSlug(older.data.number)}/`}>
+              <a href={`${prefix}${issuePath(older.data.number)}`}>
                 ← Sayı {issueSlug(older.data.number)}
               </a>
             ) : (
               <span>İlk sayı</span>
             )
           }
-          <a href={`${prefix}arsiv/`}>Bütün sayılar</a>
+          <a href={`${prefix}sayi/`}>Bütün sayılar</a>
           {
             newer ? (
-              <a href={`${prefix}sayilar/${issueSlug(newer.data.number)}/`}>
+              <a href={`${prefix}${issuePath(newer.data.number)}`}>
                 Sayı {issueSlug(newer.data.number)} →
               </a>
             ) : (

@@ -1,0 +1,33 @@
+---
+import PublicationIndex from "@layouts/PublicationIndex.astro";
+import { getEditorial, chaptersForSeries } from "@utils/editorial";
+const publication = await getEditorial();
+const serials = publication.serials.filter(
+  series => chaptersForSeries(publication, series.id).length
+);
+---
+
+<PublicationIndex
+  title="Tefrika"
+  description="Doskvol’un yarım kalan hikâyeleri, bölüm bölüm."
+>
+  <ol class="issue-archive">
+    {
+      serials.map(series => (
+        <li>
+          <>
+            <h2>
+              <a href={`${import.meta.env.BASE_URL}tefrika/${series.id}/`}>
+                {series.data.title}
+              </a>
+            </h2>
+            <p>{series.data.description}</p>
+            <div class="byline">
+              {chaptersForSeries(publication, series.id).length} bölüm
+            </div>
+          </>
+        </li>
+      ))
+    }
+  </ol>
+</PublicationIndex>

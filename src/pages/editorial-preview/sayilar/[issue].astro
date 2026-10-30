@@ -1,14 +1,15 @@
 ---
-import EditorialIssue from "@components/EditorialIssue.astro";
+import LegacyRedirect from "@components/LegacyRedirect.astro";
 import { getEditorial, issueSlug } from "@utils/editorial";
+import { issuePath } from "@utils/paths";
 export async function getStaticPaths() {
   const publication = await getEditorial();
   return publication.issues.map(issue => ({
     params: { issue: issueSlug(issue.data.number) },
-    props: { issue, publication },
+    props: { target: issuePath(issue.data.number) },
   }));
 }
-const { issue, publication } = Astro.props;
+const { target } = Astro.props;
 ---
 
-<EditorialIssue {issue} {publication} />
+<LegacyRedirect target={`${import.meta.env.BASE_URL}${target}`} />

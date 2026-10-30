@@ -6,6 +6,11 @@ export default defineConfig({
   site: SITE.website,
   base: "/doskvol-dedikodu",
   trailingSlash: "always",
-  integrations: [sitemap()],
+  integrations: [
+    sitemap({
+      filter: page =>
+        !page.includes("/editorial-preview") && !page.includes("/onizleme/"),
+    }),
+  ],
   scopedStyleStrategy: "where",
 });

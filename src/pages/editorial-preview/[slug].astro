@@ -1,16 +1,15 @@
 ---
-import { render } from "astro:content";
-import EditorialReading from "@layouts/EditorialReading.astro";
+import LegacyRedirect from "@components/LegacyRedirect.astro";
 import { getEditorial } from "@utils/editorial";
+import { articlePath } from "@utils/paths";
 export async function getStaticPaths() {
   const publication = await getEditorial();
   return publication.articles.map(article => ({
     params: { slug: article.id },
-    props: { article, publication },
+    props: { target: articlePath(article) },
   }));
 }
-const { article, publication } = Astro.props;
-const { Content } = await render(article);
+const { target } = Astro.props;
 ---
 
-<EditorialReading {article} {publication}><Content /></EditorialReading>
+<LegacyRedirect target={`${import.meta.env.BASE_URL}${target}`} />

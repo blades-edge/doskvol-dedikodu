@@ -8,6 +8,7 @@ author: kor-nokta.json
 spoiler: Kızıl Kuşaklar Okulu’ndan alınan defterin niteliğine ve Kör Nokta’nın
   geçmişine ilişkin kurgu sırları içerir.
 ---
+
 Defteri kapattım. Cümle gözümün önünde kaldı. Karanlıkta çok okuduğumdan, bazen bir yazı başka bir şeyin üzerine düşer; bir adamın alnında borç senedi gördüğüm olmuştur. Fakat o gece duvarın üstünde kendi el yazımı okumak istemedim.
 
 Arka kapıyı bulduğumda sokak boştu. Okulun önünden gelirken geçtiğim köprü, kanalın öteki ucundaydı. Buna şaşırmayı sabaha bıraktım. Doskvol’da insan her şeye vaktinde şaşırırsa işine geç kalır.
@@ -22,7 +23,7 @@ Bozuklukların durduğu cepte küçük, beyaz bir diş buldum.
 
 Rıhtımda, elektriği kesilmiş bir balıkçı tezgâhının altında defteri yeniden açtım. İlk sayfadaki cümle silinmişti. Kâğıdın ıslaklığı başparmağıma geçti. Mürekkebi silmeye çalışırken alttan bir adres çıktı:
 
-*Üçüncü pompa. Alt kapı. Borcunu getir.*
+_Üçüncü pompa. Alt kapı. Borcunu getir._
 
 Adresi tanıyordum. Orada birkaç yıl önce bir adamı beklemiştim. Ne iş için olduğunu hatırlamıyordum; beklerken yediğim ekmeğin içindeki kumu hatırlıyordum.
 
@@ -86,7 +87,7 @@ Adam ilk kez korktu. Elini uzatıp kapağın üstüne bastırdı. Parmağının 
 
 Defteri çekip aldım. Açılan sayfanın ortasında tek satır vardı:
 
-*Ben hâlâ kapının önündeyim.*
+_Ben hâlâ kapının önündeyim._
 
 Alt kapı üç kez vuruldu.
 
@@ -96,4 +97,4 @@ Bu kez hangimizin açacağını ikimiz de biliyorduk.
 
 ---
 
-*İkinci bölümün sonu.*
+_İkinci bölümün sonu._

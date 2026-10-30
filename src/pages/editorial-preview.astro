@@ -1,10 +1,5 @@
 ---
-import EditorialIssue from "@components/EditorialIssue.astro";
-import { getEditorial } from "@utils/editorial";
-const publication = await getEditorial();
-const latest = publication.issues[0];
-if (!latest)
-  throw new Error("Gazete için en az bir yayıma hazır sayı ekleyin.");
+import LegacyRedirect from "@components/LegacyRedirect.astro";
 ---
 
-<EditorialIssue issue={latest} {publication} />
+<LegacyRedirect target={import.meta.env.BASE_URL} />

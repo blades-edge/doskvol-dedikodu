@@ -1,0 +1,50 @@
+---
+import PublicationIndex from "@layouts/PublicationIndex.astro";
+import { getEditorial, chaptersForSeries } from "@utils/editorial";
+import { articlePath, issuePath } from "@utils/paths";
+export async function getStaticPaths() {
+  const publication = await getEditorial();
+  return publication.serials
+    .filter(series => chaptersForSeries(publication, series.id).length)
+    .map(series => ({
+      params: { series: series.id },
+      props: { series, publication },
+    }));
+}
+const { series, publication } = Astro.props;
+const chapters = chaptersForSeries(publication, series.id);
+const base = import.meta.env.BASE_URL;
+---
+
+<PublicationIndex
+  title={series.data.title}
+  description={series.data.description}
+>
+  <ol class="issue-archive">
+    {
+      chapters.map(chapter => {
+        const issue = publication.issuesById.get(chapter.data.issue.id)!;
+        return (
+          <li>
+            <>
+              <div class="eyebrow">Bölüm {chapter.data.episode}</div>
+              <h2>
+                <a href={`${base}${articlePath(chapter)}`}>
+                  {chapter.data.title}
+                </a>
+              </h2>
+              <p>{chapter.data.description}</p>
+              <div class="byline">
+                {publication.authorsById.get(chapter.data.author.id)!.data.name}{" "}
+                ·{" "}
+                <a href={`${base}${issuePath(issue.data.number)}`}>
+                  Sayı {issue.data.number}
+                </a>
+              </div>
+            </>
+          </li>
+        );
+      })
+    }
+  </ol>
+</PublicationIndex>

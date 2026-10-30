@@ -1,91 +1,74 @@
 # Doskvol Dedikoduları
 
-Doskvol’dan haberler, dedikodular ve tefrikalar yayımlayan edebi gazete.
+Doskvol’dan haber, dedikodu ve tefrika yayımlayan edebi gazete.
 
-## Yerel geliştirme ve GitHub Pages
+## Geliştirme
 
 Node.js 24 kullanın (`nvm use`).
 
 ```sh
 npm ci
-npm run build
 npm run dev
+npm run test:editorial
+npm run build
+npm run preview
 ```
 
-Open `http://localhost:4321/doskvol-dedikodu/editorial-preview/`.
-Astro uses `/doskvol-dedikodu/` as its base in development and production;
-`SITE.website` is `https://blades-edge.github.io/doskvol-dedikodu/`.
-Keep internal links and public assets under `import.meta.env.BASE_URL`.
+Yerel kök: `http://localhost:4321/doskvol-dedikodu/`.
+Üretim: `https://blades-edge.github.io/doskvol-dedikodu/`.
+Astro’nun `base` ayarı `/doskvol-dedikodu` olduğundan iç bağlantılar ve dosya adresleri `import.meta.env.BASE_URL` kullanır.
 
-The build uses Astro directly. Jampack was removed with the dependency security
-update. Astro generates the optimized images.
+## İçerik ve CMS
 
-### Sayılar ve içerikler
+Koleksiyon kimlikleri, klasörler ve CMS menüleri tekil adlar kullanır:
 
-- `src/content/issues/*.json`: sayı numarası, tarih, kapak, manşet yazısı ve baskı bilgileri.
-- `src/content/articles/*.md`: haber veya dedikodu metni. Yazı yalnızca yazarına bağlıdır; bölüm adı Haberler veya Dedikodular olarak seçilir. Hangi sayıda ve hangi sırada yer alacağını sayı kaydındaki `articles` listesi belirler.
-- `src/content/authors/*.json`: ortak yazar kayıtları; dosya adı yazar kimliğidir.
-- `src/content/serials/*.json`: birden fazla sayıda sürebilen tefrikalar. Bölümler ayrı koleksiyonda tutulur.
-- `src/content/chapters/*.md`: tefrika bölümü; `series`, `episode`, yazar ve metin. Sayı bağlantısı burada tutulmaz. Sayı kaydındaki `chapters` listesi yayımlanacak bölümleri seçer; seçilmeyen veya yalnızca taslak sayıya bağlanan bölümler görünmez.
+| CMS            | Klasör                 | İşlev                                                    |
+| -------------- | ---------------------- | -------------------------------------------------------- |
+| Sayı           | `src/content/sayi/`    | Tarih, manşet, kapak, makale ve tefrika bölümü seçimleri |
+| Makale         | `src/content/makale/`  | Haber veya dedikodu metni                                |
+| Tefrika        | `src/content/tefrika/` | Serinin adı ve tanıtımı                                  |
+| Tefrika bölümü | `src/content/bolum/`   | Seriye bağlı bölüm, bölüm numarası ve metin              |
+| Yazar          | `src/content/yazar/`   | Ortak imza ve tanıtım                                    |
 
-Önizlemenin kökü en yüksek numaralı sayıyı gösterir. Her sayının kalıcı adresi
-`/doskvol-dedikodu/editorial-preview/sayilar/001/` biçimindedir. Arşiv
-`/doskvol-dedikodu/editorial-preview/arsiv/` adresinde oluşur. Yazıların mevcut
-adresleri korunur; yalnızca içerik dosyaları koleksiyona taşınmıştır.
+[Pages CMS](https://app.pagescms.org/) içinde `blades-edge/doskvol-dedikodu` deposunun `main` dalını kullanın. Kaydetmek GitHub’a commit oluşturur ve Pages yayınını tetikler.
 
-Yeni sayı için mevcut sayı kaydını ve yazılarını örnek alın. Yayıma hazır bir sayının manşeti, o sayının yazı listesinde seçilmiş olmalı. Kapak ve arşiv başlığı doğrudan bu yazının başlığından alınır;
-sayı numaraları ve tefrika içi bölüm numaraları tekrarlanmamalı. Bölümler ve yazar imzaları içerikten oluşur;
-önceki/sonraki tefrika bağlantıları bütün sayılardaki bölüm sırasını izler.
+İçerik dosyalarının adı kalıcı kimliktir; başlık değişse de dosya adı değişmez. CMS referansları `.md` ve `.json` uzantılarıyla saklanabilir; Astro bunları kimliğe dönüştürür. Mevcut uzantısız referanslar da desteklenir. İçerik şemasındaki alan anahtarları, eski kayıtların korunması için değişmedi.
 
-`npm run test:editorial` ilişkileri ve sayılar arasında devam eden tefrikaları
-kontrol eder. Hatalı ilişkiler derleme sırasında da açıklayıcı bir hatayla durur.
-Ana sayfa son yayıma hazır sayıyı, RSS akışı bu sayıların yazılarını gösterir.
+Yeni sayı için:
 
-### Pages CMS ile düzenleme
+1. Gerekli yazar, makale, tefrika ve bölümleri hazırlayın.
+2. Sayıyı **Taslak sayı** açıkken oluşturun; kapak, tarih, spot ve bedeli girin.
+3. **Bu sayıdaki makaleler** ve **Bu sayıdaki tefrika bölümleri** listelerinden içeriği seçin.
+4. Makale listesinde bulunan bir metni **Manşet makalesi** olarak seçin.
+5. Hazır olduğunda **Taslak sayı** seçeneğini kapatın.
 
-[Pages CMS](https://app.pagescms.org/) içinde `blades-edge/doskvol-dedikodu`
-deposunu ve **`design/doskvol-editorial-prototype` dalını** seçin. Bu dalda
-kaydetmek main’i değiştirmez ve mevcut yayın akışını tetiklemez. Deneme için
-önce bir yazının spotunu değiştirip kaydedin; PR’daki Build check sonucu
-ilişkilerin ve derlemenin hâlâ doğru olduğunu gösterir. Yerel önizlemeye almak
-isterseniz aynı daldayken `git pull --ff-only` çalıştırın.
+Seçim listelerinin sırası gazeteye yansır. Makaleler kendi bölümlerinde gruplanır; manşet kapakta önce gelir. Aynı tefrikanın bölümleri tek kutudadır. Okuma sayfalarındaki önceki/sonraki bölüm bağlantıları bölüm numarasına göre ilerler. Bir metin yalnızca bir yayımlanmış sayıya bağlanabilir. Seçilmemiş içerikler ve taslak sayılar normal yayında, arşivde, RSS’te ve tefrika geçişlerinde görünmez.
 
-Menüler: **Sayılar**, **Yazılar**, **Yazarlar**, **Tefrikalar**, **Tefrika bölümleri**. Yazar, sayı,
-manşet ve tefrika alanları aramalı seçimlerle doldurulur. Dosya adları
-ilişkilerin ve yazı adreslerinin kimliğidir; başlık veya imza değiştirmek
-bunları değiştirmez. CMS’de kayıtlı ilişkiler `.json` / `.md` uzantısıyla
-saklanır; Astro bunları koleksiyon kimliklerine dönüştürür. Eski uzantısız
-kimlikler de desteklenir.
+Mahalle alanı sabit seçenekler içerir; serbest mekân alanına yeni mahalle, sokak veya bina yazılabilir. Görseller `src/assets/images/` içinde saklanır. CMS’nin yazdığı `../../assets/images/...` yolu bütün içerik koleksiyonlarında aynı konuma ulaşır.
 
-Yeni sayı sırası:
+## URL düzeni
 
-1. Gerekliyse önce yazar ve tefrika kaydını ekleyin.
-2. **Sayılar** menüsünden yeni sayıyı, **Taslak sayı** açıkken kaydedin.
-   Kapak, spot ve tarih bilgilerini girin; manşet henüz boş kalabilir.
-3. **Yazılar** menüsünde metinleri oluşturup yazarlarını seçin. Sayı kaydındaki **Bu sayıdaki yazılar** listesine yazıları ekleyin.
-   Gazetede her bölümün içindeki sıralama bu listenin sırasını izler; manşet ayrıca kapakta önce gösterilir.
-4. Sayıya dönüp kendi yazılarından birini **Manşet yazısı** olarak seçin.
-5. **Taslak sayı** seçeneğini kapatıp kaydedin. Derleme kontrolü geçince sayı,
-   arşiv ve varsa tefrika bağlantıları otomatik oluşur.
+Aşağıdaki yollar `/doskvol-dedikodu/` kökü altındadır:
 
-Taslak sayılar ve yazıları önizlemede, arşivde ve tefrika geçişlerinde görünmez.
-Haber/dedikodu bölümü sabit seçimdir. Mahalle listesi gazetede kullanılan mevcut adları içerir; serbest mekân alanına listede olmayan mahalle, sokak veya bina yazılabilir. İki alan doluysa birlikte gösterilir.
+| İçerik                   | Yol                      |
+| ------------------------ | ------------------------ |
+| Son yayımlanan sayı      | `/`                      |
+| Sayı arşivi              | `/sayi/`                 |
+| Sayı                     | `/sayi/001/`             |
+| Makale                   | `/makale/dosya-kimligi/` |
+| Tefrika listesi          | `/tefrika/`              |
+| Tefrika ve bölüm listesi | `/tefrika/kor-nokta/`    |
+| Tefrika bölümü           | `/tefrika/kor-nokta/2/`  |
+| RSS                      | `/rss.xml`               |
 
-Tefrika için önce seriyi, ardından **Tefrika bölümleri** menüsünden bölümü hazırlayın. Sonra **Sayılar → Bu sayıdaki tefrika bölümleri** alanında seçin. Bir bölüm yalnızca bir yayımlanmış sayıya bağlanabilir. Aynı seride bölüm numaraları benzersiz olmalıdır. Eski bölümün okuma adresi korunmuştur.
+Tefrika adresi serinin JSON dosyasının kalıcı kimliğini kullanır. Bölüm adresi seri kimliği ve bölüm numarasından oluşur. Eski `/editorial-preview/` adresleri yeni karşılıklarına yönlendirilir; bağlantıdaki `#manset` gibi bölüm işaretleri korunur. GitHub Pages statik olduğu için bu geçiş HTML/JavaScript yönlendirmesidir; sunucudan HTTP 301 yanıtı değildir. Eski adresler site haritasına eklenmez.
 
-Görseller `src/assets/images` içinde tutulur. CMS, kapak ve metin içi görsel
-alanlarına `../../assets/images/...` yolunu yazar; sayı ve yazı klasörlerinden
-bu yol aynı konumu gösterir. Astro bunları üretim için işler. Metin editörü
-Markdown saklar; kaynak görünümüne de geçilebilir.
+## Yayın ve kontroller
 
-`build.yml` checks pull requests. `pages.yml` deploys only `main`, including
-manual runs. Before publishing, enable **Settings → Pages → Build and deployment
-→ Source: GitHub Actions**. Bu dalda ana sayfa gazetenin son sayısını gösterir.
+`build.yml` PR’larda test ve derlemeyi kontrol eder. `pages.yml`, yalnızca `main` dalından GitHub Pages’e yayın yapar. Pages kaynağı **GitHub Actions** olmalıdır.
+
+`npm run test:editorial` içerik ilişkilerini, seçim sırasını, tefrika gruplamasını, adresleri ve görünüm tercihlerini test eder. `astro check` ve `npm run lint` ek kontrollerdir.
 
 ## Lisans
 
 MIT. Proje [AstroPaper](https://github.com/satnaing/astro-paper) temelinden geliştirilmiştir; özgün telif bildirimi LICENSE dosyasında korunur.
-
-## Sayı içerik listeleri
-
-Yazılar ve tefrika bölümleri sayı kaydından seçilir; metinler kendi sayılarını belirlemez. Her içerik yalnızca bir yayımlanmış sayıya bağlanabilir. Seçilmemiş içerikler ve taslak sayıya ait içerikler sitede/RSS’te görünmez. Yazılar listesi aynı bölüm içindeki dizilişi, tefrika listesi tefrika kartlarının dizilişini belirler. Haberler/dedikodular bölüm gruplaması korunur; manşet daima kapakta önce gösterilir. Okuma sayfasındaki önceki/sonraki tefrika bağlantıları ise hikâyenin bölüm numaralarını izler.
