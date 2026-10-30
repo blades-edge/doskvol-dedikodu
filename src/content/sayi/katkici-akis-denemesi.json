@@ -1,0 +1,17 @@
+{
+  "number": 2,
+  "draft": true,
+  "preview": true,
+  "date": "2026-10-30",
+  "description": "Katkıcı akışı için geçici prova sayısı.",
+  "price": "2 mangır",
+  "lead": "katkici-akis-denemesi.md",
+  "makale": [
+    "katkici-akis-denemesi.md",
+    "roric-katili.md",
+    "olum-cani-cenaze-yok.md"
+  ],
+  "cover": "../../assets/images/doskvol-line-engraving.png",
+  "coverAlt": "Kanal kıyısında Doskvol gravürü.",
+  "coverCaption": "Katkıcı denemesi için prova baskısı."
+}
