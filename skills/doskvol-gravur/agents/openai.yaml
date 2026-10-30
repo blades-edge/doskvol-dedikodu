@@ -1,0 +1,4 @@
+interface:
+  display_name: "Doskvol gravürü"
+  short_description: "Saydam zeminde tek mürekkepli gazete gravürü"
+  default_prompt: "$doskvol-gravur Sis içindeki kanalda terk edilmiş bir yolcu teknesi."

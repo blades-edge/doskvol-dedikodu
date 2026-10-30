@@ -33,3 +33,6 @@ pnpm-debug.log*
 !.yarn/sdks
 !.yarn/versions
 .pnp.*
+
+# Python helpers in skills
+__pycache__/

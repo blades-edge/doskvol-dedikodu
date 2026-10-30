@@ -78,3 +78,13 @@ MIT. Proje [AstroPaper](https://github.com/satnaing/astro-paper) temelinden geli
 Sayıda **Önizleme bağlantısını aç** seçeneğini açıp kaydedin. GitHub Pages derlemesi tamamlanınca `/doskvol-dedikodu/taslak/sayi/002/` gibi, sayı numarası üç basamaklı olan bağlantıyı paylaşabilirsiniz. Önizleme makale ve tefrika bölümü okuma sayfalarını da içerir; manşet seçimi tamamlanmadan da açılır.
 
 Önizleme bağlantısı olan herkes erişebilir. Arşive, RSS’e ve site haritasına eklenmez; sayfalarda `noindex` bulunur. Bu bir erişim koruması değildir. Seçenek varsayılan olarak kapalıdır; kapatıp yeniden yayımladığınızda önizleme adresleri kaldırılır. **Taslak sayı** seçeneği normal yayına çıkmayı, önizleme seçeneği ise paylaşılabilir önizlemeyi ayrı ayrı yönetir.
+
+## Gravür üretim standardı
+
+[doskvol-gravur skill’i](skills/doskvol-gravur/SKILL.md), onaylı çizgi referansını, üretim kurallarını ve AVIF doğrulama aracını içerir. Örnek: `$doskvol-gravur Sis içindeki kanalda terk edilmiş bir yolcu teknesi.`
+
+Sabitler: `#211e1a` mürekkep, tamamen saydam zemin, AVIF teslimi; dış mekânda aksi belirtilmedikçe karanlık ve kapalı gökyüzü. Tonlar paralel/çapraz taramayla kurulur. Gazete kâğıdının rengi görsele gömülmez.
+
+Skill’in `scripts/finalize.py` aracı Python 3, ImageMagick 7 ve AV1 destekli libheif kullanır. RGB rengini ve alfa kanalını AVIF’i tekrar açarak doğrular. Mevcut site görselleri bu standardı tanımlarken değiştirilmedi. Görsel üretim tarzı referansla yönlendirilir; çizimlerin birebir aynı olması garanti edilmez.
+
+Başka bir bilgisayarda bu skill klasörünü kişisel Codex skills dizinine kopyalayabilir veya bağlayabilirsiniz. Yerel kurulum bu depodaki kaynağa bağlıdır; depoyu taşırsanız bağlantıyı güncelleyin.
