@@ -9,7 +9,7 @@ export default defineConfig({
   integrations: [
     sitemap({
       filter: page =>
-        !page.includes("/editorial-preview") && !page.includes("/onizleme/"),
+        !page.includes("/editorial-preview") && !page.includes("/taslak/"),
     }),
   ],
   scopedStyleStrategy: "where",

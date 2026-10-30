@@ -9,7 +9,7 @@ test("single Turkish route names are independent of titles", () => {
 });
 
 test("preview reading links stay within the selected issue",()=>{
- assert.equal(issuePath(2,true),"onizleme/sayi/002/");
- assert.equal(articlePath({id:"news",data:{}},2),"onizleme/sayi/002/makale/news/");
- assert.equal(articlePath({id:"chapter",data:{series:{id:"diary"},episode:3}},2),"onizleme/sayi/002/tefrika/diary/3/");
+ assert.equal(issuePath(2,true),"taslak/sayi/002/");
+ assert.equal(articlePath({id:"news",data:{}},2),"taslak/sayi/002/makale/news/");
+ assert.equal(articlePath({id:"chapter",data:{series:{id:"diary"},episode:3}},2),"taslak/sayi/002/tefrika/diary/3/");
 });

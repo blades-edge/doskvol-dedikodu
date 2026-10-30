@@ -4,7 +4,7 @@ interface ReadingPathEntry {
 }
 export function issuePath(number: number, preview = false) {
   const id = String(number).padStart(3, "0");
-  return `${preview ? "onizleme/" : ""}sayi/${id}/`;
+  return `${preview ? "taslak/" : ""}sayi/${id}/`;
 }
 export function articlePath(entry: ReadingPathEntry, previewNumber?: number) {
   const path = entry.data.series

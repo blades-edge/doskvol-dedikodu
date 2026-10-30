@@ -40,7 +40,7 @@ content:
         label: Önizleme bağlantısını aç
         type: boolean
         default: false
-        description: "Açıksa kayıttan ve site derlemesinden sonra /onizleme/sayi/NUMARA/ adresi açılır (2 için 002). Bağlantısı olan herkes erişebilir; arşivde ve RSS’te listelenmez; arama motorlarına indekslenmemesi bildirilir. Gizli içerik için kullanmayın."
+        description: "Açıksa kayıttan ve site derlemesinden sonra /taslak/sayi/NUMARA/ adresi açılır (2 için 002). Bağlantısı olan herkes erişebilir; arşivde ve RSS’te listelenmez; arama motorlarına indekslenmemesi bildirilir. Gizli içerik için kullanmayın."
       - name: date
         label: Yayın tarihi
         type: date

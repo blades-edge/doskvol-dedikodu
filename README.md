@@ -75,6 +75,6 @@ MIT. Proje [AstroPaper](https://github.com/satnaing/astro-paper) temelinden geli
 
 ## Taslak sayı önizlemesi
 
-Sayıda **Önizleme bağlantısını aç** seçeneğini açıp kaydedin. GitHub Pages derlemesi tamamlanınca `/doskvol-dedikodu/onizleme/sayi/002/` gibi, sayı numarası üç basamaklı olan bağlantıyı paylaşabilirsiniz. Önizleme makale ve tefrika bölümü okuma sayfalarını da içerir; manşet seçimi tamamlanmadan da açılır.
+Sayıda **Önizleme bağlantısını aç** seçeneğini açıp kaydedin. GitHub Pages derlemesi tamamlanınca `/doskvol-dedikodu/taslak/sayi/002/` gibi, sayı numarası üç basamaklı olan bağlantıyı paylaşabilirsiniz. Önizleme makale ve tefrika bölümü okuma sayfalarını da içerir; manşet seçimi tamamlanmadan da açılır.
 
 Önizleme bağlantısı olan herkes erişebilir. Arşive, RSS’e ve site haritasına eklenmez; sayfalarda `noindex` bulunur. Bu bir erişim koruması değildir. Seçenek varsayılan olarak kapalıdır; kapatıp yeniden yayımladığınızda önizleme adresleri kaldırılır. **Taslak sayı** seçeneği normal yayına çıkmayı, önizleme seçeneği ise paylaşılabilir önizlemeyi ayrı ayrı yönetir.
