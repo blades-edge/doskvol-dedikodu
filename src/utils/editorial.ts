@@ -12,7 +12,10 @@ export function issueSlug(number: number) {
   return String(number).padStart(3, "0");
 }
 
-export function buildEditorialIndex(content: EditorialContent) {
+export function buildEditorialIndex(
+  content: EditorialContent,
+  { preview = false } = {}
+) {
   const articlesById = new Map(
     content.articles.map(entry => [entry.id, entry])
   );
@@ -42,9 +45,12 @@ export function buildEditorialIndex(content: EditorialContent) {
     if (numbers.has(issue.data.number))
       throw new Error(`Tekrarlanan sayı numarası: ${issue.data.number}`);
     numbers.add(issue.data.number);
-    if (issue.data.draft) continue;
+    if (issue.data.draft && !preview) continue;
     const lead = issue.data.lead && articlesById.get(issue.data.lead.id);
-    if (!lead || !(issue.data.articles ?? []).some(ref => ref.id === lead.id))
+    if (
+      !preview &&
+      (!lead || !(issue.data.articles ?? []).some(ref => ref.id === lead.id))
+    )
       throw new Error(`${issue.id}: Manşet bu sayıya ait bir yazı olmalı.`);
     for (const ref of issue.data.articles ?? []) {
       if (!articlesById.has(ref.id))
@@ -66,7 +72,7 @@ export function buildEditorialIndex(content: EditorialContent) {
       throw new Error(`${article.id}: Yazar bulunamadı.`);
   }
   const issues = content.issues
-    .filter(issue => !issue.data.draft)
+    .filter(issue => preview || !issue.data.draft)
     .sort((a, b) => b.data.number - a.data.number);
   const articles = [
     ...content.articles
@@ -109,6 +115,7 @@ export function buildEditorialIndex(content: EditorialContent) {
   ];
   return {
     ...content,
+    preview,
     issues,
     articles,
     issuesById: new Map(issues.map(issue => [issue.id, issue])),
@@ -146,7 +153,7 @@ export function chaptersForSeries(index: EditorialIndex, id: string) {
     .sort((a, b) => a.data.episode! - b.data.episode!);
 }
 
-export async function getEditorial() {
+async function loadEditorialContent() {
   const { getCollection } = await import("astro:content");
   const [issues, articles, authors, serials, chapters] = await Promise.all([
     getCollection("sayi"),
@@ -155,5 +162,22 @@ export async function getEditorial() {
     getCollection("tefrika"),
     getCollection("bolum"),
   ]);
-  return buildEditorialIndex({ issues, articles, authors, serials, chapters });
+  return { issues, articles, authors, serials, chapters };
+}
+
+export async function getEditorial() {
+  return buildEditorialIndex(await loadEditorialContent());
+}
+
+export async function getIssuePreviews() {
+  const content = await loadEditorialContent();
+  return content.issues
+    .filter(issue => issue.data.preview)
+    .map(issue => ({
+      issue,
+      publication: buildEditorialIndex(
+        { ...content, issues: [issue] },
+        { preview: true }
+      ),
+    }));
 }

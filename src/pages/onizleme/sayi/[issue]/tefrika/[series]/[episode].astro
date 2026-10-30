@@ -1,0 +1,23 @@
+---
+import { render } from "astro:content";
+import EditorialReading from "@layouts/EditorialReading.astro";
+import { getIssuePreviews, issueSlug } from "@utils/editorial";
+export async function getStaticPaths() {
+  return (await getIssuePreviews()).flatMap(({ issue, publication }) =>
+    publication.articles
+      .filter(article => article.data.series)
+      .map(article => ({
+        params: {
+          issue: issueSlug(issue.data.number),
+          series: article.data.series!.id,
+          episode: String(article.data.episode),
+        },
+        props: { article, publication },
+      }))
+  );
+}
+const { article, publication } = Astro.props;
+const { Content } = await render(article);
+---
+
+<EditorialReading {article} {publication}><Content /></EditorialReading>

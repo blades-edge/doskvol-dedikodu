@@ -21,9 +21,11 @@ const { number, description, date, price, cover, coverAlt, coverCaption } =
   issue.data;
 const prefix = import.meta.env.BASE_URL;
 const articles = articlesForIssue(publication, issue.id);
-const lead = publication.articlesById.get(issue.data.lead!.id)!;
-const title = lead.data.title;
-const remaining = articles.filter(article => article.id !== lead.id);
+const lead =
+  issue.data.lead && publication.articlesById.get(issue.data.lead.id);
+const previewNumber = publication.preview ? number : undefined;
+const title = lead?.data.title ?? "Manşet henüz seçilmedi";
+const remaining = articles.filter(article => article.id !== lead?.id);
 const sections = [
   ...new Set(remaining.map(article => article.data.section)),
 ].map(name => ({
@@ -41,8 +43,21 @@ const older = publication.issues[position + 1];
 
 <!doctype html>
 <html lang="tr">
-  <head><EditorialHead title={`Sayı ${issueSlug(number)} · ${title}`} /></head>
+  <head
+    ><EditorialHead
+      title={`Sayı ${issueSlug(number)} · ${title}`}
+      noindex={publication.preview}
+    /></head
+  >
   <body>
+    {
+      publication.preview && (
+        <aside class="preview-notice">
+          Sayı önizlemesi · Bağlantısı olan herkes görebilir. Normal yayına
+          dahil değildir.
+        </aside>
+      )
+    }
     <div class="paper">
       <header>
         <div class="masthead">
@@ -72,20 +87,35 @@ const older = publication.issues[position + 1];
       </header>
       <main>
         <section id="manset" class="lead" aria-labelledby="lead-title">
-          <div class="eyebrow">
-            Bu sayının manşeti · {
-              [lead.data.district, lead.data.location]
-                .filter(Boolean)
-                .join(" · ") || lead.data.section
-            }
-          </div>
-          <h2 id="lead-title">
-            <a href={`${prefix}${articlePath(lead)}`}>{title}</a>
-          </h2>
-          <p>{description}</p>
-          <div class="byline">
-            — {publication.authorsById.get(lead.data.author.id)!.data.name}
-          </div>
+          {
+            lead ? (
+              <>
+                <div class="eyebrow">
+                  Bu sayının manşeti ·{" "}
+                  {[lead.data.district, lead.data.location]
+                    .filter(Boolean)
+                    .join(" · ") || lead.data.section}
+                </div>
+                <h2 id="lead-title">
+                  <a href={`${prefix}${articlePath(lead, previewNumber)}`}>
+                    {title}
+                  </a>
+                </h2>
+                <p>{description}</p>
+                <div class="byline">
+                  —{" "}
+                  {publication.authorsById.get(lead.data.author.id)!.data.name}
+                </div>
+              </>
+            ) : (
+              <>
+                <>
+                  <h2 id="lead-title">{title}</h2>
+                  <p>{description}</p>
+                </>
+              </>
+            )
+          }
           <Image
             src={cover}
             alt={coverAlt}
@@ -121,7 +151,9 @@ const older = publication.issues[position + 1];
                               ❦
                             </div>
                             <h3>
-                              <a href={`${prefix}tefrika/${group.seriesId}/`}>
+                              <a
+                                href={`${prefix}${publication.preview ? articlePath(group.chapters[0], previewNumber) : `tefrika/${group.seriesId}/`}`}
+                              >
                                 {series.data.title}
                               </a>
                             </h3>
@@ -133,7 +165,9 @@ const older = publication.issues[position + 1];
                             {group.chapters.map(chapter => (
                               <li class="serial-chapter">
                                 <h4 class="serial-chapter-title">
-                                  <a href={`${prefix}${articlePath(chapter)}`}>
+                                  <a
+                                    href={`${prefix}${articlePath(chapter, previewNumber)}`}
+                                  >
                                     Bölüm {chapter.data.episode} ·{" "}
                                     {chapter.data.title}
                                   </a>
@@ -149,7 +183,7 @@ const older = publication.issues[position + 1];
                                 </p>
                                 <a
                                   class="reading-link"
-                                  href={`${prefix}${articlePath(chapter)}`}
+                                  href={`${prefix}${articlePath(chapter, previewNumber)}`}
                                 >
                                   Bölümü oku <span aria-hidden="true">→</span>
                                 </a>
@@ -167,7 +201,9 @@ const older = publication.issues[position + 1];
                             .join(" · ") || article.data.section}
                         </div>
                         <h3>
-                          <a href={`${prefix}${articlePath(article)}`}>
+                          <a
+                            href={`${prefix}${articlePath(article, previewNumber)}`}
+                          >
                             {article.data.title}
                           </a>
                         </h3>

@@ -21,7 +21,8 @@ const issue = publication.issuesById.get(article.data.issue.id)!;
 const series =
   article.data.series && publication.serialsById.get(article.data.series.id)!;
 const prefix = import.meta.env.BASE_URL;
-const preview = `${prefix}${issuePath(issue.data.number)}`;
+const preview = `${prefix}${issuePath(issue.data.number, publication.preview)}`;
+const previewNumber = publication.preview ? issue.data.number : undefined;
 const dateLabel = issue.data.date.toLocaleDateString("tr-TR", {
   dateStyle: "long",
   timeZone: "UTC",
@@ -37,8 +38,16 @@ const related = articlesForIssue(publication, issue.id).find(
 
 <!doctype html>
 <html lang="tr">
-  <head><EditorialHead title={title} /></head>
+  <head><EditorialHead title={title} noindex={publication.preview} /></head>
   <body>
+    {
+      publication.preview && (
+        <aside class="preview-notice">
+          Sayı önizlemesi · Bağlantısı olan herkes görebilir. Normal yayına
+          dahil değildir.
+        </aside>
+      )
+    }
     <a class="reading-skip" href="#reading-content">Makaleye geç</a>
     <div class="paper reading-paper">
       <header class="masthead reading-masthead">
@@ -93,7 +102,9 @@ const related = articlesForIssue(publication, issue.id).find(
                   <span class="eyebrow">Önceki bölüm</span>
                   {previous ? (
                     <p>
-                      <a href={`${prefix}${articlePath(previous)}`}>
+                      <a
+                        href={`${prefix}${articlePath(previous, previewNumber)}`}
+                      >
                         Bölüm {previous.data.episode}: {previous.data.title}
                       </a>
                     </p>
@@ -107,7 +118,7 @@ const related = articlesForIssue(publication, issue.id).find(
                   <span class="eyebrow">Sonraki bölüm</span>
                   {next ? (
                     <p>
-                      <a href={`${prefix}${articlePath(next)}`}>
+                      <a href={`${prefix}${articlePath(next, previewNumber)}`}>
                         Bölüm {next.data.episode}: {next.data.title}
                       </a>
                     </p>
@@ -121,7 +132,7 @@ const related = articlesForIssue(publication, issue.id).find(
             <aside class="reading-ending">
               <div class="eyebrow">Bu sayıdaki tefrika</div>
               <h2>
-                <a href={`${prefix}${articlePath(related)}`}>
+                <a href={`${prefix}${articlePath(related, previewNumber)}`}>
                   {
                     publication.serialsById.get(related.data.series!.id)!.data
                       .title
