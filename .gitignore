@@ -36,3 +36,8 @@ pnpm-debug.log*
 
 # Python helpers in skills
 __pycache__/
+
+# local scratch work and generated intermediates
+/output/
+/work/
+/.playwright-cli/

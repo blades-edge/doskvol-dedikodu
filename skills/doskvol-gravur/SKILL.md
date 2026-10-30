@@ -9,32 +9,30 @@ Kullanıcının sahnesini aşağıdaki referansların çizgi dilinde resimle. G�
 
 ## Stil referansları
 
-Referansları incele ve sahneye uygun olanları üretim aracına **yalnızca stil referansı** olarak ver. Referansın konusunu, kompozisyonunu, yazılarını, imzasını veya filigranını kopyalama.
+Yalnızca aşağıdaki iki onaylı referansı kullan. İkisi de beyaz zeminli, opak siyah-beyaz PNG’dir; son mürekkep/alfa dönüşümü uygulanmamıştır. Kılıç talimi temel çizgi referansıdır; meyhane kavgası aynı dilin başarılı uygulamasıdır. Referansları **yalnızca stil için** kullan; konularını veya kompozisyonlarını yeni sahneye taşıma.
 
-- [1 — Meyhanede insanlar](assets/reference-01-tavern.png): figürler, yüzler ve organik çapraz tarama.
-- [2 — Matbaa](assets/reference-02-printing-press.png): iç mekân, makineler ve mimari tarama.
-- [3 — Kent yangını](assets/reference-03-city-fire.png): kent, kalabalık, duman.
-- [4 — Gece kampı](assets/reference-04-night-camp.png): karanlık gök, ateş ve yoğun taramalar.
-- [5 — Portreler](assets/reference-05-portraits.png): belirgin, kalınlığı değişen çizgiler ve düzenli paralel/çapraz tarama. Figürlü sahneler için güçlü başlangıç referansı.
-- [6 — Onaylı kılıç talimi](assets/reference-06-approved-duel-raw.png): kullanıcının **tarzını beğendiği, ImageMagick işleminden geçmemiş üretim**. Stil referansıdır; beyaz dolguları teslim standardı değildir.
-- [Önceki kent referansı](assets/reference.png): ek mimari çizgi referansı; yeni altı referans önceliklidir.
+- [Onaylı kılıç talimi](assets/reference-approved-duel-bw.png): keskin konturlar, belirgin paralel ve çapraz taramalar, güçlü siyah-beyaz karşıtlık.
+- [Onaylı meyhane kavgası](assets/reference-approved-tavern-brawl-bw.png): yüzlerde, kumaşlarda ve iç mekânda ayrı ayrı okunabilen gravür çizgileri.
 
 ## Değişmeyen görsel dil
 
 - 19. yüzyıl resimli gazete ahşap gravürü: keskin, hafif düzensiz, kalınlığı değişen ve tek tek seçilebilen oyma çizgileri. Konturlar, paralel taramalar ve çapraz taramalar formu kurar. Karanlık, çizgi sıklığı ve yönüyle oluşur; çizgiler arasında boyasız boşluklar kalır.
 - Yumuşak gri yüzeyler, airbrush, fotoğraf filtresi, sepya yıkama, kâğıt dokusu, 3B render ve kesintisiz büyük koyu dolgular kullanma. Belirgin çizgi yapısı olmadan yalnızca “eski resim” hissi yeterli değildir.
-- **Son üründe tek mürekkep: sRGB #211e1a (33, 30, 26).** Çizgi kenarlarında kısmi alfa olabilir. Bütün boyasız alanlar, yüzler ve kumaşlardaki açık alanlar dahil saydamdır. Beyaz dolgu veya hale yoktur.
-- Dış mekânda aksi belirtilmedikçe gökyüzü karanlık ve kapalıdır; yönlü taramalar arasında saydam boşluklar kalır. İç mekâna gökyüzü ekleme.
+- Dış mekânda aksi belirtilmedikçe gökyüzü karanlık ve kapalıdır; yönlü taramalar arasında beyaz boşluklar kalır. İç mekâna gökyüzü ekleme.
 - Doskvol'un gotik/endüstriyel kent hissini koru. Ayın “Dimmer Sisters”ı istenirse iki sönük optik yansımadır; insan değildir.
 - Yazı, imza, filigran ve dekoratif çerçeve ekleme. Varsayılan kadraj geniş yataydır; kullanıcı biçimi önceliklidir.
 
 ## Üretim
 
-Mevcut görsel üretim aracını kullan; gerektiğinde imagegen skill’ini oku. Yeni sahne için kısa bir sahne tarifi ve seçilen stil referanslarıyla başla. Eski başarısız üretimleri referans olarak taşıma. Kullanıcı mevcut bir görseli dönüştürüyorsa onu ayrıca düzenleme hedefi olarak tanımla.
+Mevcut görsel üretim aracını kullan; gerektiğinde imagegen skill’ini oku. **ImageGen yalnızca düz beyaz üzerine siyah mürekkepli gravür üretsin.** `transparent_background: false` kullan. Üretim isteminde saydamlık, alfa, arka plan kaldırma veya son mürekkep rengi #211e1a hakkında hiçbir talimat verme. Beyaz alanlar üretim aşamasında doğaldır; bunları yeniden çizdirerek gidermeye çalışma.
 
-Saydam zemin seçeneğini aç, ancak üretimde beyaz dolgular kalmasını tekrar tekrar yeniden çizdirerek çözmeye çalışma. Çizgi dili doğruysa **standart kırmızı kanal → alfa dönüşümü** ile beyazı kaldır. Bu işlem yeni çizgi yaratmaz; yumuşak tonlu bir üretimi gravüre dönüştürmez. Özgün üretimi koru.
+Kısa bir sahne tarifi, onaylı stil referansı ve çizgi dili yeterlidir: keskin, kalınlığı değişen konturlar; ayrı ayrı okunabilen paralel/çapraz taramalar; çizgiler arasında beyaz boşluklar; yumuşak gri yıkama ve boyalı gölgeler yok. Kullanıcı mevcut görseli dönüştürüyorsa onu ayrıca **konu ve kompozisyon hedefi** olarak tanımla; çizgi üslubunu onaylı referanstan al. Eski başarısız üretimleri referans olarak taşıma.
+
+Özgün siyah-beyaz üretimi aracın çıktı konumunda koru; `src/assets/images/` içine PNG veya ara dosya kopyalama. Onaylanıp kalıcı stil referansı olacak opak siyah-beyaz PNG’leri bu skill’in `assets/` klasöründe tut. Geçici işlem ve önizleme dosyalarını geçici dizinde tut. Çizgi dili doğruysa aşağıdaki ImageMagick adımıyla beyazı kaldırıp son mürekkep rengini uygula. Bu işlem yeni çizgi yaratmaz; yumuşak tonlu bir üretimi gravüre dönüştürmez.
 
 ## Standart saydamlık dönüşümü
+
+Bu aşama ImageGen’den sonradır. Son üründe tek mürekkep sRGB **#211e1a (33, 30, 26)** olur. Yüzler ve kumaşlardaki açık alanlar dahil bütün boyasız alanlar saydamdır; çizgi kenarlarında kısmi alfa korunur.
 
 ImageMagick 7 yeterlidir; bu adım için ek Python script’i gerekmez. Kaynağı sRGB/8 bit olarak oku. **Alfa = (255 − kırmızı kanal) × mevcut alfa / 255**; ardından bütün RGB’yi #211e1a yap. Böylece beyaz saydam, siyah opak, ara değerler kısmen saydam olur. Mevcut alfa ile çarpma, zaten saydam alanların gizli siyah RGB’sinin opaklaşmasını engeller.
 
@@ -67,4 +65,4 @@ Araç boyutları ve alfayı korur, RGB kimlik matrisiyle kayıpsız AVIF kodlar,
 
 AVIF’i açık gazete zemini ve farklı bir renk/dama zemini üzerinde incele: yüzler, kumaşlar ve çizgiler arasındaki boşluklar alttaki zemini göstermeli; opak beyazlar, haleler veya koyu dikdörtgen oluşmamalı. Önizleme için geçici zeminli kopyalar yapılabilir; bunları teslim edilen AVIF’e gömme. Krem zeminli önizlemenin yalnızca önizleme olduğunu belirt.
 
-Kullanıcı konum belirtirse oraya; bu projede `src/assets/images/` içine yeni adla kaydet. Açık değiştirme isteği yoksa mevcut varlığı değiştirme. Dosya bağlantısını ver. Çizgi üslubunun her üretimde birebir aynı olacağını garanti etme.
+Bu projede üretilen son AVIF’leri yalnızca `src/assets/images/` içine yeni adla kaydet. Bu klasöre üretimden yalnızca son AVIF dosyaları gider; referans PNG’leri, özgün üretimler ve önizlemeler gitmez. Açık değiştirme isteği yoksa mevcut varlığı değiştirme. Dosya bağlantısını ver. Çizgi üslubunun her üretimde birebir aynı olacağını garanti etme.

@@ -1,5 +1,0 @@
-[      21ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://127.0.0.1:4322/doskvol-dedikodu/editorial-preview/:0
-[      33ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://127.0.0.1:4322/doskvol-dedikodu/_astro/ClientRouter.astro_astro_type_script_index_0_lang.DXqcZz58.js:0
-[      36ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://127.0.0.1:4322/doskvol-dedikodu/_astro/Footer.CGbb0gjI.css:0
-[      36ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://127.0.0.1:4322/doskvol-dedikodu/toggle-theme.js:0
-[     334ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://127.0.0.1:4322/doskvol-dedikodu/favicon.svg:0
