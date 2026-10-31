@@ -16,11 +16,11 @@ Asıl tartışma bundan sonra başladı. Tanıklar ne gördükleri konusunda anl
 
 Akşamı tezgâhın yanında geçiren bir liman işçisi sayıdan emin:
 
-> "Dört. Dört kadeh doldurdular, dördünü de ben masaya taşıdım. Ben yük sayarak ekmek yerim, bayım. Saymayı bilirim."
+> "Dört, bre. Dört kadeh doldurdular, dördünü de ben masaya taşıdım. Ben yük sayarak ekmek yerim. Saymayı bilirim."
 
 İki masa ötede oturan ve kendisini "Kargalar'ın eski defterini tutan" diye tanıtan yaşlı bir adam ise olaydan çok gazetemizin ilgisine şaşırıyor:
 
-> "Kargaayağı'nda adam kaybolur. Dün kayboldu, yarın da kaybolacak. Kaç kişi oldukları mı? Onlara sorsana. Hesabı onlar ödedi."
+> "Kargaayağı'nda adam kaybolur, bunun raconu bu. Dün kayboldu, yarın da kaybolacak. Kaç kişi oldukları mı? O enayilere sorsana. Hesabı onlar ödedi."
 
 Sokak lambalarının elektroplazmaya çevrilmesiyle mesleğini kaybetmiş eski bir fener yakıcı ise işin içinde gözlerin oyunu olduğuna inanıyor:
 
@@ -28,7 +28,7 @@ Sokak lambalarının elektroplazmaya çevrilmesiyle mesleğini kaybetmiş eski b
 
 Kapının yanında oturan, adını vermek istemeyen bir kadın ise açıklamayı başka yerde arıyor. Ona göre bu mahallenin ölüleri kalabalıkları sever. Yere düşen biri de bazen artık kalkmaz.
 
-Yabancıların da en başından beri üç kişi olduklarını söyledikleri ileri sürülüyor. Ne var ki bazı müdavimlere göre bu ısrar, hesabın masaya gelmesinden hemen sonra başladı. Dördüncü arkadaşlarının akşam boyunca içtiklerini ödememek için onu inkâr eden müşteriler mi söz konusu, yoksa meyhanecinin kimsenin oturmadığı bir sandalyeye içki yazma girişimi mi? Şimdilik bilinmiyor. Kargaayağı'nda bir insanın kaybolmasından daha olağan bir şey varsa, o da hesabı kimin ödeyeceği üzerine çıkan tartışmadır.
+Yabancıların da en başından beri üç kişi olduklarını söyledikleri ileri sürülüyor. Ne var ki bazı müdavimlere göre bu ısrar, hesabın masaya gelmesinden hemen sonra başladı. Dördüncü arkadaşlarının akşam boyunca içtiklerini ödememek için dümen çeviren müşteriler mi söz konusu, yoksa meyhanecinin kimsenin oturmadığı bir sandalyeye içki yazma girişimi mi? Şimdilik bilinmiyor. Kargaayağı'nda bir insanın kaybolmasından daha olağan bir şey varsa, o da hesabı kimin ödeyeceği üzerine çıkan tartışmadır.
 
 Meyhanenin sahibi Mardin Gull'un olayla ilgili bir açıklama yapıp yapmadığı öğrenilemedi.
 
@@ -36,4 +36,4 @@ Meyhanenin sahibi Mardin Gull'un olayla ilgili bir açıklama yapıp yapmadığ�
 
 Şimdi bütün mahalle aynı soruyu soruyor:
 
-**O akşam Dökülen Kova'da gerçekten dört arkadaş mı vardı, yoksa üçüncü kadehten sonra herkes saymayı mı unuttu?**
+**O akşam Delik Kova'da gerçekten dört arkadaş mı vardı, yoksa üçüncü kadehten sonra herkes saymayı mı unuttu?**
