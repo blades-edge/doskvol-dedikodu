@@ -46,6 +46,8 @@ Seçim listelerinin sırası gazeteye yansır. Makaleler kendi bölümlerinde gr
 
 Mahalle alanı sabit seçenekler içerir; serbest mekân alanına yeni mahalle, sokak veya bina yazılabilir. Görseller `src/assets/images/` içinde saklanır. CMS’nin yazdığı `../../assets/images/...` yolu bütün içerik koleksiyonlarında aynı konuma ulaşır.
 
+CMS’de **Gravür ayarları → Gece görünümü uygulanacak gravürler** alanından medya kütüphanesindeki görselleri seçin. Seçim isteğe bağlıdır ve başlangıçta boştur. Seçilen dosyalar kapakta ve Markdown görsellerinde `engraving-dark` class’ını alır; yalnızca gece temasında `filter: invert(1) hue-rotate(120deg)` ve `background-color: #d3ddc3` uygulanır. Kaydedip site yeniden derlendiğinde seçim bütün kullanımlara yansır.
+
 ## URL düzeni
 
 Aşağıdaki yollar `/doskvol-dedikodu/` kökü altındadır:
