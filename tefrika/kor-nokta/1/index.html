@@ -1,0 +1,80 @@
+<!DOCTYPE html><html lang="tr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><script>
+  (() => {
+    const key = "doskvol-appearance";
+    const valid = value => ["day", "night", "device"].includes(value);
+    const media = window.matchMedia("(prefers-color-scheme: dark)");
+    let preference = "device";
+    try {
+      const saved = localStorage.getItem(key);
+      if (valid(saved)) preference = saved;
+    } catch {
+      // Private browsing may deny storage; the current page still works.
+    }
+    const paint = () => {
+      const dark =
+        preference === "night" || (preference === "device" && media.matches);
+      document.documentElement.dataset.theme = dark ? "dark" : "light";
+      document.querySelectorAll("[data-theme-choice]").forEach(button => {
+        button.setAttribute(
+          "aria-pressed",
+          String(button.dataset.themeChoice === preference)
+        );
+      });
+    };
+    paint();
+    document.addEventListener("DOMContentLoaded", paint, { once: true });
+    media.addEventListener("change", paint);
+    document.addEventListener("doskvol:theme", event => {
+      if (!valid(event.detail)) return;
+      preference = event.detail;
+      try {
+        localStorage.setItem(key, preference);
+      } catch {
+        // Private browsing may deny storage; the current page still works.
+      }
+      paint();
+    });
+    window.addEventListener("storage", event => {
+      if (event.key !== key && event.key !== null) return;
+      preference = valid(event.newValue) ? event.newValue : "device";
+      paint();
+    });
+  })();
+</script><link rel="icon" type="image/svg+xml" href="/doskvol-dedikodu/favicon.svg"><link rel="canonical" href="https://blades-edge.github.io/doskvol-dedikodu/tefrika/kor-nokta/1/"><meta name="description" content="Bana okuldan bir defter almamı söylediler. Kapağını açmamamı da. Ücretin yarısını peşin aldığımda yalnızca ilk cümleyi duymuştum."><meta property="og:site_name" content="Doskvol Dedikoduları"><meta property="og:locale" content="tr_TR"><meta property="og:type" content="article"><meta property="og:title" content="Adımı bilen kapı | Doskvol Dedikoduları"><meta property="og:description" content="Bana okuldan bir defter almamı söylediler. Kapağını açmamamı da. Ücretin yarısını peşin aldığımda yalnızca ilk cümleyi duymuştum."><meta property="og:url" content="https://blades-edge.github.io/doskvol-dedikodu/tefrika/kor-nokta/1/"><meta property="og:image" content="https://blades-edge.github.io/doskvol-dedikodu/_astro/doskvol-line-engraving.Dm_4yufi_Z1wuRpN.png"><meta property="og:image:alt" content="Bir kanalın kıyısındaki taş okul, köprüler ve uzaktaki fabrika bacaları; kâğıt üzerinde değişen kalınlıkta mürekkep çizgileri."><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="Adımı bilen kapı | Doskvol Dedikoduları"><meta name="twitter:description" content="Bana okuldan bir defter almamı söylediler. Kapağını açmamamı da. Ücretin yarısını peşin aldığımda yalnızca ilk cümleyi duymuştum."><meta name="twitter:image" content="https://blades-edge.github.io/doskvol-dedikodu/_astro/doskvol-line-engraving.Dm_4yufi_Z1wuRpN.png"><meta name="twitter:image:alt" content="Bir kanalın kıyısındaki taş okul, köprüler ve uzaktaki fabrika bacaları; kâğıt üzerinde değişen kalınlıkta mürekkep çizgileri."><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,600;0,6..72,700;1,6..72,400&display=swap" rel="stylesheet"><title>Adımı bilen kapı | Doskvol Dedikoduları</title><link rel="stylesheet" href="/doskvol-dedikodu/_astro/EditorialHead.D9JAn6wv.css"></head><body><a class="reading-skip" href="#reading-content">Makaleye geç</a><div class="paper reading-paper"><header class="masthead reading-masthead"><div class="masthead-title"><div class="eyebrow">Akoros’un bağımsız sesi · Doskvol</div><a class="reading-wordmark" href="/doskvol-dedikodu/sayi/001/">Doskvol Dedikoduları</a><div class="tagline">Duyduğunuza inanmayın. Duymadıklarınızdan korkun.</div></div><aside class="weather-theme" aria-label="Gazetenin hava durumu ve görünümü"><div class="weather-caption">Doskvol’da hava</div><div class="weather-choices" role="group" aria-label="Görünüm tercihi"><button type="button" data-theme-choice="day" aria-pressed="false" title="Kırık güneş — açık görünüm"><img src="/doskvol-dedikodu/_astro/weather-day.uHbj4GFj_29gWuU.webp" alt loading="eager" decoding="async" width="56" height="56"><span>Gündüz</span></button><button type="button" data-theme-choice="night" aria-pressed="false" title="Ay ve sönük yansımaları — koyu görünüm"><img src="/doskvol-dedikodu/_astro/weather-night.TLXxaivu_ZC5PTx.webp" alt loading="eager" decoding="async" width="56" height="56"><span>Gece</span></button><button type="button" data-theme-choice="device" aria-pressed="true" title="Hayaletli hava — cihazın tercihini izle"><img src="/doskvol-dedikodu/_astro/weather-device.BbMFo1PF_1NWwfl.webp" alt loading="eager" decoding="async" width="56" height="56"><span>Cihaz</span></button></div></aside><script type="module">document.querySelectorAll(`[data-theme-choice]`).forEach(e=>{e.addEventListener(`click`,()=>{document.dispatchEvent(new CustomEvent(`doskvol:theme`,{detail:e.dataset.themeChoice}))})});</script></header><nav class="reading-breadcrumb" aria-label="Sayfa yolu"><a href="/doskvol-dedikodu/sayi/001/">Sayı 001</a><span aria-hidden="true">/</span><span>Tefrika</span></nav><main id="reading-content"><header class="reading-heading"><div class="eyebrow">Kör Nokta’nın Güncesi · Bölüm 1</div><h1>Adımı bilen kapı</h1><p class="reading-deck">Bana okuldan bir defter almamı söylediler. Kapağını açmamamı da. Ücretin yarısını peşin aldığımda yalnızca ilk cümleyi duymuştum.</p><div class="reading-meta"><span>Kör Nokta</span><time datetime="2026-10-29T00:00:00.000Z">29 Ekim 2026</time><span>Sayı 001</span></div></header><aside class="reading-spoiler" aria-label="Spoiler uyarısı"><strong>Oyun günlüğü · Spoiler uyarısı</strong><p>Bu bölüm, Kızıl Kuşaklar Okulu’ndaki gece ziyaretiyle ilgili kurgu sırlarını açığa çıkarır. Haberle aynı olayı başka bir gözden anlatır.</p></aside><article class="reading-copy" aria-label="Adımı bilen kapı"><p><img class="engraving-dark" alt="" loading="lazy" decoding="async" width="1672" height="941" src="/doskvol-dedikodu/_astro/mylera-gumus-original-engraved-v2.BC0uCPLJ_MqIF0.webp"></p>
+<p>Şimdi buraya doğru dürüst bir saat yazabilmeyi isterdim. Gece yarısı demek kolay. Fakat ben okulun kapısına vardığımda karşıdaki kule on biri, cebimdeki saat ikiyi, kapının arkasındaki kadınsa henüz doğmadığımı söylüyordu. Üçünden hangisine güveneceğimi bilemedim. Cebimdeki saati bir hafta önce çalmıştım; en azından onun bana borcu vardı.</p>
+<p>Kadın kapıyı açmadı. Önce adımı sordu.</p>
+<p>“Kör Nokta,” dedim.</p>
+<p>“Öteki.”</p>
+<p>İşin ücretini burada yeniden konuşmam gerekirdi. Sonradan insanın aklına hep doğru cümleler geliyor. Ben o sırada yalnızca eldivenimin başparmağındaki deliğe baktım. Beni buraya gönderen adamın verdiği paralar, aynı delikten sızıp avucumda birikmiş gibiydi.</p>
+<p>“Öteki adımı unuttum,” dedim.</p>
+<p>Kapı açıldı.</p>
+<h2 id="koridorun-sonundaki-masa">Koridorun sonundaki masa</h2>
+<p>İçerisi bir okul gibi kokmuyordu. Tebeşir, ter, kaynatılmış lahana beklemiştim. Islak kâğıt kokusu vardı. Duvarlara asılı mezun resimlerinin yüzleri, sanki yakın zamanda silinmiş de kurumaya bırakılmıştı. Çerçevelerin altındaki pirinç levhalarda isimler duruyordu. Hiçbirini yüksek sesle okumadım.</p>
+<p>Kadın beni koridorun sonundaki masaya götürdü. Masada bir defter, bir mürekkep hokkası ve ters çevrilmiş bir fincan vardı.</p>
+<p>“Yalnızca defteri,” dedi.</p>
+<p>“Fincanı istememiştim zaten.”</p>
+<p>“Güzel.”</p>
+<p>Bunu çok çabuk söyledi. Fincana bir daha bakmamaya karar verdim. İyi kararları genellikle geç veririm; bunu vaktinde vermiş olmaktan gurur duyuyordum ki masanın altından bir çocuk güldü.</p>
+<p>Eğilmedim.</p>
+<h2 id="dördüncü-zil">Dördüncü zil</h2>
+<p>Defter, beklediğimden hafifti. Kapağı çatlak deridendi; sırtındaki dikişlerin bir kısmı kırmızı iplikle yenilenmişti. Ciltçinin işi iyi değildi. Yahut çok iyi bir ciltçi, kötü bir ciltçi gibi görünmek için uğraşmıştı. Bu şehirde iki ihtimalin ücreti de aynıdır.</p>
+<p>Kadın avucunu masaya koydu. Parmaklarının arasında, kâğıtta yan yana açılmış beş yarık varmış gibi ince gölgeler uzanıyordu.</p>
+<p>“Yoldayken açılabilir,” dedi. “Açılırsa sayfaları tutma.”</p>
+<p>“Nasıl taşıyayım?”</p>
+<p>“Düşürmeden.”</p>
+<p>İlk zil o sırada çaldı. Sonra ikincisi. Üçüncüde koridordan bir kafesin demir zemine sürtündüğünü duydum. Kadın yüzünü kapıya çevirdi. Fincan, masanın üzerinde kendi kendine biraz ilerledi.</p>
+<blockquote>
+<p>“Dördüncüyü duyarsan, burada bulunmuş olduğuna dair hiçbir şeyi yanında götürme.”</p>
+</blockquote>
+<p>Bunu bana söylemedi. Masanın altına söyledi.</p>
+<p>Dördüncü zil çaldığında defteri ceketimin içine soktum. İyi kararlar hakkında az önce yazdıklarımı geri alıyorum.</p>
+<hr>
+<p>Arka kapıya koşarken cebimdeki saat durdu. Geçitteki su, botlarımı sokağa doğru değil, duvara doğru çekiyordu. Bir an, okulun dışarıdan göründüğü kadar büyük olmadığını düşündüm. Daha doğrusu, dışarının sandığım yerde olmadığını.</p>
+<p>Duvarda bir kapı aradım. Yoktu. Yalnızca badananın altında, çocuk elinden çıkmış gibi duran ince bir çizgi vardı. Çizginin yanında da bir isim.</p>
+<p>Benim unuttuğum isim.</p>
+<p>Arkamdan bir şey gelmedi. Bunu özellikle yazıyorum, çünkü gazeteci kadın yarın sorarsa doğru cevap vermek istiyorum. Arkamdan bir şey gelmedi. Yalnızca önümdeki duvarın arkasından biri, kendi sesimle, “Geç kaldın,” dedi.</p>
+<p>Defter o sırada açıldı.</p>
+<p>İlk sayfada bugünün tarihi vardı. Altında benim el yazımla bir cümle:</p>
+<p><em>Kapıyı açma. Ben de açtım.</em></p>
+<hr>
+<p><em>Birinci bölümün sonu. Kör Nokta’nın notları bir sonraki sayıda devam edecek.</em></p></article><nav class="reading-ending reading-chapters" aria-label="Tefrika bölümleri"><div><span class="eyebrow">Önceki bölüm</span><p>Serinin ilk bölümü</p></div><div><span class="eyebrow">Sonraki bölüm</span><p><a href="/doskvol-dedikodu/tefrika/kor-nokta/2/">Bölüm 2: Benden önce gelen</a></p></div></nav><div class="reading-return"><a href="/doskvol-dedikodu/sayi/001/">← Sayı 001</a><a href="#reading-content">Makalenin başına ↑</a></div></main><footer>Doskvol Dedikoduları · Mürekkep kurumadan okuyanlara</footer></div></body></html>

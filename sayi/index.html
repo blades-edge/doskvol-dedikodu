@@ -1,0 +1,43 @@
+<!DOCTYPE html><html lang="tr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><script>
+  (() => {
+    const key = "doskvol-appearance";
+    const valid = value => ["day", "night", "device"].includes(value);
+    const media = window.matchMedia("(prefers-color-scheme: dark)");
+    let preference = "device";
+    try {
+      const saved = localStorage.getItem(key);
+      if (valid(saved)) preference = saved;
+    } catch {
+      // Private browsing may deny storage; the current page still works.
+    }
+    const paint = () => {
+      const dark =
+        preference === "night" || (preference === "device" && media.matches);
+      document.documentElement.dataset.theme = dark ? "dark" : "light";
+      document.querySelectorAll("[data-theme-choice]").forEach(button => {
+        button.setAttribute(
+          "aria-pressed",
+          String(button.dataset.themeChoice === preference)
+        );
+      });
+    };
+    paint();
+    document.addEventListener("DOMContentLoaded", paint, { once: true });
+    media.addEventListener("change", paint);
+    document.addEventListener("doskvol:theme", event => {
+      if (!valid(event.detail)) return;
+      preference = event.detail;
+      try {
+        localStorage.setItem(key, preference);
+      } catch {
+        // Private browsing may deny storage; the current page still works.
+      }
+      paint();
+    });
+    window.addEventListener("storage", event => {
+      if (event.key !== key && event.key !== null) return;
+      preference = valid(event.newValue) ? event.newValue : "device";
+      paint();
+    });
+  })();
+</script><link rel="icon" type="image/svg+xml" href="/doskvol-dedikodu/favicon.svg"><link rel="canonical" href="https://blades-edge.github.io/doskvol-dedikodu/sayi/"><meta name="description" content="Doskvol sokaklarından haberler, dedikodular ve tefrikalar."><meta property="og:site_name" content="Doskvol Dedikoduları"><meta property="og:locale" content="tr_TR"><meta property="og:type" content="website"><meta property="og:title" content="Sayı arşivi | Doskvol Dedikoduları"><meta property="og:description" content="Doskvol sokaklarından haberler, dedikodular ve tefrikalar."><meta property="og:url" content="https://blades-edge.github.io/doskvol-dedikodu/sayi/"><meta property="og:image" content="https://blades-edge.github.io/doskvol-dedikodu/_astro/doskvol-line-engraving.Dm_4yufi_Z1wuRpN.png"><meta property="og:image:alt" content="Doskvol’da kanal kıyısındaki yapılar; mürekkep çizgileriyle gravür."><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="Sayı arşivi | Doskvol Dedikoduları"><meta name="twitter:description" content="Doskvol sokaklarından haberler, dedikodular ve tefrikalar."><meta name="twitter:image" content="https://blades-edge.github.io/doskvol-dedikodu/_astro/doskvol-line-engraving.Dm_4yufi_Z1wuRpN.png"><meta name="twitter:image:alt" content="Doskvol’da kanal kıyısındaki yapılar; mürekkep çizgileriyle gravür."><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,600;0,6..72,700;1,6..72,400&display=swap" rel="stylesheet"><title>Sayı arşivi | Doskvol Dedikoduları</title><link rel="stylesheet" href="/doskvol-dedikodu/_astro/EditorialHead.D9JAn6wv.css"></head><body><div class="paper reading-paper"><header class="masthead reading-masthead"><div class="masthead-title"><div class="eyebrow">Akoros’un bağımsız sesi · Doskvol</div><a class="reading-wordmark" href="/doskvol-dedikodu/">Doskvol Dedikoduları</a><div class="tagline">Şehrin hafızası, sayı sayı.</div></div><aside class="weather-theme" aria-label="Gazetenin hava durumu ve görünümü"><div class="weather-caption">Doskvol’da hava</div><div class="weather-choices" role="group" aria-label="Görünüm tercihi"><button type="button" data-theme-choice="day" aria-pressed="false" title="Kırık güneş — açık görünüm"><img src="/doskvol-dedikodu/_astro/weather-day.uHbj4GFj_29gWuU.webp" alt loading="eager" decoding="async" width="56" height="56"><span>Gündüz</span></button><button type="button" data-theme-choice="night" aria-pressed="false" title="Ay ve sönük yansımaları — koyu görünüm"><img src="/doskvol-dedikodu/_astro/weather-night.TLXxaivu_ZC5PTx.webp" alt loading="eager" decoding="async" width="56" height="56"><span>Gece</span></button><button type="button" data-theme-choice="device" aria-pressed="true" title="Hayaletli hava — cihazın tercihini izle"><img src="/doskvol-dedikodu/_astro/weather-device.BbMFo1PF_1NWwfl.webp" alt loading="eager" decoding="async" width="56" height="56"><span>Cihaz</span></button></div></aside><script type="module">document.querySelectorAll(`[data-theme-choice]`).forEach(e=>{e.addEventListener(`click`,()=>{document.dispatchEvent(new CustomEvent(`doskvol:theme`,{detail:e.dataset.themeChoice}))})});</script></header><main><header class="reading-heading"><div class="eyebrow">Bütün baskılar</div><h1>Sayı arşivi</h1><p class="reading-deck">Haberler, dedikodular ve yarım kalan hikâyeler. Her sayı kendi gecesini saklar.</p></header><ol class="issue-archive"><li><article><div class="eyebrow">Sayı 001 · <time datetime="2026-10-29T00:00:00.000Z">29 Ekim 2026</time></div><h2><a href="/doskvol-dedikodu/sayi/001/">Kızıl Kuşaklar Okulu’nda gece yarısı ziyareti</a></h2><p>Kızıl Kuşaklar Okulu’nun kapıları gece yarısından sonra üç kez açıldı. İçeri girenlerin adları yoktu; çıkışlarıysa hiçbir deftere yazılmadı.</p><div class="byline">7 makale · 4 yazar</div></article></li></ol></main><footer><a href="/doskvol-dedikodu/">En yeni sayıya dön</a></footer></div></body></html>

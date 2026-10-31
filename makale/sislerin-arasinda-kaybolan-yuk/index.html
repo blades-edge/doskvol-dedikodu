@@ -1,0 +1,50 @@
+<!DOCTYPE html><html lang="tr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><script>
+  (() => {
+    const key = "doskvol-appearance";
+    const valid = value => ["day", "night", "device"].includes(value);
+    const media = window.matchMedia("(prefers-color-scheme: dark)");
+    let preference = "device";
+    try {
+      const saved = localStorage.getItem(key);
+      if (valid(saved)) preference = saved;
+    } catch {
+      // Private browsing may deny storage; the current page still works.
+    }
+    const paint = () => {
+      const dark =
+        preference === "night" || (preference === "device" && media.matches);
+      document.documentElement.dataset.theme = dark ? "dark" : "light";
+      document.querySelectorAll("[data-theme-choice]").forEach(button => {
+        button.setAttribute(
+          "aria-pressed",
+          String(button.dataset.themeChoice === preference)
+        );
+      });
+    };
+    paint();
+    document.addEventListener("DOMContentLoaded", paint, { once: true });
+    media.addEventListener("change", paint);
+    document.addEventListener("doskvol:theme", event => {
+      if (!valid(event.detail)) return;
+      preference = event.detail;
+      try {
+        localStorage.setItem(key, preference);
+      } catch {
+        // Private browsing may deny storage; the current page still works.
+      }
+      paint();
+    });
+    window.addEventListener("storage", event => {
+      if (event.key !== key && event.key !== null) return;
+      preference = valid(event.newValue) ? event.newValue : "device";
+      paint();
+    });
+  })();
+</script><link rel="icon" type="image/svg+xml" href="/doskvol-dedikodu/favicon.svg"><link rel="canonical" href="https://blades-edge.github.io/doskvol-dedikodu/makale/sislerin-arasinda-kaybolan-yuk/"><meta name="description" content="Rıhtım defterinde yedi sandık, arabada altı iz var. Yedinciyi indirdiğini söyleyen işçi, ellerini ceplerinden çıkarmıyor."><meta property="og:site_name" content="Doskvol Dedikoduları"><meta property="og:locale" content="tr_TR"><meta property="og:type" content="article"><meta property="og:title" content="Sislerin arasında kaybolan bir yük | Doskvol Dedikoduları"><meta property="og:description" content="Rıhtım defterinde yedi sandık, arabada altı iz var. Yedinciyi indirdiğini söyleyen işçi, ellerini ceplerinden çıkarmıyor."><meta property="og:url" content="https://blades-edge.github.io/doskvol-dedikodu/makale/sislerin-arasinda-kaybolan-yuk/"><meta property="og:image" content="https://blades-edge.github.io/doskvol-dedikodu/_astro/doskvol-line-engraving.Dm_4yufi_Z1wuRpN.png"><meta property="og:image:alt" content="Bir kanalın kıyısındaki taş okul, köprüler ve uzaktaki fabrika bacaları; kâğıt üzerinde değişen kalınlıkta mürekkep çizgileri."><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="Sislerin arasında kaybolan bir yük | Doskvol Dedikoduları"><meta name="twitter:description" content="Rıhtım defterinde yedi sandık, arabada altı iz var. Yedinciyi indirdiğini söyleyen işçi, ellerini ceplerinden çıkarmıyor."><meta name="twitter:image" content="https://blades-edge.github.io/doskvol-dedikodu/_astro/doskvol-line-engraving.Dm_4yufi_Z1wuRpN.png"><meta name="twitter:image:alt" content="Bir kanalın kıyısındaki taş okul, köprüler ve uzaktaki fabrika bacaları; kâğıt üzerinde değişen kalınlıkta mürekkep çizgileri."><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,600;0,6..72,700;1,6..72,400&display=swap" rel="stylesheet"><title>Sislerin arasında kaybolan bir yük | Doskvol Dedikoduları</title><link rel="stylesheet" href="/doskvol-dedikodu/_astro/EditorialHead.D9JAn6wv.css"></head><body><a class="reading-skip" href="#reading-content">Makaleye geç</a><div class="paper reading-paper"><header class="masthead reading-masthead"><div class="masthead-title"><div class="eyebrow">Akoros’un bağımsız sesi · Doskvol</div><a class="reading-wordmark" href="/doskvol-dedikodu/sayi/001/">Doskvol Dedikoduları</a><div class="tagline">Duyduğunuza inanmayın. Duymadıklarınızdan korkun.</div></div><aside class="weather-theme" aria-label="Gazetenin hava durumu ve görünümü"><div class="weather-caption">Doskvol’da hava</div><div class="weather-choices" role="group" aria-label="Görünüm tercihi"><button type="button" data-theme-choice="day" aria-pressed="false" title="Kırık güneş — açık görünüm"><img src="/doskvol-dedikodu/_astro/weather-day.uHbj4GFj_29gWuU.webp" alt loading="eager" decoding="async" width="56" height="56"><span>Gündüz</span></button><button type="button" data-theme-choice="night" aria-pressed="false" title="Ay ve sönük yansımaları — koyu görünüm"><img src="/doskvol-dedikodu/_astro/weather-night.TLXxaivu_ZC5PTx.webp" alt loading="eager" decoding="async" width="56" height="56"><span>Gece</span></button><button type="button" data-theme-choice="device" aria-pressed="true" title="Hayaletli hava — cihazın tercihini izle"><img src="/doskvol-dedikodu/_astro/weather-device.BbMFo1PF_1NWwfl.webp" alt loading="eager" decoding="async" width="56" height="56"><span>Cihaz</span></button></div></aside><script type="module">document.querySelectorAll(`[data-theme-choice]`).forEach(e=>{e.addEventListener(`click`,()=>{document.dispatchEvent(new CustomEvent(`doskvol:theme`,{detail:e.dataset.themeChoice}))})});</script></header><nav class="reading-breadcrumb" aria-label="Sayfa yolu"><a href="/doskvol-dedikodu/sayi/001/">Sayı 001</a><span aria-hidden="true">/</span><span>Dedikodular</span></nav><main id="reading-content"><header class="reading-heading"><div class="eyebrow">Dedikodular</div><h1>Sislerin arasında kaybolan bir yük</h1><p class="reading-deck">Rıhtım defterinde yedi sandık, arabada altı iz var. Yedinciyi indirdiğini söyleyen işçi, ellerini ceplerinden çıkarmıyor.</p><div class="reading-meta"><span>Ruhi Çengel</span><time datetime="2026-10-29T00:00:00.000Z">29 Ekim 2026</time><span>Sayı 001</span></div></header><article class="reading-copy" aria-label="Sislerin arasında kaybolan bir yük"><p>Rıhtımdaki terazinin dün gece iki kez tartıldığı, fakat yalnızca bir yükün kayda geçtiği söyleniyor. Yedi sandıkla yanaşan mavnadan sabaha karşı altı sandık indirilmiş. Hamalbaşı bunu bir sayım hatası olarak açıklıyor. Sayımı yapan adamın dün akşamdan beri ortalıkta görünmemesi de ona göre aynı hatanın devamı.</p>
+<p>Sandıkların üzerindeki mühürleri gördüğünü söyleyen bir işçi, işaretin bir balık mı yoksa birbirine bağlanmış iki el mi olduğundan emin değil. Yük defterindeki alıcı hanesi boş. Fakat boşluğun etrafındaki kâğıt, birkaç yıl güneşte kalmış gibi sararmış. Defterin geri kalanı yeni.</p>
+<blockquote>
+<p>“Bir şeyi taşımak için onun orada olması gerekmez. Kollarının ağrıması yeter.”</p>
+</blockquote>
+<p>Bu cümleyi söyleyen genç hamal, ellerini ceplerinden çıkarmadı. Yanındaki arkadaşları, dün gece yedinci sandığı onun taşıdığını söylediler. Sonra hiçbirinin yedi sayısını kullanmamış olduğunu iddia ettiler.</p>
+<p>Mavnayı bulmak için sabah yeniden rıhtıma indik. Bağlandığı iskelede halat izleri duruyordu. Tekne yoktu. İskele bekçisi, burada haftalardır tekne bağlanmadığını söyleyip henüz kurumamış güverte ayak izlerini paspasladı.</p>
+<p><em>Dedikodu masası: Bu yükün okulun arka kapısında görülen boş kafesle ilişkisi olup olmadığını bilmiyoruz. İlişkili olduklarını söyleyen kişinin adını da, kendi isteği üzerine, bilmiyoruz.</em></p></article><aside class="reading-ending"><div class="eyebrow">Bu sayıdaki tefrika</div><h2><a href="/doskvol-dedikodu/tefrika/kor-nokta/1/">Kör Nokta’nın Güncesi</a></h2><p>Bölüm 1: Adımı bilen kapı</p></aside><div class="reading-return"><a href="/doskvol-dedikodu/sayi/001/">← Sayı 001</a><a href="#reading-content">Makalenin başına ↑</a></div></main><footer>Doskvol Dedikoduları · Mürekkep kurumadan okuyanlara</footer></div></body></html>
