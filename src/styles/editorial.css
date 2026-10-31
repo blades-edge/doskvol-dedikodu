@@ -480,9 +480,17 @@ footer {
 :root[data-theme="dark"] {
   filter: invert(0.95);
 }
+:root[data-theme="dark"] .engraving-dark {
+  filter: invert(1) hue-rotate(120deg);
+  background-color: #d3ddc3;
+}
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme="light"]) {
     filter: invert(0.95);
+  }
+  :root:not([data-theme="light"]) .engraving-dark {
+    filter: invert(1) hue-rotate(120deg);
+    background-color: #d3ddc3;
   }
 }
 body {

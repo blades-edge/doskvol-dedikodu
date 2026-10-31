@@ -1,4 +1,6 @@
 ---
+import media from "../settings/media.json";
+import { imageKey } from "../utils/engraving.mjs";
 import WeatherTheme from "@components/WeatherTheme.astro";
 import { Image } from "astro:assets";
 import type { CollectionEntry } from "astro:content";
@@ -19,6 +21,15 @@ interface Props {
 const { issue, publication } = Astro.props;
 const { number, description, date, price, cover, coverAlt, coverCaption } =
   issue.data;
+const imageAssets = import.meta.glob<{
+  default: import("astro").ImageMetadata;
+}>("../assets/images/*", { eager: true });
+const darkCover = media.darkModeImages.some(path =>
+  Object.entries(imageAssets).some(
+    ([assetPath, asset]) =>
+      imageKey(assetPath) === imageKey(path) && asset.default.src === cover.src
+  )
+);
 const prefix = import.meta.env.BASE_URL;
 const articles = articlesForIssue(publication, issue.id);
 const lead =
@@ -122,7 +133,10 @@ const older = publication.issues[position + 1];
           <Image
             src={cover}
             alt={coverAlt}
-            class="editorial-engraving"
+            class:list={[
+              "editorial-engraving",
+              { "engraving-dark": darkCover },
+            ]}
             widths={[480, 960, 1440, 2060]}
             sizes="(max-width: 720px) calc(100vw - 3rem), (max-width: 1160px) 92vw, 1046px"
             loading="eager"

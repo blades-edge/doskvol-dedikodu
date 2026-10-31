@@ -8,6 +8,19 @@ settings:
     merge: true
 
 content:
+  - name: gravur
+    label: Gravür ayarları
+    type: file
+    path: src/settings/media.json
+    format: json
+    fields:
+      - name: darkModeImages
+        label: Gece görünümü uygulanacak gravürler
+        type: image
+        options:
+          multiple: true
+        description: "Medya kütüphanesinden seçin. Seçilen görseller kapakta ve metin içinde gece temasına özel filtre ve zemin rengini alır. Listeden çıkarmak efekti kaldırır."
+
   - name: sayi
     label: Sayı
     type: collection
