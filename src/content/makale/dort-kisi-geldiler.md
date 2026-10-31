@@ -4,7 +4,7 @@ description: Delik Kova'da masaya dört kadeh gitti, hesaba üç kişi itiraz et
   Dördüncüyü kalabalık yuttu; mahalle hâlâ sayıyor.
 author: aldo-brogan.json
 section: Dedikodular
-location: Dökülen Kova
+location: Delik Kova
 ---
 Kargaayağı'nın eski ve meşhur meyhanelerinden Delik Kova, geçtiğimiz akşam alışılmışın dışında bir hadiseye sahne oldu. Mahallenin müdavimleri, daha önce görmediklerine yemin ettikleri dört yabancının akşamın ilerleyen saatlerinde bir masaya yerleştiğini anlatıyor. Temiz çizmeleri, ürkek bakışları ve yanlış kişilere sordukları sorular, buraya ait olmadıklarını belli ediyordu. Gecenin seyri, içlerinden biri içki almak üzere bara yöneldiğinde değişti.
 
