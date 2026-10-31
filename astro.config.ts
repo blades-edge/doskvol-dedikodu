@@ -1,4 +1,5 @@
 import { defineConfig } from "astro/config";
+import { unified } from "@astrojs/markdown-remark";
 import sitemap from "@astrojs/sitemap";
 import media from "./src/settings/media.json";
 import { remarkEngravings } from "./src/utils/engraving.mjs";
@@ -15,7 +16,9 @@ export default defineConfig({
     }),
   ],
   markdown: {
-    remarkPlugins: [[remarkEngravings, { images: media.darkModeImages }]],
+    processor: unified({
+      remarkPlugins: [[remarkEngravings, { images: media.darkModeImages }]],
+    }),
   },
   scopedStyleStrategy: "where",
 });
