@@ -48,12 +48,7 @@ content:
         label: Taslak sayı
         type: boolean
         default: true
-        description: "Açıksa sayı ve ona bağlı makaleler sitede görünmez. Manşeti seçtikten ve makaleleri tamamladıktan sonra kapatın."
-      - name: preview
-        label: Önizleme bağlantısını aç
-        type: boolean
-        default: false
-        description: "Açıksa kayıttan ve site derlemesinden sonra /taslak/sayi/NUMARA/ adresi açılır (2 için 002). Bağlantısı olan herkes erişebilir; arşivde ve RSS’te listelenmez; arama motorlarına indekslenmemesi bildirilir. Gizli içerik için kullanmayın."
+        description: "Açıksa sayı ve ona bağlı makaleler ana yayında görünmez; PR önizlemesinde görünür. Manşeti seçtikten ve makaleleri tamamladıktan sonra kapatın."
       - name: date
         label: Yayın tarihi
         type: date

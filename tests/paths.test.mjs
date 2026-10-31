@@ -8,12 +8,6 @@ test("single Turkish route names are independent of titles", () => {
   assert.equal(articlePath({id:"benden-once-gelen",data:{series:{id:"kor-nokta"},episode:2}}),"tefrika/kor-nokta/2/");
 });
 
-test("preview reading links stay within the selected issue",()=>{
- assert.equal(issuePath(2,true),"taslak/sayi/002/");
- assert.equal(articlePath({id:"news",data:{}},2),"taslak/sayi/002/makale/news/");
- assert.equal(articlePath({id:"chapter",data:{series:{id:"diary"},episode:3}},2),"taslak/sayi/002/tefrika/diary/3/");
-});
-
  test("CMS issue selections use the content schema field names",async()=>{
  const {readFile}=await import("node:fs/promises");
  const cms=await readFile(new URL("../.pages.yml",import.meta.url),"utf8");

@@ -94,15 +94,15 @@ test("serial cards group by series ID while preserving selection order",()=>{
  assert.deepEqual(groupSerialChapters([]),[]);
 });
 
- test("preview includes only its draft issue and permits an unfinished lead",()=>{
+ test("PR preview includes published and draft issues and permits an unfinished lead",()=>{
  const data=fixture(); const issue=data.issues[1]; issue.data.draft=true; delete issue.data.lead;
  const publicIndex=buildEditorialIndex(data);
- const preview=buildEditorialIndex({...data,issues:[issue]},{preview:true});
+ const preview=buildEditorialIndex(data,{preview:true});
  assert.equal(publicIndex.articlesById.has("news-two"),false);
  assert.equal(preview.preview,true);
- assert.deepEqual(preview.issues.map(i=>i.id),["two"]);
+ assert.equal(preview.issues.length,2);
  assert.deepEqual(articlesForIssue(preview,"two").map(a=>a.id),["news-two","chapter-two"]);
- assert.equal(preview.articlesById.has("news"),false);
+ assert.equal(preview.articlesById.has("news"),true);
  issue.data.articles=[];issue.data.chapters=[];
  assert.deepEqual(buildEditorialIndex({...data,issues:[issue]},{preview:true}).articles,[]);
  });
