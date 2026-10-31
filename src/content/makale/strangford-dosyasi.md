@@ -1,0 +1,44 @@
+---
+title: "Strangford dosyası: on dört isim, bir mühür"
+description: 'Gazetemize adsız bir zarf geldi: Strangford çalışma evlerinde
+  sözleşmesi "sona eren" on dört işçinin listesi. Dokuz isim doğrulandı;
+  dosyadaki mühür ise tarihini taşıyan günde henüz kimsenin elinde değildi.'
+author: vaurin-prichard.json
+section: Dedikodular
+location: Yanıkçukur
+---
+Geçtiğimiz hafta masama üzerinde yalnızca adımın yazılı olduğu bir zarf bırakıldı.
+
+Zarfı getiren Şifreci, gönderenin kimliğini sorduğumda loncasının yeminini tekrarladı. İkinci sorumda da aynı sözleri kullandı. Üçüncüsünü sormadım. Doskvol'da bazı mesleklerin dürüstlüğü, aynı cevabı kaç defa verebildikleriyle ölçülüyor.
+
+Zarfın içinde, Lord Strangford'un Yanıkçukur'daki çalışma evlerinden birine ait olduğu iddia edilen kayıtların kopyaları vardı. On bir sayfa, on dört isim. Bu on dört işçinin sözleşmeleri, geçen yıl içinde birer birer sona ermiş görünüyordu. Gönderen ise sayfaların kenarına aynı elle tek bir not düşmüştü: Sona eren sözleşmeleri değil, hayatlarıydı.
+
+İsimleri ve tarihleri karşılaştırdım. On dört kişiden dokuzunun o çalışma evinde gerçekten çalıştığını doğrulayabildim.
+
+Listeyi alıp Yanıkçukur'a, Çarşaflar'a gittim. Çamaşır iplerinin arasında alçak sesle konuşan bir grup işçi, ben yaklaşınca sustu. İpleri geçtiğimde, okuduğum yedinci ismi duyan bir kadın elindeki leğeni yere bıraktı.
+
+"Timoth Grine mi? Sözleşmesi bitmiş, öyle mi?" Tepedeki konağa doğru başını çevirdi, sonra yeniden bana baktı. "Ben o adamın cenazesine gittim. Karısına da iki gün yemek taşıdım. Siz şimdi bana hangi kâğıdın doğru olduğunu mu soruyorsunuz?"
+
+Asıl sorun belgelerin sekizinci sayfasında ortaya çıktı.
+
+O sayfadaki mühür, Kâtipler Caddesi'ndeki Kayıt Dairesi'nin baş kâtiplik mührüdür. Belge, geçen yılın Suran ayının 4'ünü taşıyor. Bu mührü taşıyan memur o makama Ulsivet'in 12'sinde atandı. Atama kayıtlarını yıllardır tutarım. Arada altmış sekiz gün var.
+
+Mührü, Kâtipler Caddesi'nde tanıdığım bir kâtibe gösterdim. Uzun süre konuşmadı.
+
+"Olamaz," dedi sonunda. Ardından söylediği hiçbir şeyin kendisine atfedilmemesi gerektiğini birkaç farklı biçimde açıkladı.
+
+Lord Strangford'un temsilcilerine sorularımı ilettim. Ailenin hukuk temsilcisinden şu yanıt geldi:
+
+> "Lord Strangford'un işletmelerinin yürürlükteki bütün yasal yükümlülüklere uygun faaliyet gösterdiği hususunda herhangi bir tereddüt bulunmamaktadır."
+
+Hangi kayıtların incelendiğini ve Timoth Grine'ın ölümünün araştırılıp araştırılmadığını ayrıca sordum. Yanıt gelmedi.
+
+Şehir Meclisi'nin diğer beş üyesine de aynı soruları gönderdim. Bu sayı baskıya girene kadar hiçbirinden cevap gelmedi.
+
+Bu nedenle belgeleri bugün yayımlamıyorum. Doğru olabilecek bir ölüm ile sahte olabilecek bir mührü aynı sayfada basmak, bu sayfaları hazırlayan kişinin işini onun yerine yapmak olurdu.
+
+Arşivden son çıktığım akşam, Kâtipler Caddesi'nin köşesinde duran bir Mavi Urbalı, ben önünden geçene kadar defterine bir şey yazdı. Ne yazdığını sormadım.
+
+Zarfı sakladım.
+
+Mührü de.
