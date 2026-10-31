@@ -1,12 +1,12 @@
 ---
 title: Dört kişi geldiler, üç kişi kaldılar
-description: Dökülen Kova'da masaya dört kadeh gitti, hesaba üç kişi itiraz
-  etti. Dördüncüyü kalabalık yuttu; mahalle hâlâ sayıyor.
+description: Delik Kova'da masaya dört kadeh gitti, hesaba üç kişi itiraz etti.
+  Dördüncüyü kalabalık yuttu; mahalle hâlâ sayıyor.
 author: aldo-brogan.json
 section: Dedikodular
 location: Dökülen Kova
 ---
-Kargaayağı'nın eski ve meşhur meyhanelerinden Dökülen Kova, geçtiğimiz akşam alışılmışın dışında bir hadiseye sahne oldu. Mahallenin müdavimleri, daha önce görmediklerine yemin ettikleri dört yabancının akşamın ilerleyen saatlerinde bir masaya yerleştiğini anlatıyor. Temiz çizmeleri, ürkek bakışları ve yanlış kişilere sordukları sorular, buraya ait olmadıklarını belli ediyordu. Gecenin seyri, içlerinden biri içki almak üzere bara yöneldiğinde değişti.
+Kargaayağı'nın eski ve meşhur meyhanelerinden Delik Kova, geçtiğimiz akşam alışılmışın dışında bir hadiseye sahne oldu. Mahallenin müdavimleri, daha önce görmediklerine yemin ettikleri dört yabancının akşamın ilerleyen saatlerinde bir masaya yerleştiğini anlatıyor. Temiz çizmeleri, ürkek bakışları ve yanlış kişilere sordukları sorular, buraya ait olmadıklarını belli ediyordu. Gecenin seyri, içlerinden biri içki almak üzere bara yöneldiğinde değişti.
 
 Anlatılanlara göre genç adam, tezgâha birkaç adım kala ayağı kayarak kalabalığın arasına düştü. Bir sandalye devrildi, birkaç bardak kırıldı ve en az üç kişi küfretti. Ne var ki yerdeki adamı kaldırmak için eğilenler, orada kimseyi bulamadı.
 
