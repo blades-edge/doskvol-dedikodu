@@ -6,7 +6,6 @@ description: Rıhtım'ın eski sofralarında artık yalnızca porsiyonlar küç�
 author: gaspar-merrow.json
 section: Dedikodular
 district: Rıhtım
-spoiler: |+
 ---
 On yıldır uğradığım küçük bir lokanta vardır. Adını vermeyeceğim; zira sahibinin başı, benim yazdıklarımdan bağımsız olarak yeterince dertte.
 
@@ -16,9 +15,13 @@ Geçtiğimiz akşam aynı böreği söyledim.
 
 Börek küçülmüş. Sos seyrelmiş. İkinci dilim ekmek ise anlaşılan uzun zamandır kayıp.
 
-Sahibine ne olduğunu sordum. Gecepazarı'ndan gelen un pahalanmış, yılanbalığı azalmış, nakliyeciler fiyat artırmış. Bir de teslimatların gecikmesinden yakındı. Eskiden sabah gelen mallar artık akşamı buluyormuş. Bazı tüccarlar Rıhtım'a uğramak için peşin ödeme istiyormuş.
+Sahibine ne olduğunu sordum. Gecepazarı'ndan gelen un pahalanmış, yılanbalığı azalmış. Bir de teslimatların gecikmesinden yakındı. Eskiden sabah gelen mallar artık akşamı buluyormuş.
 
-Daha ilginci, lokantanın arka tarafındaki büyük masanın boş olmasıydı. Eskiden orada her akşam kalabalık bir topluluk otururdu: kızıl kuşaklar, isli işçi ceketleri ve bu mahalleyi kimin yönettiğini hiç sormak zorunda kalmamış adamlar. Roric hayattayken birbirlerine tahammül edebilen bu beylerin, şimdi aynı sokaktan geçmek istemediklerini söylediler.
+"Çımacılar yükü indirmeden pazarlığa oturuyor, efendi," dedi. "Fazla itiraz edenin malı iskelede kalır. Kendisi de bazen."
+
+Bazı tüccarlar Rıhtım'a uğramak için peşin ödeme istiyormuş.
+
+Daha ilginci, lokantanın arka tarafındaki büyük masanın boş olmasıydı. Eskiden orada her akşam kalabalık bir topluluk otururdu: kızıl kuşaklar, isli işçi ceketleri ve bu mahalleyi kimin yönettiğini hiç sormak zorunda kalmamış adamlar. Roric hayattayken aynı sofraya oturabilen bu ağır abilerin, şimdi aynı sokaktan geçmek istemediklerini söylediler.
 
 Lokantacıya göre son aylarda işler öylesine kötüleşmiş ki kimi akşamlar masaların yarısı boş kalıyormuş. İyi müşteriler evlerinde yemek yemeye başlamış, kötü müşterilerse hesap ödemeden gitmeyi alışkanlık edinmiş.
 
