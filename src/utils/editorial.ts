@@ -166,18 +166,7 @@ async function loadEditorialContent() {
 }
 
 export async function getEditorial() {
-  return buildEditorialIndex(await loadEditorialContent());
-}
-
-export async function getIssuePreviews() {
-  const content = await loadEditorialContent();
-  return content.issues
-    .filter(issue => issue.data.preview)
-    .map(issue => ({
-      issue,
-      publication: buildEditorialIndex(
-        { ...content, issues: [issue] },
-        { preview: true }
-      ),
-    }));
+  return buildEditorialIndex(await loadEditorialContent(), {
+    preview: import.meta.env.BASE_URL.includes("/taslak/pr-"),
+  });
 }

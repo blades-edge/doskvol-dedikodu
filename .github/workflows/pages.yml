@@ -4,46 +4,148 @@ on:
   push:
     branches: [main]
   workflow_dispatch:
+  workflow_run:
+    workflows: [Build check]
+    types: [completed]
+  pull_request_target:
+    types: [closed]
 
 permissions:
   contents: read
-  pages: write
-  id-token: write
 
+# Serialize updates to the shared publication tree, including the deployment.
 concurrency:
   group: pages
-  cancel-in-progress: true
+  cancel-in-progress: false
 
 jobs:
   build:
-    if: github.ref == 'refs/heads/main'
+    if: (github.event_name == 'push' || github.event_name == 'workflow_dispatch') && github.ref == 'refs/heads/main'
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
-        uses: actions/checkout@v4
-      - name: Configure GitHub Pages
-        uses: actions/configure-pages@v5
-      - name: Setup Node
-        uses: actions/setup-node@v4
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@v4
         with:
           node-version: "24"
           cache: npm
-      - name: Install dependencies
-        run: npm ci
-      - name: Build site
-        run: npm run build
-      - name: Upload Pages artifact
-        uses: actions/upload-pages-artifact@v3
+      - run: npm ci
+      - run: npm run build
+      - uses: actions/upload-artifact@v4
         with:
-          path: ./dist
+          name: production
+          path: dist
 
   deploy:
+    needs: build
+    if: >-
+      always() && !cancelled() &&
+      (needs.build.result == 'success' ||
+       (github.event_name == 'workflow_run' && github.event.workflow_run.conclusion == 'success' && github.event.workflow_run.event == 'pull_request') ||
+       github.event_name == 'pull_request_target')
+    permissions:
+      contents: write
+      actions: read
+      pull-requests: write
+      pages: write
+      id-token: write
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
-    needs: build
     steps:
-      - name: Deploy to GitHub Pages
+      # Never execute PR source in this privileged job.
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - name: Validate preview source
+        id: source
+        uses: actions/github-script@v7
+        with:
+          script: |
+            if (context.eventName === 'pull_request_target') {
+              core.setOutput('mode', 'remove');
+              core.setOutput('pr', context.payload.number);
+            } else if (context.eventName === 'workflow_run') {
+              const run = context.payload.workflow_run;
+              const number = run.pull_requests[0]?.number;
+              if (!number || run.head_repository.full_name !== context.repo.owner + '/' + context.repo.repo) return;
+              const { data: pr } = await github.rest.pulls.get({ ...context.repo, pull_number: number });
+              if (pr.state !== 'open' || pr.head.sha !== run.head_sha || pr.head.repo.full_name !== run.head_repository.full_name) return;
+              core.setOutput('mode', 'preview');
+              core.setOutput('pr', number);
+            } else {
+              core.setOutput('mode', 'production');
+            }
+      - uses: actions/download-artifact@v4
+        if: steps.source.outputs.mode == 'production'
+        with:
+          name: production
+          path: incoming
+      - uses: actions/download-artifact@v4
+        if: steps.source.outputs.mode == 'preview'
+        with:
+          name: pr-preview
+          path: incoming
+          run-id: ${{ github.event.workflow_run.id }}
+          github-token: ${{ github.token }}
+      - name: Restore publication tree
+        if: steps.source.outputs.mode != ''
+        shell: bash
+        run: |
+          set -euo pipefail
+          if git ls-remote --exit-code --heads origin gh-pages; then
+            git fetch origin gh-pages
+            git worktree add publication FETCH_HEAD
+          else
+            mkdir publication
+            git -C publication init -b gh-pages
+          fi
+      - name: Merge publication
+        if: steps.source.outputs.mode != ''
+        env:
+          MODE: ${{ steps.source.outputs.mode }}
+          PR_NUMBER: ${{ steps.source.outputs.pr }}
+        run: node scripts/merge-pages.mjs publication incoming "$MODE" "$PR_NUMBER"
+      - name: Save publication tree
+        if: steps.source.outputs.mode != ''
+        run: |
+          set -euo pipefail
+          cd publication
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          touch .nojekyll
+          git add --all
+          if ! git diff --cached --quiet; then
+            git commit -m 'Update Pages publication'
+          fi
+          # Use the authenticated parent repository for the initial branch too.
+          cd ..
+          git fetch ./publication HEAD
+          git push origin FETCH_HEAD:refs/heads/gh-pages
+      - uses: actions/configure-pages@v5
+        if: steps.source.outputs.mode != ''
+      - uses: actions/upload-pages-artifact@v3
+        if: steps.source.outputs.mode != ''
+        with:
+          path: publication
+      - uses: actions/deploy-pages@v4
+        if: steps.source.outputs.mode != ''
         id: deployment
-        uses: actions/deploy-pages@v4
+      - name: Update PR preview link
+        if: steps.source.outputs.mode == 'preview'
+        uses: actions/github-script@v7
+        env:
+          PR_NUMBER: ${{ steps.source.outputs.pr }}
+          PAGE_URL: ${{ steps.deployment.outputs.page_url }}
+        with:
+          script: |
+            const issue_number = Number(process.env.PR_NUMBER);
+            const marker = '<!-- pages-pr-preview -->';
+            const url = process.env.PAGE_URL.replace(/\/$/, '') + `/taslak/pr-${issue_number}/`;
+            const body = `${marker}\nÖnizleme: ${url}\n\nBu bağlantı PR kapandığında kaldırılır.`;
+            const comments = await github.paginate(github.rest.issues.listComments, { ...context.repo, issue_number });
+            const existing = comments.find(c => c.user.login === 'github-actions[bot]' && c.body.includes(marker));
+            if (existing) await github.rest.issues.updateComment({ ...context.repo, comment_id: existing.id, body });
+            else await github.rest.issues.createComment({ ...context.repo, issue_number, body });

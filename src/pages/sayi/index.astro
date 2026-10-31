@@ -47,10 +47,10 @@ const prefix = import.meta.env.BASE_URL;
                     </div>
                     <h2>
                       <a href={`${prefix}${issuePath(issue.data.number)}`}>
-                        {
-                          publication.articlesById.get(issue.data.lead!.id)!
-                            .data.title
-                        }
+                        {(issue.data.lead &&
+                          publication.articlesById.get(issue.data.lead.id)?.data
+                            .title) ||
+                          "Manşet henüz seçilmedi"}
                       </a>
                     </h2>
                     <p>{issue.data.description}</p>

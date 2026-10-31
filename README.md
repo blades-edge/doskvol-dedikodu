@@ -67,7 +67,11 @@ Tefrika adresi serinin JSON dosyasının kalıcı kimliğini kullanır. Bölüm 
 
 ## Yayın ve kontroller
 
-`build.yml` PR’larda test ve derlemeyi kontrol eder. `pages.yml`, yalnızca `main` dalından GitHub Pages’e yayın yapar. Pages kaynağı **GitHub Actions** olmalıdır.
+`build.yml` PR’larda test ve derlemeyi kontrol eder. Aynı depodaki PR’ların başarılı çıktıları `/doskvol-dedikodu/taslak/pr-42/` biçiminde yayımlanır; PR’a bağlantı yorumu eklenir ve her başarılı derlemede güncellenir. PR kapandığında önizleme silinir. Fork PR’ları yalnızca derleme kontrolünden geçer.
+
+`pages.yml`, üretim ve PR çıktılarını `gh-pages` dalında birleştirir; `main` yayını açık PR önizlemelerini korur. Pages kaynağı **GitHub Actions** olarak kalmalıdır. İlk kurulumda bu değişiklikleri `main` dalına alıp üretim yayınını tamamlayın. `github-pages` environment’ının `main` dalına izin vermesi yeterlidir: önizleme yayını `workflow_run` üzerinden ana daldaki güvenilir workflow ile yapılır. `gh-pages` dalına Actions botunun yazabilmesi gerekir.
+
+Önizlemeler herkese açıktır ve `noindex` taşır; bu bir erişim koruması değildir. Yerelde aynı yolu denemek için `PREVIEW_BASE=/doskvol-dedikodu/taslak/pr-42/ npm run build` kullanılabilir.
 
 `npm run test:editorial` içerik ilişkilerini, seçim sırasını, tefrika gruplamasını, adresleri ve görünüm tercihlerini test eder. `astro check` ve `npm run lint` ek kontrollerdir.
 
@@ -75,11 +79,9 @@ Tefrika adresi serinin JSON dosyasının kalıcı kimliğini kullanır. Bölüm 
 
 MIT. Proje [AstroPaper](https://github.com/satnaing/astro-paper) temelinden geliştirilmiştir; özgün telif bildirimi LICENSE dosyasında korunur.
 
-## Taslak sayı önizlemesi
+## Taslak sayılar
 
-Sayıda **Önizleme bağlantısını aç** seçeneğini açıp kaydedin. GitHub Pages derlemesi tamamlanınca `/doskvol-dedikodu/taslak/sayi/002/` gibi, sayı numarası üç basamaklı olan bağlantıyı paylaşabilirsiniz. Önizleme makale ve tefrika bölümü okuma sayfalarını da içerir; manşet seçimi tamamlanmadan da açılır.
-
-Önizleme bağlantısı olan herkes erişebilir. Arşive, RSS’e ve site haritasına eklenmez; sayfalarda `noindex` bulunur. Bu bir erişim koruması değildir. Seçenek varsayılan olarak kapalıdır; kapatıp yeniden yayımladığınızda önizleme adresleri kaldırılır. **Taslak sayı** seçeneği normal yayına çıkmayı, önizleme seçeneği ise paylaşılabilir önizlemeyi ayrı ayrı yönetir.
+**Taslak sayı** açık olan sayılar ana yayında görünmez. PR önizlemesinde taslaklar da arşive ve sayı sayfalarına dahil edilir; manşet tamamlanmadan görüntülenebilir. Ayrı bir sayı önizleme anahtarı veya `/taslak/sayi/NUMARA/` adresi yoktur. Örneğin PR #42 içindeki ikinci sayı `/doskvol-dedikodu/taslak/pr-42/sayi/002/` adresindedir.
 
 ## Gravür üretim standardı
 
