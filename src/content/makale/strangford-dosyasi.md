@@ -15,17 +15,17 @@ Zarfın içinde, Lord Strangford'un Yanıkçukur'daki çalışma evlerinden biri
 
 İsimleri ve tarihleri karşılaştırdım. On dört kişiden dokuzunun o çalışma evinde gerçekten çalıştığını doğrulayabildim.
 
-Listeyi alıp Yanıkçukur'a, Çarşaflar'a gittim. Çamaşır iplerinin arasında alçak sesle konuşan bir grup işçi, ben yaklaşınca sustu. İpleri geçtiğimde, okuduğum yedinci ismi duyan bir kadın elindeki leğeni yere bıraktı.
+Listeyi alıp Yanıkçukur'a, Çarşaflık'a gittim. Çamaşır iplerinin arasında alçak sesle konuşan bir grup işçi, ben yaklaşınca sustu. İpleri geçtiğimde, okuduğum yedinci ismi duyan bir kadın elindeki leğeni yere bıraktı.
 
-"Timoth Grine mi? Sözleşmesi bitmiş, öyle mi?" Tepedeki konağa doğru başını çevirdi, sonra yeniden bana baktı. "Ben o adamın cenazesine gittim. Karısına da iki gün yemek taşıdım. Siz şimdi bana hangi kâğıdın doğru olduğunu mu soruyorsunuz?"
+"Timoth Grine mi? Sözleşmesi bitmiş, öyle mi?" Tepedeki konağa doğru başını çevirdi, sonra yeniden bana baktı. "Ben o adamın cenazesine gittim. Karısına iki gün yemek taşıdım; bütün sokak taşıdı. Siz şimdi bana hangi kâğıdın doğru olduğunu mu soruyorsunuz?"
 
 Asıl sorun belgelerin sekizinci sayfasında ortaya çıktı.
 
-O sayfadaki mühür, Kâtipler Caddesi'ndeki Kayıt Dairesi'nin baş kâtiplik mührüdür. Belge, geçen yılın Suran ayının 4'ünü taşıyor. Bu mührü taşıyan memur o makama Ulsivet'in 12'sinde atandı. Atama kayıtlarını yıllardır tutarım. Arada altmış sekiz gün var.
+O sayfadaki mühür, Kâtipler Sokağı'ndaki Kayıt Dairesi'nin baş kâtiplik mührüdür. Belge, geçen yılın Suran ayının 4'ünü taşıyor. Bu mührü taşıyan memur o makama Ulsivet'in 12'sinde atandı. Atama kayıtlarını yıllardır tutarım. Arada altmış sekiz gün var.
 
-Mührü, Kâtipler Caddesi'nde tanıdığım bir kâtibe gösterdim. Uzun süre konuşmadı.
+Mührü, Kâtipler Sokağı'nda tanıdığım bir kâtibe gösterdim. Uzun süre konuşmadı.
 
-"Olamaz," dedi sonunda. Ardından söylediği hiçbir şeyin kendisine atfedilmemesi gerektiğini birkaç farklı biçimde açıkladı.
+"Olamaz," dedi sonunda. "Malumunuz, mühür makamla gelir efendim." Ardından söylediği hiçbir şeyin kendisine atfedilmemesi gerektiğini birkaç farklı biçimde açıkladı.
 
 Lord Strangford'un temsilcilerine sorularımı ilettim. Ailenin hukuk temsilcisinden şu yanıt geldi:
 
@@ -37,7 +37,7 @@ Hangi kayıtların incelendiğini ve Timoth Grine'ın ölümünün araştırıl�
 
 Bu nedenle belgeleri bugün yayımlamıyorum. Doğru olabilecek bir ölüm ile sahte olabilecek bir mührü aynı sayfada basmak, bu sayfaları hazırlayan kişinin işini onun yerine yapmak olurdu.
 
-Arşivden son çıktığım akşam, Kâtipler Caddesi'nin köşesinde duran bir Mavi Urbalı, ben önünden geçene kadar defterine bir şey yazdı. Ne yazdığını sormadım.
+Arşivden son çıktığım akşam, Kâtipler Sokağı'nın köşesinde duran bir Mavi Urbalı, ben önünden geçene kadar defterine bir şey yazdı. Ne yazdığını sormadım.
 
 Zarfı sakladım.
 
