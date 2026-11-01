@@ -2,17 +2,10 @@
   "number": 1,
   "date": "2026-11-01",
   "price": "2 pençik",
-  "cover": "../../assets/images/hurda-dayak.avif",
-  "coverAlt": "Bir kanalın kıyısındaki taş okul, köprüler ve uzaktaki fabrika bacaları; kâğıt üzerinde değişen kalınlıkta mürekkep çizgileri.",
-  "coverCaption": "Doskvol’da gece — gazete için hazırlanmış temsili gravür.",
   "draft": false,
   "articles": [
-    "olum-cani-cenaze-yok.md",
-    "sislerin-arasinda-kaybolan-yuk.md",
-    "roric-katili.md",
+    "strangford-dosyasi.md",
     "dort-kisi-geldiler.md",
-    "bir-tabakta-eksilenler.md",
-    "strangford-dosyasi.md"
-  ],
-  "lead": "strangford-dosyasi.md"
+    "bir-tabakta-eksilenler.md"
+  ]
 }
