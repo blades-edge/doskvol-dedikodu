@@ -1,8 +1,7 @@
 {
   "number": 1,
-  "description": "Kızıl Kuşaklar Okulu’nun kapıları gece yarısından sonra üç kez açıldı. İçeri girenlerin adları yoktu; çıkışlarıysa hiçbir deftere yazılmadı.",
-  "date": "2026-10-29",
-  "price": "20 pençik",
+  "date": "2026-11-01",
+  "price": "2 pençik",
   "cover": "../../assets/images/doskvol-line-engraving.png",
   "coverAlt": "Bir kanalın kıyısındaki taş okul, köprüler ve uzaktaki fabrika bacaları; kâğıt üzerinde değişen kalınlıkta mürekkep çizgileri.",
   "coverCaption": "Doskvol’da gece — gazete için hazırlanmış temsili gravür.",
@@ -13,5 +12,6 @@
     "roric-katili.md",
     "dort-kisi-geldiler.md",
     "bir-tabakta-eksilenler.md"
-  ]
+  ],
+  "lead": "strangford-dosyasi.md"
 }
