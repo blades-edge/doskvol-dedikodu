@@ -1,0 +1,151 @@
+<!DOCTYPE html><html lang="tr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><script>
+  (() => {
+    const key = "doskvol-appearance";
+    const valid = value => ["day", "night", "device"].includes(value);
+    const media = window.matchMedia("(prefers-color-scheme: dark)");
+    let preference = "device";
+    try {
+      const saved = localStorage.getItem(key);
+      if (valid(saved)) preference = saved;
+    } catch {
+      // Private browsing may deny storage; the current page still works.
+    }
+    const paint = () => {
+      const dark =
+        preference === "night" || (preference === "device" && media.matches);
+      document.documentElement.dataset.theme = dark ? "dark" : "light";
+      document.querySelectorAll("[data-theme-choice]").forEach(button => {
+        button.setAttribute(
+          "aria-pressed",
+          String(button.dataset.themeChoice === preference)
+        );
+      });
+    };
+    paint();
+    document.addEventListener("DOMContentLoaded", paint, { once: true });
+    media.addEventListener("change", paint);
+    document.addEventListener("doskvol:theme", event => {
+      if (!valid(event.detail)) return;
+      preference = event.detail;
+      try {
+        localStorage.setItem(key, preference);
+      } catch {
+        // Private browsing may deny storage; the current page still works.
+      }
+      paint();
+    });
+    window.addEventListener("storage", event => {
+      if (event.key !== key && event.key !== null) return;
+      preference = valid(event.newValue) ? event.newValue : "device";
+      paint();
+    });
+  })();
+</script><link rel="icon" type="image/svg+xml" href="/doskvol-dedikodu/taslak/pr-15/favicon.svg"><meta name="robots" content="noindex, nofollow"><link rel="canonical" href="https://blades-edge.github.io/doskvol-dedikodu/taslak/pr-15/tefrika/bos-bedenler/1/"><meta name="description" content="Bir hastamın yerine gittim. Kapıda bana başka birinin maskesini verdiler. Sabah, beni kurtaran kadının otopsisini yaptım."><meta property="og:site_name" content="Doskvol Dedikoduları"><meta property="og:locale" content="tr_TR"><meta property="og:type" content="article"><meta property="og:title" content="Gülümseyen Kadın | Doskvol Dedikoduları"><meta property="og:description" content="Bir hastamın yerine gittim. Kapıda bana başka birinin maskesini verdiler. Sabah, beni kurtaran kadının otopsisini yaptım."><meta property="og:url" content="https://blades-edge.github.io/doskvol-dedikodu/taslak/pr-15/tefrika/bos-bedenler/1/"><meta property="og:image" content="https://blades-edge.github.io/doskvol-dedikodu/taslak/pr-15/_astro/strangford-isciler.BuPTU7Sh_Z1pgUkp.png"><meta property="og:image:alt" content="Strangford'un imalathanesinden Mavi Urbalı zoruyla çıkartılan işçiler."><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="Gülümseyen Kadın | Doskvol Dedikoduları"><meta name="twitter:description" content="Bir hastamın yerine gittim. Kapıda bana başka birinin maskesini verdiler. Sabah, beni kurtaran kadının otopsisini yaptım."><meta name="twitter:image" content="https://blades-edge.github.io/doskvol-dedikodu/taslak/pr-15/_astro/strangford-isciler.BuPTU7Sh_Z1pgUkp.png"><meta name="twitter:image:alt" content="Strangford'un imalathanesinden Mavi Urbalı zoruyla çıkartılan işçiler."><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,600;0,6..72,700;1,6..72,400&display=swap" rel="stylesheet"><title>Gülümseyen Kadın | Doskvol Dedikoduları</title><link rel="stylesheet" href="/doskvol-dedikodu/taslak/pr-15/_astro/EditorialHead.BZuZ3cdP.css"></head><body><aside class="preview-notice"><a href="https://github.com/blades-edge/doskvol-dedikodu/pull/15">PR #15 önizlemesi</a> · Bağlantısı olan herkes görebilir. Normal yayına dahil değildir.</aside><a class="reading-skip" href="#reading-content">Makaleye geç</a><div class="paper reading-paper"><header class="masthead reading-masthead"><div class="masthead-title"><div class="eyebrow">Akoros’un bağımsız sesi · Doskvol</div><a class="reading-wordmark" href="/doskvol-dedikodu/taslak/pr-15/sayi/001/">Doskvol Dedikoduları</a><div class="tagline">Duyduğunuza inanmayın. Duymadıklarınızdan korkun.</div></div><aside class="weather-theme" aria-label="Gazetenin hava durumu ve görünümü"><div class="weather-caption">Doskvol’da hava</div><div class="weather-choices" role="group" aria-label="Görünüm tercihi"><button type="button" data-theme-choice="day" aria-pressed="false" title="Kırık güneş — açık görünüm"><img src="/doskvol-dedikodu/taslak/pr-15/weather-day.png" alt="" width="56" height="56" loading="eager"><span>Gündüz</span></button><button type="button" data-theme-choice="night" aria-pressed="false" title="Ay ve loş bacıları — koyu görünüm"><img src="/doskvol-dedikodu/taslak/pr-15/weather-night.png" alt="" width="56" height="56" loading="eager"><span>Gece</span></button><button type="button" data-theme-choice="device" aria-pressed="true" title="Hayaletli hava — cihazın tercihini izle"><img src="/doskvol-dedikodu/taslak/pr-15/weather-device.png" alt="" width="56" height="56" loading="eager"><span>Cihaz</span></button></div></aside><script type="module">document.querySelectorAll(`[data-theme-choice]`).forEach(e=>{e.addEventListener(`click`,()=>{document.dispatchEvent(new CustomEvent(`doskvol:theme`,{detail:e.dataset.themeChoice}))})});</script></header><nav class="reading-breadcrumb" aria-label="Sayfa yolu"><a href="/doskvol-dedikodu/taslak/pr-15/sayi/001/">Sayı 001</a><span aria-hidden="true">/</span><span>Tefrika</span></nav><main id="reading-content"><header class="reading-heading"><div class="eyebrow">Boş Bedenler · Bölüm 1</div><h1>Gülümseyen Kadın</h1><p class="reading-deck">Bir hastamın yerine gittim. Kapıda bana başka birinin maskesini verdiler. Sabah, beni kurtaran kadının otopsisini yaptım.</p><div class="reading-meta"><span>Dr. A. Sorel</span><time datetime="2026-11-01T00:00:00.000Z">1 Kasım 2026</time><span>Sayı 001</span></div></header><article class="reading-copy" aria-label="Gülümseyen Kadın"><h6 id="sicim-çeyreği1">Sicim çeyreği<sup><a href="#user-content-fn-1" id="user-content-fnref-1" data-footnote-ref="" aria-describedby="footnote-label">1</a></sup></h6>
+<p>Lord Cassian Rell’in ateşi otuz dokuz derece sekiz çizgisindeydi. Nabzı hızlı, solunumu yüzeyseldi. Bilinci yerindeydi.</p>
+<p>Muayeneyi tamamladığımda uşağını dışarı gönderdi. Ardından doğrulmaya çalıştı. Yardımımı reddetti.</p>
+<p>“Bu gece benim yerime gidin, doktor. Bir saatliğine.”</p>
+<p>Yatağın başucundaki suyu uzattım.</p>
+<p>“Nereye, Lord Rell?”</p>
+<p>“Billurtaş’a. Katedralin doğu tarafında eski bir kapı vardır. Gece yarısına kadar açık kalacak.”</p>
+<p>Bardağı aldı. İçmedi.</p>
+<p>“Yokluğum fark edilmemeli. Kapıda sizden bir sözcük isteyecekler. Yedinci.”</p>
+<p>Sözcüğü tekrarlamamı bekledi. Tekrarladım.</p>
+<p>“Maskem kuzgun yüzlüdür. Onu verdiklerinde takın. İçeride kimseyle konuşmanız gerekmiyor.”</p>
+<p>Rell’in tavsiye ettiği hastalar muayenehanemin gelirinin önemli bir bölümünü oluşturuyordu. Bir hekim hastasının iyileşme sürecinde lüzumsuz anlaşmazlıklardan kaçınmalıdır.</p>
+<p>İstediği ilacı yazdım. Geceyi yatakta geçirmesini söyledim.</p>
+<p>Talebini kabul ettim.</p>
+<h6 id="i̇peğe-üçlek-kala1">İpeğe üçlek kala<sup><a href="#user-content-fn-1" id="user-content-fnref-1-2" data-footnote-ref="" aria-describedby="footnote-label">1</a></sup></h6>
+<p>Katedralin doğu tarafındaki kapı, sokak seviyesinden altı basamak aşağıdaydı. Üzerinde herhangi bir yazı bulunmuyordu. Demir halkayı iki kez vurdum.</p>
+<p>Kapıyı açan hizmetkârın yüzü görünüyordu. Yaşını otuz ile kırk arasında tahmin ettim.</p>
+<p>“Yedinci.”</p>
+<p>Başını eğdi. Geri çekildi.</p>
+<p>Dar koridorda birkaç adım yürüdük. Hizmetkâr, duvardaki bir girintiden beyaz bir maske aldı. Oval biçimliydi. Kaşları, burnu ve dudakları belirtmeyen düz bir yüzeyden ibaretti.</p>
+<p>Rell’in maskesinin kuzgun yüzlü olduğunu hatırladım. Hizmetkâr girintiye bakmadan seçim yapmıştı. Soru sormadım.</p>
+<p>Maskeyi taktım.</p>
+<p>Koridor geniş bir salona açılıyordu.</p>
+<p>Tavandan sarkan lambalar eşit aralıklarla yerleştirilmişti. Duvarların alt bölümü koyu kumaşla örtülmüştü. Havada balmumu ve ıslak yün kokusu vardı. Bir yaylı çalgı topluluğu salonun uzak köşesinde çalıyordu. Müzisyenlerin yüzleri açıktı.</p>
+<p>Konukların maskeleri birbirinden farklıydı. Bazıları hayvan başlarını, bazıları sıradan insan yüzlerini andırıyordu. İki kişinin maskesi bütünüyle siyahtı. Kimse yüksek sesle konuşmuyordu.</p>
+<p>Salonun ortasında maskesiz bir adam oturuyordu.</p>
+<p>Üzerinde koyu renk, temiz fakat eski bir takım vardı. Sırtı dikti. Elleri dizlerinin üzerindeydi. Gözleri açıktı.</p>
+<p>Önünde ikinci bir sandalye bulunuyordu.</p>
+<p>Sandalye boştu.</p>
+<p>Konuklar adamın iki yanından geçiyor, hiçbiri durmuyordu. Bu ayrıntıyı kaydetmemin nedeni, sandalyenin geçiş yolunu daraltmasıdır. Salonda başka boş sandalye yoktu.</p>
+<p>Duvara yakın bir masanın üzerinde büyük bir defter duruyordu. Kalın kapakları vardı. Önündeki sayfa dışında bütün sayfalar örtülüydü.</p>
+<p>Konuklar sırayla yaklaşıyordu.</p>
+<p>Her biri kendisine uzatılan kalemi alıyor, kısa bir şey yazıyor, ardından kalemi bırakıp uzaklaşıyordu. Görevli sayfayı kapatıyor, yenisini açıyordu. Bir sonraki konuk öncekinin yazdığını göremiyordu.</p>
+<p>Bana da sıraya girmem işaret edildi.</p>
+<p>Önümde duran adamın sol elinin küçük parmağında geniş bir yüzük vardı. Yüzüğü eklemin biraz üzerinde taşıyordu.</p>
+<p>Bu eli daha önce görmüştüm.</p>
+<p>Lord Orlan Tervik’in iki yıl önce geçirdiği ameliyattan kalan iz, küçük parmağının tabanındaydı. Eklemi kalınlaştırmıştı. Yüzüğü aşağı indirememesinin nedeni buydu.</p>
+<p>Bir adım yaklaştım.</p>
+<p>“Lord Tervik, eliniz hâlâ…”</p>
+<p>Müzik durdu.</p>
+<p>Tamamen değil.</p>
+<p>Yaylardan biri hareketini tamamladı. Diğerleri durdu. Bir sonraki ölçü başlamadı.</p>
+<p>Önümdeki adam başını çevirmedi.</p>
+<p>Arkamdaki konukların ayak sesleri kesildi. Salonun öteki ucundaki görevliler hareketsiz kaldı. Masanın başındaki adam kalemi defterin üzerinde tuttu.</p>
+<p>Maskelerin yüzlerinde değişiklik olmadı. Yine de her birinin bana dönük olduğunu görebiliyordum. Salonun uzak ucunda, yüksek arkalıklı bir koltukta oturan maskeli kişi dışında herkes dönmüştü. O, başını önüne eğmiş hâlde kaldı.</p>
+<p>Kimse konuşmadı.</p>
+<p>Defterin başındaki görevli kalemi yerine koymadı. Parmakları kalemin çevresinde kapalıydı. Önümdeki adam sol elini arkasına aldı. Müzisyenlerden biri yayını tellerin üzerinde tutmaya devam etti. Kolunun yorulması gerekirdi. İndirmedi.</p>
+<p>Bir hizmetkâr ağır adımlarla kapıya doğru yürüdü. Kapıyı açmadı. Yanında bekledi.</p>
+<p>Konuklardan biri eldiveninin ucunu çekti. Başka bir konuk başını hafifçe eğdi. Bu hareketlerin hiçbiri birbirini izleyen bir işaret gibi görünmüyordu.</p>
+<p>Ben de yerimden ayrılmadım.</p>
+<p>Söylediğim sözlerin tıbbi bir gözlemden ibaret olduğunu açıklayabilirdim. Fakat kimse açıklama istememişti.</p>
+<p>Sağ kolumda hafif bir basınç hissettim.</p>
+<p>Yanımda bir kadın duruyordu. Yüzünde ince, gümüş renkli bir yarım maske vardı; ağzı ve çenesi açıktı. Eldivenli eli dirseğimin hemen üzerindeydi.</p>
+<p>Beni sıranın dışına aldı.</p>
+<p>Bir adım attım. Sonra bir adım daha.</p>
+<p>Kadın durdu. Serbest elini göğüs hizasına kaldırdı. Parmaklarını açmaya hazırlanırken bakışını kapıda bekleyen görevliye çevirdi.</p>
+<p>Elini indirdi.</p>
+<p>“Buradan,” dedi.</p>
+<p>Koridora çıktığımızda müzik yeniden başlamıştı.</p>
+<p>Kadın beni dış kapıya kadar götürmedi. Dar bir geçitte durdu ve başka bir hizmetkâra işaret etti.</p>
+<p>Çıkışta siyah kadife kaplı bir tepsi tutuluyordu.</p>
+<p>Maskemi çıkardım. Tepsiye bıraktım.</p>
+<p>Hizmetkâr ellerimi açmamı istedi. Eldiven giymediğimden avuçlarımı doğrudan gösterdim. Önce içlerine, sonra parmak aralarına baktı. Ardından geçmeme izin verdi.</p>
+<h6 id="i̇pek-yarısına-az-kala1">İpek yarısına az kala<sup><a href="#user-content-fn-1" id="user-content-fnref-1-3" data-footnote-ref="" aria-describedby="footnote-label">1</a></sup></h6>
+<p>Eve yürürken uzaktan tek bir çan sesi duydum.<sup><a href="#user-content-fn-2" id="user-content-fnref-2" data-footnote-ref="" aria-describedby="footnote-label">2</a></sup></p>
+<h6 id="üçüncü-saati-üçlek-geçe1">Üçüncü saati üçlek geçe<sup><a href="#user-content-fn-1" id="user-content-fnref-1-4" data-footnote-ref="" aria-describedby="footnote-label">1</a></sup></h6>
+<p>Profesör Severin Halbrecht beni sabah erkenden çağırdı.</p>
+<p>“Şüpheli bir ölüm, Adrian. Dışarıdan bir göz gerekiyor.”</p>
+<p>Yirmi yılı aşkın süredir cerrahlık yapıyordu. Eğitimimin önemli bir bölümünü onun gözetiminde tamamlamıştım. Muayenehanemi açarken verdiği tavsiyeler hâlâ geçerliliğini koruyordu.</p>
+<p>Beni Bedenin Vecdi Kilisesi’ne bağlı hayır kurumunun morgunda karşıladı. Ellerini yıkadıktan sonra temiz bir önlük giydi. İncelemenin resmî izne bağlı olduğunu, bedenin kısa süre içinde teslim edileceğini söyledi.</p>
+<p>Örtüyü birlikte kaldırdık.</p>
+<p>Kadını tanıdım. Ağzının biçiminden.</p>
+<p>Gece beni sıradan çıkaran kişiydi. Yüzünde artık maske yoktu. Saçları geriye doğru taranmıştı. Gözleri kapalıydı.</p>
+<p>Bunu profesöre söylemedim. Söylemem, önceki gece nerede bulunduğumu da açıklamamı gerektirirdi.</p>
+<p>Kadının dudak köşeleri yukarı doğru çekilmişti. Yüzeysel bir incelemede gülümsemeye benzeyen ifade, kasların ölümden önce geçirdiği kuvvetli bir kasılmayla uyumluydu.</p>
+<p>Zehirlenme olasılığını değerlendirmek istedim.</p>
+<p>Profesör, ağır ateşli bir nöbetin benzer belirtiler verebileceğini söyledi. Bu açıklamayı kayda geçirdim.</p>
+<p>Sol bilekte dairesel bir mühür izi vardı. Derinin yüzeyi yer yer koyulaşmıştı. İz oldukça düzenliydi. Ölçmek için cetvel istedim; beklerken kendi bileğimdeki eski yanığı başparmağımla ovuşturdum.</p>
+<p>Morgun Fısıltısı, incelememiz sırasında içeri girdi.</p>
+<p>Cesedin başında bir süre durdu. Maskeli değildi. Gözlerini kapatarak ellerini bedenin üzerinde gezdirdi.</p>
+<p>Sonra profesöre döndü.</p>
+<p>“Beklenen ruhsal varlık belirtilerini saptayamadım.”</p>
+<p>İfadesini olduğu gibi yazdım.</p>
+<p>Profesör kendisinden ikinci bir inceleme istedi. Fısıltı bunu yapabileceğini, fakat zamanın azaldığını söyledi.</p>
+<p>Ağız boşluğunu incelemeye geçtim.</p>
+<p>Alt çenede belirgin ölüm katılığı mevcuttu. Açmak için olağandan fazla kuvvet uygulanması gerekti.</p>
+<p>Dişlerde önemli bir hasar görmedim. Dilin alt yüzeyinde ise sert bir yabancı cisim vardı.</p>
+<p>Pens istedim.</p>
+<p>Cismi yerinden çıkardığımda metal olduğunu gördüm.</p>
+<p>Küçük, pirinçten yapılmış bir anahtardı. Sapı, uzun süre avuç içinde taşınmış nesnelerde görülen biçimde aşınmıştı. Dişleri sağlamdı. Üzerinde rakam bulunmuyordu.</p>
+<p>Profesöre döndüm.</p>
+<p>“Bu bir ölünün dilinin altına nasıl girmiş olabilir?”</p>
+<p>Cevap vermedi.</p>
+<p>Önce kapıya baktı.</p>
+<p>Bir an sonra koridordan ağır, düzenli ayak sesleri duyuldu.</p>
+<p>Anahtarı delil tepsisine bıraktım.</p>
+<p>Tıbbi inceleme kayıtlarında bu tür bakışların değerlendirilmesine ayrılmış bir başlık bulunmadığından, bakışı kaydetmekle yetiniyorum.</p>
+<hr>
+<p><em>Birinci bölümün sonu. Dr. Sorel’in vaka defteri bir sonraki sayıda devam edecek.</em></p>
+<section data-footnotes="" class="footnotes"><h2 class="sr-only" id="footnote-label">Dipnotlar</h2>
+<ol>
+<li id="user-content-fn-1">
+<p>Doskvol saatleri: Sabah 6:00 Birinci saat — 17:00 Onikinci saat. Akşam 18:00 Eşref – 19:00 Nağme – 20:00 Gümüş – 21:00 Sicim – 22:00 Alev – 23:00 Mercan – 00:00 İpek – 01:00 Mey – 02:00 Kül – 03:00 Kömür – 04:00 Zincir – 05:00 Duman <a href="#user-content-fnref-1" data-footnote-backref="" aria-label="1. dipnotun 1. referansına dön" class="data-footnote-backref">↩</a> <a href="#user-content-fnref-1-2" data-footnote-backref="" aria-label="1. dipnotun 2. referansına dön" class="data-footnote-backref">↩</a> <a href="#user-content-fnref-1-3" data-footnote-backref="" aria-label="1. dipnotun 3. referansına dön" class="data-footnote-backref">↩</a> <a href="#user-content-fnref-1-4" data-footnote-backref="" aria-label="1. dipnotun 4. referansına dön" class="data-footnote-backref">↩</a></p>
+</li>
+<li id="user-content-fn-2">
+<p>Bu saati sonradan doğruladım <a href="#user-content-fnref-2" data-footnote-backref="" aria-label="2. dipnotun 1. referansına dön" class="data-footnote-backref">↩</a></p>
+</li>
+</ol>
+</section></article><nav class="reading-ending reading-chapters" aria-label="Tefrika bölümleri"><div><span class="eyebrow">Önceki bölüm</span><p>Serinin ilk bölümü</p></div><div><span class="eyebrow">Sonraki bölüm</span><p>Sonraki bölüm henüz yayımlanmadı.</p></div></nav><div class="reading-return"><a href="/doskvol-dedikodu/taslak/pr-15/sayi/001/">← Sayı 001</a><a href="#reading-content">Makalenin başına ↑</a></div></main><footer>Doskvol Dedikoduları · Mürekkep kurumadan okuyanlara</footer></div></body></html>
