@@ -1,26 +1,22 @@
 ---
-import { Image } from "astro:assets";
-import day from "@assets/images/weather-day.png";
-import night from "@assets/images/weather-night.png";
-import device from "@assets/images/weather-device.png";
 const choices = [
   {
     value: "day",
     label: "Gündüz",
     title: "Kırık güneş — açık görünüm",
-    image: day,
+    image: "/weather-day.png",
   },
   {
     value: "night",
     label: "Gece",
-    title: "Ay ve sönük yansımaları — koyu görünüm",
-    image: night,
+    title: "Ay ve loş bacıları — koyu görünüm",
+    image: "/weather-night.png",
   },
   {
     value: "device",
     label: "Cihaz",
     title: "Hayaletli hava — cihazın tercihini izle",
-    image: device,
+    image: "/weather-device.png",
   },
 ];
 ---
@@ -36,7 +32,7 @@ const choices = [
           aria-pressed={choice.value === "device" ? "true" : "false"}
           title={choice.title}
         >
-          <Image
+          <img
             src={choice.image}
             alt=""
             width={56}
