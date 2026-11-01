@@ -1,0 +1,395 @@
+<!DOCTYPE html><html lang="tr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><script>
+  (() => {
+    const key = "doskvol-appearance";
+    const valid = value => ["day", "night", "device"].includes(value);
+    const media = window.matchMedia("(prefers-color-scheme: dark)");
+    let preference = "device";
+    try {
+      const saved = localStorage.getItem(key);
+      if (valid(saved)) preference = saved;
+    } catch {
+      // Private browsing may deny storage; the current page still works.
+    }
+    const paint = () => {
+      const dark =
+        preference === "night" || (preference === "device" && media.matches);
+      document.documentElement.dataset.theme = dark ? "dark" : "light";
+      document.querySelectorAll("[data-theme-choice]").forEach(button => {
+        button.setAttribute(
+          "aria-pressed",
+          String(button.dataset.themeChoice === preference)
+        );
+      });
+    };
+    paint();
+    document.addEventListener("DOMContentLoaded", paint, { once: true });
+    media.addEventListener("change", paint);
+    document.addEventListener("doskvol:theme", event => {
+      if (!valid(event.detail)) return;
+      preference = event.detail;
+      try {
+        localStorage.setItem(key, preference);
+      } catch {
+        // Private browsing may deny storage; the current page still works.
+      }
+      paint();
+    });
+    window.addEventListener("storage", event => {
+      if (event.key !== key && event.key !== null) return;
+      preference = valid(event.newValue) ? event.newValue : "device";
+      paint();
+    });
+  })();
+</script><link rel="icon" type="image/svg+xml" href="/doskvol-dedikodu/taslak/pr-15/favicon.svg"><meta name="robots" content="noindex, nofollow"><link rel="canonical" href="https://blades-edge.github.io/doskvol-dedikodu/taslak/pr-15/tefrika/doskvol-gunlukleri/1/"><meta name="description" content="Kargaayağı’nın beş haydudu, Mylera’nın verdiği soygun işi için İpekyalı’ya gider."><meta property="og:site_name" content="Doskvol Dedikoduları"><meta property="og:locale" content="tr_TR"><meta property="og:type" content="article"><meta property="og:title" content="İpekyalı’da Bir Gece | Doskvol Dedikoduları"><meta property="og:description" content="Kargaayağı’nın beş haydudu, Mylera’nın verdiği soygun işi için İpekyalı’ya gider."><meta property="og:url" content="https://blades-edge.github.io/doskvol-dedikodu/taslak/pr-15/tefrika/doskvol-gunlukleri/1/"><meta property="og:image" content="https://blades-edge.github.io/doskvol-dedikodu/taslak/pr-15/_astro/strangford-isciler.BuPTU7Sh_Z1pgUkp.png"><meta property="og:image:alt" content="Strangford'un imalathanesinden Mavi Urbalı zoruyla çıkartılan işçiler."><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="İpekyalı’da Bir Gece | Doskvol Dedikoduları"><meta name="twitter:description" content="Kargaayağı’nın beş haydudu, Mylera’nın verdiği soygun işi için İpekyalı’ya gider."><meta name="twitter:image" content="https://blades-edge.github.io/doskvol-dedikodu/taslak/pr-15/_astro/strangford-isciler.BuPTU7Sh_Z1pgUkp.png"><meta name="twitter:image:alt" content="Strangford'un imalathanesinden Mavi Urbalı zoruyla çıkartılan işçiler."><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,600;0,6..72,700;1,6..72,400&display=swap" rel="stylesheet"><title>İpekyalı’da Bir Gece | Doskvol Dedikoduları</title><link rel="stylesheet" href="/doskvol-dedikodu/taslak/pr-15/_astro/EditorialHead.BZuZ3cdP.css"></head><body><aside class="preview-notice"><a href="https://github.com/blades-edge/doskvol-dedikodu/pull/15">PR #15 önizlemesi</a> · Bağlantısı olan herkes görebilir. Normal yayına dahil değildir.</aside><a class="reading-skip" href="#reading-content">Makaleye geç</a><div class="paper reading-paper"><header class="masthead reading-masthead"><div class="masthead-title"><div class="eyebrow">Akoros’un bağımsız sesi · Doskvol</div><a class="reading-wordmark" href="/doskvol-dedikodu/taslak/pr-15/sayi/001/">Doskvol Dedikoduları</a><div class="tagline">Duyduğunuza inanmayın. Duymadıklarınızdan korkun.</div></div><aside class="weather-theme" aria-label="Gazetenin hava durumu ve görünümü"><div class="weather-caption">Doskvol’da hava</div><div class="weather-choices" role="group" aria-label="Görünüm tercihi"><button type="button" data-theme-choice="day" aria-pressed="false" title="Kırık güneş — açık görünüm"><img src="/doskvol-dedikodu/taslak/pr-15/weather-day.png" alt="" width="56" height="56" loading="eager"><span>Gündüz</span></button><button type="button" data-theme-choice="night" aria-pressed="false" title="Ay ve loş bacıları — koyu görünüm"><img src="/doskvol-dedikodu/taslak/pr-15/weather-night.png" alt="" width="56" height="56" loading="eager"><span>Gece</span></button><button type="button" data-theme-choice="device" aria-pressed="true" title="Hayaletli hava — cihazın tercihini izle"><img src="/doskvol-dedikodu/taslak/pr-15/weather-device.png" alt="" width="56" height="56" loading="eager"><span>Cihaz</span></button></div></aside><script type="module">document.querySelectorAll(`[data-theme-choice]`).forEach(e=>{e.addEventListener(`click`,()=>{document.dispatchEvent(new CustomEvent(`doskvol:theme`,{detail:e.dataset.themeChoice}))})});</script></header><nav class="reading-breadcrumb" aria-label="Sayfa yolu"><a href="/doskvol-dedikodu/taslak/pr-15/sayi/001/">Sayı 001</a><span aria-hidden="true">/</span><span>Tefrika</span></nav><main id="reading-content"><header class="reading-heading"><div class="eyebrow">Doskvol Günlükleri · Bölüm 1</div><h1>İpekyalı’da Bir Gece</h1><p class="reading-deck">Kargaayağı’nın beş haydudu, Mylera’nın verdiği soygun işi için İpekyalı’ya gider.</p><div class="reading-meta"><span>Altıncı Sandalye</span><time datetime="2026-11-01T00:00:00.000Z">1 Kasım 2026</time><span>Sayı 001</span></div></header><article class="reading-copy" aria-label="İpekyalı’da Bir Gece"><blockquote>
+<p>“Doskvol’da hiçbir sır sonsuza dek saklanmaz. Bazıları yalnızca yeterince mangır ödenene kadar gizli kalır.”</p>
+</blockquote>
+<h2 id="i-kargaayağında-beş-haydut">I. Kargaayağı’nda Beş Haydut</h2>
+<p>Doskvol’un karanlığına alışmak kolaydı. İçinde hayatta kalmak başka bir meziyet isterdi.</p>
+<p>Gece, Doskvol’a güneş battığı için gelmezdi; şehir çoktan karanlığın içinde yaşardı. Kömür isinin ağır kokusu kanallardan yükselen çürük suya karışır, elektroplazmik lambaların mavimsi ışığı yağmurla cilalanmış kaldırım taşlarında titrerdi. Gecenin geç saatlerinde bile uzak bir tramvayın metal çınlaması, kepenk indiren esnafın homurtusu ve kanalların üzerindeki sisin içinden gelen düdükler duyulurdu.</p>
+<p>Kargaayağı’nın dar sokaklarından birinde, tabelası çoktan sökülmüş, kepenkleri pas tutmuş eski bir dükkân vardı. Önünden geçenler adımlarını yavaşlatmazdı. İki bina arasına sıkışmış cephesinde yağmur izleri koyulaşmış, üst katın kirli camları karşıdaki lambanın ışığını solgun bir lekeye çevirmişti. Dışarıdan bakan, buraya yıllardır kimsenin girmediğini düşünürdü. Oysa bodrumunda beş haydut, neye dönüşeceğini kendilerinin de bilmediği bir ortaklığın temelini atıyordu.</p>
+<p>İnin en canlı köşesi atölyeydi. Bodruma inen basamaklar nemliydi; tavandan arada bir su damlar, taş zeminde küçük koyu halkalar bırakırdı. Havada makine yağı, lehim dumanı ve soğumuş çay kokusu birbirine karışıyordu. Hurda’nın masasında yarım kalmış düzenekler, bakır teller, paslı parçalar ve ne işe yaradığını yalnızca onun bildiği aletler duruyordu. Başkalarının hurda dediği şey, onun gözünde henüz kimsenin denemediği bir ihtimaldi.</p>
+<p>Ayaz bir yere girdiğinde önce kapılara değil insanlara bakardı: Tehlike geldiğinde kim nereye koşar, hangi merdiven tıkanır, hangi pencere açık kalır. Askerlikten kalma bir alışkanlıktı bu; bırakamamıştı.</p>
+<p>Sis daha az konuşurdu. Gözü başkalarının kaçırdığı şeylerdeydi: birinin cebine kayan bir bakış, aralık kalmış bir çekmece, fazla gevşek duran bir kilit.</p>
+<p>Gümüş bodrumun kasvetinden hoşnut değildi. İnsanın nasıl yaşadığı, başkalarının ona nasıl davrandığını belirlerdi; en azından o böyle düşünüyordu. Bir gün daha iyi bir yerde oturacak, daha pahalı kumaşlar giyecek, girdikleri kapılarda saygıyla karşılanacaklardı.</p>
+<p>Yankı ise arkadaşları konuşurken zaman zaman susar, odada bulunmayan bir altıncı kişiyi dinliyormuş gibi dururdu. Bazen lambanın camındaki yansıması, yüzünü çevirdiği yöne bir an geç dönüyormuş gibi görünürdü. Bunun ışığın oyunu mu, yoksa Yankı’nın duyup kimsenin işitmediği bir şey mi olduğunu soran çıkmazdı.</p>
+<p>Birbirlerini tanıyorlardı, ortak bir geçmişleri vardı. Ama birbirlerine ne kadar güvenebileceklerini henüz bilmiyorlardı.</p>
+<p>Şehrin güçlüleriyle araları da pek iyi değildi. Mavi Urbalılar onlara kuşkuyla bakıyordu; Kızıl Kuşaklarla ilişkileri daha da kötüydü.</p>
+<p>Bu yüzden Kızıl Kuşakların patroniçesi Mylera Klev’den gelen çağrı, bir fırsat olduğu kadar bir tehdit de taşıyordu.</p>
+<h2 id="ii-myleranın-masasında">II. Mylera’nın Masasında</h2>
+<p>Kargaların lideri öldürülmüştü.</p>
+<p>Haber Kargaayağı’na yağmurdan hızlı yayıldı. Köşe başlarında konuşmalar ansızın kesiliyor, kapı önlerinde sigara içenler gelip geçeni daha dikkatli süzüyordu. Hangi sokağın kime ait olduğunu gösteren işaretler henüz değişmemişti; ama duvarlardaki taze boya kokusu, değişimin başladığını haber veriyordu.</p>
+<p>Kargaayağı’nın suç dünyasında bu, bir adamın ortadan kalkmasından fazlasıydı. Onunla birlikte eski düzenin korkusu da çözülmüş; geride sahipsiz sokaklar, işletmeler ve bağlantılar kalmıştı. Kızıl Kuşaklar ile Yağkaraları bu boşluk için çekişiyordu.</p>
+<p>Mylera’nın hedefi, Yağkaralarının İpekyalı’da yeni ele geçirdiği üç katlı kerhaneydi.</p>
+<p>Mylera’nın odasında hava, sokağın neminden farklı, kuru ve sıcaktı. Lambalar yüzünü bütünüyle aydınlatmıyor, masanın üstündeki gölgeler her el hareketinde biçim değiştiriyordu. Dışarıdan geçen bir arabanın tekerleği taşlara vurdukça pencere camı hafifçe titriyordu.</p>
+<p>Tayfa huzuruna çıkarıldığında iş açıkça söylendi: Kasa soyulacak, içindekiler alınacak ve işin Kızıl Kuşaklarla bağı asla ortaya çıkmayacaktı. Kargalar da soygunu kimin yaptırdığını öğrenmemeliydi.</p>
+<p>Gümüş dinledi. Ortada önemli bir eksik vardı: Kasanın nerede olduğunu bilmiyorlardı.</p>
+<p>Bir süre bekledi. Sonra konuştu.</p>
+<p>“Bize ne istediğinizi söylediniz. Ama neye ulaşacağımızı bilmeden içeri girmemizi bekliyorsunuz.”</p>
+<p>Mylera’nın bakışları sertleşti.</p>
+<p>“Bir kasa bulamayacak kadar beceriksizseniz bu işe hiç başlamayın.”</p>
+<p>Gümüş gülümsedi.</p>
+<p>“Becerikli olduğumuzu göstermek için buradayız. Ama sizin de kaybetmek istemediğiniz bir şey var. Bizim başarımız, sizin de başarınız olacak.”</p>
+<p>Mylera’yla pazarlık etmek, onu ikna etmekten önce, karşısında ezilmeden konuşabilmeyi gerektiriyordu.</p>
+<p>Yankı, Gümüş’ün yanındaydı. Pek konuşmuyordu ama doğru anlarda araya giriyor, arkadaşına omuz veriyordu. Gümüş’ün sözleri fazla ileri gittiğinde, arkasında duran sessiz Fısıltı o cürete başka bir ağırlık katıyordu.</p>
+<p>Yine de görüşme sözlerle bitmedi. Bir noktada eğitim kılıçları ortaya çıktı.</p>
+<p>Ahşabın avuçta bıraktığı kuru sürtünme, Gümüş’ün alışık olduğu ipek kumaşlardan ve kadeh kenarlarından çok uzaktı. İlk darbenin sesi odada kısa, tok bir yankı bıraktı.</p>
+<p>Zarif başlayan pazarlık, Gümüş için pek zarif bitmedi. Aldığı her darbe, Mylera’nın dünyasında kelimelerin her zaman yetmediğini hatırlatıyordu. Canı yandı ama geri adım atmadı.</p>
+<p>Sonunda öğrendiler: Kasa ikinci kattaydı, tek kapılı ve tek pencereli bir odada.</p>
+<p>Dışarı çıktıklarında Yankı ona yaklaştı.</p>
+<p>“Değdi mi?”</p>
+<p>Gümüş acıyan omzunu yokladı.</p>
+<p>“Artık kasanın nerede olduğunu biliyoruz.”</p>
+<p>“Bunu soruyorum zaten.”</p>
+<p>Gümüş ona baktı.</p>
+<p>“Bazen bir şey öğrenmek için dayak yemek gerekir. Mesele, karşılığında yeterince değerli bir şey öğrenmektir.”</p>
+<p>Yankı hafifçe gülümsedi.</p>
+<p>“Üstelik,” dedi Gümüş, “Mylera’nın karşısına bir daha çıktığımda beni bu karşılaşmayla değil, kazandırdığım mangırlarla hatırlayacak.”</p>
+<p>Yankı cevap vermedi. Bazı insanlar, kendilerine anlattıkları hikâyeler sayesinde ayakta kalırdı.</p>
+<h2 id="iii-ayazın-keşfi">III. Ayaz’ın Keşfi</h2>
+<p>İlk ciddi hazırlığı Ayaz yaptı.</p>
+<p>İpekyalı gecenin o saatinde de ayaktaydı. Aralık kapılardan sıcak yemek ve keskin parfüm kokusu taşıyor, kaldırımda birbirine omuz veren müşterilerle başı eğik yürüyen işçiler birbirine yol açıyordu. Camlarda beliren siluetler, karşı kaldırımdaki mavi lambaların ışığında uzayıp kısalıyordu.</p>
+<p>Ayaz kerhaneyi dışarıdan gözledi: koruma düzenini, girişleri, çevredeki binaları, yaklaşma yollarını. Askerlik ona düşmanın yalnızca nerede durduğunu değil, neden orada durduğunu da sormayı öğretmişti. Bir binayı koruyanların alışkanlıkları, çoğu zaman kilitlerinden daha çok şey anlatırdı.</p>
+<p>O gece yalnızca kendi gözlerine güvenmedi. Eskiden tanıdığı Celene adlı bir gözcüden yardım istedi. İpekyalı’nın kalabalığında bir yüzün nereye döndüğünü, hangi kapının önünde gereğinden uzun durulduğunu, fedailerin ne zaman yer değiştirdiğini görmek için tek bir çift göz her zaman yetmezdi. Aralarındaki tanışıklığın nereden geldiğini tayfanın geri kalanı ne kadar biliyordu, belli değildi. Ama Ayaz, kolay kolay kimseden yardım isteyen biri değildi.</p>
+<p>Ayaz, kerhanenin üçüncü katını örten çatının çıkıntılarını, yan binanın pencere aralıklarını ve sokağın neresinden bakılırsa yukarıdaki hareketlerin görülebileceğini aklına yazdı. Aşağıdaki gürültünün üstünde, oluklarda biriken yağmur suyunun kesintisiz tıkırtısı vardı.</p>
+<p>Topladığı bilgilerle tayfa ikiye ayrılmaya karar verdi. Gümüş ve Hurda içeriden, hileyle ilerleyecekti. Sis ve Yankı dışarıdan sızacaktı. Ayaz ise yan binanın çatısından onları gözetleyecekti.</p>
+<p>Plan anlatılırken Gümüş memnundu.</p>
+<p>“Böyle yerlerde insanları kandırmak, duvarları aşmaktan kolaydır.”</p>
+<p>Sis ona baktı.</p>
+<p>“Sen duvarlarla pek uğraşmadığın için öyle düşünüyorsun.”</p>
+<p>“Duvar aşmak zorunda kalmamak da bir yetenektir.”</p>
+<p>“Öyleyse içeriden kapıyı açmayı dene.”</p>
+<p>“Sen de pencereden düşmemeyi.”</p>
+<p>Ayaz ikisini dinledi. Sorun becerileri değildi. Sorun, her birinin kendini diğerinden daha akıllı sanmasıydı.</p>
+<p>“Birbirinizin nasıl girdiği önemli değil,” dedi sonunda. “Önemli olan hepimizin çıkması.”</p>
+<p>Hurda çalışma masasından başını kaldırdı.</p>
+<p>“Binanın tesisatı eskiyse, çıkmak için başka yollar da bulabiliriz.”</p>
+<p>Gümüş ona döndü.</p>
+<p>“Lütfen bu kez bir şeyi patlatmadan önce haber ver.”</p>
+<p>Hurda’nın yüzünde belirsiz bir gülümseme belirdi.</p>
+<h2 id="iv-i̇çerideki-i̇ki-haydut">IV. İçerideki İki Haydut</h2>
+<p>Gümüş kerhanenin fedailerinden biri gibi giyinip içeri girdiğinde kendini doğru yerde hissetti.</p>
+<p>Kapıdan sıcaklıkla birlikte yoğun bir koku vurdu: dökülmüş içki, ter, ucuz çiçek esansı ve yanan lambaların metalik soluğu. İçeride bir yerde müzik çalıyor, kahkahalar merdiven boşluğunda çoğalarak yukarı tırmanıyordu. Kırmızımsı camlı lambalar duvarlardaki aynaları aydınlatıyor, gelenlerin yüzleri buğulu yansımalarda birbirine karışıyordu.</p>
+<p>Başka biri gibi görünmek için onun kıyafetini giymek yetmezdi. Başını nasıl tuttuğunu, kime yol verip kime vermediğini, ne zaman konuşup ne zaman sustuğunu da bilmek gerekirdi. Gümüş bunları biliyordu. Koridorda bir fedai omzuyla yol açtığında başını gerektiği kadar salladı; ne fazla saygı gösterdi ne de meydan okudu. Kısa sürede fedailerin arasına karıştı.</p>
+<p>Hurda ise müşteri kılığındaydı.</p>
+<p>Onun rol anlayışı Gümüş’ünkinden oldukça farklıydı. Gümüş ortama aitmiş gibi davranırken Hurda, ortamın sunduğu her imkândan yararlanmaya karar vermiş görünüyordu.</p>
+<p>İçti. Önündeki bardakların bıraktığı halkalar çoğaldıkça çevresindeki sesler daha neşeli, daha yüksek gelmeye başladı. Eğlendi. Ve bir noktada kendini dört fedainin arasında, dayak yemek üzere buldu.</p>
+<p>Gümüş yetiştiğinde bir an onu tanımıyormuş gibi davranmayı düşündü. Seçenek son derece cazipti. Ama tayfadan birini dört fedainin elinde bırakmak, sonunda kendi başını da yakardı.</p>
+<p>Fedailere yaklaştı.</p>
+<p>“Bırakın, ben ilgilenirim.”</p>
+<p>İçlerinden biri Hurda’yı sertçe itti.</p>
+<p>“Bu herif sorun çıkarıyor.”</p>
+<p>“Görüyorum,” dedi Gümüş. “Sorgu odasına götüreceğim.”</p>
+<p>Hurda, Gümüş’e baktı. Gözlerinde minnetten çok, sonunda birinin işi çözdüğüne dair bir rahatlık vardı. Gümüş bu ifadeyi hiç beğenmedi.</p>
+<p>Koridora çıktıklarında alçak sesle konuştu.</p>
+<p>“Seninle çalışmanın en zor yanı ne biliyor musun? Düşmanlarımızın ne yapacağını düşünürken bir de senin ne yapacağını tahmin etmek zorunda kalmam.”</p>
+<p>Hurda omuz silkti.</p>
+<p>“İçeriyi tanımaya çalışıyordum.”</p>
+<p>“Dört fedainin yumruklarıyla mı?”</p>
+<p>“İnsanların ne kadar kolay sinirlendiğini öğrendim.”</p>
+<p>Gümüş cevap vermedi. Hurda’nın ne zaman ciddi olduğunu anlamak hiçbir zaman kolay değildi.</p>
+<p>Dolambaçlı koridorlardan ve merdivenlerden geçip ikinci kata çıktılar. Merdiven korkuluğunun cilası yıllarca tutulmaktan aşınmıştı. Üst katta aşağıdaki müziğin yalnızca bas sesleri duyuluyor, kapı diplerinden farklı kokular ve boğuk konuşmalar sızıyordu. Sorgu odasına götürülmesi gereken müşteri, kendini bambaşka bir katta bulmuştu.</p>
+<p>Gümüş işini yapmıştı. Ama Hurda’yı bir daha müşteri kılığına sokmadan önce iki kez düşünmeye karar verdi.</p>
+<h2 id="v-yanlış-yüz">V. Yanlış Yüz</h2>
+<p>Aynı sırada Sis ve Yankı çatılardaydı.</p>
+<p>Aşağıdaki kalabalık yukarıdan küçük ve aceleci görünüyordu. Kanaldan esen rüzgâr, yağmurla birlikte tuz, kurum ve kirli su kokusunu bacaların arasına taşıyordu. Kiremitler kaygandı; uzak lambaların solgun ışığı ıslak sırtlarında kırılıyordu.</p>
+<p>Dış cepheyi inceliyor, kasa odasının penceresine giden bir yol arıyorlardı. Sonunda tırmanma takımlarını sağlam görünen bir bacaya bağladılar. Tuğlalar soğuk ve pütürlüydü; halat gerildiğinde lifleri eldivenin içinden bile hissediliyordu. Ama bulundukları yerden doğrudan kasa odasına inemiyorlardı; önce yan odalardan birine ulaşmaları gerekecekti.</p>
+<p>Yankı pencereden içeri baktı.</p>
+<p>Camın alt köşesinde, içerinin sıcaklığı dışarının nemli soğuğuyla buluşup ince damlalara dönüşmüştü. Odada bir kadın ve bir erkek vardı; kerhanenin sunduğu hizmetin gerektirdiği biçimde meşguldüler.</p>
+<p>Yankı geri çekilmek üzereydi. Sonra adamın yüzünü gördü.</p>
+<p><strong>Quelyn.</strong></p>
+<p>Eskiden tanıdığı bir Fısıltı.</p>
+<p>O isim, Yankı’ya bulunduğu yerin tehlikesini bir anlığına unutturdu. İçeridekilere susmalarını işaret ederek odaya daldı.</p>
+<p>Sis onun ne yaptığını anladığında iş işten geçmişti.</p>
+<p>Adam Quelyn değildi. Yalnızca ona benziyordu.</p>
+<p>Kadın bütün gücüyle çığlık atmaya başladı. Ses işlemeli duvarlarda keskinleşti, açık pencereden sokağa taşacakmış gibi yükseldi. Çıplak adam bir şamdan kapıp Yankı’nın üzerine yürüdü.</p>
+<p>Yankı darbeyi karşıladı. Ama kadının çığlığının bütün binayı ayağa kaldıracağını da biliyordu.</p>
+<p>Sis pencereden izliyordu. Yankı’nın neden böyle davrandığını anlayamıyordu. Birlikte kurdukları plan tek bir yanlış yüz yüzünden dağılmak üzereydi.</p>
+<p>Yine de arkadaşını orada bırakmadı. Sükût İksiri şişesini fırlattı.</p>
+<p>Cam parçalandı.</p>
+<p>Çığlık kesildi.</p>
+<p>Ses, havadan bir parça kesilip alınmış gibi yok oldu. Perde kıpırdamayı sürdürdü, ağızlar oynadı; kadının ağzı hâlâ açıktı, yüzündeki korku geçmemişti. Ama odanın korkusu artık duyulmuyordu.</p>
+<p>Yankı, Sis’e baktı.</p>
+<p>Sis’in bakışında rahatlama yoktu. Öfke vardı.</p>
+<p>Dışarıdaki halata tutunmuş hâlde Yankı’ya sessizce işaret etti: <em>Ne yaptığını sanıyorsun?</em></p>
+<p>Yankı açıklayamadı. Bir yüzün onu böyle bir hataya sürükleyebileceğini kendisi de beklemiyordu.</p>
+<p>Sis ona son bir kez baktı, sonra kasa odasının penceresine ulaşmak için hazırlanmaya başladı. Arkadaşının hatasını kapatmıştı. Karşılığında teşekkür değil, aynı hatanın bir daha yapılmamasını bekliyordu.</p>
+<h2 id="vi-çığlığın-ardından">VI. Çığlığın Ardından</h2>
+<p>Gümüş ve Hurda ikinci kata vardıklarında kısa bir çığlık duydular. Ses kapalı kapıların arasından gelip merdiven boşluğunda bir an asılı kaldı, sonra aniden kesildi.</p>
+<p>Gümüş olduğu yerde durdu. Aklına ilk gelen, dışarıdan sızmaya çalışan arkadaşları oldu.</p>
+<p>“Bir şeyler ters gidiyor,” dedi.</p>
+<p>Hurda koridorun ilerisine baktı.</p>
+<p>“Henüz bilmiyoruz.”</p>
+<p>Gümüş kasa odasının önünde bekleyen fedailere yaklaştı. Fedai kılığındayken soru sorması doğaldı.</p>
+<p>“Çığlığı duydunuz mu?”</p>
+<p>Muhafızlardan biri başını çevirdi.</p>
+<p>“Duyduk.”</p>
+<p>“Bakan oldu mu?”</p>
+<p>Muhafız bir an düşündü, sonra sesin geldiği odaya gitmeye karar verdi.</p>
+<p>“Birlikte bakalım.”</p>
+<p>Gümüş bunu hiç istemiyordu. Ama reddederse dikkat çekecekti.</p>
+<p>Hurda durumu anladı.</p>
+<p>“Benimle ilgili bir şey yok,” deyip uzaklaşmaya başladı. “Ben müşteriyim.”</p>
+<p>Gümüş arkasından baktı. Az önce onu dört fedainin elinden kurtarmıştı; şimdi kendisi belaya doğru yürürken Hurda çekip gidiyordu. Yüzünden kısa bir öfke geçti.</p>
+<p>Ama Hurda’nın niyeti başkaydı.</p>
+<p>Koridorlarda dolaşırken binanın ısıtma tesisatını incelemeye başladı. Boru kaplamalarının birleştiği yerlerde eski su lekeleri vardı. Duvarın dibinden gelen sürekli uğultu, aşağıdaki kazanların yük altında çalıştığını söylüyordu. Hurda kulağını bir bağlantıya yaklaştırdığında titreşimi neredeyse dişlerinde hissetti.</p>
+<p>Kazanları ve boruları tanıyordu. Bir sistemin nereden bozulacağını, ne kadar basınca dayanacağını, arıza yaptığında neye yol açacağını kestirebiliyordu.</p>
+<p>Doğru müdahaleyle sıcak su borularını patlatabilirdi. Bina buharla dolar, insanlar panikle koridorlara dökülür, muhafızların dikkati dağılırdı.</p>
+<p>Hurda’nın başına dert açma yeteneği, bu kez başkalarını dertten kurtarabilirdi.</p>
+<h2 id="vii-boşlukta-bir-el">VII. Boşlukta Bir El</h2>
+<p>Sis, kasa odasına ulaşmak için halatla sallanmaya karar verdi.</p>
+<p>Rüzgâr iki bina arasındaki boşlukta hızlanıyor, ıslak duvardan yosun ve kurum kokusu yükseliyordu. Aşağıda sokak lambasının çevresinde dönen sis yüzünden zeminin ne kadar uzakta olduğunu kestirmek zordu.</p>
+<p>Tehlikeliydi. Ama aradaki boşluğu aşmanın başka bir yolunu bulamamıştı.</p>
+<p>Tutunduğu noktayı yokladı. Sonra kendini bıraktı.</p>
+<p>İlk salınım iyi gitti.</p>
+<p>Ardından trabzan kırıldı.</p>
+<p>Çürümüş bağlantı koparken tahta kısa, kuru bir ses çıkardı. Parçalar karanlığa savruldu; biri aşağıdaki taşlara çarpana kadar kimse sesini duymadı.</p>
+<p>Ayağının altındaki destek bir anda yok oldu. Bir an için dünyada yalnızca aşağı uzanan boşluk vardı.</p>
+<p>Bitişik binanın çatısındaki Ayaz, hareketi başından beri izliyordu. Hazırlıksız yakalanmamıştı. Kendi halatını fırlattı ve bütün gücüyle çekti.</p>
+<p>Sis’in düşüşü durdu. Ama duvara sertçe çarptı. Islak sıva omzuna bulaştı, göğsündeki hava bir anda boşaldı. Yüzüne yapışan saçlarının arasından, karşı çatıda gerilmiş halatı gördü.</p>
+<p>Ayaz halatı sıkıca tuttu.</p>
+<p>“İyi misin?” diye fısıldadı.</p>
+<p>Sis dişlerini sıktı.</p>
+<p>“Harikayım.”</p>
+<p>“Öyle görünmüyorsun.”</p>
+<p>“Sen de buradan pek yakışıklı görünmüyorsun.”</p>
+<p>Ayaz istemsizce gülümsedi. Konuşabiliyorsa iyiydi. Ama yüzündeki acıyı da görüyordu.</p>
+<p>“İstersen geri çekiliriz.”</p>
+<p>Sis yukarı baktı.</p>
+<p>“Bu kadar geldikten sonra mı?”</p>
+<p>“Bir daha düşersen yakalayamayabilirim.”</p>
+<p>“O zaman bir daha düşürme.”</p>
+<p>Ayaz cevap vermedi. Sis başarısız olmayı kabul etmek istemiyordu. Belki Gümüş’ün içeride kolayca ilerlediği düşüncesine katlanamıyordu; belki de kendine bir şey kanıtlaması gerekiyordu.</p>
+<p>İkinci denemede birlikte hareket ettiler. Ayaz kuvveti ve zamanlamayı verdi, Sis salınımı yönetti.</p>
+<p>Bir an sonra hedef pencereye ulaştı.</p>
+<p>Cam kırıldı. İçerinin sıcak havası dışarı fırlarken parçalar lambanın altında parladı; keskin uçlar kumaşı ve deriyi sıyırdı. Acı duydu. Ama içerideydi.</p>
+<p>İkinci Sükût İksiri şişesini tam zamanında kullanarak kırılan camın sesini fedailere ulaşmadan boğdu.</p>
+<p>Ayaz karşı çatıdan izliyordu. Sis’in başardığına sevindi. Ama bunun bedelsiz olmadığını da görmüştü.</p>
+<h2 id="viii-korkunun-sureti">VIII. Korkunun Sureti</h2>
+<p>Gümüş yanındaki fedaiyle kapıyı açtığında, karşılaştığı manzara aklından geçen hiçbir ihtimale benzemiyordu.</p>
+<p>İçeriden ağır parfümün ve sönmeye yüz tutmuş mumların kokusu yükseldi. Kırılan şişenin bıraktığı tuhaf sessizlik, odadaki gerilimi daha da görünür kılıyordu. Bir kadın korkudan titriyordu. Çıplak bir adam elinde şamdanla saldırıyordu. Yankı ise bütün bu karmaşanın tam ortasında duruyordu.</p>
+<p>Gümüş’ün üzerinde bir Ruhkıran Muskası vardı. Hayaletlerden korkması için bir sebep yoktu.</p>
+<p>Yankı ise başka bir şey fark etmişti. Odada çok yaşlı, ağır ağır dolaşan bir hayalet vardı. Fısıltı’nın daha güçlü bir varlığa ihtiyacı vardı.</p>
+<p>Büyük bir meblağ karşılığında edindiği Ruh Şişesi’ni çıkardı.</p>
+<p>İçindeki sıradan bir hayalet değildi. İnsanların korkularını onlara geri yansıtabiliyordu.</p>
+<p>Yankı şişeyi açtı.</p>
+<p>Şişenin ağzından yükselen karanlık ilk anda dumana benzedi. Sonra odadaki aydınlık değişti; lambalar aynı yerde yanıyordu ama duvarların köşeleri uzaklaştı, gölgeler ait oldukları eşyalardan kopmuş gibi uzadı.</p>
+<p>Odaya keskin bir soğuk yayıldı. Az önce terleten sıcaklık bir solukta çekildi. Metal avize titredi; pencerede kırağı belirdi. Nefesler beyazlaştı.</p>
+<p>Hayalet serbest kaldı. Yankı ona buyurdu.</p>
+<p>Tavandaki avize, şamdanlı adamın üzerine düştü.</p>
+<p>Ama o odadaki en ağır darbeyi adam almadı.</p>
+<p>Gümüş bir anda bulunduğu yerden koptu. Müzik, mum kokusu, kerhanenin kalabalığı silindi. Yerlerini artık var olmaması gereken bir odanın havası, tanıdık bir zeminin sertliği ve o geceden beri zihninden atmaya çalıştığı sesler aldı. Çocukluğuna dönmüştü. Ailesini gözlerinin önünde katleden adamı yeniden görüyordu; yıllardır uzak tuttuğu yüz karşısındaydı.</p>
+<p>Önce korku geldi. Sonra öfke. Sonra çaresizlik. Ve hepsinin altında, bir zamanlar hiçbir şey yapamamış olmanın ağırlığı.</p>
+<p>Hayalet ona korkusunu yalnızca göstermemişti. Yıllardır sakladığı yarayı yeniden açmıştı.</p>
+<p>Hayaletin etkisi çekildiğinde odanın ortasında duran adam, Mylera’yla pazarlık eden kendinden emin Kaypak değildi. İçinde bir şey kırılmış, kırılan yerden daha önce kendisinde hiç tanımadığı bir acımasızlık sızmıştı.</p>
+<p>Gümüş, Yankı’ya baktı.</p>
+<p>Yankı onun yüzündeki değişimi gördü. Bir şey söylemek istedi. Gümüş’ün bakışı onu susturdu. O bakışta korkudan çok öfke vardı.</p>
+<p>Yankı’nın çağırdığı varlık düşmanı alt etmek için serbest bırakılmıştı. Ama bedelini bir dost ödemişti.</p>
+<p>Gümüş tek kelime etmeden yüzünü çevirdi.</p>
+<p>Yankı için hayaletler anlaşılması ve yönlendirilmesi gereken varlıklardı. Gümüş içinse artık unutmak istediği bir gecenin kapısını zorla açan şeylerdi. Ve o kapıyı açan, kendi tayfasından biriydi.</p>
+<h2 id="ix-buhar-ve-cam-kırıkları">IX. Buhar ve Cam Kırıkları</h2>
+<p>Kasa odasındaki Sis, hayaletin gelişini bedeninde hissetti.</p>
+<p>Hava ısıracak kadar soğudu. Pencerenin kenarında kalan yağmur damlaları bir an kıpırtısız göründü; Sis kendi nefesinin beyazlığını gördü. Pencereden girerken aldığı cam yaraları şiddetle sızlamaya başladı; kırıklar yeniden etine saplanıyor gibiydi. Dişlerini sıkıp hareket etmeyi sürdürdü. Acı, yakalanmaktan önemli değildi.</p>
+<p>Tam o sırada binanın başka bir yerinde Hurda’nın düzeneği işlemeye başladı.</p>
+<p>Duvarların ardında sıcak su zorlanıyor, kaplamaların altında metal genleşiyordu. Önce boğuk bir vuruntu, sonra bir vananın titrek ıslığı işitildi. Bir bağlantı yerinden şiddetli bir ses geldi; ardından bir boru daha patladı.</p>
+<p>Buhar, kapı diplerinden ve duvar çatlaklarından beyaz şeritler hâlinde sızdı. Islak metal kokusu parfümü bastırdı; koridor aynaları buğulandı. Biraz önce hayaletle buz kesen bina şimdi boğucu bir sıcaklıkla doluyordu.</p>
+<p>Kasa odasının kapısında tek başına kalmış muhafız paniğe kapıldı. Yakındaki borulardan gelen patlama sesi onu içeri yöneltti.</p>
+<p>Sis yakalanmak üzereydi. Ama Ayaz hâlâ karşı çatıda gözcülük ediyordu; onun dikkati ve Sis’in çevikliği tehlikeyi bir kez daha savuşturdu. Sis kendini tavana çekti ve bir örümcek gibi tutunarak orada kaldı.</p>
+<p>Muhafızın ayakları ıslak zeminde kaydı. Tavanın karanlığına bakmadı bile; derdi başkaydı: Sıcak suyun kasadaki evraka ve mangırlara zarar vermesinden korkuyordu. Doğruca kasaya yöneldi.</p>
+<p>Kasayı açtı. İçindekileri tek tek masanın üzerine dizmeye başladı.</p>
+<p>Sis yukarıdan izliyordu. Gülmemek için kendini zor tuttu. Bunca tehlikeyi göze alarak ulaşmaya çalıştığı kasa, şimdi onu korumakla görevli adamın elleriyle boşaltılıyordu.</p>
+<p>Muhafız dikkatini başka yere çevirdiğinde Sis aşağı indi. Evrakları ve mangırları topladı.</p>
+<p>Sonra aklından başka bir şey geçti.</p>
+<p>Pencereden giren oydu. Düşmüş, duvara çarpmış, camlarla yaralanmıştı. Kasaya ulaşan kendisiydi. Diğerleri bunun ne demek olduğunu gerçekten anlayacak mıydı?</p>
+<p>Birkaç mangır, aldığı riskin küçük bir karşılığından ibaretti.</p>
+<p>Elini uzattı. Paranın bir kısmını başka bir cebine kaydırdı.</p>
+<p>Bir an sürdü.</p>
+<p>Ama Ayaz gördü.</p>
+<p>Karşı çatıdaki eski askerin yüzünde hiçbir şey kıpırdamadı. Sis’in becerisine saygı duyuyordu. Az önce onu ölümden çekip almış, ardından yeniden tehlikeye girmesine yardım etmişti. Şimdi aynı kadın, ortak ganimetten kendine gizlice pay ayırıyordu.</p>
+<p>Bir şey yapmadı. Görev henüz bitmemişti.</p>
+<p>Ama gördüğünü unutmayacaktı. Ona göre bu yalnızca para meselesi değildi. Bir sonraki tehlikede Sis’e ne kadar güvenebileceği meselesiydi.</p>
+<h2 id="x-doskvolda-sıcak-bir-gece">X. Doskvol’da Sıcak Bir Gece</h2>
+<p>Hurda’nın müdahalesi kerhaneyi birbirine katmıştı.</p>
+<p>Biraz önce kahkaha ve müzikle dolu olan merdiven boşluğunda artık öksürükler, öfkeli bağırışlar ve hızla inen ayakların gürültüsü vardı. Islak duvarlardan su süzülüyor, lambalar beyaz buharın içinde bulanık noktalar gibi görünüyordu. Bir yanda patlayan borular, öte yanda hâlâ dolaşan hayaletin bıraktığı tekinsiz soğuk vardı. Muhafızlar neye yetişeceklerini şaşırmıştı.</p>
+<p>Tayfa bu karmaşadan yararlandı. Binaya ayrı yollardan giren beş haydut, şimdi kalabalığa karışarak dışarı süzülüyordu.</p>
+<p>Gümüş hâlâ fedai kıyafetindeydi. Hurda, kendi yarattığı kargaşanın tadını çıkarıyordu. Sis hem yaralarını hem ganimeti taşıyordu. Ayaz arkalarını kolluyor, bir takip olup olmadığını kestirmeye çalışıyordu. Yankı ise serbest bıraktığı hayaletin geride bıraktıklarını düşünüyordu.</p>
+<p>Gümüş’le göz göze geldiklerinde Gümüş bakışını kaçırdı. Yankı bunu fark etti. Ama konuşmanın zamanı değildi.</p>
+<p>Dışarı çıktıklarında gecenin soğuğu buhardan ıslanmış kıyafetlerine değdi. Sokak hâlâ kalabalıktı; koşarak geçen bir arabacı, köşede tartışan iki müşteri, camlardaki loş yansımalar, içeride kopan felaketten habersiz görünüyordu. Birkaç sokak ötede kanalların kokusu yeniden ağır bastı.</p>
+<p>Kimseye görünmeden Kargaayağı’ndaki inlerine döndüler.</p>
+<p>Arkalarında ise İpekyalı’nın sokaklarında başka bir hareketlilik başlamıştı. Bir ihbar üzerine gelen Mavi Urbalılar kerhanenin çevresinde kontrol noktaları kuruyor, geçenleri durdurup sorguluyordu. Az önce sarhoş kahkahalarla dolu kaldırımda şimdi sert emirler duyuluyor, yağmurda parlayan coplar lambaların altında durdurulan yüzlere uzanıyordu. Beş haydut çoktan uzaklaşmıştı. Celene o kadar şanslı değildi. Oradaki varlığından kuşkulanan bir Mavi Urbalı onu gözaltına aldı.</p>
+<p>Soygun başarıyla tamamlanmıştı. Ama hiçbiri binaya girdiği kişi olarak çıkmamıştı.</p>
+<h2 id="xi-hurdanın-son-dokunuşu">XI. Hurda’nın Son Dokunuşu</h2>
+<p>Eski dükkânın bodrumuna döndüklerinde herkesin üstünde gecenin yorgunluğu vardı. Paslı kepengi geçip aşağı indiklerinde tanıdık yağ ve nem kokusu onları karşıladı; yukarıdaki rüzgârın sesi burada boğuklaşıyordu. Soygun başarılıydı ama iş bitmiş sayılmazdı. Ganimetin Mylera’ya ulaştırılması ve Kızıl Kuşaklarla son görüşmenin yapılması gerekiyordu.</p>
+<p>Gümüş, Mylera’yla ilk karşılaşmasında aldığı darbeleri unutmamıştı. Kadının yalnızca sözlere değil, karşısındakinin gücüne ve kararlılığına değer verdiğini öğrenmişti. Bu kez daha hazırlıklı gitmek istiyordu.</p>
+<p>Hurda’nın aklında ise başka bir fikir vardı.</p>
+<p>Borular ve kazanlar o gece bir şeyi yeniden göstermişti: Doğru yere yapılan küçük bir müdahale bütün düzeni değiştirebilirdi. Simyevi maddeler karşısında insan zihni de makinelerden pek farklı değildi.</p>
+<p>Kasadan çıkan evrakların görüşmede işe yarayabileceğini düşündü ve atölyesine çekildi.</p>
+<p>Lambası masadaki bakır kenarları aydınlatıyordu. Cam şişelerin gölgeleri duvara uzanıyor, bodrumun rutubetine simyevi çözeltilerin keskin kokusu karışıyordu.</p>
+<p>Elindeki Vecd Tozu’nu evraklara işlemeye başladı. Niyeti, belgelerin Mylera üzerindeki etkisini artırmak, Gümüş’ün ikna çabasına görünmez bir destek vermekti.</p>
+<p>Zamanları kısıtlıydı. Hurda dikkatli ama aceleyle çalıştı.</p>
+<p>Ve simyada acele her zaman bir bedel isterdi.</p>
+<p>İnce toz atölyenin her yüzeyine yayılmıştı. Lamba ışığında havada asılı kalan zerrecikler, ağır ağır çöken kirli bir yıldız tozunu andırıyordu. Hurda elini çektiğinde parmakları tezgâhın üstünde silik izler bırakıyordu. Tezgâhlar, aletler, malzemeler; hepsi kirlenmişti. Atölye baştan aşağı temizlenmeden yeniden güvenle kullanılamayacaktı ve bu temizlik, Hurda’nın bir süre elini kolunu bağlayacaktı.</p>
+<p>Hazırladığı evrakları Gümüş’e uzattı.</p>
+<p>“Bunlar işini kolaylaştırabilir.”</p>
+<p>Gümüş belgelere baktı.</p>
+<p>“Ne yaptın bunlara?”</p>
+<p>“Biraz kuvvetlendirdim.”</p>
+<p>“Ne kadar?”</p>
+<p>Hurda omuz silkti.</p>
+<p>“İşe yarayacak kadar.”</p>
+<p>Gümüş bir süre ona baktı. Az önce bütün bir kerhanenin tesisatını altüst eden adamın kimyasallar konusundaki özgüvenine güvenmek kolay değildi. Ama maharetini de inkâr edemezdi.</p>
+<p>Belgeleri aldı.</p>
+<p>“Umarım bu kez hiçbir şey patlamaz.”</p>
+<p>Hurda hafifçe gülümsedi.</p>
+<p>“Bu kez patlayacak bir şey yok.”</p>
+<p>Gümüş atölyeden çıkarken bu cevabın onu neden rahatlatmadığını bilmiyordu.</p>
+<h2 id="xii-gümüşün-i̇kinci-yüzü">XII. Gümüş’ün İkinci Yüzü</h2>
+<p>Mylera’nın karşısına ikinci kez çıktığında Gümüş ilk seferkinden daha emindi.</p>
+<p>Dışarıda yağmur sürüyordu. Paltosunun eteğinde sokağın soğuk nemi, cebindeki evraklarda Hurda’nın atölyesinden kalan keskin koku vardı. Mylera’nın lambası yüzüne vurduğunda, ilk görüşmede aldığı darbelerin sızısı bir an omzunda yeniden kıpırdadı.</p>
+<p>Bu kez elinde yalnızca vaatler yoktu. Yağkaralarının kasası boşaltılmış, evraklar alınmış, tayfa kimliğini ele vermeden kerhaneden çıkmıştı.</p>
+<p>Konuşmaya alışılmış zarafetiyle başladı. Kelimelerini tartıyor, Mylera’nın dikkatini başarının değerine çekiyordu. Hurda’nın hazırladığı evraklar da masadaydı.</p>
+<p>Ama konuşma ilerledikçe bir şeyler değişti.</p>
+<p>Masadaki lambanın alevi hafifçe titreşti. Gümüş, kendi sesinin fazla kolay yükseldiğini fark etti; oysa cümlelerini tartıp biçmek en güvendiği alışkanlığıydı. Normalde karşısındakinin tepkisini ölçer, ne kadar ileri gidebileceğini hesaplardı. Şimdi sınırlar umurunda değil gibiydi.</p>
+<p>Vecd Tozu yalnızca Mylera’yı etkilememişti. Gümüş de onun etkisine girmişti.</p>
+<p>Kendini alışılmadık derecede rahat, konuşkan ve güçlü hissediyordu. Düşüncelerini süzgeçten geçirmeden söylüyordu. Ve süzgecin ardında, İpekyalı’daki odada açılan yara hâlâ kanıyordu: Bir daha asla o çaresiz çocuk olmayacaktı.</p>
+<p>Sesindeki incelik yer yer sertleşti.</p>
+<p>“Yağkaraları ne kadar güçlü olduklarını sanıyor, biliyoruz,” dedi. “Ama bir gecede ellerindekini kaybedebileceklerini artık onlar da biliyor.”</p>
+<p>Mylera onu izliyordu.</p>
+<p>“Güç,” diye devam etti Gümüş, “bir şeye sahip olmak değildir. Gerektiğinde başkasının elindekini alabileceğini göstermektir.”</p>
+<p>Bunu söylerken yüzündeki ifade değişmişti. Artık yalnızca daha iyi bir anlaşma için uğraşmıyordu. Karşısındakinin, onun ne kadar ileri gidebileceğini anlamasını istiyordu.</p>
+<p>Mylera bunu fark etti. İlk görüşmedeki zarif, biraz da küstah pazarlıkçıyla bu adam arasında bir fark vardı. Bu adamın içinde daha karanlık bir taraf bulunuyordu ve o taraf, gerektiğinde acımasız olmaktan çekinmeyebilirdi.</p>
+<p>Mylera’nın bundan ne sonuç çıkardığını yüzünden okumak mümkün değildi. Böyle bir adamı tehlikeli bulabilirdi. Ya da işine yarar. Belki ikisini birden.</p>
+<p>Sonunda Gümüş, ganimetin bir kısmından vazgeçerek Kızıl Kuşaklarla aradaki buzu bir parça çözmeyi başardı.</p>
+<p>Huzurdan çıkarken kendisiyle gurur duyuyordu. Kazancı korumuş, tayfanın geleceği için değerli bir ilişki kurmuştu.</p>
+<p>Ama o gece yalnızca Gümüş, Mylera hakkında bir şey öğrenmemişti. Mylera da zarif konuşmaların, pahalı kumaşların ve kusursuz nezaketin altında henüz tanımadığı başka bir adam olduğunu görmüştü.</p>
+<p>Gümüş Kargaayağı’na dönerken bunları düşünmüyordu. Aklında yalnızca kazandığı pazarlığın tadı vardı.</p>
+<p>Oysa Doskvol’da gücünü göstermekle zaafını açık etmek arasında bazen birkaç kelimelik fark bulunurdu. Ve Mylera o gece Gümüş’ün ikisini de görmüştü.</p>
+<h2 id="xiii-beş-haydut-bir-kasa-fazla-sayıda-cep">XIII. Beş Haydut, Bir Kasa, Fazla Sayıda Cep</h2>
+<p>İne döndüklerinde ganimetin paylaşılması gerekiyordu.</p>
+<p>Gecenin sesleri uzakta kalmıştı. Dışarıdan yalnızca arada bir tekerlek gıcırtısı ve oluklardan akan suyun kesik tıkırtısı işitiliyordu. Atölyenin havası hâlâ Vecd Tozu yüzünden keskindi; lambanın altında masa gölgelerle bölünmüştü.</p>
+<p>Masanın çevresinde toplandılar. Yağ ve metal kokusu, kerhanedeki buhardan ve korkudan sonra tuhaf biçimde tanıdık geliyordu. Burası onların yeriydi. Burada düşman yoktu. En azından öyle düşünmek istiyorlardı.</p>
+<p>Gümüş söze başladı.</p>
+<p>“Önce şunda anlaşalım. Bu iş yalnızca kasayı boşaltmaktan ibaret değildi, hepimiz biliyoruz.”</p>
+<p>Sis ona baktı.</p>
+<p>“Neye varmaya çalışıyorsun?”</p>
+<p>“Mylera’yla yaptığım pazarlık sayesinde Kızıl Kuşaklarla aramız düzeldi. Bunun ileride ne kadar değerli olacağını göreceksiniz.”</p>
+<p>“Ve?”</p>
+<p>“Böyle bir katkının paylaşımda karşılığı olmalı.”</p>
+<p>Sis hafifçe güldü.</p>
+<p>“Yani daha fazla mangır istiyorsun.”</p>
+<p>Gümüş’ün gülümsemesi yerinde durdu.</p>
+<p>“Bunu söylemenin daha zarif yolları var.”</p>
+<p>“Sonuç değişmiyor.”</p>
+<p>Gümüş arkasına yaslandı.</p>
+<p>“Benim yaptığım pazarlık hepimizin geleceğine yarayacak.”</p>
+<p>Sis öne eğildi.</p>
+<p>“Ben de o kasaya girebilmek için duvardan aşağı düşüyordum. Ama bunun için kimseden teşekkürden fazlasını istemedim.”</p>
+<p>Ayaz başını kaldırdı.</p>
+<p>Sis’in ne kadar tehlikeli bir iş yaptığını herkesten iyi biliyordu. Onu düşerken yakalamış, yaralanışını görmüş, kasa odasına ulaşmasına yardım etmişti. Ama başka bir şey de görmüştü.</p>
+<p>“Sis,” dedi.</p>
+<p>Sis ona döndü.</p>
+<p>“Ne?”</p>
+<p>“Kasadaki mangırların hepsini masaya koyduğundan emin misin?”</p>
+<p>Odadaki sessizlik bir anda ağırlaştı. Yukarıda gevşek bir kepenk rüzgârla hafifçe vurdu.</p>
+<p>Sis’in bakışları sertleşti.</p>
+<p>“Ne demek istiyorsun?”</p>
+<p>Ayaz gözlerini kaçırmadı.</p>
+<p>“Ne demek istediğimi biliyorsun.”</p>
+<p>Gümüş doğruldu.</p>
+<p>“Bir dakika.”</p>
+<p>Ayaz devam etti.</p>
+<p>“Kasa boşaltılırken mangırların bir kısmını başka cebine koyduğunu gördüm.”</p>
+<p>Sis bir an konuşmadı. Ayaz’ın bunu fark etmesi şaşırtıcı değildi; gözlerinin ne kadar keskin olduğunu biliyordu. Ama herkesin önünde söylemesini beklemiyordu.</p>
+<p>Gümüş’ün yüzü değişti. Az önce kendi payını büyütmek için pazarlık eden adam, şimdi ortak ganimetin gizlice eksiltildiğini öğreniyordu.</p>
+<p>“Demek böyle,” dedi.</p>
+<p>Sis ona döndü.</p>
+<p>“Seninle ilgili değil.”</p>
+<p>Gümüş kısa, öfkeli bir kahkaha attı.</p>
+<p>“Nasıl benimle ilgili değil? Hepimizin parası bu.”</p>
+<p>“Benim yaptığım işi de gördünüz.”</p>
+<p>“Yaptığın işin karşılığını zaten alacaksın.”</p>
+<p>Sis’in gözleri daraldı.</p>
+<p>“Sen de Mylera’yla birkaç kelime konuştun diye daha büyük pay istiyorsun.”</p>
+<p>Gümüş’ün sesi sertleşti.</p>
+<p>“Ben açıkça istiyorum. Sen gizlice alıyorsun.”</p>
+<p>Söz odada asılı kaldı.</p>
+<p>“İkisi arasındaki farkı anlayabiliyor musun?”</p>
+<p>Sis ayağa kalktı.</p>
+<p>“Benim ne yaptığımı biliyor musun? O pencereye nasıl ulaştığımı, kaç kez düşmek üzere olduğumu, ne kadar yaralandığımı biliyor musun?”</p>
+<p>“Evet. Ayaz sayesinde hâlâ burada olduğunu biliyorum.”</p>
+<p>Sis’in bakışı bir an Ayaz’a kaydı.</p>
+<p>Ayaz sessizdi. Hayatını kurtardığı kadının ona şimdi nasıl baktığını görüyordu. O bakışta minnet yoktu; en azından o an yoktu. Yalnızca kırılmış bir güven vardı. Ve kırılan yalnızca Ayaz’ınki değildi.</p>
+<p>Hurda masanın kenarında duruyordu. Bir süre tartışmayı izledi. Onun için mesele Gümüş’ün anlattığı kadar basit değildi. Herkes farklı bir risk almıştı. Onun buharı olmasa belki hiçbiri çıkamayacaktı. Ama bu, paradan istediği kadarını alabileceği anlamına mı gelirdi?</p>
+<p>Başını iki yana salladı. Bir düzeneğin parçaları birbirinden habersiz dönmeye başlarsa, sonunda bütün düzenek dağılırdı.</p>
+<p>Yankı sessizce dinliyordu. Gümüş’ün sesindeki öfkenin yalnızca mangırlardan gelmediğini hissediyordu. Bu öfkenin ne kadarı paraya, ne kadarı güvene, ne kadarı o odada yeniden açılan çaresizliğe yönelikti; bunu belki Gümüş’ün kendisi de bilmiyordu.</p>
+<p>Bir an konuşmayı düşündü. Sonra Gümüş’ün ona son bakışını hatırladı. O gece kendisinden gelecek bir öğüt, arkadaşının duymak isteyeceği son şeydi.</p>
+<p>Sonunda ganimet paylaşıldı. Mangırlar tahta yüzeyde küçük metal seslerle ayrıldı. Kimse bir başkasının payına uzanmadı; ama masanın çevresindeki sessizlik, biraz önceki tartışmadan daha uzun sürdü.</p>
+<p>Hiçbir paylaşım masadaki rahatsızlığı gidermedi. Gümüş, Sis’in yaptığını unutmayacaktı. Sis de Gümüş’ün onu yargılamasını, Ayaz’ın gördüğünü herkesin önünde söylemesini kolay kolay unutmayacaktı.</p>
+<p>Ayaz doğru olanı yaptığını düşünüyordu. Ama doğru olanı yapmak, insanların sana teşekkür etmesini sağlamazdı.</p>
+<p>Yankı ise yaşayanların arasında biriken kırgınlıkların, bazen ölülerin bıraktığı izlerden daha uzun sürdüğünü düşünüyordu.</p>
+<h2 id="xiv-celenenin-bedeli">XIV. Celene’nin Bedeli</h2>
+<p>Ganimet paylaşılmış, sözler söylenmişti. Lambanın ışığı masanın üzerinde küçülürken gece bitiyor gibi görünüyordu.</p>
+<p>Sonra haber geldi: Celene, Mavi Urbalıların elindeydi.</p>
+<p>Kerhanenin çevresine bir ihbar üzerine kurulan kontrol noktalarında sorgular yapılmış; görev boyunca Ayaz’a yardım eden gözcü, tayfa ortadan kaybolduktan hemen sonra şüphe çekmişti. Sorguya alınan biri ne kadar susabilirdi? Ona hangi sorular soruluyordu, onu tutan adam ne biliyordu? Bunları kimse bilmiyordu. Ama tehlike açıktı. Celene’nin tanıdıklarına uzanan bir soruşturma, tayfanın o gece saklamaya çalıştığı bütün bağlantıları açığa çıkarabilirdi.</p>
+<p>Ayaz için haberin başka bir ağırlığı vardı. Yardım istemişti; Celene de yardım etmişti. Şimdi o yardımın bedelini tek başına ödeyebilirdi. Sis’i boşluktan çekip alan halatın burada bir faydası yoktu. Mavi Urbalıların elinden birini kurtarmak için kuvvetten başka şeyler gerekirdi.</p>
+<p>Çözüm bir kese mangıra mal oldu. Rüşvet el değiştirdi, Celene serbest bırakıldı; onunla birlikte tayfanın açığa çıkma tehlikesi de şimdilik savuşturuldu. Paranın el değiştirmesi, gece boyunca dökülen terden ve göze alınan tehlikelerden çok daha sessizdi. Ama karşılığında alınan şey büyüktü: bir tanıdığın özgürlüğü ve beş haydudun gizli kalması.</p>
+<p>Kimse bunu bir başarı gibi görmedi. Ayaz, tanıdığı birinin sırf onlara yardım ettiği için gözaltına alınabileceğini artık biliyordu. Diğerleri de bir binadan fark edilmeden çıkmanın, bütün izleri geride bırakmak anlamına gelmediğini öğrenmişti.</p>
+<h2 id="xv-başlangıcın-sonu">XV. Başlangıcın Sonu</h2>
+<p>Gece ilerledikçe Kargaayağı’nın sokakları yeniden sessizleşti.</p>
+<p>Kanalların üzerinde sis alçaldı. Lambalar ıslak taşlarda kırık mavi çizgiler bırakıyor, kapalı dükkânların karanlık camlarında geç kalmış birkaç yolcunun gölgesi kayıp gidiyordu. Eski dükkânın altındaki ışık ise hâlâ yanıyordu.</p>
+<p>Bodrumdaki beş haydut ilk büyük işlerini bitirmişti. Yağkaralarının kasasını soymuş, Kızıl Kuşaklarla aralarını bir parça düzeltmiş, Mavi Urbalıların kontrol noktalarına takılmadan evlerine dönmüşlerdi. Celene’yi ise ancak mangırla geri alabilmişlerdi.</p>
+<p>Ama ganimetle birlikte başka şeyler de getirmişlerdi.</p>
+<p>Gümüş, Yankı’nın çağırdığı hayalet yüzünden çocukluğunun en karanlık gecesini yeniden yaşamıştı; Sis’in sakladığı mangırlar, içinde uyanan bu yeni öfkeye bir hedef vermişti.</p>
+<p>Sis ölümden dönmüş, kasayı ele geçiren o olmuştu. Ama arkadaşlarının ağzında başarısından çok sakladığı birkaç mangır dolaşıyordu.</p>
+<p>Ayaz bir arkadaşını kurtarmakla onu ele vermek arasındaki çizginin ne kadar ince olabileceğini o gece öğrenmişti. Celene’nin gözaltına alınması da ona, yardım istediği insanlara karşı da sorumlu olduğunu hatırlatmıştı.</p>
+<p>Hurda, dikkatsizliğiyle başlattığı bir sorunu yaratıcılığıyla kapatmıştı. Dört fedainin elinden kurtarılan adam, sonunda bütün binayı buhara boğarak herkesin kaçmasını sağlamıştı.</p>
+<p>Yankı ise hem kendi hatasının hem de çağırdığı şeyin bedelini arkadaşlarının yüzünde görmüştü.</p>
+<p>Bundan sonra birbirlerine daha çok ihtiyaç duyacaklardı.</p>
+<p>Ama birbirlerine eskisi kadar kolay güvenebilecekler miydi?</p>
+<p>Kargaayağı’nın beş haydudu henüz ünlü değildi. Sokaklarda adları fısıldanmıyor, büyük örgütler onları ciddiye almıyordu.</p>
+<p>Ama İpekyalı’daki o gece bir başlangıçtı.</p>
+<p>Artık yalnızca aynı bodrumu paylaşan beş suçlu değillerdi. <strong>Birbirlerinin hayatını kurtarmış, birbirlerinin sırlarına dokunmuş ve birbirlerini incitmeye başlamış beş ortaktılar.</strong></p>
+<p>Ve masada artık görünmeyen bir çatlak vardı.</p>
+<p><strong>Birinci bölümün sonu.</strong></p>
+<blockquote>
+<p>“Bir kasa soyulduğunda herkes ganimeti sayar. Kimse güvenin ne kadar eksildiğini hesaplamaz.”</p>
+</blockquote></article><nav class="reading-ending reading-chapters" aria-label="Tefrika bölümleri"><div><span class="eyebrow">Önceki bölüm</span><p>Serinin ilk bölümü</p></div><div><span class="eyebrow">Sonraki bölüm</span><p>Sonraki bölüm henüz yayımlanmadı.</p></div></nav><div class="reading-return"><a href="/doskvol-dedikodu/taslak/pr-15/sayi/001/">← Sayı 001</a><a href="#reading-content">Makalenin başına ↑</a></div></main><footer>Doskvol Dedikoduları · Mürekkep kurumadan okuyanlara</footer></div></body></html>
