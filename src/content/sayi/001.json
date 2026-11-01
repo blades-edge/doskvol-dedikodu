@@ -8,12 +8,11 @@
   "coverAlt": "Bir kanalın kıyısındaki taş okul, köprüler ve uzaktaki fabrika bacaları; kâğıt üzerinde değişen kalınlıkta mürekkep çizgileri.",
   "coverCaption": "Doskvol’da gece — gazete için hazırlanmış temsili gravür.",
   "draft": false,
-  "chapters": ["kor-noktanin-guncesi.md", "benden-once-gelen.md"],
   "articles": [
-    "gece-yarisi-ziyareti.md",
     "olum-cani-cenaze-yok.md",
     "sislerin-arasinda-kaybolan-yuk.md",
-    "yagkaralarinin-yeni-isletmesi.md",
-    "roric-katili.md"
+    "roric-katili.md",
+    "dort-kisi-geldiler.md",
+    "bir-tabakta-eksilenler.md"
   ]
 }
