@@ -19,6 +19,25 @@ export function buildEditorialIndex(
   const articlesById = new Map(
     content.articles.map(entry => [entry.id, entry])
   );
+  content = {
+    ...content,
+    issues: content.issues.map(issue => {
+      const leadRef = issue.data.lead ?? issue.data.articles?.[0];
+      const lead = leadRef && articlesById.get(leadRef.id);
+      const cover = issue.data.cover ?? lead?.data.cover;
+      return {
+        ...issue,
+        data: {
+          ...issue.data,
+          lead: leadRef,
+          description: issue.data.description || lead?.data.description,
+          cover,
+          coverAlt: issue.data.coverAlt || lead?.data.coverAlt || "",
+          coverCaption: issue.data.coverCaption || lead?.data.coverCaption,
+        },
+      };
+    }),
+  };
   const authorsById = new Map(content.authors.map(entry => [entry.id, entry]));
   const serialsById = new Map(content.serials.map(entry => [entry.id, entry]));
   const numbers = new Set<number>();

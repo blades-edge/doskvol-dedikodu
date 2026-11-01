@@ -46,7 +46,7 @@ test("issues can omit chapter selection",()=>{
 });
 for(const [name,mutate,message] of [
  ["foreign lead",d=>d.issues[0].data.lead.id="news-two",/Manşet/],
- ["missing lead",d=>delete d.issues[0].data.lead,/Manşet/],
+ ["empty article list",d=>{delete d.issues[0].data.lead;d.issues[0].data.articles=[]},/Manşet/],
  ["duplicate issue",d=>d.issues[1].data.number=1,/sayı numarası/],
  ["missing author",d=>d.articles[0].data.author.id="missing",/Yazar/],
  ["missing article",d=>d.issues[0].data.articles.push({id:"missing"}),/Yazı bulunamadı/],
@@ -105,4 +105,19 @@ test("serial cards group by series ID while preserving selection order",()=>{
  assert.equal(preview.articlesById.has("news"),true);
  issue.data.articles=[];issue.data.chapters=[];
  assert.deepEqual(buildEditorialIndex({...data,issues:[issue]},{preview:true}).articles,[]);
+ });
+
+ test("lead defaults to first selected article and cover fields fall back individually",()=>{
+ const data=fixture();delete data.issues[0].data.lead;
+ const article=data.articles.find(a=>a.id==="news");
+ Object.assign(article.data,{description:"Article spot",cover:{src:"ink.png"},coverAlt:"Article alt",coverCaption:"Article caption"});
+ data.issues[0].data.coverCaption="Issue caption";
+ const issue=buildEditorialIndex(data).issuesById.get("one");
+ assert.equal(issue.data.lead.id,"news");
+ assert.equal(issue.data.description,"Article spot");
+ assert.deepEqual(issue.data.cover,{src:"ink.png"});
+ assert.equal(issue.data.coverAlt,"Article alt");
+ assert.equal(issue.data.coverCaption,"Issue caption");
+ data.issues[0].data.lead={id:"rumor"};
+ assert.equal(buildEditorialIndex(data).issuesById.get("one").data.lead.id,"rumor");
  });
