@@ -1,4 +1,0 @@
-User-agent: *
-Allow: /
-
-Sitemap: https://blades-edge.github.io/doskvol-dedikodu/taslak/pr-13/sitemap-index.xml
