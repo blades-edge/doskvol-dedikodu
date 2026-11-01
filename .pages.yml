@@ -8,6 +8,19 @@ settings:
     merge: true
 
 content:
+  - name: gravur
+    label: Gravür ayarları
+    type: file
+    path: src/settings/media.json
+    format: json
+    fields:
+      - name: darkModeImages
+        label: Gece görünümü uygulanacak gravürler
+        type: image
+        options:
+          multiple: true
+        description: "Medya kütüphanesinden seçin. Seçilen görseller kapakta ve metin içinde gece temasına özel filtre ve zemin rengini alır. Listeden çıkarmak efekti kaldırır."
+
   - name: sayi
     label: Sayı
     type: collection
@@ -35,12 +48,7 @@ content:
         label: Taslak sayı
         type: boolean
         default: true
-        description: "Açıksa sayı ve ona bağlı makaleler sitede görünmez. Manşeti seçtikten ve makaleleri tamamladıktan sonra kapatın."
-      - name: preview
-        label: Önizleme bağlantısını aç
-        type: boolean
-        default: false
-        description: "Açıksa kayıttan ve site derlemesinden sonra /taslak/sayi/NUMARA/ adresi açılır (2 için 002). Bağlantısı olan herkes erişebilir; arşivde ve RSS’te listelenmez; arama motorlarına indekslenmemesi bildirilir. Gizli içerik için kullanmayın."
+        description: "Açıksa sayı ve ona bağlı makaleler ana yayında görünmez; PR önizlemesinde görünür. Manşeti seçtikten ve makaleleri tamamladıktan sonra kapatın."
       - name: date
         label: Yayın tarihi
         type: date

@@ -1,4 +1,6 @@
 ---
+import media from "../settings/media.json";
+import { imageKey } from "../utils/engraving.mjs";
 import WeatherTheme from "@components/WeatherTheme.astro";
 import { Image } from "astro:assets";
 import type { CollectionEntry } from "astro:content";
@@ -19,11 +21,19 @@ interface Props {
 const { issue, publication } = Astro.props;
 const { number, description, date, price, cover, coverAlt, coverCaption } =
   issue.data;
+const imageAssets = import.meta.glob<{
+  default: import("astro").ImageMetadata;
+}>("../assets/images/*", { eager: true });
+const darkCover = media.darkModeImages.some(path =>
+  Object.entries(imageAssets).some(
+    ([assetPath, asset]) =>
+      imageKey(assetPath) === imageKey(path) && asset.default.src === cover.src
+  )
+);
 const prefix = import.meta.env.BASE_URL;
 const articles = articlesForIssue(publication, issue.id);
 const lead =
   issue.data.lead && publication.articlesById.get(issue.data.lead.id);
-const previewNumber = publication.preview ? number : undefined;
 const title = lead?.data.title ?? "Manşet henüz seçilmedi";
 const remaining = articles.filter(article => article.id !== lead?.id);
 const sections = [
@@ -56,8 +66,8 @@ const older = publication.issues[position + 1];
     {
       publication.preview && (
         <aside class="preview-notice">
-          Sayı önizlemesi · Bağlantısı olan herkes görebilir. Normal yayına
-          dahil değildir.
+          PR önizlemesi · Bağlantısı olan herkes görebilir. Normal yayına dahil
+          değildir.
         </aside>
       )
     }
@@ -100,9 +110,7 @@ const older = publication.issues[position + 1];
                     .join(" · ") || lead.data.section}
                 </div>
                 <h2 id="lead-title">
-                  <a href={`${prefix}${articlePath(lead, previewNumber)}`}>
-                    {title}
-                  </a>
+                  <a href={`${prefix}${articlePath(lead)}`}>{title}</a>
                 </h2>
                 <p>{description}</p>
                 <div class="byline">
@@ -122,7 +130,10 @@ const older = publication.issues[position + 1];
           <Image
             src={cover}
             alt={coverAlt}
-            class="editorial-engraving"
+            class:list={[
+              "editorial-engraving",
+              { "engraving-dark": darkCover },
+            ]}
             widths={[480, 960, 1440, 2060]}
             sizes="(max-width: 720px) calc(100vw - 3rem), (max-width: 1160px) 92vw, 1046px"
             loading="eager"
@@ -154,9 +165,7 @@ const older = publication.issues[position + 1];
                               ❦
                             </div>
                             <h3>
-                              <a
-                                href={`${prefix}${publication.preview ? articlePath(group.chapters[0], previewNumber) : `tefrika/${group.seriesId}/`}`}
-                              >
+                              <a href={`${prefix}tefrika/${group.seriesId}/`}>
                                 {series.data.title}
                               </a>
                             </h3>
@@ -168,9 +177,7 @@ const older = publication.issues[position + 1];
                             {group.chapters.map(chapter => (
                               <li class="serial-chapter">
                                 <h4 class="serial-chapter-title">
-                                  <a
-                                    href={`${prefix}${articlePath(chapter, previewNumber)}`}
-                                  >
+                                  <a href={`${prefix}${articlePath(chapter)}`}>
                                     Bölüm {chapter.data.episode} ·{" "}
                                     {chapter.data.title}
                                   </a>
@@ -186,7 +193,7 @@ const older = publication.issues[position + 1];
                                 </p>
                                 <a
                                   class="reading-link"
-                                  href={`${prefix}${articlePath(chapter, previewNumber)}`}
+                                  href={`${prefix}${articlePath(chapter)}`}
                                 >
                                   Bölümü oku <span aria-hidden="true">→</span>
                                 </a>
@@ -204,9 +211,7 @@ const older = publication.issues[position + 1];
                             .join(" · ") || article.data.section}
                         </div>
                         <h3>
-                          <a
-                            href={`${prefix}${articlePath(article, previewNumber)}`}
-                          >
+                          <a href={`${prefix}${articlePath(article)}`}>
                             {article.data.title}
                           </a>
                         </h3>

@@ -2,15 +2,12 @@ interface ReadingPathEntry {
   id: string;
   data: { series?: { id: string }; episode?: number };
 }
-export function issuePath(number: number, preview = false) {
+export function issuePath(number: number) {
   const id = String(number).padStart(3, "0");
-  return `${preview ? "taslak/" : ""}sayi/${id}/`;
+  return `sayi/${id}/`;
 }
-export function articlePath(entry: ReadingPathEntry, previewNumber?: number) {
-  const path = entry.data.series
+export function articlePath(entry: ReadingPathEntry) {
+  return entry.data.series
     ? `tefrika/${entry.data.series.id}/${entry.data.episode}/`
     : `makale/${entry.id}/`;
-  return previewNumber === undefined
-    ? path
-    : `${issuePath(previewNumber, true)}${path}`;
 }

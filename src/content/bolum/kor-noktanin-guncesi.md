@@ -1,11 +1,14 @@
 ---
-title: "Adımı bilen kapı"
-description: "Bana okuldan bir defter almamı söylediler. Kapağını açmamamı da. Ücretin yarısını peşin aldığımda yalnızca ilk cümleyi duymuştum."
-author: "kor-nokta.json"
-series: "kor-nokta.json"
+title: Adımı bilen kapı
+description: Bana okuldan bir defter almamı söylediler. Kapağını açmamamı da.
+  Ücretin yarısını peşin aldığımda yalnızca ilk cümleyi duymuştum.
+author: kor-nokta.json
+series: kor-nokta.json
 episode: 1
-spoiler: "Bu bölüm, Kızıl Kuşaklar Okulu’ndaki gece ziyaretiyle ilgili kurgu sırlarını açığa çıkarır. Haberle aynı olayı başka bir gözden anlatır."
+spoiler: Bu bölüm, Kızıl Kuşaklar Okulu’ndaki gece ziyaretiyle ilgili kurgu
+  sırlarını açığa çıkarır. Haberle aynı olayı başka bir gözden anlatır.
 ---
+![](../../assets/images/mylera-gumus-original-engraved-v2.avif)
 
 Şimdi buraya doğru dürüst bir saat yazabilmeyi isterdim. Gece yarısı demek kolay. Fakat ben okulun kapısına vardığımda karşıdaki kule on biri, cebimdeki saat ikiyi, kapının arkasındaki kadınsa henüz doğmadığımı söylüyordu. Üçünden hangisine güveneceğimi bilemedim. Cebimdeki saati bir hafta önce çalmıştım; en azından onun bana borcu vardı.
 
@@ -71,8 +74,8 @@ Defter o sırada açıldı.
 
 İlk sayfada bugünün tarihi vardı. Altında benim el yazımla bir cümle:
 
-_Kapıyı açma. Ben de açtım._
+*Kapıyı açma. Ben de açtım.*
 
 ---
 
-_Birinci bölümün sonu. Kör Nokta’nın notları bir sonraki sayıda devam edecek._
+*Birinci bölümün sonu. Kör Nokta’nın notları bir sonraki sayıda devam edecek.*
