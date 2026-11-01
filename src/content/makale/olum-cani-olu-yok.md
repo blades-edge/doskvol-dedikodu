@@ -1,6 +1,8 @@
 ---
 title: Ölüm Çanı Çaldı, Ölü Ortada Yok
-description: Altı Kule'de ölüm çanının çaldığı, bir Ölügören Karga'nın da aylardır kapalı duran terzihanenin bacasına konduğu söyleniyor. Fakat o gece sokaktan bir cenaze çıkarıldığını gören yok.
+description: Altıkule'de ölüm çanının çaldığı, bir Ölügören Karga'nın da
+  aylardır kapalı duran terzihanenin bacasına konduğu söyleniyor. Fakat o gece
+  sokaktan bir cenaze çıkarıldığını gören yok.
 author: aldo-brogan.json
 section: Dedikodular
 location: Altıkule
