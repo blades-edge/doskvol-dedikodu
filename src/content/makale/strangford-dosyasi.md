@@ -6,7 +6,11 @@ description: 'Gazetemize adsız bir zarf geldi: Strangford çalışma evlerinde
 author: vaurin-prichard.json
 section: Dedikodular
 location: Yanıkçukur
+cover: ../../assets/images/strangford-isciler.avif
+coverAlt: Strangford'un imalathanesinden Mavi Urbalı zoruyla çıkartılan işçiler.
+coverCaption: İşçiler üzgün ve öfkeli. Hayatları ise mahvolmuş halde.
 ---
+
 Geçtiğimiz hafta masama üzerinde yalnızca adımın yazılı olduğu bir zarf bırakıldı.
 
 Zarfı getiren Şifreci, gönderenin kimliğini sorduğumda loncasının yeminini tekrarladı. İkinci sorumda da aynı sözleri kullandı. Üçüncüsünü sormadım. Doskvol'da bazı mesleklerin dürüstlüğü, aynı cevabı kaç defa verebildikleriyle ölçülüyor.
