@@ -34,7 +34,7 @@ content:
       rename: false
     view:
       primary: number
-      fields: [number, date, draft]
+      fields: [number, date]
       sort: [number, date]
       default: { sort: number, order: desc }
     fields:
@@ -44,11 +44,6 @@ content:
         required: true
         options: { min: 1 }
         description: "1, 2, 3… Her sayı için farklı bir tam sayı kullanın."
-      - name: draft
-        label: Taslak sayı
-        type: boolean
-        default: true
-        description: "Açıksa sayı ve ona bağlı makaleler ana yayında görünmez; PR önizlemesinde görünür. Manşeti seçtikten ve makaleleri tamamladıktan sonra kapatın."
       - name: date
         label: Yayın tarihi
         type: date

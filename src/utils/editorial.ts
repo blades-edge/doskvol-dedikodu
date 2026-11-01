@@ -64,7 +64,6 @@ export function buildEditorialIndex(
     if (numbers.has(issue.data.number))
       throw new Error(`Tekrarlanan sayı numarası: ${issue.data.number}`);
     numbers.add(issue.data.number);
-    if (issue.data.draft && !preview) continue;
     const lead = issue.data.lead && articlesById.get(issue.data.lead.id);
     if (
       !preview &&
@@ -90,9 +89,9 @@ export function buildEditorialIndex(
     if (!authorsById.has(article.data.author.id))
       throw new Error(`${article.id}: Yazar bulunamadı.`);
   }
-  const issues = content.issues
-    .filter(issue => preview || !issue.data.draft)
-    .sort((a, b) => b.data.number - a.data.number);
+  const issues = [...content.issues].sort(
+    (a, b) => b.data.number - a.data.number
+  );
   const articles = [
     ...content.articles
       .filter(article => selectedArticles.has(article.id))

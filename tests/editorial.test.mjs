@@ -31,11 +31,11 @@ test("issues include their selected chapters and preserve reading IDs",()=>{
 test("chapters navigate in episode order across issues",()=>{
  assert.deepEqual(chaptersForSeries(buildEditorialIndex(fixture()),"diary").map(c=>c.id),["chapter-one","chapter-two"]);
 });
-test("unselected chapters and draft issue chapters are not published",()=>{
- const data=fixture();data.issues[1].data.draft=true;delete data.issues[1].data.lead;
+test("unselected chapters are not published",()=>{
+ const data=fixture();data.issues[1].data.chapters=[];
  const index=buildEditorialIndex(data);
  assert.equal(index.articlesById.has("chapter-two"),false);
- assert.equal(index.articlesById.has("news-two"),false);
+ assert.equal(index.articlesById.has("news-two"),true);
  assert.deepEqual(chaptersForSeries(index,"diary").map(c=>c.id),["chapter-one"]);
  data.issues[0].data.chapters=[];
  assert.deepEqual(chaptersForSeries(buildEditorialIndex(data),"diary"),[]);
@@ -94,16 +94,18 @@ test("serial cards group by series ID while preserving selection order",()=>{
  assert.deepEqual(groupSerialChapters([]),[]);
 });
 
- test("PR preview includes published and draft issues and permits an unfinished lead",()=>{
- const data=fixture(); const issue=data.issues[1]; issue.data.draft=true; delete issue.data.lead;
+ test("all issues are published and only PR preview permits an unfinished lead",()=>{
+ const data=fixture(); const issue=data.issues[1]; delete issue.data.lead;
  const publicIndex=buildEditorialIndex(data);
  const preview=buildEditorialIndex(data,{preview:true});
- assert.equal(publicIndex.articlesById.has("news-two"),false);
+ assert.equal(publicIndex.articlesById.has("news-two"),true);
+ assert.equal(publicIndex.issues.length,2);
  assert.equal(preview.preview,true);
  assert.equal(preview.issues.length,2);
  assert.deepEqual(articlesForIssue(preview,"two").map(a=>a.id),["news-two","chapter-two"]);
  assert.equal(preview.articlesById.has("news"),true);
  issue.data.articles=[];issue.data.chapters=[];
+ assert.throws(()=>buildEditorialIndex({...data,issues:[issue]}),/Manşet/);
  assert.deepEqual(buildEditorialIndex({...data,issues:[issue]},{preview:true}).articles,[]);
  });
 

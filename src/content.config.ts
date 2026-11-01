@@ -31,7 +31,6 @@ const issues = defineCollection({
       description: optionalText,
       date: z.coerce.date(),
       price: z.string().min(1),
-      draft: z.boolean().default(false),
       lead: z.preprocess(contentReferenceId, reference("makale").optional()),
       articles: z.preprocess(
         emptyToUndefined,
