@@ -1,0 +1,62 @@
+<!DOCTYPE html><html lang="tr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><script>
+  (() => {
+    const key = "doskvol-appearance";
+    const valid = value => ["day", "night", "device"].includes(value);
+    const media = window.matchMedia("(prefers-color-scheme: dark)");
+    let preference = "device";
+    try {
+      const saved = localStorage.getItem(key);
+      if (valid(saved)) preference = saved;
+    } catch {
+      // Private browsing may deny storage; the current page still works.
+    }
+    const paint = () => {
+      const dark =
+        preference === "night" || (preference === "device" && media.matches);
+      document.documentElement.dataset.theme = dark ? "dark" : "light";
+      document.querySelectorAll("[data-theme-choice]").forEach(button => {
+        button.setAttribute(
+          "aria-pressed",
+          String(button.dataset.themeChoice === preference)
+        );
+      });
+    };
+    paint();
+    document.addEventListener("DOMContentLoaded", paint, { once: true });
+    media.addEventListener("change", paint);
+    document.addEventListener("doskvol:theme", event => {
+      if (!valid(event.detail)) return;
+      preference = event.detail;
+      try {
+        localStorage.setItem(key, preference);
+      } catch {
+        // Private browsing may deny storage; the current page still works.
+      }
+      paint();
+    });
+    window.addEventListener("storage", event => {
+      if (event.key !== key && event.key !== null) return;
+      preference = valid(event.newValue) ? event.newValue : "device";
+      paint();
+    });
+  })();
+</script><link rel="icon" type="image/svg+xml" href="/doskvol-dedikodu/taslak/pr-15/favicon.svg"><meta name="robots" content="noindex, nofollow"><link rel="canonical" href="https://blades-edge.github.io/doskvol-dedikodu/taslak/pr-15/makale/strangford-dosyasi/"><meta name="description" content="Gazetemize adsız bir zarf geldi: Strangford çalışma evlerinde sözleşmesi &quot;sona eren&quot; on dört işçinin listesi. Dokuz isim doğrulandı; dosyadaki mühür ise tarihini taşıyan günde henüz kimsenin elinde değildi."><meta property="og:site_name" content="Doskvol Dedikoduları"><meta property="og:locale" content="tr_TR"><meta property="og:type" content="article"><meta property="og:title" content="Strangford dosyası: on dört isim, bir mühür | Doskvol Dedikoduları"><meta property="og:description" content="Gazetemize adsız bir zarf geldi: Strangford çalışma evlerinde sözleşmesi &quot;sona eren&quot; on dört işçinin listesi. Dokuz isim doğrulandı; dosyadaki mühür ise tarihini taşıyan günde henüz kimsenin elinde değildi."><meta property="og:url" content="https://blades-edge.github.io/doskvol-dedikodu/taslak/pr-15/makale/strangford-dosyasi/"><meta property="og:image" content="https://blades-edge.github.io/doskvol-dedikodu/taslak/pr-15/_astro/doskvol-line-engraving.Dm_4yufi_Z2rUCKe.png"><meta property="og:image:alt" content><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="Strangford dosyası: on dört isim, bir mühür | Doskvol Dedikoduları"><meta name="twitter:description" content="Gazetemize adsız bir zarf geldi: Strangford çalışma evlerinde sözleşmesi &quot;sona eren&quot; on dört işçinin listesi. Dokuz isim doğrulandı; dosyadaki mühür ise tarihini taşıyan günde henüz kimsenin elinde değildi."><meta name="twitter:image" content="https://blades-edge.github.io/doskvol-dedikodu/taslak/pr-15/_astro/doskvol-line-engraving.Dm_4yufi_Z2rUCKe.png"><meta name="twitter:image:alt" content><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,600;0,6..72,700;1,6..72,400&display=swap" rel="stylesheet"><title>Strangford dosyası: on dört isim, bir mühür | Doskvol Dedikoduları</title><link rel="stylesheet" href="/doskvol-dedikodu/taslak/pr-15/_astro/EditorialHead.D9JAn6wv.css"></head><body><aside class="preview-notice"><a href="https://github.com/blades-edge/doskvol-dedikodu/pull/15">PR #15 önizlemesi</a> · Bağlantısı olan herkes görebilir. Normal yayına dahil değildir.</aside><a class="reading-skip" href="#reading-content">Makaleye geç</a><div class="paper reading-paper"><header class="masthead reading-masthead"><div class="masthead-title"><div class="eyebrow">Akoros’un bağımsız sesi · Doskvol</div><a class="reading-wordmark" href="/doskvol-dedikodu/taslak/pr-15/sayi/001/">Doskvol Dedikoduları</a><div class="tagline">Duyduğunuza inanmayın. Duymadıklarınızdan korkun.</div></div><aside class="weather-theme" aria-label="Gazetenin hava durumu ve görünümü"><div class="weather-caption">Doskvol’da hava</div><div class="weather-choices" role="group" aria-label="Görünüm tercihi"><button type="button" data-theme-choice="day" aria-pressed="false" title="Kırık güneş — açık görünüm"><img src="/doskvol-dedikodu/taslak/pr-15/weather-day.png" alt="" width="56" height="56" loading="eager"><span>Gündüz</span></button><button type="button" data-theme-choice="night" aria-pressed="false" title="Ay ve loş bacıları — koyu görünüm"><img src="/doskvol-dedikodu/taslak/pr-15/weather-night.png" alt="" width="56" height="56" loading="eager"><span>Gece</span></button><button type="button" data-theme-choice="device" aria-pressed="true" title="Hayaletli hava — cihazın tercihini izle"><img src="/doskvol-dedikodu/taslak/pr-15/weather-device.png" alt="" width="56" height="56" loading="eager"><span>Cihaz</span></button></div></aside><script type="module">document.querySelectorAll(`[data-theme-choice]`).forEach(e=>{e.addEventListener(`click`,()=>{document.dispatchEvent(new CustomEvent(`doskvol:theme`,{detail:e.dataset.themeChoice}))})});</script></header><nav class="reading-breadcrumb" aria-label="Sayfa yolu"><a href="/doskvol-dedikodu/taslak/pr-15/sayi/001/">Sayı 001</a><span aria-hidden="true">/</span><span>Dedikodular</span></nav><main id="reading-content"><header class="reading-heading"><div class="eyebrow">Dedikodular</div><h1>Strangford dosyası: on dört isim, bir mühür</h1><p class="reading-deck">Gazetemize adsız bir zarf geldi: Strangford çalışma evlerinde sözleşmesi &quot;sona eren&quot; on dört işçinin listesi. Dokuz isim doğrulandı; dosyadaki mühür ise tarihini taşıyan günde henüz kimsenin elinde değildi.</p><div class="reading-meta"><span>Vaurin Prichard </span><time datetime="2026-11-01T00:00:00.000Z">1 Kasım 2026</time><span>Sayı 001</span></div></header><article class="reading-copy" aria-label="Strangford dosyası: on dört isim, bir mühür"><p>Geçtiğimiz hafta masama üzerinde yalnızca adımın yazılı olduğu bir zarf bırakıldı.</p>
+<p>Zarfı getiren Şifreci, gönderenin kimliğini sorduğumda loncasının yeminini tekrarladı. İkinci sorumda da aynı sözleri kullandı. Üçüncüsünü sormadım. Doskvol’da bazı mesleklerin dürüstlüğü, aynı cevabı kaç defa verebildikleriyle ölçülüyor.</p>
+<p>Zarfın içinde, Lord Strangford’un Yanıkçukur’daki çalışma evlerinden birine ait olduğu iddia edilen kayıtların kopyaları vardı. On bir sayfa, on dört isim. Bu on dört işçinin sözleşmeleri, geçen yıl içinde birer birer sona ermiş görünüyordu. Gönderen ise sayfaların kenarına aynı elle tek bir not düşmüştü: Sona eren sözleşmeleri değil, hayatlarıydı.</p>
+<p>İsimleri ve tarihleri karşılaştırdım. On dört kişiden dokuzunun o çalışma evinde gerçekten çalıştığını doğrulayabildim.</p>
+<p>Listeyi alıp Yanıkçukur’a, Çarşaflık’a gittim. Çamaşır iplerinin arasında alçak sesle konuşan bir grup işçi, ben yaklaşınca sustu. İpleri geçtiğimde, okuduğum yedinci ismi duyan bir kadın elindeki leğeni yere bıraktı.</p>
+<p>“Timoth Grine mi? Sözleşmesi bitmiş, öyle mi?” Tepedeki konağa doğru başını çevirdi, sonra yeniden bana baktı. “Ben o adamın cenazesine gittim. Karısına iki gün yemek taşıdım; bütün sokak taşıdı. Siz şimdi bana hangi kâğıdın doğru olduğunu mu soruyorsunuz?”</p>
+<p>Asıl sorun belgelerin sekizinci sayfasında ortaya çıktı.</p>
+<p>O sayfadaki mühür, Kâtipler Sokağı’ndaki Kayıt Dairesi’nin baş kâtiplik mührüdür. Belge, geçen yılın Suran ayının 4’ünü taşıyor. Bu mührü taşıyan memur o makama Ulsivet’in 12’sinde atandı. Atama kayıtlarını yıllardır tutarım. Arada altmış sekiz gün var.</p>
+<p>Mührü, Kâtipler Sokağı’nda tanıdığım bir kâtibe gösterdim. Uzun süre konuşmadı.</p>
+<p>“Olamaz,” dedi sonunda. “Malumunuz, mühür makamla gelir efendim.” Ardından söylediği hiçbir şeyin kendisine atfedilmemesi gerektiğini birkaç farklı biçimde açıkladı.</p>
+<p>Lord Strangford’un temsilcilerine sorularımı ilettim. Ailenin hukuk temsilcisinden şu yanıt geldi:</p>
+<blockquote>
+<p>“Lord Strangford’un işletmelerinin yürürlükteki bütün yasal yükümlülüklere uygun faaliyet gösterdiği hususunda herhangi bir tereddüt bulunmamaktadır.”</p>
+</blockquote>
+<p>Hangi kayıtların incelendiğini ve Timoth Grine’ın ölümünün araştırılıp araştırılmadığını ayrıca sordum. Yanıt gelmedi.</p>
+<p>Şehir Meclisi’nin diğer beş üyesine de aynı soruları gönderdim. Bu sayı baskıya girene kadar hiçbirinden cevap gelmedi.</p>
+<p>Bu nedenle belgeleri bugün yayımlamıyorum. Doğru olabilecek bir ölüm ile sahte olabilecek bir mührü aynı sayfada basmak, bu sayfaları hazırlayan kişinin işini onun yerine yapmak olurdu.</p>
+<p>Arşivden son çıktığım akşam, Kâtipler Sokağı’nın köşesinde duran bir Mavi Urbalı, ben önünden geçene kadar defterine bir şey yazdı. Ne yazdığını sormadım.</p>
+<p>Zarfı sakladım.</p>
+<p>Mührü de.</p></article><div class="reading-return"><a href="/doskvol-dedikodu/taslak/pr-15/sayi/001/">← Sayı 001</a><a href="#reading-content">Makalenin başına ↑</a></div></main><footer>Doskvol Dedikoduları · Mürekkep kurumadan okuyanlara</footer></div></body></html>

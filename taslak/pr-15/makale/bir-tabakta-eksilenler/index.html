@@ -1,0 +1,56 @@
+<!DOCTYPE html><html lang="tr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><script>
+  (() => {
+    const key = "doskvol-appearance";
+    const valid = value => ["day", "night", "device"].includes(value);
+    const media = window.matchMedia("(prefers-color-scheme: dark)");
+    let preference = "device";
+    try {
+      const saved = localStorage.getItem(key);
+      if (valid(saved)) preference = saved;
+    } catch {
+      // Private browsing may deny storage; the current page still works.
+    }
+    const paint = () => {
+      const dark =
+        preference === "night" || (preference === "device" && media.matches);
+      document.documentElement.dataset.theme = dark ? "dark" : "light";
+      document.querySelectorAll("[data-theme-choice]").forEach(button => {
+        button.setAttribute(
+          "aria-pressed",
+          String(button.dataset.themeChoice === preference)
+        );
+      });
+    };
+    paint();
+    document.addEventListener("DOMContentLoaded", paint, { once: true });
+    media.addEventListener("change", paint);
+    document.addEventListener("doskvol:theme", event => {
+      if (!valid(event.detail)) return;
+      preference = event.detail;
+      try {
+        localStorage.setItem(key, preference);
+      } catch {
+        // Private browsing may deny storage; the current page still works.
+      }
+      paint();
+    });
+    window.addEventListener("storage", event => {
+      if (event.key !== key && event.key !== null) return;
+      preference = valid(event.newValue) ? event.newValue : "device";
+      paint();
+    });
+  })();
+</script><link rel="icon" type="image/svg+xml" href="/doskvol-dedikodu/taslak/pr-15/favicon.svg"><meta name="robots" content="noindex, nofollow"><link rel="canonical" href="https://blades-edge.github.io/doskvol-dedikodu/taslak/pr-15/makale/bir-tabakta-eksilenler/"><meta name="description" content="Rıhtım'ın eski sofralarında artık yalnızca porsiyonlar küçülmüyor. Bir lokantanın arka masası aylardır boş; örtüsü ise her akşam yeniden seriliyor."><meta property="og:site_name" content="Doskvol Dedikoduları"><meta property="og:locale" content="tr_TR"><meta property="og:type" content="article"><meta property="og:title" content="Bir tabakta eksilenler | Doskvol Dedikoduları"><meta property="og:description" content="Rıhtım'ın eski sofralarında artık yalnızca porsiyonlar küçülmüyor. Bir lokantanın arka masası aylardır boş; örtüsü ise her akşam yeniden seriliyor."><meta property="og:url" content="https://blades-edge.github.io/doskvol-dedikodu/taslak/pr-15/makale/bir-tabakta-eksilenler/"><meta property="og:image" content="https://blades-edge.github.io/doskvol-dedikodu/taslak/pr-15/_astro/doskvol-line-engraving.Dm_4yufi_Z2rUCKe.png"><meta property="og:image:alt" content><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="Bir tabakta eksilenler | Doskvol Dedikoduları"><meta name="twitter:description" content="Rıhtım'ın eski sofralarında artık yalnızca porsiyonlar küçülmüyor. Bir lokantanın arka masası aylardır boş; örtüsü ise her akşam yeniden seriliyor."><meta name="twitter:image" content="https://blades-edge.github.io/doskvol-dedikodu/taslak/pr-15/_astro/doskvol-line-engraving.Dm_4yufi_Z2rUCKe.png"><meta name="twitter:image:alt" content><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,600;0,6..72,700;1,6..72,400&display=swap" rel="stylesheet"><title>Bir tabakta eksilenler | Doskvol Dedikoduları</title><link rel="stylesheet" href="/doskvol-dedikodu/taslak/pr-15/_astro/EditorialHead.D9JAn6wv.css"></head><body><aside class="preview-notice"><a href="https://github.com/blades-edge/doskvol-dedikodu/pull/15">PR #15 önizlemesi</a> · Bağlantısı olan herkes görebilir. Normal yayına dahil değildir.</aside><a class="reading-skip" href="#reading-content">Makaleye geç</a><div class="paper reading-paper"><header class="masthead reading-masthead"><div class="masthead-title"><div class="eyebrow">Akoros’un bağımsız sesi · Doskvol</div><a class="reading-wordmark" href="/doskvol-dedikodu/taslak/pr-15/sayi/001/">Doskvol Dedikoduları</a><div class="tagline">Duyduğunuza inanmayın. Duymadıklarınızdan korkun.</div></div><aside class="weather-theme" aria-label="Gazetenin hava durumu ve görünümü"><div class="weather-caption">Doskvol’da hava</div><div class="weather-choices" role="group" aria-label="Görünüm tercihi"><button type="button" data-theme-choice="day" aria-pressed="false" title="Kırık güneş — açık görünüm"><img src="/doskvol-dedikodu/taslak/pr-15/weather-day.png" alt="" width="56" height="56" loading="eager"><span>Gündüz</span></button><button type="button" data-theme-choice="night" aria-pressed="false" title="Ay ve loş bacıları — koyu görünüm"><img src="/doskvol-dedikodu/taslak/pr-15/weather-night.png" alt="" width="56" height="56" loading="eager"><span>Gece</span></button><button type="button" data-theme-choice="device" aria-pressed="true" title="Hayaletli hava — cihazın tercihini izle"><img src="/doskvol-dedikodu/taslak/pr-15/weather-device.png" alt="" width="56" height="56" loading="eager"><span>Cihaz</span></button></div></aside><script type="module">document.querySelectorAll(`[data-theme-choice]`).forEach(e=>{e.addEventListener(`click`,()=>{document.dispatchEvent(new CustomEvent(`doskvol:theme`,{detail:e.dataset.themeChoice}))})});</script></header><nav class="reading-breadcrumb" aria-label="Sayfa yolu"><a href="/doskvol-dedikodu/taslak/pr-15/sayi/001/">Sayı 001</a><span aria-hidden="true">/</span><span>Dedikodular</span></nav><main id="reading-content"><header class="reading-heading"><div class="eyebrow">Dedikodular</div><h1>Bir tabakta eksilenler</h1><p class="reading-deck">Rıhtım&#39;ın eski sofralarında artık yalnızca porsiyonlar küçülmüyor. Bir lokantanın arka masası aylardır boş; örtüsü ise her akşam yeniden seriliyor.</p><div class="reading-meta"><span>Gaspar Merrow</span><time datetime="2026-11-01T00:00:00.000Z">1 Kasım 2026</time><span>Sayı 001</span></div></header><article class="reading-copy" aria-label="Bir tabakta eksilenler"><p>On yıldır uğradığım küçük bir lokanta vardır. Adını vermeyeceğim; zira sahibinin başı, benim yazdıklarımdan bağımsız olarak yeterince dertte.</p>
+<p>On yıl önce burada bir tabak mantarlı yılanbalığı böreği sipariş ettiğinizde, önce börek gelirdi, sonra tabağın kenarlarından taşan sosu. Yanında ekmek, ardından ikinci bir dilim ekmek… Garsonlar müşterinin adını bilir, mutfaktan yükselen tartışmalar yalnızca tuzun miktarıyla ilgili olurdu.</p>
+<p>Geçtiğimiz akşam aynı böreği söyledim.</p>
+<p>Börek küçülmüş. Sos seyrelmiş. İkinci dilim ekmek ise anlaşılan uzun zamandır kayıp.</p>
+<p>Sahibine ne olduğunu sordum. Gecepazarı’ndan gelen un pahalanmış, yılanbalığı azalmış. Bir de teslimatların gecikmesinden yakındı. Eskiden sabah gelen mallar artık akşamı buluyormuş.</p>
+<p>“Çımacılar yükü indirmeden pazarlığa oturuyor, efendi,” dedi. “Fazla itiraz edenin malı iskelede kalır. Kendisi de bazen.”</p>
+<p>Bazı tüccarlar Rıhtım’a uğramak için peşin ödeme istiyormuş.</p>
+<p>Daha ilginci, lokantanın arka tarafındaki büyük masanın boş olmasıydı. Eskiden orada her akşam kalabalık bir topluluk otururdu: kızıl kuşaklar, isli işçi ceketleri ve bu mahalleyi kimin yönettiğini hiç sormak zorunda kalmamış adamlar. Roric hayattayken aynı sofraya oturabilen bu ağır abilerin, şimdi aynı sokaktan geçmek istemediklerini söylediler.</p>
+<p>Lokantacıya göre son aylarda işler öylesine kötüleşmiş ki kimi akşamlar masaların yarısı boş kalıyormuş. İyi müşteriler evlerinde yemek yemeye başlamış, kötü müşterilerse hesap ödemeden gitmeyi alışkanlık edinmiş.</p>
+<p>Yine de bir istisna gördüm. Kapının yanındaki masada, ellerinden halat izleri silinmemiş yaşlı bir liman işçisi oturuyordu. Önündeki börek benimkinden büyüktü; sosu da tabağın kenarından taşıyordu. Lokantacıya bunu sorduğumda omuz silkti. Adam otuz yıldır her akşam aynı saatte gelirmiş. “Ona küçüğünü veremem,” dedi. Farkı nereden karşıladığını sormadım. Önlüğünün cebi, cevabı vermeye yetecek kadar inceydi.</p>
+<p>Bunca şeye rağmen hakkını teslim edelim: Böreğin hamuru hâlâ ince, mantarların kokusu yerinde. Sosun eski günlerine dönmesi içinse yalnızca iyi bir aşçı değil, biraz huzur gerekiyor.</p>
+<p>Hesabı istediğimde bir kez daha şaşırdım. Börek küçülmüş ama fiyatı büyümüştü.</p>
+<p>Ödeyip çıkarken arka masaya bir kez daha baktım. Örtüsü hâlâ seriliydi. Lokantacı her akşam yeniden seriyormuş.</p>
+<p>“Gelirlerse diye,” dedi.</p></article><div class="reading-return"><a href="/doskvol-dedikodu/taslak/pr-15/sayi/001/">← Sayı 001</a><a href="#reading-content">Makalenin başına ↑</a></div></main><footer>Doskvol Dedikoduları · Mürekkep kurumadan okuyanlara</footer></div></body></html>
