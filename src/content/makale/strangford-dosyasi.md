@@ -33,7 +33,7 @@ Mührü, Kâtipler Sokağı'nda tanıdığım bir kâtibe gösterdim. Uzun süre
 
 Lord Strangford'un temsilcilerine sorularımı ilettim. Ailenin hukuk temsilcisinden şu yanıt geldi:
 
-> "Lord Strangford'un işletmelerinin yürürlükteki bütün yasal yükümlülüklere uygun faaliyet gösterdiği hususunda herhangi bir tereddüt bulunmamaktadır."
+> "Lord Strangford'un müesseselerinin tedavüldeki bütün kanuni hükümlere münasip şekilde faaliyet ifa ettiği hususunda herhangi bir tereddüt bulunmamaktadır."
 
 Hangi kayıtların incelendiğini ve Timoth Grine'ın ölümünün araştırılıp araştırılmadığını ayrıca sordum. Yanıt gelmedi.
 
