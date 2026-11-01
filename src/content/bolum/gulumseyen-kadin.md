@@ -7,7 +7,7 @@ episode: 1
 author: dr-a-sorel.json
 ---
 
-**21.15**
+###### Sicim çeyreği[^1]
 
 Lord Cassian Rell'in ateşi otuz dokuz derece sekiz çizgisindeydi. Nabzı hızlı, solunumu yüzeyseldi. Bilinci yerindeydi.
 
@@ -35,7 +35,7 @@ Rell'in tavsiye ettiği hastalar muayenehanemin gelirinin önemli bir bölümün
 
 Talebini kabul ettim.
 
-**23.40**
+###### İpeğe üçlek kala[^1]
 
 Katedralin doğu tarafındaki kapı, sokak seviyesinden altı basamak aşağıdaydı. Üzerinde herhangi bir yazı bulunmuyordu. Demir halkayı iki kez vurdum.
 
@@ -133,13 +133,13 @@ Maskemi çıkardım. Tepsiye bıraktım.
 
 Hizmetkâr ellerimi açmamı istedi. Eldiven giymediğimden avuçlarımı doğrudan gösterdim. Önce içlerine, sonra parmak aralarına baktı. Ardından geçmeme izin verdi.
 
-**00.25**
+###### İpek yarısına az kala[^1]
 
-Eve yürürken uzaktan tek bir çan sesi duydum.
+Eve yürürken uzaktan tek bir çan sesi duydum.[^2]
 
-_[Kenarda, başka mürekkeple: Bu saati sonradan doğruladım.]_
+[^2]: Bu saati sonradan doğruladım
 
-**08.20**
+###### Üçüncü saati üçlek geçe[^1]
 
 Profesör Severin Halbrecht beni sabah erkenden çağırdı.
 
@@ -206,3 +206,5 @@ Tıbbi inceleme kayıtlarında bu tür bakışların değerlendirilmesine ayrıl
 ---
 
 _Birinci bölümün sonu. Dr. Sorel'in vaka defteri bir sonraki sayıda devam edecek._
+
+[^1]: Doskvol saatleri: Sabah 6:00 Birinci saat — 17:00 Onikinci saat. Akşam 18:00 Eşref – 19:00 Nağme – 20:00 Gümüş – 21:00 Sicim – 22:00 Alev – 23:00 Mercan – 00:00 İpek – 01:00 Mey – 02:00 Kül – 03:00 Kömür – 04:00 Zincir – 05:00 Duman
