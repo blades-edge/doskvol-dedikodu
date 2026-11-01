@@ -1,0 +1,64 @@
+<!DOCTYPE html><html lang="tr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><script>
+  (() => {
+    const key = "doskvol-appearance";
+    const valid = value => ["day", "night", "device"].includes(value);
+    const media = window.matchMedia("(prefers-color-scheme: dark)");
+    let preference = "device";
+    try {
+      const saved = localStorage.getItem(key);
+      if (valid(saved)) preference = saved;
+    } catch {
+      // Private browsing may deny storage; the current page still works.
+    }
+    const paint = () => {
+      const dark =
+        preference === "night" || (preference === "device" && media.matches);
+      document.documentElement.dataset.theme = dark ? "dark" : "light";
+      document.querySelectorAll("[data-theme-choice]").forEach(button => {
+        button.setAttribute(
+          "aria-pressed",
+          String(button.dataset.themeChoice === preference)
+        );
+      });
+    };
+    paint();
+    document.addEventListener("DOMContentLoaded", paint, { once: true });
+    media.addEventListener("change", paint);
+    document.addEventListener("doskvol:theme", event => {
+      if (!valid(event.detail)) return;
+      preference = event.detail;
+      try {
+        localStorage.setItem(key, preference);
+      } catch {
+        // Private browsing may deny storage; the current page still works.
+      }
+      paint();
+    });
+    window.addEventListener("storage", event => {
+      if (event.key !== key && event.key !== null) return;
+      preference = valid(event.newValue) ? event.newValue : "device";
+      paint();
+    });
+  })();
+</script><link rel="icon" type="image/svg+xml" href="/doskvol-dedikodu/taslak/pr-13/favicon.svg"><meta name="robots" content="noindex, nofollow"><link rel="canonical" href="https://blades-edge.github.io/doskvol-dedikodu/taslak/pr-13/makale/dort-kisi-geldiler/"><meta name="description" content="Delik Kova'da masaya dört kadeh gitti, hesaba üç kişi itiraz etti. Dördüncüyü kalabalık yuttu; mahalle hâlâ sayıyor."><meta property="og:site_name" content="Doskvol Dedikoduları"><meta property="og:locale" content="tr_TR"><meta property="og:type" content="article"><meta property="og:title" content="Dört kişi geldiler, üç kişi kaldılar | Doskvol Dedikoduları"><meta property="og:description" content="Delik Kova'da masaya dört kadeh gitti, hesaba üç kişi itiraz etti. Dördüncüyü kalabalık yuttu; mahalle hâlâ sayıyor."><meta property="og:url" content="https://blades-edge.github.io/doskvol-dedikodu/taslak/pr-13/makale/dort-kisi-geldiler/"><meta property="og:image" content="https://blades-edge.github.io/doskvol-dedikodu/taslak/pr-13/_astro/doskvol-line-engraving.Dm_4yufi_13zDCH.png"><meta property="og:image:alt" content="Bir kanalın kıyısındaki taş okul, köprüler ve uzaktaki fabrika bacaları; kâğıt üzerinde değişen kalınlıkta mürekkep çizgileri."><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="Dört kişi geldiler, üç kişi kaldılar | Doskvol Dedikoduları"><meta name="twitter:description" content="Delik Kova'da masaya dört kadeh gitti, hesaba üç kişi itiraz etti. Dördüncüyü kalabalık yuttu; mahalle hâlâ sayıyor."><meta name="twitter:image" content="https://blades-edge.github.io/doskvol-dedikodu/taslak/pr-13/_astro/doskvol-line-engraving.Dm_4yufi_13zDCH.png"><meta name="twitter:image:alt" content="Bir kanalın kıyısındaki taş okul, köprüler ve uzaktaki fabrika bacaları; kâğıt üzerinde değişen kalınlıkta mürekkep çizgileri."><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,600;0,6..72,700;1,6..72,400&display=swap" rel="stylesheet"><title>Dört kişi geldiler, üç kişi kaldılar | Doskvol Dedikoduları</title><link rel="stylesheet" href="/doskvol-dedikodu/taslak/pr-13/_astro/EditorialHead.D9JAn6wv.css"></head><body><aside class="preview-notice">PR önizlemesi · Bağlantısı olan herkes görebilir. Normal yayına dahil değildir.</aside><a class="reading-skip" href="#reading-content">Makaleye geç</a><div class="paper reading-paper"><header class="masthead reading-masthead"><div class="masthead-title"><div class="eyebrow">Akoros’un bağımsız sesi · Doskvol</div><a class="reading-wordmark" href="/doskvol-dedikodu/taslak/pr-13/sayi/001/">Doskvol Dedikoduları</a><div class="tagline">Duyduğunuza inanmayın. Duymadıklarınızdan korkun.</div></div><aside class="weather-theme" aria-label="Gazetenin hava durumu ve görünümü"><div class="weather-caption">Doskvol’da hava</div><div class="weather-choices" role="group" aria-label="Görünüm tercihi"><button type="button" data-theme-choice="day" aria-pressed="false" title="Kırık güneş — açık görünüm"><img src="/weather-day.png" alt="" width="56" height="56" loading="eager"><span>Gündüz</span></button><button type="button" data-theme-choice="night" aria-pressed="false" title="Ay ve loş bacıları — koyu görünüm"><img src="/weather-night.png" alt="" width="56" height="56" loading="eager"><span>Gece</span></button><button type="button" data-theme-choice="device" aria-pressed="true" title="Hayaletli hava — cihazın tercihini izle"><img src="/weather-device.png" alt="" width="56" height="56" loading="eager"><span>Cihaz</span></button></div></aside><script type="module">document.querySelectorAll(`[data-theme-choice]`).forEach(e=>{e.addEventListener(`click`,()=>{document.dispatchEvent(new CustomEvent(`doskvol:theme`,{detail:e.dataset.themeChoice}))})});</script></header><nav class="reading-breadcrumb" aria-label="Sayfa yolu"><a href="/doskvol-dedikodu/taslak/pr-13/sayi/001/">Sayı 001</a><span aria-hidden="true">/</span><span>Dedikodular</span></nav><main id="reading-content"><header class="reading-heading"><div class="eyebrow">Dedikodular</div><h1>Dört kişi geldiler, üç kişi kaldılar</h1><p class="reading-deck">Delik Kova&#39;da masaya dört kadeh gitti, hesaba üç kişi itiraz etti. Dördüncüyü kalabalık yuttu; mahalle hâlâ sayıyor.</p><div class="reading-meta"><span>Aldo Brogan</span><time datetime="2026-10-29T00:00:00.000Z">29 Ekim 2026</time><span>Sayı 001</span></div></header><article class="reading-copy" aria-label="Dört kişi geldiler, üç kişi kaldılar"><p>Kargaayağı’nın eski ve meşhur meyhanelerinden Delik Kova, geçtiğimiz akşam alışılmışın dışında bir hadiseye sahne oldu. Mahallenin müdavimleri, daha önce görmediklerine yemin ettikleri dört yabancının akşamın ilerleyen saatlerinde bir masaya yerleştiğini anlatıyor. Temiz çizmeleri, ürkek bakışları ve yanlış kişilere sordukları sorular, buraya ait olmadıklarını belli ediyordu. Gecenin seyri, içlerinden biri içki almak üzere bara yöneldiğinde değişti.</p>
+<p>Anlatılanlara göre genç adam, tezgâha birkaç adım kala ayağı kayarak kalabalığın arasına düştü. Bir sandalye devrildi, birkaç bardak kırıldı ve en az üç kişi küfretti. Ne var ki yerdeki adamı kaldırmak için eğilenler, orada kimseyi bulamadı.</p>
+<p>Meyhanenin kapısından çıkan görülmedi. Pencereler kapalıydı. Masaların altına bakıldı. Hatta bir müşterinin kendi paltosunun içine kadar arandığı söyleniyor.</p>
+<p>Asıl tartışma bundan sonra başladı. Tanıklar ne gördükleri konusunda anlaşamıyor. Kaç kişi gördükleri konusunda ise hiç anlaşamıyor.</p>
+<p>Akşamı tezgâhın yanında geçiren bir liman işçisi sayıdan emin:</p>
+<blockquote>
+<p>“Dört, bre. Dört kadeh doldurdular, dördünü de ben masaya taşıdım. Ben yük sayarak ekmek yerim. Saymayı bilirim.”</p>
+</blockquote>
+<p>İki masa ötede oturan ve kendisini “Kargalar’ın eski defterini tutan” diye tanıtan yaşlı bir adam ise olaydan çok gazetemizin ilgisine şaşırıyor:</p>
+<blockquote>
+<p>“Kargaayağı’nda adam kaybolur, bunun raconu bu. Dün kayboldu, yarın da kaybolacak. Kaç kişi oldukları mı? O enayilere sorsana. Hesabı onlar ödedi.”</p>
+</blockquote>
+<p>Sokak lambalarının elektroplazmaya çevrilmesiyle mesleğini kaybetmiş eski bir fener yakıcı ise işin içinde gözlerin oyunu olduğuna inanıyor:</p>
+<blockquote>
+<p>“O köşede ışık yalan söyler. Lambayı yanlış yere asmışlar, gölge masaya düşer, bir kişi iki görünür, iki kişi bir. Otuz yıl fener yaktım ben, ışığın neler yaptığını bilirim.”</p>
+</blockquote>
+<p>Kapının yanında oturan, adını vermek istemeyen bir kadın ise açıklamayı başka yerde arıyor. Ona göre bu mahallenin ölüleri kalabalıkları sever. Yere düşen biri de bazen artık kalkmaz.</p>
+<p>Yabancıların da en başından beri üç kişi olduklarını söyledikleri ileri sürülüyor. Ne var ki bazı müdavimlere göre bu ısrar, hesabın masaya gelmesinden hemen sonra başladı. Dördüncü arkadaşlarının akşam boyunca içtiklerini ödememek için dümen çeviren müşteriler mi söz konusu, yoksa meyhanecinin kimsenin oturmadığı bir sandalyeye içki yazma girişimi mi? Şimdilik bilinmiyor. Kargaayağı’nda bir insanın kaybolmasından daha olağan bir şey varsa, o da hesabı kimin ödeyeceği üzerine çıkan tartışmadır.</p>
+<p>Meyhanenin sahibi Mardin Gull’un olayla ilgili bir açıklama yapıp yapmadığı öğrenilemedi.</p>
+<p>Öte yandan, son zamanlarda Kargaayağı meyhanelerinde içkilere karıştırılan mantar miktarının arttığı yönündeki söylentiler de yeniden gündeme geldi. Ancak ortada ne bir tahlil var, ne de mantarı kendi gözüyle gördüğünü söyleyebilen ayık bir tanık.</p>
+<p>Şimdi bütün mahalle aynı soruyu soruyor:</p>
+<p><strong>O akşam Delik Kova’da gerçekten dört arkadaş mı vardı, yoksa üçüncü kadehten sonra herkes saymayı mı unuttu?</strong></p></article><div class="reading-return"><a href="/doskvol-dedikodu/taslak/pr-13/sayi/001/">← Sayı 001</a><a href="#reading-content">Makalenin başına ↑</a></div></main><footer>Doskvol Dedikoduları · Mürekkep kurumadan okuyanlara</footer></div></body></html>
