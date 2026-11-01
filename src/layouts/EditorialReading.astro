@@ -1,4 +1,5 @@
 ---
+import PreviewNotice from "@components/PreviewNotice.astro";
 import { Image } from "astro:assets";
 import media from "../settings/media.json";
 import { imageKey } from "../utils/engraving.mjs";
@@ -67,14 +68,7 @@ const related = articlesForIssue(publication, issue.id).find(
     /></head
   >
   <body>
-    {
-      publication.preview && (
-        <aside class="preview-notice">
-          PR önizlemesi · Bağlantısı olan herkes görebilir. Normal yayına dahil
-          değildir.
-        </aside>
-      )
-    }
+    <PreviewNotice />
     <a class="reading-skip" href="#reading-content">Makaleye geç</a>
     <div class="paper reading-paper">
       <header class="masthead reading-masthead">
