@@ -5,9 +5,6 @@ description: Bir hastamın yerine gittim. Kapıda bana başka birinin maskesini
 series: bos-bedenler.json
 episode: 1
 author: dr-a-sorel.json
-cover: ../../assets/images/gulumseyen-kadin-vaka-defteri.avif
-coverAlt: Kullanılmış otopsi aletleri arasında açık duran, anatomi eskizleri, el yazısı notlar ve kan lekeleriyle dolu bir doktor defteri.
-coverCaption: Dr. Sorel'in vaka defterinden; bazı izler sayfanın üzerinde kalmış.
 ---
 
 #### Sicim çeyreği[^1]
@@ -141,6 +138,8 @@ Hizmetkâr ellerimi açmamı istedi. Eldiven giymediğimden avuçlarımı doğru
 Eve yürürken uzaktan tek bir çan sesi duydum.[^2]
 
 [^2]: Bu saati sonradan doğruladım
+
+![Kullanılmış otopsi aletleri arasında açık duran, anatomi eskizleri, el yazısı notlar ve kan lekeleriyle dolu bir doktor defteri](../../assets/images/gulumseyen-kadin-vaka-defteri.avif)
 
 #### Üçüncü sülüsü[^1]
 
