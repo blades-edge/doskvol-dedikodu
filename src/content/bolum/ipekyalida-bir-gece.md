@@ -32,6 +32,8 @@ Birbirlerini tanıyorlardı, ortak bir geçmişleri vardı. Ama birbirlerine ne 
 
 Bu yüzden Kızıl Kuşakların patroniçesi Mylera Klev’den gelen çağrı, bir fırsat olduğu kadar bir tehdit de taşıyordu.
 
+![Mylera, seyircilerin önünde eğitim kılıcını Gümüş’ün boğazına doğrultur.](../../assets/images/ipekyali-duello.avif)
+
 ## II. Mylera’nın Masasında
 
 Kargaların lideri öldürülmüştü.
@@ -133,6 +135,8 @@ Gümüş ona döndü.
 “Lütfen bu kez bir şeyi patlatmadan önce haber ver.”
 
 Hurda’nın yüzünde belirsiz bir gülümseme belirdi.
+
+![Dört fedai Hurda’yı yere bastırırken Gümüş salonda onlara doğru koşar.](../../assets/images/ipekyali-fedailer.avif)
 
 ## IV. İçerideki İki Haydut
 
@@ -374,6 +378,8 @@ Gümüş tek kelime etmeden yüzünü çevirdi.
 
 Yankı için hayaletler anlaşılması ve yönlendirilmesi gereken varlıklardı. Gümüş içinse artık unutmak istediği bir gecenin kapısını zorla açan şeylerdi. Ve o kapıyı açan, kendi tayfasından biriydi.
 
+![Patlayan borular odayı buharla doldururken Sis tavana tutunur, muhafız kasadaki mangırları toplar.](../../assets/images/ipekyali-kasa-odasi.avif)
+
 ## IX. Buhar ve Cam Kırıkları
 
 Kasa odasındaki Sis, hayaletin gelişini bedeninde hissetti.
@@ -527,6 +533,8 @@ Ama o gece yalnızca Gümüş, Mylera hakkında bir şey öğrenmemişti. Mylera
 Gümüş Kargaayağı’na dönerken bunları düşünmüyordu. Aklında yalnızca kazandığı pazarlığın tadı vardı.
 
 Oysa Doskvol’da gücünü göstermekle zaafını açık etmek arasında bazen birkaç kelimelik fark bulunurdu. Ve Mylera o gece Gümüş’ün ikisini de görmüştü.
+
+![Sis, tayfanın toplandığı masaya bir avuç mangır saçar.](../../assets/images/ipekyali-ganimet.avif)
 
 ## XIII. Beş Haydut, Bir Kasa, Fazla Sayıda Cep
 
