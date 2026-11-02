@@ -6,8 +6,7 @@ series: bos-bedenler.json
 episode: 1
 author: dr-a-sorel.json
 ---
-
-#### Sicim çeyreği[^1]
+#### Sicim çeyreği [🕰️](../../takvim/)
 
 Lord Cassian Rell'in ateşi otuz dokuz derece sekiz çizgisindeydi. Nabzı hızlı, solunumu yüzeyseldi. Bilinci yerindeydi.
 
@@ -35,7 +34,9 @@ Rell'in tavsiye ettiği hastalar muayenehanemin gelirinin önemli bir bölümün
 
 Talebini kabul ettim.
 
-#### İpeğe sülüs[^1]
+
+
+#### İpeğe sülüs [🕰️](../../takvim/)
 
 Katedralin doğu tarafındaki kapı, sokak seviyesinden altı basamak aşağıdaydı. Üzerinde herhangi bir yazı bulunmuyordu. Demir halkayı iki kez vurdum.
 
@@ -133,7 +134,7 @@ Maskemi çıkardım. Tepsiye bıraktım.
 
 Hizmetkâr ellerimi açmamı istedi. Eldiven giymediğimden avuçlarımı doğrudan gösterdim. Önce içlerine, sonra parmak aralarına baktı. Ardından geçmeme izin verdi.
 
-#### İpek kısa buçuğu[^1]
+#### İpek kısa buçuğu [🕰️](../../takvim/)
 
 Eve yürürken uzaktan tek bir çan sesi duydum.[^2]
 
@@ -141,7 +142,7 @@ Eve yürürken uzaktan tek bir çan sesi duydum.[^2]
 
 ![Kullanılmış otopsi aletleri arasında açık duran, anatomi eskizleri, el yazısı notlar ve kan lekeleriyle dolu bir doktor defteri](../../assets/images/gulumseyen-kadin-vaka-defteri.avif)
 
-#### Üçüncü sülüsü[^1]
+#### Üçüncü sülüsü [🕰️](../../takvim/)
 
 Profesör Severin Halbrecht beni sabah erkenden çağırdı.
 
@@ -207,6 +208,4 @@ Tıbbi inceleme kayıtlarında bu tür bakışların değerlendirilmesine ayrıl
 
 ---
 
-_Birinci bölümün sonu. Dr. Sorel'in vaka defteri bir sonraki sayıda devam edecek._
-
-[^1]: Doskvol saatleri: Sabah 6:00 Birinci (saat) — 17:00 Onikinci (saat). Akşam 18:00 Eşref – 19:00 Nağme – 20:00 Gümüş – 21:00 Sicim – 22:00 Alev – 23:00 Mercan – 00:00 İpek – 01:00 Mey – 02:00 Kül – 03:00 Kömür – 04:00 Zincir – 05:00 Duman. :05 önceki ardı, :10 önceki kısa çeyreği :15 önceki çeyreği :20 önceki sülüsü, :25 önceki kısa buçuğu, :30 önceki buçuğu, :35 önceki buçuk ardı, :40 sonrakine sülüs, :45 sonrakine çeyrek, :50 sonrakine kısa çeyrek, :55 sonrakine kısa
+*Birinci bölümün sonu. Dr. Sorel'in vaka defteri bir sonraki sayıda devam edecek.*
