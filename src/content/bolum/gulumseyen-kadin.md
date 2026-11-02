@@ -6,7 +6,10 @@ series: bos-bedenler.json
 episode: 1
 author: dr-a-sorel.json
 ---
-#### Sicim çeyreği [🕰️](../../takvim/)
+
+#### Sicim vaktini çeyrek geçe[^1]
+
+[^1]: Editörün notu: Dr. Sorel saatleri _Sicim ¼_ ve benzeri kısa şekilde not etmiş. Biz okurun rahatı için saatleri tekmil ismi ile yazdık.
 
 Lord Cassian Rell'in ateşi otuz dokuz derece sekiz çizgisindeydi. Nabzı hızlı, solunumu yüzeyseldi. Bilinci yerindeydi.
 
@@ -34,9 +37,7 @@ Rell'in tavsiye ettiği hastalar muayenehanemin gelirinin önemli bir bölümün
 
 Talebini kabul ettim.
 
-
-
-#### İpeğe sülüs [🕰️](../../takvim/)
+#### İpek vaktine sülüs kala [^1]
 
 Katedralin doğu tarafındaki kapı, sokak seviyesinden altı basamak aşağıdaydı. Üzerinde herhangi bir yazı bulunmuyordu. Demir halkayı iki kez vurdum.
 
@@ -134,15 +135,15 @@ Maskemi çıkardım. Tepsiye bıraktım.
 
 Hizmetkâr ellerimi açmamı istedi. Eldiven giymediğimden avuçlarımı doğrudan gösterdim. Önce içlerine, sonra parmak aralarına baktı. Ardından geçmeme izin verdi.
 
-#### İpek kısa buçuğu [🕰️](../../takvim/)
+#### İpek vakti kısa buçuğu [^1]
 
-Eve yürürken uzaktan tek bir çan sesi duydum.[^1]
+Eve yürürken uzaktan tek bir çan sesi duydum.[^2]
 
-[^1]: Bu saati sonradan doğruladım
+[^2]: Bu saati sonradan doğruladım
 
 ![Kullanılmış otopsi aletleri arasında açık duran, anatomi eskizleri, el yazısı notlar ve kan lekeleriyle dolu bir doktor defteri](../../assets/images/gulumseyen-kadin-vaka-defteri.avif)
 
-#### Üçüncü sülüsü [🕰️](../../takvim/)
+#### Üçüncü saati sülüs geçe [^1]
 
 Profesör Severin Halbrecht beni sabah erkenden çağırdı.
 
@@ -208,4 +209,6 @@ Tıbbi inceleme kayıtlarında bu tür bakışların değerlendirilmesine ayrıl
 
 ---
 
-*Birinci bölümün sonu. Dr. Sorel'in vaka defteri bir sonraki sayıda devam edecek.*
+_Birinci bölümün sonu. Dr. Sorel'in vaka defteri bir sonraki sayıda devam edecek._
+
+[^1]: Editörün notu: Dr. Sorel saatleri _Sicim ¼_ ve benzeri kısa şekilde not etmiş. Biz okurun rahatı için [saatleri](../../takvim/ "Doskvol takvimi") tekmil ismi ile yazdık.
