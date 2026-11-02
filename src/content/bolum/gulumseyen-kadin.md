@@ -136,9 +136,9 @@ Hizmetkâr ellerimi açmamı istedi. Eldiven giymediğimden avuçlarımı doğru
 
 #### İpek kısa buçuğu [🕰️](../../takvim/)
 
-Eve yürürken uzaktan tek bir çan sesi duydum.[^2]
+Eve yürürken uzaktan tek bir çan sesi duydum.[^1]
 
-[^2]: Bu saati sonradan doğruladım
+[^1]: Bu saati sonradan doğruladım
 
 ![Kullanılmış otopsi aletleri arasında açık duran, anatomi eskizleri, el yazısı notlar ve kan lekeleriyle dolu bir doktor defteri](../../assets/images/gulumseyen-kadin-vaka-defteri.avif)
 
