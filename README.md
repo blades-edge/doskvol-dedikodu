@@ -37,7 +37,7 @@ Koleksiyon kimlikleri, klasörler ve CMS menüleri tekil adlar kullanır:
 Yeni sayı için:
 
 1. Gerekli yazar, makale, tefrika ve bölümleri hazırlayın.
-2. Sayıyı çalışma dalında oluşturun; tarih ve bedeli girin. Kapak alanlarını isterseniz doldurun; boş alanlar manşet makalesinden alınır.
+2. Sayıyı çalışma dalında oluşturun; gerçek yayın tarihini (RSS), İmparatorluk tarihini ve bedeli girin. İmparatorluk tarihi önceki sayının tarihinden sonra gelmiyorsa derleme günlüğünde bir hatırlatma görünür. Kapak alanlarını isterseniz doldurun; boş alanlar manşet makalesinden alınır.
 3. **Bu sayıdaki makaleler** ve **Bu sayıdaki tefrika bölümleri** listelerinden içeriği seçin.
 4. İlk makale varsayılan manşettir. Farklı bir makale için listede bulunan bir metni **Manşet makalesi** olarak seçin.
 5. PR önizlemesini kontrol edin; hazır olduğunda PR’ı `main` dalına birleştirin.

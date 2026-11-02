@@ -1,4 +1,5 @@
 ---
+import { formatImperialDate } from "@utils/imperial-date";
 import PreviewNotice from "@components/PreviewNotice.astro";
 import { Image } from "astro:assets";
 import media from "../settings/media.json";
@@ -42,10 +43,7 @@ const series =
   article.data.series && publication.serialsById.get(article.data.series.id)!;
 const prefix = import.meta.env.BASE_URL;
 const preview = `${prefix}${issuePath(issue.data.number)}`;
-const dateLabel = issue.data.date.toLocaleDateString("tr-TR", {
-  dateStyle: "long",
-  timeZone: "UTC",
-});
+const dateLabel = formatImperialDate(issue.data.imperialDate);
 const chapters = series ? chaptersForSeries(publication, series.id) : [];
 const chapterIndex = chapters.findIndex(chapter => chapter.id === article.id);
 const previous = chapters[chapterIndex - 1];
@@ -96,9 +94,9 @@ const related = articlesForIssue(publication, issue.id).find(
           <h1>{title}</h1>
           <p class="reading-deck">{description}</p>
           <div class="reading-meta">
-            <span>{author.data.name}</span><time
-              datetime={issue.data.date.toISOString()}>{dateLabel}</time
-            ><span>Sayı {issueSlug(issue.data.number)}</span>
+            <span>{author.data.name}</span>
+            <a href={`${prefix}takvim/`}>{dateLabel}</a>
+            <a href={`${prefix}sayi/`}>Sayı {issueSlug(issue.data.number)}</a>
           </div>
         </header>
         {

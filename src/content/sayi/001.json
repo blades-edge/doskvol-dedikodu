@@ -1,6 +1,7 @@
 {
   "number": 1,
   "date": "2026-11-01",
+  "imperialDate": { "day": 23, "month": "Mendar", "year": 847 },
   "price": "2 pençik",
   "articles": [
     "strangford-dosyasi.md",

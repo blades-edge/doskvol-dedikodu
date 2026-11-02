@@ -3,6 +3,8 @@ import { defineCollection, reference } from "astro:content";
 import { z } from "astro/zod";
 import { glob } from "astro/loaders";
 
+import { imperialMonths } from "./utils/imperial-date.ts";
+
 const cmsReference = <
   T extends "makale" | "sayi" | "yazar" | "tefrika" | "bolum",
 >(
@@ -30,6 +32,11 @@ const issues = defineCollection({
       number: z.number().int().positive(),
       description: optionalText,
       date: z.coerce.date(),
+      imperialDate: z.object({
+        day: z.number().int().min(1).max(60),
+        month: z.enum(imperialMonths),
+        year: z.number().int().min(800).max(1200),
+      }),
       price: z.string().min(1),
       lead: z.preprocess(contentReferenceId, reference("makale").optional()),
       articles: z.preprocess(

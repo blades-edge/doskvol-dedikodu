@@ -4,8 +4,8 @@ import { buildEditorialIndex, articlesForIssue, chaptersForSeries, groupSerialCh
 function fixture() {
   return {
     issues: [
-      {id:"one",data:{number:1,lead:{id:"news"},articles:[{id:"news"},{id:"rumor"}],chapters:[{id:"chapter-one"}]}},
-      {id:"two",data:{number:2,lead:{id:"news-two"},articles:[{id:"news-two"}],chapters:[{id:"chapter-two"}]}},
+      {id:"one",data:{number:1,imperialDate:{day:60,month:"Elisar",year:847},lead:{id:"news"},articles:[{id:"news"},{id:"rumor"}],chapters:[{id:"chapter-one"}]}},
+      {id:"two",data:{number:2,imperialDate:{day:1,month:"Mendar",year:848},lead:{id:"news-two"},articles:[{id:"news-two"}],chapters:[{id:"chapter-two"}]}},
     ],
     articles: [
       {id:"news-two",data:{issue:{id:"two"},author:{id:"reporter"},order:0}},
@@ -123,3 +123,18 @@ test("serial cards group by series ID while preserving selection order",()=>{
  data.issues[0].data.lead={id:"rumor"};
  assert.equal(buildEditorialIndex(data).issuesById.get("one").data.lead.id,"rumor");
  });
+
+test("out-of-order issue dates warn without blocking publication", t => {
+  const warn = t.mock.method(console, "warn", () => {});
+  const data = fixture();
+  data.issues.reverse();
+  buildEditorialIndex(data);
+  assert.equal(warn.mock.callCount(), 0);
+  const [later, earlier] = data.issues;
+  for (const day of [60, 59]) {
+    later.data.imperialDate = { ...earlier.data.imperialDate, day };
+    assert.equal(buildEditorialIndex(data).issues.length, 2);
+    assert.match(warn.mock.calls.at(-1).arguments[0], /Sayı 2.*Sayı 1/);
+    warn.mock.resetCalls();
+  }
+});

@@ -34,7 +34,7 @@ content:
       rename: false
     view:
       primary: number
-      fields: [number, date]
+      fields: [number, imperialDate.day, imperialDate.month, imperialDate.year]
       sort: [number, date]
       default: { sort: number, order: desc }
     fields:
@@ -45,10 +45,31 @@ content:
         options: { min: 1 }
         description: "1, 2, 3… Her sayı için farklı bir tam sayı kullanın."
       - name: date
-        label: Yayın tarihi
+        label: Gerçek yayın tarihi (RSS)
         type: date
         required: true
         options: { format: yyyy-MM-dd }
+      - name: imperialDate
+        label: İmparatorluk tarihi
+        type: object
+        required: true
+        fields:
+          - name: day
+            label: Gün
+            type: number
+            required: true
+            options: { min: 1, max: 60 }
+          - name: month
+            label: Ay
+            type: select
+            required: true
+            options:
+              values: [Mendar, Kalivet, Suran, Ulsivet, Volnivet, Elisar]
+          - name: year
+            label: Yıl
+            type: number
+            required: true
+            options: { min: 800, max: 1200 }
       - name: price
         label: Baskı bedeli
         type: string

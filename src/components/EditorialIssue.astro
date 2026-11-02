@@ -1,4 +1,5 @@
 ---
+import { formatImperialDate } from "@utils/imperial-date";
 import PreviewNotice from "@components/PreviewNotice.astro";
 import media from "../settings/media.json";
 import { imageKey } from "../utils/engraving.mjs";
@@ -20,7 +21,7 @@ interface Props {
   publication: EditorialIndex;
 }
 const { issue, publication } = Astro.props;
-const { number, description, date, price, cover, coverAlt, coverCaption } =
+const { number, description, imperialDate, price, cover, coverAlt, coverCaption } =
   issue.data;
 const imageAssets = import.meta.glob<{
   default: import("astro").ImageMetadata;
@@ -43,10 +44,7 @@ const sections = [
   name,
   articles: remaining.filter(article => article.data.section === name),
 }));
-const dateLabel = date.toLocaleDateString("tr-TR", {
-  dateStyle: "long",
-  timeZone: "UTC",
-});
+const dateLabel = formatImperialDate(imperialDate);
 const position = publication.issues.findIndex(entry => entry.id === issue.id);
 const newer = publication.issues[position - 1];
 const older = publication.issues[position + 1];
@@ -78,9 +76,9 @@ const older = publication.issues[position + 1];
           <WeatherTheme />
         </div>
         <div class="issue">
-          <span>Sayı {issueSlug(number)}</span><time
-            datetime={date.toISOString()}>{dateLabel}</time
-          ><span>Bedeli: {price}</span>
+          <a href={`${prefix}sayi/`}>Sayı {issueSlug(number)}</a>
+          <a href={`${prefix}takvim/`}>{dateLabel}</a>
+          <span>Bedeli: {price}</span>
         </div>
         <nav class="nav" aria-label="Yayın bölümleri">
           <a href="#manset">Manşet</a>{

@@ -1,5 +1,7 @@
 import type { CollectionEntry } from "astro:content";
 
+import { imperialDateOrder } from "./imperial-date.ts";
+
 export interface EditorialContent {
   issues: CollectionEntry<"sayi">[];
   articles: CollectionEntry<"makale">[];
@@ -92,6 +94,11 @@ export function buildEditorialIndex(
   const issues = [...content.issues].sort(
     (a, b) => b.data.number - a.data.number
   );
+  for (const [index, issue] of issues.entries()) {
+    const previous = issues[index + 1];
+    if (previous && imperialDateOrder(issue.data.imperialDate) <= imperialDateOrder(previous.data.imperialDate))
+      console.warn(`Sayı ${issue.data.number}: İmparatorluk tarihi, Sayı ${previous.data.number} tarihinden sonra gelmiyor. Tarihleri gözden geçirin.`);
+  }
   const articles = [
     ...content.articles
       .filter(article => selectedArticles.has(article.id))
