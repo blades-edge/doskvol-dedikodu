@@ -4,7 +4,7 @@ description: Rıhtım'ın eski sofralarında artık yalnızca porsiyonlar küç�
   Bir lokantanın arka masası aylardır boş; örtüsü ise her akşam yeniden
   seriliyor.
 author: gaspar-merrow.json
-section: Dedikodular
+section: Haberler
 district: Rıhtım
 ---
 On yıldır uğradığım küçük bir lokanta vardır. Adını vermeyeceğim; zira sahibinin başı, benim yazdıklarımdan bağımsız olarak yeterince dertte.
