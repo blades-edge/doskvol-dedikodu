@@ -1,4 +1,5 @@
 ---
+import PreviewNotice from "@components/PreviewNotice.astro";
 import media from "../settings/media.json";
 import { imageKey } from "../utils/engraving.mjs";
 import WeatherTheme from "@components/WeatherTheme.astro";
@@ -27,7 +28,7 @@ const imageAssets = import.meta.glob<{
 const darkCover = media.darkModeImages.some(path =>
   Object.entries(imageAssets).some(
     ([assetPath, asset]) =>
-      imageKey(assetPath) === imageKey(path) && asset.default.src === cover.src
+      imageKey(assetPath) === imageKey(path) && asset.default.src === cover?.src
   )
 );
 const prefix = import.meta.env.BASE_URL;
@@ -63,14 +64,7 @@ const older = publication.issues[position + 1];
     /></head
   >
   <body>
-    {
-      publication.preview && (
-        <aside class="preview-notice">
-          PR önizlemesi · Bağlantısı olan herkes görebilir. Normal yayına dahil
-          değildir.
-        </aside>
-      )
-    }
+    <PreviewNotice />
     <div class="paper">
       <header>
         <div class="masthead">
@@ -127,19 +121,23 @@ const older = publication.issues[position + 1];
               </>
             )
           }
-          <Image
-            src={cover}
-            alt={coverAlt}
-            class:list={[
-              "editorial-engraving",
-              { "engraving-dark": darkCover },
-            ]}
-            widths={[480, 960, 1440, 2060]}
-            sizes="(max-width: 720px) calc(100vw - 3rem), (max-width: 1160px) 92vw, 1046px"
-            loading="eager"
-            fetchpriority="high"
-          />
-          <div class="caption">{coverCaption}</div>
+          {
+            cover && (
+              <Image
+                src={cover}
+                alt={coverAlt ?? ""}
+                class:list={[
+                  "editorial-engraving",
+                  { "engraving-dark": darkCover },
+                ]}
+                widths={[480, 960, 1440, 2060]}
+                sizes="(max-width: 720px) calc(100vw - 3rem), (max-width: 1160px) 92vw, 1046px"
+                loading="eager"
+                fetchpriority="high"
+              />
+            )
+          }
+          {coverCaption && <div class="caption">{coverCaption}</div>}
         </section>
         {
           sections.map(section => (

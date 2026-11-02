@@ -34,7 +34,7 @@ content:
       rename: false
     view:
       primary: number
-      fields: [number, date, draft]
+      fields: [number, date]
       sort: [number, date]
       default: { sort: number, order: desc }
     fields:
@@ -44,20 +44,11 @@ content:
         required: true
         options: { min: 1 }
         description: "1, 2, 3… Her sayı için farklı bir tam sayı kullanın."
-      - name: draft
-        label: Taslak sayı
-        type: boolean
-        default: true
-        description: "Açıksa sayı ve ona bağlı makaleler ana yayında görünmez; PR önizlemesinde görünür. Manşeti seçtikten ve makaleleri tamamladıktan sonra kapatın."
       - name: date
         label: Yayın tarihi
         type: date
         required: true
         options: { format: yyyy-MM-dd }
-      - name: description
-        label: Kapak spotu
-        type: text
-        required: true
       - name: price
         label: Baskı bedeli
         type: string
@@ -66,16 +57,33 @@ content:
       - name: lead
         label: Manşet makalesi
         type: reference
-        description: "Aşağıdaki makale listesinde bulunan bir makaleyi seçin. Manşet her zaman kapakta önce gösterilir."
+        description: "İsteğe bağlı. Boşsa aşağıdaki listedeki ilk makale manşet olur. Seçerseniz listede bulunan bir makaleyi seçin."
         options:
           collection: makale
           value: "{name}"
           label: "{fields.title}"
           search: "name,fields.title"
+      - name: description
+        label: Kapak spotu (isteğe bağlı)
+        type: text
+        description: "Boşsa manşet makalesinin spotu kullanılır."
+      - name: cover
+        label: Kapak gravürü (isteğe bağlı)
+        type: image
+        description: "Boşsa manşet makalesinin gravürü kullanılır."
+      - name: coverAlt
+        label: Görselin kısa betimi
+        type: text
+        description: "Boşsa manşet makalesindeki betim kullanılır."
+      - name: coverCaption
+        label: Görsel altyazısı
+        type: string
+        description: "Boşsa manşet makalesindeki altyazı kullanılır."
+
       - name: articles
         label: Bu sayıdaki makaleler
         type: reference
-        description: "Seçim listesinin sırası gazeteye yansır; aynı bölümdeki makaleler bu sırayla görünür. Manşeti de listeye ekleyin. Seçilmeyen makaleler yayımlanmaz."
+        description: "Seçim listesinin sırası gazeteye yansır; aynı bölümdeki makaleler bu sırayla görünür. İlk makale varsayılan manşettir; ayrıca manşet seçtiyseniz onu da listeye ekleyin. Seçilmeyen makaleler yayımlanmaz."
         options:
           collection: makale
           multiple: true
@@ -92,19 +100,6 @@ content:
           value: "{name}"
           label: "Bölüm {fields.episode} · {fields.title}"
           search: "name,fields.title,fields.episode"
-      - name: cover
-        label: Kapak gravürü
-        type: image
-        required: true
-      - name: coverAlt
-        label: Görselin kısa betimi
-        type: text
-        required: true
-        description: "Görseli göremeyen okurlar için neyi gösterdiğini anlatın."
-      - name: coverCaption
-        label: Görsel altyazısı
-        type: string
-        required: true
 
   - name: makale
     label: Makale
@@ -150,6 +145,17 @@ content:
         description: "Gazetede kullanılan mahallelerden seçin. Listede olmayan mahalle veya ayrıntılı mekân adını aşağıya yazabilirsiniz."
       - { name: location, label: Ek yer / serbest mekân adı, type: string }
       - { name: spoiler, label: Spoiler uyarısı, type: text }
+      - name: cover
+        label: Makale gravürü (isteğe bağlı)
+        type: image
+        description: "Makale manşet olduğunda kapak gravürü için de kullanılır."
+      - name: coverAlt
+        label: Gravürün kısa betimi
+        type: text
+        description: "Görseli göremeyen okurlar için neyi gösterdiğini anlatın."
+      - name: coverCaption
+        label: Gravür altyazısı
+        type: string
       - name: body
         label: Makale metni
         type: rich-text

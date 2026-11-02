@@ -19,6 +19,25 @@ export function buildEditorialIndex(
   const articlesById = new Map(
     content.articles.map(entry => [entry.id, entry])
   );
+  content = {
+    ...content,
+    issues: content.issues.map(issue => {
+      const leadRef = issue.data.lead ?? issue.data.articles?.[0];
+      const lead = leadRef && articlesById.get(leadRef.id);
+      const cover = issue.data.cover ?? lead?.data.cover;
+      return {
+        ...issue,
+        data: {
+          ...issue.data,
+          lead: leadRef,
+          description: issue.data.description || lead?.data.description,
+          cover,
+          coverAlt: issue.data.coverAlt || lead?.data.coverAlt || "",
+          coverCaption: issue.data.coverCaption || lead?.data.coverCaption,
+        },
+      };
+    }),
+  };
   const authorsById = new Map(content.authors.map(entry => [entry.id, entry]));
   const serialsById = new Map(content.serials.map(entry => [entry.id, entry]));
   const numbers = new Set<number>();
@@ -45,7 +64,6 @@ export function buildEditorialIndex(
     if (numbers.has(issue.data.number))
       throw new Error(`Tekrarlanan sayı numarası: ${issue.data.number}`);
     numbers.add(issue.data.number);
-    if (issue.data.draft && !preview) continue;
     const lead = issue.data.lead && articlesById.get(issue.data.lead.id);
     if (
       !preview &&
@@ -71,9 +89,9 @@ export function buildEditorialIndex(
     if (!authorsById.has(article.data.author.id))
       throw new Error(`${article.id}: Yazar bulunamadı.`);
   }
-  const issues = content.issues
-    .filter(issue => preview || !issue.data.draft)
-    .sort((a, b) => b.data.number - a.data.number);
+  const issues = [...content.issues].sort(
+    (a, b) => b.data.number - a.data.number
+  );
   const articles = [
     ...content.articles
       .filter(article => selectedArticles.has(article.id))

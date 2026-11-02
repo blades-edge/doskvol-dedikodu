@@ -1,4 +1,8 @@
 ---
+import PreviewNotice from "@components/PreviewNotice.astro";
+import { Image } from "astro:assets";
+import media from "../settings/media.json";
+import { imageKey } from "../utils/engraving.mjs";
 import WeatherTheme from "@components/WeatherTheme.astro";
 import { articlePath, issuePath } from "@utils/paths";
 import EditorialHead from "@components/EditorialHead.astro";
@@ -16,6 +20,22 @@ interface Props {
 }
 const { article, publication } = Astro.props;
 const { title, description, section, episode, spoiler } = article.data;
+const cover = "cover" in article.data ? article.data.cover : undefined;
+const coverAlt = "coverAlt" in article.data ? article.data.coverAlt : undefined;
+const coverCaption =
+  "coverCaption" in article.data ? article.data.coverCaption : undefined;
+const imageAssets = import.meta.glob<{
+  default: import("astro").ImageMetadata;
+}>("../assets/images/*", { eager: true });
+const darkCover =
+  cover &&
+  media.darkModeImages.some(path =>
+    Object.entries(imageAssets).some(
+      ([assetPath, asset]) =>
+        imageKey(assetPath) === imageKey(path) &&
+        asset.default.src === cover.src
+    )
+  );
 const author = publication.authorsById.get(article.data.author.id)!;
 const issue = publication.issuesById.get(article.data.issue.id)!;
 const series =
@@ -41,21 +61,14 @@ const related = articlesForIssue(publication, issue.id).find(
     ><EditorialHead
       {title}
       {description}
-      image={issue.data.cover}
-      imageAlt={issue.data.coverAlt}
+      image={cover ?? issue.data.cover}
+      imageAlt={coverAlt ?? issue.data.coverAlt}
       type="article"
       noindex={publication.preview}
     /></head
   >
   <body>
-    {
-      publication.preview && (
-        <aside class="preview-notice">
-          PR önizlemesi · Bağlantısı olan herkes görebilir. Normal yayına dahil
-          değildir.
-        </aside>
-      )
-    }
+    <PreviewNotice />
     <a class="reading-skip" href="#reading-content">Makaleye geç</a>
     <div class="paper reading-paper">
       <header class="masthead reading-masthead">
@@ -96,6 +109,25 @@ const related = articlesForIssue(publication, issue.id).find(
                 <p>{spoiler}</p>
               </>
             </aside>
+          )
+        }
+        {
+          cover && (
+            <figure>
+              <Image
+                src={cover}
+                alt={coverAlt ?? ""}
+                class:list={[
+                  "editorial-engraving",
+                  { "engraving-dark": darkCover },
+                ]}
+                widths={[480, 960, 1440]}
+                sizes="(max-width: 720px) calc(100vw - 3rem), 92vw"
+              />
+              {coverCaption && (
+                <figcaption class="caption">{coverCaption}</figcaption>
+              )}
+            </figure>
           )
         }
         <article class="reading-copy" aria-label={title}><slot /></article>

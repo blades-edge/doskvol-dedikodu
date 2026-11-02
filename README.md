@@ -30,19 +30,19 @@ Koleksiyon kimlikleri, klasörler ve CMS menüleri tekil adlar kullanır:
 | Tefrika bölümü | `src/content/bolum/`   | Seriye bağlı bölüm, bölüm numarası ve metin              |
 | Yazar          | `src/content/yazar/`   | Ortak imza ve tanıtım                                    |
 
-[Pages CMS](https://app.pagescms.org/) içinde `blades-edge/doskvol-dedikodu` deposunun `main` dalını kullanın. Kaydetmek GitHub’a commit oluşturur ve Pages yayınını tetikler.
+[Pages CMS](https://app.pagescms.org/) içinde `blades-edge/doskvol-dedikodu` deposunda sayıya ait çalışma dalını kullanın. Kaydetmek bu dala commit oluşturur; açık PR’ın önizlemesi güncellenir. `main` dalına birleştirmek ana yayını tetikler.
 
 İçerik dosyalarının adı kalıcı kimliktir; başlık değişse de dosya adı değişmez. CMS referansları `.md` ve `.json` uzantılarıyla saklanabilir; Astro bunları kimliğe dönüştürür. Mevcut uzantısız referanslar da desteklenir. İçerik şemasındaki alan anahtarları, eski kayıtların korunması için değişmedi.
 
 Yeni sayı için:
 
 1. Gerekli yazar, makale, tefrika ve bölümleri hazırlayın.
-2. Sayıyı **Taslak sayı** açıkken oluşturun; kapak, tarih, spot ve bedeli girin.
+2. Sayıyı çalışma dalında oluşturun; tarih ve bedeli girin. Kapak alanlarını isterseniz doldurun; boş alanlar manşet makalesinden alınır.
 3. **Bu sayıdaki makaleler** ve **Bu sayıdaki tefrika bölümleri** listelerinden içeriği seçin.
-4. Makale listesinde bulunan bir metni **Manşet makalesi** olarak seçin.
-5. Hazır olduğunda **Taslak sayı** seçeneğini kapatın.
+4. İlk makale varsayılan manşettir. Farklı bir makale için listede bulunan bir metni **Manşet makalesi** olarak seçin.
+5. PR önizlemesini kontrol edin; hazır olduğunda PR’ı `main` dalına birleştirin.
 
-Seçim listelerinin sırası gazeteye yansır. Makaleler kendi bölümlerinde gruplanır; manşet kapakta önce gelir. Aynı tefrikanın bölümleri tek kutudadır. Okuma sayfalarındaki önceki/sonraki bölüm bağlantıları bölüm numarasına göre ilerler. Bir metin yalnızca bir yayımlanmış sayıya bağlanabilir. Seçilmemiş içerikler ve taslak sayılar normal yayında, arşivde, RSS’te ve tefrika geçişlerinde görünmez.
+Seçim listelerinin sırası gazeteye yansır. Makaleler kendi bölümlerinde gruplanır; manşet kapakta önce gelir. Aynı tefrikanın bölümleri tek kutudadır. Okuma sayfalarındaki önceki/sonraki bölüm bağlantıları bölüm numarasına göre ilerler. Bir metin yalnızca bir yayımlanmış sayıya bağlanabilir. Seçilmemiş içerikler normal yayında, arşivde, RSS’te ve tefrika geçişlerinde görünmez. `main` dalındaki bütün sayılar yayımlanır.
 
 Mahalle alanı sabit seçenekler içerir; serbest mekân alanına yeni mahalle, sokak veya bina yazılabilir. Görseller `src/assets/images/` içinde saklanır. CMS’nin yazdığı `../../assets/images/...` yolu bütün içerik koleksiyonlarında aynı konuma ulaşır.
 
@@ -79,9 +79,9 @@ Tefrika adresi serinin JSON dosyasının kalıcı kimliğini kullanır. Bölüm 
 
 MIT. Proje [AstroPaper](https://github.com/satnaing/astro-paper) temelinden geliştirilmiştir; özgün telif bildirimi LICENSE dosyasında korunur.
 
-## Taslak sayılar
+## Taslak çalışma akışı
 
-**Taslak sayı** açık olan sayılar ana yayında görünmez. PR önizlemesinde taslaklar da arşive ve sayı sayfalarına dahil edilir; manşet tamamlanmadan görüntülenebilir. Ayrı bir sayı önizleme anahtarı veya `/taslak/sayi/NUMARA/` adresi yoktur. Örneğin PR #42 içindeki ikinci sayı `/doskvol-dedikodu/taslak/pr-42/sayi/002/` adresindedir.
+Taslaklar çalışma dallarında ve PR’larda tutulur; sayılarda ayrıca bir taslak alanı yoktur. PR önizlemesi dalın bütün sayılarını içerir ve manşet tamamlanmadan görüntülenebilir. Ana yayın ise bütün sayılarda geçerli bir manşet ister. PR `main` dalına birleştirildiğinde içerik yayımlanır. Örneğin PR #42 içindeki ikinci sayı `/doskvol-dedikodu/taslak/pr-42/sayi/002/` adresindedir.
 
 ## Gravür üretim standardı
 

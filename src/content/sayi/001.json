@@ -1,18 +1,12 @@
 {
   "number": 1,
-  "description": "Kızıl Kuşaklar Okulu’nun kapıları gece yarısından sonra üç kez açıldı. İçeri girenlerin adları yoktu; çıkışlarıysa hiçbir deftere yazılmadı.",
-  "date": "2026-10-29",
-  "price": "20 pençik",
-  "lead": "gece-yarisi-ziyareti.md",
-  "cover": "../../assets/images/doskvol-line-engraving.png",
-  "coverAlt": "Bir kanalın kıyısındaki taş okul, köprüler ve uzaktaki fabrika bacaları; kâğıt üzerinde değişen kalınlıkta mürekkep çizgileri.",
-  "coverCaption": "Doskvol’da gece — gazete için hazırlanmış temsili gravür.",
-  "draft": false,
+  "date": "2026-11-01",
+  "price": "2 pençik",
   "articles": [
-    "olum-cani-cenaze-yok.md",
-    "sislerin-arasinda-kaybolan-yuk.md",
-    "roric-katili.md",
+    "strangford-dosyasi.md",
     "dort-kisi-geldiler.md",
-    "bir-tabakta-eksilenler.md"
-  ]
+    "bir-tabakta-eksilenler.md",
+    "olum-cani-olu-yok.md"
+  ],
+  "chapters": ["ipekyalida-bir-gece.md", "gulumseyen-kadin.md"]
 }

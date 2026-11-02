@@ -31,11 +31,11 @@ test("issues include their selected chapters and preserve reading IDs",()=>{
 test("chapters navigate in episode order across issues",()=>{
  assert.deepEqual(chaptersForSeries(buildEditorialIndex(fixture()),"diary").map(c=>c.id),["chapter-one","chapter-two"]);
 });
-test("unselected chapters and draft issue chapters are not published",()=>{
- const data=fixture();data.issues[1].data.draft=true;delete data.issues[1].data.lead;
+test("unselected chapters are not published",()=>{
+ const data=fixture();data.issues[1].data.chapters=[];
  const index=buildEditorialIndex(data);
  assert.equal(index.articlesById.has("chapter-two"),false);
- assert.equal(index.articlesById.has("news-two"),false);
+ assert.equal(index.articlesById.has("news-two"),true);
  assert.deepEqual(chaptersForSeries(index,"diary").map(c=>c.id),["chapter-one"]);
  data.issues[0].data.chapters=[];
  assert.deepEqual(chaptersForSeries(buildEditorialIndex(data),"diary"),[]);
@@ -46,7 +46,7 @@ test("issues can omit chapter selection",()=>{
 });
 for(const [name,mutate,message] of [
  ["foreign lead",d=>d.issues[0].data.lead.id="news-two",/Manşet/],
- ["missing lead",d=>delete d.issues[0].data.lead,/Manşet/],
+ ["empty article list",d=>{delete d.issues[0].data.lead;d.issues[0].data.articles=[]},/Manşet/],
  ["duplicate issue",d=>d.issues[1].data.number=1,/sayı numarası/],
  ["missing author",d=>d.articles[0].data.author.id="missing",/Yazar/],
  ["missing article",d=>d.issues[0].data.articles.push({id:"missing"}),/Yazı bulunamadı/],
@@ -94,15 +94,32 @@ test("serial cards group by series ID while preserving selection order",()=>{
  assert.deepEqual(groupSerialChapters([]),[]);
 });
 
- test("PR preview includes published and draft issues and permits an unfinished lead",()=>{
- const data=fixture(); const issue=data.issues[1]; issue.data.draft=true; delete issue.data.lead;
+ test("all issues are published and only PR preview permits an unfinished lead",()=>{
+ const data=fixture(); const issue=data.issues[1]; delete issue.data.lead;
  const publicIndex=buildEditorialIndex(data);
  const preview=buildEditorialIndex(data,{preview:true});
- assert.equal(publicIndex.articlesById.has("news-two"),false);
+ assert.equal(publicIndex.articlesById.has("news-two"),true);
+ assert.equal(publicIndex.issues.length,2);
  assert.equal(preview.preview,true);
  assert.equal(preview.issues.length,2);
  assert.deepEqual(articlesForIssue(preview,"two").map(a=>a.id),["news-two","chapter-two"]);
  assert.equal(preview.articlesById.has("news"),true);
  issue.data.articles=[];issue.data.chapters=[];
+ assert.throws(()=>buildEditorialIndex({...data,issues:[issue]}),/Manşet/);
  assert.deepEqual(buildEditorialIndex({...data,issues:[issue]},{preview:true}).articles,[]);
+ });
+
+ test("lead defaults to first selected article and cover fields fall back individually",()=>{
+ const data=fixture();delete data.issues[0].data.lead;
+ const article=data.articles.find(a=>a.id==="news");
+ Object.assign(article.data,{description:"Article spot",cover:{src:"ink.png"},coverAlt:"Article alt",coverCaption:"Article caption"});
+ data.issues[0].data.coverCaption="Issue caption";
+ const issue=buildEditorialIndex(data).issuesById.get("one");
+ assert.equal(issue.data.lead.id,"news");
+ assert.equal(issue.data.description,"Article spot");
+ assert.deepEqual(issue.data.cover,{src:"ink.png"});
+ assert.equal(issue.data.coverAlt,"Article alt");
+ assert.equal(issue.data.coverCaption,"Issue caption");
+ data.issues[0].data.lead={id:"rumor"};
+ assert.equal(buildEditorialIndex(data).issuesById.get("one").data.lead.id,"rumor");
  });

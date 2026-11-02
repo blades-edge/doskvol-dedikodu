@@ -28,10 +28,9 @@ const issues = defineCollection({
   schema: ({ image }) =>
     z.object({
       number: z.number().int().positive(),
-      description: z.string().min(1),
+      description: optionalText,
       date: z.coerce.date(),
       price: z.string().min(1),
-      draft: z.boolean().default(false),
       lead: z.preprocess(contentReferenceId, reference("makale").optional()),
       articles: z.preprocess(
         emptyToUndefined,
@@ -41,23 +40,27 @@ const issues = defineCollection({
         emptyToUndefined,
         z.array(cmsReference("bolum")).default([])
       ),
-      cover: image(),
-      coverAlt: z.string().min(1),
-      coverCaption: z.string().min(1),
+      cover: z.preprocess(emptyToUndefined, image().optional()),
+      coverAlt: optionalText,
+      coverCaption: optionalText,
     }),
 });
 
 const articles = defineCollection({
   loader: glob({ pattern: "*.md", base: "./src/content/makale" }),
-  schema: z.object({
-    title: z.string().min(1),
-    description: z.string().min(1),
-    section: z.enum(["Haberler", "Dedikodular"]),
-    district: optionalText,
-    location: optionalText,
-    author: cmsReference("yazar"),
-    spoiler: optionalText,
-  }),
+  schema: ({ image }) =>
+    z.object({
+      cover: z.preprocess(emptyToUndefined, image().optional()),
+      coverAlt: optionalText,
+      coverCaption: optionalText,
+      title: z.string().min(1),
+      description: z.string().min(1),
+      section: z.enum(["Haberler", "Dedikodular"]),
+      district: optionalText,
+      location: optionalText,
+      author: cmsReference("yazar"),
+      spoiler: optionalText,
+    }),
 });
 
 const chapters = defineCollection({

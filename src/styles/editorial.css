@@ -342,6 +342,21 @@ footer {
   font-size: 1.7em;
   line-height: 1.12;
 }
+.reading-copy .footnotes {
+  font-size: 0.8em;
+  line-height: 1.45;
+}
+.reading-copy .footnotes h2 {
+  margin: 1.5em 0 0.5em;
+  font-size: 1em;
+}
+.reading-copy .footnotes ol {
+  margin: 0;
+  padding-left: 1.5em;
+}
+.reading-copy .footnotes p {
+  margin: 0 0 0.5em;
+}
 .reading-copy blockquote {
   margin: 1.6em 0;
   padding: 0.2em 0 0.2em 1em;
