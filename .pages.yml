@@ -227,7 +227,27 @@ content:
         options:
           format: markdown
           switcher: true
-
+          
+  - name: tefrika
+    label: Tefrika
+    type: collection
+    path: src/content/tefrika
+    format: json
+    subfolders: false
+    filename:
+      template: "{primary}.json"
+      field: create
+    operations:
+      rename: false
+    view:
+      primary: title
+      fields: [title, description]
+      sort: [title]
+      default: { sort: title, order: asc }
+    fields:
+      - { name: title, label: Tefrika adı, type: string, required: true }
+      - { name: description, label: Serinin kısa tanıtımı, type: text, required: true }
+      
   - name: bolum
     label: Tefrika bölümü
     type: collection
@@ -296,22 +316,4 @@ content:
       - { name: name, label: Yazar adı / imza, type: string, required: true }
       - { name: bio, label: Kısa tanıtım, type: text }
 
-  - name: tefrika
-    label: Tefrika
-    type: collection
-    path: src/content/tefrika
-    format: json
-    subfolders: false
-    filename:
-      template: "{primary}.json"
-      field: create
-    operations:
-      rename: false
-    view:
-      primary: title
-      fields: [title, description]
-      sort: [title]
-      default: { sort: title, order: asc }
-    fields:
-      - { name: title, label: Tefrika adı, type: string, required: true }
-      - { name: description, label: Serinin kısa tanıtımı, type: text, required: true }
+
