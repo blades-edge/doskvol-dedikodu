@@ -1,7 +1,11 @@
 {
   "number": 1,
   "date": "2026-11-01",
-  "imperialDate": { "day": 23, "month": "Mendar", "year": 847 },
+  "imperialDate": {
+    "day": 53,
+    "month": "Mendar",
+    "year": 847
+  },
   "price": "2 pençik",
   "articles": [
     "strangford-dosyasi.md",
@@ -9,5 +13,8 @@
     "bir-tabakta-eksilenler.md",
     "olum-cani-olu-yok.md"
   ],
-  "chapters": ["ipekyalida-bir-gece.md", "gulumseyen-kadin.md"]
+  "chapters": [
+    "ipekyalida-bir-gece.md",
+    "gulumseyen-kadin.md"
+  ]
 }
