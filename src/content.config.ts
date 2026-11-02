@@ -75,7 +75,22 @@ const chapters = defineCollection({
   }),
 });
 
+const pages = defineCollection({
+  loader: glob({ pattern: "*.md", base: "./src/content/sayfa" }),
+  schema: z.object({
+    title: z.string().min(1),
+    description: optionalText,
+    address: z
+      .string()
+      .regex(
+        /^[a-z0-9]+(?:-[a-z0-9]+)*$/,
+        "Adres yalnızca küçük Latin harfleri, rakamlar ve aradaki tirelerden oluşmalı."
+      ),
+  }),
+});
+
 export const collections = {
+  sayfa: pages,
   yazar: authors,
   tefrika: serials,
   sayi: issues,

@@ -65,6 +65,24 @@ Aşağıdaki yollar `/doskvol-dedikodu/` kökü altındadır:
 
 Tefrika adresi serinin JSON dosyasının kalıcı kimliğini kullanır. Bölüm adresi seri kimliği ve bölüm numarasından oluşur. Eski `/editorial-preview/` adresleri yeni karşılıklarına yönlendirilir; bağlantıdaki `#manset` gibi bölüm işaretleri korunur. GitHub Pages statik olduğu için bu geçiş HTML/JavaScript yönlendirmesidir; sunucudan HTTP 301 yanıtı değildir. Eski adresler site haritasına eklenmez.
 
+## Sabit sayfalar
+
+CMS'deki **Sabit sayfalar** koleksiyonu `src/content/sayfa/` altında Markdown dosyaları tutar. Her dosya `title`, `address` ve isteğe bağlı `description` alanlarını içerir. Örneğin:
+
+```markdown
+---
+title: Künye
+address: kunye
+description: Yayın ve ekip bilgileri.
+---
+
+Sayfa metni.
+```
+
+Bu sayfa `/doskvol-dedikodu/kunye/` adresinde açılır. `address` site köküne göre tek bir segmenttir; başlıktan veya dosya adından bağımsızdır. Küçük Latin harfleri, rakamlar ve aradaki tek tireler kullanılabilir. Başlık değiştiğinde adresi koruyun. Sayı seçimi, yayın tarihi veya taslak alanı yoktur: ana yayına alınan bütün sabit sayfalar her derlemede yayımlanır. Makale arşivine ve RSS'e eklenmez; site haritasına eklenir. Menüye otomatik bağlantı eklenmez.
+
+Derleme, mevcut `src/pages/` kök yollarını ve `public/` dosyalarını otomatik olarak ayırır. `taslak`, `_astro` ve site haritası yolları da korunur. Aynı adresi kullanan iki sabit sayfa veya site yolu ile çakışma varsa açıklayıcı hata ile derleme durur. Yeni bir sabit site yolu eklendiğinde kontrol otomatik olarak bunu da kapsar.
+
 ## Yayın ve kontroller
 
 `build.yml` PR’larda test ve derlemeyi kontrol eder. Aynı depodaki PR’ların başarılı çıktıları `/doskvol-dedikodu/taslak/pr-42/` biçiminde yayımlanır; PR’a bağlantı yorumu eklenir ve her başarılı derlemede güncellenir. PR kapandığında önizleme silinir. Fork PR’ları yalnızca derleme kontrolünden geçer.

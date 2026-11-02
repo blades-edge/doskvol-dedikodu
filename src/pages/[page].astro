@@ -1,0 +1,23 @@
+---
+import { getCollection, render } from "astro:content";
+import PublicationIndex from "@layouts/PublicationIndex.astro";
+import { validatePageAddresses } from "../utils/static-pages.mjs";
+
+export async function getStaticPaths() {
+  const pages = await getCollection("sayfa");
+  validatePageAddresses(pages);
+  return pages.map(page => ({
+    params: { page: page.data.address },
+    props: { page },
+  }));
+}
+
+const { page } = Astro.props;
+const { Content } = await render(page);
+---
+
+<PublicationIndex title={page.data.title} description={page.data.description}>
+  <article class="reading-copy" aria-label={page.data.title}>
+    <Content />
+  </article>
+</PublicationIndex>

@@ -101,6 +101,35 @@ content:
           label: "Bölüm {fields.episode} · {fields.title}"
           search: "name,fields.title,fields.episode"
 
+  - name: sayfa
+    label: Sabit sayfalar
+    type: collection
+    path: src/content/sayfa
+    format: yaml-frontmatter
+    subfolders: false
+    filename:
+      template: "{primary}.md"
+      field: create
+    operations:
+      rename: false
+    view:
+      primary: title
+      fields: [title, address]
+      sort: [title]
+    fields:
+      - { name: title, label: Başlık, type: string, required: true }
+      - name: address
+        label: Kalıcı adres
+        type: string
+        required: true
+        description: "Örnek: kunye → /kunye/. Yalnızca küçük Latin harfleri, rakamlar ve aradaki tireleri kullanın. Site yollarıyla veya başka bir sayfayla çakışan adresler derlemeyi durdurur. Ana yayına alınan her sayfa bu adreste yayımlanır."
+      - { name: description, label: Kısa açıklama, type: text }
+      - name: body
+        label: Sayfa metni
+        type: rich-text
+        required: true
+        options: { format: markdown, switcher: true }
+
   - name: makale
     label: Makale
     type: collection
