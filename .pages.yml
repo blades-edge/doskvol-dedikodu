@@ -141,7 +141,21 @@ content:
         label: Mahalle (isteğe bağlı)
         type: select
         options:
-          values: [İpekyalı, Rıhtım, Kömürsırtı, Altıkule]
+          values:
+            - Aktaç
+            - Altıkule
+            - Billurtaş
+            - Bozçamur
+            - İpekyalı
+            - Kargaayağı
+            - Kömürsırtı
+            - Gecepazarı
+            - Nizamhane
+            - Rıhtım
+            - Yanıkçukur
+            - Yarıktepe
+            - Yitik Mahalle
+            - Ölümdiyarı
         description: "Gazetede kullanılan mahallelerden seçin. Listede olmayan mahalle veya ayrıntılı mekân adını aşağıya yazabilirsiniz."
       - { name: location, label: Ek yer / serbest mekân adı, type: string }
       - { name: spoiler, label: Spoiler uyarısı, type: text }
