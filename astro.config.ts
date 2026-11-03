@@ -8,7 +8,7 @@ import { SITE } from "./src/config";
 
 export default defineConfig({
   site: SITE.website,
-  base: process.env.PREVIEW_BASE || "/doskvol-dedikodu",
+  base: process.env.PREVIEW_BASE || "/",
   trailingSlash: "always",
   integrations: [
     sitemap({

@@ -25,7 +25,7 @@ jobs:
       - name: Build site
         run: npm run build
         env:
-          PREVIEW_BASE: ${{ github.event_name == 'pull_request' && format('/doskvol-dedikodu/taslak/pr-{0}/', github.event.number) || '' }}
+          PREVIEW_BASE: ${{ github.event_name == 'pull_request' && format('/taslak/pr-{0}/', github.event.number) || '' }}
       - name: Upload PR preview
         if: github.event_name == 'pull_request' && github.event.pull_request.head.repo.full_name == github.repository
         uses: actions/upload-artifact@v4
