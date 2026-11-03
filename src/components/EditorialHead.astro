@@ -24,7 +24,12 @@ const {
 } = Astro.props;
 const pageTitle = `${title} | ${SITE.title}`;
 const canonical = new URL(Astro.url.pathname, Astro.site);
-const shareImage = await getImage({ src: image, width: 1200, format: "png" });
+const shareImage = await getImage({
+  src: image,
+  width: 1200,
+  format: "jpeg",
+  background: "#f1e9d8",
+});
 const imageUrl = new URL(shareImage.src, Astro.site);
 ---
 
@@ -92,6 +97,7 @@ const imageUrl = new URL(shareImage.src, Astro.site);
 <meta property="og:description" content={description} />
 <meta property="og:url" content={canonical} />
 <meta property="og:image" content={imageUrl} />
+<meta property="og:image:type" content="image/jpeg" />
 <meta property="og:image:alt" content={imageAlt} />
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:title" content={pageTitle} />
