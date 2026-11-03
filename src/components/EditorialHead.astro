@@ -35,6 +35,16 @@ const imageUrl = new URL(shareImage.src, Astro.site);
 
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
+{
+  import.meta.env.PROD && !import.meta.env.BASE_URL.includes("/taslak/pr-") && (
+    <script
+      is:inline
+      data-goatcounter="https://doskvol.goatcounter.com/count"
+      async
+      src="https://gc.zgo.at/count.js"
+    />
+  )
+}
 <script is:inline>
   (() => {
     const key = "doskvol-appearance";
