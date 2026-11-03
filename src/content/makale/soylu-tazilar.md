@@ -49,5 +49,3 @@ Dikkat buyurunuz: Yarış masasında kazananların kâğıtları karşılığın
 Gecenin en akıllı konukları ise koşudan sonra ahırlarına dönmüş, karınlarını doyurmuş ve yatmışlardı.
 
 Diğerleri hâlâ gelecek yarıştan söz ediyordu.
-
-*— Gaspar Merrow, Mantar Bahçıvanı*
