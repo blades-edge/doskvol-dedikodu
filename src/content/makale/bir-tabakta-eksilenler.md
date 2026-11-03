@@ -6,6 +6,9 @@ description: Rıhtım'ın eski sofralarında artık yalnızca porsiyonlar küç�
 author: gaspar-merrow.json
 section: Dedikodular
 district: Rıhtım
+cover: ../../assets/images/bir-tabakta-eksilenler.avif
+coverAlt: Loş bir lokantada boş büyük masaya örtü seren lokantacı; ön planda küçük bir börek porsiyonu, kapı yanında yemek yiyen yaşlı bir liman işçisi.
+coverCaption: Porsiyonlar küçülse de arka masanın örtüsü her akşam yeniden seriliyor. Gelirlerse diye.
 ---
 On yıldır uğradığım küçük bir lokanta vardır. Adını vermeyeceğim; zira sahibinin başı, benim yazdıklarımdan bağımsız olarak yeterince dertte.
 

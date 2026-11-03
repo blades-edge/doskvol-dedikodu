@@ -1,4 +1,5 @@
 ---
+import { formatImperialDate } from "@utils/imperial-date";
 import { issuePath } from "@utils/paths";
 import WeatherTheme from "@components/WeatherTheme.astro";
 import EditorialHead from "@components/EditorialHead.astro";
@@ -38,12 +39,9 @@ const prefix = import.meta.env.BASE_URL;
                   <>
                     <div class="eyebrow">
                       Sayı {issueSlug(issue.data.number)} ·{" "}
-                      <time datetime={issue.data.date.toISOString()}>
-                        {issue.data.date.toLocaleDateString("tr-TR", {
-                          dateStyle: "long",
-                          timeZone: "UTC",
-                        })}
-                      </time>
+                      <a href={`${prefix}takvim/`}>
+                        {formatImperialDate(issue.data.imperialDate)}
+                      </a>
                     </div>
                     <h2>
                       <a href={`${prefix}${issuePath(issue.data.number)}`}>
