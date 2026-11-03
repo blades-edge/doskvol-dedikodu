@@ -24,12 +24,27 @@ const {
 } = Astro.props;
 const pageTitle = `${title} | ${SITE.title}`;
 const canonical = new URL(Astro.url.pathname, Astro.site);
-const shareImage = await getImage({ src: image, width: 1200, format: "png" });
+const shareImage = await getImage({
+  src: image,
+  width: 1200,
+  format: "jpeg",
+  background: "#f1e9d8",
+});
 const imageUrl = new URL(shareImage.src, Astro.site);
 ---
 
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
+{
+  import.meta.env.PROD && !import.meta.env.BASE_URL.includes("/taslak/pr-") && (
+    <script
+      is:inline
+      data-goatcounter="https://doskvol.goatcounter.com/count"
+      async
+      src="https://gc.zgo.at/count.js"
+    />
+  )
+}
 <script is:inline>
   (() => {
     const key = "doskvol-appearance";
@@ -92,6 +107,7 @@ const imageUrl = new URL(shareImage.src, Astro.site);
 <meta property="og:description" content={description} />
 <meta property="og:url" content={canonical} />
 <meta property="og:image" content={imageUrl} />
+<meta property="og:image:type" content="image/jpeg" />
 <meta property="og:image:alt" content={imageAlt} />
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:title" content={pageTitle} />

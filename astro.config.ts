@@ -3,11 +3,12 @@ import { unified } from "@astrojs/markdown-remark";
 import sitemap from "@astrojs/sitemap";
 import media from "./src/settings/media.json";
 import { remarkEngravings } from "./src/utils/engraving.mjs";
+import { footnoteOptions } from "./src/utils/footnotes.mjs";
 import { SITE } from "./src/config";
 
 export default defineConfig({
   site: SITE.website,
-  base: process.env.PREVIEW_BASE || "/doskvol-dedikodu",
+  base: process.env.PREVIEW_BASE || "/",
   trailingSlash: "always",
   integrations: [
     sitemap({
@@ -17,6 +18,7 @@ export default defineConfig({
   ],
   markdown: {
     processor: unified({
+      remarkRehype: footnoteOptions,
       remarkPlugins: [[remarkEngravings, { images: media.darkModeImages }]],
     }),
   },

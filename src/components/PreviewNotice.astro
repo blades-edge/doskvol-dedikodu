@@ -1,0 +1,14 @@
+---
+const pr = import.meta.env.BASE_URL.match(/\/taslak\/pr-([1-9]\d*)\//)?.[1];
+---
+
+{
+  pr && (
+    <aside class="preview-notice">
+      <a href={`https://github.com/blades-edge/doskvol-dedikodu/pull/${pr}`}>
+        PR #{pr} önizlemesi
+      </a>{" "}
+      · Bağlantısı olan herkes görebilir. Normal yayına dahil değildir.
+    </aside>
+  )
+}
