@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://blades-edge.github.io/doskvol-dedikodu/sitemap-index.xml
+Sitemap: https://doskvol.ink/sitemap-index.xml
