@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://doskvol.ink/taslak/pr-16/sitemap-index.xml
