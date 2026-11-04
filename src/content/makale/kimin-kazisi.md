@@ -11,7 +11,9 @@ Nizamhane'nin eski sur kalıntıları boyunca uzanan sanatçı atölyelerini bil
 
 Surun bir bölümü yüksek tahta panolarla çevrilmiş durumda. Önlerinde İmparatorluk süvarileri nöbet tutuyor. İçeride Vakıf'ın işaretini taşıyan önlükler giymiş ustalar çalışıyor. Gece de ışıklar sönmüyor. Kapalı yük arabaları girip çıkıyor.
 
-Bütün bunlar, geçen haftanın üçüncü günü bir sanatçı atölyesinin döşemesi çöktüğünde başladı. Döşemenin altında, eski surun temellerine bitişik taş bir oda ortaya çıktı. Atölye boşaltıldı. Ertesi sabah panolar dikildi.
+Bütün bunlar, geçen haftanın üçüncü günü bir sanatçı atölyesinin döşemesi çöktüğünde başladı. O gün kimse bunu haber saymadı. Atölye boştu; sahibi, kendisini himaye eden İruvialı bir aristokratın sergisine hazırlanmak için şehir dışındaydı. Mavi Urbalılar geldi, enkaza baktı, ölen ya da yaralanan olmadığını görünce gitti. Döşemenin altında, eski surun temellerine bitişik taş bir oda vardı. İki gün boyunca kimse onunla ilgilenmedi.
+
+Haftanın beşinci günü sabahı panolar dikildi. Haber bana, gazetemizin ilk sayısı baskıya girerken ulaştı.
 
 Panolardan birine imzasız bir levha çivilenmiş:
 
@@ -45,7 +47,7 @@ Sabah yazı kazınmıştı. Taşın üzerinde harflerin izleri kaldı. Kimin yaz
 
 Kazı ruhsatını incelemek için Kâtipler Sokağı'na gittim.
 
-Ruhsat mevcut. Parsel numarası ve işin tanımı kayıtlı. Tarihi haftanın dördüncü günü; yani çöküşün ertesi sabahı, panoların dikildiği gün. Nizamhane'de bir ruhsatın bir gecede çıktığını daha önce görmedim.
+Ruhsat mevcut. Parsel numarası ve işin tanımı kayıtlı. Tarihi haftanın dördüncü günü; yani Mavi Urbalıların enkazı sıradan bir çöküntü sayıp gittiği günün ertesi, panoların dikilmesinden bir gün öncesi. O gün resmî kayıtlara göre ortada yalnızca çökmüş bir döşeme vardı.
 
 Belgeyi veren makamın belirtilmesi gereken sütun ise boş. Başvurduğum görevli bunun bir kayıt eksikliği olabileceğini söyledi. Hangi kurumun eksikliği gidereceğini sorduğumda beni başka bir daireye yönlendirdi.
 
@@ -59,4 +61,4 @@ Taş odanın içinde ne olduğunu bilmiyoruz. Ruhsatı kimin verdiğini de.
 
 Dün gece, Duman vaktine yaklaşırken kazı alanına yeniden uğradım. Panoların arasından ışık sızıyordu. Kapalı bir yük arabası dışarı çıktı. Tekerleklerinin arasına dolmuş kırmızı toz, kaldırım taşlarına döküldü. Araba köşeyi döndü; hangi yöne saptığını göremedim.
 
-Arabanın arkasında herhangi bir kurumun işareti bulunmuyordu
+Arabanın arkasında herhangi bir kurumun işareti bulunmuyordu.
