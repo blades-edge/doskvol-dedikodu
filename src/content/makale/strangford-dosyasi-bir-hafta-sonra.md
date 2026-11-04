@@ -1,6 +1,7 @@
 ---
-title: "Strangford dosyası: bir hafta sonra"
-description: Meclis'e gönderilen sorular hâlâ cevapsız. Belgeler hâlâ gazetemizde.
+title: Sorulmadan edilen yemin
+description: Strangford dosyasında Meclis’e gönderilen sorular hâlâ cevapsız.
+  Zarfı getiren Şifreci ise bu kez sorulmadan yemin etti.
 author: vaurin-prichard.json
 section: Haberler
 district: Yanıkçukur
