@@ -37,7 +37,7 @@ const darkCover =
         asset.default.src === cover.src
     )
   );
-const author = publication.authorsById.get(article.data.author.id)!;
+const authorNames = publication.authorNames(article.data.author);
 const issue = publication.issuesById.get(article.data.issue.id)!;
 const series =
   article.data.series && publication.serialsById.get(article.data.series.id)!;
@@ -94,7 +94,7 @@ const related = articlesForIssue(publication, issue.id).find(
           <h1>{title}</h1>
           <p class="reading-deck">{description}</p>
           <div class="reading-meta">
-            <span>{author.data.name}</span>
+            <span>{authorNames}</span>
             <a href={`${prefix}takvim/`}>{dateLabel}</a>
             <a href={`${prefix}sayi/`}>Sayı {issueSlug(issue.data.number)}</a>
           </div>

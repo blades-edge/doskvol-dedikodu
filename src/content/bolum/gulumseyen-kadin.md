@@ -4,7 +4,7 @@ description: Bir hastamın yerine gittim. Kapıda bana başka birinin maskesini
   verdiler. Sabah, beni kurtaran kadının otopsisini yaptım.
 series: bos-bedenler.json
 episode: 1
-author: dr-a-sorel.json
+author: [dr-a-sorel]
 ---
 
 #### Sicim vaktini çeyrek geçe[^1]

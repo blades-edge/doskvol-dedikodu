@@ -3,13 +3,14 @@ title: Bir tabakta eksilenler
 description: Rıhtım'ın eski sofralarında artık yalnızca porsiyonlar küçülmüyor.
   Bir lokantanın arka masası aylardır boş; örtüsü ise her akşam yeniden
   seriliyor.
-author: gaspar-merrow.json
+author: [gaspar-merrow]
 section: Dedikodular
 district: Rıhtım
 cover: ../../assets/images/bir-tabakta-eksilenler.avif
 coverAlt: Loş bir lokantada boş büyük masaya örtü seren lokantacı; ön planda küçük bir börek porsiyonu, kapı yanında yemek yiyen yaşlı bir liman işçisi.
 coverCaption: Porsiyonlar küçülse de arka masanın örtüsü her akşam yeniden seriliyor. Gelirlerse diye.
 ---
+
 On yıldır uğradığım küçük bir lokanta vardır. Adını vermeyeceğim; zira sahibinin başı, benim yazdıklarımdan bağımsız olarak yeterince dertte.
 
 On yıl önce burada bir tabak mantarlı yılanbalığı böreği sipariş ettiğinizde, önce börek gelirdi, sonra tabağın kenarlarından taşan sosu. Yanında ekmek, ardından ikinci bir dilim ekmek... Garsonlar müşterinin adını bilir, mutfaktan yükselen tartışmalar yalnızca tuzun miktarıyla ilgili olurdu.

@@ -8,13 +8,13 @@ function fixture() {
       {id:"two",data:{number:2,imperialDate:{day:1,month:"Mendar",year:848},lead:{id:"news-two"},articles:[{id:"news-two"}],chapters:[{id:"chapter-two"}]}},
     ],
     articles: [
-      {id:"news-two",data:{issue:{id:"two"},author:{id:"reporter"},order:0}},
-      {id:"news",data:{issue:{id:"one"},author:{id:"reporter"},order:0}},
-      {id:"rumor",data:{issue:{id:"one"},author:{id:"reporter"},order:1}},
+      {id:"news-two",data:{issue:{id:"two"},author:[{id:"reporter"}],order:0}},
+      {id:"news",data:{issue:{id:"one"},author:[{id:"reporter"}],order:0}},
+      {id:"rumor",data:{issue:{id:"one"},author:[{id:"reporter"}],order:1}},
     ],
     chapters: [
-      {id:"chapter-two",data:{series:{id:"diary"},episode:2,author:{id:"writer"}}},
-      {id:"chapter-one",data:{series:{id:"diary"},episode:1,author:{id:"writer"}}},
+      {id:"chapter-two",data:{series:{id:"diary"},episode:2,author:[{id:"writer"}]}},
+      {id:"chapter-one",data:{series:{id:"diary"},episode:1,author:[{id:"writer"}]}},
     ],
     authors:[{id:"reporter",data:{name:"Muhabir"}},{id:"writer",data:{name:"Yazar"}}],
     serials:[{id:"diary",data:{title:"Günce"}}],
@@ -27,6 +27,13 @@ test("issues include their selected chapters and preserve reading IDs",()=>{
  assert.equal(index.articlesById.get("chapter-one").data.issue.id,"one");
  assert.equal(index.articlesById.get("chapter-one").data.section,"Tefrika");
  assert.equal(issueSlug(1),"001");
+});
+test("coauthors appear in the selected order", () => {
+  const content = fixture();
+  content.articles[0].data.author.unshift({ id: "writer" });
+  const index = buildEditorialIndex(content);
+  const article = index.articlesById.get("news-two");
+  assert.equal(index.authorNames(article.data.author), "Yazar, Muhabir");
 });
 test("chapters navigate in episode order across issues",()=>{
  assert.deepEqual(chaptersForSeries(buildEditorialIndex(fixture()),"diary").map(c=>c.id),["chapter-one","chapter-two"]);
@@ -48,7 +55,7 @@ for(const [name,mutate,message] of [
  ["foreign lead",d=>d.issues[0].data.lead.id="news-two",/Manşet/],
  ["empty article list",d=>{delete d.issues[0].data.lead;d.issues[0].data.articles=[]},/Manşet/],
  ["duplicate issue",d=>d.issues[1].data.number=1,/sayı numarası/],
- ["missing author",d=>d.articles[0].data.author.id="missing",/Yazar/],
+ ["missing author",d=>d.articles[0].data.author.push({id:"missing"}),/Yazar/],
  ["missing article",d=>d.issues[0].data.articles.push({id:"missing"}),/Yazı bulunamadı/],
  ["reused article",d=>d.issues[1].data.articles.push({id:"rumor"}),/birden fazla/],
  ["duplicate article selection",d=>d.issues[0].data.articles.push({id:"rumor"}),/birden fazla/],
@@ -56,7 +63,7 @@ for(const [name,mutate,message] of [
  ["reused chapter",d=>d.issues[1].data.chapters=[{id:"chapter-one"}],/birden fazla/],
  ["duplicate selection",d=>d.issues[0].data.chapters.push({id:"chapter-one"}),/birden fazla/],
  ["missing series",d=>d.chapters[0].data.series.id="missing",/Tefrika bulunamadı/],
- ["missing chapter author",d=>d.chapters[0].data.author.id="missing",/Yazar/],
+ ["missing chapter author",d=>d.chapters[0].data.author.push({id:"missing"}),/Yazar/],
  ["duplicate episode",d=>d.chapters[0].data.episode=1,/Bölüm numarası/],
  ["reading URL collision",d=>d.chapters[0].id="news",/çakışıyor/],
 ]) test(`rejects ${name}`,()=>{const data=fixture();mutate(data);assert.throws(()=>buildEditorialIndex(data),message);});
