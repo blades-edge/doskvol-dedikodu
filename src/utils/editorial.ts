@@ -2,6 +2,8 @@ import type { CollectionEntry } from "astro:content";
 
 import { imperialDateOrder } from "./imperial-date.ts";
 
+const authorList = new Intl.ListFormat("tr");
+
 export interface EditorialContent {
   issues: CollectionEntry<"sayi">[];
   articles: CollectionEntry<"makale">[];
@@ -55,8 +57,10 @@ export function buildEditorialIndex(
       throw new Error(`Yazı ve tefrika dosya adları çakışıyor: ${chapter.id}`);
     if (!serialsById.has(chapter.data.series.id))
       throw new Error(`${chapter.id}: Tefrika bulunamadı.`);
-    if (!authorsById.has(chapter.data.author.id))
-      throw new Error(`${chapter.id}: Yazar bulunamadı.`);
+    for (const author of chapter.data.author) {
+      if (!authorsById.has(author.id))
+        throw new Error(`${chapter.id}: Yazar bulunamadı: ${author.id}.`);
+    }
     const key = `${chapter.data.series.id}:${chapter.data.episode}`;
     if (episodes.has(key))
       throw new Error(`${chapter.id}: Bölüm numarası tekrarlanıyor.`);
@@ -88,16 +92,24 @@ export function buildEditorialIndex(
     }
   }
   for (const article of content.articles) {
-    if (!authorsById.has(article.data.author.id))
-      throw new Error(`${article.id}: Yazar bulunamadı.`);
+    for (const author of article.data.author) {
+      if (!authorsById.has(author.id))
+        throw new Error(`${article.id}: Yazar bulunamadı: ${author.id}.`);
+    }
   }
   const issues = [...content.issues].sort(
     (a, b) => b.data.number - a.data.number
   );
   for (const [index, issue] of issues.entries()) {
     const previous = issues[index + 1];
-    if (previous && imperialDateOrder(issue.data.imperialDate) <= imperialDateOrder(previous.data.imperialDate))
-      console.warn(`Sayı ${issue.data.number}: İmparatorluk tarihi, Sayı ${previous.data.number} tarihinden sonra gelmiyor. Tarihleri gözden geçirin.`);
+    if (
+      previous &&
+      imperialDateOrder(issue.data.imperialDate) <=
+        imperialDateOrder(previous.data.imperialDate)
+    )
+      console.warn(
+        `Sayı ${issue.data.number}: İmparatorluk tarihi, Sayı ${previous.data.number} tarihinden sonra gelmiyor. Tarihleri gözden geçirin.`
+      );
   }
   const articles = [
     ...content.articles
@@ -145,7 +157,22 @@ export function buildEditorialIndex(
     articles,
     issuesById: new Map(issues.map(issue => [issue.id, issue])),
     articlesById: new Map(articles.map(article => [article.id, article])),
-    authorsById,
+    authorNames: (
+      authors: CollectionEntry<"makale">["data"]["author"],
+      format: "short" | "signature" = "short"
+    ) => {
+      if (format === "short" && authors.length > 2)
+        return `${authorsById.get(authors[0].id)!.data.name.trim()} ve ekibi`;
+
+      return authorList.format(
+        authors.map(author => {
+          const { name, title } = authorsById.get(author.id)!.data;
+          return format === "signature" && title?.trim()
+            ? `${name.trim()} (${title.trim()})`
+            : name.trim();
+        })
+      );
+    },
     serialsById,
   };
 }
@@ -192,6 +219,6 @@ async function loadEditorialContent() {
 
 export async function getEditorial() {
   return buildEditorialIndex(await loadEditorialContent(), {
-    preview: import.meta.env.BASE_URL.includes("/taslak/pr-"),
+    preview: import.meta.env.BASE_URL.startsWith("/taslak/"),
   });
 }

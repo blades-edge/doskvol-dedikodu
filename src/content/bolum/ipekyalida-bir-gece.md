@@ -1,7 +1,7 @@
 ---
 title: İpekyalı’da Bir Gece
 description: Kargaayağı’nın beş haydudu, Mylera’nın verdiği soygun işi için İpekyalı’ya gider.
-author: altinci-sandalye.json
+author: [altinci-sandalye]
 series: doskvol-gunlukleri.json
 episode: 1
 ---

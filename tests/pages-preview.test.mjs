@@ -17,18 +17,25 @@ test("production preserves PR previews and replaces old draft issues; closing re
     mkdirSync(join(target, "taslak/sayi/001"), { recursive: true });
     writeFileSync(join(target, "taslak/sayi/001/index.html"), "old draft");
     writeFileSync(join(target, "stale.html"), "old");
+    mergePages(target, incoming, "preview", "editor", "b");
+    mergePages(target, incoming, "preview", "editor/codex", "b");
+    mergePages(target, incoming, "remove", "editor", "b");
     mergePages(target, incoming, "production");
+    assert.ok(existsSync(join(target, "taslak/b/editor/codex/index.html")));
+    assert.throws(() => mergePages(target, incoming, "remove", "editor/../codex", "b"));
+    mergePages(target, incoming, "remove", "editor/codex", "b");
+    assert.ok(!existsSync(join(target, "taslak/b/editor/codex")));
     assert.equal(readFileSync(join(target, "index.html"), "utf8"), "new");
-    assert.ok(existsSync(join(target, "taslak/pr-42/index.html")));
+    assert.ok(existsSync(join(target, "taslak/pr/42/index.html")));
     assert.ok(!existsSync(join(target, "taslak/sayi/001")));
     assert.ok(!existsSync(join(target, "stale.html")));
     mergePages(target, incoming, "remove", "42");
-    assert.ok(!existsSync(join(target, "taslak/pr-42")));
-    assert.ok(existsSync(join(target, "taslak/pr-57/index.html")));
+    assert.ok(!existsSync(join(target, "taslak/pr/42")));
+    assert.ok(existsSync(join(target, "taslak/pr/57/index.html")));
     assert.throws(() => mergePages(target, incoming, "remove", "../57"));
     mkdirSync(join(incoming, ".git"));
     assert.throws(() => mergePages(target, incoming, "preview", "57"));
-    assert.ok(existsSync(join(target, "taslak/pr-57/index.html")));
+    assert.ok(existsSync(join(target, "taslak/pr/57/index.html")));
   } finally {
     rmSync(root, { recursive: true, force: true });
   }
