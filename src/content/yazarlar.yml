@@ -1,27 +1,43 @@
 - id: aldo-brogan
-  name: "Aldo Brogan"
-  bio: "Aldo, Doskvol'un karanlık yüzünü araştırmıyor o yüzün içinde yaşıyor. Bazı Fısıltılarla, kaçak ruh tacirleriyle ve şehrin en kötü meyhanelerinin sahipleriyle tanışıklığı var. Ruhlar hakkında pek çok şey biliyor. Bu bilgileri nasıl edindiği sorulduğunda genellikle konuyu değiştiriyor. \nLakap: Fitil "
+  name: Aldo Brogan
+  bio: "Aldo \"Fitil\" Brogan, Doskvol'un karanlık yüzünü araştırmıyor o yüzün
+    içinde yaşıyor. Bazı Fısıltılarla, kaçak ruh tacirleriyle ve şehrin en kötü
+    meyhanelerinin sahipleriyle tanışıklığı var. Ruhlar hakkında pek çok şey
+    biliyor. Bu bilgileri nasıl edindiği sorulduğunda genellikle konuyu
+    değiştiriyor.  "
+  title: Gaip muhabiri
 - id: altinci-sandalye
-  name: "Altıncı Sandalye"
-  bio: "Kargaayağı’nda bir bodrumun masasında beş sandalye var. Bu yazıları gönderen, altıncısında oturduğunu söylüyor. Metinler gazetemize mühürsüz zarflarla ulaşıyor; kim olduğunu bilmiyoruz. İsimler takma, olaylar ise iddia edildiği kadar gerçek."
+  name: Altıncı Sandalye
+  bio: Kargaayağı’nda bir bodrumun masasında beş sandalye var. Bu yazıları
+    gönderen, altıncısında oturduğunu söylüyor. Metinler gazetemize mühürsüz
+    zarflarla ulaşıyor; kim olduğunu bilmiyoruz. İsimler takma, olaylar ise
+    iddia edildiği kadar gerçek.
 - id: dr-a-sorel
-  name: "Dr. A. Sorel"
-  bio: "Billurtaşlı bir hekim. Vaka defterinin gazetemize nasıl ulaştığını açıklamamayı tercih ediyoruz. Kenar notları, defterde bulunduğu hâliyle aktarılmıştır."
+  name: Dr. A. Sorel
+  bio: Billurtaşlı bir hekim. Vaka defterinin gazetemize nasıl ulaştığını
+    açıklamamayı tercih ediyoruz. Kenar notları, defterde bulunduğu hâliyle
+    aktarılmıştır.
 - id: gaspar-merrow
-  name: "Gaspar Merrow"
-  bio: "Gaspar Merrow, Rıhtım’da gemi erzakçılarının defterlerini tutarak başlamış, Doskvol’un en kapalı sofralarına hizmet ederek yükselmiş bir adam; bugün “Son Lokma” köşesinde neyin gerçek, neyin taklit olduğunu yazıyor. Neşeli, obur ve lafını sakınmayan biri olarak tanınır, ama masada çok konuşup az anlatan, sürekli başkalarını doyuran kişi de odur. Asıl merak ettiği şey insanların ne yediği değil, bir tutku uğruna neyi gözden çıkarabildikleri. Ortağı olduğu söylenen gizli sofra kulübü kapandığında müşteri defteri ortadan kaybolmuştur; yaktığı, sattığı ya da hâlâ elinde tuttuğu rivayet edilir. Bir zamanlar bir hesap defterinde insan hayatını birkaç kuruştan ucuza yazmış olabilecek bu adam, şimdi her yazısında hayatın yaşamaya değer olduğunu kanıtlamaya çalışıyor.\nLakap: Mantar Bahçivanı"
-- id: isimsiz-tanik
-  name: "İsimsiz Bir Tanık"
-  bio: "Adını matbaaya emanet etmeyen bir mahalle sakini."
-- id: kor-nokta
-  name: "Kör Nokta"
-  bio: "Başkasının işini görürken kendi geçmişine rastlayan bir hırsız."
-- id: mina-karakarga
-  name: "Mina Karakarga"
-  bio: "İpekyalı muhabiri. Kapalı kapılara ikinci kez vurur."
-- id: ruhi-cengel
-  name: "Ruhi Çengel"
-  bio: "Rıhtım muhabiri. Yük defterlerini ve uzun suskunlukları takip eder."
+  name: Gaspar Merrow
+  bio: >
+    Gaspar "Mantar Bahçivanı" Merrow, Rıhtım’da gemi erzakçılarının defterlerini
+    tutarak başlamış, Doskvol’un en kapalı sofralarına hizmet ederek yükselmiş
+    bir adam; bugün “Son Lokma” köşesinde neyin gerçek, neyin taklit olduğunu
+    yazıyor. Neşeli, obur ve lafını sakınmayan biri olarak tanınır, ama masada
+    çok konuşup az anlatan, sürekli başkalarını doyuran kişi de odur. Asıl merak
+    ettiği şey insanların ne yediği değil, bir tutku uğruna neyi gözden
+    çıkarabildikleri. Ortağı olduğu söylenen gizli sofra kulübü kapandığında
+    müşteri defteri ortadan kaybolmuştur; yaktığı, sattığı ya da hâlâ elinde
+    tuttuğu rivayet edilir. Bir zamanlar bir hesap defterinde insan hayatını
+    birkaç kuruştan ucuza yazmış olabilecek bu adam, şimdi her yazısında hayatın
+    yaşamaya değer olduğunu kanıtlamaya çalışıyor.
+  title: Gastronomi muhabiri
 - id: vaurin-prichard
   name: "Vaurin Prichard "
-  bio: "Vaurin, Doskvol'un resmî tarihinin yalanlarla dolu olduğuna inanıyor. Şehrin unutulmuş arşivlerinde, terk edilmiş malikânelerinde ve kilit altında tutulan kütüphanelerinde kayıp metinlerin izini sürüyor. Gençliğinde imparatorluk arşivinde çalışmış. Görevinden neden ayrıldığı bilinmiyor. Bazıları yasaklı bir belgeyi kopyaladığını, bazıları ise üst düzey bir memuru küçük düşüren hicivleri onun yazdığını söylüyor.\nLakap: Mürekkep"
+  bio: Vaurin "Mürekkep" Prichard, Doskvol'un resmî tarihinin yalanlarla dolu
+    olduğuna inanıyor. Şehrin unutulmuş arşivlerinde, terk edilmiş
+    malikânelerinde ve kilit altında tutulan kütüphanelerinde kayıp metinlerin
+    izini sürüyor. Gençliğinde imparatorluk arşivinde çalışmış. Görevinden neden
+    ayrıldığı bilinmiyor. Bazıları yasaklı bir belgeyi kopyaladığını, bazıları
+    ise üst düzey bir memuru küçük düşüren hicivleri onun yazdığını söylüyor.
+  title: Nizamhane Muhabiri
