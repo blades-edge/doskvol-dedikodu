@@ -128,7 +128,12 @@ const related = articlesForIssue(publication, issue.id).find(
             </figure>
           )
         }
-        <article class="reading-copy" aria-label={title}><slot /></article>
+        <article class="reading-copy" aria-label={title}>
+          <slot />
+          <footer class="byline">
+            — {publication.authorNames(article.data.author, "signature")}
+          </footer>
+        </article>
         {
           episode ? (
             <nav

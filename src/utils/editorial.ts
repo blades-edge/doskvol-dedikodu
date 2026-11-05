@@ -2,6 +2,8 @@ import type { CollectionEntry } from "astro:content";
 
 import { imperialDateOrder } from "./imperial-date.ts";
 
+const authorList = new Intl.ListFormat("tr");
+
 export interface EditorialContent {
   issues: CollectionEntry<"sayi">[];
   articles: CollectionEntry<"makale">[];
@@ -155,8 +157,22 @@ export function buildEditorialIndex(
     articles,
     issuesById: new Map(issues.map(issue => [issue.id, issue])),
     articlesById: new Map(articles.map(article => [article.id, article])),
-    authorNames: (authors: CollectionEntry<"makale">["data"]["author"]) =>
-      authors.map(author => authorsById.get(author.id)!.data.name).join(", "),
+    authorNames: (
+      authors: CollectionEntry<"makale">["data"]["author"],
+      format: "short" | "signature" = "short"
+    ) => {
+      if (format === "short" && authors.length > 2)
+        return `${authorsById.get(authors[0].id)!.data.name.trim()} ve ekibi`;
+
+      return authorList.format(
+        authors.map(author => {
+          const { name, title } = authorsById.get(author.id)!.data;
+          return format === "signature" && title?.trim()
+            ? `${name.trim()} (${title.trim()})`
+            : name.trim();
+        })
+      );
+    },
     serialsById,
   };
 }

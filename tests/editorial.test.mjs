@@ -28,12 +28,18 @@ test("issues include their selected chapters and preserve reading IDs",()=>{
  assert.equal(index.articlesById.get("chapter-one").data.section,"Tefrika");
  assert.equal(issueSlug(1),"001");
 });
-test("coauthors appear in the selected order", () => {
+test("author signatures keep selection order and titles", () => {
   const content = fixture();
-  content.articles[0].data.author.unshift({ id: "writer" });
-  const index = buildEditorialIndex(content);
-  const article = index.articlesById.get("news-two");
-  assert.equal(index.authorNames(article.data.author), "Yazar, Muhabir");
+  content.authors[1].data.title = "Kargaayağı muhabiri";
+  content.authors.push({ id: "editor", data: { name: "Editör" } });
+  const { authorNames } = buildEditorialIndex(content);
+  const authors = [{ id: "writer" }, { id: "reporter" }, { id: "editor" }];
+
+  assert.equal(authorNames(authors.slice(0, 1), "signature"), "Yazar (Kargaayağı muhabiri)");
+  assert.equal(authorNames(authors.slice(0, 2), "signature"), "Yazar (Kargaayağı muhabiri) ve Muhabir");
+  assert.equal(authorNames(authors, "signature"), "Yazar (Kargaayağı muhabiri), Muhabir ve Editör");
+  assert.equal(authorNames(authors.slice(0, 2)), "Yazar ve Muhabir");
+  assert.equal(authorNames(authors), "Yazar ve ekibi");
 });
 test("chapters navigate in episode order across issues",()=>{
  assert.deepEqual(chaptersForSeries(buildEditorialIndex(fixture()),"diary").map(c=>c.id),["chapter-one","chapter-two"]);
