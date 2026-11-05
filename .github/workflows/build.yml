@@ -1,6 +1,8 @@
 name: Build check
 
 on:
+  push:
+    branches-ignore: [main, gh-pages]
   pull_request:
   workflow_dispatch:
 
@@ -22,14 +24,19 @@ jobs:
         run: npm ci
       - name: Check publication structure
         run: npm run test:editorial
+      - name: Set preview path
+        if: github.event_name == 'push'
+        env:
+          BRANCH: ${{ github.ref_name }}
+        run: node --input-type=module -e 'import { previewPath } from "./scripts/merge-pages.mjs"; console.log("PREVIEW_BASE=/" + previewPath("b", process.env.BRANCH, true) + "/")' >> "$GITHUB_ENV"
       - name: Build site
         run: npm run build
         env:
-          PREVIEW_BASE: ${{ github.event_name == 'pull_request' && format('/taslak/pr-{0}/', github.event.number) || '' }}
-      - name: Upload PR preview
-        if: github.event_name == 'pull_request' && github.event.pull_request.head.repo.full_name == github.repository
+          PREVIEW_BASE: ${{ github.event_name == 'pull_request' && format('/taslak/pr/{0}/', github.event.number) || env.PREVIEW_BASE }}
+      - name: Upload preview
+        if: github.event_name == 'push' || (github.event_name == 'pull_request' && github.event.pull_request.head.repo.full_name == github.repository)
         uses: actions/upload-artifact@v4
         with:
-          name: pr-preview
+          name: preview
           path: dist
           retention-days: 3

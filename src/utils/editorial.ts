@@ -219,6 +219,6 @@ async function loadEditorialContent() {
 
 export async function getEditorial() {
   return buildEditorialIndex(await loadEditorialContent(), {
-    preview: import.meta.env.BASE_URL.includes("/taslak/pr-"),
+    preview: import.meta.env.BASE_URL.startsWith("/taslak/"),
   });
 }

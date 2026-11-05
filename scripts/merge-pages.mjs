@@ -1,13 +1,23 @@
-import { cpSync, existsSync, mkdirSync, readdirSync, rmSync } from "node:fs";
+import { cpSync, existsSync, mkdirSync, readdirSync, rmSync, writeFileSync } from "node:fs";
 import { join } from "node:path";
 
-export function mergePages(target, incoming, mode, number) {
+export function previewPath(kind, ref, encode = false) {
+  if (kind === "pr" && /^[1-9]\d*$/.test(ref)) return `taslak/pr/${ref}`;
+  if (kind === "b" && typeof ref === "string") {
+    const parts = ref.split("/");
+    if (parts.every((part) => part && !part.startsWith(".") &&
+        !part.includes("..") && !/[\\\x00-\x20\x7f]/.test(part))) {
+      return ["taslak", "b", ...parts.map((part) => encode ? encodeURIComponent(part) : part)].join("/");
+    }
+  }
+  throw new Error("Invalid preview ref");
+}
+
+export function mergePages(target, incoming, mode, ref, kind = "pr") {
   if (!["production", "preview", "remove"].includes(mode)) {
     throw new Error("Unknown publication mode");
   }
-  if (mode !== "production" && !/^[1-9]\d*$/.test(number)) {
-    throw new Error("Invalid PR number");
-  }
+  const path = mode === "production" ? null : previewPath(kind, ref);
   if (mode !== "remove" && !existsSync(join(incoming, "index.html"))) {
     throw new Error("Publication must include index.html");
   }
@@ -27,7 +37,7 @@ export function mergePages(target, incoming, mode, number) {
       if (entry === ".git") continue;
       if (entry === "taslak") {
         for (const draft of readdirSync(join(target, entry))) {
-          if (!/^pr-[1-9]\d*$/.test(draft)) {
+          if (!["pr", "b"].includes(draft)) {
             rmSync(join(target, entry, draft), { recursive: true, force: true });
           }
         }
@@ -35,9 +45,24 @@ export function mergePages(target, incoming, mode, number) {
     }
     cpSync(incoming, target, { recursive: true });
   } else {
-    const destination = join(target, "taslak", `pr-${number}`);
+    const destination = join(target, path);
+    const marker = ".preview-branch";
+    if (kind === "b") {
+      if (mode === "remove" && !existsSync(join(destination, marker))) return;
+      if (mode === "preview") {
+        // A deleted branch may previously have occupied a parent of this path.
+        let parent = join(target, "taslak", "b");
+        for (const part of ref.split("/").slice(0, -1)) {
+          parent = join(parent, part);
+          if (existsSync(join(parent, marker))) rmSync(parent, { recursive: true, force: true });
+        }
+      }
+    }
     rmSync(destination, { recursive: true, force: true });
-    if (mode === "preview") cpSync(incoming, destination, { recursive: true });
+    if (mode === "preview") {
+      cpSync(incoming, destination, { recursive: true });
+      if (kind === "b") writeFileSync(join(destination, marker), "");
+    }
   }
 }
 

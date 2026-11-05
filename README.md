@@ -87,11 +87,11 @@ Derleme, mevcut `src/pages/` kök yollarını ve `public/` dosyalarını otomati
 
 ## Yayın ve kontroller
 
-`build.yml` PR’larda test ve derlemeyi kontrol eder. Aynı depodaki PR’ların başarılı çıktıları `/doskvol-dedikodu/taslak/pr-42/` biçiminde yayımlanır; PR’a bağlantı yorumu eklenir ve her başarılı derlemede güncellenir. PR kapandığında önizleme silinir. Fork PR’ları yalnızca derleme kontrolünden geçer.
+`build.yml` PR’larda test ve derlemeyi kontrol eder. Aynı depodaki PR’ların başarılı çıktıları `/taslak/pr/42/` biçiminde yayımlanır; bağlantı GitHub deployment kaydında görünür ve önizleme her başarılı derlemede güncellenir. PR kapandığında önizleme silinir. Fork PR’ları yalnızca derleme kontrolünden geçer. Aynı depodaki çalışma dalları push sonrası `/taslak/b/<dal>/` altında yayımlanır (örneğin `/taslak/b/editor/codex/`). Dal silindiğinde önizlemesi kaldırılır.
 
 `pages.yml`, üretim ve PR çıktılarını `gh-pages` dalında birleştirir; `main` yayını açık PR önizlemelerini korur. Pages kaynağı **GitHub Actions** olarak kalmalıdır. İlk kurulumda bu değişiklikleri `main` dalına alıp üretim yayınını tamamlayın. `github-pages` environment’ının `main` dalına izin vermesi yeterlidir: önizleme yayını `workflow_run` üzerinden ana daldaki güvenilir workflow ile yapılır. `gh-pages` dalına Actions botunun yazabilmesi gerekir.
 
-Önizlemeler herkese açıktır ve `noindex` taşır; bu bir erişim koruması değildir. Yerelde aynı yolu denemek için `PREVIEW_BASE=/doskvol-dedikodu/taslak/pr-42/ npm run build` kullanılabilir.
+Önizlemeler herkese açıktır ve `noindex` taşır; bu bir erişim koruması değildir. Yerelde aynı yolu denemek için `PREVIEW_BASE=/taslak/pr/42/ npm run build` kullanılabilir.
 
 `npm run test:editorial` içerik ilişkilerini, seçim sırasını, tefrika gruplamasını, adresleri ve görünüm tercihlerini test eder. `astro check` ve `npm run lint` ek kontrollerdir.
 
@@ -101,7 +101,7 @@ MIT. Proje [AstroPaper](https://github.com/satnaing/astro-paper) temelinden geli
 
 ## Taslak çalışma akışı
 
-Taslaklar çalışma dallarında ve PR’larda tutulur; sayılarda ayrıca bir taslak alanı yoktur. PR önizlemesi dalın bütün sayılarını içerir ve manşet tamamlanmadan görüntülenebilir. Ana yayın ise bütün sayılarda geçerli bir manşet ister. PR `main` dalına birleştirildiğinde içerik yayımlanır. Örneğin PR #42 içindeki ikinci sayı `/doskvol-dedikodu/taslak/pr-42/sayi/002/` adresindedir.
+Taslaklar çalışma dallarında ve PR’larda tutulur; sayılarda ayrıca bir taslak alanı yoktur. PR önizlemesi dalın bütün sayılarını içerir ve manşet tamamlanmadan görüntülenebilir. Ana yayın ise bütün sayılarda geçerli bir manşet ister. PR `main` dalına birleştirildiğinde içerik yayımlanır. Örneğin PR #42 içindeki ikinci sayı `/taslak/pr/42/sayi/002/` adresindedir.
 
 ## Gravür üretim standardı
 
