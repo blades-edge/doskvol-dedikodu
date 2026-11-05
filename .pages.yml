@@ -7,6 +7,25 @@ settings:
   content:
     merge: true
 
+components:
+  author-picker:
+    label: Yazarlar
+    type: select
+    required: true
+    options:
+      multiple: true
+      min: 1
+      values:
+        - { name: aldo-brogan, label: "Aldo Brogan" }
+        - { name: altinci-sandalye, label: "Altıncı Sandalye" }
+        - { name: dr-a-sorel, label: "Dr. A. Sorel" }
+        - { name: gaspar-merrow, label: "Gaspar Merrow" }
+        - { name: isimsiz-tanik, label: "İsimsiz Bir Tanık" }
+        - { name: kor-nokta, label: "Kör Nokta" }
+        - { name: mina-karakarga, label: "Mina Karakarga" }
+        - { name: ruhi-cengel, label: "Ruhi Çengel" }
+        - { name: vaurin-prichard, label: "Vaurin Prichard" }
+
 content:
   - name: gravur
     label: Gravür ayarları
@@ -172,14 +191,7 @@ content:
       - { name: title, label: Başlık, type: string, required: true }
       - { name: description, label: Spot / kısa özet, type: text, required: true }
       - name: author
-        label: Yazar
-        type: reference
-        required: true
-        options:
-          collection: yazar
-          value: "{name}"
-          label: "{fields.name}"
-          search: "name,fields.name"
+        component: author-picker
       - name: section
         label: Bölüm
         type: select
@@ -281,14 +293,7 @@ content:
         required: true
         options: { min: 1 }
       - name: author
-        label: Yazar
-        type: reference
-        required: true
-        options:
-          collection: yazar
-          value: "{name}"
-          label: "{fields.name}"
-          search: "name,fields.name"
+        component: author-picker
       - { name: spoiler, label: Spoiler uyarısı, type: text }
       - name: body
         label: Bölüm metni
@@ -297,23 +302,21 @@ content:
         options: { format: markdown, switcher: true }
 
   - name: yazar
-    label: Yazar
-    type: collection
-    path: src/content/yazar
-    format: json
-    subfolders: false
-    filename:
-      template: "{primary}.json"
-      field: create
-    operations:
-      rename: false
-    view:
-      primary: name
-      fields: [name, bio]
-      sort: [name]
-      default: { sort: name, order: asc }
+    label: Yazarlar
+    type: file
+    path: src/content/yazarlar.yml
+    format: yaml
+    list: true
     fields:
+      - name: id
+        label: Kalıcı yazar kimliği
+        type: string
+        required: true
+        pattern: "^[a-z0-9]+(?:-[a-z0-9]+)*$"
+        description: "Her yazara benzersiz bir kimlik verin. İmza değişse bile kimliği koruyun."
       - { name: name, label: Yazar adı / imza, type: string, required: true }
       - { name: bio, label: Kısa tanıtım, type: text }
-
-
+      - name: title
+        label: Unvan
+        type: string
+        description: "İsteğe bağlı. Örnek: Kargaayağı muhabiri."

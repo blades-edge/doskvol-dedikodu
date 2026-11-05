@@ -35,8 +35,7 @@ const base = import.meta.env.BASE_URL;
               </h2>
               <p>{chapter.data.description}</p>
               <div class="byline">
-                {publication.authorsById.get(chapter.data.author.id)!.data.name}{" "}
-                ·{" "}
+                {publication.authorNames(chapter.data.author)} ·{" "}
                 <a href={`${base}${issuePath(issue.data.number)}`}>
                   Sayı {issue.data.number}
                 </a>

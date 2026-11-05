@@ -21,8 +21,15 @@ interface Props {
   publication: EditorialIndex;
 }
 const { issue, publication } = Astro.props;
-const { number, description, imperialDate, price, cover, coverAlt, coverCaption } =
-  issue.data;
+const {
+  number,
+  description,
+  imperialDate,
+  price,
+  cover,
+  coverAlt,
+  coverCaption,
+} = issue.data;
 const imageAssets = import.meta.glob<{
   default: import("astro").ImageMetadata;
 }>("../assets/images/*", { eager: true });
@@ -106,8 +113,7 @@ const older = publication.issues[position + 1];
                 </h2>
                 <p>{description}</p>
                 <div class="byline">
-                  —{" "}
-                  {publication.authorsById.get(lead.data.author.id)!.data.name}
+                  — {publication.authorNames(lead.data.author)}
                 </div>
               </>
             ) : (
@@ -181,11 +187,7 @@ const older = publication.issues[position + 1];
                                 <p>{chapter.data.description}</p>
                                 <p class="byline">
                                   —{" "}
-                                  {
-                                    publication.authorsById.get(
-                                      chapter.data.author.id
-                                    )!.data.name
-                                  }
+                                  {publication.authorNames(chapter.data.author)}
                                 </p>
                                 <a
                                   class="reading-link"
@@ -213,11 +215,7 @@ const older = publication.issues[position + 1];
                         </h3>
                         <p>{article.data.description}</p>
                         <div class="byline">
-                          —{" "}
-                          {
-                            publication.authorsById.get(article.data.author.id)!
-                              .data.name
-                          }
+                          — {publication.authorNames(article.data.author)}
                         </div>
                       </article>
                     ))}

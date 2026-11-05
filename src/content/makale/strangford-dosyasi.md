@@ -3,13 +3,14 @@ title: "Strangford dosyası: on dört isim, bir mühür"
 description: 'Gazetemize adsız bir zarf geldi: Strangford imalathanelerinde
   sözleşmesi "sona eren" on dört işçinin listesi. Dokuz isim doğrulandı;
   dosyadaki mühür ise tarihini taşıyan günde henüz kimsenin elinde değildi.'
-author: vaurin-prichard.json
+author: [vaurin-prichard]
 section: Dedikodular
 location: Yanıkçukur
 cover: ../../assets/images/strangford-isciler.avif
 coverAlt: Strangford'un imalathanesinden Mavi Urbalı zoruyla çıkartılan işçiler.
 coverCaption: İşçiler üzgün ve öfkeli. Hayatları ise mahvolmuş halde.
 ---
+
 Geçtiğimiz hafta masama üzerinde yalnızca adımın yazılı olduğu bir zarf bırakıldı.
 
 Zarfı getiren Şifreci, gönderenin kimliğini sorduğumda loncasının yeminini tekrarladı. İkinci sorumda da aynı sözleri kullandı. Üçüncüsünü sormadım. Doskvol'da bazı mesleklerin dürüstlüğü, aynı cevabı kaç defa verebildikleriyle ölçülüyor.
@@ -46,4 +47,4 @@ Zarfı sakladım.
 
 Mührü de.
 
-[^1]: [İmparatorluk takviminin ayları](../../takvim/). *Mendar, Kalivet, Suran, Ulsivet, Volnivet, Elisar.*
+[^1]: [İmparatorluk takviminin ayları](../../takvim/). _Mendar, Kalivet, Suran, Ulsivet, Volnivet, Elisar._
