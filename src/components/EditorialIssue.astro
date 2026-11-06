@@ -3,7 +3,7 @@ import { formatImperialDate } from "@utils/imperial-date";
 import PreviewNotice from "@components/PreviewNotice.astro";
 import media from "../settings/media.json";
 import { imageKey } from "../utils/engraving.mjs";
-import WeatherTheme from "@components/WeatherTheme.astro";
+import Masthead from "@components/Masthead.astro";
 import { Image } from "astro:assets";
 import type { CollectionEntry } from "astro:content";
 import EditorialHead from "./EditorialHead.astro";
@@ -72,16 +72,7 @@ const older = publication.issues[position + 1];
     <PreviewNotice />
     <div class="paper">
       <header>
-        <div class="masthead">
-          <WeatherTheme />
-          <div class="masthead-title">
-            <div class="eyebrow">Akoros’un bağımsız sesi · Doskvol</div>
-            <h1>Doskvol Dedikoduları</h1>
-            <div class="tagline">
-              Duyduğunuza inanmayın. Duymadıklarınızdan korkun.
-            </div>
-          </div>
-        </div>
+        <Masthead />
         <div class="issue">
           <a href={`${prefix}sayi/`}>Sayı {issueSlug(number)}</a>
           <a href={`${prefix}takvim/`}>{dateLabel}</a>

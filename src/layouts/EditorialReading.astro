@@ -4,7 +4,7 @@ import PreviewNotice from "@components/PreviewNotice.astro";
 import { Image } from "astro:assets";
 import media from "../settings/media.json";
 import { imageKey } from "../utils/engraving.mjs";
-import WeatherTheme from "@components/WeatherTheme.astro";
+import Masthead from "@components/Masthead.astro";
 import { articlePath, issuePath } from "@utils/paths";
 import EditorialHead from "@components/EditorialHead.astro";
 import {
@@ -69,16 +69,7 @@ const related = articlesForIssue(publication, issue.id).find(
     <PreviewNotice />
     <a class="reading-skip" href="#reading-content">Makaleye geç</a>
     <div class="paper reading-paper">
-      <header class="masthead reading-masthead">
-        <WeatherTheme />
-        <div class="masthead-title">
-          <div class="eyebrow">Akoros’un bağımsız sesi · Doskvol</div>
-          <a class="reading-wordmark" href={preview}>Doskvol Dedikoduları</a>
-          <div class="tagline">
-            Duyduğunuza inanmayın. Duymadıklarınızdan korkun.
-          </div>
-        </div>
-      </header>
+      <Masthead href={preview} />
       <nav class="reading-breadcrumb" aria-label="Sayfa yolu">
         <a href={preview}>Sayı {issueSlug(issue.data.number)}</a><span
           aria-hidden="true"
