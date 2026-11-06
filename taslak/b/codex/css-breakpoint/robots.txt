@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://doskvol.ink/taslak/b/codex/css-breakpoint/sitemap-index.xml
