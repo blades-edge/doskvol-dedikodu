@@ -29,7 +29,11 @@ a {
 }
 h1,
 h2,
-h3 {
+h3,
+h4,
+h5,
+h6,
+.masthead-name {
   font-family: "Cormorant Garamond", Georgia, serif;
   font-weight: 600;
   text-wrap: balance;
@@ -51,9 +55,7 @@ h3 {
 }
 .masthead-name {
   display: block;
-  font-family: "Cormorant Garamond", Georgia, serif;
   text-decoration: none;
-  text-wrap: balance;
   font-size: 2.5rem;
   line-height: 0.98;
   letter-spacing: -0.025em;
@@ -296,7 +298,6 @@ footer {
   font-size: clamp(2.4rem, 5.6vw, 4.5rem);
   line-height: 1.04;
   letter-spacing: -0.02em;
-  text-wrap: pretty;
 }
 .reading-deck {
   max-width: 58ch;
