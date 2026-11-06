@@ -102,7 +102,7 @@ const related = articlesForIssue(publication, issue.id).find(
         }
         {
           cover && (
-            <figure>
+            <figure class="reading-figure">
               <Image
                 src={cover}
                 alt={coverAlt ?? ""}
@@ -111,7 +111,7 @@ const related = articlesForIssue(publication, issue.id).find(
                   { "engraving-dark": darkCover },
                 ]}
                 widths={[480, 960, 1440]}
-                sizes="(max-width: 32rem) calc(100vw - 1.5rem), 92vw"
+                sizes="(max-width: 32rem) calc(100vw - 1.5rem), calc(92vw - 1rem)"
               />
               {coverCaption && (
                 <figcaption class="caption">{coverCaption}</figcaption>
