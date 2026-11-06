@@ -73,14 +73,14 @@ const older = publication.issues[position + 1];
     <div class="paper">
       <header>
         <div class="masthead">
+          <WeatherTheme />
           <div class="masthead-title">
             <div class="eyebrow">Akoros’un bağımsız sesi · Doskvol</div>
-            <h1>Doskvol<br />Dedikoduları</h1>
+            <h1>Doskvol Dedikoduları</h1>
             <div class="tagline">
               Duyduğunuza inanmayın. Duymadıklarınızdan korkun.
             </div>
           </div>
-          <WeatherTheme />
         </div>
         <div class="issue">
           <a href={`${prefix}sayi/`}>Sayı {issueSlug(number)}</a>
@@ -135,7 +135,7 @@ const older = publication.issues[position + 1];
                   { "engraving-dark": darkCover },
                 ]}
                 widths={[480, 960, 1440, 2060]}
-                sizes="(max-width: 48rem) calc(100vw - 3rem), (max-width: 72rem) 92vw, 65rem"
+                sizes="(max-width: 32rem) calc(100vw - 1.5rem), calc(92vw - 1rem)"
                 loading="eager"
                 fetchpriority="high"
               />

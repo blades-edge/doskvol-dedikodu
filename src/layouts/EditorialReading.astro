@@ -70,6 +70,7 @@ const related = articlesForIssue(publication, issue.id).find(
     <a class="reading-skip" href="#reading-content">Makaleye geç</a>
     <div class="paper reading-paper">
       <header class="masthead reading-masthead">
+        <WeatherTheme />
         <div class="masthead-title">
           <div class="eyebrow">Akoros’un bağımsız sesi · Doskvol</div>
           <a class="reading-wordmark" href={preview}>Doskvol Dedikoduları</a>
@@ -77,7 +78,6 @@ const related = articlesForIssue(publication, issue.id).find(
             Duyduğunuza inanmayın. Duymadıklarınızdan korkun.
           </div>
         </div>
-        <WeatherTheme />
       </header>
       <nav class="reading-breadcrumb" aria-label="Sayfa yolu">
         <a href={preview}>Sayı {issueSlug(issue.data.number)}</a><span
@@ -120,7 +120,7 @@ const related = articlesForIssue(publication, issue.id).find(
                   { "engraving-dark": darkCover },
                 ]}
                 widths={[480, 960, 1440]}
-                sizes="(max-width: 48rem) calc(100vw - 3rem), 92vw"
+                sizes="(max-width: 32rem) calc(100vw - 1.5rem), 92vw"
               />
               {coverCaption && (
                 <figcaption class="caption">{coverCaption}</figcaption>

@@ -15,12 +15,17 @@ a {
   color: inherit;
 }
 .paper {
-  max-width: 72rem;
-  margin: 2rem auto;
-  padding: clamp(1.1rem, 4vw, 3.5rem);
+  min-block-size: 100vh;
+  padding: 0.75rem;
   background: #f1e9d8;
-  box-shadow: 0 12px 48px #332a2050;
-  border: 1px solid #b7a78d;
+}
+@media (width > 32rem) {
+  .paper {
+    margin: 0.5rem;
+    padding: clamp(1rem, 4vw, 3.5rem);
+    box-shadow: 0 0.75rem 3rem #332a2050;
+    border: 1px solid #b7a78d;
+  }
 }
 h1,
 h2,
@@ -43,7 +48,7 @@ h3 {
   padding: 1.4rem 0 1rem;
 }
 .masthead h1 {
-  font-size: clamp(2.8rem, 7.3vw, 6.5rem);
+  font-size: 2.5rem;
   line-height: 0.98;
   letter-spacing: -0.025em;
   margin: 0.2rem 0;
@@ -145,13 +150,15 @@ h3 {
 }
 .columns {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(min(100%, 16rem), 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 24rem), 1fr));
   gap: 1.5rem;
   margin: 1.5rem 0;
 }
 .story {
-  padding-right: 1.3rem;
-  border-right: 1px solid #a79b87;
+  min-inline-size: 0;
+  max-inline-size: 36rem;
+  padding-block-end: 1rem;
+  border-bottom: 1px solid #a79b87;
 }
 .story:last-child {
   border: 0;
@@ -176,7 +183,7 @@ h3 {
   padding: 1.3rem;
   border: 3px double #40392f;
   display: grid;
-  grid-template-columns: 1fr 2fr;
+  grid-template-columns: minmax(0, 1fr);
   gap: 1.3rem;
 }
 .serial h3 {
@@ -225,23 +232,15 @@ footer {
   font-size: 0.8rem;
   text-align: center;
 }
-@media (max-width: 48rem) {
-  .paper {
-    margin: 0.5rem;
+@media (width > 48rem) {
+  .reading-heading {
+    margin-top: 2.5rem;
   }
-  .columns {
-    grid-template-columns: 1fr;
-  }
-  .story {
-    border-right: 0;
-    border-bottom: 1px solid #a79b87;
-    padding: 0 0 1rem;
-  }
-  .story:last-child {
-    border: 0;
+  .reading-copy {
+    line-height: 1.7;
   }
   .serial {
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 2fr);
   }
 }
 
@@ -272,12 +271,13 @@ footer {
   display: block;
   margin: 0.45rem 0;
   font:
-    700 clamp(2rem, 5vw, 3.5rem)/1.05 "Cormorant Garamond",
+    700 2.5rem/1.05 "Cormorant Garamond",
     Georgia,
     serif;
   letter-spacing: -0.025em;
   text-decoration: none;
   text-wrap: balance;
+  font-size: 2.5rem;
 }
 .reading-breadcrumb {
   display: flex;
@@ -293,7 +293,7 @@ footer {
   text-underline-offset: 0.2em;
 }
 .reading-heading {
-  margin: 2.5rem auto 2rem;
+  margin: 1.8rem auto 2rem;
   max-width: 51rem;
 }
 .reading-heading h1 {
@@ -323,7 +323,7 @@ footer {
   max-width: 62ch;
   margin: 0 auto;
   font-size: clamp(1.125rem, 1.6vw, 1.25rem);
-  line-height: 1.7;
+  line-height: 1.65;
   overflow-wrap: break-word;
 }
 .reading-copy p {
@@ -417,7 +417,7 @@ footer {
 }
 .reading-chapters {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 24rem), 1fr));
   gap: 1.5rem;
 }
 .reading-return {
@@ -440,17 +440,6 @@ footer {
 }
 .reading-skip:focus {
   transform: translateY(0);
-}
-@media (max-width: 48rem) {
-  .reading-heading {
-    margin-top: 1.8rem;
-  }
-  .reading-chapters {
-    grid-template-columns: 1fr;
-  }
-  .reading-copy {
-    line-height: 1.65;
-  }
 }
 
 .issue-section-title {
@@ -513,34 +502,24 @@ body {
 }
 .masthead {
   display: grid;
-  grid-template-columns: 4.2rem minmax(0, 1fr) 4.2rem;
-  align-items: center;
-  justify-content: center;
-  gap: clamp(0.7rem, 3vw, 2rem);
-  padding-inline: 0;
+  gap: 0.75rem;
 }
 .masthead-title {
-  grid-column: 2;
-  min-width: 0;
+  min-inline-size: 0;
 }
 .weather-theme {
-  grid-column: 3;
-  justify-self: end;
-  width: 4.2rem;
-  padding: 0.25rem;
+  padding: 0.25rem 0.5rem;
   border: 3px double #40392f;
 }
 .weather-caption {
-  font-size: 0.5rem;
-  letter-spacing: 0;
+  font-size: 0.625rem;
   text-transform: uppercase;
   padding-bottom: 0.25rem;
   border-bottom: 1px solid #a79b87;
 }
 .weather-choices {
   display: flex;
-  flex-direction: column;
-  gap: 0.15rem;
+  gap: 0.25rem;
   margin-top: 0.3rem;
 }
 .weather-choices button {
@@ -550,7 +529,7 @@ body {
   background: transparent;
   color: inherit;
   font: inherit;
-  font-size: 0.65rem;
+  font-size: 0.55rem;
   padding: 0.1rem;
   cursor: pointer;
 }
@@ -563,8 +542,8 @@ body {
 }
 .weather-choices img {
   display: block;
-  width: 2rem;
-  height: 2rem;
+  width: 1.65rem;
+  height: 1.65rem;
   margin-inline: auto;
   object-fit: contain;
 }
@@ -572,36 +551,56 @@ body {
   display: block;
   margin-top: 0.15rem;
 }
-@media (max-width: 32rem) {
+.masthead-title > .eyebrow {
+  font-size: 0.6rem;
+  letter-spacing: 0.08em;
+}
+.masthead .tagline {
+  font-size: 0.85rem;
+}
+@media (24rem <= width < 48rem) {
+  .weather-choices button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.35rem;
+  }
+  .weather-choices img,
+  .weather-choices span {
+    margin: 0;
+  }
+}
+
+@media (min-width: 48rem) {
   .masthead {
-    grid-template-columns: 3.4rem minmax(0, 1fr) 3.4rem;
-    gap: 0.5rem;
+    grid-template-columns: 4.5rem minmax(0, 1fr) 4.5rem;
+    align-items: center;
+  }
+  .masthead-title {
+    grid-area: 1 / 2;
   }
   .weather-theme {
-    width: 3.4rem;
+    grid-area: 1 / 3;
+    padding-inline: 0.25rem;
   }
-  .weather-caption {
-    font-size: 0.4rem;
+  .weather-choices {
+    flex-direction: column;
   }
+}
+
+@media (width > 32rem) {
   .weather-choices button {
-    font-size: 0.55rem;
+    font-size: 0.65rem;
   }
   .weather-choices img {
-    width: 1.65rem;
-    height: 1.65rem;
+    width: 2rem;
+    height: 2rem;
   }
   .masthead h1 {
-    font-size: clamp(1.2rem, 7.5vw, 2.1rem);
-  }
-  .masthead-title > .eyebrow {
-    font-size: 0.6rem;
-    letter-spacing: 0.08em;
-  }
-  .masthead .tagline {
-    font-size: 0.85rem;
+    font-size: clamp(2.8rem, 7.3vw, 6.5rem);
   }
   .reading-wordmark {
-    font-size: clamp(1.2rem, 7.5vw, 2.1rem);
+    font-size: clamp(2rem, 5vw, 3.5rem);
   }
 }
 
