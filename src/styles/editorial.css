@@ -221,7 +221,11 @@ h3 {
 .serial .byline {
   font-size: 0.8125rem;
 }
-.serial .marker {
+.serial .eyebrow::after {
+  content: "❦" / "";
+  display: block;
+  font-weight: normal;
+  letter-spacing: normal;
   font-size: 3rem;
   line-height: 1;
 }
