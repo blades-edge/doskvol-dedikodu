@@ -70,7 +70,7 @@ const older = publication.issues[position + 1];
   >
   <body>
     <PreviewNotice />
-    <div class="paper">
+    <div class="paper issue-paper">
       <header>
         <Masthead />
         <div class="issue">
@@ -88,7 +88,7 @@ const older = publication.issues[position + 1];
           >
         </nav>
       </header>
-      <main>
+      <main class="issue-grid">
         <section id="manset" class="lead" aria-labelledby="lead-title">
           {
             lead ? (
@@ -126,7 +126,7 @@ const older = publication.issues[position + 1];
                   { "engraving-dark": darkCover },
                 ]}
                 widths={[480, 960, 1440, 2060]}
-                sizes="(max-width: 32rem) calc(100vw - 1.5rem), calc(92vw - 1rem)"
+                sizes="(max-width: 32rem) calc(100vw - 1.5rem), min(99rem, calc(92vw - 1rem))"
                 loading="eager"
                 fetchpriority="high"
               />
@@ -135,9 +135,20 @@ const older = publication.issues[position + 1];
           {coverCaption && <div class="caption">{coverCaption}</div>}
         </section>
         {
-          sections.map(section => (
-            <section id={slugifyStr(section.name)} aria-label={section.name}>
-              <h2 class="eyebrow issue-section-title">{section.name}</h2>
+          sections.map((section, index) => (
+            <section
+              class:list={[
+                {
+                  "issue-opening-stories":
+                    index === 0 &&
+                    !section.articles.some(article => article.data.series),
+                },
+              ]}
+              aria-labelledby={slugifyStr(section.name)}
+            >
+              <h2 id={slugifyStr(section.name)} class="eyebrow issue-section-title">
+                {section.name}
+              </h2>
               <div
                 class={
                   section.articles.some(article => article.data.series)

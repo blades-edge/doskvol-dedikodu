@@ -68,13 +68,22 @@ h6,
 }
 .issue {
   display: flex;
-  justify-content: space-between;
-  gap: 1rem;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.25rem;
   padding: 0.55rem 0;
   border-bottom: 1px solid #322b24;
   font-size: 0.75rem;
   letter-spacing: 0.07em;
   text-transform: uppercase;
+}
+@media (width > 32rem) {
+  .issue {
+    flex-direction: row;
+    align-items: stretch;
+    justify-content: space-between;
+    gap: 1rem;
+  }
 }
 .nav {
   display: flex;
@@ -156,15 +165,76 @@ h6,
   text-align: left;
   font-style: italic;
 }
+.issue-paper {
+  container-type: inline-size;
+}
+.issue-grid {
+  --issue-columns: 1;
+  display: grid;
+  grid-template-columns: repeat(var(--issue-columns), minmax(0, 1fr));
+  max-inline-size: calc(var(--issue-columns) * 33.5rem - 1.5rem);
+  column-gap: 1.5rem;
+}
+.issue-grid > * {
+  grid-column: 1 / -1;
+}
+.issue-grid > section:not(.lead),
 .columns {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(min(100%, 24rem), 1fr));
-  gap: 1.5rem;
+  grid-template-columns: subgrid;
+}
+.issue-grid > section:not(.lead) > * {
+  grid-column: 1 / -1;
+}
+.columns {
+  row-gap: 1.5rem;
   margin: 1.5rem 0;
+}
+@container (min-width: 49.5rem) {
+  .issue-grid {
+    --issue-columns: 2;
+  }
+}
+@container (min-width: 75rem) {
+  .issue-grid {
+    --issue-columns: 3;
+  }
+}
+@container (min-width: 100.5rem) {
+  .issue-grid {
+    --issue-columns: 4;
+  }
+  .issue-grid:has(> .issue-opening-stories) {
+    grid-auto-flow: row dense;
+    row-gap: 1.5rem;
+  }
+  .issue-grid > .lead {
+    grid-column: var(--lead-start, 1) / span 3;
+  }
+  .issue-grid:has(> .issue-opening-stories) > .lead {
+    grid-row: 2 / span 2;
+  }
+  .issue-grid > section.issue-opening-stories,
+  .issue-opening-stories > .columns {
+    display: contents;
+  }
+  .issue-opening-stories > .issue-section-title {
+    grid-row: 1;
+  }
+}
+@container (min-width: 126rem) {
+  .issue-grid {
+    --issue-columns: 5;
+    --lead-start: 2;
+  }
+}
+@container (min-width: 151.5rem) {
+  .issue-grid {
+    --issue-columns: 6;
+  }
 }
 .story {
   min-inline-size: 0;
-  max-inline-size: 36rem;
   padding-block-end: 1rem;
   border-bottom: 1px solid #a79b87;
 }
