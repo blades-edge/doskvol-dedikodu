@@ -101,7 +101,7 @@ Sis başını kaldırmadan cevap verdi.
 
 Adam bir süre daha baktı. Ardından evrakı geri verdi.
 
-İki Mavi Urbalı uzaklaşırken içlerinden biri diğerine, durumu teğmene anlatabileceklerini ve belki onun da gelip bakmak isteyeceğini söyledi.
+İki Mavi Urbalı uzaklaşırken içlerinden biri diğerine, durumu çavuşa anlatabileceklerini ve belki onun da gelip bakmak isteyeceğini söyledi.
 
 Yankı bu sözleri duydu. Ancak peşlerinden gitmedi. Mavi Urbalıların gözden kaybolmasını bekledi, sonra kapıdaki çalışmaya döndü.
 
@@ -321,9 +321,9 @@ Tam o sırada omuzlarından kuvvetle sarsıldığını hissetti.
 
 ## VII. Bir Kese Gümüş
 
-Yankı gözlerini açtığında karşısında bir Mavi Urbalı teğmeni vardı. Adam iki eliyle omuzlarından tutmuş, onu duvardan uzaklaştırmaya çalışıyordu. Yanında iki Mavi Urbalı daha bulunuyordu.
+Yankı gözlerini açtığında karşısında bir Mavi Urbalı çavuşu vardı. Adam iki eliyle omuzlarından tutmuş, onu duvardan uzaklaştırmaya çalışıyordu. Yanında iki Mavi Urbalı daha bulunuyordu.
 
-“Bana bak!” dedi teğmen. “İyi misin sen?”
+“Bana bak!” dedi çavuş. “İyi misin sen?”
 
 Yankı bir an nerede olduğunu anlayamadı. Meyhanenin içindeki karanlık görüntü hâlâ zihnindeydi. Yaralı adamın ruhuyla arasındaki bağlantı kopmuştu. Sokak gürültüsü kulağına beklediğinden yüksek geliyordu.
 
@@ -331,7 +331,7 @@ Birkaç kez gözlerini kırptı. Sonra başını salladı.
 
 “Özür dilerim.”
 
-Teğmen onu bırakmadı.
+Çavuş onu bırakmadı.
 
 “Ne yapıyordun burada?”
 
@@ -345,7 +345,7 @@ Yankı elini alnına götürdü.
 
 Bunu söylerken yüzündeki solgunluğun kendisine yardımcı olacağını umuyordu.
 
-Teğmen arkadaşlarına baktı.
+Çavuş arkadaşlarına baktı.
 
 “Burası kapalı değil mi?”
 
@@ -361,7 +361,7 @@ Yankı kapıya baktı.
 
 “Kapı.”
 
-Teğmen demir parmaklıklardan kalan izleri inceledi. Bir süre önce sökülen parçaların bıraktığı lekeler hâlâ görünüyordu.
+Çavuş demir parmaklıklardan kalan izleri inceledi. Bir süre önce sökülen parçaların bıraktığı lekeler hâlâ görünüyordu.
 
 “Bizim adamlara bir şeyler söylemişler.”
 
@@ -369,15 +369,15 @@ Yankı başını salladı.
 
 “Evrakları vardı.”
 
-Teğmenin yüzü, bunun pek yeterli bir açıklama olmadığına işaret ediyordu.
+Çavuşun yüzü, bunun pek yeterli bir açıklama olmadığına işaret ediyordu.
 
 Yankı bir süre sonra konuyu değiştirdi. Yanıkçukur'daki işlerin azalmasından, hayat pahalılığından, düzgün ilaç bulmanın güçlüğünden söz etmeye başladı. Bir haftalık hastalığın insana nelere mal olduğuna dair gereğinden fazla ayrıntı verdi.
 
-Mavi Urbalılar gitmiyordu. Teğmen ara sıra kapıya bakıyor, yanındaki adamlara küçük işaretler yapıyordu.
+Mavi Urbalılar gitmiyordu. Çavuş ara sıra kapıya bakıyor, yanındaki adamlara küçük işaretler yapıyordu.
 
 Yankı cebindeki kesenin ağırlığını hissetti. Bir karar verdi.
 
-Elini cebine soktu. Gümüş dolu keseyi çıkardı. Sanki farkında olmadan yere düşürmüş gibi bıraktı. Sonra eğilip aldı ve teğmene uzattı.
+Elini cebine soktu. Gümüş dolu keseyi çıkardı. Sanki farkında olmadan yere düşürmüş gibi bıraktı. Sonra eğilip aldı ve çavuşa uzattı.
 
 “Sanırım sizden düştü.”
 
@@ -387,13 +387,13 @@ Adam keseye baktı. Yankı'nın yüzüne baktı. Bir süre sonra elini uzatıp a
 
 “Öyle gördüm.”
 
-Teğmen keseyi avucunda tarttı. İçindeki gümüşler hafifçe ses çıkardı.
+Çavuş keseyi avucunda tarttı. İçindeki gümüşler hafifçe ses çıkardı.
 
 “İyi bakmışsın.”
 
 “İnsan dikkatli olmalı.”
 
-Teğmen başını salladı. Yanındaki iki Mavi Urbalıya dönerek gitmelerini işaret etti. Üçü de sokaktan uzaklaştı.
+Çavuş başını salladı. Yanındaki iki Mavi Urbalıya dönerek gitmelerini işaret etti. Üçü de sokaktan uzaklaştı.
 
 Yankı onları gözden kayboluncaya kadar izledi. Sonra duvara yaslandı.
 
