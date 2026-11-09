@@ -246,6 +246,8 @@ Gözlerini ellerime indirdi.
 
 Masamın üzerinde duruyorlardı.
 
+![Müfettiş Voss, onarılmış eldivenleriyle defterini tutarken Sorel’in masadaki çıplak ellerine bakıyor.](../../assets/images/eldivensiz-beyefendi-sorel.avif)
+
 “Bir hekim için eldiven kullanmak meslekî bir tercihtir,” dedim. “Sokakta kullanmak zorunlu değildir.”
 
 “Böyle bir zorunluluk olduğunu söylemedim.”
