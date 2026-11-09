@@ -326,16 +326,6 @@ footer {
     margin-inline: auto;
   }
 }
-.reading-breadcrumb {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.5rem;
-  align-items: baseline;
-  padding: 1rem 0;
-  border-bottom: 1px solid #a79b87;
-  font-size: 0.875rem;
-}
-.reading-breadcrumb a,
 .reading-return a {
   text-underline-offset: 0.2em;
 }
@@ -364,6 +354,14 @@ footer {
   padding: 0.8rem 0;
   font-size: 0.875rem;
   line-height: 1.5;
+}
+@media screen and (max-width: 32rem) {
+  .reading-meta {
+    flex-direction: column;
+    align-items: center;
+    gap: 0.25rem;
+    text-align: center;
+  }
 }
 .reading-copy {
   max-width: 62ch;
@@ -688,7 +686,6 @@ body {
   }
   .nav,
   .weather-theme,
-  .reading-breadcrumb,
   .reading-chapters,
   .reading-return,
   .reading-skip {

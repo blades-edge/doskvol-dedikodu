@@ -70,13 +70,6 @@ const related = articlesForIssue(publication, issue.id).find(
     <a class="reading-skip" href="#reading-content">Makaleye geç</a>
     <div class="paper reading-paper">
       <Masthead href={preview} />
-      <nav class="reading-breadcrumb" aria-label="Sayfa yolu">
-        <a href={preview}>Sayı {issueSlug(issue.data.number)}</a><span
-          aria-hidden="true"
-        >
-          /
-        </span><span>{section}</span>
-      </nav>
       <main id="reading-content">
         <header class="reading-heading">
           <div class="eyebrow">
