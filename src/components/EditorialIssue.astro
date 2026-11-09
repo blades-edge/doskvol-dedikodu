@@ -126,7 +126,7 @@ const older = publication.issues[position + 1];
                   { "engraving-dark": darkCover },
                 ]}
                 widths={[480, 960, 1440, 2060]}
-                sizes="(max-width: 32rem) calc(100vw - 1.5rem), min(99rem, calc(92vw - 1rem))"
+                sizes="(max-width: 32rem) calc(100vw - 1.5rem), min(57rem, calc(92vw - 1rem))"
                 loading="eager"
                 fetchpriority="high"
               />
@@ -135,18 +135,12 @@ const older = publication.issues[position + 1];
           {coverCaption && <div class="caption">{coverCaption}</div>}
         </section>
         {
-          sections.map((section, index) => (
-            <section
-              class:list={[
-                {
-                  "issue-opening-stories":
-                    index === 0 &&
-                    !section.articles.some(article => article.data.series),
-                },
-              ]}
-              aria-labelledby={slugifyStr(section.name)}
-            >
-              <h2 id={slugifyStr(section.name)} class="eyebrow issue-section-title">
+          sections.map(section => (
+            <section aria-labelledby={`${slugifyStr(section.name)}-title`}>
+              <h2
+                id={`${slugifyStr(section.name)}-title`}
+                class="issue-section-title"
+              >
                 {section.name}
               </h2>
               <div
@@ -157,51 +151,65 @@ const older = publication.issues[position + 1];
                 }
               >
                 {section.articles.some(article => article.data.series)
-                  ? groupSerialChapters(section.articles).map(group => {
-                      const series = publication.serialsById.get(
-                        group.seriesId
-                      )!;
-                      return (
-                        <article class="serial">
-                          <div>
-                            <div class="eyebrow">Edebiyat ve tefrika</div>
-                            <h3>
-                              <a href={`${prefix}tefrika/${group.seriesId}/`}>
-                                {series.data.title}
-                              </a>
-                            </h3>
-                          </div>
-                          <ol
-                            class="serial-chapters"
-                            aria-label={`${series.data.title} — bu sayıdaki bölümler`}
+                  ? groupSerialChapters(section.articles).map(
+                      (group, index) => {
+                        const series = publication.serialsById.get(
+                          group.seriesId
+                        )!;
+                        return (
+                          <article
+                            class="serial"
+                            id={
+                              index === 0 ? slugifyStr(section.name) : undefined
+                            }
                           >
-                            {group.chapters.map(chapter => (
-                              <li class="serial-chapter">
-                                <h4 class="serial-chapter-title">
-                                  <a href={`${prefix}${articlePath(chapter)}`}>
-                                    Bölüm {chapter.data.episode} ·{" "}
-                                    {chapter.data.title}
-                                  </a>
-                                </h4>
-                                <p>{chapter.data.description}</p>
-                                <p class="byline">
-                                  —{" "}
-                                  {publication.authorNames(chapter.data.author)}
-                                </p>
-                                <a
-                                  class="reading-link"
-                                  href={`${prefix}${articlePath(chapter)}`}
-                                >
-                                  Bölümü oku <span aria-hidden="true">→</span>
+                            <div>
+                              <div class="eyebrow">Edebiyat ve tefrika</div>
+                              <h3>
+                                <a href={`${prefix}tefrika/${group.seriesId}/`}>
+                                  {series.data.title}
                                 </a>
-                              </li>
-                            ))}
-                          </ol>
-                        </article>
-                      );
-                    })
-                  : section.articles.map(article => (
-                      <article class="story">
+                              </h3>
+                            </div>
+                            <ol
+                              class="serial-chapters"
+                              aria-label={`${series.data.title} — bu sayıdaki bölümler`}
+                            >
+                              {group.chapters.map(chapter => (
+                                <li class="serial-chapter">
+                                  <h4 class="serial-chapter-title">
+                                    <a
+                                      href={`${prefix}${articlePath(chapter)}`}
+                                    >
+                                      Bölüm {chapter.data.episode} ·{" "}
+                                      {chapter.data.title}
+                                    </a>
+                                  </h4>
+                                  <p>{chapter.data.description}</p>
+                                  <p class="byline">
+                                    —{" "}
+                                    {publication.authorNames(
+                                      chapter.data.author
+                                    )}
+                                  </p>
+                                  <a
+                                    class="reading-link"
+                                    href={`${prefix}${articlePath(chapter)}`}
+                                  >
+                                    Bölümü oku <span aria-hidden="true">→</span>
+                                  </a>
+                                </li>
+                              ))}
+                            </ol>
+                          </article>
+                        );
+                      }
+                    )
+                  : section.articles.map((article, index) => (
+                      <article
+                        class="story"
+                        id={index === 0 ? slugifyStr(section.name) : undefined}
+                      >
                         <div class="eyebrow">
                           {[article.data.district, article.data.location]
                             .filter(Boolean)
@@ -244,7 +252,9 @@ const older = publication.issues[position + 1];
           }
         </nav>
       </main>
-      <footer>Doskvol Dedikoduları · Duyduğunuza inanmayın. Duymadıklarınızdan korkun.</footer>
+      <footer>
+        Doskvol Dedikoduları · Duyduğunuza inanmayın. Duymadıklarınızdan korkun.
+      </footer>
     </div>
   </body>
 </html>
