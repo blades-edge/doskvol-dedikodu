@@ -380,6 +380,32 @@ footer {
   font-size: 1.7em;
   line-height: 1.12;
 }
+.reading-copy table {
+  inline-size: 100%;
+  table-layout: fixed;
+  border-collapse: collapse;
+  border-block: 0.2em double currentColor;
+  font-size: clamp(1rem, 2.5vw, 1.125rem);
+  line-height: 1.35;
+}
+.reading-copy th,
+.reading-copy td {
+  padding: 0.45em 0.3em;
+  border-block-end: 1px solid currentColor;
+  text-align: start;
+  vertical-align: top;
+  overflow-wrap: anywhere;
+}
+.reading-copy th {
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: 1.15em;
+}
+.reading-copy td:last-child {
+  font-variant-numeric: tabular-nums;
+}
+.reading-copy tr:last-child td {
+  border-block-end: 0;
+}
 .reading-copy .footnotes {
   font-size: 0.8em;
   line-height: 1.45;
