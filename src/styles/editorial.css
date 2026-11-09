@@ -637,3 +637,107 @@ body {
   text-align: center;
   font-size: 0.85rem;
 }
+
+@page {
+  margin: 16mm;
+}
+
+@media print {
+  :root {
+    font-size: 10pt;
+  }
+  :root,
+  :root[data-theme],
+  :root:not([data-theme="light"]),
+  body,
+  .paper {
+    background: white;
+    color: black;
+    filter: none;
+  }
+  :root[data-theme] .engraving-dark,
+  :root:not([data-theme="light"]) .engraving-dark {
+    filter: none;
+    background-color: transparent;
+  }
+  body,
+  .paper {
+    min-block-size: 0;
+  }
+  .paper {
+    max-inline-size: none;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-shadow: none;
+  }
+  .nav,
+  .weather-theme,
+  .reading-breadcrumb,
+  .reading-chapters,
+  .reading-return,
+  .reading-skip {
+    display: none;
+  }
+  .masthead {
+    display: block;
+    padding-block: 0.4rem;
+  }
+  .masthead-name {
+    font-size: 2.6rem;
+  }
+  .reading-heading {
+    margin: 0.65rem 0;
+    max-inline-size: none;
+  }
+  .reading-heading h1 {
+    margin-block: 0.25rem 0.4rem;
+    font-size: 2rem;
+  }
+  .reading-deck {
+    max-inline-size: none;
+    margin-block-end: 0.5rem;
+    font-size: 1.1rem;
+  }
+  .reading-meta {
+    padding-block: 0.25rem;
+  }
+  .reading-copy {
+    max-inline-size: none;
+    column-width: 18rem;
+    column-gap: 5mm;
+    column-fill: balance;
+    font-size: 1rem;
+    line-height: 1.3;
+    orphans: 2;
+    widows: 2;
+  }
+  .reading-copy p {
+    margin-block-end: 0.6em;
+  }
+  .reading-copy blockquote {
+    margin-block: 0.75em;
+    line-height: inherit;
+  }
+  .reading-copy :is(h2, h3, h4, h5, h6) {
+    break-after: avoid;
+  }
+  .reading-figure {
+    break-inside: avoid;
+    margin: 0.5rem 0;
+  }
+  .reading-copy > :is(figure, img, p:has(> img:only-child)) {
+    float: inline-start;
+    inline-size: 100%;
+    break-inside: avoid;
+    margin: 0.5rem 0;
+  }
+  .reading-figure img,
+  .reading-copy img {
+    inline-size: 100%;
+    block-size: auto;
+    max-block-size: 55mm;
+    margin: 0 auto;
+    object-fit: contain;
+  }
+}
