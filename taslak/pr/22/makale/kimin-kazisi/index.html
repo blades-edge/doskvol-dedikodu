@@ -1,0 +1,72 @@
+<!DOCTYPE html><html lang="tr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><script>
+  (() => {
+    const key = "doskvol-appearance";
+    const valid = value => ["day", "night", "device"].includes(value);
+    const media = window.matchMedia("(prefers-color-scheme: dark)");
+    let preference = "device";
+    try {
+      const saved = localStorage.getItem(key);
+      if (valid(saved)) preference = saved;
+    } catch {
+      // Private browsing may deny storage; the current page still works.
+    }
+    const paint = () => {
+      const dark =
+        preference === "night" || (preference === "device" && media.matches);
+      document.documentElement.dataset.theme = dark ? "dark" : "light";
+      document.querySelectorAll("[data-theme-choice]").forEach(button => {
+        button.setAttribute(
+          "aria-pressed",
+          String(button.dataset.themeChoice === preference)
+        );
+      });
+    };
+    paint();
+    document.addEventListener("DOMContentLoaded", paint, { once: true });
+    media.addEventListener("change", paint);
+    document.addEventListener("doskvol:theme", event => {
+      if (!valid(event.detail)) return;
+      preference = event.detail;
+      try {
+        localStorage.setItem(key, preference);
+      } catch {
+        // Private browsing may deny storage; the current page still works.
+      }
+      paint();
+    });
+    window.addEventListener("storage", event => {
+      if (event.key !== key && event.key !== null) return;
+      preference = valid(event.newValue) ? event.newValue : "device";
+      paint();
+    });
+  })();
+</script><link rel="icon" type="image/svg+xml" href="/taslak/pr/22/favicon.svg"><meta name="robots" content="noindex, nofollow"><link rel="canonical" href="https://doskvol.ink/taslak/pr/22/makale/kimin-kazisi/"><meta name="description" content="Eski surun altında bulunan taş oda için Nizamhane'de altı ayrı açıklama dolaşıyor. Ruhsat var; ruhsatı veren makamın adı yok."><meta property="og:site_name" content="Doskvol Dedikoduları"><meta property="og:locale" content="tr_TR"><meta property="og:type" content="article"><meta property="og:title" content="Kimin kazısı? | Doskvol Dedikoduları"><meta property="og:description" content="Eski surun altında bulunan taş oda için Nizamhane'de altı ayrı açıklama dolaşıyor. Ruhsat var; ruhsatı veren makamın adı yok."><meta property="og:url" content="https://doskvol.ink/taslak/pr/22/makale/kimin-kazisi/"><meta property="og:image" content="https://doskvol.ink/taslak/pr/22/_astro/kimin-kazisi.BgPBI-P1_1qGOgU.jpeg"><meta property="og:image:type" content="image/jpeg"><meta property="og:image:alt" content="Bir Mavi Urbalı heykeltıraş atölyesinin çöken döşemesinden aşağı fener sarkıtırken diğeri kapıda bekliyor."><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="Kimin kazısı? | Doskvol Dedikoduları"><meta name="twitter:description" content="Eski surun altında bulunan taş oda için Nizamhane'de altı ayrı açıklama dolaşıyor. Ruhsat var; ruhsatı veren makamın adı yok."><meta name="twitter:image" content="https://doskvol.ink/taslak/pr/22/_astro/kimin-kazisi.BgPBI-P1_1qGOgU.jpeg"><meta name="twitter:image:alt" content="Bir Mavi Urbalı heykeltıraş atölyesinin çöken döşemesinden aşağı fener sarkıtırken diğeri kapıda bekliyor."><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,600;0,6..72,700;1,6..72,400&display=swap" rel="stylesheet"><title>Kimin kazısı? | Doskvol Dedikoduları</title><link rel="stylesheet" href="/taslak/pr/22/_astro/EditorialHead.BuTT5ouC.css"></head><body><a class="reading-skip" href="#reading-content">Makaleye geç</a><div class="paper reading-paper"><script type="module">document.querySelectorAll(`[data-theme-choice]`).forEach(e=>{e.addEventListener(`click`,()=>{document.dispatchEvent(new CustomEvent(`doskvol:theme`,{detail:e.dataset.themeChoice}))})});</script><header class="masthead"><aside class="weather-theme" aria-label="Gazetenin hava durumu ve görünümü"><div class="weather-caption">Doskvol’da hava</div><div class="weather-choices" role="group" aria-label="Görünüm tercihi"><button type="button" data-theme-choice="day" aria-pressed="false" title="Kırık güneş — açık görünüm"><img src="/taslak/pr/22/weather-day.png" alt="" width="56" height="56" loading="eager"><span>Gündüz</span></button><button type="button" data-theme-choice="night" aria-pressed="false" title="Ay ve loş bacıları — koyu görünüm"><img src="/taslak/pr/22/weather-night.png" alt="" width="56" height="56" loading="eager"><span>Gece</span></button><button type="button" data-theme-choice="device" aria-pressed="true" title="Hayaletli hava — cihazın tercihini izle"><img src="/taslak/pr/22/weather-device.png" alt="" width="56" height="56" loading="eager"><span>Cihaz</span></button></div></aside><div class="masthead-title"><div class="eyebrow">Akoros’un bağımsız sesi · Doskvol</div><a class="masthead-name" href="/taslak/pr/22/sayi/002/">Doskvol Dedikoduları</a><div class="tagline">Duyduğunuza inanmayın. Duymadıklarınızdan korkun.</div></div></header><main id="reading-content"><header class="reading-heading"><div class="eyebrow">Haberler</div><h1>Kimin kazısı?</h1><p class="reading-deck">Eski surun altında bulunan taş oda için Nizamhane&#39;de altı ayrı açıklama dolaşıyor. Ruhsat var; ruhsatı veren makamın adı yok.</p><div class="reading-meta"><span>Vaurin Prichard</span><a href="/taslak/pr/22/takvim/">60 Mendar 847</a><a href="/taslak/pr/22/sayi/">Sayı 002</a></div></header><figure class="reading-figure"><img src="/taslak/pr/22/_astro/kimin-kazisi.BgPBI-P1_1eDR9i.webp" srcset="/taslak/pr/22/_astro/kimin-kazisi.BgPBI-P1_Ztl6m4.webp 480w, /taslak/pr/22/_astro/kimin-kazisi.BgPBI-P1_Z1p7Vgv.webp 960w, /taslak/pr/22/_astro/kimin-kazisi.BgPBI-P1_1GfXlW.webp 1440w" alt="Bir Mavi Urbalı heykeltıraş atölyesinin çöken döşemesinden aşağı fener sarkıtırken diğeri kapıda bekliyor." sizes="(max-width: 32rem) calc(100vw - 1.5rem), calc(92vw - 1rem)" loading="lazy" decoding="async" width="1774" height="887" class="editorial-engraving engraving-dark"><figcaption class="caption">Nizam Duvarı dibindeki atölyenin döşemesi, eski sura bitişik bir taş odaya açıldı.</figcaption></figure><article class="reading-copy" aria-label="Kimin kazısı?"><p>Nizamhane’nin eski sur kalıntıları boyunca uzanan sanatçı atölyelerini bilenler, oradaki taşların yıllardır nasıl göründüğünü de bilir. Bazılarının üzerinde sarmaşık vardı. Bazıları, heykeltıraşların dayadıkları mermer levhaların arkasında kalırdı. Bugün hiçbirini görmek mümkün değil.</p>
+<p>Surun bir bölümü yüksek tahta panolarla çevrilmiş durumda. Önlerinde İmparatorluk süvarileri nöbet tutuyor. İçeride Vakıf’ın işaretini taşıyan önlükler giymiş ustalar çalışıyor. Gece de ışıklar sönmüyor. Kapalı yük arabaları girip çıkıyor.</p>
+<p>Bütün bunlar, geçen haftanın üçüncü günü bir sanatçı atölyesinin döşemesi çöktüğünde başladı. O gün kimse bunu haber saymadı. Atölye boştu; sahibi, kendisini himaye eden İruvialı bir aristokratın sergisine hazırlanmak için şehir dışındaydı. Mavi Urbalılar geldi, enkaza baktı, ölen ya da yaralanan olmadığını görünce gitti. Döşemenin altında, eski surun temellerine bitişik taş bir oda vardı. İki gün boyunca kimse onunla ilgilenmedi.</p>
+<p>Haftanın beşinci günü sabahı panolar dikildi. Haber bana, gazetemizin ilk sayısı baskıya girerken ulaştı.</p>
+<p>Panolardan birine imzasız bir levha çivilenmiş:</p>
+<blockquote>
+<p>“Mezkûr alanda tarihî sur yapısının muhafazasına yönelik ıslah çalışmaları yürütülmektedir.”</p>
+</blockquote>
+<p>Levhada ne mühür var ne imza. Açıklama, bir sur onarımının neden süvari nöbeti gerektirdiğini söylemiyor. Altındaki odadan da hiç söz etmiyor.</p>
+<p>Mahalle halkının ise bu konuda altı ayrı açıklaması var.</p>
+<p>Yanıkçukur’da çalışan Skovlanlı bir işçi, odanın eski Skov krallarının hazinesini sakladığını söyledi. Kömürsırtı’nın ilk maden ustalarının altınlarını buraya gömdüğünü anlatan bir hikâye bildiğini ekledi. Hikâyenin nereden geldiğini sorduğumda, “Bizimkiler bu taşları sizinkilerden önce tanırdı,” dedi. Söylediği şeyin ikinci yarısı, ilkinden daha kesin görünüyordu.</p>
+<p>Nizamhane Üniversitesi’nden bir öğrenci, kahvede bana İmparator’un ilk mühründen söz etti. Ona göre odada ya ölümsüzlüğün sırrı ya da felaket öncesinde yapılmış bir anlaşmanın belgesi bulunuyordu. Bu iki ihtimal arasında nasıl bir bağlantı kurduğunu açıklayamadı. Her ikisinin de araştırılmaya değer olduğunu söyledi.</p>
+<p>Sur dibindeki atölyelerden bir ressam, içeride güneşi kıran şeyin bulunduğuna inanıyor. Bunu nereden öğrendiğini sorduğumda, hiçbir yerden öğrenmediğini, yalnızca düşündüğünü anlattı. Ardından panoların üzerine düşen ışığın rengini uzun uzun tarif etti.</p>
+<p>Bir sokak vaizi, bulunan odanın unutulmuş bir tanrıya ait mabet olduğunu ilan etmiş. Tanrının adını vermiyor. Adının söylenmesinin felaket getireceğini ileri sürüyor. Ancak bu uyarıyı kalabalıkların önünde tekrarlamakta sakınca görmüyor.</p>
+<p>Kazı alanının yakınında konuştuğum bir duvarcı ise hazine bulunmadığını söyledi. Ona göre odanın içi kemiklerle dolu. Vakıf’ın ustaları da bunları yeniden kapatmak için orada. Kemiği bizzat görüp görmediğini sorduğumda başını salladı. Ne anlama geldiğini açıklamadan uzaklaştı.</p>
+<p>Altıncı açıklama Kâtipler Sokağı’nda görevli bir memurdan geldi.</p>
+<p>“İçeride hiçbir şey yok,” dedi. “Birileri o arsayı ucuza almak istiyor. Panolar kalktığında etrafına yeni binalar dikildiğini görürseniz şaşırmayın.”</p>
+<p>Bu iddiasını destekleyen bir belge göstermedi.</p>
+<p>Skov hazinesi söylentisinin yayılmasından sonraki gece, sur dibindeki duvarlardan birine kömürle bir cümle yazıldı:</p>
+<p><strong>SKOVLAR ÖNCE BURADAYDI.</strong></p>
+<p>Sabah yazı kazınmıştı. Taşın üzerinde harflerin izleri kaldı. Kimin yazdığını da kimin sildiğini de öğrenemedim.</p>
+<p>Kazı ruhsatını incelemek için Kâtipler Sokağı’na gittim.</p>
+<p>Ruhsat mevcut. Parsel numarası ve işin tanımı kayıtlı. Tarihi haftanın dördüncü günü; yani Mavi Urbalıların enkazı sıradan bir çöküntü sayıp gittiği günün ertesi, panoların dikilmesinden bir gün öncesi. O gün resmî kayıtlara göre ortada yalnızca çökmüş bir döşeme vardı.</p>
+<p>Belgeyi veren makamın belirtilmesi gereken sütun ise boş. Başvurduğum görevli bunun bir kayıt eksikliği olabileceğini söyledi. Hangi kurumun eksikliği gidereceğini sorduğumda beni başka bir daireye yönlendirdi.</p>
+<p>Oradaki görevli, ruhsatın kendilerince düzenlenmediğini bildirdi.</p>
+<p>Kâtipler Sokağı’nın bahçelerinde nöbet tutan süvarilerin, Taç’ın sahiplendiği mülklere atandığını bu sokakta herkes bilir. Vakıf’ın Şehir Meclisi’yle arasının iyi olduğu da bilinir. Kazı alanında süvariler panoların önünde, Vakıf’ın ustaları arkasında duruyor.</p>
+<p>Şehir Meclisi’nin mi, Lord Vali’nin mi, yoksa Vakıf’ın mı çalışmayı yönettiğini gösteren bir kayda ulaşamadım. Bu konudaki başvurularım henüz sonuçlanmadı.</p>
+<p>Taş odanın içinde ne olduğunu bilmiyoruz. Ruhsatı kimin verdiğini de.</p>
+<p>Dün gece, Duman vaktine yaklaşırken kazı alanına yeniden uğradım. Panoların arasından ışık sızıyordu. Kapalı bir yük arabası dışarı çıktı. Tekerleklerinin arasına dolmuş kırmızı toz, kaldırım taşlarına döküldü. Araba köşeyi döndü; hangi yöne saptığını göremedim.</p>
+<p>Arabanın arkasında herhangi bir kurumun işareti bulunmuyordu.</p><footer class="byline">— Vaurin Prichard (Nizamhane Muhabiri)</footer></article><aside class="reading-ending"><div class="eyebrow">Bu sayıdaki tefrika</div><h2><a href="/taslak/pr/22/tefrika/bos-bedenler/2/">Boş Bedenler</a></h2><p>Bölüm 2: Eldivensiz Beyefendi</p></aside><div class="reading-return"><a href="/taslak/pr/22/sayi/002/">← Sayı 002</a><a href="#reading-content">Makalenin başına ↑</a></div></main><footer>Doskvol Dedikoduları · Duyduğunuza inanmayın. Duymadıklarınızdan korkun.</footer></div></body></html>

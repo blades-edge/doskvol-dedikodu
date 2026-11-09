@@ -1,0 +1,62 @@
+<!DOCTYPE html><html lang="tr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><script>
+  (() => {
+    const key = "doskvol-appearance";
+    const valid = value => ["day", "night", "device"].includes(value);
+    const media = window.matchMedia("(prefers-color-scheme: dark)");
+    let preference = "device";
+    try {
+      const saved = localStorage.getItem(key);
+      if (valid(saved)) preference = saved;
+    } catch {
+      // Private browsing may deny storage; the current page still works.
+    }
+    const paint = () => {
+      const dark =
+        preference === "night" || (preference === "device" && media.matches);
+      document.documentElement.dataset.theme = dark ? "dark" : "light";
+      document.querySelectorAll("[data-theme-choice]").forEach(button => {
+        button.setAttribute(
+          "aria-pressed",
+          String(button.dataset.themeChoice === preference)
+        );
+      });
+    };
+    paint();
+    document.addEventListener("DOMContentLoaded", paint, { once: true });
+    media.addEventListener("change", paint);
+    document.addEventListener("doskvol:theme", event => {
+      if (!valid(event.detail)) return;
+      preference = event.detail;
+      try {
+        localStorage.setItem(key, preference);
+      } catch {
+        // Private browsing may deny storage; the current page still works.
+      }
+      paint();
+    });
+    window.addEventListener("storage", event => {
+      if (event.key !== key && event.key !== null) return;
+      preference = valid(event.newValue) ? event.newValue : "device";
+      paint();
+    });
+  })();
+</script><link rel="icon" type="image/svg+xml" href="/taslak/pr/22/favicon.svg"><meta name="robots" content="noindex, nofollow"><link rel="canonical" href="https://doskvol.ink/taslak/pr/22/takvim/"><meta name="description" content="Doskvol ve Akoros'ta kullanılan takvim ve saat sistemi."><meta property="og:site_name" content="Doskvol Dedikoduları"><meta property="og:locale" content="tr_TR"><meta property="og:type" content="website"><meta property="og:title" content="Doskvol Takvim ve Saatleri | Doskvol Dedikoduları"><meta property="og:description" content="Doskvol ve Akoros'ta kullanılan takvim ve saat sistemi."><meta property="og:url" content="https://doskvol.ink/taslak/pr/22/takvim/"><meta property="og:image" content="https://doskvol.ink/taslak/pr/22/_astro/doskvol-line-engraving.Dm_4yufi_Z1C0hF.jpeg"><meta property="og:image:type" content="image/jpeg"><meta property="og:image:alt" content="Doskvol’da kanal kıyısındaki yapılar; mürekkep çizgileriyle gravür."><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="Doskvol Takvim ve Saatleri | Doskvol Dedikoduları"><meta name="twitter:description" content="Doskvol ve Akoros'ta kullanılan takvim ve saat sistemi."><meta name="twitter:image" content="https://doskvol.ink/taslak/pr/22/_astro/doskvol-line-engraving.Dm_4yufi_Z1C0hF.jpeg"><meta name="twitter:image:alt" content="Doskvol’da kanal kıyısındaki yapılar; mürekkep çizgileriyle gravür."><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,600;0,6..72,700;1,6..72,400&display=swap" rel="stylesheet"><title>Doskvol Takvim ve Saatleri | Doskvol Dedikoduları</title><link rel="stylesheet" href="/taslak/pr/22/_astro/EditorialHead.BuTT5ouC.css"></head><body><div class="paper reading-paper"><script type="module">document.querySelectorAll(`[data-theme-choice]`).forEach(e=>{e.addEventListener(`click`,()=>{document.dispatchEvent(new CustomEvent(`doskvol:theme`,{detail:e.dataset.themeChoice}))})});</script><header class="masthead"><aside class="weather-theme" aria-label="Gazetenin hava durumu ve görünümü"><div class="weather-caption">Doskvol’da hava</div><div class="weather-choices" role="group" aria-label="Görünüm tercihi"><button type="button" data-theme-choice="day" aria-pressed="false" title="Kırık güneş — açık görünüm"><img src="/taslak/pr/22/weather-day.png" alt="" width="56" height="56" loading="eager"><span>Gündüz</span></button><button type="button" data-theme-choice="night" aria-pressed="false" title="Ay ve loş bacıları — koyu görünüm"><img src="/taslak/pr/22/weather-night.png" alt="" width="56" height="56" loading="eager"><span>Gece</span></button><button type="button" data-theme-choice="device" aria-pressed="true" title="Hayaletli hava — cihazın tercihini izle"><img src="/taslak/pr/22/weather-device.png" alt="" width="56" height="56" loading="eager"><span>Cihaz</span></button></div></aside><div class="masthead-title"><div class="eyebrow">Akoros’un bağımsız sesi · Doskvol</div><a class="masthead-name" href="/taslak/pr/22/">Doskvol Dedikoduları</a><div class="tagline">Duyduğunuza inanmayın. Duymadıklarınızdan korkun.</div></div></header><main><header class="reading-heading"><h1>Doskvol Takvim ve Saatleri</h1><p class="reading-deck">Doskvol ve Akoros&#39;ta kullanılan takvim ve saat sistemi.</p></header><article class="reading-copy" aria-label="Doskvol Takvim ve Saatleri"><p>Uzun süredir Doskvol’ün nabzını tutan bir neşriyat olarak hep fark ettiğimiz bir şey var. Doskvol, ezelden beri envaiçeşit millet ve vatandan gelen tacir ve muhacirlere ev sahipliği yapar. Ancak yolu bu şehre yeni düşenler, burada kullandığımız vakit ifadeleri karşısında zaman zaman gaflete düşerler. Bilhassa, Tycheros gibi uzak gaipten gelenler, İmparatorluğun takviminden tamamen bîhaber şekilde trenden inerler. Biz de, gazetemizin yazı işleri idaresinin izniyle, bir amme hizmeti olarak bu malumat broşürünü hazırlamayı bir borç bildik.</p>
+<hr>
+<p>Doskvol’da kullandığımız takvim, Şah-ı-baki İmparatorumuzun facia sonrasında biz tebaasına armağan ettiği takvimdir. Günün saatleri için ise, hem örfi vakitleri, hem de artık 847 yılında sınai devrin zarureti haline gelen sayılı saatleri kullanmaktayız.</p>
+<h1 id="aylar-ve-haftalar">Aylar ve haftalar</h1>
+<p><img alt="Çemberde saat yönünde ayların isimleri: Mendar, Kalivet, Suran, Ulsivet, Volnivet, Elisar. Ortada Doskvol&#39;ün üç mevsimi, kış, bahar ve güz" loading="lazy" decoding="async" width="1536" height="1024" src="/taslak/pr/22/_astro/doskvol-aylar-cemberi.DPxFw3iQ_1JgfR8.webp"></p>
+<p>İmparatorluk takvimi üç yüz altmış günlük bir yılı altmışar günlük altı aya böler. Mendar, Kalivet, Suran, Ulsivet, Volnivet ve Elisar. Her ay, her biri altışar günden oluşan onar haftadan teşkil edilmiştir. İmparatorluk astronomlarının kadim tespitleri minvalinde, mevsim kaymalarını telafi etmek için her yedi yılda Elisar ayının son günü <em>“Gaip gün”</em> kabul edilir ve mevzu-u-bahis senenin takviminden çıkartılır. Bir sonraki gaip gün, iki sene sonra vuku bulacak, 849 senesi, Elisar ayının elli dokuzuncu günü sona erecektir.</p>
+<p>Haftanın günlerinin resmi isimleri mevcut değildir. Resmi muhaberatta <em>“haftanın üçüncü günü”</em> minvalinde sayılı ifadeler kullanılır. Bu da tabii olarak muazzam imparatorluğumuzun geniş tebaasının muhtelif örfünün ihtilafa yol açmaması için bir zarurettir. Ancak Doskvol sakinleri, haftanın günlerine kendi örflerine uygun olarak isimler takmakta ve kullanmaktadır. En meşhuru, tüccarların yeni mal çıkarttığı gün olarak <em>“Pazar günü”</em> ismini alan haftanın ilk günüdür. Bir başkası ise haftanın altıncı gününde Billurtaş’ta yeni sahne alan eserleri ilan etmek için kullanılan çan melodilerinden ilhamını alan <em>“Çan günü”</em> dür.</p>
+<h1 id="doskvolün-mevsimleri">Doskvol’ün mevsimleri</h1>
+<p>Akoros’un Şimal sahilinde yer alan Doskvol, sene boyunca üç bariz mevsim tecrübe eder. Elisar ve Mendar aylarında ayaz dolu bir kış göklere hakim olur, Dosk nehri ve rıhtım kısmen donar. Şehrin yarattığı hararet her ne kadar kanalların buz tutmasına ekseriyetle engel olsa da, bilhassa ayaz gecelerde böyle vukuatlar da zaman zaman olmaktadır.</p>
+<p>Kalivet ve Suran aylarında hava daha yumuşar. Bu bahar ayları, bol yağmurlu geçer. Şehri besleyen mantar tarlaları en büyük mahsulü bu mevsimde verir. Doskvol ahalisi, sofralarının zenginleştiği bu mevsimi iple çeker.</p>
+<p>Ulsivet ve Volnivet ayları ise fırtınanın eksik olmadığı, ruhlar aleminin bu aleme daha yakın olduğu bir güz mevsimidir.</p>
+<p>Doskvol’e hususi bir mevsim de Suran ortalarında başlayıp Volnivet ortalarında biten <em>Av mevsimi</em> olacaktır. Bu dönemde Rıhtım tarafında demirleyen devasa Azmaran avcısı gemileri Zifirdeniz’e açılır, ve sağ kalabilenler, şehrimizin can damarını teşkil eden, muazzam bir hazine olan Azmaran kanı ile ambarlarını doldurmuş halde geri dönerler.</p>
+<h1 id="bir-gün-ve-saatleri">Bir gün ve saatleri</h1>
+<p><img alt="Çember etrafına dizili doskvol saatleri. Saat yönünde şafaktan sehere birinci ila onikinci saat. Seherden şafağa isimli vakitler: Eşref, Nağme, Gümüş, Sicim, Alev, Mercan, İpek, Mey, Kül, Kömür, Zincir, Duman" loading="lazy" decoding="async" width="1536" height="1024" src="/taslak/pr/22/_astro/doskvol-saatler-cemberi.QvTAHxrD_tnT1x.webp"></p>
+<p>Doskvol’de gündüz vakti, sınai devrin sayılı saatleri kullanılır. Şafakta ilk güneş parçasının görünmesi ile <em>“Birinci saat”</em> başlar ve son parçanın gözden kaybolması ile <em>“Onikinci saat”</em> biter. Akşam vakti başladığında ise örften gelen vakit isimlerini kullanırız. Gurub sonrası başlayan <em>“Eşref vakti”</em>, sonrasında sıra ile <em>Nağme, Gümüş, Sicim, Alev, Mercan, İpek, Mey, Kül, Kömür, Zincir vakitleri</em>, ve en nihayetinde şafakta son bulan <em>Duman vakti</em>. Şafak ile birlikte yeni bir takvim günü de başlamış kabul edilir.</p>
+<p><img alt="Çember içine dizili dakikalar: ardı, çeyreği, sülüsü, buçuğu" loading="lazy" decoding="async" width="1536" height="1024" src="/taslak/pr/22/_astro/doskvol-dakikalar-cemberi.Dsgl7LjH_2m3K0f.webp"></p>
+<p>Bir saatten kısa süreler için ise Akorosça’nın Doskvol ağzına uygun ifade şekilleri, şehrimizde yaygındır. Bilhassa, bir saati üçe bölen <em>sülüs</em> ifade şekli, bize şehrimizin facia öncesinde bir Skovlan kömür madeni olarak kurulduğu dönemden yadigârdır. Bir saat, üç sülüs olarak görülür. Saatin ilk iki sülüsü kendi ismiyle, sonuncusu ile sonraki saatin ismine atıfla ifade edilir. Mesela, “Dördüncü saate sülüs kala” ifadesi, aslen üçüncü saatin son sülüsündedir. Dahası, resmi haliyle “Kömür vaktini çeyrek geçe” olarak ifade edilen bir vakit, harc-ı-alem ağızda, kısa haliyle pekâlâ “Kömür çeyreği” olarak ifade edilebilir.</p>
+<hr>
+<p>Bu broşürün şehrimize intibak etmenize faidesi olacağını, ve vaktinizin kıymetini bilerek bu alemde arz-ı-endam edeceğinizi temenni ederiz.</p>
+<p>— <em>Doskvol Dedikoduları Yazı İşleri</em></p></article></main><footer><a href="/taslak/pr/22/">Son sayı</a> · <a href="/taslak/pr/22/sayi/">Sayı arşivi</a> · <a href="/taslak/pr/22/tefrika/">Tefrika</a></footer></div></body></html>
