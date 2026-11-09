@@ -82,14 +82,17 @@ const articles = defineCollection({
 
 const chapters = defineCollection({
   loader: glob({ pattern: "*.md", base: "./src/content/bolum" }),
-  schema: z.object({
-    title: z.string().min(1),
-    description: z.string().min(1),
-    author: authorReferences,
-    series: cmsReference("tefrika"),
-    episode: z.number().int().positive(),
-    spoiler: optionalText,
-  }),
+  schema: ({ image }) =>
+    z.object({
+      title: z.string().min(1),
+      description: z.string().min(1),
+      author: authorReferences,
+      series: cmsReference("tefrika"),
+      episode: z.number().int().positive(),
+      spoiler: optionalText,
+      shareImage: z.preprocess(emptyToUndefined, image().optional()),
+      shareImageAlt: optionalText,
+    }),
 });
 
 const pages = defineCollection({

@@ -5,6 +5,8 @@ description: Bir hastamın yerine gittim. Kapıda bana başka birinin maskesini
 series: bos-bedenler.json
 episode: 1
 author: [dr-a-sorel]
+shareImage: ../../assets/images/gulumseyen-kadin-vaka-defteri.avif
+shareImageAlt: Kullanılmış otopsi aletleri arasında açık duran, anatomi eskizleri, el yazısı notlar ve kan lekeleriyle dolu bir doktor defteri
 ---
 
 #### Sicim vaktini çeyrek geçe[^1]

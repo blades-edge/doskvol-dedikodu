@@ -1,0 +1,19 @@
+{
+  "number": 2,
+  "date": "2026-11-10",
+  "imperialDate": {
+    "day": 60,
+    "month": "Mendar",
+    "year": 847
+  },
+  "price": "2 pençik",
+  "lead": "kimin-kazisi.md",
+  "articles": [
+    "kanunun-kesesi.md",
+    "soylu-tazilar.md",
+    "can-gunu-alkis.md",
+    "strangford-dosyasi-bir-hafta-sonra.md",
+    "kimin-kazisi.md"
+  ],
+  "chapters": ["eldivensiz-beyefendi.md", "can-calmadan.md"]
+}

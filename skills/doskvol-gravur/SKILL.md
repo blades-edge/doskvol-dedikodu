@@ -23,7 +23,6 @@ Tek stil referansı [onaylı kılıç talimi](assets/reference-approved-duel-bw.
 
 - 19. yüzyıl resimli gazete ahşap gravürü: vakti bol bir sanatçının ince işçiliğini değil, aceleci bir gazete ressamının canlı, ekonomik çizgisini taklit et. Referanstan biraz daha kalın, güçlü konturlar ve daha kalın, tek tek seçilebilen tarama çizgileri kullan; çizgilerin kalınlığı değişsin, hafif düzensizlikleri kalsın. Gereksiz ince ayrıntı ve saç teli gibi sık çizgilerden kaçın. Konturlar, paralel taramalar ve çapraz taramalar formu kurar. Karanlık, çizgi sıklığı ve yönüyle oluşur; çizgiler arasında boyasız boşluklar kalır.
 - Yumuşak gri yüzeyler, airbrush, fotoğraf filtresi, sepya yıkama, kâğıt dokusu, 3B render ve kesintisiz büyük koyu dolgular kullanma. Belirgin çizgi yapısı olmadan yalnızca “eski resim” hissi yeterli değildir.
-- Doskvol’da dış mekân gökyüzü hep karanlık ve kapalıdır; yönlü taramalar arasında beyaz boşluklar kalır. İç mekâna gökyüzü ekleme.
 - Doskvol'un sıkışık, dikey, gotik/endüstriyel kent hissini koru. Yoksul mahallelerde küçük salaş işletmeler yaşam alanlarıyla iç içedir; dar sokaklar, üst üste katlar ve bol çamaşır ipi kullan. Ayın “Dimmer Sisters”ı istenirse iki sönük optik yansımadır; insan değildir.
 - Yazı, imza, filigran ve dekoratif çerçeve ekleme. Varsayılan kadraj geniş yataydır; kullanıcı biçimi önceliklidir.
 
@@ -32,6 +31,8 @@ Tek stil referansı [onaylı kılıç talimi](assets/reference-approved-duel-bw.
 Mevcut görsel üretim aracını kullan; gerektiğinde imagegen skill’ini oku. **ImageGen yalnızca düz beyaz üzerine siyah mürekkepli gravür üretsin.** `transparent_background: false` kullan. Üretim isteminde saydamlık, alfa, arka plan kaldırma veya son mürekkep rengi #211e1a hakkında hiçbir talimat verme. Beyaz alanlar üretim aşamasında doğaldır; bunları yeniden çizdirerek gidermeye çalışma.
 
 Kısa bir sahne tarifi, tek onaylı stil referansı ve çizgi dili yeterlidir: keskin, biraz daha kalın ve kalınlığı değişen konturlar; ayrı ayrı okunabilen paralel/çapraz taramalar; çizgiler arasında beyaz boşluklar; yumuşak gri yıkama ve boyalı gölgeler yok. Kullanıcı mevcut görseli dönüştürüyorsa onu ayrıca **konu ve kompozisyon hedefi** olarak tanımla; çizgi üslubunu onaylı referanstan al. Eski başarısız üretimleri referans olarak taşıma.
+
+**Gökyüzü kuralını ilk üretimde ve her revizyonda ImageGen istemine açıkça yaz.** Dışarıda veya pencere ya da kapı aralığından gökyüzü görünüyorsa, Doskvol’un göğü karanlık ve kapalı olsun. Karanlığı yönlü taramalarla çiz, çizgiler arasında beyaz boşluklar bırak ve gündüz aydınlığı verme. İç mekân sahnesinde dışarısı görünmüyorsa kadraja gökyüzü ekleme. Aracı çağırmadan önce bu talimatın istemde yer aldığını kontrol et.
 
 Özgün siyah-beyaz üretimi aracın çıktı konumunda koru; `src/assets/images/` içine PNG veya ara dosya kopyalama. Onaylanıp kalıcı stil referansı olacak opak siyah-beyaz PNG’leri bu skill’in `assets/` klasöründe tut. Geçici işlem ve önizleme dosyalarını geçici dizinde tut. Önce siyah-beyaz gravürü kullanıcıya sun ve son onayı bekle. Revizyonları bu aşamada yap. **Kullanıcı son görseli onaylayıp AVIF üretimini istediğinde** aşağıdaki ImageMagick adımıyla beyazı kaldırıp son mürekkep rengini uygula. Sadece kendi kalite değerlendirmen dönüşümü başlatmak için yeterli değildir. Bu işlem yeni çizgi yaratmaz; yumuşak tonlu bir üretimi gravüre dönüştürmez.
 

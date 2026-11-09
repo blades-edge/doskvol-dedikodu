@@ -1,0 +1,28 @@
+---
+import WeatherTheme from "./WeatherTheme.astro";
+
+interface Props {
+  href?: string;
+}
+
+const { href } = Astro.props;
+const Container = href ? "header" : "div";
+const name = "Doskvol Dedikoduları";
+---
+
+<Container class="masthead">
+  <WeatherTheme />
+  <div class="masthead-title">
+    <div class="eyebrow">Akoros’un bağımsız sesi · Doskvol</div>
+    {
+      href ? (
+        <a class="masthead-name" href={href}>
+          {name}
+        </a>
+      ) : (
+        <h1 class="masthead-name">{name}</h1>
+      )
+    }
+    <div class="tagline">Duyduğunuza inanmayın. Duymadıklarınızdan korkun.</div>
+  </div>
+</Container>

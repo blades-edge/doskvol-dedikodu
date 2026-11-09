@@ -4,7 +4,7 @@ import PreviewNotice from "@components/PreviewNotice.astro";
 import { Image } from "astro:assets";
 import media from "../settings/media.json";
 import { imageKey } from "../utils/engraving.mjs";
-import WeatherTheme from "@components/WeatherTheme.astro";
+import Masthead from "@components/Masthead.astro";
 import { articlePath, issuePath } from "@utils/paths";
 import EditorialHead from "@components/EditorialHead.astro";
 import {
@@ -25,6 +25,10 @@ const cover = "cover" in article.data ? article.data.cover : undefined;
 const coverAlt = "coverAlt" in article.data ? article.data.coverAlt : undefined;
 const coverCaption =
   "coverCaption" in article.data ? article.data.coverCaption : undefined;
+const shareImage =
+  "shareImage" in article.data ? article.data.shareImage : undefined;
+const shareImageAlt =
+  "shareImageAlt" in article.data ? article.data.shareImageAlt : undefined;
 const imageAssets = import.meta.glob<{
   default: import("astro").ImageMetadata;
 }>("../assets/images/*", { eager: true });
@@ -59,8 +63,10 @@ const related = articlesForIssue(publication, issue.id).find(
     ><EditorialHead
       {title}
       {description}
-      image={cover ?? issue.data.cover}
-      imageAlt={coverAlt ?? issue.data.coverAlt}
+      image={shareImage ?? cover ?? issue.data.cover}
+      imageAlt={shareImage
+        ? (shareImageAlt ?? "")
+        : (coverAlt ?? issue.data.coverAlt)}
       type="article"
       noindex={publication.preview}
     /></head
@@ -69,23 +75,7 @@ const related = articlesForIssue(publication, issue.id).find(
     <PreviewNotice />
     <a class="reading-skip" href="#reading-content">Makaleye geç</a>
     <div class="paper reading-paper">
-      <header class="masthead reading-masthead">
-        <div class="masthead-title">
-          <div class="eyebrow">Akoros’un bağımsız sesi · Doskvol</div>
-          <a class="reading-wordmark" href={preview}>Doskvol Dedikoduları</a>
-          <div class="tagline">
-            Duyduğunuza inanmayın. Duymadıklarınızdan korkun.
-          </div>
-        </div>
-        <WeatherTheme />
-      </header>
-      <nav class="reading-breadcrumb" aria-label="Sayfa yolu">
-        <a href={preview}>Sayı {issueSlug(issue.data.number)}</a><span
-          aria-hidden="true"
-        >
-          /
-        </span><span>{section}</span>
-      </nav>
+      <Masthead href={preview} />
       <main id="reading-content">
         <header class="reading-heading">
           <div class="eyebrow">
@@ -111,7 +101,7 @@ const related = articlesForIssue(publication, issue.id).find(
         }
         {
           cover && (
-            <figure>
+            <figure class="reading-figure">
               <Image
                 src={cover}
                 alt={coverAlt ?? ""}
@@ -120,7 +110,7 @@ const related = articlesForIssue(publication, issue.id).find(
                   { "engraving-dark": darkCover },
                 ]}
                 widths={[480, 960, 1440]}
-                sizes="(max-width: 720px) calc(100vw - 3rem), 92vw"
+                sizes="(max-width: 32rem) calc(100vw - 1.5rem), calc(92vw - 1rem)"
               />
               {coverCaption && (
                 <figcaption class="caption">{coverCaption}</figcaption>
@@ -193,7 +183,7 @@ const related = articlesForIssue(publication, issue.id).find(
           >
         </div>
       </main>
-      <footer>Doskvol Dedikoduları · Mürekkep kurumadan okuyanlara</footer>
+      <footer>Doskvol Dedikoduları · Duyduğunuza inanmayın. Duymadıklarınızdan korkun.</footer>
     </div>
   </body>
 </html>

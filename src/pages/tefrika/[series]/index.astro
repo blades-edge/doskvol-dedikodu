@@ -13,12 +13,20 @@ export async function getStaticPaths() {
 }
 const { series, publication } = Astro.props;
 const chapters = chaptersForSeries(publication, series.id);
+const latestChapter = chapters.at(-1)!.data;
+const latestIssue = publication.issuesById.get(latestChapter.issue.id)!;
+const shareImage =
+  "shareImage" in latestChapter ? latestChapter.shareImage : undefined;
+const shareImageAlt =
+  "shareImageAlt" in latestChapter ? latestChapter.shareImageAlt : undefined;
 const base = import.meta.env.BASE_URL;
 ---
 
 <PublicationIndex
   title={series.data.title}
   description={series.data.description}
+  image={shareImage ?? latestIssue.data.cover}
+  imageAlt={shareImage ? (shareImageAlt ?? "") : latestIssue.data.coverAlt}
 >
   <ol class="issue-archive">
     {

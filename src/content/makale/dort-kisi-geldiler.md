@@ -4,6 +4,7 @@ description: Delik Kova'da masaya dört kadeh gitti, hesaba üç kişi itiraz et
   Dördüncüyü kalabalık yuttu; mahalle hâlâ sayıyor.
 author: [aldo-brogan]
 section: Dedikodular
+district: Kargaayağı
 location: Delik Kova
 cover: ../../assets/images/dort-kisi-geldiler.avif
 coverAlt: Delik Kova'da dört kadehli masada oturan üç yabancı; müdavimler devrilen sandalyenin yanındaki boş zemini arıyor.

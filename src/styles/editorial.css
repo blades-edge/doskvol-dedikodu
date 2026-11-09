@@ -15,16 +15,25 @@ a {
   color: inherit;
 }
 .paper {
-  max-width: 1160px;
-  margin: 2rem auto;
-  padding: clamp(1.1rem, 4vw, 3.5rem);
+  min-block-size: 100vh;
+  padding: 0.75rem;
   background: #f1e9d8;
-  box-shadow: 0 12px 48px #332a2050;
-  border: 1px solid #b7a78d;
+}
+@media (width > 32rem) {
+  .paper {
+    margin: 0.5rem;
+    padding: clamp(1rem, 4vw, 3.5rem);
+    box-shadow: 0 0.75rem 3rem #332a2050;
+    border: 1px solid #b7a78d;
+  }
 }
 h1,
 h2,
-h3 {
+h3,
+h4,
+h5,
+h6,
+.masthead-name {
   font-family: "Cormorant Garamond", Georgia, serif;
   font-weight: 600;
   text-wrap: balance;
@@ -37,13 +46,17 @@ h3 {
   letter-spacing: 0.16em;
 }
 .masthead {
+  display: grid;
+  gap: 0.75rem;
   text-align: center;
   border-top: 4px double #322b24;
   border-bottom: 4px double #322b24;
   padding: 1.4rem 0 1rem;
 }
-.masthead h1 {
-  font-size: clamp(2.8rem, 7.3vw, 6.5rem);
+.masthead-name {
+  display: block;
+  text-decoration: none;
+  font-size: 2.5rem;
   line-height: 0.98;
   letter-spacing: -0.025em;
   margin: 0.2rem 0;
@@ -51,17 +64,26 @@ h3 {
 }
 .tagline {
   font-style: italic;
-  font-size: 1rem;
+  font-size: 0.85rem;
 }
 .issue {
   display: flex;
-  justify-content: space-between;
-  gap: 1rem;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.25rem;
   padding: 0.55rem 0;
   border-bottom: 1px solid #322b24;
   font-size: 0.75rem;
   letter-spacing: 0.07em;
   text-transform: uppercase;
+}
+@media (width > 32rem) {
+  .issue {
+    flex-direction: row;
+    align-items: stretch;
+    justify-content: space-between;
+    gap: 1rem;
+  }
 }
 .nav {
   display: flex;
@@ -88,7 +110,7 @@ h3 {
   border-bottom: 1px solid #746a5a;
 }
 .lead h2 {
-  max-width: 900px;
+  max-width: 56rem;
   margin: 0.4rem 0;
   font-size: clamp(2.3rem, 5.3vw, 5.3rem);
   line-height: 1.04;
@@ -143,15 +165,50 @@ h3 {
   text-align: left;
   font-style: italic;
 }
-.columns {
+.issue-paper {
+  container-type: inline-size;
+}
+.issue-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(min(100%, 250px), 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 18rem), 1fr));
+  grid-auto-flow: row dense;
   gap: 1.5rem;
-  margin: 1.5rem 0;
+}
+.issue-grid > section:not(.lead),
+.issue-grid .columns,
+.issue-grid .issue-serials {
+  display: contents;
+}
+.issue-grid > .reading-return {
+  grid-column: 1 / -1;
+}
+.issue-grid .serial {
+  margin-top: 0;
+}
+@container (min-width: 37.5rem) {
+  .issue-grid > .lead {
+    grid-column: span 2;
+  }
+}
+@container (min-width: 57rem) {
+  .issue-grid {
+    padding-block-start: 2.2rem;
+  }
+  .issue-grid > .lead {
+    grid-row: span 3;
+    padding-block-start: 0;
+  }
+}
+@container (min-width: 76.5rem) {
+  .issue-grid .serial {
+    grid-column: span 2;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 2fr);
+  }
 }
 .story {
-  padding-right: 1.3rem;
-  border-right: 1px solid #a79b87;
+  min-inline-size: 0;
+  padding-block-end: 1rem;
+  border-bottom: 1px solid #a79b87;
 }
 .story:last-child {
   border: 0;
@@ -176,7 +233,7 @@ h3 {
   padding: 1.3rem;
   border: 3px double #40392f;
   display: grid;
-  grid-template-columns: 1fr 2fr;
+  grid-template-columns: minmax(0, 1fr);
   gap: 1.3rem;
 }
 .serial h3 {
@@ -214,7 +271,11 @@ h3 {
 .serial .byline {
   font-size: 0.8125rem;
 }
-.serial .marker {
+.serial .eyebrow::after {
+  content: "❦" / "";
+  display: block;
+  font-weight: normal;
+  letter-spacing: normal;
   font-size: 3rem;
   line-height: 1;
 }
@@ -225,23 +286,12 @@ footer {
   font-size: 0.8rem;
   text-align: center;
 }
-@media (max-width: 720px) {
-  .paper {
-    margin: 0.5rem;
+@media (width > 48rem) {
+  .reading-heading {
+    margin-top: 2.5rem;
   }
-  .columns {
-    grid-template-columns: 1fr;
-  }
-  .story {
-    border-right: 0;
-    border-bottom: 1px solid #a79b87;
-    padding: 0 0 1rem;
-  }
-  .story:last-child {
-    border: 0;
-  }
-  .serial {
-    grid-template-columns: 1fr;
+  .reading-copy {
+    line-height: 1.7;
   }
 }
 
@@ -263,45 +313,25 @@ footer {
   text-underline-offset: 0.2em;
 }
 .reading-paper {
-  max-width: 1020px;
+  max-width: 64rem;
 }
-.reading-masthead {
-  padding: 1rem 0;
+@media screen and (min-width: 65rem) {
+  .reading-paper {
+    margin-inline: auto;
+  }
 }
-.reading-wordmark {
-  display: block;
-  margin: 0.45rem 0;
-  font:
-    700 clamp(2rem, 5vw, 3.5rem)/1.05 "Cormorant Garamond",
-    Georgia,
-    serif;
-  letter-spacing: -0.025em;
-  text-decoration: none;
-  text-wrap: balance;
-}
-.reading-breadcrumb {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.5rem;
-  align-items: baseline;
-  padding: 1rem 0;
-  border-bottom: 1px solid #a79b87;
-  font-size: 0.875rem;
-}
-.reading-breadcrumb a,
 .reading-return a {
   text-underline-offset: 0.2em;
 }
 .reading-heading {
-  margin: 2.5rem auto 2rem;
-  max-width: 810px;
+  margin: 1.8rem auto 2rem;
+  max-width: 51rem;
 }
 .reading-heading h1 {
   margin: 0.65rem 0 1rem;
   font-size: clamp(2.4rem, 5.6vw, 4.5rem);
   line-height: 1.04;
   letter-spacing: -0.02em;
-  text-wrap: pretty;
 }
 .reading-deck {
   max-width: 58ch;
@@ -319,11 +349,19 @@ footer {
   font-size: 0.875rem;
   line-height: 1.5;
 }
+@media screen and (max-width: 32rem) {
+  .reading-meta {
+    flex-direction: column;
+    align-items: center;
+    gap: 0.25rem;
+    text-align: center;
+  }
+}
 .reading-copy {
   max-width: 62ch;
   margin: 0 auto;
   font-size: clamp(1.125rem, 1.6vw, 1.25rem);
-  line-height: 1.7;
+  line-height: 1.65;
   overflow-wrap: break-word;
 }
 .reading-copy p {
@@ -341,6 +379,32 @@ footer {
   margin: 1.4em 0 0.5em;
   font-size: 1.7em;
   line-height: 1.12;
+}
+.reading-copy table {
+  inline-size: 100%;
+  table-layout: fixed;
+  border-collapse: collapse;
+  border-block: 0.2em double currentColor;
+  font-size: clamp(1rem, 2.5vw, 1.125rem);
+  line-height: 1.35;
+}
+.reading-copy th,
+.reading-copy td {
+  padding: 0.45em 0.3em;
+  border-block-end: 1px solid currentColor;
+  text-align: start;
+  vertical-align: top;
+  overflow-wrap: anywhere;
+}
+.reading-copy th {
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: 1.15em;
+}
+.reading-copy td:last-child {
+  font-variant-numeric: tabular-nums;
+}
+.reading-copy tr:last-child td {
+  border-block-end: 0;
 }
 .reading-copy .footnotes {
   font-size: 0.8em;
@@ -417,7 +481,7 @@ footer {
 }
 .reading-chapters {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 24rem), 1fr));
   gap: 1.5rem;
 }
 .reading-return {
@@ -441,25 +505,19 @@ footer {
 .reading-skip:focus {
   transform: translateY(0);
 }
-@media (max-width: 720px) {
-  .reading-heading {
-    margin-top: 1.8rem;
-  }
-  .reading-chapters {
-    grid-template-columns: 1fr;
-  }
-  .reading-copy {
-    line-height: 1.65;
-  }
-}
 
 .issue-section-title {
-  margin: 1.5rem 0 0;
+  position: absolute;
+  inline-size: 1px;
+  block-size: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
 }
 .issue-archive {
   padding: 0;
   margin: 0 auto;
-  max-width: 810px;
+  max-width: 51rem;
   list-style: none;
 }
 .issue-archive li {
@@ -511,36 +569,22 @@ footer {
 body {
   min-height: 100vh;
 }
-.masthead {
-  display: grid;
-  grid-template-columns: 4.2rem minmax(0, 1fr) 4.2rem;
-  align-items: center;
-  justify-content: center;
-  gap: clamp(0.7rem, 3vw, 2rem);
-  padding-inline: 0;
-}
 .masthead-title {
-  grid-column: 2;
-  min-width: 0;
+  min-inline-size: 0;
 }
 .weather-theme {
-  grid-column: 3;
-  justify-self: end;
-  width: 4.2rem;
-  padding: 0.25rem;
+  padding: 0.25rem 0.5rem;
   border: 3px double #40392f;
 }
 .weather-caption {
-  font-size: 0.5rem;
-  letter-spacing: 0;
+  font-size: 0.625rem;
   text-transform: uppercase;
   padding-bottom: 0.25rem;
   border-bottom: 1px solid #a79b87;
 }
 .weather-choices {
   display: flex;
-  flex-direction: column;
-  gap: 0.15rem;
+  gap: 0.25rem;
   margin-top: 0.3rem;
 }
 .weather-choices button {
@@ -550,7 +594,7 @@ body {
   background: transparent;
   color: inherit;
   font: inherit;
-  font-size: 0.65rem;
+  font-size: 0.55rem;
   padding: 0.1rem;
   cursor: pointer;
 }
@@ -563,8 +607,8 @@ body {
 }
 .weather-choices img {
   display: block;
-  width: 2rem;
-  height: 2rem;
+  width: 1.65rem;
+  height: 1.65rem;
   margin-inline: auto;
   object-fit: contain;
 }
@@ -572,36 +616,51 @@ body {
   display: block;
   margin-top: 0.15rem;
 }
-@media (max-width: 520px) {
+.masthead-title > .eyebrow {
+  font-size: 0.6rem;
+  letter-spacing: 0.08em;
+}
+@media (24rem <= width < 48rem) {
+  .weather-choices button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.35rem;
+  }
+  .weather-choices img,
+  .weather-choices span {
+    margin: 0;
+  }
+}
+
+@media (min-width: 48rem) {
   .masthead {
-    grid-template-columns: 3.4rem minmax(0, 1fr) 3.4rem;
-    gap: 0.5rem;
+    grid-template-columns: 1fr minmax(0, 10fr) 1fr;
+    align-items: center;
+  }
+  .masthead-title {
+    grid-area: 1 / 2;
   }
   .weather-theme {
-    width: 3.4rem;
+    grid-area: 1 / 3;
+    justify-self: end;
+    inline-size: min-content;
   }
-  .weather-caption {
-    font-size: 0.4rem;
+  .weather-choices {
+    flex-direction: column;
   }
+}
+
+@media (width > 32rem) {
   .weather-choices button {
-    font-size: 0.55rem;
+    font-size: 0.65rem;
   }
   .weather-choices img {
-    width: 1.65rem;
-    height: 1.65rem;
+    width: 2rem;
+    height: 2rem;
   }
-  .masthead h1 {
-    font-size: clamp(1.2rem, 7.5vw, 2.1rem);
-  }
-  .masthead-title > .eyebrow {
-    font-size: 0.6rem;
-    letter-spacing: 0.08em;
-  }
-  .masthead .tagline {
-    font-size: 0.85rem;
-  }
-  .reading-wordmark {
-    font-size: clamp(1.2rem, 7.5vw, 2.1rem);
+  .masthead-name {
+    font-size: clamp(2.8rem, 7.3vw, 6.5rem);
   }
 }
 
@@ -610,4 +669,107 @@ body {
   border-bottom: 1px solid #a79b87;
   text-align: center;
   font-size: 0.85rem;
+}
+
+@page {
+  margin: 16mm;
+}
+
+@media print {
+  :root {
+    font-size: 10pt;
+  }
+  :root,
+  :root[data-theme],
+  :root:not([data-theme="light"]),
+  body,
+  .paper {
+    background: white;
+    color: black;
+    filter: none;
+  }
+  :root[data-theme] .engraving-dark,
+  :root:not([data-theme="light"]) .engraving-dark {
+    filter: none;
+    background-color: transparent;
+  }
+  body,
+  .paper {
+    min-block-size: 0;
+  }
+  .paper {
+    max-inline-size: none;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-shadow: none;
+  }
+  .nav,
+  .weather-theme,
+  .reading-chapters,
+  .reading-return,
+  .reading-skip {
+    display: none;
+  }
+  .masthead {
+    display: block;
+    padding-block: 0.4rem;
+  }
+  .masthead-name {
+    font-size: 2.6rem;
+  }
+  .reading-heading {
+    margin: 0.65rem 0;
+    max-inline-size: none;
+  }
+  .reading-heading h1 {
+    margin-block: 0.25rem 0.4rem;
+    font-size: 2rem;
+  }
+  .reading-deck {
+    max-inline-size: none;
+    margin-block-end: 0.5rem;
+    font-size: 1.1rem;
+  }
+  .reading-meta {
+    padding-block: 0.25rem;
+  }
+  .reading-copy {
+    max-inline-size: none;
+    column-width: 18rem;
+    column-gap: 5mm;
+    column-fill: balance;
+    font-size: 1rem;
+    line-height: 1.3;
+    orphans: 2;
+    widows: 2;
+  }
+  .reading-copy p {
+    margin-block-end: 0.6em;
+  }
+  .reading-copy blockquote {
+    margin-block: 0.75em;
+    line-height: inherit;
+  }
+  .reading-copy :is(h2, h3, h4, h5, h6) {
+    break-after: avoid;
+  }
+  .reading-figure {
+    break-inside: avoid;
+    margin: 0.5rem 0;
+  }
+  .reading-copy > :is(figure, img, p:has(> img:only-child)) {
+    float: inline-start;
+    inline-size: 100%;
+    break-inside: avoid;
+    margin: 0.5rem 0;
+  }
+  .reading-figure img,
+  .reading-copy img {
+    inline-size: 100%;
+    block-size: auto;
+    max-block-size: 55mm;
+    margin: 0 auto;
+    object-fit: contain;
+  }
 }

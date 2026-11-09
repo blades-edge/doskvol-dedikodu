@@ -5,7 +5,7 @@ description: 'Gazetemize adsız bir zarf geldi: Strangford imalathanelerinde
   dosyadaki mühür ise tarihini taşıyan günde henüz kimsenin elinde değildi.'
 author: [vaurin-prichard]
 section: Dedikodular
-location: Yanıkçukur
+district: Yanıkçukur
 cover: ../../assets/images/strangford-isciler.avif
 coverAlt: Strangford'un imalathanesinden Mavi Urbalı zoruyla çıkartılan işçiler.
 coverCaption: İşçiler üzgün ve öfkeli. Hayatları ise mahvolmuş halde.
