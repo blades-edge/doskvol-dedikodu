@@ -6,6 +6,9 @@ author: gaspar-merrow.json
 section: Haberler
 district: Gecepazarı
 location: Vreen'in Tazı Yarışları
+cover: ../../assets/images/soylu-tazilar.avif
+coverAlt: Kuru bir yeraltı kanalında bir tazı koşarken diğeri oturmuş, korkuluğa yığılan şık seyircileri izliyor.
+coverCaption: Üstat Vreen’in tanıtım koşusunda bir tazı seyircileri izlemeyi tercih etti.
 ---
 
 Geçtiğimiz günlerde Gecepazarı'nda pek seçkin bir davete katıldım. Davetiyede tazı koşusu yazıyordu. Ben de safça, koşan tazılar göreceğimi düşündüm. Meğer asıl yarış, beyefendilerin birbirlerinden daha zengin görünme gayretiymiş.

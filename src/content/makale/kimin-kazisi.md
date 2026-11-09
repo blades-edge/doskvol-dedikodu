@@ -6,6 +6,9 @@ author: vaurin-prichard.json
 section: Haberler
 district: Nizamhane
 location: Nizam Duvarı, Katipler Sokağı
+cover: ../../assets/images/kimin-kazisi.avif
+coverAlt: Bir Mavi Urbalı heykeltıraş atölyesinin çöken döşemesinden aşağı fener sarkıtırken diğeri kapıda bekliyor.
+coverCaption: Nizam Duvarı dibindeki atölyenin döşemesi, eski sura bitişik bir taş odaya açıldı.
 ---
 Nizamhane'nin eski sur kalıntıları boyunca uzanan sanatçı atölyelerini bilenler, oradaki taşların yıllardır nasıl göründüğünü de bilir. Bazılarının üzerinde sarmaşık vardı. Bazıları, heykeltıraşların dayadıkları mermer levhaların arkasında kalırdı. Bugün hiçbirini görmek mümkün değil.
 

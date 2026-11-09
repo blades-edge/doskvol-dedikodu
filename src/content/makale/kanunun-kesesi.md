@@ -6,6 +6,9 @@ author: aldo-brogan.json
 section: Dedikodular
 district: Kargaayağı
 location: Mum Sokağı
+cover: ../../assets/images/kanunun-kesesi.avif
+coverAlt: Yağmur altında üç mahalleli bir Mavi Urbalıya üç farklı boy gösteriyor. Kasap tezgâhından onları izliyor.
+coverCaption: Mum Sokağı’nda şüphelinin boyu tanıktan tanığa değişiyor.
 ---
 
 Geçen Pazar günü Mum Sokağı'nda tüccarlar yeni mallarını, bir Mavi Urbalı da kesesini açtı. Söylenene göre zabit, mahalle esnafından yaptığı haftalık tahsilatı henüz tamamlamıştı. Kese de tam bu sırada ortadan kayboldu.

@@ -7,6 +7,9 @@ author: aldo-brogan.json
 section: Dedikodular
 district: Altıkule
 location: Ağlayan Kadın'ın Kolları
+cover: ../../assets/images/can-gunu-alkis.avif
+coverAlt: Boş opera sahnesinin önündeki orkestra çukurunda bir sandalye diğerlerinden öne çekilmiş.
+coverCaption: Ağlayan Kadın’ın Kolları’nda orkestra çukurundaki bir sandalye sıranın biraz önünde duruyor.
 ---
 Altıkule'de, bir zamanlar soyluların localardan sahne seyrettiği Ağlayan Kadın'ın Kolları, bugün yoksullara çorba ve yatak veriyor. Ne var ki sahne, perdelerin kapandığını kabul etmeye pek niyetli değilmiş.
 
