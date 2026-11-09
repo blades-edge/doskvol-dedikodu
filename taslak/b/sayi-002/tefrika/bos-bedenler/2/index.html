@@ -1,0 +1,182 @@
+<!DOCTYPE html><html lang="tr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><script>
+  (() => {
+    const key = "doskvol-appearance";
+    const valid = value => ["day", "night", "device"].includes(value);
+    const media = window.matchMedia("(prefers-color-scheme: dark)");
+    let preference = "device";
+    try {
+      const saved = localStorage.getItem(key);
+      if (valid(saved)) preference = saved;
+    } catch {
+      // Private browsing may deny storage; the current page still works.
+    }
+    const paint = () => {
+      const dark =
+        preference === "night" || (preference === "device" && media.matches);
+      document.documentElement.dataset.theme = dark ? "dark" : "light";
+      document.querySelectorAll("[data-theme-choice]").forEach(button => {
+        button.setAttribute(
+          "aria-pressed",
+          String(button.dataset.themeChoice === preference)
+        );
+      });
+    };
+    paint();
+    document.addEventListener("DOMContentLoaded", paint, { once: true });
+    media.addEventListener("change", paint);
+    document.addEventListener("doskvol:theme", event => {
+      if (!valid(event.detail)) return;
+      preference = event.detail;
+      try {
+        localStorage.setItem(key, preference);
+      } catch {
+        // Private browsing may deny storage; the current page still works.
+      }
+      paint();
+    });
+    window.addEventListener("storage", event => {
+      if (event.key !== key && event.key !== null) return;
+      preference = valid(event.newValue) ? event.newValue : "device";
+      paint();
+    });
+  })();
+</script><link rel="icon" type="image/svg+xml" href="/taslak/b/sayi-002/favicon.svg"><meta name="robots" content="noindex, nofollow"><link rel="canonical" href="https://doskvol.ink/taslak/b/sayi-002/tefrika/bos-bedenler/2/"><meta name="description" content="Muhafızlar cesedi aldı. Öğleden sonra muayenehaneme bir kadın geldi. Hasta değildi."><meta property="og:site_name" content="Doskvol Dedikoduları"><meta property="og:locale" content="tr_TR"><meta property="og:type" content="article"><meta property="og:title" content="Eldivensiz Beyefendi | Doskvol Dedikoduları"><meta property="og:description" content="Muhafızlar cesedi aldı. Öğleden sonra muayenehaneme bir kadın geldi. Hasta değildi."><meta property="og:url" content="https://doskvol.ink/taslak/b/sayi-002/tefrika/bos-bedenler/2/"><meta property="og:image" content="https://doskvol.ink/taslak/b/sayi-002/_astro/doskvol-line-engraving.Dm_4yufi_ZFoas3.jpeg"><meta property="og:image:type" content="image/jpeg"><meta property="og:image:alt" content><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="Eldivensiz Beyefendi | Doskvol Dedikoduları"><meta name="twitter:description" content="Muhafızlar cesedi aldı. Öğleden sonra muayenehaneme bir kadın geldi. Hasta değildi."><meta name="twitter:image" content="https://doskvol.ink/taslak/b/sayi-002/_astro/doskvol-line-engraving.Dm_4yufi_ZFoas3.jpeg"><meta name="twitter:image:alt" content><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,600;0,6..72,700;1,6..72,400&display=swap" rel="stylesheet"><title>Eldivensiz Beyefendi | Doskvol Dedikoduları</title><link rel="stylesheet" href="/taslak/b/sayi-002/_astro/EditorialHead.BuTT5ouC.css"></head><body><a class="reading-skip" href="#reading-content">Makaleye geç</a><div class="paper reading-paper"><script type="module">document.querySelectorAll(`[data-theme-choice]`).forEach(e=>{e.addEventListener(`click`,()=>{document.dispatchEvent(new CustomEvent(`doskvol:theme`,{detail:e.dataset.themeChoice}))})});</script><header class="masthead"><aside class="weather-theme" aria-label="Gazetenin hava durumu ve görünümü"><div class="weather-caption">Doskvol’da hava</div><div class="weather-choices" role="group" aria-label="Görünüm tercihi"><button type="button" data-theme-choice="day" aria-pressed="false" title="Kırık güneş — açık görünüm"><img src="/taslak/b/sayi-002/weather-day.png" alt="" width="56" height="56" loading="eager"><span>Gündüz</span></button><button type="button" data-theme-choice="night" aria-pressed="false" title="Ay ve loş bacıları — koyu görünüm"><img src="/taslak/b/sayi-002/weather-night.png" alt="" width="56" height="56" loading="eager"><span>Gece</span></button><button type="button" data-theme-choice="device" aria-pressed="true" title="Hayaletli hava — cihazın tercihini izle"><img src="/taslak/b/sayi-002/weather-device.png" alt="" width="56" height="56" loading="eager"><span>Cihaz</span></button></div></aside><div class="masthead-title"><div class="eyebrow">Akoros’un bağımsız sesi · Doskvol</div><a class="masthead-name" href="/taslak/b/sayi-002/sayi/002/">Doskvol Dedikoduları</a><div class="tagline">Duyduğunuza inanmayın. Duymadıklarınızdan korkun.</div></div></header><main id="reading-content"><header class="reading-heading"><div class="eyebrow">Boş Bedenler · Bölüm 2</div><h1>Eldivensiz Beyefendi</h1><p class="reading-deck">Muhafızlar cesedi aldı. Öğleden sonra muayenehaneme bir kadın geldi. Hasta değildi.</p><div class="reading-meta"><span>Dr. A. Sorel</span><a href="/taslak/b/sayi-002/takvim/">60 Mendar 847</a><a href="/taslak/b/sayi-002/sayi/">Sayı 002</a></div></header><article class="reading-copy" aria-label="Eldivensiz Beyefendi"><h4 id="üçüncü-saati-buçuk-geçe">Üçüncü saati buçuk geçe</h4>
+<p>Ayak sesleri kapının önünde kesildi. Kimse içeri girmedi.</p>
+<p>Profesör kapıya bakmadı.</p>
+<p>Anahtarı delil tepsisinden aldım. Uzunluğu otuz bir milimetreydi. Üç dişi vardı. Sapındaki aşınma düzensizdi.</p>
+<p>Defterimin boş bir sayfasına birebir ölçekte çizdim. Her iki yüzünü gösterdim. Çizimin yanına ölçüleri yazdım.</p>
+<p>Anahtarı tepsiye geri bıraktım.</p>
+<p>Kapı açıldı. İçeri iki Ruh Muhafızı girdi.</p>
+<p>Bronz maskeleri yüzlerini bütünüyle örtüyordu. Üzerlerinde koyu renk, ağır paltolar vardı. Birinin sağ elinde kalın bir eldiven, diğerinin belinde kısa bir zincir bulunuyordu.</p>
+<p>Konuşmadılar.</p>
+<p>Profesör Halbrecht masanın üzerindeki teslim belgesini aldı. Muhafızlardan birine uzattı.</p>
+<p>Muhafız belgeyi okudu. Kalemi aldı. İmza yerine birbirini kesen iki çizgi koydu.</p>
+<p>Fısıltı ikinci incelemeye başlamamıştı.</p>
+<p>“Cesedin ruhsal durumuna ilişkin bir değerlendirme daha gerekiyor,” dedi.</p>
+<p>Muhafızlardan biri başını ona çevirdi. Bir süre baktı. Sonra belgeyi katlayıp paltosunun içine yerleştirdi.</p>
+<p>Fısıltı geri çekildi.</p>
+<p>Ceset örtüldü. Sedyenin tekerlekleri taş zeminde iki kez takıldı. Muhafızlardan biri sedyenin önünü kaldırdı. Diğeri kapıyı açtı.</p>
+<p>Çıkmadan önce arkadaki Muhafız durdu.</p>
+<p>Bronz maskesini delil tepsisine çevirdi. Başını hafifçe eğdi. Bir süre öyle kaldı. Tepside anahtar, pens ve üzerinde koyu lekeler bulunan iki parça pamuk duruyordu.</p>
+<p>Sonra diğerini izleyerek çıktı.</p>
+<p>Hiçbir soru sorulmadı.</p>
+<p>Profesör sedye uzaklaşana kadar kapıda bekledi.</p>
+<p>“Raporu yarın gönder, Adrian. Ateşli nöbet gözlemini de ekle.”</p>
+<p>“Zehirlenme ihtimalini dışlamadım.”</p>
+<p>“Onu da yazabilirsin.”</p>
+<p>Önlüğünü çıkardı. Ellerini yeniden yıkadı.</p>
+<p>Ben defterimi kapattım.</p>
+<h4 id="dokuzuncu-saat">Dokuzuncu saat</h4>
+<p>Bekleme odamda dört hasta vardı.</p>
+<p>Üçü Billurtaş’ta oturan ailelerdendi. Dördüncüsü, kapıya en yakın sandalyede oturan bir kadındı. Paltosunun omuzları ıslaktı. Eldivenlerinin parmak uçlarında farklı renk iplikle yapılmış onarımlar vardı.</p>
+<p>Adı deftere yazılmamıştı.</p>
+<p>Yardımcım, kadının muayene ücreti ödemeyeceğini söylediğini bildirdi.</p>
+<p>İçeri aldım.</p>
+<p>Muayene masasının yanından geçti. Oturmadı.</p>
+<p>“Doktor Adrian Sorel?”</p>
+<p>“Evet.”</p>
+<p>“Müfettiş Mara Voss.”</p>
+<p>Paltosunun içinden deri bir dosya çıkardı. Masama koydu.</p>
+<p>Paltosundan halıya su damlıyordu. Açık renk dokuma, damlaların düştüğü yerde koyulaştı. Kadın bunu fark etti. Paltosunun önünü kapattı, fakat çıkarmadı.</p>
+<p>Duvardaki diplomama baktı. Ardından yanındaki çerçeveye döndü.</p>
+<p>Profesör Halbrecht’in, muayenehanemi açtığım yıl yazdığı tavsiye mektubuydu.</p>
+<p>İmzasının bulunduğu yerde bakışı bir süre kaldı.</p>
+<p>“Dün sabah incelediğiniz kadın hakkında konuşacağız,” dedi.</p>
+<p>“Bu sabah.”</p>
+<p>Başını çevirdi.</p>
+<p>“Ölüm raporunu henüz tamamlamadım.”</p>
+<p>“Biliyorum.”</p>
+<p>Dosyayı açtı.</p>
+<p>Kâğıtlardan yükselen keskin dezenfektan kokusu midemde kısa süreli bir kasılmaya neden oldu. Bunu dezenfektanın kalitesizliğine bağladım.</p>
+<p>Voss iki belgeyi önümde yan yana yerleştirdi.</p>
+<p>Her ikisinde de bir ceset çizimi vardı. Birincisi Kargaayağı’ndaki kanallardan çıkarılmış bir erkeğe, ikincisi Rıhtım’da bir iskelenin altında bulunmuş bir kadına aitti.</p>
+<p>İki cesedin de sol bileğinde dairesel bir iz gösterilmişti.</p>
+<p>Cetvelimi aldım.</p>
+<p>“Bunları kim çizdi?”</p>
+<p>“Morg görevlileri.”</p>
+<p>“Ölçüler doğrulandı mı?”</p>
+<p>“İki ayrı görevli tarafından.”</p>
+<p>İzlerin çaplarını karşılaştırdım. Çaplar aynıydı. Bu sabah gördüğüm işaretin ölçüsüyle de örtüşüyordu.</p>
+<p>Ölçümü ikinci kez yaptım.</p>
+<p>Gereksizdi.</p>
+<p>“Üçüncü bir ceset daha var,” dedim.</p>
+<p>Voss başka bir sayfa çıkardı.</p>
+<p>“Adı Ilyra Fen’di.”</p>
+<p>Kısa bir süre sustu. Dosyanın kenarını düzeltti.</p>
+<p>“Kurbanın Muhafız incelemesi burada.”</p>
+<p>Belgeyi çevirdim.</p>
+<p>İnceleme tamamlanamadan imha edildi.</p>
+<p>Ceset morgdan altı saatten kısa bir süre önce çıkarılmıştı.</p>
+<p>“Ruhsal inceleme yapılmadı mı?”</p>
+<p>“Başlatıldı. Tamamlanmadı.”</p>
+<p>“İmha neden durdurulmadı?”</p>
+<p>“Bu sorunun cevabını henüz alamadım.”</p>
+<p>Masamın arkasına geçtim. Ellerimi masanın altına aldım.</p>
+<p>Voss üçüncü bir belge uzattı. Morgdan alınan delillerin listesiydi.</p>
+<p>Giysiler, saç tokası, iki küçük yüzük ve üzerinde koyu leke bulunan bir mendil kaydedilmişti.</p>
+<p>Anahtar yoktu.</p>
+<p>Listeyi yeniden okudum. Sayfanın arkasına baktım.</p>
+<p>Anahtarı çizdiğim defter, masamın sağ çekmecesindeydi.</p>
+<p>Voss’a bundan söz etmedim.</p>
+<p>“Raporunuza ne yazacaksınız?” diye sordu.</p>
+<p>“Ölüm nedeni belirlenemedi. Ateşli nöbet ve zehirlenme olasılıkları değerlendirilecek.”</p>
+<p>“İkisini de eşit derecede olası mı görüyorsunuz?”</p>
+<p>“Henüz birini dışlayacak yeterli bulgum yok.”</p>
+<p>“Profesör Halbrecht başka görüşte.”</p>
+<p>Profesör bu görüşü yalnızca morgda dile getirmişti. İlkinde odada ikimiz vardık. İkincisinde Fısıltı da oradaydı.</p>
+<p>Voss kalemini çıkardı. Bir şey yazmadı.</p>
+<p>“Hastalarınız size her zaman doğruyu söyler mi, doktor?”</p>
+<p>“Her hasta bildiğini anlatır. Ben bulguları incelerim.”</p>
+<p>“Peki bulgular hastanın anlattıklarına uymazsa?”</p>
+<p>“Anlatılanları değil, bulguları esas alırım.”</p>
+<p>Voss kalemini kapattı.</p>
+<p>Son belgeyi masaya bıraktı. Kiliseye bağlı morgun kabul izniydi. Altında okunması güç bir imza vardı.</p>
+<p>“Buradaki saati okuyun.”</p>
+<p>Okudum.</p>
+<p>“İpek vaktinden önce.”</p>
+<p>“Şimdi bunu.”</p>
+<p>İkinci belge ölüm çanının kaydıydı.</p>
+<p>İpek vaktinin sülüsü.</p>
+<p>“İzin, çandan önce düzenlenmiş,” dedim.</p>
+<p>“Evet.”</p>
+<p>“Kâtip saati yanlış yazmış olabilir.”</p>
+<p>Voss cevap vermedi.</p>
+<p>“Gece nöbetlerinde bu olur.”</p>
+<p>Belgenin kenarına parmağını koydu.</p>
+<p>“Bu belgeyi düzenleyen kâtiple konuşacağım.”</p>
+<p>“Konuşmalısınız.”</p>
+<p>“İmzasını okuyabiliyor musunuz?”</p>
+<p>Belgeyi ışığa tuttum. Harfler birbirine geçmişti. Bir soyadının yalnızca son iki harfi seçiliyordu.</p>
+<p>“Hayır.”</p>
+<p>“Ben de okuyamadım.”</p>
+<p>Saate baktım. Dokuzuncu saati sülüs geçiyordu.</p>
+<p>Voss paltosunun cebinden küçük bir not defteri çıkardı.</p>
+<p>“Bir tanığım var. Katedralin üç sokak ötesinde gece bekçiliği yapıyor. Çan çaldığında nöbet yerindeymiş.”</p>
+<p>“Bu olağan.”</p>
+<p>“Çandan hemen sonra sokakta yürüyen bir beyefendi görmüş. Koyu renk palto. Şapka. Tek başına.”</p>
+<p>“Billurtaş’ta gece yürüyen tek kişi ben değilim.”</p>
+<p>Voss kalemini yeniden açtı. Defterine bir şey yazdı.</p>
+<p>“Bir ayrıntıyı özellikle hatırlıyor,” dedi. “Beyefendinin ellerinde eldiven yokmuş.”</p>
+<p>Gözlerini ellerime indirdi.</p>
+<p>Masamın üzerinde duruyorlardı.</p>
+<p>“Bir hekim için eldiven kullanmak meslekî bir tercihtir,” dedim. “Sokakta kullanmak zorunlu değildir.”</p>
+<p>“Böyle bir zorunluluk olduğunu söylemedim.”</p>
+<p>Paltosunun düğmelerini ilikledi.</p>
+<p>“Sizi dün gece katedralin doğu kapısında gördüm, doktor. İçeri girdiğinizi.”</p>
+<p>“Öyleyse bekçinizin ifadesine ihtiyacınız yok.”</p>
+<p>“İfadesi başka bir saati doğruluyor.”</p>
+<p>Ayağa kalktı.</p>
+<p>“İçeride ne olduğunu anlatmanızı istiyorum.”</p>
+<p>“Beni neden durdurmadınız?”</p>
+<p>Voss elini kapının tokmağına koydu.</p>
+<p>Cevap vermedi.</p>
+<p>Ardından bana döndü.</p>
+<p>“Yarın bana o gece gördüklerinizi anlatacaksınız. Ya tanık olarak, ya suç ortağı olarak. Hangisi olacağına siz karar verin.”</p>
+<p>Kapıyı açtı. Çıkarken kapatmadı.</p>
+<p>Yardımcım birkaç dakika sonra içeri girdi. Bekleyen hastaları sordu.</p>
+<p>Muayenelere devam ettim.</p>
+<p>Son hastam, sağ elinin işaret parmağında zaman zaman uyuşma olduğunu söyleyen yaşlı bir hanımdı. Dolaşımı olağandı. Nabzı dakikada yetmiş ikiydi. Muayenede belirgin bir bozukluk saptamadım.</p>
+<p>Bir hafta sonra yeniden gelmesini önerdim.</p>
+<p>Akşam muayenehaneyi kapatmadan önce eldiven siparişi verdim.</p>
+<p>İki çift. Siyah.</p>
+<p>İkinci bölümün sonu. Dr. Sorel’in vaka defteri bir sonraki sayıda devam edecek.</p><footer class="byline">— Dr. A. Sorel</footer></article><nav class="reading-ending reading-chapters" aria-label="Tefrika bölümleri"><div><span class="eyebrow">Önceki bölüm</span><p><a href="/taslak/b/sayi-002/tefrika/bos-bedenler/1/">Bölüm 1: Gülümseyen Kadın</a></p></div><div><span class="eyebrow">Sonraki bölüm</span><p>Sonraki bölüm henüz yayımlanmadı.</p></div></nav><div class="reading-return"><a href="/taslak/b/sayi-002/sayi/002/">← Sayı 002</a><a href="#reading-content">Makalenin başına ↑</a></div></main><footer>Doskvol Dedikoduları · Duyduğunuza inanmayın. Duymadıklarınızdan korkun.</footer></div></body></html>

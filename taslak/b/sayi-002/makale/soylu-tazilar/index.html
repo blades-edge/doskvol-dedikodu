@@ -1,0 +1,64 @@
+<!DOCTYPE html><html lang="tr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><script>
+  (() => {
+    const key = "doskvol-appearance";
+    const valid = value => ["day", "night", "device"].includes(value);
+    const media = window.matchMedia("(prefers-color-scheme: dark)");
+    let preference = "device";
+    try {
+      const saved = localStorage.getItem(key);
+      if (valid(saved)) preference = saved;
+    } catch {
+      // Private browsing may deny storage; the current page still works.
+    }
+    const paint = () => {
+      const dark =
+        preference === "night" || (preference === "device" && media.matches);
+      document.documentElement.dataset.theme = dark ? "dark" : "light";
+      document.querySelectorAll("[data-theme-choice]").forEach(button => {
+        button.setAttribute(
+          "aria-pressed",
+          String(button.dataset.themeChoice === preference)
+        );
+      });
+    };
+    paint();
+    document.addEventListener("DOMContentLoaded", paint, { once: true });
+    media.addEventListener("change", paint);
+    document.addEventListener("doskvol:theme", event => {
+      if (!valid(event.detail)) return;
+      preference = event.detail;
+      try {
+        localStorage.setItem(key, preference);
+      } catch {
+        // Private browsing may deny storage; the current page still works.
+      }
+      paint();
+    });
+    window.addEventListener("storage", event => {
+      if (event.key !== key && event.key !== null) return;
+      preference = valid(event.newValue) ? event.newValue : "device";
+      paint();
+    });
+  })();
+</script><link rel="icon" type="image/svg+xml" href="/taslak/b/sayi-002/favicon.svg"><meta name="robots" content="noindex, nofollow"><link rel="canonical" href="https://doskvol.ink/taslak/b/sayi-002/makale/soylu-tazilar/"><meta name="description" content="Gecepazarı'nda dört ayaklı asalet, iki ayaklı saflık ve Üstat Vreen'in bitmek bilmeyen servet vaatleri."><meta property="og:site_name" content="Doskvol Dedikoduları"><meta property="og:locale" content="tr_TR"><meta property="og:type" content="article"><meta property="og:title" content="Soylu tazılar, soylu olmayan bahisler | Doskvol Dedikoduları"><meta property="og:description" content="Gecepazarı'nda dört ayaklı asalet, iki ayaklı saflık ve Üstat Vreen'in bitmek bilmeyen servet vaatleri."><meta property="og:url" content="https://doskvol.ink/taslak/b/sayi-002/makale/soylu-tazilar/"><meta property="og:image" content="https://doskvol.ink/taslak/b/sayi-002/_astro/doskvol-line-engraving.Dm_4yufi_ZFoas3.jpeg"><meta property="og:image:type" content="image/jpeg"><meta property="og:image:alt" content><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="Soylu tazılar, soylu olmayan bahisler | Doskvol Dedikoduları"><meta name="twitter:description" content="Gecepazarı'nda dört ayaklı asalet, iki ayaklı saflık ve Üstat Vreen'in bitmek bilmeyen servet vaatleri."><meta name="twitter:image" content="https://doskvol.ink/taslak/b/sayi-002/_astro/doskvol-line-engraving.Dm_4yufi_ZFoas3.jpeg"><meta name="twitter:image:alt" content><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,600;0,6..72,700;1,6..72,400&display=swap" rel="stylesheet"><title>Soylu tazılar, soylu olmayan bahisler | Doskvol Dedikoduları</title><link rel="stylesheet" href="/taslak/b/sayi-002/_astro/EditorialHead.BuTT5ouC.css"></head><body><a class="reading-skip" href="#reading-content">Makaleye geç</a><div class="paper reading-paper"><script type="module">document.querySelectorAll(`[data-theme-choice]`).forEach(e=>{e.addEventListener(`click`,()=>{document.dispatchEvent(new CustomEvent(`doskvol:theme`,{detail:e.dataset.themeChoice}))})});</script><header class="masthead"><aside class="weather-theme" aria-label="Gazetenin hava durumu ve görünümü"><div class="weather-caption">Doskvol’da hava</div><div class="weather-choices" role="group" aria-label="Görünüm tercihi"><button type="button" data-theme-choice="day" aria-pressed="false" title="Kırık güneş — açık görünüm"><img src="/taslak/b/sayi-002/weather-day.png" alt="" width="56" height="56" loading="eager"><span>Gündüz</span></button><button type="button" data-theme-choice="night" aria-pressed="false" title="Ay ve loş bacıları — koyu görünüm"><img src="/taslak/b/sayi-002/weather-night.png" alt="" width="56" height="56" loading="eager"><span>Gece</span></button><button type="button" data-theme-choice="device" aria-pressed="true" title="Hayaletli hava — cihazın tercihini izle"><img src="/taslak/b/sayi-002/weather-device.png" alt="" width="56" height="56" loading="eager"><span>Cihaz</span></button></div></aside><div class="masthead-title"><div class="eyebrow">Akoros’un bağımsız sesi · Doskvol</div><a class="masthead-name" href="/taslak/b/sayi-002/sayi/002/">Doskvol Dedikoduları</a><div class="tagline">Duyduğunuza inanmayın. Duymadıklarınızdan korkun.</div></div></header><main id="reading-content"><header class="reading-heading"><div class="eyebrow">Haberler</div><h1>Soylu tazılar, soylu olmayan bahisler</h1><p class="reading-deck">Gecepazarı&#39;nda dört ayaklı asalet, iki ayaklı saflık ve Üstat Vreen&#39;in bitmek bilmeyen servet vaatleri.</p><div class="reading-meta"><span>Gaspar Merrow</span><a href="/taslak/b/sayi-002/takvim/">60 Mendar 847</a><a href="/taslak/b/sayi-002/sayi/">Sayı 002</a></div></header><article class="reading-copy" aria-label="Soylu tazılar, soylu olmayan bahisler"><p>Geçtiğimiz günlerde Gecepazarı’nda pek seçkin bir davete katıldım. Davetiyede tazı koşusu yazıyordu. Ben de safça, koşan tazılar göreceğimi düşündüm. Meğer asıl yarış, beyefendilerin birbirlerinden daha zengin görünme gayretiymiş.</p>
+<p>Üstat Vreen’in büyük vaatlerle kurmaya giriştiği yarış pistinde, yatırımcılara mahsus bir tanıtım koşusu düzenleniyordu. Kadife yakalar, ipek mendiller ve insanın bir aylık geçimini tek başına karşılayabilecek şapkalar arasında, hayvanların zarafetinden çok soy kütükleri konuşuldu. Bir hanımefendi, tazısının yedi kuşaklık geçmişini eksiksiz anlattı. Kendi kocasının geçen kış nerede bulunduğunu ise hatırlayamadı.</p>
+<p>İkramı da not etmeden geçemem. Şarap, İruvia bağlarından geldiğini söyleyen etiketli şişelerle dolaştırıldı. İçindeki mantar şarabıydı; iyisinden, ama mantardı. Gümüş tepsilerdeki küçük böreklerin ilk tepsisi yılanbalıklıydı, ikincisi yalnızca mantarlı. Üçüncü tepsi hiç gelmedi.</p>
+<p>Bahisler küçük bir masada açıldı. Görevli, her tazının adını ve karşısına ödenecek miktarı kara tahtaya yazıyordu. Gözde tazıya yatırılan bir gümüş, kazanırsa iki gümüş olarak dönecekti. Pek şans tanınmayanların getirisi daha yüksekti. İsimler küçük kâğıtlara geçirilip mühürleniyor, bahisçiler de bu kâğıtları ödemelerini almak üzere saklıyordu.</p>
+<p>Yalnızca bir koşunun sonucuna oynayanlar yoktu. Bazı beyefendiler yarış alanının geleceğine de para yatırmıştı. Vreen’in vadettiği büyük pist tamamlandığında gelirlerden pay alacaklardı. Bu ikinci bahis için tazının koşması bile gerekmiyordu; Üstat’ın konuşması yeterliydi.</p>
+<p>Koşuya çıkarılan hayvanlar doğrusu güzeldi. İnce bacaklı, parlak tüylü, sahiplerinin aksine ne için orada bulunduklarını bilen yaratıklar. Biri başlangıç işaretiyle fırladı. Diğeri bir süre oturup seyircileri seyretti. Bu ikincisini bilhassa takdir ettim. Bu sosyeteye gösterilebilecek en makul tepki buydu.</p>
+<p>Yanımda duran, yüzüğündeki taşın büyüklüğüyle kendisini tanıtmaya çalışan bir beyefendiye kazancını sordum.</p>
+<p>“Henüz ilk safhadayız,” dedi.</p>
+<p>Ne kadar yatırdığını sordum. Söyledi.</p>
+<p>Ne kadar geri aldığını sordum. Mendilini düzeltti.</p>
+<p>Biraz ötede, kadife yakaların arasında ceketi kendisine bir beden büyük gelen bir adam duruyordu. Gecepazarı’nda bir baharat dükkânı işlettiğini kendisi söyledi; söylemese de anlaşılırdı, çünkü her koşudan sonra alkışlamak yerine tahtadaki rakamlara bakan tek kişi oydu. Pistin geleceğine ne kadar yatırdığını sormadım. Dükkânının bu hafta neden kapalı olduğunu sordum.</p>
+<p>“Tadilat,” dedi. Sonra, ben sormadan, tadilatın pist açılınca yapılacağını ekledi.</p>
+<p>Ben de birkaç gümüşümü, kazanması halinde yatırdığımın üç katını ödeyeceği yazılan bir tazıya yatırdım. Görevli kâğıdımı mühürledi, ben de cebime koydum. Yıllarca hesap defteri tutmuş bir adamın böyle bir hataya düşmeyeceğini düşünüyorsanız, rakamların kendi aptallığımızı hiçbir zaman hesaba katmadığını hatırlatırım.</p>
+<p>Tutmadı.</p>
+<p>Üzerine oynadığım tazı üçüncü geldi. Kazananlara ödeme yapılırken benim kâğıdımın bir değeri kalmamıştı. Görevli, istersem hatıra olarak saklayabileceğimi söyledi.</p>
+<p>Kaybettiğim birkaç gümüşten ziyade, tazının koşu bittikten sonra gayet memnun görünmesine içerledim. Benim param gitmişti; onun önüne bir kap yemek konmuştu. Aramızdaki ticari ilişkinin galibi tartışmasız oydu.</p>
+<p>Üstat Vreen kısa bir konuşma yaptı. Pistin geleceğinden, seçkin yatırımlardan ve pek yakında gelecek büyük kazançlardan söz etti. Alkışlar yükseldi. Özellikle de henüz tek pençik kazanmamış olanlardan.</p>
+<p>Dikkat buyurunuz: Yarış masasında kazananların kâğıtları karşılığında gümüş ödendi. Pistin geleceğine yatırım yapanların elindeki belgeler ise kendilerine yalnızca bir sonraki davette yer vaat ediyordu. İkisi de bahisti. Ama birincisinde tazı koştu.</p>
+<p>Çıkışta, tazılara yem taşıyan bir ahır çocuğu kovasını yere bırakıp arkadaşına fısıldadı:</p>
+<p>“Bu akşam kerizler bol.”</p>
+<p>Gecenin en akıllı konukları ise koşudan sonra ahırlarına dönmüş, karınlarını doyurmuş ve yatmışlardı.</p>
+<p>Diğerleri hâlâ gelecek yarıştan söz ediyordu.</p><footer class="byline">— Gaspar Merrow (Gastronomi muhabiri)</footer></article><aside class="reading-ending"><div class="eyebrow">Bu sayıdaki tefrika</div><h2><a href="/taslak/b/sayi-002/tefrika/bos-bedenler/2/">Boş Bedenler</a></h2><p>Bölüm 2: Eldivensiz Beyefendi</p></aside><div class="reading-return"><a href="/taslak/b/sayi-002/sayi/002/">← Sayı 002</a><a href="#reading-content">Makalenin başına ↑</a></div></main><footer>Doskvol Dedikoduları · Duyduğunuza inanmayın. Duymadıklarınızdan korkun.</footer></div></body></html>

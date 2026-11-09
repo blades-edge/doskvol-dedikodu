@@ -1,0 +1,367 @@
+<!DOCTYPE html><html lang="tr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><script>
+  (() => {
+    const key = "doskvol-appearance";
+    const valid = value => ["day", "night", "device"].includes(value);
+    const media = window.matchMedia("(prefers-color-scheme: dark)");
+    let preference = "device";
+    try {
+      const saved = localStorage.getItem(key);
+      if (valid(saved)) preference = saved;
+    } catch {
+      // Private browsing may deny storage; the current page still works.
+    }
+    const paint = () => {
+      const dark =
+        preference === "night" || (preference === "device" && media.matches);
+      document.documentElement.dataset.theme = dark ? "dark" : "light";
+      document.querySelectorAll("[data-theme-choice]").forEach(button => {
+        button.setAttribute(
+          "aria-pressed",
+          String(button.dataset.themeChoice === preference)
+        );
+      });
+    };
+    paint();
+    document.addEventListener("DOMContentLoaded", paint, { once: true });
+    media.addEventListener("change", paint);
+    document.addEventListener("doskvol:theme", event => {
+      if (!valid(event.detail)) return;
+      preference = event.detail;
+      try {
+        localStorage.setItem(key, preference);
+      } catch {
+        // Private browsing may deny storage; the current page still works.
+      }
+      paint();
+    });
+    window.addEventListener("storage", event => {
+      if (event.key !== key && event.key !== null) return;
+      preference = valid(event.newValue) ? event.newValue : "device";
+      paint();
+    });
+  })();
+</script><link rel="icon" type="image/svg+xml" href="/taslak/b/sayi-002/favicon.svg"><meta name="robots" content="noindex, nofollow"><link rel="canonical" href="https://doskvol.ink/taslak/b/sayi-002/tefrika/doskvol-gunlukleri/2/"><meta name="description" content="Yanıkçukur’da kapalı bir meyhanenin kasası, kapısında bir düzine asma kilit ve bir kap denenmemiş asit. Kasa açılıyor, ama bir adamın boğazına saplanan bıçak, tayfayı ölüm çanından önce yetişmek zorunda bırakıyor."><meta property="og:site_name" content="Doskvol Dedikoduları"><meta property="og:locale" content="tr_TR"><meta property="og:type" content="article"><meta property="og:title" content="Çan Çalmadan | Doskvol Dedikoduları"><meta property="og:description" content="Yanıkçukur’da kapalı bir meyhanenin kasası, kapısında bir düzine asma kilit ve bir kap denenmemiş asit. Kasa açılıyor, ama bir adamın boğazına saplanan bıçak, tayfayı ölüm çanından önce yetişmek zorunda bırakıyor."><meta property="og:url" content="https://doskvol.ink/taslak/b/sayi-002/tefrika/doskvol-gunlukleri/2/"><meta property="og:image" content="https://doskvol.ink/taslak/b/sayi-002/_astro/doskvol-line-engraving.Dm_4yufi_ZFoas3.jpeg"><meta property="og:image:type" content="image/jpeg"><meta property="og:image:alt" content><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="Çan Çalmadan | Doskvol Dedikoduları"><meta name="twitter:description" content="Yanıkçukur’da kapalı bir meyhanenin kasası, kapısında bir düzine asma kilit ve bir kap denenmemiş asit. Kasa açılıyor, ama bir adamın boğazına saplanan bıçak, tayfayı ölüm çanından önce yetişmek zorunda bırakıyor."><meta name="twitter:image" content="https://doskvol.ink/taslak/b/sayi-002/_astro/doskvol-line-engraving.Dm_4yufi_ZFoas3.jpeg"><meta name="twitter:image:alt" content><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,600;0,6..72,700;1,6..72,400&display=swap" rel="stylesheet"><title>Çan Çalmadan | Doskvol Dedikoduları</title><link rel="stylesheet" href="/taslak/b/sayi-002/_astro/EditorialHead.BuTT5ouC.css"></head><body><a class="reading-skip" href="#reading-content">Makaleye geç</a><div class="paper reading-paper"><script type="module">document.querySelectorAll(`[data-theme-choice]`).forEach(e=>{e.addEventListener(`click`,()=>{document.dispatchEvent(new CustomEvent(`doskvol:theme`,{detail:e.dataset.themeChoice}))})});</script><header class="masthead"><aside class="weather-theme" aria-label="Gazetenin hava durumu ve görünümü"><div class="weather-caption">Doskvol’da hava</div><div class="weather-choices" role="group" aria-label="Görünüm tercihi"><button type="button" data-theme-choice="day" aria-pressed="false" title="Kırık güneş — açık görünüm"><img src="/taslak/b/sayi-002/weather-day.png" alt="" width="56" height="56" loading="eager"><span>Gündüz</span></button><button type="button" data-theme-choice="night" aria-pressed="false" title="Ay ve loş bacıları — koyu görünüm"><img src="/taslak/b/sayi-002/weather-night.png" alt="" width="56" height="56" loading="eager"><span>Gece</span></button><button type="button" data-theme-choice="device" aria-pressed="true" title="Hayaletli hava — cihazın tercihini izle"><img src="/taslak/b/sayi-002/weather-device.png" alt="" width="56" height="56" loading="eager"><span>Cihaz</span></button></div></aside><div class="masthead-title"><div class="eyebrow">Akoros’un bağımsız sesi · Doskvol</div><a class="masthead-name" href="/taslak/b/sayi-002/sayi/002/">Doskvol Dedikoduları</a><div class="tagline">Duyduğunuza inanmayın. Duymadıklarınızdan korkun.</div></div></header><main id="reading-content"><header class="reading-heading"><div class="eyebrow">Doskvol Günlükleri · Bölüm 2</div><h1>Çan Çalmadan</h1><p class="reading-deck">Yanıkçukur’da kapalı bir meyhanenin kasası, kapısında bir düzine asma kilit ve bir kap denenmemiş asit. Kasa açılıyor, ama bir adamın boğazına saplanan bıçak, tayfayı ölüm çanından önce yetişmek zorunda bırakıyor.</p><div class="reading-meta"><span>Altıncı Sandalye</span><a href="/taslak/b/sayi-002/takvim/">60 Mendar 847</a><a href="/taslak/b/sayi-002/sayi/">Sayı 002</a></div></header><article class="reading-copy" aria-label="Çan Çalmadan"><blockquote>
+<p><em>“Doskvol’da bir adamın ölmesi kimseyi şaşırtmaz. Fakat yanlış yerde ölen bir adam, bütün şehri ayağa kaldırabilir.”</em></p>
+</blockquote>
+<h2 id="i-dinlenmenin-türlü-yolları">I. Dinlenmenin Türlü Yolları</h2>
+<p>İpekyalı’daki gecenin ardından beş haydudun da dinlenmeye ihtiyacı vardı. Bir kerhanenin kasasını boşaltmak, içerideki insanları birbirine düşürmek ve sonunda ganimeti kimsenin beklemediği bir yerden çıkarabilmek, dışarıdan bakıldığında başarılı bir iş sayılabilirdi. Ne var ki başarı, insanın ertesi sabah kendini iyi hissedeceği anlamına gelmiyordu. Özellikle de başarının bedeli kırılmış bir pencere, yaralanmış bir arkadaş ve hesaplanandan fazla harcanmış sinirler olmuşsa.</p>
+<p>Tayfanın dinlenmekten anladığı şeyler birbirine pek benzemiyordu.</p>
+<p>Gümüş, geçmişiyle ilgili aldığı bir mektubun ardından kısa bir seyahate çıkacağını bildirmişti. Dükkâna birkaç malzeme bırakmış, bunları kullanabileceklerini fakat aynı temizlikte ve sorunsuzlukta geri koymalarını rica etmişti. Mesajının sonunda yapılacak hırsızlıklardan payının ayrılacağını umduğunu da belirtmişti. Bir de arkadaşlarının insanlarla iyi geçinmesini istemişti; onların yüzünden laf anlatmaya çalışırken bir torba daha dayak yemek niyetinde değildi.</p>
+<p>Hurda’dan gelen haber daha kısaydı. İçkiyle arasındaki eski anlaşmazlıkları yeniden görüşmeye karar vermiş, bir meyhanenin üst katında kendine yatacak yer bulmuştu. Geride küçük bir kap ve üzerine aceleyle yazılmış bir not bırakmıştı:</p>
+<p><em>Metal eritici asit. Denemeye fırsatım olmadı. Çalışıp çalışmadığından emin değilim.</em></p>
+<p>Hurda’nın bu tür uyarıları pek iç rahatlatıcı değildi. Bir şeyi denemeye fırsat bulamamış olması, onun işe yaramayacağı anlamına gelmezdi. Ne kadar işe yarayacağıysa ayrı bir meseleydi.</p>
+<p>Ayaz, boş zamanlarını boks karşılaşmalarında geçiriyordu. Ringde iki adamın birbirini dövmesini izlemekten neden bu kadar hoşlandığını soranlara bahis heyecanından söz ederdi. Bir süreliğine gündelik kaygılarını unutabiliyor, kazandığında keyfi yerine geliyor, kaybettiğinde gelecek karşılaşmaya daha büyük bir dikkatle hazırlanıyordu. Bazen bir dövüşçünün ayak hareketlerini, sanki karşısındaki adamı öldürmek için uygun mesafeyi hesaplıyormuş gibi incelerdi. Yanındaki insanların çoğu bunun farkına varmazdı. Onlar için Ayaz, karşılaşmalar konusunda fazla ciddi davranan bir bahisçiden ibaretti.</p>
+<p>Boks salonlarının bir başka yararı da vardı: İnsanlar para kaybettiğinde, birbirlerinden bilgi saklamakla pek uğraşmıyordu.</p>
+<p>Ayaz böyle bir sohbette Kaptan Milos adını duydu. Çoktan ölmüş bir demirdar olan Milos’un geride bir define bıraktığı söyleniyordu. Hikâyenin çeşitli biçimleri vardı; kimileri saklanan şeyin büyük bir servet olduğunu, kimileri asıl değerin Milos’un bildiklerinde bulunduğunu düşünüyordu. Ayaz, bunları öğrenebileceği söylenen emekli demirdar Talita’nın peşine düştü. Gecepazarı’na düzenli uğramaya başladı. Bir tazının sabrıyla dolaşıyor, gördüklerini hatırlıyor, aynı insanların aynı yerlerden geçip geçmediğine dikkat ediyordu.</p>
+<p>Sis’in iyileşmek için daha somut sebepleri vardı. İpekyalı’daki düşüşün izleri henüz geçmemişti. Bununla birlikte, zamanının bir bölümünü “benim çocuklarım” dediği kimsesiz çocuklarla geçiriyordu. Aşevlerinin önündeki kuyrukları, dağıtılan yemeğin miktarını ve çocukların yüzündeki alışılmış ifadeyi biliyordu. Ara sıra onları başka yerlere götürüp normalde tatma imkânı bulamayacakları yiyecekler alıyordu. Çocukların sofraya oturduklarında takındıkları ciddiyet Sis’i eğlendirirdi. Hele içlerinden biri, karşısına konan yemeği ne kadar sevdiğini belli etmemeye çalışıyorsa.</p>
+<p>Yankı’nın dinlenme yöntemleri ise başkalarının pek tercih etmeyeceği türdendi.</p>
+<p>Ruhani ayinlerle uğraşıyor, öğrendiği yöntemleri sınıyor, bazen saatlerini başkalarının dokunmaya çekineceği nesnelerin başında geçiriyordu. Kendisi için bunun alışılmış bir çalışma biçimi olduğunu söylerdi. Ayinlerin tehlikesini bilmeyenler bu rahatlığını cesaret sayabilirdi. Onu biraz tanıyanlar ise bazı korkulara tekrar tekrar yaklaşma isteğinin cesaretle her zaman aynı şey olmadığını düşünürdü.</p>
+<p>Son günlerde Yokyazı adı verilen tuhaf bir kâğıdın peşindeydi. Büyük arşivcilerin ve gizli kayıtlar tutan çevrelerin kullandığı söylenen bu malzemenin özel ayinlerle hazırlandığı anlatılıyordu. Bazı isimlerin ve bilgilerin bu kâğıda yazıldığında sıradan yöntemlerle okunamadığı iddia ediliyordu. Yankı, soylu ailelerin ve güçlü toplulukların elinde böyle kâğıtlardan hazırlanmış defterler bulunduğuna inanıyordu. Henüz bir örneğini bulamamıştı.</p>
+<p>Tayfanın yeniden işe çıkmasından önce Sis’in yaralarıyla ilgilenilmesi gerekiyordu.</p>
+<p>İlk görüştükleri doktorların bazıları, ayakta durmak için bile desteğe ihtiyaç duyuyordu. Birkaçının tedavi yöntemleri ise hastadan çok hekimi rahatlatacak türdendi. Bu girişimler zaman ve para kaybettirdikten sonra, çömezliğini Profesör Halbrecht’in yanında tamamlamış Dr. Vedat’a başvurdular.</p>
+<p>Vedat ucuz çalışmıyordu. Fakat Sis’in yaralarını dikkatle inceledi, gerekli müdahaleleri yaptı ve iyileşmenin alacağı süreyi saklamaya çalışmadı. Aldığı ücrete karşılık düzgün bir iş çıkarıyordu.</p>
+<h2 id="ii-başkasının-sokağında">II. Başkasının Sokağında</h2>
+<p>Yanıkçukur’daki hırsızlık ve haraç işlerinde Ulf Ironborn’un sözü geçerdi. Skovlan savaşından kalma öfkesi ve milliyetçi görüşleriyle tanınan Ulf, bölgesinde kimin nereden para kazandığını öğrenmekten hoşlanırdı. Kendisinden habersiz yapılan işler, özellikle de iyi para getirenler, dikkatini çekebilirdi.</p>
+<p>Tayfa bunları biliyordu. Yine de Yanıkçukur’da bir iş yapmaya karar verdi.</p>
+<p>Kellen’ın Yeri adı verilen meyhanede büyük miktarda para bulunduğuna ilişkin bilgi almışlardı. Mekân haftanın ikinci günü kapalıydı. Sis’in çilingir arkadaşı Frake ise ön kapının kilidini kısa süre önce değiştirmişti.</p>
+<p>İlk plan oldukça sadeydi. Frake gündüz saatlerinde kapıya gelecek, kendi taktığı kilidi açacak, Sis ve Ayaz içerideki parayı alacak, Yankı da dışarıda bekleyerek olası bir tehlikede müdahale edecekti.</p>
+<p>İpekyalı’daki karmaşadan sonra daha doğrudan bir işe ihtiyaçları vardı. Gümüş ve Hurda yoktu. Sis hâlâ iyileşiyordu. Ne dış cepheye tırmanacak ne de içeride uzun süre kalacaklardı. Frake’in varlığı da kapının açılmasını sıradan bir bakım işi gibi gösterecekti.</p>
+<p>İyi bir planın en rahatlatıcı yanı, henüz uygulanmamış olmasıdır.</p>
+<p>Haftanın ikinci günü Kellen’ın Yeri’ne ulaştıklarında ön kapının önünde yeni bir demir parmaklık buldular. Parmaklık büyük ve ağırdı; üzerine bir düzine kadar asma kilit takılmıştı. Frake’in değiştirdiği kilit, bunların arkasında kalıyordu.</p>
+<p>Ayaz bir süre demir kapıyı inceledi. Sis asma kilitlerden birini eline alıp tarttı. Frake, kendi yaptığı işle sonradan eklenen bu güvenlik düzeni arasında hiçbir ilişki bulunmadığını belirtti.</p>
+<p>Yankı çantasından Hurda’nın bıraktığı küçük kabı çıkardı. Üzerindeki notu bir kez daha okudular.</p>
+<p><em>Çalışıp çalışmadığından emin değilim.</em></p>
+<p>Sis kabı aldı.</p>
+<p>“Öğrenmenin bir yolu var.”</p>
+<p>Asit demire değdiğinde önce pek bir şey olmadı. Ardından yüzeyde küçük kabarcıklar oluşmaya başladı. Keskin bir koku yükseldi. Bir süre sonra demirin rengi değişti; metalin bazı yerleri yumuşayıp akmaya başladı.</p>
+<p>Hurda’nın ilacı çalışıyordu. Fakat beklemeyi gerektiriyordu.</p>
+<p>Böylece Yanıkçukur’un gündüz vakti kalabalığa açık bir sokağında, herkesin gözü önünde demir kapıyı eritmeye koyuldular.</p>
+<p>Meraklı bakışlar eksik olmadı. Pencerelerden sarkanlar, karşı kaldırımdan yavaş geçerek kapıya bakanlar, ne yapıldığını anlamak için bir süre duranlar vardı. Fakat belinde bir deste anahtar taşıyan Frake, kapının önünde öylesine alışılmış bir ciddiyetle duruyordu ki çoğu insan ortada bir tamir işi bulunduğunu düşündü.</p>
+<p>Bir süre sonra Ayaz sokağın köşesinde yan yana yürüyen iki Mavi Urbalı gördü. Eliyle küçük bir işaret yaptı.</p>
+<p>Yankı bunu gördüğünde kalabalığın arasından ayrıldı. Sokağa yeni girmiş biri gibi kapının önüne yaklaştı ve daha önce hazırladığı sahte iş evraklarıyla sözleşmeyi Sis’in eline bıraktı.</p>
+<p>Mavi Urbalılar tam bu sırada yanlarına geldi.</p>
+<p>“Burada ne oluyor?”</p>
+<p>Sis ellerindeki evrakları gösterdi. Kapıdaki yeni güvenlik düzeninden, kilitlerin değiştirilmesinden ve yapılması gereken işten söz etti. Frake belindeki anahtarları biraz daha görünür hâle getirdi.</p>
+<p>Mavi Urbalılardan biri evraka baktı. Sonra kapıya. Sonra yeniden evraka.</p>
+<p>Yazılanlardan ne kadarını anladığı belli değildi.</p>
+<p>“Bütün gün mü sürecek bu?”</p>
+<p>Sis başını kaldırmadan cevap verdi.</p>
+<p>“İş biter bitmez çıkacağız.”</p>
+<p>Adam bir süre daha baktı. Ardından evrakı geri verdi.</p>
+<p>İki Mavi Urbalı uzaklaşırken içlerinden biri diğerine, durumu teğmene anlatabileceklerini ve belki onun da gelip bakmak isteyeceğini söyledi.</p>
+<p>Yankı bu sözleri duydu. Ancak peşlerinden gitmedi. Mavi Urbalıların gözden kaybolmasını bekledi, sonra kapıdaki çalışmaya döndü.</p>
+<p>Demirin eriyen kısmı sonunda yeterince zayıflamıştı. Parmaklıkları yerlerinden ayırıp kapının önünü açtılar.</p>
+<p>Frake kendi taktığı kilide eğildi. Anahtarını çevirdi, kapının açıldığından emin oldu ve işinin bittiğini söyleyerek ayrıldı.</p>
+<p>Tayfa artık içeri girebilirdi. Geride yalnızca bir sorun kalmıştı: Mavi Urbalılar geri dönebilirdi.</p>
+<h2 id="iii-kırağının-burnu">III. Kırağı’nın Burnu</h2>
+<p>Sis ve Ayaz, söktükleri demir parçalarının bir kısmını ellerine alarak meyhaneye girdi. Dışarıdan bakan biri, ikisinin kapı işini tamamlamak üzere malzeme taşıdığını düşünebilirdi.</p>
+<p>Yankı dışarıda kaldı. Gerekirse sokağın ilgisini başka yöne çekecekti.</p>
+<p>Kellen’ın Yeri, beklediklerinden daha büyük bir meyhaneydi.</p>
+<p>Pencerelerden giren zayıf ışık içerideki geniş alanın tamamına ulaşmıyordu. Barın arkasında karanlık bölümler vardı. Masaların üzerinde eski içki lekeleri, zeminde ayak izleri ve yer yer dökülmüş talaş görülüyordu. Hava bayattı. Temizlik için kullanılan sıvı sabunun baygın kokusu, ıslak ahşap ve uzun süre havalandırılmamış bir odanın kokusu birbirine karışıyordu.</p>
+<p>İçeriden homurtuya benzeyen bir ses geliyordu. Ardından daha düzenli bir hırıltı duyuldu.</p>
+<p>Ayaz durdu.</p>
+<p>Yanındaki izci köpeği Kırağı kulaklarını dikmişti. Köpeğin boğazından alçak bir hırlama yükseldi. Ayaz onu susturmak için hafifçe dokundu ve sesin geldiği yere yöneldi.</p>
+<p>Barın arkasında iki adam uyuyordu. Biri başını koluna yaslamıştı. Diğeri sandalyeye geriye doğru kaymış, ağzı hafifçe açık uyuyakalmıştı. Duydukları hırıltının kaynağı buydu.</p>
+<p>Ayaz adamları bir süre izledi. İkisi de uyanmıyordu. Onlara dokunmadan kasayı aramaya devam etmeye karar verdi.</p>
+<p>Sis bankonun çevresini inceliyordu. Rafların arkasına, zemindeki çiziklere, taşınmış olabilecek mobilyalara baktı. Bir meyhanede büyük miktarda para saklanıyorsa, sahibinin onu herkesin kolayca göreceği bir yere bırakmayacağı açıktı. Fakat saklanan bir şeyin de ara sıra açılması gerekirdi. Bu nedenle odada normal görünmeyen ayrıntıları arıyorlardı.</p>
+<p>Kırağı ise başka şeylerle ilgileniyordu.</p>
+<p>Köpeğin bira kokusuna karşı özel bir merakı vardı. Ayaz bunu daha önce fark etmişti. Kırağı, bar bankosunun ilerisindeki rafın çevresinde birkaç kez dolaştıktan sonra burnunu şişelerin arasına soktu.</p>
+<p>Ayaz alçak sesle onu çağırdı. Köpek ilgilenmedi. Rafın önünde bir iki tur daha attı, sonra burnuyla şişelere uzandı.</p>
+<p>Ayaz, şişelerin devrilmesini önlemek için yaklaştı. Tam o sırada tuhaf bir şey fark etti.</p>
+<p>Şişelerden biri yerinden oynamıyordu. Diğeri de.</p>
+<p>Ayaz birini hafifçe çevirdi. Rafın arkasından küçük bir tıkırtı duyuldu.</p>
+<p>Sis yanına geldi. İkisi şişelere yeniden baktı. Bunlar sıradan bira şişeleri değildi; rafa sabitlenmiş bir mekanizmanın kollarıydı. Doğru sırayla hareket ettirildiklerinde duvarın bir bölümü açıldı.</p>
+<p>Kırağı burnunu yeniden rafa uzattı. Ayaz köpeği geri çekti.</p>
+<p>“Tamam,” diye fısıldadı. “Buldun.”</p>
+<p>Köpek bu övgüden memnun görünüyordu. Neyi bulduğuyla pek ilgilendiği söylenemezdi.</p>
+<p>Duvarın arkasında küçük bir oda vardı. Ve odanın büyük bölümünü bir kasa kaplıyordu.</p>
+<h2 id="iv-altı-çuval">IV. Altı Çuval</h2>
+<p>Kasa, balık hâllerinde kullanılan büyük buzluklardan biri kadar yer kaplıyordu. Kalın metal kapağının üzerinde anahtar deliği ve rakamlı bir kadran bulunuyordu.</p>
+<p>Sis eğilip kilidi inceledi, sonra maymuncuk takımını çıkardı. Ayaz, kasanın önünde kendisine yer açtı ve bir süre kilidi dinledi.</p>
+<p>Sis kadranı küçük hareketlerle çevirdikçe içeride metal parçalar birbirine sürtünüyor, bazı noktalarda neredeyse duyulmayacak kadar hafif sesler çıkıyordu. Ayaz bu seslere dikkat kesildi.</p>
+<p>Skovlan’daki yıllarından beri küçük farkları dinlemeye alışmıştı. Bir tüfeğin mekanizması, çalılığın arkasından gelen ayak sesi veya uzak bir noktada gerilen metalin sesi bazen insanın ne kadar yaşayacağını belirleyebilirdi. Fakat bu kasanın dili başkaydı.</p>
+<p>Sis ince uçlu aletlerden birini kilide yerleştirdi. Ayaz kulağını yaklaştırdı.</p>
+<p>“Biraz geri.”</p>
+<p>Sis kadranı çevirdi.</p>
+<p>“Şimdi?”</p>
+<p>“Dur.”</p>
+<p>Metalden küçük bir ses geldi. İkisi de bekledi.</p>
+<p>Ayaz başını iki yana salladı.</p>
+<p>“Olmadı.”</p>
+<p>Sis yeniden başladı.</p>
+<p>Bileğinde Yankı’nın hazırladığı bakır bir bileklik vardı. Ruhzili adını verdiği bu nesneyi onun için efsunlamıştı. Bilekliğin ruhani etkisi, Sis’in kilitle uğraşırken yaptığı ince hareketlere eşlik ediyordu. Ayaz’ın duyduğu mekanik sesler, Sis’in maymuncuklarla hissettiği direnç ve bilekliğin yardımı bir araya geldikçe kasanın içindeki düzen anlaşılır hâle gelmeye başladı.</p>
+<p>Bir kez daha denediler. Sonra bir daha.</p>
+<p>Nihayet kadranın arkasından tok bir ses geldi.</p>
+<p>Kilit açılmıştı.</p>
+<p>Sis başını kaldırdı. Ayaz da duyduğundan emindi.</p>
+<p>Kapak kolunu tuttular. İkisi birlikte çevirdi.</p>
+<p>Kasanın içinden beklediklerinden çok daha yüksek bir gürültü yükseldi. Ağır metal parçalar yer değiştirdi, bir kilit dili geriye çekildi, kapağın gövdesi kısa ve sert bir sesle titredi.</p>
+<p>Barın arkasındaki adamlardan biri sıçrayarak ayağa kalktı.</p>
+<p>Ağzını açtı.</p>
+<p>Ayaz’ın eli çoktan hareket etmişti.</p>
+<p>Fırlatma bıçağı adamın boğazına saplandı.</p>
+<p>Adamın söylemeye hazırlandığı söz, ilk hecesine bile ulaşamadan kesildi.</p>
+<p>Bir an için meyhanenin içindeki bütün sesler durdu.</p>
+<p>Sonra adam yere çöktü.</p>
+<p>Ayaz ona doğru koştu.</p>
+<h2 id="v-çanın-beklediği-adam">V. Çanın Beklediği Adam</h2>
+<p>Bıçak adamın boğazındaydı.</p>
+<p>Ayaz’ın ilk gördüğü şey kan oldu.</p>
+<p>İkincisi adamın nefes almak için gösterdiği çabaydı.</p>
+<p>Üçüncüsü ise kendi eliydi.</p>
+<p>Adamın boynuna uzanan, yarayı kapatmaya çalışan eli.</p>
+<p>Biraz önce aynı eliyle bıçağı fırlatmıştı. Şimdi kanamayı durdurmaya çalışıyordu.</p>
+<p>Adam ölürse ne olacağını biliyordu. Doskvol’da ölüm, yalnızca odadaki insanların ilgileneceği özel bir olay değildi. Ölüm çanı çalabilir, ölügören kargalar cesedin peşine düşebilir, ardından Ruh Muhafızları ve müfettişler gelirdi. Bir meyhanenin kasasını boşaltmaya çalışan üç haydut, ölü bir çalışanın başında yakalanmak istemezdi.</p>
+<p>Fakat Ayaz’ın adamı kurtarmak için çabalamasının tek sebebi bu değildi.</p>
+<p>Yarayı bastırdı. Adamın nefesini kontrol etti. Elindeki kumaşla tampon yapmaya çalıştı.</p>
+<p>Skovlan’daki askerlik yıllarında edindiği bilgilerin çoğunu, bir daha kullanmamayı ummuştu. Hiçbirini unutmamıştı. Adamın boynundan akan kanı durdurmaya çalışırken bunları hatırlamasına gerek yoktu. Parmakları ne yapacaklarını biliyordu.</p>
+<p>Sis kasayı açtı. İçeride altı çuval bozuk para vardı.</p>
+<p>Çuvalları tek tek çıkarmaya başladı. Birinin ağzını kontrol etti, bağladı ve kapıya doğru taşıdı. Sonra ikinciye döndü.</p>
+<p>Ayaz yaralının başından ayrılmıyordu.</p>
+<p>Diğer adam mantarlı böreği fazla kaçırmış olacak ki hâlâ uyuyordu.</p>
+<p>Bütün bunların ortasında Kırağı sessizce bekliyordu. Köpeğin burnu havadaydı; kan kokusunu almıştı. Ayaz ona bakmadı.</p>
+<p>“Ne kadar zamanın var?” diye sordu Sis.</p>
+<p>Ayaz cevap vermedi. Adamın boynundaki baskıyı değiştirdi.</p>
+<p>“Çuvalları çıkar,” dedi.</p>
+<p>Sis bir şey daha söylemedi. Üçüncü çuvalı omzuna aldı.</p>
+<p>İçeride zaman artık başka türlü ilerliyordu. Kasayı bulmak için harcadıkları dakikalar uzun gelmişti. Şimdi her hareket, gereğinden fazla zaman alıyor gibiydi. Sis çuvalları taşırken yaralı adamın nefes alışlarını duyuyordu. Ayaz, başka bir sesin araya girmesinden korkuyordu: ölüm çanı.</p>
+<p>Henüz çalmamıştı.</p>
+<h2 id="vi-duvarın-öte-yanı">VI. Duvarın Öte Yanı</h2>
+<p>Yankı dışarıda bekliyordu.</p>
+<p>Yanıkçukur’un öğleden sonraları kendine özgü bir ağırlığı olurdu. Fabrikaların dumanı, sıkışık sokaklar ve yüksek duvarlar havanın hareket etmesini zorlaştırırdı. Bir yerlerden metal dövme sesleri geliyor, arabalar dar sokaklardan geçerken taşların üzerinde gürültü çıkarıyordu.</p>
+<p>Yankı duvarın dibinde durmuş, geçen insanları izliyordu. İçeride olup biteni bilmiyordu. Bir süre önce kapının açıldığını, arkadaşlarının içeri girdiğini görmüştü. Bundan sonrası için beklemesi gerekiyordu.</p>
+<p>Derken bir şey hissetti. Sokağın birbirine karışan sesleri bir anlığına onu kendinden geçirdi ve farkına varmadan intibak etti; maskesini takmadan. Has ruh maskesi olmadan hayalet alanı bulanık ve çıplaktı. Daha az görüyor, kendini daha az koruyabiliyordu.</p>
+<p>Hayalet alanında, çok yakınında bir hareket vardı.</p>
+<p>Önce bunun sokaktan geçen bir ruhani kalıntı olduğunu sandı. Oysa Yanıkçukur’da hayalet alanı neredeyse sessizdi. Ocak isi, tıslayan buhar boruları ve omuz omuza yaşayan kalabalık, öteki dünyanın sesini bastırıyor gibiydi. Burada ne eski ayinlerin izine rastlanırdı ne de sokaklarda dolaşan huzursuz ruhlara. Yanıkçukurlular ruh işlerine pek bulaşmazdı. Bu sessizliğin içinde en küçük kıpırtı bile bir çığlık kadar belirgindi.</p>
+<p>Üstelik hissettiği şeyin yönü tuhaftı. Duvarın öte yanından geliyordu.</p>
+<p>Bir ruh, henüz tam olarak ayrılmadığı bir bedenden uzaklaşmaya çalışıyordu.</p>
+<p>Karanlık meyhanenin içinde bir adam ölümle uğraşıyordu. Yanında Ayaz bulunuyordu. Ruh, bedenden bütünüyle ayrılmamıştı ama bağlantı zayıflıyordu.</p>
+<p>Yankı daha önce kendi ruhunu isteyerek bedeninden ayırmaya ilişkin ayinler öğrenmişti. Bunu hiç denememişti. Öğrendiği yöntemlerden bazıları, bedenin savunmasız kalabileceğine ve geri dönüşün her zaman sorunsuz gerçekleşmeyeceğine ilişkin uyarılar içeriyordu. Bu yüzden deney yapmayı ertelemişti.</p>
+<p>Şimdi ertelemeye vakti yoktu.</p>
+<p>Duvara yaslandı. Nefesini düzenledi. Bir süre çevresindeki sokak seslerini dinledi.</p>
+<p>Sonra bunlar uzaklaşmaya başladı.</p>
+<p>Kendisini duvarın ötesinde bulduğunda ilk fark ettiği şey, bedeninin ağırlığını hissetmemesiydi.</p>
+<p>Meyhanenin karanlık bölümleri başka türlü görünüyordu. Eşyaların çevresinde eski kullanımlardan kalma izler vardı. İnsanların bulunduğu yerlerde hayalet alanı daha yoğun hissediliyordu.</p>
+<p>Yaralı adamın ruhuna yaklaştı.</p>
+<p>Adam korkuyordu.</p>
+<p>Yankı bunu bir yüz ifadesinden değil, ruhun içinde bulunduğu karışıklıktan anladı. Bedenin acısı, ölümün çekişi ve henüz kopmamış yaşam bağı birbirine karışmıştı.</p>
+<p>Elini uzattı. Burada elinin nasıl göründüğünü bilmiyordu. Ama uzandığını hissediyordu.</p>
+<p><em>Daha zamanın gelmedi.</em></p>
+<p>Sözcükler ağızdan çıkmış gibi değildi.</p>
+<p>Yine de duyulmuştu.</p>
+<p>Ruhun çevresindeki hareket değişti.</p>
+<p>Yankı yeniden yaklaştı.</p>
+<p><em>Burada kal.</em></p>
+<p>Öte tarafta Ayaz kanamayı durdurmaya çalışıyordu.</p>
+<p>Birinin elleri bedenle uğraşırken diğeri bedenin bırakmak üzere olduğu şeyle uğraşıyordu.</p>
+<p>Yankı bir süre sonra ruhun hareketinin yavaşladığını hissetti. Bu, adamın kurtulduğu anlamına gelmiyordu. Fakat ayrılma durmuştu.</p>
+<p>Hiç değilse o an için.</p>
+<p>Tam o sırada omuzlarından kuvvetle sarsıldığını hissetti.</p>
+<h2 id="vii-bir-kese-gümüş">VII. Bir Kese Gümüş</h2>
+<p>Yankı gözlerini açtığında karşısında bir Mavi Urbalı teğmeni vardı. Adam iki eliyle omuzlarından tutmuş, onu duvardan uzaklaştırmaya çalışıyordu. Yanında iki Mavi Urbalı daha bulunuyordu.</p>
+<p>“Bana bak!” dedi teğmen. “İyi misin sen?”</p>
+<p>Yankı bir an nerede olduğunu anlayamadı. Meyhanenin içindeki karanlık görüntü hâlâ zihnindeydi. Yaralı adamın ruhuyla arasındaki bağlantı kopmuştu. Sokak gürültüsü kulağına beklediğinden yüksek geliyordu.</p>
+<p>Birkaç kez gözlerini kırptı. Sonra başını salladı.</p>
+<p>“Özür dilerim.”</p>
+<p>Teğmen onu bırakmadı.</p>
+<p>“Ne yapıyordun burada?”</p>
+<p>“Rahatsızım.”</p>
+<p>“Ne rahatsızlığı?”</p>
+<p>Yankı elini alnına götürdü.</p>
+<p>“Bir haftadır hastayım. İlaçlarımı da alamadım.”</p>
+<p>Bunu söylerken yüzündeki solgunluğun kendisine yardımcı olacağını umuyordu.</p>
+<p>Teğmen arkadaşlarına baktı.</p>
+<p>“Burası kapalı değil mi?”</p>
+<p>Yankı kapıya baktı.</p>
+<p>“Öyle olmalı.”</p>
+<p>“İçeride kim var?”</p>
+<p>“Tamir edenler vardı.”</p>
+<p>“Ne tamiri?”</p>
+<p>“Kapı.”</p>
+<p>Teğmen demir parmaklıklardan kalan izleri inceledi. Bir süre önce sökülen parçaların bıraktığı lekeler hâlâ görünüyordu.</p>
+<p>“Bizim adamlara bir şeyler söylemişler.”</p>
+<p>Yankı başını salladı.</p>
+<p>“Evrakları vardı.”</p>
+<p>Teğmenin yüzü, bunun pek yeterli bir açıklama olmadığına işaret ediyordu.</p>
+<p>Yankı bir süre sonra konuyu değiştirdi. Yanıkçukur’daki işlerin azalmasından, hayat pahalılığından, düzgün ilaç bulmanın güçlüğünden söz etmeye başladı. Bir haftalık hastalığın insana nelere mal olduğuna dair gereğinden fazla ayrıntı verdi.</p>
+<p>Mavi Urbalılar gitmiyordu. Teğmen ara sıra kapıya bakıyor, yanındaki adamlara küçük işaretler yapıyordu.</p>
+<p>Yankı cebindeki kesenin ağırlığını hissetti. Bir karar verdi.</p>
+<p>Elini cebine soktu. Gümüş dolu keseyi çıkardı. Sanki farkında olmadan yere düşürmüş gibi bıraktı. Sonra eğilip aldı ve teğmene uzattı.</p>
+<p>“Sanırım sizden düştü.”</p>
+<p>Adam keseye baktı. Yankı’nın yüzüne baktı. Bir süre sonra elini uzatıp aldı.</p>
+<p>“Benim mi?”</p>
+<p>“Öyle gördüm.”</p>
+<p>Teğmen keseyi avucunda tarttı. İçindeki gümüşler hafifçe ses çıkardı.</p>
+<p>“İyi bakmışsın.”</p>
+<p>“İnsan dikkatli olmalı.”</p>
+<p>Teğmen başını salladı. Yanındaki iki Mavi Urbalıya dönerek gitmelerini işaret etti. Üçü de sokaktan uzaklaştı.</p>
+<p>Yankı onları gözden kayboluncaya kadar izledi. Sonra duvara yaslandı.</p>
+<p>Bir süre önce kendi bedenini terk etmişti. Şimdi yeniden bedeninin içinde olduğundan emindi.</p>
+<p>Fakat ellerindeki titreme geçmemişti.</p>
+<h2 id="viii-ayazın-köyü">VIII. Ayaz’ın Köyü</h2>
+<p>Meyhanenin içinde altı çuval bozuk para kapıya taşınmıştı. Sis son çuvalın ağzını bağlarken Ayaz hâlâ yaralının başındaydı.</p>
+<p>Adamın nefesi düzensizdi ama kesilmemişti. Ayaz tamponu kontrol etti. Bir kez daha. Sonra gözlerini kapatıp kısa bir nefes aldı.</p>
+<p>Dışarı çıkmaları gerekiyordu. Ayaz, daha önce ayarladığı arabacının gelmesini bekliyordu. Fakat sokakta araba yoktu.</p>
+<p>Dakikalar geçti. Adam gelmedi.</p>
+<p>Ayaz kapıya çıktı, bir süre sokağın iki yönüne baktı, sonra geri döndü.</p>
+<p>“Araba yok.”</p>
+<p>Sis son çuvalı bıraktı.</p>
+<p>“Bir tane daha ayarlamıştın ya, sabret.”</p>
+<p>Ayaz yeniden kapıya baktı.</p>
+<p>“Adam içeride.”</p>
+<p>“Biliyorum.”</p>
+<p>“Ölebilir.”</p>
+<p>Sis bir an durdu. Ayaz’ın yüzüne baktı. Birkaç dakika önce boğazına bıçak sapladığı adam için bu kadar telaşlanmasının yalnızca ölüm çanından kaynaklanmadığını görüyordu.</p>
+<p>Ayaz’ın zihni artık meyhanede değildi. Skovlan’daki yıllardan birine dönmüştü.</p>
+<p>Birliğiyle girdikleri ıssız köyü hatırlıyordu. Köydeki evlerin çoğu boştu. Bazılarının kapıları açık bırakılmıştı. Yiyecek bulabileceklerini umarak girdikleri yapılarda taşınamayacak kadar ağır eşyalar dışında pek bir şey kalmamıştı.</p>
+<p>Sonra çocukları bulmuşlardı.</p>
+<p>Açlıktan ölmek üzereydiler.</p>
+<p>Ayaz, askerlerin erzağının bir bölümünün onlara verilmesini sağlamıştı. O sırada bunu yapmamak mümkün görünmemişti. Fakat ilerleyen günlerde kendi birliğinin erzağı azalmış, askerlerden bazıları hayatını kaybetmişti.</p>
+<p>Ayaz, o iki olayın birbirine ne kadar bağlı olduğunu hiçbir zaman kesin olarak bilememişti. Yine de aralarındaki hesabı yıllardır zihninde tutuyordu. Bir tarafta köydeki çocuklar vardı. Diğer tarafta ölen askerler. Hangi hayatın hangi hayata mal olduğunu düşünmeye başladığında hesabın sonuna ulaşamıyordu.</p>
+<p>Şimdi başka bir adam yerde yatıyordu.</p>
+<p>Bu kez bıçağı atan kendisiydi.</p>
+<p>Ayaz sokağa çıktı.</p>
+<p>İlk söylediği söz anlaşılmadı. Ardından sesi yükseldi.</p>
+<p>“Araba gelmedi!”</p>
+<p>Sis kapıya yöneldi.</p>
+<p>Ayaz sokağın ortasında durmuştu.</p>
+<p>“İçeride adam ölecek!”</p>
+<p>Karşı binada bir pencere açıldı, bir kadın başını uzattı. Kaldırımdan geçen iki işçi yavaşladı. Köşedeki seyyar satıcı tablasını bırakıp bu yana döndü.</p>
+<p>Ayaz’ın yüzündeki ifade değişmişti. Gözlerinden yaş geliyordu. Sözlerini toparlamakta güçlük çekiyor, birkaç saniyede bir aynı şeyleri söylüyordu.</p>
+<p>“Araba gelmedi. Adam ölecek!”</p>
+<p>Yankı yanına yaklaştı.</p>
+<p>“İçeri dönelim.”</p>
+<p>Ayaz onu duymuyor gibiydi.</p>
+<p>Sis bir adım attı. Ayaz’ın yüzüne tokat attı.</p>
+<p>Ses kısa ve keskindi.</p>
+<p>Ayaz sustu.</p>
+<p>Sokaktaki bakışlar şimdi Sis’in üzerindeydi. Sis ellerini beline koydu ve sesini bütün sokağın duyacağı kadar yükseltti.</p>
+<p>“Ulan bir kapı için bu kadar ağlanır mı? Menteşe can çekişiyor diye mahalleyi ayağa kaldırdı! Usta değil, ağıtçı bu!”</p>
+<p>Yankı hemen arkasından güldü; zoraki ama yeterince yüksek bir kahkaha. Pencereden bakan kadına döndü.</p>
+<p>“Kusura bakmayın, hanım. Her işin sonunda böyle olur. Geçen hafta bir asma kilit için mevlit okutacaktı.”</p>
+<p>Kadın burun kıvırıp pencereyi kapattı. İşçilerden biri güldü, öteki omuz silkti. Satıcı tablasına döndü. Sokak, birkaç saniye içinde eski gürültüsüne kavuştu.</p>
+<p>Sis sesini alçalttı. Ayaz’ın yakasını tuttu.</p>
+<p>“Şimdi dinle.”</p>
+<p>Ayaz nefesini düzene sokmaya çalışıyordu.</p>
+<p>Yankı da konuşmaya başladı; bu kez yalnızca Ayaz’ın duyacağı kadar alçak sesle. Yaşamla ölümün birbirinden kesin çizgilerle ayrılmadığına, ruhların bedenden ayrılırken neler yaşadığına ve bazen insanın bu ayrılığı yalnızca kısa bir süre geciktirebildiğine ilişkin şeyler söylüyordu.</p>
+<p>Ayaz onu dinledi. Bütün söylediklerine katıldığı söylenemezdi. Ama dinliyordu.</p>
+<p>Bir süre sonra sokağın köşesinde bir araba göründü. İkinci arabacı gelmişti.</p>
+<p>Ayaz bu kez bir şey söylemeden bekledi. Sonra yüzünü sildi.</p>
+<p>Sis kapıya yöneldi.</p>
+<p>“Çuvalları alalım.”</p>
+<h2 id="ix-aldonun-merakı">IX. Aldo’nun Merakı</h2>
+<p>Arabacı Aldo, taşınacak yükü gördüğünde merakını saklamadı.</p>
+<p>Altı ağır çuval vardı ve bir meyhaneden çıkarılıyorlardı. Çuvalların içinde ne bulunduğunu sormamak, Aldo için ciddi bir çaba gerektiriyor olmalıydı.</p>
+<p>Üstelik Ayaz’ın yüzü iyi görünmüyordu. Arabacı bunu hemen fark etti.</p>
+<p>“Bir şey mi oldu?”</p>
+<p>“Hayır.”</p>
+<p>“Pek iyi görünmüyorsun.”</p>
+<p>“Yorgunum.”</p>
+<p>Aldo başını salladı.</p>
+<p>“Bu şehir insanı yoruyor.”</p>
+<p>Bir süre sonra yeniden konuştu.</p>
+<p>“Çuvallarda ne var?”</p>
+<p>Ayaz cevap vermedi.</p>
+<p>Aldo başka bir soru sordu.</p>
+<p>“İçerideki iş bitti mi?”</p>
+<p>Yankı bu konuşmanın sürmesinin iyi olmayacağını düşündü. Çantasından küçük bir deste oyun kâğıdı ve birkaç top çıkardı. Arabanın sürücüsünün yanına yaklaştı.</p>
+<p>Toplardan birini avucuna koydu. Aldo ona baktı.</p>
+<p>Yankı elini kapattı. Yeniden açtığında top yoktu.</p>
+<p>Arabacı kaşlarını kaldırdı.</p>
+<p>Yankı diğer elini çevirdi. Top oradaydı.</p>
+<p>Aldo gülmeye başladı.</p>
+<p>“Bunu nasıl yaptın?”</p>
+<p>Yankı cevap vermedi. Bir kâğıt seçmesini istedi.</p>
+<p>Aldo kâğıdı aldı. Yankı birkaç küçük hareketle başka bir kâğıdı gösterdi, sonra Aldo’nun seçtiği kâğıdı beklemediği bir yerden çıkardı.</p>
+<p>Arabacı artık çuvallarla ilgilenmiyordu. Daha doğrusu, ilgisini başka bir yere yöneltmek çok daha kolay hâle gelmişti.</p>
+<p>Yol boyunca Yankı küçük oyunlar yaptı. Kâğıtları karıştırdı, topları bir elinden diğerine geçirdi. Bazen Aldo’ya ne gördüğünü sordu, bazen yanıldığını gösterdi.</p>
+<p>Aldo’nun yüzündeki ilgi giderek arttı.</p>
+<p>“Bunları nerede öğrendin?”</p>
+<p>Yankı omuz silkti.</p>
+<p>“Çalışarak.”</p>
+<p>“Ben de öğrenebilir miyim?”</p>
+<p>“Belki.”</p>
+<p>“Çocukluğumdan beri böyle şeyler yapmayı isterim.”</p>
+<p>Yankı bir başka topu elinde çevirdi. Aldo onu izliyordu.</p>
+<p>Bir süre sonra yeniden konuştu.</p>
+<p>“Bir gün bana öğret.”</p>
+<p>Yankı başlangıçta geçiştirmeyi düşündü. Fakat Aldo ısrar etti. Sonunda Rıhtım’da bir gün buluşmak üzere anlaştılar.</p>
+<p>Arabacı memnundu. Ayaz sessizliğini koruyordu. Sis ise çuvalların yerinden oynamamasına dikkat ediyordu.</p>
+<p>Yolculuğun geri kalanında Aldo, taşıdığı şeylerin ne olduğunu öğrenmeye çalışmaktan çok Yankı’nın ellerini izledi.</p>
+<h2 id="x-üç-şişe">X. Üç Şişe</h2>
+<p>İne gelmeden iki sokak ötedeki yıkık damın önünde çuvalları indirdiler. Kellen’ın Yeri’nden kalan demir parçaları da arabanın üzerindeydi. Bunları Aldo’ya bıraktılar. Arabacı fazladan aldığı malzemelerden memnun görünüyordu.</p>
+<p>Çuvallar dikkat çekmeden ine taşındı. İçeri girdiklerinde herkes biraz olsun rahatladı.</p>
+<p>Çuvallar açıldı. Bozuk paralar sayıldı.</p>
+<p>Az para değildi.</p>
+<p>Üstelik bu kez iş, ilk soygundaki kadar uzamadan tamamlanmıştı. Demir kapı beklenmedik bir engel olmuş, içeride ölüm tehlikesi yaşanmış, dışarıda Mavi Urbalılarla karşılaşılmıştı. Yine de tayfa parayı alıp dönmüştü.</p>
+<p>Sis son çuvalı yerleştirdikten sonra meyhaneden getirdiği üç şişeyi çıkardı. Kellen’ın Yeri’nin özel viski koleksiyonundan alınmışlardı.</p>
+<p>Şişeleri masanın kenarına koydu.</p>
+<p>“Bunlar da lazım olur.”</p>
+<p>Yankı şişelerden birine baktı. Sonra Sis’e. Bir şey söylemedi.</p>
+<p>Ayaz paraların sayılmasını izliyordu.</p>
+<p>Gümüş ve Hurda’nın bıraktıkları malzemelerin masrafları dikkate alındı. Kullanılanlar ve ödenmesi gerekenler hesaplandı. Ganimet paylaştırılırken ilk işte yaşanan sert tartışmaların benzeri çıkmadı.</p>
+<p>Belki herkes yorgundu.</p>
+<p>Ayaz, iş sırasında yaralanan adamın durumunu sordu. Kimse kesin bir şey bilmiyordu. Fakat ölüm çanı çalmamıştı. Bu, en azından adamın hemen ölmediğini düşündürüyordu.</p>
+<p>Yankı, hayalet alanında hissettiği zayıf bağın yeniden güçlendiği anı hatırladı. Ayaz ise tampon yaptığı sırada adamın göğsünün hareket edişini.</p>
+<p>İkisi de başka bir şey söylemedi.</p>
+<h2 id="xi-açık-kalan-hesaplar">XI. Açık Kalan Hesaplar</h2>
+<p>Sonraki günlerde Kellen’ın Yeri’ne ilişkin türlü söylentiler dolaşmaya başladı. Kapının önünde yapılan işten bahsedenler vardı. Bazıları demir parmaklıkların neden söküldüğünü anlamamıştı. Bazılarıysa içeride çalışanları gördüğünü söylüyordu.</p>
+<p>Bir süre sonra Frake’in dükkânına Mavi Urbalıların uğradığı haberi geldi. Ziyaretin dostane geçtiği anlatılıyordu.</p>
+<p>Bu sözcük Doskvol’da her zaman aynı anlama gelmezdi.</p>
+<p>Frake’in kapının kilidini değiştirdiği doğruydu. Fakat Sis’in Mavi Urbalılara gösterdiği sahte iş sözleşmesinde başka ayrıntılar da bulunuyordu. Frake’in bunların hepsini aynı biçimde anlatıp anlatamadığı belli değildi. Şimdilik kapılarının çalınmasına neden olacak yeni bir sorun çıkmamıştı. Ama iki farklı anlatı bir gün aynı masanın üzerinde yan yana konulursa ne olacağını kimse bilemezdi.</p>
+<p>Ulf Ironborn’un soygundan ne ölçüde haberdar olduğu da belirsizdi. Yanıkçukur’da yapılan büyük bir vurgunun uzun süre gizli kalacağını düşünmek iyimserlik olurdu. Ne var ki şehirde her gün yeterince olay yaşanıyor, insanların dikkatleri başka yerlere çekiliyordu.</p>
+<p>Tayfa bir süre kendi işleriyle ilgilendi.</p>
+<p>Ayaz Gecepazarı’na gitmeye devam etti. Kaptan Milos’un hikâyesi ve emekli demirdar Talita hakkında edindiği kırıntı bilgiler henüz tatmin edici bir bütün oluşturmuyordu. Bu yüzden aynı sokakları dolaşıyor, bazen aynı insanlarla ikinci kez konuşuyordu. Bir soygunda ölümün eşiğine getirdiği adam hakkında ne düşündüğünü arkadaşlarına anlatmadı. Kırağı’yla yürüyüşe çıktığı günlerde, köpeğin önüne gelen her bira kokusunu incelemesine eskisi kadar kızmıyordu.</p>
+<p>Yankı ise şapele uğramayı sürdürdü. Yokyazı kâğıdına ilişkin araştırmalarından vazgeçmemişti. Ruhlarla temas konusunda daha önce yalnızca kuramsal olarak bildiği bir yöntemi ilk kez uygulamış, bunun sonucunda kendi bedenine yeniden dönebilmeyi başarmıştı.</p>
+<p>Böyle bir deneyimin onda ne değiştirdiğini söylemek kolay değildi. Yüzü her zamanki gibi solgun, bedeni inceydi. Fakat tayfa toplantılarında zaman zaman daha keyifli görünüyordu. Bazen başkaları konuşurken dalıp gidiyor, sonra hiçbir şey olmamış gibi sohbete katılıyordu.</p>
+<p>Aldo’yla Rıhtım’da buluşma sözü de hâlâ duruyordu.</p>
+<p>Sis’in yaraları iyileşmeye devam ediyordu. Dr. Vedat’ın uyarıları, her gün aynı dikkatle uygulandığı söylenemeyecek türdendi. Sis’in bazı günler fazla hareket ettiği, bazı günler dinlenmeyi tercih ettiği anlaşılıyordu.</p>
+<p>Onu Altınerik Restoranı civarında gördüğünü söyleyenler olmuştu. Kimileri yalnız olduğunu anlatıyordu. Kimileri yanında çocuklar bulunduğunu.</p>
+<p>Fakat bu ikinci türden söylentilerin peşine düşen pek olmadı. İnsanlar Sis’in nerede olduğunu bilmeyi, orada ne yaptığını öğrenmekten daha önemli sayıyordu.</p>
+<p>Tayfanın ininde ise üç şişe viski, masanın kenarında bir süre dokunulmadan kaldı.</p>
+<p>Gümüş’ün malzemeleri yerlerine kaldırılmıştı. Hurda’nın asit kabı artık eskisi kadar dolu değildi. Altı çuvalın hesabı görülmüştü.</p>
+<p>Meyhanedeki yaralının sonraki günlerde ne kadar acı çektiğini, görevine dönüp dönmediğini veya kendisini neredeyse öldüren adamı hatırlayıp hatırlamadığını bilmiyorlardı.</p>
+<p>Ayaz da bilmiyordu.</p>
+<p>Bildiği tek şey, adamın boğazına bıçağı kendisinin attığıydı.</p>
+<p>Ve o gün Doskvol’da ölüm çanı çalmamıştı.</p>
+<p><em>Doskvol Günlükleri — İkinci Bölüm Sonu</em></p><footer class="byline">— Altıncı Sandalye</footer></article><nav class="reading-ending reading-chapters" aria-label="Tefrika bölümleri"><div><span class="eyebrow">Önceki bölüm</span><p><a href="/taslak/b/sayi-002/tefrika/doskvol-gunlukleri/1/">Bölüm 1: İpekyalı’da Bir Gece</a></p></div><div><span class="eyebrow">Sonraki bölüm</span><p>Sonraki bölüm henüz yayımlanmadı.</p></div></nav><div class="reading-return"><a href="/taslak/b/sayi-002/sayi/002/">← Sayı 002</a><a href="#reading-content">Makalenin başına ↑</a></div></main><footer>Doskvol Dedikoduları · Duyduğunuza inanmayın. Duymadıklarınızdan korkun.</footer></div></body></html>
