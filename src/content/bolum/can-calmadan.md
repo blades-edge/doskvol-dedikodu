@@ -33,6 +33,8 @@ Ayaz böyle bir sohbette Kaptan Milos adını duydu. Çoktan ölmüş bir demird
 
 Sis'in iyileşmek için daha somut sebepleri vardı. İpekyalı'daki düşüşün izleri henüz geçmemişti. Bununla birlikte, zamanının bir bölümünü “benim çocuklarım” dediği kimsesiz çocuklarla geçiriyordu. Aşevlerinin önündeki kuyrukları, dağıtılan yemeğin miktarını ve çocukların yüzündeki alışılmış ifadeyi biliyordu. Ara sıra onları başka yerlere götürüp normalde tatma imkânı bulamayacakları yiyecekler alıyordu. Çocukların sofraya oturduklarında takındıkları ciddiyet Sis'i eğlendirirdi. Hele içlerinden biri, karşısına konan yemeği ne kadar sevdiğini belli etmemeye çalışıyorsa.
 
+![Şef Roselle, kapalı Altın Erik lokantasında Sis’le aynı sofraya oturan çocuklara yemek servis ediyor.](../../assets/images/can-calmadan-altin-erik.avif)
+
 Yankı'nın dinlenme yöntemleri ise başkalarının pek tercih etmeyeceği türdendi.
 
 Ruhani ayinlerle uğraşıyor, öğrendiği yöntemleri sınıyor, bazen saatlerini başkalarının dokunmaya çekineceği nesnelerin başında geçiriyordu. Kendisi için bunun alışılmış bir çalışma biçimi olduğunu söylerdi. Ayinlerin tehlikesini bilmeyenler bu rahatlığını cesaret sayabilirdi. Onu biraz tanıyanlar ise bazı korkulara tekrar tekrar yaklaşma isteğinin cesaretle her zaman aynı şey olmadığını düşünürdü.
@@ -144,6 +146,8 @@ Ayaz, şişelerin devrilmesini önlemek için yaklaştı. Tam o sırada tuhaf bi
 Şişelerden biri yerinden oynamıyordu. Diğeri de.
 
 Ayaz birini hafifçe çevirdi. Rafın arkasından küçük bir tıkırtı duyuldu.
+
+![Kırağı burnunu rafa uzatırken Ayaz yerinden kalkmayan bira şişesini çeviriyor.](../../assets/images/can-calmadan-kiraginin-burnu.avif)
 
 Sis yanına geldi. İkisi şişelere yeniden baktı. Bunlar sıradan bira şişeleri değildi; rafa sabitlenmiş bir mekanizmanın kollarıydı. Doğru sırayla hareket ettirildiklerinde duvarın bir bölümü açıldı.
 
@@ -318,6 +322,8 @@ Yankı bir süre sonra ruhun hareketinin yavaşladığını hissetti. Bu, adamı
 Hiç değilse o an için.
 
 Tam o sırada omuzlarından kuvvetle sarsıldığını hissetti.
+
+![Mavi Urbalı çavuş Yankı’yı copuyla dürterken Yankı’nın ruhu duvarın içinden bedenine uzanıyor.](../../assets/images/can-calmadan-yankinin-donusu.avif)
 
 ## VII. Bir Kese Gümüş
 
@@ -580,6 +586,8 @@ Yankı başlangıçta geçiştirmeyi düşündü. Fakat Aldo ısrar etti. Sonund
 Arabacı memnundu. Ayaz sessizliğini koruyordu. Sis ise çuvalların yerinden oynamamasına dikkat ediyordu.
 
 Yolculuğun geri kalanında Aldo, taşıdığı şeylerin ne olduğunu öğrenmeye çalışmaktan çok Yankı'nın ellerini izledi.
+
+![İki iri yük keçisi arabayı çekerken Aldo, Yankı’nın elinde beliren topa hayranlıkla bakıyor. Sis ve Ayaz arkada çuvalların yanında oturuyor.](../../assets/images/can-calmadan-aldonun-meraki.avif)
 
 ## X. Üç Şişe
 
