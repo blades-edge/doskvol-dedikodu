@@ -14,11 +14,11 @@ description: İmparatorluk Standartlar İdaresi
 
 | Geleneksel ölçü | Geleneksel karşılığı | İmparatorluk karşılığı |
 | --------------- | -------------------- | ---------------------- |
-| Parmak          | —                    | 2,6 senveyr            |
+| Parmak          | —                    | 26 milveyr             |
 | Karış           | 9 parmak             | 23,4 senveyr           |
 | Ayak            | 12 parmak            | 31,2 senveyr           |
 | Arşın           | 28 parmak            | 72,8 senveyr           |
-| Kulaç           | 6 ayak               | 1,872 veyr             |
+| Kulaç           | 6 ayak               | 18,72 desveyr          |
 | Zincir          | —                    | 20,75 veyr             |
 | Mil             | 80 zincir            | 1,66 kelveyr           |
 

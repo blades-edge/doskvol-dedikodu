@@ -14,7 +14,7 @@ Ayak sesleri kapının önünde kesildi. Kimse içeri girmedi.
 
 Profesör kapıya bakmadı.
 
-Anahtarı delil tepsisinden aldım. Uzunluğu otuz bir milimetreydi. Üç dişi vardı. Sapındaki aşınma düzensizdi.
+Anahtarı delil tepsisinden aldım. Uzunluğu otuz iki milveyrdi.[^milveyr] Üç dişi vardı. Sapındaki aşınma düzensizdi.
 
 Defterimin boş bir sayfasına birebir ölçekte çizdim. Her iki yüzünü gösterdim. Çizimin yanına ölçüleri yazdım.
 
@@ -287,3 +287,5 @@ Akşam muayenehaneyi kapatmadan önce eldiven siparişi verdim.
 İki çift. Siyah.
 
 İkinci bölümün sonu. Dr. Sorel'in vaka defteri bir sonraki sayıda devam edecek.
+
+[^milveyr]: Yaklaşık 1,2 parmak. Milveyr, bir veyrin binde biridir. Bkz. [Geleneksel Ölçülerin İmparatorluk Karşılıkları Cetveli](../../../imparatorluk-olculeri/).
