@@ -7,6 +7,8 @@ series: doskvol-gunlukleri.json
 episode: 2
 author:
   - altinci-sandalye
+shareImage: ../../assets/images/can-calmadan-aldonun-meraki.avif
+shareImageAlt: İki iri yük keçisi arabayı çekerken Aldo, Yankı’nın elinde beliren topa hayranlıkla bakıyor. Sis ve Ayaz arkada çuvalların yanında oturuyor.
 ---
 
 > _“Doskvol'da bir adamın ölmesi kimseyi şaşırtmaz. Fakat yanlış yerde ölen bir adam, bütün şehri ayağa kaldırabilir.”_

@@ -4,6 +4,8 @@ description: Kargaayağı’nın beş haydudu, Mylera’nın verdiği soygun iş
 author: [altinci-sandalye]
 series: doskvol-gunlukleri.json
 episode: 1
+shareImage: ../../assets/images/ipekyali-ganimet.avif
+shareImageAlt: Sis, tayfanın toplandığı masaya bir avuç mangır saçar.
 ---
 
 > “Doskvol’da hiçbir sır sonsuza dek saklanmaz. Bazıları yalnızca yeterince mangır ödenene kadar gizli kalır.”

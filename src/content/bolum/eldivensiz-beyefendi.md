@@ -6,6 +6,8 @@ series: bos-bedenler.json
 episode: 2
 author:
   - dr-a-sorel
+shareImage: ../../assets/images/eldivensiz-beyefendi-sorel.avif
+shareImageAlt: Müfettiş Voss, onarılmış eldivenleriyle defterini tutarken Sorel’in masadaki çıplak ellerine bakıyor.
 ---
 
 #### Üçüncü saati buçuk geçe
