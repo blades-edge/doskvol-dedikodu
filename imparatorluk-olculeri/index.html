@@ -1,0 +1,193 @@
+<!DOCTYPE html><html lang="tr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><script data-goatcounter="https://doskvol.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script><script>
+  (() => {
+    const key = "doskvol-appearance";
+    const valid = value => ["day", "night", "device"].includes(value);
+    const media = window.matchMedia("(prefers-color-scheme: dark)");
+    let preference = "device";
+    try {
+      const saved = localStorage.getItem(key);
+      if (valid(saved)) preference = saved;
+    } catch {
+      // Private browsing may deny storage; the current page still works.
+    }
+    const paint = () => {
+      const dark =
+        preference === "night" || (preference === "device" && media.matches);
+      document.documentElement.dataset.theme = dark ? "dark" : "light";
+      document.querySelectorAll("[data-theme-choice]").forEach(button => {
+        button.setAttribute(
+          "aria-pressed",
+          String(button.dataset.themeChoice === preference)
+        );
+      });
+    };
+    paint();
+    document.addEventListener("DOMContentLoaded", paint, { once: true });
+    media.addEventListener("change", paint);
+    document.addEventListener("doskvol:theme", event => {
+      if (!valid(event.detail)) return;
+      preference = event.detail;
+      try {
+        localStorage.setItem(key, preference);
+      } catch {
+        // Private browsing may deny storage; the current page still works.
+      }
+      paint();
+    });
+    window.addEventListener("storage", event => {
+      if (event.key !== key && event.key !== null) return;
+      preference = valid(event.newValue) ? event.newValue : "device";
+      paint();
+    });
+  })();
+</script><link rel="icon" type="image/svg+xml" href="/favicon.svg"><link rel="canonical" href="https://doskvol.ink/imparatorluk-olculeri/"><meta name="description" content="İmparatorluk Standartlar İdaresi"><meta property="og:site_name" content="Doskvol Dedikoduları"><meta property="og:locale" content="tr_TR"><meta property="og:type" content="website"><meta property="og:title" content="Geleneksel Ölçülerin İmparatorluk Karşılıkları Cetveli | Doskvol Dedikoduları"><meta property="og:description" content="İmparatorluk Standartlar İdaresi"><meta property="og:url" content="https://doskvol.ink/imparatorluk-olculeri/"><meta property="og:image" content="https://doskvol.ink/_astro/doskvol-line-engraving.Dm_4yufi_Z1aNxDW.jpeg"><meta property="og:image:type" content="image/jpeg"><meta property="og:image:alt" content="Doskvol’da kanal kıyısındaki yapılar; mürekkep çizgileriyle gravür."><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="Geleneksel Ölçülerin İmparatorluk Karşılıkları Cetveli | Doskvol Dedikoduları"><meta name="twitter:description" content="İmparatorluk Standartlar İdaresi"><meta name="twitter:image" content="https://doskvol.ink/_astro/doskvol-line-engraving.Dm_4yufi_Z1aNxDW.jpeg"><meta name="twitter:image:alt" content="Doskvol’da kanal kıyısındaki yapılar; mürekkep çizgileriyle gravür."><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,600;0,6..72,700;1,6..72,400&display=swap" rel="stylesheet"><title>Geleneksel Ölçülerin İmparatorluk Karşılıkları Cetveli | Doskvol Dedikoduları</title><link rel="stylesheet" href="/_astro/EditorialHead.BuTT5ouC.css"></head><body><div class="paper reading-paper"><script type="module">document.querySelectorAll(`[data-theme-choice]`).forEach(e=>{e.addEventListener(`click`,()=>{document.dispatchEvent(new CustomEvent(`doskvol:theme`,{detail:e.dataset.themeChoice}))})});</script><header class="masthead"><aside class="weather-theme" aria-label="Gazetenin hava durumu ve görünümü"><div class="weather-caption">Doskvol’da hava</div><div class="weather-choices" role="group" aria-label="Görünüm tercihi"><button type="button" data-theme-choice="day" aria-pressed="false" title="Kırık güneş — açık görünüm"><img src="/weather-day.png" alt="" width="56" height="56" loading="eager"><span>Gündüz</span></button><button type="button" data-theme-choice="night" aria-pressed="false" title="Ay ve loş bacıları — koyu görünüm"><img src="/weather-night.png" alt="" width="56" height="56" loading="eager"><span>Gece</span></button><button type="button" data-theme-choice="device" aria-pressed="true" title="Hayaletli hava — cihazın tercihini izle"><img src="/weather-device.png" alt="" width="56" height="56" loading="eager"><span>Cihaz</span></button></div></aside><div class="masthead-title"><div class="eyebrow">Akoros’un bağımsız sesi · Doskvol</div><a class="masthead-name" href="/">Doskvol Dedikoduları</a><div class="tagline">Duyduğunuza inanmayın. Duymadıklarınızdan korkun.</div></div></header><main><header class="reading-heading"><h1>Geleneksel Ölçülerin İmparatorluk Karşılıkları Cetveli</h1><p class="reading-deck">İmparatorluk Standartlar İdaresi</p></header><article class="reading-copy" aria-label="Geleneksel Ölçülerin İmparatorluk Karşılıkları Cetveli"><div class="reading-meta">
+  <span>847 İmparatorluk Yılı</span>
+  <span>Doskvol Bölge Müdürlüğü nüshası</span>
+  <span>Ticaret, vergi, tapu ve kamu işleri</span>
+</div>
+<h2 id="uzunluk">Uzunluk</h2>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>Geleneksel ölçü</th><th>Geleneksel karşılığı</th><th>İmparatorluk karşılığı</th></tr></thead><tbody><tr><td>Parmak</td><td>—</td><td>26 milveyr</td></tr><tr><td>Karış</td><td>9 parmak</td><td>23,4 senveyr</td></tr><tr><td>Ayak</td><td>12 parmak</td><td>31,2 senveyr</td></tr><tr><td>Arşın</td><td>28 parmak</td><td>72,8 senveyr</td></tr><tr><td>Kulaç</td><td>6 ayak</td><td>18,72 desveyr</td></tr><tr><td>Zincir</td><td>—</td><td>20,75 veyr</td></tr><tr><td>Mil</td><td>80 zincir</td><td>1,66 kelveyr</td></tr></tbody></table>
+<h2 id="ağırlık">Ağırlık</h2>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>Geleneksel ölçü</th><th>Geleneksel karşılığı</th><th>İmparatorluk karşılığı</th></tr></thead><tbody><tr><td>Dirhem</td><td>—</td><td>3,625 milgrav</td></tr><tr><td>Ons</td><td>—</td><td>31,25 milgrav</td></tr><tr><td>Libre</td><td>16 ons</td><td>50 sengrav</td></tr><tr><td>Okka</td><td>400 dirhem</td><td>1,45 grav</td></tr><tr><td>Kantar</td><td>44 okka</td><td>63,8 grav</td></tr><tr><td>Yüzlük</td><td>112 libre</td><td>56 grav</td></tr><tr><td>Ton</td><td>20 yüzlük</td><td>1,12 kelgrav</td></tr></tbody></table>
+<h2 id="hacim">Hacim</h2>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>Geleneksel ölçü</th><th>Geleneksel karşılığı</th><th>İmparatorluk karşılığı</th></tr></thead><tbody><tr><td>Fincan</td><td>—</td><td>11,2 senvel</td></tr><tr><td>Maşrapa</td><td>5 fincan</td><td>56 senvel</td></tr><tr><td>Pint</td><td>—</td><td>62,5 senvel</td></tr><tr><td>Galon</td><td>8 pint</td><td>5 vel</td></tr><tr><td>Ölçek</td><td>—</td><td>9,75 vel</td></tr><tr><td>Kile</td><td>4 ölçek</td><td>39 vel</td></tr><tr><td>Varil</td><td>40 galon</td><td>200 vel</td></tr></tbody></table>
+<h2 id="resmî-hükümler">Resmî hükümler</h2>
+<p><strong>Madde 4 —</strong> Yukarıda belirtilen karşılıklar İmparatorluk sınırları içerisinde resmî işlemler bakımından bağlayıcıdır. Mahallî teamüller, aksi ayrıca tescil edilmedikçe, bu cetvelde belirtilen miktarları değiştirmez.</p>
+<p><strong>Madde 5 —</strong> Tartı ve ölçü aletlerinin İmparatorluk standartlarına uygunluğu, yetkili ölçü memurlarınca tasdik olunur. İhtilaf halinde İmparatorluk birimleri esas alınır.</p>
+<hr>
+<p><em>Bu cetvelde İlk Taş’ın tasdikli suretlerine dayanan İmparatorluk standartları esas alınmıştır.</em></p></article></main><footer><a href="/">Son sayı</a> · <a href="/sayi/">Sayı arşivi</a> · <a href="/tefrika/">Tefrika</a></footer></div></body></html>

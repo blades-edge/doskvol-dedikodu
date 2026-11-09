@@ -1,0 +1,51 @@
+<!DOCTYPE html><html lang="tr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><script data-goatcounter="https://doskvol.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script><script>
+  (() => {
+    const key = "doskvol-appearance";
+    const valid = value => ["day", "night", "device"].includes(value);
+    const media = window.matchMedia("(prefers-color-scheme: dark)");
+    let preference = "device";
+    try {
+      const saved = localStorage.getItem(key);
+      if (valid(saved)) preference = saved;
+    } catch {
+      // Private browsing may deny storage; the current page still works.
+    }
+    const paint = () => {
+      const dark =
+        preference === "night" || (preference === "device" && media.matches);
+      document.documentElement.dataset.theme = dark ? "dark" : "light";
+      document.querySelectorAll("[data-theme-choice]").forEach(button => {
+        button.setAttribute(
+          "aria-pressed",
+          String(button.dataset.themeChoice === preference)
+        );
+      });
+    };
+    paint();
+    document.addEventListener("DOMContentLoaded", paint, { once: true });
+    media.addEventListener("change", paint);
+    document.addEventListener("doskvol:theme", event => {
+      if (!valid(event.detail)) return;
+      preference = event.detail;
+      try {
+        localStorage.setItem(key, preference);
+      } catch {
+        // Private browsing may deny storage; the current page still works.
+      }
+      paint();
+    });
+    window.addEventListener("storage", event => {
+      if (event.key !== key && event.key !== null) return;
+      preference = valid(event.newValue) ? event.newValue : "device";
+      paint();
+    });
+  })();
+</script><link rel="icon" type="image/svg+xml" href="/favicon.svg"><link rel="canonical" href="https://doskvol.ink/makale/kanunun-kesesi/"><meta name="description" content="Haraç turundan dönen bir Mavi Urbalı şimdi kaybını kime bildireceğini düşünüyor."><meta property="og:site_name" content="Doskvol Dedikoduları"><meta property="og:locale" content="tr_TR"><meta property="og:type" content="article"><meta property="og:title" content="Mum Sokağı'nda kanunun kesesi çalındı | Doskvol Dedikoduları"><meta property="og:description" content="Haraç turundan dönen bir Mavi Urbalı şimdi kaybını kime bildireceğini düşünüyor."><meta property="og:url" content="https://doskvol.ink/makale/kanunun-kesesi/"><meta property="og:image" content="https://doskvol.ink/_astro/kanunun-kesesi.CWODIrvV_1gxtG8.jpeg"><meta property="og:image:type" content="image/jpeg"><meta property="og:image:alt" content="Yağmur altında üç mahalleli bir Mavi Urbalıya üç farklı boy gösteriyor. Kasap tezgâhından onları izliyor."><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="Mum Sokağı'nda kanunun kesesi çalındı | Doskvol Dedikoduları"><meta name="twitter:description" content="Haraç turundan dönen bir Mavi Urbalı şimdi kaybını kime bildireceğini düşünüyor."><meta name="twitter:image" content="https://doskvol.ink/_astro/kanunun-kesesi.CWODIrvV_1gxtG8.jpeg"><meta name="twitter:image:alt" content="Yağmur altında üç mahalleli bir Mavi Urbalıya üç farklı boy gösteriyor. Kasap tezgâhından onları izliyor."><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,600;0,6..72,700;1,6..72,400&display=swap" rel="stylesheet"><title>Mum Sokağı&#39;nda kanunun kesesi çalındı | Doskvol Dedikoduları</title><link rel="stylesheet" href="/_astro/EditorialHead.BuTT5ouC.css"></head><body><a class="reading-skip" href="#reading-content">Makaleye geç</a><div class="paper reading-paper"><script type="module">document.querySelectorAll(`[data-theme-choice]`).forEach(e=>{e.addEventListener(`click`,()=>{document.dispatchEvent(new CustomEvent(`doskvol:theme`,{detail:e.dataset.themeChoice}))})});</script><header class="masthead"><aside class="weather-theme" aria-label="Gazetenin hava durumu ve görünümü"><div class="weather-caption">Doskvol’da hava</div><div class="weather-choices" role="group" aria-label="Görünüm tercihi"><button type="button" data-theme-choice="day" aria-pressed="false" title="Kırık güneş — açık görünüm"><img src="/weather-day.png" alt="" width="56" height="56" loading="eager"><span>Gündüz</span></button><button type="button" data-theme-choice="night" aria-pressed="false" title="Ay ve loş bacıları — koyu görünüm"><img src="/weather-night.png" alt="" width="56" height="56" loading="eager"><span>Gece</span></button><button type="button" data-theme-choice="device" aria-pressed="true" title="Hayaletli hava — cihazın tercihini izle"><img src="/weather-device.png" alt="" width="56" height="56" loading="eager"><span>Cihaz</span></button></div></aside><div class="masthead-title"><div class="eyebrow">Akoros’un bağımsız sesi · Doskvol</div><a class="masthead-name" href="/sayi/002/">Doskvol Dedikoduları</a><div class="tagline">Duyduğunuza inanmayın. Duymadıklarınızdan korkun.</div></div></header><main id="reading-content"><header class="reading-heading"><div class="eyebrow">Dedikodular</div><h1>Mum Sokağı&#39;nda kanunun kesesi çalındı</h1><p class="reading-deck">Haraç turundan dönen bir Mavi Urbalı şimdi kaybını kime bildireceğini düşünüyor.</p><div class="reading-meta"><span>Aldo Brogan</span><a href="/takvim/">60 Mendar 847</a><a href="/sayi/">Sayı 002</a></div></header><figure class="reading-figure"><img src="/_astro/kanunun-kesesi.CWODIrvV_ZBuhuM.webp" srcset="/_astro/kanunun-kesesi.CWODIrvV_1BeCTT.webp 480w, /_astro/kanunun-kesesi.CWODIrvV_Z28Wh82.webp 960w, /_astro/kanunun-kesesi.CWODIrvV_1aT9Xm.webp 1440w" alt="Yağmur altında üç mahalleli bir Mavi Urbalıya üç farklı boy gösteriyor. Kasap tezgâhından onları izliyor." sizes="(max-width: 32rem) calc(100vw - 1.5rem), calc(92vw - 1rem)" loading="lazy" decoding="async" width="1774" height="887" class="editorial-engraving engraving-dark"><figcaption class="caption">Mum Sokağı’nda şüphelinin boyu tanıktan tanığa değişiyor.</figcaption></figure><article class="reading-copy" aria-label="Mum Sokağı'nda kanunun kesesi çalındı"><p>Geçen Pazar günü Mum Sokağı’nda tüccarlar yeni mallarını, bir Mavi Urbalı da kesesini açtı. Söylenene göre zabit, mahalle esnafından yaptığı haftalık tahsilatı henüz tamamlamıştı. Kese de tam bu sırada ortadan kayboldu.</p>
+<p>Mahalleli, hırsızın Strathmill Evi’nden bir çocuk olduğuna neredeyse emin. Ne var ki çocuğu tarif etmeleri istendiğinde işler karışıyor. Biri kızıl saçlı bir oğlan gördüğünü söylüyor, bir başkası kara saçlı. Üçüncüsü çocuğun boyunu “şu kadar” diye eliyle gösteriyor; eli her soruşta biraz daha alçalıyor. Bir kasap ise ortada çocuk falan görmediğini, yalnızca zabitin kesesine uzandığında yüzünün aldığı hâli hatırladığını belirtiyor.</p>
+<p>“Racon bu, ağa,” diyor kasap, keyifle. “Veren el bir gün alan ele döner.”</p>
+<p>Mahalle, keseyi kaybedenin dört zabitten hangisi olduğunu da tartışıyor. Söylenene göre dördü de son günlerde birbirlerinin cebine biraz fazla bakıyor.</p>
+<p>İddialara göre zabit, kaybını Çavuş Lochlan’a bildirmek istemiş. Ancak Lochlan’ın şikâyeti kayda geçirmeye yanaşmadığı anlatılıyor. Zira bir hırsızlık soruşturması açılırsa önce kesede ne kadar para bulunduğunun, ardından da bu paranın nereden geldiğinin açıklanması gerekecek.</p>
+<p>Konuyla ilgili görüşünü almak istediğimiz Strathmill Evi’ndeki bir bakıcı, sorularımızı yanıtlamadı. Çocuğun tarifini dinledi, kapıyı kapattı. Bu sessizliğin ne anlama geldiğini kendisine yeniden sorma fırsatımız olmadı.</p>
+<p>Bunların hiçbiri doğrulanmış değil. Mum Sokağı’nda kimse de doğrulanmasını istemiyor.</p>
+<p>Sokağın esnafı ise hadisenin doğruluğundan çok sonucuyla ilgileniyor. Bir dükkân sahibi meseleyi şöyle özetledi:</p>
+<p>“Kese bulunursa parasını geri ister. Bulunmazsa haftaya bizden yine ister.”</p><footer class="byline">— Aldo Brogan (Gaip muhabiri)</footer></article><aside class="reading-ending"><div class="eyebrow">Bu sayıdaki tefrika</div><h2><a href="/tefrika/bos-bedenler/2/">Boş Bedenler</a></h2><p>Bölüm 2: Eldivensiz Beyefendi</p></aside><div class="reading-return"><a href="/sayi/002/">← Sayı 002</a><a href="#reading-content">Makalenin başına ↑</a></div></main><footer>Doskvol Dedikoduları · Duyduğunuza inanmayın. Duymadıklarınızdan korkun.</footer></div></body></html>
