@@ -295,6 +295,13 @@ content:
       - name: author
         component: author-picker
       - { name: spoiler, label: Spoiler uyarısı, type: text }
+      - name: shareImage
+        label: Paylaşım kapağı (isteğe bağlı)
+        type: image
+        description: "Yalnızca bağlantı önizlemelerinde kullanılır. Boşsa sayının kapak görseli kullanılır."
+      - name: shareImageAlt
+        label: Paylaşım kapağının kısa betimi
+        type: text
       - name: body
         label: Bölüm metni
         type: rich-text

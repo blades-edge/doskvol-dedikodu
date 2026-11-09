@@ -25,6 +25,10 @@ const cover = "cover" in article.data ? article.data.cover : undefined;
 const coverAlt = "coverAlt" in article.data ? article.data.coverAlt : undefined;
 const coverCaption =
   "coverCaption" in article.data ? article.data.coverCaption : undefined;
+const shareImage =
+  "shareImage" in article.data ? article.data.shareImage : undefined;
+const shareImageAlt =
+  "shareImageAlt" in article.data ? article.data.shareImageAlt : undefined;
 const imageAssets = import.meta.glob<{
   default: import("astro").ImageMetadata;
 }>("../assets/images/*", { eager: true });
@@ -59,8 +63,10 @@ const related = articlesForIssue(publication, issue.id).find(
     ><EditorialHead
       {title}
       {description}
-      image={cover ?? issue.data.cover}
-      imageAlt={coverAlt ?? issue.data.coverAlt}
+      image={shareImage ?? cover ?? issue.data.cover}
+      imageAlt={shareImage
+        ? (shareImageAlt ?? "")
+        : (coverAlt ?? issue.data.coverAlt)}
       type="article"
       noindex={publication.preview}
     /></head
