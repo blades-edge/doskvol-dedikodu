@@ -191,18 +191,12 @@ h6,
   }
 }
 @container (min-width: 57rem) {
+  .issue-grid {
+    padding-block-start: 2.2rem;
+  }
   .issue-grid > .lead {
     grid-row: span 3;
-  }
-}
-@media screen {
-  @container (min-width: 57rem) {
-    .issue-grid {
-      padding-block-start: 2.2rem;
-    }
-    .issue-grid > .lead {
-      padding-block-start: 0;
-    }
+    padding-block-start: 0;
   }
 }
 @container (min-width: 76.5rem) {
