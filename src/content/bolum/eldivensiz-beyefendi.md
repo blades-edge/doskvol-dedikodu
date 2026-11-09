@@ -262,7 +262,7 @@ Paltosunun düğmelerini ilikledi.
 
 “İfadesi başka bir saati doğruluyor.”
 
-Ayağa kalktı.
+Kapıya yöneldi.
 
 “İçeride ne olduğunu anlatmanızı istiyorum.”
 

@@ -35,7 +35,7 @@ Biraz ötede, kadife yakaların arasında ceketi kendisine bir beden büyük gel
 
 "Tadilat," dedi. Sonra, ben sormadan, tadilatın pist açılınca yapılacağını ekledi.
 
-Ben de birkaç gümüşümü, kazanması halinde yatırdığımın üç katını ödeyeceği yazılan bir tazıya yatırdım. Görevli kâğıdımı mühürledi, ben de cebime koydum. Yıllarca hesap defteri tutmuş bir adamın böyle bir hataya düşmeyeceğini düşünüyorsanız, rakamların kendi aptallığımızı hiçbir zaman hesaba katmadığını hatırlatırım.
+Ben de birkaç gümüşümü, kazanması hâlinde yatırdığımın üç katını ödeyeceği yazılan bir tazıya yatırdım. Görevli kâğıdımı mühürledi, ben de cebime koydum. Yıllarca hesap defteri tutmuş bir adamın böyle bir hataya düşmeyeceğini düşünüyorsanız, rakamların kendi aptallığımızı hiçbir zaman hesaba katmadığını hatırlatırım.
 
 Tutmadı.
 

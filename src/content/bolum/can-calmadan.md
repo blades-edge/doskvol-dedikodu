@@ -647,7 +647,7 @@ Aldo'yla Rıhtım'da buluşma sözü de hâlâ duruyordu.
 
 Sis'in yaraları iyileşmeye devam ediyordu. Dr. Vedat'ın uyarıları, her gün aynı dikkatle uygulandığı söylenemeyecek türdendi. Sis'in bazı günler fazla hareket ettiği, bazı günler dinlenmeyi tercih ettiği anlaşılıyordu.
 
-Onu Altınerik Restoranı civarında gördüğünü söyleyenler olmuştu. Kimileri yalnız olduğunu anlatıyordu. Kimileri yanında çocuklar bulunduğunu.
+Onu Altın Erik lokantası civarında gördüğünü söyleyenler olmuştu. Kimileri yalnız olduğunu anlatıyordu. Kimileri yanında çocuklar bulunduğunu.
 
 Fakat bu ikinci türden söylentilerin peşine düşen pek olmadı. İnsanlar Sis'in nerede olduğunu bilmeyi, orada ne yaptığını öğrenmekten daha önemli sayıyordu.
 

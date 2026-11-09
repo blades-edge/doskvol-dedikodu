@@ -10,7 +10,7 @@ coverAlt: Yağmurlu bir Yanıkçukur sokağında Şifreci elini göğsüne koymu
 coverCaption: Şifreci, Vaurin daha defterini açmadan loncasının yeminini tekrarladı.
 ---
 
-Geçen sayımızda Lord Strangford'un Yanıkçukur'daki çalışma evlerinden birine ait olduğu öne sürülen kayıtları ve bu kayıtlardaki [tarihi tutmayan mührü](./strangford-dosyasi) yazmıştık.
+Geçen sayımızda Lord Strangford'un Yanıkçukur'daki imalathanelerinden birine ait olduğu öne sürülen kayıtları ve bu kayıtlardaki [tarihi tutmayan mührü](../strangford-dosyasi/) yazmıştık.
 
 Şehir Meclisi'nin beş üyesine gönderdiğimiz sorular hâlâ cevapsız.
 
