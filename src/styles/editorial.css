@@ -321,6 +321,11 @@ footer {
 .reading-paper {
   max-width: 64rem;
 }
+@media screen and (min-width: 65rem) {
+  .reading-paper {
+    margin-inline: auto;
+  }
+}
 .reading-breadcrumb {
   display: flex;
   flex-wrap: wrap;
