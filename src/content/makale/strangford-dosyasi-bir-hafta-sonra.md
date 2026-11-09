@@ -6,7 +6,8 @@ author: vaurin-prichard.json
 section: Haberler
 district: Yanıkçukur
 ---
-Geçen sayımızda Lord Strangford'un Yanıkçukur'daki çalışma evlerinden birine ait olduğu öne sürülen kayıtları ve bu kayıtlardaki tarihi tutmayan mührü yazmıştık.
+
+Geçen sayımızda Lord Strangford'un Yanıkçukur'daki çalışma evlerinden birine ait olduğu öne sürülen kayıtları ve bu kayıtlardaki [tarihi tutmayan mührü](./strangford-dosyasi) yazmıştık.
 
 Şehir Meclisi'nin beş üyesine gönderdiğimiz sorular hâlâ cevapsız.
 

@@ -8,9 +8,10 @@ episode: 2
 author:
   - altinci-sandalye
 ---
-> *“Doskvol'da bir adamın ölmesi kimseyi şaşırtmaz. Fakat yanlış yerde ölen bir adam, bütün şehri ayağa kaldırabilir.”*
 
-### I. Dinlenmenin Türlü Yolları
+> _“Doskvol'da bir adamın ölmesi kimseyi şaşırtmaz. Fakat yanlış yerde ölen bir adam, bütün şehri ayağa kaldırabilir.”_
+
+## I. Dinlenmenin Türlü Yolları
 
 İpekyalı'daki gecenin ardından beş haydudun da dinlenmeye ihtiyacı vardı. Bir kerhanenin kasasını boşaltmak, içerideki insanları birbirine düşürmek ve sonunda ganimeti kimsenin beklemediği bir yerden çıkarabilmek, dışarıdan bakıldığında başarılı bir iş sayılabilirdi. Ne var ki başarı, insanın ertesi sabah kendini iyi hissedeceği anlamına gelmiyordu. Özellikle de başarının bedeli kırılmış bir pencere, yaralanmış bir arkadaş ve hesaplanandan fazla harcanmış sinirler olmuşsa.
 
@@ -20,7 +21,7 @@ Gümüş, geçmişiyle ilgili aldığı bir mektubun ardından kısa bir seyahat
 
 Hurda'dan gelen haber daha kısaydı. İçkiyle arasındaki eski anlaşmazlıkları yeniden görüşmeye karar vermiş, bir meyhanenin üst katında kendine yatacak yer bulmuştu. Geride küçük bir kap ve üzerine aceleyle yazılmış bir not bırakmıştı:
 
-*Metal eritici asit. Denemeye fırsatım olmadı. Çalışıp çalışmadığından emin değilim.*
+_Metal eritici asit. Denemeye fırsatım olmadı. Çalışıp çalışmadığından emin değilim._
 
 Hurda'nın bu tür uyarıları pek iç rahatlatıcı değildi. Bir şeyi denemeye fırsat bulamamış olması, onun işe yaramayacağı anlamına gelmezdi. Ne kadar işe yarayacağıysa ayrı bir meseleydi.
 
@@ -44,13 +45,13 @@ Tayfanın yeniden işe çıkmasından önce Sis'in yaralarıyla ilgilenilmesi ge
 
 Vedat ucuz çalışmıyordu. Fakat Sis'in yaralarını dikkatle inceledi, gerekli müdahaleleri yaptı ve iyileşmenin alacağı süreyi saklamaya çalışmadı. Aldığı ücrete karşılık düzgün bir iş çıkarıyordu.
 
-### II. Başkasının Sokağında
+## II. Başkasının Sokağında
 
 Yanıkçukur'daki hırsızlık ve haraç işlerinde Ulf Ironborn'un sözü geçerdi. Skovlan savaşından kalma öfkesi ve milliyetçi görüşleriyle tanınan Ulf, bölgesinde kimin nereden para kazandığını öğrenmekten hoşlanırdı. Kendisinden habersiz yapılan işler, özellikle de iyi para getirenler, dikkatini çekebilirdi.
 
 Tayfa bunları biliyordu. Yine de Yanıkçukur'da bir iş yapmaya karar verdi.
 
-Kelle'nin Yeri adı verilen meyhanede büyük miktarda para bulunduğuna ilişkin bilgi almışlardı. Mekân haftanın ikinci günü kapalıydı. Sis'in çilingir arkadaşı Frake ise ön kapının kilidini kısa süre önce değiştirmişti.
+Kellen'ın Yeri adı verilen meyhanede büyük miktarda para bulunduğuna ilişkin bilgi almışlardı. Mekân haftanın ikinci günü kapalıydı. Sis'in çilingir arkadaşı Frake ise ön kapının kilidini kısa süre önce değiştirmişti.
 
 İlk plan oldukça sadeydi. Frake gündüz saatlerinde kapıya gelecek, kendi taktığı kilidi açacak, Sis ve Ayaz içerideki parayı alacak, Yankı da dışarıda bekleyerek olası bir tehlikede müdahale edecekti.
 
@@ -58,13 +59,13 @@ Kelle'nin Yeri adı verilen meyhanede büyük miktarda para bulunduğuna ilişki
 
 İyi bir planın en rahatlatıcı yanı, henüz uygulanmamış olmasıdır.
 
-Haftanın ikinci günü Kelle'nin Yeri'ne ulaştıklarında ön kapının önünde yeni bir demir parmaklık buldular. Parmaklık büyük ve ağırdı; üzerine bir düzine kadar asma kilit takılmıştı. Frake'in değiştirdiği kilit, bunların arkasında kalıyordu.
+Haftanın ikinci günü Kellen'ın Yeri'ne ulaştıklarında ön kapının önünde yeni bir demir parmaklık buldular. Parmaklık büyük ve ağırdı; üzerine bir düzine kadar asma kilit takılmıştı. Frake'in değiştirdiği kilit, bunların arkasında kalıyordu.
 
 Ayaz bir süre demir kapıyı inceledi. Sis asma kilitlerden birini eline alıp tarttı. Frake, kendi yaptığı işle sonradan eklenen bu güvenlik düzeni arasında hiçbir ilişki bulunmadığını belirtti.
 
 Yankı çantasından Hurda'nın bıraktığı küçük kabı çıkardı. Üzerindeki notu bir kez daha okudular.
 
-*Çalışıp çalışmadığından emin değilim.*
+_Çalışıp çalışmadığından emin değilim._
 
 Sis kabı aldı.
 
@@ -110,13 +111,13 @@ Frake kendi taktığı kilide eğildi. Anahtarını çevirdi, kapının açıld�
 
 Tayfa artık içeri girebilirdi. Geride yalnızca bir sorun kalmıştı: Mavi Urbalılar geri dönebilirdi.
 
-### III. Kırağı'nın Burnu
+## III. Kırağı'nın Burnu
 
 Sis ve Ayaz, söktükleri demir parçalarının bir kısmını ellerine alarak meyhaneye girdi. Dışarıdan bakan biri, ikisinin kapı işini tamamlamak üzere malzeme taşıdığını düşünebilirdi.
 
 Yankı dışarıda kaldı. Gerekirse sokağın ilgisini başka yöne çekecekti.
 
-Kelle'nin Yeri, beklediklerinden daha büyük bir meyhaneydi.
+Kellen'ın Yeri, beklediklerinden daha büyük bir meyhaneydi.
 
 Pencerelerden giren zayıf ışık içerideki geniş alanın tamamına ulaşmıyordu. Barın arkasında karanlık bölümler vardı. Masaların üzerinde eski içki lekeleri, zeminde ayak izleri ve yer yer dökülmüş talaş görülüyordu. Hava bayattı. Temizlik için kullanılan sıvı sabunun baygın kokusu, ıslak ahşap ve uzun süre havalandırılmamış bir odanın kokusu birbirine karışıyordu.
 
@@ -154,7 +155,7 @@ Köpek bu övgüden memnun görünüyordu. Neyi bulduğuyla pek ilgilendiği sö
 
 Duvarın arkasında küçük bir oda vardı. Ve odanın büyük bölümünü bir kasa kaplıyordu.
 
-### IV. Altı Çuval
+## IV. Altı Çuval
 
 Kasa, balık hâllerinde kullanılan büyük buzluklardan biri kadar yer kaplıyordu. Kalın metal kapağının üzerinde anahtar deliği ve rakamlı bir kadran bulunuyordu.
 
@@ -212,7 +213,7 @@ Sonra adam yere çöktü.
 
 Ayaz ona doğru koştu.
 
-### V. Çanın Beklediği Adam
+## V. Çanın Beklediği Adam
 
 Bıçak adamın boğazındaydı.
 
@@ -256,7 +257,7 @@ Sis bir şey daha söylemedi. Üçüncü çuvalı omzuna aldı.
 
 Henüz çalmamıştı.
 
-### VI. Duvarın Öte Yanı
+## VI. Duvarın Öte Yanı
 
 Yankı dışarıda bekliyordu.
 
@@ -296,7 +297,7 @@ Yankı bunu bir yüz ifadesinden değil, ruhun içinde bulunduğu karışıklık
 
 Elini uzattı. Burada elinin nasıl göründüğünü bilmiyordu. Ama uzandığını hissediyordu.
 
-*Daha zamanın gelmedi.*
+_Daha zamanın gelmedi._
 
 Sözcükler ağızdan çıkmış gibi değildi.
 
@@ -306,7 +307,7 @@ Ruhun çevresindeki hareket değişti.
 
 Yankı yeniden yaklaştı.
 
-*Burada kal.*
+_Burada kal._
 
 Öte tarafta Ayaz kanamayı durdurmaya çalışıyordu.
 
@@ -318,7 +319,7 @@ Hiç değilse o an için.
 
 Tam o sırada omuzlarından kuvvetle sarsıldığını hissetti.
 
-### VII. Bir Kese Gümüş
+## VII. Bir Kese Gümüş
 
 Yankı gözlerini açtığında karşısında bir Mavi Urbalı teğmeni vardı. Adam iki eliyle omuzlarından tutmuş, onu duvardan uzaklaştırmaya çalışıyordu. Yanında iki Mavi Urbalı daha bulunuyordu.
 
@@ -400,7 +401,7 @@ Bir süre önce kendi bedenini terk etmişti. Şimdi yeniden bedeninin içinde o
 
 Fakat ellerindeki titreme geçmemişti.
 
-### VIII. Ayaz'ın Köyü
+## VIII. Ayaz'ın Köyü
 
 Meyhanenin içinde altı çuval bozuk para kapıya taşınmıştı. Sis son çuvalın ağzını bağlarken Ayaz hâlâ yaralının başındaydı.
 
@@ -502,7 +503,7 @@ Sis kapıya yöneldi.
 
 “Çuvalları alalım.”
 
-### IX. Aldo'nun Merakı
+## IX. Aldo'nun Merakı
 
 Arabacı Aldo, taşınacak yükü gördüğünde merakını saklamadı.
 
@@ -580,9 +581,9 @@ Arabacı memnundu. Ayaz sessizliğini koruyordu. Sis ise çuvalların yerinden o
 
 Yolculuğun geri kalanında Aldo, taşıdığı şeylerin ne olduğunu öğrenmeye çalışmaktan çok Yankı'nın ellerini izledi.
 
-### X. Üç Şişe
+## X. Üç Şişe
 
-İne gelmeden iki sokak ötedeki yıkık damın önünde çuvalları indirdiler. Kelle'nin Yeri'nden kalan demir parçaları da arabanın üzerindeydi. Bunları Aldo'ya bıraktılar. Arabacı fazladan aldığı malzemelerden memnun görünüyordu.
+İne gelmeden iki sokak ötedeki yıkık damın önünde çuvalları indirdiler. Kellen'ın Yeri'nden kalan demir parçaları da arabanın üzerindeydi. Bunları Aldo'ya bıraktılar. Arabacı fazladan aldığı malzemelerden memnun görünüyordu.
 
 Çuvallar dikkat çekmeden ine taşındı. İçeri girdiklerinde herkes biraz olsun rahatladı.
 
@@ -592,7 +593,7 @@ Az para değildi.
 
 Üstelik bu kez iş, ilk soygundaki kadar uzamadan tamamlanmıştı. Demir kapı beklenmedik bir engel olmuş, içeride ölüm tehlikesi yaşanmış, dışarıda Mavi Urbalılarla karşılaşılmıştı. Yine de tayfa parayı alıp dönmüştü.
 
-Sis son çuvalı yerleştirdikten sonra meyhaneden getirdiği üç şişeyi çıkardı. Kelle'nin Yeri'nin özel viski koleksiyonundan alınmışlardı.
+Sis son çuvalı yerleştirdikten sonra meyhaneden getirdiği üç şişeyi çıkardı. Kellen'ın Yeri'nin özel viski koleksiyonundan alınmışlardı.
 
 Şişeleri masanın kenarına koydu.
 
@@ -612,9 +613,9 @@ Yankı, hayalet alanında hissettiği zayıf bağın yeniden güçlendiği anı 
 
 İkisi de başka bir şey söylemedi.
 
-### XI. Açık Kalan Hesaplar
+## XI. Açık Kalan Hesaplar
 
-Sonraki günlerde Kelle'nin Yeri'ne ilişkin türlü söylentiler dolaşmaya başladı. Kapının önünde yapılan işten bahsedenler vardı. Bazıları demir parmaklıkların neden söküldüğünü anlamamıştı. Bazılarıysa içeride çalışanları gördüğünü söylüyordu.
+Sonraki günlerde Kellen'ın Yeri'ne ilişkin türlü söylentiler dolaşmaya başladı. Kapının önünde yapılan işten bahsedenler vardı. Bazıları demir parmaklıkların neden söküldüğünü anlamamıştı. Bazılarıysa içeride çalışanları gördüğünü söylüyordu.
 
 Bir süre sonra Frake'in dükkânına Mavi Urbalıların uğradığı haberi geldi. Ziyaretin dostane geçtiği anlatılıyordu.
 
@@ -652,4 +653,4 @@ Bildiği tek şey, adamın boğazına bıçağı kendisinin attığıydı.
 
 Ve o gün Doskvol'da ölüm çanı çalmamıştı.
 
-*Doskvol Günlükleri — İkinci Bölüm Sonu*
+_Doskvol Günlükleri — İkinci Bölüm Sonu_

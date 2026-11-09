@@ -7,7 +7,8 @@ episode: 2
 author:
   - dr-a-sorel
 ---
-Üçüncü saati buçuk geçe
+
+#### Üçüncü saati buçuk geçe
 
 Ayak sesleri kapının önünde kesildi. Kimse içeri girmedi.
 
@@ -59,7 +60,7 @@ Profesör sedye uzaklaşana kadar kapıda bekledi.
 
 Ben defterimi kapattım.
 
-Dokuzuncu saat
+#### Dokuzuncu saat
 
 Bekleme odamda dört hasta vardı.
 

@@ -4,8 +4,10 @@ description: Haraç turundan dönen bir Mavi Urbalı şimdi kaybını kime
   bildireceğini düşünüyor.
 author: aldo-brogan.json
 section: Dedikodular
-location: Kargaayağı,Mum Sokağı, Strathmill Evi
+district: Kargaayağı
+location: Mum Sokağı
 ---
+
 Geçen Pazar günü Mum Sokağı'nda tüccarlar yeni mallarını, bir Mavi Urbalı da kesesini açtı. Söylenene göre zabit, mahalle esnafından yaptığı haftalık tahsilatı henüz tamamlamıştı. Kese de tam bu sırada ortadan kayboldu.
 
 Mahalleli, hırsızın Strathmill Evi'nden bir çocuk olduğuna neredeyse emin. Ne var ki çocuğu tarif etmeleri istendiğinde işler karışıyor. Biri kızıl saçlı bir oğlan gördüğünü söylüyor, bir başkası kara saçlı. Üçüncüsü çocuğun boyunu "şu kadar" diye eliyle gösteriyor; eli her soruşta biraz daha alçalıyor. Bir kasap ise ortada çocuk falan görmediğini, yalnızca zabitin kesesine uzandığında yüzünün aldığı hâli hatırladığını belirtiyor.

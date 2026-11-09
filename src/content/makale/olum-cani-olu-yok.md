@@ -5,7 +5,7 @@ description: Altıkule'de ölüm çanının çaldığı, bir Ölügören Karga'n
   sokaktan bir cenaze çıkarıldığını gören yok.
 author: [aldo-brogan]
 section: Dedikodular
-location: Altıkule
+district: Altıkule
 cover: ../../assets/images/olugoren-kargalar.avif
 coverAlt: Tuğla bir bacaya tünemiş iki ölügören karga; arkalarında karanlık gökyüzü ve Altıkule çatıları.
 coverCaption: Biri sokağa bakıyor, öteki bekliyor. Bacanın altındaki terzihane ise hâlâ kapalı.

@@ -4,8 +4,10 @@ description: Gecepazarı'nda dört ayaklı asalet, iki ayaklı saflık ve Üstat
   Vreen'in bitmek bilmeyen servet vaatleri.
 author: gaspar-merrow.json
 section: Haberler
-location: "Mahalle: Gecepazarı Ek yer: Vreen'in Tazı Yarışları"
+district: Gecepazarı
+location: Vreen'in Tazı Yarışları
 ---
+
 Geçtiğimiz günlerde Gecepazarı'nda pek seçkin bir davete katıldım. Davetiyede tazı koşusu yazıyordu. Ben de safça, koşan tazılar göreceğimi düşündüm. Meğer asıl yarış, beyefendilerin birbirlerinden daha zengin görünme gayretiymiş.
 
 Üstat Vreen'in büyük vaatlerle kurmaya giriştiği yarış pistinde, yatırımcılara mahsus bir tanıtım koşusu düzenleniyordu. Kadife yakalar, ipek mendiller ve insanın bir aylık geçimini tek başına karşılayabilecek şapkalar arasında, hayvanların zarafetinden çok soy kütükleri konuşuldu. Bir hanımefendi, tazısının yedi kuşaklık geçmişini eksiksiz anlattı. Kendi kocasının geçen kış nerede bulunduğunu ise hatırlayamadı.
