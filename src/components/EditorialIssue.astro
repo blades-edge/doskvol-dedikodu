@@ -26,6 +26,7 @@ const {
   description,
   imperialDate,
   price,
+  leadRows,
   cover,
   coverAlt,
   coverCaption,
@@ -89,7 +90,12 @@ const older = publication.issues[position + 1];
         </nav>
       </header>
       <main class="issue-grid">
-        <section id="manset" class="lead" aria-labelledby="lead-title">
+        <section
+          id="manset"
+          class="lead"
+          style={`--lead-rows: ${leadRows}`}
+          aria-labelledby="lead-title"
+        >
           {
             lead ? (
               <>

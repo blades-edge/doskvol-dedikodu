@@ -49,6 +49,10 @@ const issues = defineCollection({
       }),
       price: z.string().min(1),
       lead: z.preprocess(contentReferenceId, reference("makale").optional()),
+      leadRows: z.preprocess(
+        emptyToUndefined,
+        z.number().int().min(2).default(2)
+      ),
       articles: z.preprocess(
         emptyToUndefined,
         z.array(cmsReference("makale")).default([])

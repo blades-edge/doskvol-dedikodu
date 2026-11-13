@@ -7,14 +7,12 @@
     "year": 847
   },
   "price": "2 pençik",
+  "leadRows": 3,
   "articles": [
     "strangford-dosyasi.md",
     "dort-kisi-geldiler.md",
     "bir-tabakta-eksilenler.md",
     "olum-cani-olu-yok.md"
   ],
-  "chapters": [
-    "ipekyalida-bir-gece.md",
-    "gulumseyen-kadin.md"
-  ]
+  "chapters": ["ipekyalida-bir-gece.md", "gulumseyen-kadin.md"]
 }
