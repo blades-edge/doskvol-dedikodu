@@ -103,6 +103,11 @@ content:
           value: "{name}"
           label: "{fields.title}"
           search: "name,fields.title"
+      - name: leadRows
+        label: Manşetin kapladığı satır sayısı
+        type: number
+        options: { min: 2 }
+        description: "Geniş yerleşimde geçerlidir. Boşsa manşet 2 satır kaplar."
       - name: description
         label: Kapak spotu (isteğe bağlı)
         type: text
