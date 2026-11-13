@@ -1,0 +1,69 @@
+<!DOCTYPE html><html lang="tr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><script>
+  (() => {
+    const key = "doskvol-appearance";
+    const valid = value => ["day", "night", "device"].includes(value);
+    const media = window.matchMedia("(prefers-color-scheme: dark)");
+    let preference = "device";
+    try {
+      const saved = localStorage.getItem(key);
+      if (valid(saved)) preference = saved;
+    } catch {
+      // Private browsing may deny storage; the current page still works.
+    }
+    const paint = () => {
+      const dark =
+        preference === "night" || (preference === "device" && media.matches);
+      document.documentElement.dataset.theme = dark ? "dark" : "light";
+      document.querySelectorAll("[data-theme-choice]").forEach(button => {
+        button.setAttribute(
+          "aria-pressed",
+          String(button.dataset.themeChoice === preference)
+        );
+      });
+    };
+    paint();
+    document.addEventListener("DOMContentLoaded", paint, { once: true });
+    media.addEventListener("change", paint);
+    document.addEventListener("doskvol:theme", event => {
+      if (!valid(event.detail)) return;
+      preference = event.detail;
+      try {
+        localStorage.setItem(key, preference);
+      } catch {
+        // Private browsing may deny storage; the current page still works.
+      }
+      paint();
+    });
+    window.addEventListener("storage", event => {
+      if (event.key !== key && event.key !== null) return;
+      preference = valid(event.newValue) ? event.newValue : "device";
+      paint();
+    });
+  })();
+</script><link rel="icon" type="image/svg+xml" href="/taslak/b/codex/manset-satir-sayisi/favicon.svg"><meta name="robots" content="noindex, nofollow"><link rel="canonical" href="https://doskvol.ink/taslak/b/codex/manset-satir-sayisi/makale/strangford-dosyasi/"><meta name="description" content="Gazetemize adsız bir zarf geldi: Strangford imalathanelerinde sözleşmesi &quot;sona eren&quot; on dört işçinin listesi. Dokuz isim doğrulandı; dosyadaki mühür ise tarihini taşıyan günde henüz kimsenin elinde değildi."><meta property="og:site_name" content="Doskvol Dedikoduları"><meta property="og:locale" content="tr_TR"><meta property="og:type" content="article"><meta property="og:title" content="Strangford dosyası: on dört isim, bir mühür | Doskvol Dedikoduları"><meta property="og:description" content="Gazetemize adsız bir zarf geldi: Strangford imalathanelerinde sözleşmesi &quot;sona eren&quot; on dört işçinin listesi. Dokuz isim doğrulandı; dosyadaki mühür ise tarihini taşıyan günde henüz kimsenin elinde değildi."><meta property="og:url" content="https://doskvol.ink/taslak/b/codex/manset-satir-sayisi/makale/strangford-dosyasi/"><meta property="og:image" content="https://doskvol.ink/taslak/b/codex/manset-satir-sayisi/_astro/strangford-isciler.BuPTU7Sh_Zy3x68.jpeg"><meta property="og:image:type" content="image/jpeg"><meta property="og:image:alt" content="Strangford'un imalathanesinden Mavi Urbalı zoruyla çıkartılan işçiler."><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="Strangford dosyası: on dört isim, bir mühür | Doskvol Dedikoduları"><meta name="twitter:description" content="Gazetemize adsız bir zarf geldi: Strangford imalathanelerinde sözleşmesi &quot;sona eren&quot; on dört işçinin listesi. Dokuz isim doğrulandı; dosyadaki mühür ise tarihini taşıyan günde henüz kimsenin elinde değildi."><meta name="twitter:image" content="https://doskvol.ink/taslak/b/codex/manset-satir-sayisi/_astro/strangford-isciler.BuPTU7Sh_Zy3x68.jpeg"><meta name="twitter:image:alt" content="Strangford'un imalathanesinden Mavi Urbalı zoruyla çıkartılan işçiler."><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,600;0,6..72,700;1,6..72,400&display=swap" rel="stylesheet"><title>Strangford dosyası: on dört isim, bir mühür | Doskvol Dedikoduları</title><link rel="stylesheet" href="/taslak/b/codex/manset-satir-sayisi/_astro/EditorialHead.CDlXib8S.css"></head><body><a class="reading-skip" href="#reading-content">Makaleye geç</a><div class="paper reading-paper"><script type="module">document.querySelectorAll(`[data-theme-choice]`).forEach(e=>{e.addEventListener(`click`,()=>{document.dispatchEvent(new CustomEvent(`doskvol:theme`,{detail:e.dataset.themeChoice}))})});</script><header class="masthead"><aside class="weather-theme" aria-label="Gazetenin hava durumu ve görünümü"><div class="weather-caption">Doskvol’da hava</div><div class="weather-choices" role="group" aria-label="Görünüm tercihi"><button type="button" data-theme-choice="day" aria-pressed="false" title="Kırık güneş — açık görünüm"><img src="/taslak/b/codex/manset-satir-sayisi/weather-day.png" alt="" width="56" height="56" loading="eager"><span>Gündüz</span></button><button type="button" data-theme-choice="night" aria-pressed="false" title="Ay ve loş bacıları — koyu görünüm"><img src="/taslak/b/codex/manset-satir-sayisi/weather-night.png" alt="" width="56" height="56" loading="eager"><span>Gece</span></button><button type="button" data-theme-choice="device" aria-pressed="true" title="Hayaletli hava — cihazın tercihini izle"><img src="/taslak/b/codex/manset-satir-sayisi/weather-device.png" alt="" width="56" height="56" loading="eager"><span>Cihaz</span></button></div></aside><div class="masthead-title"><div class="eyebrow">Akoros’un bağımsız sesi · Doskvol</div><a class="masthead-name" href="/taslak/b/codex/manset-satir-sayisi/sayi/001/">Doskvol Dedikoduları</a><div class="tagline">Duyduğunuza inanmayın. Duymadıklarınızdan korkun.</div></div></header><main id="reading-content"><header class="reading-heading"><div class="eyebrow">Dedikodular</div><h1>Strangford dosyası: on dört isim, bir mühür</h1><p class="reading-deck">Gazetemize adsız bir zarf geldi: Strangford imalathanelerinde sözleşmesi &quot;sona eren&quot; on dört işçinin listesi. Dokuz isim doğrulandı; dosyadaki mühür ise tarihini taşıyan günde henüz kimsenin elinde değildi.</p><div class="reading-meta"><span>Vaurin Prichard</span><a href="/taslak/b/codex/manset-satir-sayisi/takvim/">53 Mendar 847</a><a href="/taslak/b/codex/manset-satir-sayisi/sayi/">Sayı 001</a></div></header><figure class="reading-figure"><img src="/taslak/b/codex/manset-satir-sayisi/_astro/strangford-isciler.BuPTU7Sh_6yYRO.webp" srcset="/taslak/b/codex/manset-satir-sayisi/_astro/strangford-isciler.BuPTU7Sh_1uWJhm.webp 480w, /taslak/b/codex/manset-satir-sayisi/_astro/strangford-isciler.BuPTU7Sh_1izFxe.webp 960w, /taslak/b/codex/manset-satir-sayisi/_astro/strangford-isciler.BuPTU7Sh_Z93jAs.webp 1440w" alt="Strangford'un imalathanesinden Mavi Urbalı zoruyla çıkartılan işçiler." sizes="(max-width: 32rem) calc(100vw - 1.5rem), calc(92vw - 1rem)" loading="lazy" decoding="async" width="1774" height="887" class="editorial-engraving engraving-dark"><figcaption class="caption">İşçiler üzgün ve öfkeli. Hayatları ise mahvolmuş halde.</figcaption></figure><article class="reading-copy" aria-label="Strangford dosyası: on dört isim, bir mühür"><p>Geçtiğimiz hafta masama üzerinde yalnızca adımın yazılı olduğu bir zarf bırakıldı.</p>
+<p>Zarfı getiren Şifreci, gönderenin kimliğini sorduğumda loncasının yeminini tekrarladı. İkinci sorumda da aynı sözleri kullandı. Üçüncüsünü sormadım. Doskvol’da bazı mesleklerin dürüstlüğü, aynı cevabı kaç defa verebildikleriyle ölçülüyor.</p>
+<p>Zarfın içinde, Lord Strangford’un Yanıkçukur’daki imalathanelerinden birine ait olduğu iddia edilen kayıtların kopyaları vardı. On bir sayfa, on dört isim. Bu on dört işçinin sözleşmeleri, geçen yıl içinde birer birer sona ermiş görünüyordu. Gönderen ise sayfaların kenarına aynı elle tek bir not düşmüştü: Sona eren sözleşmeleri değil, hayatlarıydı.</p>
+<p>İsimleri ve tarihleri karşılaştırdım. On dört kişiden dokuzunun o imalathanede gerçekten çalıştığını doğrulayabildim.</p>
+<p>Listeyi alıp Yanıkçukur’a, Çarşaflık’a gittim. Çamaşır iplerinin arasında alçak sesle konuşan bir grup işçi, ben yaklaşınca sustu. İpleri geçtiğimde, okuduğum yedinci ismi duyan bir kadın elindeki leğeni yere bıraktı.</p>
+<p>“Timoth Grine mi? Sözleşmesi bitmiş, öyle mi?” Tepedeki konağa doğru başını çevirdi, sonra yeniden bana baktı. “Ben o adamın cenazesine gittim. Karısına iki gün yemek taşıdım; bütün sokak taşıdı. Siz şimdi bana hangi kâğıdın doğru olduğunu mu soruyorsunuz?”</p>
+<p>Asıl sorun belgelerin sekizinci sayfasında ortaya çıktı.</p>
+<p>O sayfadaki mühür, Kâtipler Sokağı’ndaki Kayıt Dairesi’nin baş kâtiplik mührüdür. Belge, geçen yılın Suran<sup><a href="#user-content-fn-1" id="user-content-fnref-1" data-footnote-ref="" aria-describedby="footnote-label">1</a></sup> ayının 4’ünü taşıyor. Bu mührü taşıyan memur o makama Ulsivet’in<sup><a href="#user-content-fn-1" id="user-content-fnref-1-2" data-footnote-ref="" aria-describedby="footnote-label">1</a></sup> 12’sinde atandı. Atama kayıtlarını yıllardır tutarım. Arada altmış sekiz gün var.</p>
+<p>Mührü, Kâtipler Sokağı’nda tanıdığım bir kâtibe gösterdim. Uzun süre konuşmadı.</p>
+<p>“Olamaz,” dedi sonunda. “Malumunuz, mühür makamla gelir efendim.” Ardından söylediği hiçbir şeyin kendisine atfedilmemesi gerektiğini birkaç farklı biçimde açıkladı.</p>
+<p>Lord Strangford’un temsilcilerine sorularımı ilettim. Ailenin hukuk temsilcisinden şu yanıt geldi:</p>
+<blockquote>
+<p>“Lord Strangford’un müesseselerinin tedavüldeki bütün kanuni hükümlere münasip şekilde faaliyet ifa ettiği hususunda herhangi bir tereddüt bulunmamaktadır.”</p>
+</blockquote>
+<p>Hangi kayıtların incelendiğini ve Timoth Grine’ın ölümünün araştırılıp araştırılmadığını ayrıca sordum. Yanıt gelmedi.</p>
+<p>Şehir Meclisi’nin diğer beş üyesine de aynı soruları gönderdim. Bu sayı baskıya girene kadar hiçbirinden cevap gelmedi.</p>
+<p>Bu nedenle belgeleri bugün yayımlamıyorum. Doğru olabilecek bir ölüm ile sahte olabilecek bir mührü aynı sayfada basmak, bu sayfaları hazırlayan kişinin işini onun yerine yapmak olurdu.</p>
+<p>Arşivden son çıktığım akşam, Kâtipler Sokağı’nın köşesinde duran bir Mavi Urbalı, ben önünden geçene kadar defterine bir şey yazdı. Ne yazdığını sormadım.</p>
+<p>Zarfı sakladım.</p>
+<p>Mührü de.</p>
+<section data-footnotes="" class="footnotes"><h2 class="sr-only" id="footnote-label">Dipnotlar</h2>
+<ol>
+<li id="user-content-fn-1">
+<p><a href="../../takvim/">İmparatorluk takviminin ayları</a>. <em>Mendar, Kalivet, Suran, Ulsivet, Volnivet, Elisar.</em> <a href="#user-content-fnref-1" data-footnote-backref="" aria-label="1. dipnotun 1. referansına dön" class="data-footnote-backref">↩</a> <a href="#user-content-fnref-1-2" data-footnote-backref="" aria-label="1. dipnotun 2. referansına dön" class="data-footnote-backref">↩</a></p>
+</li>
+</ol>
+</section><footer class="byline">— Vaurin Prichard (Nizamhane Muhabiri)</footer></article><aside class="reading-ending"><div class="eyebrow">Bu sayıdaki tefrika</div><h2><a href="/taslak/b/codex/manset-satir-sayisi/tefrika/doskvol-gunlukleri/1/">Doskvol Günlükleri</a></h2><p>Bölüm 1: İpekyalı’da Bir Gece</p></aside><div class="reading-return"><a href="/taslak/b/codex/manset-satir-sayisi/sayi/001/">← Sayı 001</a><a href="#reading-content">Makalenin başına ↑</a></div></main><footer>Doskvol Dedikoduları · Duyduğunuza inanmayın. Duymadıklarınızdan korkun.</footer></div></body></html>
