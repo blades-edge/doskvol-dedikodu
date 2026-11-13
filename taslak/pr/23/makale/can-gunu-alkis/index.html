@@ -1,0 +1,60 @@
+<!DOCTYPE html><html lang="tr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><script>
+  (() => {
+    const key = "doskvol-appearance";
+    const valid = value => ["day", "night", "device"].includes(value);
+    const media = window.matchMedia("(prefers-color-scheme: dark)");
+    let preference = "device";
+    try {
+      const saved = localStorage.getItem(key);
+      if (valid(saved)) preference = saved;
+    } catch {
+      // Private browsing may deny storage; the current page still works.
+    }
+    const paint = () => {
+      const dark =
+        preference === "night" || (preference === "device" && media.matches);
+      document.documentElement.dataset.theme = dark ? "dark" : "light";
+      document.querySelectorAll("[data-theme-choice]").forEach(button => {
+        button.setAttribute(
+          "aria-pressed",
+          String(button.dataset.themeChoice === preference)
+        );
+      });
+    };
+    paint();
+    document.addEventListener("DOMContentLoaded", paint, { once: true });
+    media.addEventListener("change", paint);
+    document.addEventListener("doskvol:theme", event => {
+      if (!valid(event.detail)) return;
+      preference = event.detail;
+      try {
+        localStorage.setItem(key, preference);
+      } catch {
+        // Private browsing may deny storage; the current page still works.
+      }
+      paint();
+    });
+    window.addEventListener("storage", event => {
+      if (event.key !== key && event.key !== null) return;
+      preference = valid(event.newValue) ? event.newValue : "device";
+      paint();
+    });
+  })();
+</script><link rel="icon" type="image/svg+xml" href="/taslak/pr/23/favicon.svg"><meta name="robots" content="noindex, nofollow"><link rel="canonical" href="https://doskvol.ink/taslak/pr/23/makale/can-gunu-alkis/"><meta name="description" content="Altıkule'deki eski opera binasında her Çan günü, ne oyuncusu ne seyircisi olan bir temsil verildiği söyleniyor. Yatakhanede kalanlar ise asıl Ruh Muhafızları'nın gelmesinden korkuyor."><meta property="og:site_name" content="Doskvol Dedikoduları"><meta property="og:locale" content="tr_TR"><meta property="og:type" content="article"><meta property="og:title" content="Çan günü gecesi, boş sahneye alkış | Doskvol Dedikoduları"><meta property="og:description" content="Altıkule'deki eski opera binasında her Çan günü, ne oyuncusu ne seyircisi olan bir temsil verildiği söyleniyor. Yatakhanede kalanlar ise asıl Ruh Muhafızları'nın gelmesinden korkuyor."><meta property="og:url" content="https://doskvol.ink/taslak/pr/23/makale/can-gunu-alkis/"><meta property="og:image" content="https://doskvol.ink/taslak/pr/23/_astro/can-gunu-alkis.DZfE4bJl_Z2iTMJE.jpeg"><meta property="og:image:type" content="image/jpeg"><meta property="og:image:alt" content="Boş opera sahnesinin önündeki orkestra çukurunda bir sandalye diğerlerinden öne çekilmiş."><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="Çan günü gecesi, boş sahneye alkış | Doskvol Dedikoduları"><meta name="twitter:description" content="Altıkule'deki eski opera binasında her Çan günü, ne oyuncusu ne seyircisi olan bir temsil verildiği söyleniyor. Yatakhanede kalanlar ise asıl Ruh Muhafızları'nın gelmesinden korkuyor."><meta name="twitter:image" content="https://doskvol.ink/taslak/pr/23/_astro/can-gunu-alkis.DZfE4bJl_Z2iTMJE.jpeg"><meta name="twitter:image:alt" content="Boş opera sahnesinin önündeki orkestra çukurunda bir sandalye diğerlerinden öne çekilmiş."><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,600;0,6..72,700;1,6..72,400&display=swap" rel="stylesheet"><title>Çan günü gecesi, boş sahneye alkış | Doskvol Dedikoduları</title><link rel="stylesheet" href="/taslak/pr/23/_astro/EditorialHead.CDlXib8S.css"></head><body><a class="reading-skip" href="#reading-content">Makaleye geç</a><div class="paper reading-paper"><script type="module">document.querySelectorAll(`[data-theme-choice]`).forEach(e=>{e.addEventListener(`click`,()=>{document.dispatchEvent(new CustomEvent(`doskvol:theme`,{detail:e.dataset.themeChoice}))})});</script><header class="masthead"><aside class="weather-theme" aria-label="Gazetenin hava durumu ve görünümü"><div class="weather-caption">Doskvol’da hava</div><div class="weather-choices" role="group" aria-label="Görünüm tercihi"><button type="button" data-theme-choice="day" aria-pressed="false" title="Kırık güneş — açık görünüm"><img src="/taslak/pr/23/weather-day.png" alt="" width="56" height="56" loading="eager"><span>Gündüz</span></button><button type="button" data-theme-choice="night" aria-pressed="false" title="Ay ve loş bacıları — koyu görünüm"><img src="/taslak/pr/23/weather-night.png" alt="" width="56" height="56" loading="eager"><span>Gece</span></button><button type="button" data-theme-choice="device" aria-pressed="true" title="Hayaletli hava — cihazın tercihini izle"><img src="/taslak/pr/23/weather-device.png" alt="" width="56" height="56" loading="eager"><span>Cihaz</span></button></div></aside><div class="masthead-title"><div class="eyebrow">Akoros’un bağımsız sesi · Doskvol</div><a class="masthead-name" href="/taslak/pr/23/sayi/002/">Doskvol Dedikoduları</a><div class="tagline">Duyduğunuza inanmayın. Duymadıklarınızdan korkun.</div></div></header><main id="reading-content"><header class="reading-heading"><div class="eyebrow">Dedikodular</div><h1>Çan günü gecesi, boş sahneye alkış</h1><p class="reading-deck">Altıkule&#39;deki eski opera binasında her Çan günü, ne oyuncusu ne seyircisi olan bir temsil verildiği söyleniyor. Yatakhanede kalanlar ise asıl Ruh Muhafızları&#39;nın gelmesinden korkuyor.</p><div class="reading-meta"><span>Aldo Brogan</span><a href="/taslak/pr/23/takvim/">60 Mendar 847</a><a href="/taslak/pr/23/sayi/">Sayı 002</a></div></header><figure class="reading-figure"><img src="/taslak/pr/23/_astro/can-gunu-alkis.DZfE4bJl_Z1kqejp.webp" srcset="/taslak/pr/23/_astro/can-gunu-alkis.DZfE4bJl_2iu3Td.webp 480w, /taslak/pr/23/_astro/can-gunu-alkis.DZfE4bJl_2nWmsR.webp 960w, /taslak/pr/23/_astro/can-gunu-alkis.DZfE4bJl_24LeFN.webp 1440w" alt="Boş opera sahnesinin önündeki orkestra çukurunda bir sandalye diğerlerinden öne çekilmiş." sizes="(max-width: 32rem) calc(100vw - 1.5rem), calc(92vw - 1rem)" loading="lazy" decoding="async" width="1774" height="887" class="editorial-engraving engraving-dark"><figcaption class="caption">Ağlayan Kadın’ın Kolları’nda orkestra çukurundaki bir sandalye sıranın biraz önünde duruyor.</figcaption></figure><article class="reading-copy" aria-label="Çan günü gecesi, boş sahneye alkış"><p>Altıkule’de, bir zamanlar soyluların localardan sahne seyrettiği Ağlayan Kadın’ın Kolları, bugün yoksullara çorba ve yatak veriyor. Ne var ki sahne, perdelerin kapandığını kabul etmeye pek niyetli değilmiş.</p>
+<p>En azından yatakhanede kalanların anlattığı bu.</p>
+<p>Geçtiğimiz Çan günü, Eşref vaktinde aşevi kuyruğuna girdim. Kapıda kimse ad sormuyordu. Bir tas çorba ve bir yatak için soru gerekmiyordu. Ben sordum.</p>
+<p>Bir hamal, eski sahneden önce kemanların akort edildiğini, ardından uzun bir sessizlik çöktüğünü, Nağme vaktinde ise salonu alkışların doldurduğunu anlattı.</p>
+<p>“Bilmem ki ne diyor, ağa,” dedi, duyduğunu iddia ettiği aryayı mırıldanırken. “Ama sonu güzel. Kız ölüyor galiba.”</p>
+<p>Eskiden bu salonda locası bulunduğunu söyleyen yaşlı bir hanımefendiye göre ise ortada şaşılacak bir şey yoktu.</p>
+<p>“Billurtaş’ta çanlar çalınca perde burada da açılır, efendim. Her zaman öyleydi. Üçüncü perde. Tenor her zaman biraz geç girerdi. Hâlâ geç giriyor.”</p>
+<p>Aynı gece yatakhanede kaldım. Eşref geçti, Nağme geçti. Bir ara koridordan öksürük sesleri yükseldi, bir yatak gıcırdadı. Alkış duymadım. Orkestrayı da.</p>
+<p>Sabah olduğunda hamal, gecenin şimdiye kadarki en güzel temsil olduğunu söyledi. Hanımefendi ise bu kez tenorun tam vaktinde girdiğinden emindi. Benim hiçbir şey duymadığımı öğrenince ikisi de hayretle yüzüme baktı.</p>
+<p>Başka bir yatıcı meseleyi daha pratik buluyordu:</p>
+<p>“Bilet parası almıyorlar, bayım. Şikâyet etsem mi?”</p>
+<p>Mahallede bir kunduracıya göre asıl tehlike alkışlar değil, onları duyabilecek Ruh Muhafızları.</p>
+<p>“Muhafızlar duyarsa o kapıya mühür vurulur. Sonra o zavallılar nerede uyusun?”</p>
+<p>Hayır evini yöneten Narya Ana’ya söylentileri sordum.</p>
+<p>“Burada herkese bir kap çorba, bir de yatak var. Gerisi beni ilgilendirmez.”</p>
+<p>Sahneyi incelemek için içeri girdiğimde tozlu döşemelerde ayak izi göremedim. Orkestra çukurundaki sandalyelerden birinin ötekilere göre biraz öne çekilmiş olduğunu fark ettim. Bunun ne zamandır böyle durduğunu bilen çıkmadı.</p>
+<p>Binadan ayrılırken aryayı mırıldanan adam yine sıradaydı. Bu kez çorba için değil, akşam yatacak yerini ayırtmak için.</p>
+<p>Aynı aryayı mırıldanıyordu.</p><footer class="byline">— Aldo Brogan (Gaip muhabiri)</footer></article><aside class="reading-ending"><div class="eyebrow">Bu sayıdaki tefrika</div><h2><a href="/taslak/pr/23/tefrika/bos-bedenler/2/">Boş Bedenler</a></h2><p>Bölüm 2: Eldivensiz Beyefendi</p></aside><div class="reading-return"><a href="/taslak/pr/23/sayi/002/">← Sayı 002</a><a href="#reading-content">Makalenin başına ↑</a></div></main><footer>Doskvol Dedikoduları · Duyduğunuza inanmayın. Duymadıklarınızdan korkun.</footer></div></body></html>
