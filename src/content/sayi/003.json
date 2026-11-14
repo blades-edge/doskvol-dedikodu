@@ -6,5 +6,12 @@
     "month": "Kalivet",
     "year": 847
   },
-  "price": "2 pençik"
+  "price": "2 pençik",
+  "lead": "kimse-sahiplenmiyor.md",
+  "articles": [
+    "kimse-sahiplenmiyor.md",
+    "strangford-dosyasi-muhur-imha.md",
+    "bir-ogle-vaktinin-bedeli.md",
+    "ay-sonu-gondol.md"
+  ]
 }
