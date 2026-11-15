@@ -15,29 +15,44 @@
     "ay-sonu-gondol.md"
   ],
   "chapters": [
-    "bos-bedenler-03.md",
-    "yazi-islerinden-01.md"
+    "bos-bedenler-03.md"
   ],
   "letters": [
     {
       "body": "Nizam Duvarı dibinde anahtar keserim. Panolar yükseltildiğinden beri müşteriler dükkânı kapattığımı sanıyor. Tezgâh açık, yol kapalı. Nöbetçi, tabelamı panoya asmam için kazı sahibinden izin almam gerektiğini söyledi. Adını sordum. Tabelayı geri verdi.",
       "signature": "Tavin Holt, çilingir",
-      "imperialDate": { "day": 4, "month": "Kalivet", "year": 847 }
+      "imperialDate": {
+        "day": 4,
+        "month": "Kalivet",
+        "year": 847
+      }
     },
     {
       "body": "Kayıt Dairesi’nden emekliyim. Bizim zamanımızda bir mühür imha edilince tutanak tutulur, tutanağa da başka bir mühür basılırdı. Muhabiriniz onu görmeyi istesin. Kimin masasına göndereceklerini merak ediyorum.",
       "signature": "Eski bir zabıt kâtibi",
-      "imperialDate": { "day": 5, "month": "Kalivet", "year": 847 }
+      "imperialDate": {
+        "day": 5,
+        "month": "Kalivet",
+        "year": 847
+      }
     },
     {
       "body": "Billurtaş’taki sergide tepsileri ben topladım. Sarı yuvarlağın önünde en çok duran kişi ressamın kendisiydi. Her dönüşümde bir adım daha gerilemişti. Gece sonunda tablonun karşısındaki duvara dayanmış, oradan bakıyordu. Tepside kalan son çöreği ona verdim. Satıştan ona ne kaldı, bilmiyorum.",
       "signature": "Mira Tess",
-      "imperialDate": { "day": 5, "month": "Kalivet", "year": 847 }
+      "imperialDate": {
+        "day": 5,
+        "month": "Kalivet",
+        "year": 847
+      }
     },
     {
       "body": "Ay sonu gecesi boş gezen gondollardan birini ben çektim. Ücretimizi iskelede, yola çıkmadan önce aldık. Parayı dağıtan adam, her dönüşte İpekyalı’nın kuzey merdivenine yanaşmamızı ve üçe kadar sayıp yeniden açılmamızı söyledi. Merdivende bekleyen olursa da aynı şeyi yapacaktık. Akşam boyunca merdivende kimseyi görmedim.\n\nİlk iki dönüşte kayık suyun üstünde tüy gibi gidiyordu. Üçüncüsünde kıç öyle çöktü ki su, arka oturağın altındaki çatlağa kadar çıktı. Küreği bıraktım, feneri kaldırıp oturakların altına baktım. Yıllardır orada duran yedek halatla birikmiş sudan başka bir şey yoktu. Kuzey merdiveninde üçe kadar saydım. Üç dediğimde kayık yeniden doğruldu.\n\nSabah parayı sayınca bir pençik fazla çıktı. Ötekilere de fazla verildi mi diye sordum. İkisi ceplerine el attı, biri hiç duymamış gibi küreğini omzuna vurup gitti. Fazla pençiği kuzey merdiveninin en üst basamağına bıraktım. Ertesi akşam oradan geçerken hâlâ yerindeydi. En azından uzaktan benim bıraktığım paraya benziyordu.",
       "signature": "S. Vale, gondolcu",
-      "imperialDate": { "day": 6, "month": "Kalivet", "year": 847 }
+      "imperialDate": {
+        "day": 6,
+        "month": "Kalivet",
+        "year": 847
+      }
     }
   ]
 }
