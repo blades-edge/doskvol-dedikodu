@@ -32,7 +32,7 @@ content:
         type: image
         options:
           multiple: true
-        description: "Gece temasında sayfanın genel renk ters çevirmesini doğrudan alacak gravürleri seçin. Diğer gravürler özel filtre ve zemin rengini alır."
+        description: "Gece temasında sayfanın genel renk ters çevirmesini doğrudan alacak gravürleri seçin. Diğer gravürler özel filtre ve zemin rengini alır"
 
   - name: sayi
     label: Sayı
