@@ -3,11 +3,12 @@ export function imageKey(src) {
   return decodeURI(src).split("assets/images/")[1];
 }
 
-export function remarkEngravings({ images = [] } = {}) {
-  const selected = new Set(images.map(imageKey).filter(Boolean));
+export function remarkEngravings({ exceptions = [] } = {}) {
+  const excluded = new Set(exceptions.map(imageKey).filter(Boolean));
   return tree => {
     function visit(node) {
-      if (node.type === "image" && selected.has(imageKey(node.url))) {
+      const key = node.type === "image" ? imageKey(node.url) : undefined;
+      if (key && !excluded.has(key)) {
         node.data ??= {};
         node.data.hProperties ??= {};
         node.data.hProperties.className = [

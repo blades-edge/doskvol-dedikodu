@@ -32,9 +32,9 @@ const shareImageAlt =
 const imageAssets = import.meta.glob<{
   default: import("astro").ImageMetadata;
 }>("../assets/images/*", { eager: true });
-const darkCover =
+const darkCoverException =
   cover &&
-  media.darkModeImages.some(path =>
+  media.darkModeImageExceptions.some(path =>
     Object.entries(imageAssets).some(
       ([assetPath, asset]) =>
         imageKey(assetPath) === imageKey(path) &&
@@ -107,7 +107,7 @@ const related = articlesForIssue(publication, issue.id).find(
                 alt={coverAlt ?? ""}
                 class:list={[
                   "editorial-engraving",
-                  { "engraving-dark": darkCover },
+                  { "engraving-dark": !darkCoverException },
                 ]}
                 widths={[480, 960, 1440]}
                 sizes="(max-width: 32rem) calc(100vw - 1.5rem), calc(92vw - 1rem)"

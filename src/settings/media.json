@@ -1,25 +1,7 @@
 {
-  "darkModeImages": [
-    "../../assets/images/hurda-dayak.avif",
-    "../../assets/images/mylera-gumus.avif",
-    "../../assets/images/strangford-isciler.avif",
-    "../../assets/images/bir-tabakta-eksilenler.avif",
-    "../../assets/images/dort-kisi-geldiler.avif",
-    "../../assets/images/olugoren-kargalar.avif",
-    "../../assets/images/gulumseyen-kadin-vaka-defteri.avif",
-    "../../assets/images/ipekyali-duello.avif",
-    "../../assets/images/ipekyali-fedailer.avif",
-    "../../assets/images/ipekyali-kasa-odasi.avif",
-    "../../assets/images/ipekyali-ganimet.avif",
-    "../../assets/images/kimin-kazisi.avif",
-    "../../assets/images/kanunun-kesesi.avif",
-    "../../assets/images/soylu-tazilar.avif",
-    "../../assets/images/can-gunu-alkis.avif",
-    "../../assets/images/strangford-dosyasi-bir-hafta-sonra.avif",
-    "../../assets/images/eldivensiz-beyefendi-sorel.avif",
-    "../../assets/images/can-calmadan-altin-erik.avif",
-    "../../assets/images/can-calmadan-kiraginin-burnu.avif",
-    "../../assets/images/can-calmadan-yankinin-donusu.avif",
-    "../../assets/images/can-calmadan-aldonun-meraki.avif"
+  "darkModeImageExceptions": [
+    "../../assets/images/doskvol-aylar-cemberi.avif",
+    "../../assets/images/doskvol-dakikalar-cemberi.avif",
+    "../../assets/images/doskvol-saatler-cemberi.avif"
   ]
 }
