@@ -8,6 +8,27 @@ settings:
     merge: true
 
 components:
+  imperial-date:
+    label: İmparatorluk tarihi
+    type: object
+    required: true
+    fields:
+      - name: day
+        label: Gün
+        type: number
+        required: true
+        options: { min: 1, max: 60 }
+      - name: month
+        label: Ay
+        type: select
+        required: true
+        options:
+          values: [Mendar, Kalivet, Suran, Ulsivet, Volnivet, Elisar]
+      - name: year
+        label: Yıl
+        type: number
+        required: true
+        options: { min: 800, max: 1200 }
   author-picker:
     label: Yazarlar
     type: reference
@@ -63,26 +84,7 @@ content:
         required: true
         options: { format: yyyy-MM-dd }
       - name: imperialDate
-        label: İmparatorluk tarihi
-        type: object
-        required: true
-        fields:
-          - name: day
-            label: Gün
-            type: number
-            required: true
-            options: { min: 1, max: 60 }
-          - name: month
-            label: Ay
-            type: select
-            required: true
-            options:
-              values: [Mendar, Kalivet, Suran, Ulsivet, Volnivet, Elisar]
-          - name: year
-            label: Yıl
-            type: number
-            required: true
-            options: { min: 800, max: 1200 }
+        component: imperial-date
       - name: price
         label: Baskı bedeli
         type: string
@@ -139,6 +141,23 @@ content:
           value: "{name}"
           label: "Bölüm {fields.episode} · {fields.title}"
           search: "name,fields.title,fields.episode"
+      - name: letters
+        label: Okur mektupları
+        type: object
+        list:
+          collapsible:
+            summary: "{signature}"
+        fields:
+          - name: body
+            label: Mektup metni
+            type: text
+            required: true
+          - name: signature
+            label: İmza
+            type: string
+            required: true
+          - name: imperialDate
+            component: imperial-date
 
   - name: sayfa
     label: Sabit sayfalar

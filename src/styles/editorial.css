@@ -174,13 +174,41 @@ h6,
   grid-auto-flow: row dense;
   gap: 1.5rem;
 }
-.issue-grid > section:not(.lead),
+.issue-grid > section:not(.lead, .issue-letters),
 .issue-grid .columns,
 .issue-grid .issue-serials {
   display: contents;
 }
-.issue-grid > .reading-return {
+.issue-grid > .reading-return,
+.issue-letters {
   grid-column: 1 / -1;
+}
+.issue-letters > h2 {
+  margin: 0 0 0.45rem;
+  font-size: 1.5rem;
+  line-height: 1.15;
+}
+.issue-letter-columns {
+  columns: 13rem;
+  column-gap: 1.25rem;
+  font-size: 0.9375rem;
+  line-height: 1.4;
+  overflow-wrap: anywhere;
+}
+.issue-letter {
+  padding-block: 0.65rem;
+  border-block-start: 1px solid #a79b87;
+}
+.issue-letter p {
+  margin: 0 0 0.5em;
+  white-space: pre-line;
+  orphans: 3;
+  widows: 3;
+}
+.issue-letter .byline {
+  margin: 0;
+  break-before: avoid-column;
+  break-inside: avoid;
 }
 .issue-grid .serial {
   margin-top: 0;
