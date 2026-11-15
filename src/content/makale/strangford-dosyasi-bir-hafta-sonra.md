@@ -2,7 +2,7 @@
 title: Sorulmadan edilen yemin
 description: Strangford dosyasında Meclis’e gönderilen sorular hâlâ cevapsız.
   Zarfı getiren Şifreci ise bu kez sorulmadan yemin etti.
-author: vaurin-prichard.json
+author: [vaurin-prichard.json]
 section: Haberler
 district: Yanıkçukur
 cover: ../../assets/images/strangford-dosyasi-bir-hafta-sonra.avif

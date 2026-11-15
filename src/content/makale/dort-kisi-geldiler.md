@@ -2,7 +2,7 @@
 title: Dört kişi geldiler, üç kişi kaldılar
 description: Delik Kova'da masaya dört kadeh gitti, hesaba üç kişi itiraz etti.
   Dördüncüyü kalabalık yuttu; mahalle hâlâ sayıyor.
-author: [aldo-brogan]
+author: [aldo-brogan.json]
 section: Dedikodular
 district: Kargaayağı
 location: Delik Kova

@@ -3,7 +3,7 @@ title: Bir tabakta eksilenler
 description: Rıhtım'ın eski sofralarında artık yalnızca porsiyonlar küçülmüyor.
   Bir lokantanın arka masası aylardır boş; örtüsü ise her akşam yeniden
   seriliyor.
-author: [gaspar-merrow]
+author: [gaspar-merrow.json]
 section: Dedikodular
 district: Rıhtım
 cover: ../../assets/images/bir-tabakta-eksilenler.avif

@@ -5,8 +5,7 @@ description: Yanıkçukur’da kapalı bir meyhanenin kasası, kapısında bir d
   saplanan bıçak, tayfayı ölüm çanından önce yetişmek zorunda bırakıyor.
 series: doskvol-gunlukleri.json
 episode: 2
-author:
-  - altinci-sandalye
+author: [altinci-sandalye.json]
 shareImage: ../../assets/images/can-calmadan-aldonun-meraki.avif
 shareImageAlt: İki iri yük keçisi arabayı çekerken Aldo, Yankı’nın elinde beliren topa hayranlıkla bakıyor. Sis ve Ayaz arkada çuvalların yanında oturuyor.
 ---

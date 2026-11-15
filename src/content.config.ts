@@ -1,7 +1,7 @@
 import { contentReferenceId, emptyToUndefined } from "@utils/contentReference";
 import { defineCollection, reference } from "astro:content";
 import { z } from "astro/zod";
-import { file, glob } from "astro/loaders";
+import { glob } from "astro/loaders";
 
 import { imperialMonths } from "./utils/imperial-date.ts";
 
@@ -18,9 +18,8 @@ const authorReferences = z.preprocess(
 );
 
 const authors = defineCollection({
-  loader: file("src/content/yazarlar.yml"),
+  loader: glob({ pattern: "*.json", base: "./src/content/yazar" }),
   schema: z.object({
-    id: z.string().regex(/^[a-z0-9]+(?:-[a-z0-9]+)*$/),
     name: z.string().min(1),
     bio: optionalText,
     title: optionalText,

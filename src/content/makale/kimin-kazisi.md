@@ -2,7 +2,7 @@
 title: Kimin kazısı?
 description: Eski surun altında bulunan taş oda için Nizamhane'de altı ayrı
   açıklama dolaşıyor. Ruhsat var; ruhsatı veren makamın adı yok.
-author: vaurin-prichard.json
+author: [vaurin-prichard.json]
 section: Haberler
 district: Nizamhane
 location: Nizam Duvarı, Kâtipler Sokağı
