@@ -3,7 +3,7 @@ title: "Strangford dosyası: on dört isim, bir mühür"
 description: 'Gazetemize adsız bir zarf geldi: Strangford imalathanelerinde
   sözleşmesi "sona eren" on dört işçinin listesi. Dokuz isim doğrulandı;
   dosyadaki mühür ise tarihini taşıyan günde henüz kimsenin elinde değildi.'
-author: [vaurin-prichard]
+author: [vaurin-prichard.json]
 section: Dedikodular
 district: Yanıkçukur
 cover: ../../assets/images/strangford-isciler.avif

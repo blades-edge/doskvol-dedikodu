@@ -28,13 +28,13 @@ Astro’nun `base` ayarı `/doskvol-dedikodu` olduğundan iç bağlantılar ve d
 | Makale         | `src/content/makale/`      | Haber veya dedikodu metni                                |
 | Tefrika        | `src/content/tefrika/`     | Serinin adı ve tanıtımı                                  |
 | Tefrika bölümü | `src/content/bolum/`       | Seriye bağlı bölüm, bölüm numarası ve metin              |
-| Yazarlar       | `src/content/yazarlar.yml` | Ortak imza, tanıtım ve isteğe bağlı unvan                |
+| Yazarlar       | `src/content/yazar/`        | Ortak imza, tanıtım ve isteğe bağlı unvan                |
 
 [Pages CMS](https://app.pagescms.org/) içinde `blades-edge/doskvol-dedikodu` deposunda sayıya ait çalışma dalını kullanın. Kaydetmek bu dala commit oluşturur; açık PR’ın önizlemesi güncellenir. `main` dalına birleştirmek ana yayını tetikler.
 
 İçerik dosyalarının adı kalıcı kimliktir; başlık değişse de dosya adı değişmez. CMS referansları `.md` ve `.json` uzantılarıyla saklanabilir; Astro bunları kimliğe dönüştürür. Mevcut uzantısız referanslar da desteklenir. İçerik şemasındaki alan anahtarları, eski kayıtların korunması için değişmedi.
 
-CMS’de **Yazarlar** menüsünden yazar listesini düzenleyin. Makale ve tefrika bölümündeki **Yazarlar** alanından bir veya daha fazla imza seçin. Yeni yazar eklediğinizde veya imzasını değiştirdiğinizde `.pages.yml` içindeki ortak `author-picker` seçeneklerini de güncelleyin.
+CMS’de **Yazarlar** menüsünden yazar listesini düzenleyin. Makale ve tefrika bölümündeki **Yazarlar** alanından bir veya daha fazla imza seçin. Seçenekler yazar koleksiyonundan gelir.
 
 Yeni sayı için:
 

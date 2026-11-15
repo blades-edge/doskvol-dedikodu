@@ -3,7 +3,7 @@ title: Çan günü gecesi, boş sahneye alkış
 description: Altıkule'deki eski opera binasında her Çan günü, ne oyuncusu ne
   seyircisi olan bir temsil verildiği söyleniyor. Yatakhanede kalanlar ise asıl
   Ruh Muhafızları'nın gelmesinden korkuyor.
-author: aldo-brogan.json
+author: [aldo-brogan.json]
 section: Dedikodular
 district: Altıkule
 location: Ağlayan Kadın'ın Kolları

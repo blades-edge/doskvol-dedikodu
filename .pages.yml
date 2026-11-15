@@ -10,21 +10,15 @@ settings:
 components:
   author-picker:
     label: Yazarlar
-    type: select
+    type: reference
     required: true
     options:
+      collection: yazar
+      value: "{name}"
+      label: "{fields.name}"
+      search: "name,fields.name"
       multiple: true
       min: 1
-      values:
-        - { name: aldo-brogan, label: "Aldo Brogan" }
-        - { name: altinci-sandalye, label: "Altıncı Sandalye" }
-        - { name: dr-a-sorel, label: "Dr. A. Sorel" }
-        - { name: gaspar-merrow, label: "Gaspar Merrow" }
-        - { name: isimsiz-tanik, label: "İsimsiz Bir Tanık" }
-        - { name: kor-nokta, label: "Kör Nokta" }
-        - { name: mina-karakarga, label: "Mina Karakarga" }
-        - { name: ruhi-cengel, label: "Ruhi Çengel" }
-        - { name: vaurin-prichard, label: "Vaurin Prichard" }
 
 content:
   - name: gravur
@@ -315,17 +309,21 @@ content:
 
   - name: yazar
     label: Yazarlar
-    type: file
-    path: src/content/yazarlar.yml
-    format: yaml
-    list: true
+    type: collection
+    path: src/content/yazar
+    format: json
+    subfolders: false
+    filename:
+      template: "{primary}.json"
+      field: create
+    operations:
+      rename: false
+    view:
+      primary: name
+      fields: [name, title]
+      sort: [name]
+      default: { sort: name, order: asc }
     fields:
-      - name: id
-        label: Kalıcı yazar kimliği
-        type: string
-        required: true
-        pattern: "^[a-z0-9]+(?:-[a-z0-9]+)*$"
-        description: "Her yazara benzersiz bir kimlik verin. İmza değişse bile kimliği koruyun."
       - { name: name, label: Yazar adı / imza, type: string, required: true }
       - { name: bio, label: Kısa tanıtım, type: text }
       - name: title

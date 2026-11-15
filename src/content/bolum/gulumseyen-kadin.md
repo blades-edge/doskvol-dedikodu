@@ -4,7 +4,7 @@ description: Bir hastamın yerine gittim. Kapıda bana başka birinin maskesini
   verdiler. Sabah, beni kurtaran kadının otopsisini yaptım.
 series: bos-bedenler.json
 episode: 1
-author: [dr-a-sorel]
+author: [dr-a-sorel.json]
 shareImage: ../../assets/images/gulumseyen-kadin-vaka-defteri.avif
 shareImageAlt: Kullanılmış otopsi aletleri arasında açık duran, anatomi eskizleri, el yazısı notlar ve kan lekeleriyle dolu bir doktor defteri
 ---

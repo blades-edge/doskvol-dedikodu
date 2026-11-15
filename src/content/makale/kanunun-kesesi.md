@@ -2,7 +2,7 @@
 title: Mum Sokağı'nda kanunun kesesi çalındı
 description: Haraç turundan dönen bir Mavi Urbalı şimdi kaybını kime
   bildireceğini düşünüyor.
-author: aldo-brogan.json
+author: [aldo-brogan.json]
 section: Dedikodular
 district: Kargaayağı
 location: Mum Sokağı

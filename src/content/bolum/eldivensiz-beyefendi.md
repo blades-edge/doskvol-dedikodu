@@ -4,8 +4,7 @@ description: Muhafızlar cesedi aldı. Öğleden sonra muayenehaneme bir kadın
   geldi. Hasta değildi.
 series: bos-bedenler.json
 episode: 2
-author:
-  - dr-a-sorel
+author: [dr-a-sorel.json]
 shareImage: ../../assets/images/eldivensiz-beyefendi-sorel.avif
 shareImageAlt: Müfettiş Voss, onarılmış eldivenleriyle defterini tutarken Sorel’in masadaki çıplak ellerine bakıyor.
 ---

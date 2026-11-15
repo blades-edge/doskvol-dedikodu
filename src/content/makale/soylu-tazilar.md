@@ -2,7 +2,7 @@
 title: Soylu tazılar, soylu olmayan bahisler
 description: Gecepazarı'nda dört ayaklı asalet, iki ayaklı saflık ve Üstat
   Vreen'in bitmek bilmeyen servet vaatleri.
-author: gaspar-merrow.json
+author: [gaspar-merrow.json]
 section: Haberler
 district: Gecepazarı
 location: Vreen'in Tazı Yarışları
