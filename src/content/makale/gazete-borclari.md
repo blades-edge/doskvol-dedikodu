@@ -5,6 +5,9 @@ author:
   - yazi-isleri.json
 section: Haberler
 district: Rıhtım
+cover: ../../assets/images/muhasebe-dairesi.avif
+coverAlt: Verlax masasında oturuyor. Hemen sağında Dalia, iki yanında muhasebe memurları, arkada dosya rafları ve büyük bir çelik kasa var.
+coverCaption: Muhasebe müdürümüz Verlax Graxytzyks, yardımcısı Dalia Valora ve daire memurları vazifelerinin başında.
 ---
 Gazetemizin muhasebe dairesi hakkında ne yazık ki son zamanlarda menfur iftiraların rakip neşriyatta yayımlandığına şahit olduk. Borç batağında olduğumuz, tedarikçilerimizin alacaklarını bir türlü tahsil edemediği gibi iftira dolu manşetler, defalarca yayımlandı. Bizler de, yazı işleri dairesi olarak muhasebe dairemiz ile birlikte bu makaleyi hem iftiracılara cevap, hem de okur ve tedarikçilerimize güven vermek üzere hazırladık.  
   
