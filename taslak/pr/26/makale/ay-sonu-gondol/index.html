@@ -1,0 +1,61 @@
+<!DOCTYPE html><html lang="tr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><script>
+  (() => {
+    const key = "doskvol-appearance";
+    const valid = value => ["day", "night", "device"].includes(value);
+    const media = window.matchMedia("(prefers-color-scheme: dark)");
+    let preference = "device";
+    try {
+      const saved = localStorage.getItem(key);
+      if (valid(saved)) preference = saved;
+    } catch {
+      // Private browsing may deny storage; the current page still works.
+    }
+    const paint = () => {
+      const dark =
+        preference === "night" || (preference === "device" && media.matches);
+      document.documentElement.dataset.theme = dark ? "dark" : "light";
+      document.querySelectorAll("[data-theme-choice]").forEach(button => {
+        button.setAttribute(
+          "aria-pressed",
+          String(button.dataset.themeChoice === preference)
+        );
+      });
+    };
+    paint();
+    document.addEventListener("DOMContentLoaded", paint, { once: true });
+    media.addEventListener("change", paint);
+    document.addEventListener("doskvol:theme", event => {
+      if (!valid(event.detail)) return;
+      preference = event.detail;
+      try {
+        localStorage.setItem(key, preference);
+      } catch {
+        // Private browsing may deny storage; the current page still works.
+      }
+      paint();
+    });
+    window.addEventListener("storage", event => {
+      if (event.key !== key && event.key !== null) return;
+      preference = valid(event.newValue) ? event.newValue : "device";
+      paint();
+    });
+  })();
+</script><link rel="icon" type="image/svg+xml" href="/taslak/pr/26/favicon.svg"><meta name="robots" content="noindex, nofollow"><link rel="canonical" href="https://doskvol.ink/taslak/pr/26/makale/ay-sonu-gondol/"><meta name="description" content="Mendar'ın son gecesi İpekyalı'nın bütün gondolları kiralandı, fakat hiçbirine yolcu binmedi. Esnaf müşterilerini, müşteriler ise sabrını kaybetti."><meta property="og:site_name" content="Doskvol Dedikoduları"><meta property="og:locale" content="tr_TR"><meta property="og:type" content="article"><meta property="og:title" content="Ay sonu gecesi İpekyalı'da tek gondol bulunamadı | Doskvol Dedikoduları"><meta property="og:description" content="Mendar'ın son gecesi İpekyalı'nın bütün gondolları kiralandı, fakat hiçbirine yolcu binmedi. Esnaf müşterilerini, müşteriler ise sabrını kaybetti."><meta property="og:url" content="https://doskvol.ink/taslak/pr/26/makale/ay-sonu-gondol/"><meta property="og:image" content="https://doskvol.ink/taslak/pr/26/_astro/doskvol-line-engraving.Dm_4yufi_Z1XrqfB.jpeg"><meta property="og:image:type" content="image/jpeg"><meta property="og:image:alt" content><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="Ay sonu gecesi İpekyalı'da tek gondol bulunamadı | Doskvol Dedikoduları"><meta name="twitter:description" content="Mendar'ın son gecesi İpekyalı'nın bütün gondolları kiralandı, fakat hiçbirine yolcu binmedi. Esnaf müşterilerini, müşteriler ise sabrını kaybetti."><meta name="twitter:image" content="https://doskvol.ink/taslak/pr/26/_astro/doskvol-line-engraving.Dm_4yufi_Z1XrqfB.jpeg"><meta name="twitter:image:alt" content><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,600;0,6..72,700;1,6..72,400&display=swap" rel="stylesheet"><title>Ay sonu gecesi İpekyalı&#39;da tek gondol bulunamadı | Doskvol Dedikoduları</title><link rel="stylesheet" href="/taslak/pr/26/_astro/EditorialHead.BN2S6vUq.css"></head><body><a class="reading-skip" href="#reading-content">Makaleye geç</a><div class="paper reading-paper"><script type="module">document.querySelectorAll(`[data-theme-choice]`).forEach(e=>{e.addEventListener(`click`,()=>{document.dispatchEvent(new CustomEvent(`doskvol:theme`,{detail:e.dataset.themeChoice}))})});</script><header class="masthead"><aside class="weather-theme" aria-label="Gazetenin hava durumu ve görünümü"><div class="weather-caption">Doskvol’da hava</div><div class="weather-choices" role="group" aria-label="Görünüm tercihi"><button type="button" data-theme-choice="day" aria-pressed="false" title="Kırık güneş — açık görünüm"><img src="/taslak/pr/26/weather-day.png" alt="" width="56" height="56" loading="eager"><span>Gündüz</span></button><button type="button" data-theme-choice="night" aria-pressed="false" title="Ay ve loş bacıları — koyu görünüm"><img src="/taslak/pr/26/weather-night.png" alt="" width="56" height="56" loading="eager"><span>Gece</span></button><button type="button" data-theme-choice="device" aria-pressed="true" title="Hayaletli hava — cihazın tercihini izle"><img src="/taslak/pr/26/weather-device.png" alt="" width="56" height="56" loading="eager"><span>Cihaz</span></button></div></aside><div class="masthead-title"><div class="eyebrow">Akoros’un bağımsız sesi · Doskvol</div><a class="masthead-name" href="/taslak/pr/26/sayi/003/">Doskvol Dedikoduları</a><div class="tagline">Duyduğunuza inanmayın. Duymadıklarınızdan korkun.</div></div></header><main id="reading-content"><header class="reading-heading"><div class="eyebrow">Dedikodular</div><h1>Ay sonu gecesi İpekyalı&#39;da tek gondol bulunamadı</h1><p class="reading-deck">Mendar&#39;ın son gecesi İpekyalı&#39;nın bütün gondolları kiralandı, fakat hiçbirine yolcu binmedi. Esnaf müşterilerini, müşteriler ise sabrını kaybetti.</p><div class="reading-meta"><span>Aldo Brogan</span><a href="/taslak/pr/26/takvim/">7 Kalivet 847</a><a href="/taslak/pr/26/sayi/">Sayı 003</a></div></header><article class="reading-copy" aria-label="Ay sonu gecesi İpekyalı'da tek gondol bulunamadı"><p>Ayın son günü Doskvol’da çalışmak için pek makbul bir gün değildir. Kimi unutulmuş bir gök tanrısını anar, kimi onun şerefine içer, kimi de ikisini birden yaptığını söyler. İpekyalı’da ise o gece çalışmak isteyenlerin başına daha büyük bir felaket geldi: İş yapacak müşteri buldular, ama müşteriyi karşı kıyıya geçirecek gondol bulamadılar.</p>
+<p>Mendar’ın son gecesi, kuzey kanallarındaki iskelelerde tek bir boş gondol kalmadı. Daha doğrusu, gondolların hepsi boştu. Yalnız hiçbiri kiralık değildi.</p>
+<p>Kuzey kanallarında eğlence evlerinin çoğunun kapısı suya açılır. Köprüden yürüyen müşteri, en fazla arka kapıdaki çöp yığınına ulaşır. O gece kapılara ulaşmanın tek yolu kapanmıştı.</p>
+<p>İskelelerde konuşulana göre tekneler, kimliği bilinmeyen bir müşteri tarafından gecenin tamamı için peşin parayla tutulmuştu. Yolcu alınmayacak, kürekler çekilecek, gondollar kanallarda dolaşacaktı. Hepsi bu.</p>
+<p>Böylece İpekyalı’nın renkli ışıkları altında, gidemeyen müşterilerle nereye gittiğini söylemeyen gondolcular karşılıklı seyir zevkine kavuştu.</p>
+<p>Bir eğlence evinin kapıcısı, gecenin kazancını hesabından düşerken pek neşeli görünmüyordu.</p>
+<p>“Bütün odalar hazırdı, bayım. Hanımlar hazırdı. İçkiler hazırdı. Müşteriler karşı kıyıda kaldı. Ben şimdi kime hesap çıkarayım?”</p>
+<p>Karşıya geçmek için yüzmeyi deneyen bir beyefendiye de rastladım. Ceketi hâlâ ıslaktı. Kendi anlatımına göre kanalı neredeyse geçmiş, fakat tam öteki kıyıya ulaşacakken suyun soğukluğundan geri dönmek zorunda kalmıştı.</p>
+<p>Neden başladığı kıyıya dönmeyi tercih ettiğini sorduğumda, “Akıntı öyle istedi,” dedi.</p>
+<p>O sırada üçüncü kadehini içiyordu.</p>
+<p>İskelelerden birinde bulduğum genç bir gondolcuya, tekneleri kimin kiraladığını sordum.</p>
+<p>“Lonca konuşmaz. Kürek çeker.”</p>
+<p>Teknelerin neden yolcusuz dolaştığını sorduğumda da aynı cevabı aldım. Bu kez küreğini gösterdi.</p>
+<p>Mahallede elbette başka açıklamalar mevcut. Kimine göre Billurtaşlı bir soylu, sevgilisine görülmemiş bir gece hazırlamış. Bir başkası, eğlence evlerinin müşterilerini kaçırmak isteyen varlıklı bir rakibin bütün gondolları tuttuğunu söylüyor. Daha kuşkucu olanlar, boş teknelerin kalabalık kanallarda birilerinin asıl taşıdığı yükü gizlemek için dolaştırıldığını düşünüyor.</p>
+<p>Sabaha karşı iskelelerden birine yeniden uğradım. Bir gondol kıyıya yanaştı. İçinden kimse inmedi. Gondolcu küreğini bağladı, teknesini bıraktı ve yürüyüp gitti.</p>
+<p>Kıyıda bekleyen bir adam arkasından seslendi:</p>
+<p>“Şimdi boş musun?”</p>
+<p>Gondolcu dönüp baktı.</p>
+<p>“Şimdi eve gidiyorum.”</p><footer class="byline">— Aldo Brogan (Gaip muhabiri)</footer></article><aside class="reading-ending"><div class="eyebrow">Bu sayıdaki tefrika</div><h2><a href="/taslak/pr/26/tefrika/bos-bedenler/3/">Boş Bedenler</a></h2><p>Bölüm 3: Sükûnet</p></aside><div class="reading-return"><a href="/taslak/pr/26/sayi/003/">← Sayı 003</a><a href="#reading-content">Makalenin başına ↑</a></div></main><footer>Doskvol Dedikoduları · Duyduğunuza inanmayın. Duymadıklarınızdan korkun.</footer></div></body></html>
