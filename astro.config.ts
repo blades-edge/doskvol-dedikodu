@@ -19,7 +19,9 @@ export default defineConfig({
   markdown: {
     processor: unified({
       remarkRehype: footnoteOptions,
-      remarkPlugins: [[remarkEngravings, { images: media.darkModeImages }]],
+      remarkPlugins: [
+        [remarkEngravings, { exceptions: media.darkModeImageExceptions }],
+      ],
     }),
   },
   scopedStyleStrategy: "where",

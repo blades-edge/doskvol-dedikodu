@@ -34,7 +34,7 @@ const {
 const imageAssets = import.meta.glob<{
   default: import("astro").ImageMetadata;
 }>("../assets/images/*", { eager: true });
-const darkCover = media.darkModeImages.some(path =>
+const darkCoverException = media.darkModeImageExceptions.some(path =>
   Object.entries(imageAssets).some(
     ([assetPath, asset]) =>
       imageKey(assetPath) === imageKey(path) && asset.default.src === cover?.src
@@ -129,7 +129,7 @@ const older = publication.issues[position + 1];
                 alt={coverAlt ?? ""}
                 class:list={[
                   "editorial-engraving",
-                  { "engraving-dark": darkCover },
+                  { "engraving-dark": !darkCoverException },
                 ]}
                 widths={[480, 960, 1440, 2060]}
                 sizes="(max-width: 32rem) calc(100vw - 1.5rem), min(57rem, calc(92vw - 1rem))"

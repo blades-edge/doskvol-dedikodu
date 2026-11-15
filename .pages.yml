@@ -27,12 +27,12 @@ content:
     path: src/settings/media.json
     format: json
     fields:
-      - name: darkModeImages
-        label: Gece görünümü uygulanacak gravürler
+      - name: darkModeImageExceptions
+        label: Gece görünümü istisnaları
         type: image
         options:
           multiple: true
-        description: "Medya kütüphanesinden seçin. Seçilen görseller kapakta ve metin içinde gece temasına özel filtre ve zemin rengini alır. Listeden çıkarmak efekti kaldırır."
+        description: "Gece temasında sayfanın genel renk ters çevirmesini doğrudan alacak gravürleri seçin. Diğer gravürler özel filtre ve zemin rengini alır."
 
   - name: sayi
     label: Sayı

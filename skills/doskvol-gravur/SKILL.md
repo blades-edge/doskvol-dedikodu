@@ -75,9 +75,7 @@ Bu projede üretilen son AVIF’leri yalnızca `src/assets/images/` içine yeni 
 
 ## Medya kaydı
 
-Doğrulanmış her son AVIF'i **mutlaka** proje kökündeki `src/settings/media.json` dosyasının `darkModeImages` listesine ekle. Mevcut kayıtları koru, aynı yolu iki kez ekleme. Yol biçimi: `../../assets/images/<dosya-adi>.avif`. Bu kayıt gravürün dark mode'da doğru gösterilmesi içindir; AVIF üretiminin bir parçasıdır ve ayrıca izin istemez. Taslak PNG'leri veya üretilmemiş dosyaları kaydetme.
-
-Teslimden önce JSON'un geçerli olduğunu ve eklenen yolun üretilen AVIF'e karşılık geldiğini doğrula. Makalenin kapak alanını veya içeriğini değiştirmek bu kayıt işlemine dahil değildir.
+Yeni gravürler koyu mod gravür stilini varsayılan olarak alır. Sayfanın genel renk ters çevirmesini doğrudan alması istenen gravürleri `src/settings/media.json` dosyasındaki `darkModeImageExceptions` listesine ekle. Yol biçimi: `../../assets/images/<dosya-adi>.avif`.
 
 ## Makaleye ekleme
 
