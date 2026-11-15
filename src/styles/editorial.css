@@ -183,6 +183,11 @@ h6,
 .issue-letters {
   grid-column: 1 / -1;
 }
+.issue-letters > h2 {
+  margin: 0 0 0.45rem;
+  font-size: 1.5rem;
+  line-height: 1.15;
+}
 .issue-letter-columns {
   columns: 13rem;
   column-gap: 1.25rem;
