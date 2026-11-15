@@ -27,6 +27,7 @@ const {
   imperialDate,
   price,
   leadRows,
+  letters,
   cover,
   coverAlt,
   coverCaption,
@@ -235,6 +236,30 @@ const older = publication.issues[position + 1];
               </div>
             </section>
           ))
+        }
+        {
+          letters.length > 0 && (
+            <section class="issue-letters" aria-labelledby="okur-mektuplari">
+              <h2 id="okur-mektuplari" class="issue-section-title">
+                Okur mektupları
+              </h2>
+              <div class="issue-letter-columns">
+                {letters.map(letter => (
+                  <article class="issue-letter">
+                    {letter.body
+                      .split(/\r?\n(?:[^\S\r\n]*\r?\n)+/)
+                      .map(paragraph => (
+                        <p>{paragraph}</p>
+                      ))}
+                    <p class="byline">
+                      — {letter.signature} ·{" "}
+                      {formatImperialDate(letter.imperialDate)}
+                    </p>
+                  </article>
+                ))}
+              </div>
+            </section>
+          )
         }
         <nav class="reading-return" aria-label="Sayılar arasında gezinme">
           {
