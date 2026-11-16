@@ -129,4 +129,5 @@ Bir süre levhaya baktı.
 Sonra yüzünü bana çevirdi.
 “O yıl kaç yaşındaydınız, doktor?”
 Cevap vermedim.
+
 Üçüncü bölümün sonu. Dr. Sorel'in vaka defteri bir sonraki sayıda devam edecek.
