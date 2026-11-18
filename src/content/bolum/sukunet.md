@@ -16,9 +16,7 @@ Karşısına oturdum. Eldivenlerini giymişti. Benim ellerim açıktaydı. Sipar
 
 “O geceyi anlatın, doktor.”
 
-Lord Rell'in ateşini, kendisinden aldığım ricayı ve parolayı anlattım. Katedralin doğu kapısından girişimi, bana verilen beyaz maskeyi, salonun ortasındaki boş sandalyeyi ve defterin önünde bekleyen konukları tarif ettim. Bir kişiye adıyla seslendiğimi, müziğin durduğunu ve gümüş yarım maskeli bir kadının beni dışarı çıkardığını söyledim.
-
-Anahtardan söz etmedim.
+Lord Rell'in ateşini, kendisinden aldığım ricayı ve parolayı anlattım. Katedralin doğu kapısından girişimi, bana verilen beyaz maskeyi, salonun ortasındaki boş sandalyeyi ve defterin önünde bekleyen konukları tarif ettim. Bir kişiye adıyla seslendiğimi, müziğin durduğunu ve gümüş yarım maskeli bir kadının beni dışarı çıkardığını söyledim. Anahtardan söz etmedim.
 
 Voss sözümü kesmedi.
 
@@ -96,9 +94,7 @@ Müfettiş arabacıya bir adres vermedi.
 
 Nizamhane ile Altıkule arasındaki sınırdan geçerken Gözyaşı Kadını'nın aşevine dönüştürülmüş eski opera binasını gördüm. Önündeki basamaklarda birkaç kişi oturuyordu.
 
-Altıkule'nin geniş caddelerinde taşlar yer yer çatlamıştı. Bazı yapıların bütün pencereleri karanlıktı. Boş arsalarda küçük ateşler yanıyordu. Ateşlerin çevresindeki insanlar faytona bakmadı.
-
-Bir süre sonra durduk.
+Altıkule'nin geniş caddelerinde taşlar yer yer çatlamıştı. Bazı yapıların bütün pencereleri karanlıktı. Boş arsalarda küçük ateşler yanıyordu. Ateşlerin çevresindeki insanlar faytona bakmadı. Bir süre sonra durduk.
 
 Voss benden önce indi.
 
@@ -110,9 +106,7 @@ Kapıyı ittim. Açıldı.
 
 İçeride dar bir giriş holü ve sağa uzanan bir koridor vardı. Duvar boyunca eski gaz lambalarının bağlantıları görünüyordu. Hiçbirinde lamba bulunmuyordu.
 
-Koridorun sonunda ikinci bir kapı vardı.
-
-Kilidi yeniydi.
+Koridorun sonunda ikinci bir kapı vardı. Kilidi yeniydi.
 
 Metal yüzeyde pas bulunmuyordu. Anahtar deliğinin çevresindeki boyanın bir kısmı yakın zamanda aşınmıştı.
 
@@ -124,15 +118,9 @@ Cevap vermedi.
 
 Paltosundan ince bir alet çıkardı. Kilide yerleştirdi.
 
-Koridorda keskin bir dezenfektan kokusu vardı. Muayenehanemde bir gün önce incelediğim belgelerdeki kokuyla aynıydı.
+Koridorda keskin bir dezenfektan kokusu vardı. Muayenehanemde bir gün önce incelediğim belgelerdeki kokuyla aynıydı. Terk edilmiş bir binada bu kokunun bulunmaması gerekirdi. Kilit açıldı.
 
-Terk edilmiş bir binada bu kokunun bulunmaması gerekirdi.
-
-Kilit açıldı.
-
-Voss aleti paltosuna koydu. Kapıyı itti.
-
-Bir Müfettişin dahi böyle bir kapıyı izinsiz açmaması gerektiğini biliyordum. Müdahale etmedim.
+Voss aleti paltosuna koydu. Kapıyı itti. Bir Müfettişin dahi böyle bir kapıyı izinsiz açmaması gerektiğini biliyordum. Müdahale etmedim.
 
 İçeri girdik.
 
@@ -140,17 +128,9 @@ Bir Müfettişin dahi böyle bir kapıyı izinsiz açmaması gerektiğini biliyo
 
 Kapının ardında uzun bir koğuş vardı.
 
-Pencereler yüksekti. Camlarda biriken kir, gün ışığını azaltıyordu. Zeminin bir bölümü aydınlık, geri kalanı karanlıktı.
+Pencereler yüksekti. Camlarda biriken kir, gün ışığını azaltıyordu. Zeminin bir bölümü aydınlık, geri kalanı karanlıktı. İlk bakışta oda boş görünüyordu. Sonra yatakları gördüm.
 
-İlk bakışta oda boş görünüyordu.
-
-Sonra yatakları gördüm.
-
-Demir iskeletler iki sıra hâlinde dizilmişti. Şilteler kaldırılmış, başlıklar duvara dayanmıştı. Her birinin arasında aynı genişlikte boşluk bırakılmıştı.
-
-Yatakları saydım.
-
-On yedi.
+Demir iskeletler iki sıra hâlinde dizilmişti. Şilteler kaldırılmış, başlıklar duvara dayanmıştı. Her birinin arasında aynı genişlikte boşluk bırakılmıştı. Yatakları saydım. On yedi.
 
 Hepsi çocuk boyundaydı.
 
@@ -160,31 +140,15 @@ Voss sol taraftaki sıraya yöneldi.
 
 Ben kapıya en yakın yatağı inceledim.
 
-Başucuna kısa bir zincir bağlanmıştı. Zincirin ucunda, iç yüzeyi aşınmış küçük bir metal toka vardı.
+Başucuna kısa bir zincir bağlanmıştı. Zincirin ucunda, iç yüzeyi aşınmış küçük bir metal toka vardı. Bir bilekliği kapatmak için yapılmıştı.
 
-Bir bilekliği kapatmak için yapılmıştı.
+İkinci yatakta da aynı düzenek bulunuyordu. Üçüncüde de. Tokaların hepsi aynı uzunlukta zincirlerle bağlanmıştı. Hepsi başlığın aynı noktasına sabitlenmişti.
 
-İkinci yatakta da aynı düzenek bulunuyordu.
-
-Üçüncüde de.
-
-Tokaların hepsi aynı uzunlukta zincirlerle bağlanmıştı. Hepsi başlığın aynı noktasına sabitlenmişti.
-
-Birini elime aldım.
-
-Metal soğuktu. Kilit dili sağlamdı. Tokanın iç yüzeyinde dairesel bir işaret vardı. Kazınarak yapılmıştı.
-
-Cetvelimi çıkardım.
-
-Çapını ölçtüm.
-
-Ilyra Fen'in sol bileğinde gördüğüm mührün ölçüsüyle aynıydı.
+Birini elime aldım. Metal soğuktu. Kilit dili sağlamdı. Tokanın iç yüzeyinde dairesel bir işaret vardı. Kazınarak yapılmıştı. Cetvelimi çıkardım. Çapını ölçtüm. Ilyra Fen'in sol bileğinde gördüğüm mührün ölçüsüyle aynıydı.
 
 Tokayı bıraktım.
 
-Zincir demir başlığa çarptı. Çıkan ses koğuşun sonuna kadar ilerledi.
-
-Voss yürümeyi bıraktı.
+Tokayı bıraktım. Zincir demir başlığa çarptı. Çıkan ses koğuşun sonuna kadar ilerledi. Voss yürümeyi bıraktı.
 
 Bir süre sonra sol sıranın dördüncü yatağına yaklaştı. Başucundaki tokayı kaldırdı. Parmaklarıyla bağlantı halkasını açtı ve tokayı zincirden ayırdı.
 
@@ -196,57 +160,33 @@ Voss tokayı avucunda çevirdi. Ardından paltosunun cebine koydu.
 
 Bir şey söylemedim.
 
-Diğer yatakların tokalarında da aynı dairesel işaret bulunuyordu. Zincirlerin halkaları farklı yerlerinden aşınmıştı. Bazıları parlaktı, bazıları bütünüyle kararmıştı.
-
-Koğuşun iki sırasında aynı düzen tekrar ediyordu.
+Diğer yatakların tokalarında da aynı dairesel işaret bulunuyordu. Zincirlerin halkaları farklı yerlerinden aşınmıştı. Bazıları parlaktı, bazıları bütünüyle kararmıştı. Koğuşun iki sırasında aynı düzen tekrar ediyordu.
 
 Şilte yoktu. Yastık yoktu. Battaniye yoktu.
 
 Voss'un nefes alışverişi hızlandı. Ellerini bir yatağın başlığına dayadı. Parmaklarının çevresindeki deri gerilmişti.
 
-Sol bileğimden nabzımı saydım.
-
-Dakikada elli sekiz.
-
-Defterime yazdım.
+Sol bileğimden nabzımı saydım. Dakikada elli sekiz. Defterime yazdım.
 
 Karşı sıradaki yataklardan birinin başucunda zincir sallanıyordu. Diğerlerinden farklı olarak ucunda toka bulunmuyordu.
 
-Yaklaştım.
+Yaklaştım. Zincirin son halkası boştu. Metalde kırılma izi yoktu. Toka, bağlantı yerinden açılarak çıkarılmıştı.
 
-Zincirin son halkası boştu. Metalde kırılma izi yoktu. Toka, bağlantı yerinden açılarak çıkarılmıştı.
+Yatağın ayak ucuna geçtim. Dar bir tahta levha vardı. Üzeri birkaç kez boyanmıştı. Son kat boya, ortasından kazınarak kaldırılmıştı.
 
-Yatağın ayak ucuna geçtim.
+Kazınmış bölümün altında bir rakamın çizgileri kalmıştı. Üst çizgisi yataydı. Sağ taraftan aşağı inen eğik çizgi, ahşabın damarında kayboluyordu. Yedi.
 
-Dar bir tahta levha vardı. Üzeri birkaç kez boyanmıştı. Son kat boya, ortasından kazınarak kaldırılmıştı.
-
-Kazınmış bölümün altında bir rakamın çizgileri kalmıştı.
-
-Üst çizgisi yataydı. Sağ taraftan aşağı inen eğik çizgi, ahşabın damarında kayboluyordu.
-
-Yedi.
-
-Tahtanın sağ kenarında kurşun kalemle yazılmış başka bir şey vardı.
-
-Yazının ilk harfi belirgindi. Diğerleri ahşabın damarlarına karışmıştı.
-
-Eğildim.
+Tahtanın sağ kenarında kurşun kalemle yazılmış başka bir şey vardı. Yazının ilk harfi belirgindi. Diğerleri ahşabın damarlarına karışmıştı. Eğildim.
 
 Sorel.
 
-Altında bir tarih bulunuyordu.
-
-Yirmi üç yıl öncesine aitti.
+Altında bir tarih bulunuyordu. Yirmi üç yıl öncesine aitti.
 
 Tahtaya dokunmadım.
 
 Defterimi açtım. Önce tarihi yazdım. Ardından harfleri, levhadaki yerlerini koruyarak kopyaladım.
 
-Voss yanıma geldi.
-
-Bir süre levhaya baktı.
-
-Sonra yüzünü bana çevirdi.
+Voss yanıma geldi. Bir süre levhaya baktı. Sonra yüzünü bana çevirdi.
 
 “O yıl kaç yaşındaydınız, doktor?”
 
