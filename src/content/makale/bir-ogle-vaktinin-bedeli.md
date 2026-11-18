@@ -5,6 +5,9 @@ description: Billurtaş'ta öğle güneşini hiç görmemiş bir ressamın tablo
 author: [gaspar-merrow]
 section: Dedikodular
 district: Billurtaş
+cover: ../../assets/images/bir-ogle-vaktinin-bedeli.avif
+coverAlt: Sergide bir kadın tablodaki güneşi işaret ediyor. Tabloda, tarlanın kenarında uzanan bir adam elini gözlerine siper etmiş.
+coverCaption: Billurtaş’taki sergide konuklar “Öğle Vakti” tablosundaki güneşin rengini tartışıyor.
 ---
 
 Sanatla aramdaki ilişkiyi baştan itiraf edeyim. Bir tablonun değerini anlamak için önce çerçevesinin fiyatını sorarım. Ardından tuvali, boyayı ve ressamın kaç gece mum yaktığını hesaplarım. Geriye kalan kısma sanat denir; benim eski mesleğimde buna kâr derdik.
