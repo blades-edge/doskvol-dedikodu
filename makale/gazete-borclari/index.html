@@ -1,0 +1,47 @@
+<!DOCTYPE html><html lang="tr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><script data-goatcounter="https://doskvol.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script><script>
+  (() => {
+    const key = "doskvol-appearance";
+    const valid = value => ["day", "night", "device"].includes(value);
+    const media = window.matchMedia("(prefers-color-scheme: dark)");
+    let preference = "device";
+    try {
+      const saved = localStorage.getItem(key);
+      if (valid(saved)) preference = saved;
+    } catch {
+      // Private browsing may deny storage; the current page still works.
+    }
+    const paint = () => {
+      const dark =
+        preference === "night" || (preference === "device" && media.matches);
+      document.documentElement.dataset.theme = dark ? "dark" : "light";
+      document.querySelectorAll("[data-theme-choice]").forEach(button => {
+        button.setAttribute(
+          "aria-pressed",
+          String(button.dataset.themeChoice === preference)
+        );
+      });
+    };
+    paint();
+    document.addEventListener("DOMContentLoaded", paint, { once: true });
+    media.addEventListener("change", paint);
+    document.addEventListener("doskvol:theme", event => {
+      if (!valid(event.detail)) return;
+      preference = event.detail;
+      try {
+        localStorage.setItem(key, preference);
+      } catch {
+        // Private browsing may deny storage; the current page still works.
+      }
+      paint();
+    });
+    window.addEventListener("storage", event => {
+      if (event.key !== key && event.key !== null) return;
+      preference = valid(event.newValue) ? event.newValue : "device";
+      paint();
+    });
+  })();
+</script><link rel="icon" type="image/svg+xml" href="/favicon.svg"><link rel="canonical" href="https://doskvol.ink/makale/gazete-borclari/"><meta name="description" content="Gazetemiz muhasebe dairesi, rakip gazetelerin iftiralarını yanıtlıyor"><meta property="og:site_name" content="Doskvol Dedikoduları"><meta property="og:locale" content="tr_TR"><meta property="og:type" content="article"><meta property="og:title" content="Muhasebe dairemizden duyuru | Doskvol Dedikoduları"><meta property="og:description" content="Gazetemiz muhasebe dairesi, rakip gazetelerin iftiralarını yanıtlıyor"><meta property="og:url" content="https://doskvol.ink/makale/gazete-borclari/"><meta property="og:image" content="https://doskvol.ink/_astro/muhasebe-dairesi.Bli-DtAp_Z1PlQS2.jpeg"><meta property="og:image:type" content="image/jpeg"><meta property="og:image:alt" content="Verlax masasında oturuyor. Hemen sağında Dalia, iki yanında muhasebe memurları, arkada dosya rafları ve büyük bir çelik kasa var."><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="Muhasebe dairemizden duyuru | Doskvol Dedikoduları"><meta name="twitter:description" content="Gazetemiz muhasebe dairesi, rakip gazetelerin iftiralarını yanıtlıyor"><meta name="twitter:image" content="https://doskvol.ink/_astro/muhasebe-dairesi.Bli-DtAp_Z1PlQS2.jpeg"><meta name="twitter:image:alt" content="Verlax masasında oturuyor. Hemen sağında Dalia, iki yanında muhasebe memurları, arkada dosya rafları ve büyük bir çelik kasa var."><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,600;0,6..72,700;1,6..72,400&display=swap" rel="stylesheet"><title>Muhasebe dairemizden duyuru | Doskvol Dedikoduları</title><link rel="stylesheet" href="/_astro/EditorialHead.BN2S6vUq.css"></head><body><a class="reading-skip" href="#reading-content">Makaleye geç</a><div class="paper reading-paper"><script type="module">document.querySelectorAll(`[data-theme-choice]`).forEach(e=>{e.addEventListener(`click`,()=>{document.dispatchEvent(new CustomEvent(`doskvol:theme`,{detail:e.dataset.themeChoice}))})});</script><header class="masthead"><aside class="weather-theme" aria-label="Gazetenin hava durumu ve görünümü"><div class="weather-caption">Doskvol’da hava</div><div class="weather-choices" role="group" aria-label="Görünüm tercihi"><button type="button" data-theme-choice="day" aria-pressed="false" title="Kırık güneş — açık görünüm"><img src="/weather-day.png" alt="" width="56" height="56" loading="eager"><span>Gündüz</span></button><button type="button" data-theme-choice="night" aria-pressed="false" title="Ay ve loş bacıları — koyu görünüm"><img src="/weather-night.png" alt="" width="56" height="56" loading="eager"><span>Gece</span></button><button type="button" data-theme-choice="device" aria-pressed="true" title="Hayaletli hava — cihazın tercihini izle"><img src="/weather-device.png" alt="" width="56" height="56" loading="eager"><span>Cihaz</span></button></div></aside><div class="masthead-title"><div class="eyebrow">Akoros’un bağımsız sesi · Doskvol</div><a class="masthead-name" href="/sayi/003/">Doskvol Dedikoduları</a><div class="tagline">Duyduğunuza inanmayın. Duymadıklarınızdan korkun.</div></div></header><main id="reading-content"><header class="reading-heading"><div class="eyebrow">Haberler</div><h1>Muhasebe dairemizden duyuru</h1><p class="reading-deck">Gazetemiz muhasebe dairesi, rakip gazetelerin iftiralarını yanıtlıyor</p><div class="reading-meta"><span>Yazı İşleri</span><a href="/takvim/">7 Kalivet 847</a><a href="/sayi/">Sayı 003</a></div></header><figure class="reading-figure"><img src="/_astro/muhasebe-dairesi.Bli-DtAp_Z1iwYYh.webp" srcset="/_astro/muhasebe-dairesi.Bli-DtAp_Vi7Dx.webp 480w, /_astro/muhasebe-dairesi.Bli-DtAp_lSEyy.webp 960w, /_astro/muhasebe-dairesi.Bli-DtAp_ZXd95M.webp 1440w" alt="Verlax masasında oturuyor. Hemen sağında Dalia, iki yanında muhasebe memurları, arkada dosya rafları ve büyük bir çelik kasa var." sizes="(max-width: 32rem) calc(100vw - 1.5rem), calc(92vw - 1rem)" loading="lazy" decoding="async" width="1774" height="887" class="editorial-engraving engraving-dark"><figcaption class="caption">Muhasebe müdürümüz Verlax Graxytzyks, yardımcısı Dalia Valora ve daire memurları vazifelerinin başında.</figcaption></figure><article class="reading-copy" aria-label="Muhasebe dairemizden duyuru"><p>Gazetemizin muhasebe dairesi hakkında ne yazık ki son zamanlarda menfur iftiraların rakip neşriyatta yayımlandığına şahit olduk. Borç batağında olduğumuzu ve tedarikçilerimizin alacaklarını bir türlü tahsil edemediğini iddia eden iftira dolu manşetler defalarca yayımlandı. Bizler de, yazı işleri dairesi olarak muhasebe dairemiz ile birlikte bu makaleyi hem iftiracılara cevap, hem de okur ve tedarikçilerimize güven vermek üzere hazırladık.</p>
+<p>Öncelikle, gazetemizin herhangi bir maddi sıkıntısı bulunmamaktadır. Siz kıymetli okurlarımızın gösterdiği teveccüh ile tirajımız her geçen gün büyümekte, bizler de sizlere daha da önemli haberleri ulaştırabilmek için hiçbir yatırımdan kaçınmamaktayız. Bu vakitlerde, yeni bir icat olan plazmografi kamerası ile elde edilen resimlerin kâğıt üzerine basılabilmesi mevzuuna çalışmaktayız. Pek yakında gazetemizde görebileceksiniz.</p>
+<p>Dahası, muhasebe müdürümüz <strong>Verlax Graxytzyks</strong>, tüm ekibi ile vazifelerinin başında ve bütün işlemleri ivedilikle yapmaya hazır olduklarını belirtmiştir. Hâlen gazetemizden tahsil edecek alacağı bulunanların <strong>bizzat kendisi ile görüşerek</strong> gerekli prosedürleri başlatabileceğini de bildirmiş, kendisinin bir iblis olduğu söylentisinin külliyen yalan olduğunu, sıradan bir Tycherosi olduğunu ısrarla vurgulamıştır.</p>
+<hr>
+<p>Önemli not: Gazetemize borcu olanlar, alacaklardan sorumlu muhasebe müdür yardımcımız <strong>Dalia Valora</strong> ile doğrudan görüşebilirler.</p><footer class="byline">— Yazı İşleri</footer></article><aside class="reading-ending"><div class="eyebrow">Bu sayıdaki tefrika</div><h2><a href="/tefrika/bos-bedenler/3/">Boş Bedenler</a></h2><p>Bölüm 3: Sükûnet</p></aside><div class="reading-return"><a href="/sayi/003/">← Sayı 003</a><a href="#reading-content">Makalenin başına ↑</a></div></main><footer>Doskvol Dedikoduları · Duyduğunuza inanmayın. Duymadıklarınızdan korkun.</footer></div></body></html>
