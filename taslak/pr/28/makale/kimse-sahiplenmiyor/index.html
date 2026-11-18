@@ -1,0 +1,63 @@
+<!DOCTYPE html><html lang="tr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><script>
+  (() => {
+    const key = "doskvol-appearance";
+    const valid = value => ["day", "night", "device"].includes(value);
+    const media = window.matchMedia("(prefers-color-scheme: dark)");
+    let preference = "device";
+    try {
+      const saved = localStorage.getItem(key);
+      if (valid(saved)) preference = saved;
+    } catch {
+      // Private browsing may deny storage; the current page still works.
+    }
+    const paint = () => {
+      const dark =
+        preference === "night" || (preference === "device" && media.matches);
+      document.documentElement.dataset.theme = dark ? "dark" : "light";
+      document.querySelectorAll("[data-theme-choice]").forEach(button => {
+        button.setAttribute(
+          "aria-pressed",
+          String(button.dataset.themeChoice === preference)
+        );
+      });
+    };
+    paint();
+    document.addEventListener("DOMContentLoaded", paint, { once: true });
+    media.addEventListener("change", paint);
+    document.addEventListener("doskvol:theme", event => {
+      if (!valid(event.detail)) return;
+      preference = event.detail;
+      try {
+        localStorage.setItem(key, preference);
+      } catch {
+        // Private browsing may deny storage; the current page still works.
+      }
+      paint();
+    });
+    window.addEventListener("storage", event => {
+      if (event.key !== key && event.key !== null) return;
+      preference = valid(event.newValue) ? event.newValue : "device";
+      paint();
+    });
+  })();
+</script><link rel="icon" type="image/svg+xml" href="/taslak/pr/28/favicon.svg"><meta name="robots" content="noindex, nofollow"><link rel="canonical" href="https://doskvol.ink/taslak/pr/28/makale/kimse-sahiplenmiyor/"><meta name="description" content="Nizamhane'deki kazının kime ait olduğunu üç kuruma sorduk. Meclis Taç'ı, Lord Vali'nin dairesi Meclis'i gösterdi; Vakıf ise henüz cevap vermedi."><meta property="og:site_name" content="Doskvol Dedikoduları"><meta property="og:locale" content="tr_TR"><meta property="og:type" content="article"><meta property="og:title" content="Kimse sahiplenmiyor | Doskvol Dedikoduları"><meta property="og:description" content="Nizamhane'deki kazının kime ait olduğunu üç kuruma sorduk. Meclis Taç'ı, Lord Vali'nin dairesi Meclis'i gösterdi; Vakıf ise henüz cevap vermedi."><meta property="og:url" content="https://doskvol.ink/taslak/pr/28/makale/kimse-sahiplenmiyor/"><meta property="og:image" content="https://doskvol.ink/taslak/pr/28/_astro/kimse-sahiplenmiyor.C-KooqNY_1X8hFA.jpeg"><meta property="og:image:type" content="image/jpeg"><meta property="og:image:alt" content="Kazı ilanının imza çizgisi boş. Arkada iki İmparatorluk süvarisi, Nizam Duvarı dibindeki tahta panoların önünde nöbet tutuyor."><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="Kimse sahiplenmiyor | Doskvol Dedikoduları"><meta name="twitter:description" content="Nizamhane'deki kazının kime ait olduğunu üç kuruma sorduk. Meclis Taç'ı, Lord Vali'nin dairesi Meclis'i gösterdi; Vakıf ise henüz cevap vermedi."><meta name="twitter:image" content="https://doskvol.ink/taslak/pr/28/_astro/kimse-sahiplenmiyor.C-KooqNY_1X8hFA.jpeg"><meta name="twitter:image:alt" content="Kazı ilanının imza çizgisi boş. Arkada iki İmparatorluk süvarisi, Nizam Duvarı dibindeki tahta panoların önünde nöbet tutuyor."><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,600;0,6..72,700;1,6..72,400&display=swap" rel="stylesheet"><title>Kimse sahiplenmiyor | Doskvol Dedikoduları</title><link rel="stylesheet" href="/taslak/pr/28/_astro/EditorialHead.Bf4rtiqy.css"></head><body><a class="reading-skip" href="#reading-content">Makaleye geç</a><div class="paper reading-paper"><script type="module">document.querySelectorAll(`[data-theme-choice]`).forEach(e=>{e.addEventListener(`click`,()=>{document.dispatchEvent(new CustomEvent(`doskvol:theme`,{detail:e.dataset.themeChoice}))})});</script><header class="masthead"><aside class="weather-theme" aria-label="Gazetenin hava durumu ve görünümü"><div class="weather-caption">Doskvol’da hava</div><div class="weather-choices" role="group" aria-label="Görünüm tercihi"><button type="button" data-theme-choice="day" aria-pressed="false" title="Kırık güneş — açık görünüm"><img src="/taslak/pr/28/weather-day.png" alt="" width="56" height="56" loading="eager"><span>Gündüz</span></button><button type="button" data-theme-choice="night" aria-pressed="false" title="Ay ve loş bacıları — koyu görünüm"><img src="/taslak/pr/28/weather-night.png" alt="" width="56" height="56" loading="eager"><span>Gece</span></button><button type="button" data-theme-choice="device" aria-pressed="true" title="Hayaletli hava — cihazın tercihini izle"><img src="/taslak/pr/28/weather-device.png" alt="" width="56" height="56" loading="eager"><span>Cihaz</span></button></div></aside><div class="masthead-title"><div class="eyebrow">Akoros’un bağımsız sesi · Doskvol</div><a class="masthead-name" href="/taslak/pr/28/sayi/003/">Doskvol Dedikoduları</a><div class="tagline">Duyduğunuza inanmayın. Duymadıklarınızdan korkun.</div></div></header><main id="reading-content"><header class="reading-heading"><div class="eyebrow">Haberler</div><h1>Kimse sahiplenmiyor</h1><p class="reading-deck">Nizamhane&#39;deki kazının kime ait olduğunu üç kuruma sorduk. Meclis Taç&#39;ı, Lord Vali&#39;nin dairesi Meclis&#39;i gösterdi; Vakıf ise henüz cevap vermedi.</p><div class="reading-meta"><span>Vaurin Prichard</span><a href="/taslak/pr/28/takvim/">7 Kalivet 847</a><a href="/taslak/pr/28/sayi/">Sayı 003</a></div></header><figure class="reading-figure"><img src="/taslak/pr/28/_astro/kimse-sahiplenmiyor.C-KooqNY_xU7mN.webp" srcset="/taslak/pr/28/_astro/kimse-sahiplenmiyor.C-KooqNY_ZkDCGi.webp 480w, /taslak/pr/28/_astro/kimse-sahiplenmiyor.C-KooqNY_Z2biVYs.webp 960w, /taslak/pr/28/_astro/kimse-sahiplenmiyor.C-KooqNY_2e7L3E.webp 1440w" alt="Kazı ilanının imza çizgisi boş. Arkada iki İmparatorluk süvarisi, Nizam Duvarı dibindeki tahta panoların önünde nöbet tutuyor." sizes="(max-width: 32rem) calc(100vw - 1.5rem), calc(92vw - 1rem)" loading="lazy" decoding="async" width="1774" height="887" class="editorial-engraving engraving-dark"><figcaption class="caption">Nizam Duvarı’ndaki çalışma levhasında kazının adı ve izin numarası yazıyor. İmza yeri boş.</figcaption></figure><article class="reading-copy" aria-label="Kimse sahiplenmiyor"><p>Nizamhane’deki eski surun altında taş bir oda bulunmasının üzerinden iki haftadan fazla geçti. Kazı alanını çevreleyen tahta panolar hâlâ yerinde. Önlerinde aynı İmparatorluk süvarileri nöbet tutuyor. Geçen haftadan bu yana panolar bir sıra daha yükseltilmiş.</p>
+<p>Önceki haberimde, kazı ruhsatının mevcut olduğunu, ancak ruhsatı veren makamın belirtilmediğini yazmıştım. Bu kez ruhsatı değil, çalışmayı üstlenen kurumu araştırdım.</p>
+<p>Mendar’ın 56’sı, Şehir Meclisi Kâtipliği’ne, Lord Vali Sekreterliği’ne ve Vakıf’a aynı soruları yazılı olarak ilettim: Kazıyı hangi kurum yürütmektedir? Alanın güvenliğinden kim sorumludur? Çalışmaların ne zaman tamamlanması beklenmektedir?</p>
+<p>İlk yanıt Şehir Meclisi’nden geldi:</p>
+<blockquote>
+<p>“Mezkûr sahada yürütülen faaliyetler Meclis tasarrufunda bulunmamaktadır. Mahallinde görev yapan İmparatorluk askerî personeli dikkate alındığında, konuya ilişkin müracaatların Taç makamına yöneltilmesi uygun görülmektedir.”</p>
+</blockquote>
+<p>Lord Vali’nin sekreterliği daha kısa konuştu:</p>
+<blockquote>
+<p>“Surlar şehir kamu yapılarıdır. Bakım ve onarım yetkisi Şehir Meclisi’ndedir. Askerî personelin mevcudiyeti, inşaatın idaresi anlamına gelmez.”</p>
+</blockquote>
+<p>Her iki daire de çalışmaların bitiş tarihine ilişkin bilgi vermedi.</p>
+<p>Vakıf’a gönderdiğim yazıya henüz cevap ulaşmadı.</p>
+<p>Burada iki hususu hatırlatmak gerekiyor. Şehir Meclisi, şehrin bütün kamu alanlarının sahibidir. Nizamhane’deki İmparatorluk süvarileri ise Taç’ın sahiplendiği mülkleri korur.</p>
+<p>Sekreterlik, süvarilerin kendi personeli olduğunu yalanlamadı.</p>
+<p>Sur dibindeki atölyelerden çıkarılan genç bir heykeltıraşla konuştum. Birkaç eserini Billurtaş’ta sergileme imkânı bulmuş. Kalanları, bir tanıdığının kömür deposunda bekliyor.</p>
+<p>“Mermer rutubetten bozulmaz,” dedi. “Ama çalışacak yerim kalmadı. Kime soracağımı bilsem, hiç değilse ne kadar bekleyeceğimi sorardım.”</p>
+<p>Dilekçesini üç ayrı masaya bırakmış. Üçünden de aynı cevabı almış: Bu iş bizim değil.</p>
+<p>Dün dokuzuncu saatte sura bir kez daha gittim. Yükseltilmiş panoların önünde iki süvari duruyordu. Çalışma levhası eski yerindeydi.</p>
+<p>Üzerinde işin adı yazılıydı.</p>
+<p>Altında imza yeri boştu.</p><footer class="byline">— Vaurin Prichard (Nizamhane Muhabiri)</footer></article><aside class="reading-ending"><div class="eyebrow">Bu sayıdaki tefrika</div><h2><a href="/taslak/pr/28/tefrika/bos-bedenler/3/">Boş Bedenler</a></h2><p>Bölüm 3: Sükûnet</p></aside><div class="reading-return"><a href="/taslak/pr/28/sayi/003/">← Sayı 003</a><a href="#reading-content">Makalenin başına ↑</a></div></main><footer>Doskvol Dedikoduları · Duyduğunuza inanmayın. Duymadıklarınızdan korkun.</footer></div></body></html>
