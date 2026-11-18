@@ -5,6 +5,9 @@ description: Mendar'ın son gecesi İpekyalı'nın bütün gondolları kiraland�
 author: [aldo-brogan.json]
 section: Dedikodular
 district: İpekyalı
+cover: ../../assets/images/ay-sonu-gondol.avif
+coverAlt: İskelede bekleyen müşterilerin önünden yolcusuz gondollar geçiyor. Karşı kıyıda eğlence evlerinin çalışanları boş masaların yanında bekliyor.
+coverCaption: İpekyalı’da bütün gondollar tutuldu. Koltukların hepsi boş kaldı.
 ---
 
 Ayın son günü Doskvol'da çalışmak için pek makbul bir gün değildir. Kimi unutulmuş bir gök tanrısını anar, kimi onun şerefine içer, kimi de ikisini birden yaptığını söyler. İpekyalı'da ise o gece çalışmak isteyenlerin başına daha büyük bir felaket geldi: İş yapacak müşteri buldular, ama müşteriyi karşı kıyıya geçirecek gondol bulamadılar.
