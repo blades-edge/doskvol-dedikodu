@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://doskvol.ink/taslak/b/sayi-003/sitemap-index.xml
