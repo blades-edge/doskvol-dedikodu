@@ -2,12 +2,12 @@
 title: Kimse sahiplenmiyor
 description: Nizamhane'deki kazının kime ait olduğunu üç kuruma sorduk. Meclis
   Taç'ı, Lord Vali'nin dairesi Meclis'i gösterdi; Vakıf ise henüz cevap vermedi.
-author:
-  - vaurin-prichard
+author: [vaurin-prichard.json]
 section: Haberler
 district: Nizamhane
 location: Nizam Duvarı
 ---
+
 Nizamhane'deki eski surun altında taş bir oda bulunmasının üzerinden iki haftadan fazla geçti. Kazı alanını çevreleyen tahta panolar hâlâ yerinde. Önlerinde aynı İmparatorluk süvarileri nöbet tutuyor. Geçen haftadan bu yana panolar bir sıra daha yükseltilmiş.
 
 Önceki haberimde, kazı ruhsatının mevcut olduğunu, ancak ruhsatı veren makamın belirtilmediğini yazmıştım. Bu kez ruhsatı değil, çalışmayı üstlenen kurumu araştırdım.

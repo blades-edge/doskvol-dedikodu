@@ -7,6 +7,7 @@ episode: 3
 author:
   - dr-a-sorel
 ---
+
 **İkinci saati sülüs geçe**
 
 Müfettiş Voss muayenehanemin önüne kapalı bir faytonla geldi. Arabacı yerinden inmedi. Voss kapıyı içeriden açtı.
@@ -251,6 +252,6 @@ Sonra yüzünü bana çevirdi.
 
 Cevap vermedim.
 
-* * *
+---
 
-*Üçüncü bölümün sonu. Dr. Sorel'in vaka defteri bir sonraki sayıda devam edecek.*
+_Üçüncü bölümün sonu. Dr. Sorel'in vaka defteri bir sonraki sayıda devam edecek._

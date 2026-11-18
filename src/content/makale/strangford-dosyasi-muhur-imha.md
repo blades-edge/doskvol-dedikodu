@@ -2,12 +2,12 @@
 title: "Strangford dosyası: mühür imha edildi"
 description: Strangford dosyasındaki mührü taşıyan kâtip başka göreve atandı.
   Mühür ise kayıtlara "imha edildi" diye geçmiş.
-author:
-  - vaurin-prichard
+author: [vaurin-prichard.json]
 section: Haberler
 district: Yanıkçukur
 location: Katipler Sokağı
 ---
+
 Strangford dosyasına ilişkin ilk haberimde, sekizinci sayfadaki mührün tarihiyle onu kullanan memurun atama tarihi arasında bir tutarsızlık bulunduğunu yazmıştım. Söz konusu memur, mührü Ulsivet'in 12'sinden itibaren kullanmaya yetkiliydi. Belgedeki tarih altmış sekiz gün daha eskiydi.
 
 Kalivet'in 3'ü, memurla görüşmek üzere Kayıt Dairesi'ne gittim.

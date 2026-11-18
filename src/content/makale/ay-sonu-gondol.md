@@ -2,11 +2,11 @@
 title: Ay sonu gecesi İpekyalı'da tek gondol bulunamadı
 description: Mendar'ın son gecesi İpekyalı'nın bütün gondolları kiralandı, fakat
   hiçbirine yolcu binmedi. Esnaf müşterilerini, müşteriler ise sabrını kaybetti.
-author:
-  - aldo-brogan
+author: [aldo-brogan.json]
 section: Dedikodular
 district: İpekyalı
 ---
+
 Ayın son günü Doskvol'da çalışmak için pek makbul bir gün değildir. Kimi unutulmuş bir gök tanrısını anar, kimi onun şerefine içer, kimi de ikisini birden yaptığını söyler. İpekyalı'da ise o gece çalışmak isteyenlerin başına daha büyük bir felaket geldi: İş yapacak müşteri buldular, ama müşteriyi karşı kıyıya geçirecek gondol bulamadılar.
 
 Mendar'ın son gecesi, kuzey kanallarındaki iskelelerde tek bir boş gondol kalmadı. Daha doğrusu, gondolların hepsi boştu. Yalnız hiçbiri kiralık değildi.
