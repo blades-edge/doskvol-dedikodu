@@ -51,5 +51,3 @@ Sergiden geç saatte çıktım. Billurtaş'ın caddeleri her zamanki gibi parlak
 Bir lambanın altından geçerken elimi ışığa uzattım.
 
 Sonra indirdim.
-
-_— Gaspar Merrow, Mantar Bahçıvanı_

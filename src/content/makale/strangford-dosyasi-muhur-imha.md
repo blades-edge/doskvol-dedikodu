@@ -1,11 +1,10 @@
 ---
-title: "Strangford dosyası: mühür imha edildi"
+title: "Mühür imha edildi"
 description: Strangford dosyasındaki mührü taşıyan kâtip başka göreve atandı.
   Mühür ise kayıtlara "imha edildi" diye geçmiş.
 author: [vaurin-prichard.json]
 section: Haberler
 district: Yanıkçukur
-location: Katipler Sokağı
 cover: ../../assets/images/strangford-dosyasi-muhur-imha.avif
 coverAlt: Kapı eşiğindeki muhabir, dosya raflarının önünde oturan kâtibe bakıyor. Masada açık bir defter ve bir mühür duruyor.
 coverCaption: Kayıt Dairesi’nde eski kâtibin masasında artık başka biri oturuyor.

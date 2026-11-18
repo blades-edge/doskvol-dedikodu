@@ -1,5 +1,5 @@
 ---
-title: Ay sonu gecesi İpekyalı'da tek gondol bulunamadı
+title: Tek gondol bulunamadı
 description: Mendar'ın son gecesi İpekyalı'nın bütün gondolları kiralandı, fakat
   hiçbirine yolcu binmedi. Esnaf müşterilerini, müşteriler ise sabrını kaybetti.
 author: [aldo-brogan.json]
