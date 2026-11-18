@@ -34,3 +34,12 @@ test("articles and Markdown without a chapter path remain unchanged", async () =
     assert.doesNotMatch(code, /class=/);
   }
 });
+
+test("inline quotes preserve punctuation, Markdown and narrator text", async () => {
+  const { code } = await processor.render(
+    '“Evet,” dedi. “Bir **önemli** şey.”\n\nAdı “Sükûnet” idi.\n\n`“kod”` ve “yarım',
+    { fileURL: chapter }
+  );
+  assert.equal(code, '<p><q>“Evet,”</q> dedi. <q>“Bir <strong>önemli</strong> şey.”</q></p>\n<p>Adı <q>“Sükûnet”</q> idi.</p>\n<p><code>“kod”</code> ve “yarım</p>');
+  assert.doesNotMatch(code, /class="dialogue/);
+});
