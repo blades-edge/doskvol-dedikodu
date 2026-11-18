@@ -8,7 +8,7 @@ author:
   - dr-a-sorel
 ---
 
-**İkinci saati sülüs geçe**
+#### İkinci saati sülüs geçe [^1]
 
 Müfettiş Voss muayenehanemin önüne kapalı bir faytonla geldi. Arabacı yerinden inmedi. Voss kapıyı içeriden açtı.
 
@@ -92,7 +92,7 @@ Arabacı başını eğdi. Dizginler gerildi.
 
 Müfettiş arabacıya bir adres vermedi.
 
-**Üçüncü saat**
+#### Üçüncü saat [^1]
 
 Nizamhane ile Altıkule arasındaki sınırdan geçerken Gözyaşı Kadını'nın aşevine dönüştürülmüş eski opera binasını gördüm. Önündeki basamaklarda birkaç kişi oturuyordu.
 
@@ -126,7 +126,7 @@ Voss aleti paltosuna koydu. Kapıyı itti. Bir Müfettişin dahi böyle bir kap�
 
 İçeri girdik.
 
-**Üçüncü saati çeyrek geçe**
+#### Üçüncü saati çeyrek geçe [^1]
 
 Kapının ardında uzun bir koğuş vardı.
 
@@ -197,3 +197,5 @@ Cevap vermedim.
 ---
 
 _Üçüncü bölümün sonu. Dr. Sorel'in vaka defteri bir sonraki sayıda devam edecek._
+
+[^1]: Editörün notu: Dr. Sorel saatleri _2 ⅓_ ve benzeri kısa şekilde not etmiş. Biz okurun rahatı için [saatleri](../../../takvim/ "Doskvol takvimi") tekmil ismi ile yazdık.
