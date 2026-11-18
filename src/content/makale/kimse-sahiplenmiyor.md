@@ -6,6 +6,9 @@ author: [vaurin-prichard.json]
 section: Haberler
 district: Nizamhane
 location: Nizam Duvarı
+cover: ../../assets/images/kimse-sahiplenmiyor.avif
+coverAlt: Kazı ilanının imza çizgisi boş. Arkada iki İmparatorluk süvarisi, Nizam Duvarı dibindeki tahta panoların önünde nöbet tutuyor.
+coverCaption: Nizam Duvarı’ndaki çalışma levhasında kazının adı ve izin numarası yazıyor. İmza yeri boş.
 ---
 
 Nizamhane'deki eski surun altında taş bir oda bulunmasının üzerinden iki haftadan fazla geçti. Kazı alanını çevreleyen tahta panolar hâlâ yerinde. Önlerinde aynı İmparatorluk süvarileri nöbet tutuyor. Geçen haftadan bu yana panolar bir sıra daha yükseltilmiş.
