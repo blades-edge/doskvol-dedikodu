@@ -302,7 +302,7 @@ Yankı bunu bir yüz ifadesinden değil, ruhun içinde bulunduğu karışıklık
 
 Elini uzattı. Burada elinin nasıl göründüğünü bilmiyordu. Ama uzandığını hissediyordu.
 
-_Daha zamanın gelmedi._
+“Daha zamanın gelmedi.”
 
 Sözcükler ağızdan çıkmış gibi değildi.
 
@@ -312,7 +312,7 @@ Ruhun çevresindeki hareket değişti.
 
 Yankı yeniden yaklaştı.
 
-_Burada kal._
+“Burada kal.”
 
 Öte tarafta Ayaz kanamayı durdurmaya çalışıyordu.
 

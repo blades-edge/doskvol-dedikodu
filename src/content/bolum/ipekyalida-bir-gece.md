@@ -228,7 +228,7 @@ Yankı, Sis’e baktı.
 
 Sis’in bakışında rahatlama yoktu. Öfke vardı.
 
-Dışarıdaki halata tutunmuş hâlde Yankı’ya sessizce işaret etti: _Ne yaptığını sanıyorsun?_
+Dışarıdaki halata tutunmuş hâlde Yankı’ya sessizce işaret etti: “Ne yaptığını sanıyorsun?”
 
 Yankı açıklayamadı. Bir yüzün onu böyle bir hataya sürükleyebileceğini kendisi de beklemiyordu.
 

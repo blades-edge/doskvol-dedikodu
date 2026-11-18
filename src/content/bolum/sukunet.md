@@ -56,7 +56,7 @@ Sol alt köşede soluk bir şekil belirdi.
 
 Birbirine yaslanmış iki ince sütun, üzerlerinde dar bir kemer. Kemerin altında küçük, boş bir alan vardı. Şeklin hemen altında büyük harfler seçiliyordu.
 
-SÜKÛNET
+> SÜKÛNET
 
 ![Sorel faytonun perdesini aralayıp belgeyi pencereye tutuyor. Voss, dizlerinde deri dosyasıyla kâğıdın köşesindeki kemer biçimli filigrana bakıyor.](../../assets/images/sukunet-fayton.avif)
 
@@ -180,7 +180,7 @@ Kazınmış bölümün altında bir rakamın çizgileri kalmıştı. Üst çizgi
 
 Tahtanın sağ kenarında kurşun kalemle yazılmış başka bir şey vardı. Yazının ilk harfi belirgindi. Diğerleri ahşabın damarlarına karışmıştı. Eğildim.
 
-Sorel.
+> Sorel.
 
 Altında bir tarih bulunuyordu. Yirmi üç yıl öncesine aitti.
 
