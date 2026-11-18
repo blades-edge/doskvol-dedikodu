@@ -34,6 +34,12 @@ const serials = defineCollection({
   }),
 });
 
+const imperialDate = z.object({
+  day: z.number().int().min(1).max(60),
+  month: z.enum(imperialMonths),
+  year: z.number().int().min(800).max(1200),
+});
+
 const issues = defineCollection({
   loader: glob({ pattern: "*.json", base: "./src/content/sayi" }),
   schema: ({ image }) =>
@@ -41,11 +47,7 @@ const issues = defineCollection({
       number: z.number().int().positive(),
       description: optionalText,
       date: z.coerce.date(),
-      imperialDate: z.object({
-        day: z.number().int().min(1).max(60),
-        month: z.enum(imperialMonths),
-        year: z.number().int().min(800).max(1200),
-      }),
+      imperialDate,
       price: z.string().min(1),
       lead: z.preprocess(contentReferenceId, reference("makale").optional()),
       leadRows: z.preprocess(
@@ -59,6 +61,18 @@ const issues = defineCollection({
       chapters: z.preprocess(
         emptyToUndefined,
         z.array(cmsReference("bolum")).default([])
+      ),
+      letters: z.preprocess(
+        emptyToUndefined,
+        z
+          .array(
+            z.object({
+              body: z.string().trim().min(1),
+              signature: z.string().trim().min(1),
+              imperialDate,
+            })
+          )
+          .default([])
       ),
       cover: z.preprocess(emptyToUndefined, image().optional()),
       coverAlt: optionalText,

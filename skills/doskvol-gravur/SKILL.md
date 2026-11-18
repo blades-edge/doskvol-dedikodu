@@ -1,15 +1,16 @@
 ---
 name: doskvol-gravur
-description: "Doskvol Dedikoduları için onaylı tarihî gravür referanslarının çizgi dilinde, #211e1a mürekkepli, saydam zeminli AVIF görseller üret. Kullanıcı Doskvol gravürü istediğinde veya bu stilde yalnızca bir sahne tarif ettiğinde kullan."
+description: "Doskvol Dedikoduları için onaylı tarihî gravür referansının çizgi dilinde, #211e1a mürekkepli, saydam zeminli AVIF görseller üret. Doskvol gravürü istendiğinde, bu stilde bir sahne tarif edildiğinde veya gravür için sahne belirtilmeden bir makale verildiğinde kullan."
 ---
 
 # Doskvol gravürü
 
-Kullanıcının sahnesini aşağıdaki referansın çizgi dilinde resimle. Son onaydan sonra AVIF üretip medya kaydını ekle; makaleye yerleştirme veya yayımlama bu kapsamda değildir.
+Kullanıcının belirttiği veya seçtiği sahneyi aşağıdaki referansın çizgi dilinde resimle. Son onaydan sonra AVIF ve medya kaydı için aşağıdaki adımları izle. Yayımlama kapsam dışındadır.
 
 ## Girdi ve referans seçimi
 
-- İlk sahne girdisi yazılı veya sözlü bir anlatımsa doğrudan üretime başla.
+- Kullanıcı bir makale verip sahne belirtmediyse makalenin tamamını oku. Makaleye dayanan, konu veya bakış açısı bakımından birbirinden ayrılan iki kısa, yazılı sahne önerisi sun. Her öneride kadrajda neyin görüneceğini anlat. Görsel üretmeden kullanıcının seçimini bekle ve seçtiği sahneyle üretime başla.
+- Kullanıcı sahneyi yazılı veya sözlü olarak tarif ettiyse, yanında makale de olsa doğrudan üretime başla.
 - İlk girdi bir resimse, ImageGen çağrısından önce sor: “Resmi doğrudan görsel referans olarak mı kullanayım, yoksa gördüklerini muhabirin gazete ressamına anlatması gibi yalnızca yazıyla mı tasvir edeyim?” Kullanıcı zaten tercihini belirttiyse tekrar sorma.
 - Tasvir seçildiyse resmi incele ve konu, nesne, kıyafet, mekân veya kompozisyon özelliklerini yazıyla anlat. **O resmi ImageGen'e gönderme.** Sonradan gelen nesne/giysi resimleri için de aynı ayrımı uygula.
 - Doğrudan görsel referans seçildiyse onu yalnızca konu/kompozisyon hedefi olarak etiketle; stil referansı yapma.
