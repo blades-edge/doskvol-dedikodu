@@ -6,6 +6,9 @@ author: [vaurin-prichard.json]
 section: Haberler
 district: Yanıkçukur
 location: Katipler Sokağı
+cover: ../../assets/images/strangford-dosyasi-muhur-imha.avif
+coverAlt: Kapı eşiğindeki muhabir, dosya raflarının önünde oturan kâtibe bakıyor. Masada açık bir defter ve bir mühür duruyor.
+coverCaption: Kayıt Dairesi’nde eski kâtibin masasında artık başka biri oturuyor.
 ---
 
 Strangford dosyasına ilişkin ilk haberimde, sekizinci sayfadaki mührün tarihiyle onu kullanan memurun atama tarihi arasında bir tutarsızlık bulunduğunu yazmıştım. Söz konusu memur, mührü Ulsivet'in 12'sinden itibaren kullanmaya yetkiliydi. Belgedeki tarih altmış sekiz gün daha eskiydi.
