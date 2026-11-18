@@ -58,6 +58,8 @@ Birbirine yaslanmış iki ince sütun, üzerlerinde dar bir kemer. Kemerin altı
 
 SÜKÛNET
 
+![Sorel faytonun perdesini aralayıp belgeyi pencereye tutuyor. Voss, dizlerinde deri dosyasıyla kâğıdın köşesindeki kemer biçimli filigrana bakıyor.](../../assets/images/sukunet-fayton.avif)
+
 “Bu kâğıdı nereden aldınız?” diye sordum.
 
 “Dün size gösterdiğim belgeden.”
@@ -146,7 +148,7 @@ Başucuna kısa bir zincir bağlanmıştı. Zincirin ucunda, iç yüzeyi aşınm
 
 Birini elime aldım. Metal soğuktu. Kilit dili sağlamdı. Tokanın iç yüzeyinde dairesel bir işaret vardı. Kazınarak yapılmıştı. Cetvelimi çıkardım. Çapını ölçtüm. Ilyra Fen'in sol bileğinde gördüğüm mührün ölçüsüyle aynıydı.
 
-Tokayı bıraktım.
+![Sorel, boş koğuşta bir çocuk yatağının demir başlığına zincirle bağlı bilek tokasını inceliyor. Voss karşı sırada bekliyor.](../../assets/images/sukunet-kogus.avif)
 
 Tokayı bıraktım. Zincir demir başlığa çarptı. Çıkan ses koğuşun sonuna kadar ilerledi. Voss yürümeyi bıraktı.
 
