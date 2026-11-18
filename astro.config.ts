@@ -4,6 +4,7 @@ import sitemap from "@astrojs/sitemap";
 import media from "./src/settings/media.json";
 import { remarkEngravings } from "./src/utils/engraving.mjs";
 import { footnoteOptions } from "./src/utils/footnotes.mjs";
+import { remarkDialogue } from "./src/utils/dialogue.mjs";
 import { SITE } from "./src/config";
 
 export default defineConfig({
@@ -20,6 +21,7 @@ export default defineConfig({
     processor: unified({
       remarkRehype: footnoteOptions,
       remarkPlugins: [
+        remarkDialogue,
         [remarkEngravings, { exceptions: media.darkModeImageExceptions }],
       ],
     }),
