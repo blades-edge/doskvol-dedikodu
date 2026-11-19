@@ -9,6 +9,8 @@
   "price": "2 pençik",
   "articles": [
     "meslektasim.md",
-    "eve-donus-gunu.md"
-  ]
+    "eve-donus-gunu.md",
+    "kuzey-burnu-feneri.md"
+  ],
+  "lead": "kuzey-burnu-feneri.md"
 }
