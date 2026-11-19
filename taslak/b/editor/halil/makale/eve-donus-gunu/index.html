@@ -1,0 +1,105 @@
+<!DOCTYPE html><html lang="tr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><script>
+  (() => {
+    const key = "doskvol-appearance";
+    const valid = value => ["day", "night", "device"].includes(value);
+    const media = window.matchMedia("(prefers-color-scheme: dark)");
+    let preference = "device";
+    try {
+      const saved = localStorage.getItem(key);
+      if (valid(saved)) preference = saved;
+    } catch {
+      // Private browsing may deny storage; the current page still works.
+    }
+    const paint = () => {
+      const dark =
+        preference === "night" || (preference === "device" && media.matches);
+      document.documentElement.dataset.theme = dark ? "dark" : "light";
+      document.querySelectorAll("[data-theme-choice]").forEach(button => {
+        button.setAttribute(
+          "aria-pressed",
+          String(button.dataset.themeChoice === preference)
+        );
+      });
+    };
+    paint();
+    document.addEventListener("DOMContentLoaded", paint, { once: true });
+    media.addEventListener("change", paint);
+    document.addEventListener("doskvol:theme", event => {
+      if (!valid(event.detail)) return;
+      preference = event.detail;
+      try {
+        localStorage.setItem(key, preference);
+      } catch {
+        // Private browsing may deny storage; the current page still works.
+      }
+      paint();
+    });
+    window.addEventListener("storage", event => {
+      if (event.key !== key && event.key !== null) return;
+      preference = valid(event.newValue) ? event.newValue : "device";
+      paint();
+    });
+  })();
+</script><link rel="icon" type="image/svg+xml" href="/taslak/b/editor/halil/favicon.svg"><meta name="robots" content="noindex, nofollow"><link rel="canonical" href="https://doskvol.ink/taslak/b/editor/halil/makale/eve-donus-gunu/"><meta name="description" content="Geçen haftanın Eve dönüş gününde Ironhook'un kapısından üç adam çıktı. İkisini birileri bekliyordu. Üçüncüsünün peşinden Kargaayağı'na kadar yürüdüm."><meta property="og:site_name" content="Doskvol Dedikoduları"><meta property="og:locale" content="tr_TR"><meta property="og:type" content="article"><meta property="og:title" content="Eve dönüş günü | Doskvol Dedikoduları"><meta property="og:description" content="Geçen haftanın Eve dönüş gününde Ironhook'un kapısından üç adam çıktı. İkisini birileri bekliyordu. Üçüncüsünün peşinden Kargaayağı'na kadar yürüdüm."><meta property="og:url" content="https://doskvol.ink/taslak/b/editor/halil/makale/eve-donus-gunu/"><meta property="og:image" content="https://doskvol.ink/taslak/b/editor/halil/_astro/doskvol-line-engraving.Dm_4yufi_ZQG2nm.jpeg"><meta property="og:image:type" content="image/jpeg"><meta property="og:image:alt" content><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="Eve dönüş günü | Doskvol Dedikoduları"><meta name="twitter:description" content="Geçen haftanın Eve dönüş gününde Ironhook'un kapısından üç adam çıktı. İkisini birileri bekliyordu. Üçüncüsünün peşinden Kargaayağı'na kadar yürüdüm."><meta name="twitter:image" content="https://doskvol.ink/taslak/b/editor/halil/_astro/doskvol-line-engraving.Dm_4yufi_ZQG2nm.jpeg"><meta name="twitter:image:alt" content><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,600;0,6..72,700;1,6..72,400&display=swap" rel="stylesheet"><title>Eve dönüş günü | Doskvol Dedikoduları</title><link rel="stylesheet" href="/taslak/b/editor/halil/_astro/EditorialHead.BN2S6vUq.css"></head><body><a class="reading-skip" href="#reading-content">Makaleye geç</a><div class="paper reading-paper"><script type="module">document.querySelectorAll(`[data-theme-choice]`).forEach(e=>{e.addEventListener(`click`,()=>{document.dispatchEvent(new CustomEvent(`doskvol:theme`,{detail:e.dataset.themeChoice}))})});</script><header class="masthead"><aside class="weather-theme" aria-label="Gazetenin hava durumu ve görünümü"><div class="weather-caption">Doskvol’da hava</div><div class="weather-choices" role="group" aria-label="Görünüm tercihi"><button type="button" data-theme-choice="day" aria-pressed="false" title="Kırık güneş — açık görünüm"><img src="/taslak/b/editor/halil/weather-day.png" alt="" width="56" height="56" loading="eager"><span>Gündüz</span></button><button type="button" data-theme-choice="night" aria-pressed="false" title="Ay ve loş bacıları — koyu görünüm"><img src="/taslak/b/editor/halil/weather-night.png" alt="" width="56" height="56" loading="eager"><span>Gece</span></button><button type="button" data-theme-choice="device" aria-pressed="true" title="Hayaletli hava — cihazın tercihini izle"><img src="/taslak/b/editor/halil/weather-device.png" alt="" width="56" height="56" loading="eager"><span>Cihaz</span></button></div></aside><div class="masthead-title"><div class="eyebrow">Akoros’un bağımsız sesi · Doskvol</div><a class="masthead-name" href="/taslak/b/editor/halil/sayi/004/">Doskvol Dedikoduları</a><div class="tagline">Duyduğunuza inanmayın. Duymadıklarınızdan korkun.</div></div></header><main id="reading-content"><header class="reading-heading"><div class="eyebrow">Dedikodular</div><h1>Eve dönüş günü</h1><p class="reading-deck">Geçen haftanın Eve dönüş gününde Ironhook&#39;un kapısından üç adam çıktı. İkisini birileri bekliyordu. Üçüncüsünün peşinden Kargaayağı&#39;na kadar yürüdüm.</p><div class="reading-meta"><span>Aldo Brogan</span><a href="/taslak/b/editor/halil/takvim/">14 Kalivet 847</a><a href="/taslak/b/editor/halil/sayi/">Sayı 004</a></div></header><article class="reading-copy" aria-label="Eve dönüş günü"><p>Geçen hafta, Eve dönüş günü sabahı Ironhook’un kapısındaydım.</p>
+<p>Kargaayağı’nda herkes bilir: Haftanın ikinci günü mahkûmlar tahliye edilir. Ironhook’un kapısının açıldığını bilmeyen ya kodesi hiç görmemiştir ya da hâlâ içeridedir.</p>
+<p>Şafak yeni sökmüştü. Bozçamur’un kara balçığı çizmelerimin kenarına yapışıyordu. Kapının önünde küçük bir kalabalık bekliyordu. Bir kadın, yanında iki çocukla durmuş, kollarının arasında temiz bir gömlek tutuyordu. Biraz ötede iki adam vardı. Ellerini paltolarının ceplerine sokmuşlardı. Bunlar beklemeyi bilen adamlardandı; ne saate baktılar ne birbirleriyle konuştular.</p>
+<p>Demir kapının yanında bir muhafız dikiliyordu. Uzakta bir köpek zincirini gerip duruyor, onu tutan adam her çekişinde biraz daha söyleniyordu.</p>
+<p>Kapı açıldı.</p>
+<p>Üç adam çıktı.</p>
+<p>Birincisi daha birkaç adım atmıştı ki kadın çocuklarla birlikte ona koştu. Adam önce çocuklara, sonra kadına sarıldı. Kadının getirdiği temiz gömleği aldı, açıp baktı. Gömleği hemen giymedi. Kolunun üzerine katlayıp taşıdı.</p>
+<p>İkinci adamı bekleyen iki kişi karşıladı. Birisi elini omzuna koydu, öteki yol gösterdi. Biraz ileride duran faytona bindiler. Üçü de konuşmadı. Fayton hareket etti.</p>
+<p>Üçüncüyü kimse karşılamadı.</p>
+<p>Elinde küçük bir bohça vardı. Üzerindeki ceket kollarına kısa geliyordu. Kapıdan çıktıktan sonra bir süre durdu. Önce sağa, sonra sola baktı. Diğerlerinin uzaklaşmasını izledi.</p>
+<p>Muhafız kapıyı kapatırken seslendi:</p>
+<p>“Çıkan çıktı. Dağılın.”</p>
+<p>Adam yürümeye başladı. Ben de peşinden gittim.</p>
+<p>Bozçamur’dan çıkarken çamur biraz azaldı. Adam yavaş yürüyordu. Arada duruyor, sokak lambalarına bakıyordu. Birinin altında öyle uzun bekledi ki yanından geçen iki işçi dönüp ona baktı.</p>
+<p>Sonra bir kavşağa geldik. Adam durdu. Karşısındaki binaları inceledi. Bir sokağa girdi, birkaç adım sonra geri çıktı.</p>
+<p>Beni fark etmişti. Bir süre daha yürüdü, ardından dönüp doğrudan yüzüme baktı.</p>
+<p>“Kargaayağı ne tarafta kaldı?”</p>
+<p>Yolu gösterdim.</p>
+<p>“Ben de oraya gidiyorum,” dedim.</p>
+<p>Başını salladı. Birlikte yürümeye başladık.</p>
+<p>Adımlarını benimkine uydurmadı. Ben yavaşladım.</p>
+<p>Köprülerden birini geçerken korkuluğa dokundu. Elini taşın üzerinde birkaç adım sürükledi. Sonra çekti.</p>
+<p>Ne kadar zamandır içeride olduğunu sormadım. O da benim neden Ironhook’un kapısında beklediğimi sormadı.</p>
+<p>Kargaayağı’na vardığımızda sokaklar kalabalıklaşmıştı. Demirciler iş başındaydı. Bir kasabın önünde iki kadın etin fiyatını tartışıyordu. Adam dükkâna bir an baktı, durmadı. Dar geçitlerden işlerine yetişmeye çalışan insanlar akıyordu.</p>
+<p>Çavdar Sokağı’nda adam durdu.</p>
+<p>Karşımızda eski bir konak vardı. Büyük kapının iki yanına sonradan küçük girişler açılmış, üst kat pencereleri farklı renklere boyanmıştı. Kapılardan birinin üzerinde bir isim yazıyordu.</p>
+<p>Adam yaklaşıp yazıya baktı. Bir süre öyle kaldı.</p>
+<p>Üst kattaki pencerelerden biri açıldı. Bir kadın başını uzattı. Adamı gördü. Ardından pencereyi kapatıp perdeyi çekti.</p>
+<p>Adam geri döndü ve köşedeki meyhaneye girdi.</p>
+<p>Ben kapıda biraz bekledim. Sonra arkasından girip girişe yakın bir masaya oturdum.</p>
+<p>Tezgâhın arkasında genç bir meyhaneci vardı. Adamı tanımadı. Ne içeceğini sordu. Adam bir şey söyledi; duymadım. Meyhaneci bir kadeh doldurup önüne koydu. Adam kadehi alıp köşedeki masalardan birine oturdu.</p>
+<p>İçmedi.</p>
+<p>Yan masada üç müdavim eski günlerden konuşuyordu. Önce kapanan bir dükkândan, sonra yıllar önce aynı sokakta çıkan bir kavgadan söz ettiler. İçlerinden biri, Çavdar Sokağı’nda bir zamanlar oturan bir adamın hikâyesine geçti.</p>
+<p>“Ben bilirim o işi,” dedi. “Diken derlerdi ona. Çavdar’ın Dikeni. Birinin mangırına çökmüştü, enselediler.”</p>
+<p>“Bir de kadın meselesi vardı,” dedi öteki. “Kocası şikâyet etmişti.”</p>
+<p>Üçüncüsü başını salladı.</p>
+<p>“Üstüne bir de birinin raconunu bozmuştu. Ondan sonra kim kurtarır?”</p>
+<p>İlki bir sokak adı ekledi, ikincisi bir isim. Üçüncüsü kimsenin hatırlamadığı bir geceyi ayrıntılarıyla anlattı. Hikâye her ağızda biraz daha büyüyordu.</p>
+<p>Köşedeki adam başını kaldırdı. Dinledi. Kadehine dokunmadı.</p>
+<p>Müdavimler onu fark etmemişti. İçlerinden biri, o eski adamın nasıl yakalandığını kahkahalarla anlatmaya başladı. Bileklerini birleştirip havaya kaldırdı; ötekiler güldü.</p>
+<p>Tam o sırada kapı açıldı.</p>
+<p>İçeri iri yapılı, kır saçlı bir kasap girdi. Önlüğünü çıkarmış, omzuna atmıştı. Tezgâha doğru yürürken köşedeki adamı gördü. Durdu, bir süre baktı.</p>
+<p>“Sen…” dedi.</p>
+<p>Adam başını çevirdi.</p>
+<p>“Çavdar’ın Dikeni değil misin?”</p>
+<p>Müdavimlerin konuşması kesildi. Bileklerini havaya kaldırmış olan adam, ellerini yavaşça indirdi.</p>
+<p>Köşedeki adam ayağa kalkmadı. Yalnızca başını hafifçe eğdi.</p>
+<p>Kasap yanına yürüdü, elini adamın omzuna koydu.</p>
+<p>“Dönmüşsün.”</p>
+<p>Başka bir şey sormadı. Tezgâha döndü.</p>
+<p>“Ona benden.”</p>
+<p>Meyhaneci yeni bir kadeh doldurdu. Kasap karşısındaki sandalyeye oturdu.</p>
+<p>Adamın önünde iki kadeh vardı.</p>
+<p>Kasabınkini aldı. İçti.</p>
+<p>Aralarında konuşulacak şeyler olduğunu düşündüm ve meyhaneden çıktım. Onuncu saatte yeniden uğradığımda ikisi de hâlâ aynı masadaydı. Kasap konuşuyor, adam dinliyordu. Yan masadaki müdavimler artık başka bir hikâye anlatıyordu.</p>
+<p>Eşref vakti başladığında köşedeki adam dışarı çıktı. Kasap kapıya kadar geldi. Elinde kâğıda sarılmış küçük bir paket vardı. Adamın bohçasına baktı, sonra paketi uzattı. Adam aldı. Kasap içeri döndü.</p>
+<p>Adam yürümeye başladı. Ben de arkasından gittim.</p>
+<p>Çavdar Sokağı’nı geride bıraktık. Biraz önce birlikte geçtiğimiz sokaklardan yürüdük. Bu kez yol sormuyordu. Önümüzden geçen bir faytona aldırmadan ilerledi.</p>
+<p>Kargaayağı’nın çıkışına yaklaşırken geldiğimiz yöndeki köprülerden birine saptı. Köprünün başında durdu, arkasını dönüp bana baktı.</p>
+<p>“Sen nereye gidiyorsun?” diye sordu.</p>
+<p>“Eve,” dedim.</p>
+<p>Başını salladı.</p>
+<p>Köprüyü geçti.</p><footer class="byline">— Aldo Brogan (Gaip muhabiri)</footer></article><div class="reading-return"><a href="/taslak/b/editor/halil/sayi/004/">← Sayı 004</a><a href="#reading-content">Makalenin başına ↑</a></div></main><footer>Doskvol Dedikoduları · Duyduğunuza inanmayın. Duymadıklarınızdan korkun.</footer></div></body></html>
