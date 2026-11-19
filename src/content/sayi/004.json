@@ -6,5 +6,9 @@
     "month": "Kalivet",
     "year": 847
   },
-  "price": "2 pençik"
+  "price": "2 pençik",
+  "articles": [
+    "meslektasim.md",
+    "eve-donus-gunu.md"
+  ]
 }
