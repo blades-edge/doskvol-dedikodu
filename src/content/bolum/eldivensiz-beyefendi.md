@@ -11,45 +11,21 @@ shareImageAlt: Müfettiş Voss, onarılmış eldivenleriyle defterini tutarken S
 
 #### Üçüncü saati buçuk geçe
 
-Ayak sesleri kapının önünde kesildi. Kimse içeri girmedi.
+Ayak sesleri kapının önünde kesildi. Kimse içeri girmedi. Profesör kapıya bakmadı.
 
-Profesör kapıya bakmadı.
+Anahtarı delil tepsisinden aldım. Uzunluğu otuz iki milveyrdi.[^milveyr] Üç dişi vardı. Sapındaki aşınma düzensizdi. Defterimin boş bir sayfasına birebir ölçekte çizdim. Her iki yüzünü gösterdim. Çizimin yanına ölçüleri yazdım. Tepsiye geri bıraktım.
 
-Anahtarı delil tepsisinden aldım. Uzunluğu otuz iki milveyrdi.[^milveyr] Üç dişi vardı. Sapındaki aşınma düzensizdi.
+Kapı açıldı. İçeri iki Ruh Muhafızı girdi. Bronz maskeleri yüzlerini bütünüyle örtüyordu. Üzerlerinde koyu renk, ağır paltolar vardı. Birinin sağ elinde kalın bir eldiven, diğerinin belinde kısa bir zincir bulunuyordu. Konuşmadılar.
 
-Defterimin boş bir sayfasına birebir ölçekte çizdim. Her iki yüzünü gösterdim. Çizimin yanına ölçüleri yazdım.
-
-Anahtarı tepsiye geri bıraktım.
-
-Kapı açıldı. İçeri iki Ruh Muhafızı girdi.
-
-Bronz maskeleri yüzlerini bütünüyle örtüyordu. Üzerlerinde koyu renk, ağır paltolar vardı. Birinin sağ elinde kalın bir eldiven, diğerinin belinde kısa bir zincir bulunuyordu.
-
-Konuşmadılar.
-
-Profesör Halbrecht masanın üzerindeki teslim belgesini aldı. Muhafızlardan birine uzattı.
-
-Muhafız belgeyi okudu. Kalemi aldı. İmza yerine birbirini kesen iki çizgi koydu.
+Profesör Halbrecht masanın üzerindeki teslim belgesini aldı. Muhafızlardan birine uzattı. Muhafız belgeyi okudu. Kalemi aldı. İmza yerine birbirini kesen iki çizgi koydu.
 
 Fısıltı ikinci incelemeye başlamamıştı.
 
 “Cesedin ruhsal durumuna ilişkin bir değerlendirme daha gerekiyor,” dedi.
 
-Muhafızlardan biri başını ona çevirdi. Bir süre baktı. Sonra belgeyi katlayıp paltosunun içine yerleştirdi.
+Muhafızlardan biri başını ona çevirdi. Bir süre baktı. Sonra belgeyi katlayıp paltosunun içine yerleştirdi. Fısıltı geri çekildi. Ceset örtüldü. Sedyenin tekerlekleri taş zeminde iki kez takıldı. Muhafızlardan biri sedyenin önünü kaldırdı. Diğeri kapıyı açtı.
 
-Fısıltı geri çekildi.
-
-Ceset örtüldü. Sedyenin tekerlekleri taş zeminde iki kez takıldı. Muhafızlardan biri sedyenin önünü kaldırdı. Diğeri kapıyı açtı.
-
-Çıkmadan önce arkadaki Muhafız durdu.
-
-Bronz maskesini delil tepsisine çevirdi. Başını hafifçe eğdi. Bir süre öyle kaldı. Tepside anahtar, pens ve üzerinde koyu lekeler bulunan iki parça pamuk duruyordu.
-
-Sonra diğerini izleyerek çıktı.
-
-Hiçbir soru sorulmadı.
-
-Profesör sedye uzaklaşana kadar kapıda bekledi.
+Çıkmadan önce arkadaki Muhafız durdu. Bronz maskesini delil tepsisine çevirdi. Başını hafifçe eğdi. Bir süre öyle kaldı. Tepside anahtar, pens ve üzerinde koyu lekeler bulunan iki parça pamuk duruyordu. Sonra diğerini izleyerek çıktı. Hiçbir soru sorulmadı. Profesör sedye uzaklaşana kadar kapıda bekledi.
 
 “Raporu yarın gönder, Adrian. Ateşli nöbet gözlemini de ekle.”
 
@@ -57,23 +33,13 @@ Profesör sedye uzaklaşana kadar kapıda bekledi.
 
 “Onu da yazabilirsin.”
 
-Önlüğünü çıkardı. Ellerini yeniden yıkadı.
-
-Ben defterimi kapattım.
+Önlüğünü çıkardı. Ellerini yeniden yıkadı. Ben defterimi kapattım.
 
 #### Dokuzuncu saat
 
-Bekleme odamda dört hasta vardı.
+Bekleme odamda dört hasta vardı. Üçü Billurtaş'ta oturan ailelerdendi. Dördüncüsü, kapıya en yakın sandalyede oturan bir kadındı. Paltosunun omuzları ıslaktı. Eldivenlerinin parmak uçlarında farklı renk iplikle yapılmış onarımlar vardı. Adı deftere yazılmamıştı.
 
-Üçü Billurtaş'ta oturan ailelerdendi. Dördüncüsü, kapıya en yakın sandalyede oturan bir kadındı. Paltosunun omuzları ıslaktı. Eldivenlerinin parmak uçlarında farklı renk iplikle yapılmış onarımlar vardı.
-
-Adı deftere yazılmamıştı.
-
-Yardımcım, kadının muayene ücreti ödemeyeceğini söylediğini bildirdi.
-
-İçeri aldım.
-
-Muayene masasının yanından geçti. Oturmadı.
+Yardımcım, kadının muayene ücreti ödemeyeceğini söylediğini bildirdi. İçeri aldım. Muayene masasının yanından geçti. Oturmadı.
 
 “Doktor Adrian Sorel?”
 
@@ -81,15 +47,9 @@ Muayene masasının yanından geçti. Oturmadı.
 
 “Müfettiş Mara Voss.”
 
-Paltosunun içinden deri bir dosya çıkardı. Masama koydu.
+Paltosunun içinden deri bir dosya çıkardı. Masama koydu. Paltosundan halıya su damlıyordu. Açık renk dokuma, damlaların düştüğü yerde koyulaştı. Kadın bunu fark etti. Paltosunun önünü kapattı, fakat çıkarmadı.
 
-Paltosundan halıya su damlıyordu. Açık renk dokuma, damlaların düştüğü yerde koyulaştı. Kadın bunu fark etti. Paltosunun önünü kapattı, fakat çıkarmadı.
-
-Duvardaki diplomama baktı. Ardından yanındaki çerçeveye döndü.
-
-Profesör Halbrecht'in, muayenehanemi açtığım yıl yazdığı tavsiye mektubuydu.
-
-İmzasının bulunduğu yerde bakışı bir süre kaldı.
+Duvardaki diplomama baktı. Ardından yanındaki çerçeveye döndü. Profesör Halbrecht'in, muayenehanemi açtığım yıl yazdığı tavsiye mektubuydu. İmzasının bulunduğu yerde bakışı bir süre kaldı.
 
 “Dün sabah incelediğiniz kadın hakkında konuşacağız,” dedi.
 
@@ -101,17 +61,7 @@ Başını çevirdi.
 
 “Biliyorum.”
 
-Dosyayı açtı.
-
-Kâğıtlardan yükselen keskin dezenfektan kokusu midemde kısa süreli bir kasılmaya neden oldu. Bunu dezenfektanın kalitesizliğine bağladım.
-
-Voss iki belgeyi önümde yan yana yerleştirdi.
-
-Her ikisinde de bir ceset çizimi vardı. Birincisi Kargaayağı'ndaki kanallardan çıkarılmış bir erkeğe, ikincisi Rıhtım'da bir iskelenin altında bulunmuş bir kadına aitti.
-
-İki cesedin de sol bileğinde dairesel bir iz gösterilmişti.
-
-Cetvelimi aldım.
+Dosyayı açtı. Kâğıtlardan yükselen keskin dezenfektan kokusu midemde kısa süreli bir kasılmaya neden oldu. Bunu dezenfektanın kalitesizliğine bağladım. Voss iki belgeyi önümde yan yana yerleştirdi. Her ikisinde de bir ceset çizimi vardı. Birincisi Kargaayağı'ndaki kanallardan çıkarılmış bir erkeğe, ikincisi Rıhtım'da bir iskelenin altında bulunmuş bir kadına aitti. İki cesedin de sol bileğinde dairesel bir iz gösterilmişti. Cetvelimi aldım.
 
 “Bunları kim çizdi?”
 
@@ -121,15 +71,7 @@ Cetvelimi aldım.
 
 “İki ayrı görevli tarafından.”
 
-İzlerin çaplarını karşılaştırdım. Çaplar aynıydı. Bu sabah gördüğüm işaretin ölçüsüyle de örtüşüyordu.
-
-Ölçümü ikinci kez yaptım.
-
-Gereksizdi.
-
-“Üçüncü bir ceset daha var,” dedim.
-
-Voss başka bir sayfa çıkardı.
+İzlerin çaplarını karşılaştırdım. Çaplar aynıydı. Bu sabah gördüğüm işaretin ölçüsüyle de örtüşüyordu. Ölçümü ikinci kez yaptım. Gereksizdi. “Üçüncü bir ceset daha var,” dedim. Voss başka bir sayfa çıkardı.
 
 “Adı Ilyra Fen'di.”
 
@@ -137,11 +79,7 @@ Kısa bir süre sustu. Dosyanın kenarını düzeltti.
 
 “Kurbanın Muhafız incelemesi burada.”
 
-Belgeyi çevirdim.
-
-İnceleme tamamlanamadan imha edildi.
-
-Ceset morgdan altı saatten kısa bir süre önce çıkarılmıştı.
+Belgeyi çevirdim. İnceleme tamamlanamadan imha edildi. Ceset morgdan altı saatten kısa bir süre önce çıkarılmıştı.
 
 “Ruhsal inceleme yapılmadı mı?”
 
@@ -151,21 +89,7 @@ Ceset morgdan altı saatten kısa bir süre önce çıkarılmıştı.
 
 “Bu sorunun cevabını henüz alamadım.”
 
-Masamın arkasına geçtim. Ellerimi masanın altına aldım.
-
-Voss üçüncü bir belge uzattı. Morgdan alınan delillerin listesiydi.
-
-Giysiler, saç tokası, iki küçük yüzük ve üzerinde koyu leke bulunan bir mendil kaydedilmişti.
-
-Anahtar yoktu.
-
-Listeyi yeniden okudum. Sayfanın arkasına baktım.
-
-Anahtarı çizdiğim defter, masamın sağ çekmecesindeydi.
-
-Voss'a bundan söz etmedim.
-
-“Raporunuza ne yazacaksınız?” diye sordu.
+Masamın arkasına geçtim. Ellerimi masanın altına aldım. Voss üçüncü bir belge uzattı. Morgdan alınan delillerin listesiydi. Giysiler, saç tokası, iki küçük yüzük ve üzerinde koyu leke bulunan bir mendil kaydedilmişti. Anahtar yoktu. Listeyi yeniden okudum. Sayfanın arkasına baktım. Anahtarı çizdiğim defter, masamın sağ çekmecesindeydi. Voss'a bundan söz etmedim. “Raporunuza ne yazacaksınız?” diye sordu.
 
 “Ölüm nedeni belirlenemedi. Ateşli nöbet ve zehirlenme olasılıkları değerlendirilecek.”
 
@@ -175,9 +99,7 @@ Voss'a bundan söz etmedim.
 
 “Profesör Halbrecht başka görüşte.”
 
-Profesör bu görüşü yalnızca morgda dile getirmişti. İlkinde odada ikimiz vardık. İkincisinde Fısıltı da oradaydı.
-
-Voss kalemini çıkardı. Bir şey yazmadı.
+Profesör bu görüşü yalnızca morgda dile getirmişti. İlkinde odada ikimiz vardık. İkincisinde Fısıltı da oradaydı. Voss kalemini çıkardı. Bir şey yazmadı.
 
 “Hastalarınız size her zaman doğruyu söyler mi, doktor?”
 
@@ -187,9 +109,7 @@ Voss kalemini çıkardı. Bir şey yazmadı.
 
 “Anlatılanları değil, bulguları esas alırım.”
 
-Voss kalemini kapattı.
-
-Son belgeyi masaya bıraktı. Kiliseye bağlı morgun kabul izniydi. Altında okunması güç bir imza vardı.
+Voss kalemini kapattı. Son belgeyi masaya bıraktı. Kiliseye bağlı morgun kabul izniydi. Altında okunması güç bir imza vardı.
 
 “Buradaki saati okuyun.”
 
@@ -199,11 +119,7 @@ Okudum.
 
 “Şimdi bunu.”
 
-İkinci belge ölüm çanının kaydıydı.
-
-İpek vaktinin sülüsü.
-
-“İzin, çandan önce düzenlenmiş,” dedim.
+İkinci belge ölüm çanının kaydıydı. İpek vaktinin sülüsü. “İzin, çandan önce düzenlenmiş,” dedim.
 
 “Evet.”
 
@@ -227,9 +143,7 @@ Belgeyi ışığa tuttum. Harfler birbirine geçmişti. Bir soyadının yalnızc
 
 “Ben de okuyamadım.”
 
-Saate baktım. Dokuzuncu saati sülüs geçiyordu.
-
-Voss paltosunun cebinden küçük bir not defteri çıkardı.
+Saate baktım. Dokuzuncu saati sülüs geçiyordu. Voss paltosunun cebinden küçük bir not defteri çıkardı.
 
 “Bir tanığım var. Katedralin üç sokak ötesinde gece bekçiliği yapıyor. Çan çaldığında nöbet yerindeymiş.”
 
@@ -243,9 +157,7 @@ Voss kalemini yeniden açtı. Defterine bir şey yazdı.
 
 “Bir ayrıntıyı özellikle hatırlıyor,” dedi. “Beyefendinin ellerinde eldiven yokmuş.”
 
-Gözlerini ellerime indirdi.
-
-Masamın üzerinde duruyorlardı.
+Gözlerini ellerime indirdi. Masamın üzerinde duruyorlardı.
 
 ![Müfettiş Voss, onarılmış eldivenleriyle defterini tutarken Sorel’in masadaki çıplak ellerine bakıyor.](../../assets/images/eldivensiz-beyefendi-sorel.avif)
 
@@ -267,28 +179,10 @@ Kapıya yöneldi.
 
 “Beni neden durdurmadınız?”
 
-Voss elini kapının tokmağına koydu.
-
-Cevap vermedi.
-
-Ardından bana döndü.
+Voss elini kapının tokmağına koydu. Cevap vermedi. Ardından bana döndü.
 
 “Yarın bana o gece gördüklerinizi anlatacaksınız. Ya tanık olarak, ya suç ortağı olarak. Hangisi olacağına siz karar verin.”
 
-Kapıyı açtı. Çıkarken kapatmadı.
-
-Yardımcım birkaç dakika sonra içeri girdi. Bekleyen hastaları sordu.
-
-Muayenelere devam ettim.
-
-Son hastam, sağ elinin işaret parmağında zaman zaman uyuşma olduğunu söyleyen yaşlı bir hanımdı. Dolaşımı olağandı. Nabzı dakikada yetmiş ikiydi. Muayenede belirgin bir bozukluk saptamadım.
-
-Bir hafta sonra yeniden gelmesini önerdim.
-
-Akşam muayenehaneyi kapatmadan önce eldiven siparişi verdim.
-
-İki çift. Siyah.
-
-İkinci bölümün sonu. Dr. Sorel'in vaka defteri bir sonraki sayıda devam edecek.
+Kapıyı açtı. Çıkarken kapatmadı. Yardımcım birkaç dakika sonra içeri girdi. Bekleyen hastaları sordu. Muayenelere devam ettim. Son hastam, sağ elinin işaret parmağında zaman zaman uyuşma olduğunu söyleyen yaşlı bir hanımdı. Dolaşımı olağandı. Nabzı dakikada yetmiş ikiydi. Muayenede belirgin bir bozukluk saptamadım. Bir hafta sonra yeniden gelmesini önerdim. Akşam muayenehaneyi kapatmadan önce eldiven siparişi verdim. İki çift. Siyah.
 
 [^milveyr]: Yaklaşık 1,2 parmak. Milveyr, bir veyrin binde biridir. Bkz. [Geleneksel Ölçülerin İmparatorluk Karşılıkları Cetveli](../../../imparatorluk-olculeri/).

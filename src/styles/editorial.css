@@ -395,6 +395,20 @@ footer {
 .reading-copy p {
   margin: 0 0 1.2em;
 }
+.reading-copy > .dialogue,
+.reading-copy q {
+  font-style: italic;
+}
+.reading-copy q::before,
+.reading-copy q::after {
+  content: none;
+}
+.reading-copy > .dialogue-even {
+  margin-inline-start: 1rem;
+}
+.reading-copy > .dialogue:has(+ .dialogue) {
+  margin-block-end: 0.2em;
+}
 .reading-copy > p:first-of-type::first-letter {
   float: left;
   font-family: "Cormorant Garamond", Georgia, serif;
