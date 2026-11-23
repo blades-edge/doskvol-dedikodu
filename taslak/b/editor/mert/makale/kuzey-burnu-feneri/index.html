@@ -1,0 +1,92 @@
+<!DOCTYPE html><html lang="tr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><script>
+  (() => {
+    const key = "doskvol-appearance";
+    const valid = value => ["day", "night", "device"].includes(value);
+    const media = window.matchMedia("(prefers-color-scheme: dark)");
+    let preference = "device";
+    try {
+      const saved = localStorage.getItem(key);
+      if (valid(saved)) preference = saved;
+    } catch {
+      // Private browsing may deny storage; the current page still works.
+    }
+    const paint = () => {
+      const dark =
+        preference === "night" || (preference === "device" && media.matches);
+      document.documentElement.dataset.theme = dark ? "dark" : "light";
+      document.querySelectorAll("[data-theme-choice]").forEach(button => {
+        button.setAttribute(
+          "aria-pressed",
+          String(button.dataset.themeChoice === preference)
+        );
+      });
+    };
+    paint();
+    document.addEventListener("DOMContentLoaded", paint, { once: true });
+    media.addEventListener("change", paint);
+    document.addEventListener("doskvol:theme", event => {
+      if (!valid(event.detail)) return;
+      preference = event.detail;
+      try {
+        localStorage.setItem(key, preference);
+      } catch {
+        // Private browsing may deny storage; the current page still works.
+      }
+      paint();
+    });
+    window.addEventListener("storage", event => {
+      if (event.key !== key && event.key !== null) return;
+      preference = valid(event.newValue) ? event.newValue : "device";
+      paint();
+    });
+  })();
+</script><link rel="icon" type="image/svg+xml" href="/taslak/b/editor/mert/favicon.svg"><meta name="robots" content="noindex, nofollow"><link rel="canonical" href="https://doskvol.ink/taslak/b/editor/mert/makale/kuzey-burnu-feneri/"><meta name="description" content="Av mevsimi öncesindeki yıllık bakımın ardından Kuzey Burnu Feneri yeniden yakıldı. Işığı, Zifirdeniz'de yüzlerce mil öteden görülüyor."><meta property="og:site_name" content="Doskvol Dedikoduları"><meta property="og:locale" content="tr_TR"><meta property="og:type" content="article"><meta property="og:title" content="Kuzey Burnu Feneri yeniden yandı | Doskvol Dedikoduları"><meta property="og:description" content="Av mevsimi öncesindeki yıllık bakımın ardından Kuzey Burnu Feneri yeniden yakıldı. Işığı, Zifirdeniz'de yüzlerce mil öteden görülüyor."><meta property="og:url" content="https://doskvol.ink/taslak/b/editor/mert/makale/kuzey-burnu-feneri/"><meta property="og:image" content="https://doskvol.ink/taslak/b/editor/mert/_astro/doskvol-line-engraving.Dm_4yufi_2tO3zG.jpeg"><meta property="og:image:type" content="image/jpeg"><meta property="og:image:alt" content><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="Kuzey Burnu Feneri yeniden yandı | Doskvol Dedikoduları"><meta name="twitter:description" content="Av mevsimi öncesindeki yıllık bakımın ardından Kuzey Burnu Feneri yeniden yakıldı. Işığı, Zifirdeniz'de yüzlerce mil öteden görülüyor."><meta name="twitter:image" content="https://doskvol.ink/taslak/b/editor/mert/_astro/doskvol-line-engraving.Dm_4yufi_2tO3zG.jpeg"><meta name="twitter:image:alt" content><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,600;0,6..72,700;1,6..72,400&display=swap" rel="stylesheet"><title>Kuzey Burnu Feneri yeniden yandı | Doskvol Dedikoduları</title><link rel="stylesheet" href="/taslak/b/editor/mert/_astro/EditorialHead.B4lPX8nn.css"></head><body><a class="reading-skip" href="#reading-content">Makaleye geç</a><div class="paper reading-paper"><script type="module">document.querySelectorAll(`[data-theme-choice]`).forEach(e=>{e.addEventListener(`click`,()=>{document.dispatchEvent(new CustomEvent(`doskvol:theme`,{detail:e.dataset.themeChoice}))})});</script><header class="masthead"><aside class="weather-theme" aria-label="Gazetenin hava durumu ve görünümü"><div class="weather-caption">Doskvol’da hava</div><div class="weather-choices" role="group" aria-label="Görünüm tercihi"><button type="button" data-theme-choice="day" aria-pressed="false" title="Kırık güneş — açık görünüm"><img src="/taslak/b/editor/mert/weather-day.png" alt="" width="56" height="56" loading="eager"><span>Gündüz</span></button><button type="button" data-theme-choice="night" aria-pressed="false" title="Ay ve loş bacıları — koyu görünüm"><img src="/taslak/b/editor/mert/weather-night.png" alt="" width="56" height="56" loading="eager"><span>Gece</span></button><button type="button" data-theme-choice="device" aria-pressed="true" title="Hayaletli hava — cihazın tercihini izle"><img src="/taslak/b/editor/mert/weather-device.png" alt="" width="56" height="56" loading="eager"><span>Cihaz</span></button></div></aside><div class="masthead-title"><div class="eyebrow">Akoros’un bağımsız sesi · Doskvol</div><a class="masthead-name" href="/taslak/b/editor/mert/sayi/004/">Doskvol Dedikoduları</a><div class="tagline">Duyduğunuza inanmayın. Duymadıklarınızdan korkun.</div></div></header><main id="reading-content"><header class="reading-heading"><div class="eyebrow">Haberler</div><h1>Kuzey Burnu Feneri yeniden yandı</h1><p class="reading-deck">Av mevsimi öncesindeki yıllık bakımın ardından Kuzey Burnu Feneri yeniden yakıldı. Işığı, Zifirdeniz&#39;de yüzlerce mil öteden görülüyor.</p><div class="reading-meta"><span>Vaurin Prichard</span><a href="/taslak/b/editor/mert/takvim/">14 Kalivet 847</a><a href="/taslak/b/editor/mert/sayi/">Sayı 004</a></div></header><article class="reading-copy" aria-label="Kuzey Burnu Feneri yeniden yandı"><p>Kalivet’in 8’inde Yazı İşleri’nden bir görev yazısı aldım.</p>
+<blockquote>
+<p>“Muhabirimiz Vaurin Prichard’ın, Kuzey Burnu Feneri’nin yeniden yakılması münasebetiyle Aktaç’ta bulunması ve bu husustaki gelişmeleri okurlarımıza aktarması uygun görülmüştür.”</p>
+</blockquote>
+<p>Yazının yanında Aktaç’a geçiş belgem de vardı.</p>
+<p>Kalivet’in 11’inde, Birinci saatten kısa süre sonra Bowmore Köprüsü’ne vardım.</p>
+<p>Billurtaş’tan Aktaç’a uzanan köprünün İmparatorluk’taki en büyük köprü olduğu söylenir. İki yanında lüks dükkânlar, geniş pencereli apartmanlar ve ince demir işçiliğiyle süslenmiş cepheler sıralanır. Köprü boyunca ilerleyen faytonların çoğunda perdeler çekiliydi. Yayaların arasında ise yolculardan çok hizmetkârlar bulunuyordu.</p>
+<p>Doskvol ahalisinin büyük bölümü bu köprüyü hayatı boyunca bir kez bile geçmez. Köprüden geçmek yasak değildir. Ancak öte yakada bulunmak için çoğu insanın bir sebebi yoktur.</p>
+<p>Benim vardı. Belgemde yazıyordu.</p>
+<p>Aktaç girişindeki muhafız kâğıdı aldı. Mührünü inceledi, yüzüme baktı, sonra geri verdi.</p>
+<p>Defterine bir şey yazmadı.</p>
+<p>Köprünün ötesinde taş döşemeler daha geniş, binalar daha seyrek, elektrik lambaları daha parlaktı. Lord Vali’nin kalesi, yükseldiği zirveden bütün adaya hâkimdi. Kalenin önünde zırhlı süvariler talim yapıyordu. Birkaç sokak ötede, tersanede yenilenen bir azmarân avcı gemisinin güvertesinden emir sesleri duyuluyordu.</p>
+<p>Fener, adanın Zifirdeniz’e bakan ucunda yükseliyordu.</p>
+<p>Yapının alt bölümü koyu renkli, iri taş bloklardan oluşuyordu. Bunların üzerinde sonradan yerleştirilmiş metal kuşaklar, iletim hatları ve elektroplazmik aygıtlar bulunuyordu. Kadim taş işçiliğinin bittiği yerde yeni parçaların bağlantıları açıkça görülüyordu. Bir duvarın içine alınmış eski bir pencere boşluğu, bugün kalın bir iletim borusunun geçtiği yere dönüşmüştü.</p>
+<p>Kuzey Burnu Feneri’nin felaketten önce ne amaçla kullanıldığı bilinmiyor. Ne zaman bugünkü işlevine dönüştürüldüğünü bilen de yok. Günümüzde Doskvol çevresindeki karanlık denizde seyreden gemilere yön gösteren elektroplazmik bir fener olarak hizmet veriyor.</p>
+<p>Bakım çalışmalarından sorumlu Çakıncı ustası beni alt kattaki makine bölümünde karşıladı.</p>
+<p>Kırk yıldır burada çalıştığını söyledi.</p>
+<p>Ellerinin üzerinde eski yanık izleri vardı. Konuşurken gözlerini aygıtlardan pek ayırmıyordu. Birkaç kez cümlesinin ortasında durup göstergeleri kontrol etti.</p>
+<p>“İletim hatlarını yeniledik,” dedi. “Yalıtım bağlantıları gözden geçirildi. Odaklama düzeneği ayarlandı. Üst bölümdeki parçalar sökülüp temizlendi.”</p>
+<p>Bakımın ne kadar sürdüğünü sordum. Tarihleri söyledi. Not ettim.</p>
+<p>Her yıl aynı işlemlerin yapılıp yapılmadığını sordum.</p>
+<p>“Av mevsiminden önce bakım yaparız. Her yıl aynı işler.”</p>
+<p>Kuledeki aygıtın denizde ne kadar uzaktan görülebildiğini öğrenmek istedim.</p>
+<p>“Yüzlerce mil öteden,” dedi.</p>
+<p>Bunu nasıl ölçtüklerini sordum. Avcı gemilerinden alınan seyir bildirimlerini ve eski gözlem kayıtlarını anlattı. Işığın yalnızca gücünün değil, düzenli çalışmasının da önemli olduğunu söyledi. Denizde yönünü kaybetmiş bir gemi, fenerin ışığının yeniden görünmesini bekleyebilirdi.</p>
+<p>“Av dönüşü ilk ışığı gören gemi düdüğünü üç kez çalar,” dedi.</p>
+<p>Bir göstergeyi kontrol etti. Sonra ekledi:</p>
+<p>“Bu kulede onu bir tek ben duyarım.”</p>
+<p>Neden yalnızca onun duyduğunu sormadım.</p>
+<p>Usta beni üst bölüme çıkardı. Merdivenler dardı. Basamakların bir kısmı eski taştan, geri kalanı metalden yapılmıştı. Tepede bakım için açılmış panellerin çoğu kapatılmış, birkaç usta son bağlantılar üzerinde çalışmaya devam ediyordu.</p>
+<p>Buradan Doskvol’un büyük bölümü görülebiliyordu.</p>
+<p>Aktaç’ın aydınlık caddeleri aşağıda uzanıyor, Bowmore Köprüsü karşı kıyıya ince bir hat gibi bağlanıyordu. Daha ötede Billurtaş’ın ışıkları, ardından Nizamhane’nin büyük yapıları seçiliyordu. Şehrin geri kalanı, bacalarla kulelerin arasına çökmüş koyu bir sisin içindeydi.</p>
+<p>Yeniden yakma işlemi alacakaranlıkta gerçekleştirildi.</p>
+<p>Törene Lord Vali’nin dairesinden bir görevli, birkaç İmparatorluk subayı ve Akademi’den gelen küçük bir grup katıldı. Görevli, fenerin deniz seyrüseferinin emniyeti bakımından taşıdığı önemi belirten kısa bir konuşma yaptı. Ardından bakımın tamamlandığını ilan etti.</p>
+<p>Birkaç kişi alkışladı.</p>
+<p>Çakıncı ustası konuşmayı dinlerken ellerini arkasında birleştirmişti. Görevli son sözlerini bitirince yerinden ayrıldı ve kumanda bölümüne geçti.</p>
+<p>Önce aşağıdan ağır bir titreşim yükseldi.</p>
+<p>Metal bağlantılar hafifçe sarsıldı. Üst bölümdeki göstergelerin ışıkları sırayla yandı. Usta bir kolu indirdi. Bir süre hiçbir şey olmadı.</p>
+<p>Ardından fener yandı.</p>
+<p>Elektroplazmik ışık kulenin tepesinden Zifirdeniz’e uzandı. Karanlık suyun üzerinde geniş bir hat oluşturdu. Işık ilerledikçe dalgaların yüzeyi kısa süreliğine seçilebiliyordu. Sonra ışık dönmeye başladı.</p>
+<p>Deniz, felaketten beri kara mürekkep rengindedir. Dalgaların çok altında ise milyonlarca küçük yıldız görünür.</p>
+<p>O akşam gökyüzü dumandan görünmüyordu.</p>
+<p>Yıldızlar suyun altındaydı.</p>
+<p>Fenerin ışığı ikisinin arasından geçti.</p>
+<p>Usta bir süre aygıtları izledi. Ardından bağlantıları yeniden kontrol etti. Bir göstergeye eğilip değerini okudu. Yüzünde herhangi bir değişiklik görmedim.</p>
+<p>Tören sona erdiğinde subaylar ve konuklar ayrıldı. Usta görev yerinde kaldı. Ben de bir süre tepede kaldım.</p>
+<p>Eşref vakti başlamıştı. Karşı kıyıda, Nizamhane’nin olduğu yerde, bütün gece sönmeyen bir ışık vardı. Bir süre ona baktım. Sonra fenere döndüm.</p>
+<p>Dönüş yolunda Bowmore Köprüsü’nün ortasında durdum.</p>
+<p>Arkamda Kuzey Burnu Feneri’nin ışığı dönüyordu. Her dönüşünde karşı kıyının üzerinden geçiyor, sonra yeniden denize uzanıyordu.</p>
+<p>Hiçbir yerde durmadı.</p><footer class="byline">— Vaurin Prichard (Nizamhane Muhabiri)</footer></article><div class="reading-return"><a href="/taslak/b/editor/mert/sayi/004/">← Sayı 004</a><a href="#reading-content">Makalenin başına ↑</a></div></main><footer>Doskvol Dedikoduları · Duyduğunuza inanmayın. Duymadıklarınızdan korkun.</footer></div></body></html>
