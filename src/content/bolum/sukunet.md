@@ -5,9 +5,8 @@ description: Bir kâğıdın içinde, ışığa tutulunca görünen bir ad vard�
 series: bos-bedenler.json
 episode: 3
 author:
-  - dr-a-sorel
+  - dr-a-sorel.json
 ---
-
 #### İkinci saati sülüs geçe [^1]
 
 Müfettiş Voss muayenehanemin önüne kapalı bir faytonla geldi. Arabacı yerinden inmedi. Voss kapıyı içeriden açtı. Karşısına oturdum. Eldivenlerini giymişti. Benim ellerim açıktaydı. Siparişim henüz gelmemişti.
@@ -116,4 +115,4 @@ Altında bir tarih bulunuyordu. Yirmi üç yıl öncesine aitti. Tahtaya dokunma
 
 Cevap vermedim.
 
-[^1]: Editörün notu: Dr. Sorel saatleri _2 ⅓_ ve benzeri kısa şekilde not etmiş. Biz okurun rahatı için [saatleri](../../../takvim/ "Doskvol takvimi") tekmil ismi ile yazdık.
+[^1]: Editörün notu: Dr. Sorel saatleri *2 ⅓* ve benzeri kısa şekilde not etmiş. Biz okurun rahatı için [saatleri](../../../takvim/ "Doskvol takvimi") tekmil ismi ile yazdık.
