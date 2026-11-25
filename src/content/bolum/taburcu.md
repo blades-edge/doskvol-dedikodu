@@ -36,6 +36,8 @@ Muayenehanenin iki sokak ötesinde bir çilingir dükkânı vardı. Sahibi, göz
 
 Bir çekmeceden iki anahtar çıkarıp yan yana koydu. Birinin dişleri daha genişti.
 
+![Çilingir, tezgâhtaki anahtar çiziminin dişlerini gösteriyor. Kâğıdın iki yanında birer örnek anahtar, Sorel’in elinin altında kapalı defteri duruyor.](../../assets/images/taburcu-anahtar.avif)
+
 “Bakın. Yenisi böyle kesilir. Sizinki dar. Bu dişleri artık kimse kesmiyor. Keseriz de uğraştırır.”
 
 “Dolabın yapıldığı yeri belirleyebilir misiniz?”
@@ -195,6 +197,8 @@ Elara kıpırdamadı. Voss ona bir soru yöneltmek üzere ağzını açtı; Elar
 Sesinin yüksekliği değişmemişti.
 
 “Yedi anlatırdı. Her gece. Aynı kelimelerle.”
+
+![Elara pencerenin önünde oturmuş Sorel’e bakıyor. Voss masanın öbür ucunda, Elara’nın yastığı ise çıplak döşemede duruyor.](../../assets/images/taburcu-elara.avif)
 
 Dışarıdaki tekerlek sesleri kesildi. Pencerenin altında birileri konuşmaya başladı. Elara ellerini yeniden dizlerine koydu.
 
