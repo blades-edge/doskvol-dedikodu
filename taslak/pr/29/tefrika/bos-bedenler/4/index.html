@@ -1,0 +1,145 @@
+<!DOCTYPE html><html lang="tr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><script>
+  (() => {
+    const key = "doskvol-appearance";
+    const valid = value => ["day", "night", "device"].includes(value);
+    const media = window.matchMedia("(prefers-color-scheme: dark)");
+    let preference = "device";
+    try {
+      const saved = localStorage.getItem(key);
+      if (valid(saved)) preference = saved;
+    } catch {
+      // Private browsing may deny storage; the current page still works.
+    }
+    const paint = () => {
+      const dark =
+        preference === "night" || (preference === "device" && media.matches);
+      document.documentElement.dataset.theme = dark ? "dark" : "light";
+      document.querySelectorAll("[data-theme-choice]").forEach(button => {
+        button.setAttribute(
+          "aria-pressed",
+          String(button.dataset.themeChoice === preference)
+        );
+      });
+    };
+    paint();
+    document.addEventListener("DOMContentLoaded", paint, { once: true });
+    media.addEventListener("change", paint);
+    document.addEventListener("doskvol:theme", event => {
+      if (!valid(event.detail)) return;
+      preference = event.detail;
+      try {
+        localStorage.setItem(key, preference);
+      } catch {
+        // Private browsing may deny storage; the current page still works.
+      }
+      paint();
+    });
+    window.addEventListener("storage", event => {
+      if (event.key !== key && event.key !== null) return;
+      preference = valid(event.newValue) ? event.newValue : "device";
+      paint();
+    });
+  })();
+</script><link rel="icon" type="image/svg+xml" href="/taslak/pr/29/favicon.svg"><meta name="robots" content="noindex, nofollow"><link rel="canonical" href="https://doskvol.ink/taslak/pr/29/tefrika/bos-bedenler/4/"><meta name="description" content="Bir çilingir anahtarın kapı açmadığını söyledi. Akşam, Kömürsırtı'nda yatağı olmayan bir kadın beni başka bir adla hatırladı."><meta property="og:site_name" content="Doskvol Dedikoduları"><meta property="og:locale" content="tr_TR"><meta property="og:type" content="article"><meta property="og:title" content="Taburcu | Doskvol Dedikoduları"><meta property="og:description" content="Bir çilingir anahtarın kapı açmadığını söyledi. Akşam, Kömürsırtı'nda yatağı olmayan bir kadın beni başka bir adla hatırladı."><meta property="og:url" content="https://doskvol.ink/taslak/pr/29/tefrika/bos-bedenler/4/"><meta property="og:image" content="https://doskvol.ink/taslak/pr/29/_astro/kuzey-burnu-feneri.qVehNXAJ_20rNln.jpeg"><meta property="og:image:type" content="image/jpeg"><meta property="og:image:alt" content="Kayalık burundaki taş fenerin ışığı dalga sırtlarını aydınlatıyor. Ön planda kara suyun altında küçük yıldızlar seçiliyor."><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="Taburcu | Doskvol Dedikoduları"><meta name="twitter:description" content="Bir çilingir anahtarın kapı açmadığını söyledi. Akşam, Kömürsırtı'nda yatağı olmayan bir kadın beni başka bir adla hatırladı."><meta name="twitter:image" content="https://doskvol.ink/taslak/pr/29/_astro/kuzey-burnu-feneri.qVehNXAJ_20rNln.jpeg"><meta name="twitter:image:alt" content="Kayalık burundaki taş fenerin ışığı dalga sırtlarını aydınlatıyor. Ön planda kara suyun altında küçük yıldızlar seçiliyor."><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,600;0,6..72,700;1,6..72,400&display=swap" rel="stylesheet"><title>Taburcu | Doskvol Dedikoduları</title><link rel="stylesheet" href="/taslak/pr/29/_astro/EditorialHead.B4lPX8nn.css"></head><body><a class="reading-skip" href="#reading-content">Makaleye geç</a><div class="paper reading-paper"><script type="module">document.querySelectorAll(`[data-theme-choice]`).forEach(e=>{e.addEventListener(`click`,()=>{document.dispatchEvent(new CustomEvent(`doskvol:theme`,{detail:e.dataset.themeChoice}))})});</script><header class="masthead"><aside class="weather-theme" aria-label="Gazetenin hava durumu ve görünümü"><div class="weather-caption">Doskvol’da hava</div><div class="weather-choices" role="group" aria-label="Görünüm tercihi"><button type="button" data-theme-choice="day" aria-pressed="false" title="Kırık güneş — açık görünüm"><img src="/taslak/pr/29/weather-day.png" alt="" width="56" height="56" loading="eager"><span>Gündüz</span></button><button type="button" data-theme-choice="night" aria-pressed="false" title="Ay ve loş bacıları — koyu görünüm"><img src="/taslak/pr/29/weather-night.png" alt="" width="56" height="56" loading="eager"><span>Gece</span></button><button type="button" data-theme-choice="device" aria-pressed="true" title="Hayaletli hava — cihazın tercihini izle"><img src="/taslak/pr/29/weather-device.png" alt="" width="56" height="56" loading="eager"><span>Cihaz</span></button></div></aside><div class="masthead-title"><div class="eyebrow">Akoros’un bağımsız sesi · Doskvol</div><a class="masthead-name" href="/taslak/pr/29/sayi/004/">Doskvol Dedikoduları</a><div class="tagline">Duyduğunuza inanmayın. Duymadıklarınızdan korkun.</div></div></header><main id="reading-content"><header class="reading-heading"><div class="eyebrow">Boş Bedenler · Bölüm 4</div><h1>Taburcu</h1><p class="reading-deck">Bir çilingir anahtarın kapı açmadığını söyledi. Akşam, Kömürsırtı&#39;nda yatağı olmayan bir kadın beni başka bir adla hatırladı.</p><div class="reading-meta"><span>Dr. A. Sorel</span><a href="/taslak/pr/29/takvim/">14 Kalivet 847</a><a href="/taslak/pr/29/sayi/">Sayı 004</a></div></header><article class="reading-copy" aria-label="Taburcu"><p><strong>Altıncı saat</strong></p>
+<p>Müfettiş Voss beni muayenehanemin önünde bıraktı. Akşam haber göndereceğini söyledi.</p>
+<p>İçeri girdim. Yardımcım bekleyen hastaların adlarını okudu. İlk muayeneye bir sülüs vardı. Defterimi çıkardım, anahtarın çizildiği sayfayı açtım ve ölçülerini kontrol ettim. Otuz bir milimetre. Üç diş. Çizimi ayrı bir kâğıda kopyaladım; asıl sayfayı defterden ayırmadım.</p>
+<p>Muayenehanenin iki sokak ötesinde bir çilingir dükkânı vardı. Sahibi, gözlüklerini alnına kaldırarak kâğıdı inceledi.</p>
+<p class="dialogue">“Bunu nereden buldunuz?”</p>
+<p class="dialogue dialogue-even">“Bir incelemede karşıma çıktı.”</p>
+<p class="dialogue">“Aslı elinizde mi?”</p>
+<p class="dialogue dialogue-even">“Hayır.”</p>
+<p class="dialogue">“İyi olurdu.”</p>
+<p>Çizimi tezgâha yatırdı. Kalın parmağıyla dişlerin arasını gösterdi.</p>
+<p class="dialogue">“Kapı anahtarı değil bu. Belge dolabı. Eski iş.”</p>
+<p class="dialogue dialogue-even">“Ne kadar eski?”</p>
+<p class="dialogue">“Yirmi yıl. Belki otuz. Şimdi bunları yapmıyorlar.”</p>
+<p>Bir çekmeceden iki anahtar çıkarıp yan yana koydu. Birinin dişleri daha genişti.</p>
+<p><img class="engraving-dark" alt="Çilingir, tezgâhtaki anahtar çiziminin dişlerini gösteriyor. Kâğıdın iki yanında birer örnek anahtar, Sorel’in elinin altında kapalı defteri duruyor." loading="lazy" decoding="async" width="1774" height="887" src="/taslak/pr/29/_astro/taburcu-anahtar.C5E9BWIS_yh4vs.webp"></p>
+<p class="dialogue">“Bakın. Yenisi böyle kesilir. Sizinki dar. Bu dişleri artık kimse kesmiyor. Keseriz de uğraştırır.”</p>
+<p class="dialogue dialogue-even">“Dolabın yapıldığı yeri belirleyebilir misiniz?”</p>
+<p class="dialogue">“Kilidi görmeden olmaz. Bazı ustalar kendi ölçüsünü kullanırdı. Dükkân kapanır, anahtar kalır. Sonra kime soracaksınız?”</p>
+<p>Çizimi geri aldım. Çilingir gözlüklerini indirdi.</p>
+<p class="dialogue">“Yenisini yaptıracak mısınız?”</p>
+<p class="dialogue dialogue-even">“Şimdilik hayır.”</p>
+<p>İnceleme ücretini ödedim, kâğıdı defterimin arasına yerleştirdim. Muayenehaneme döndüğümde ilk hastam bekliyordu.</p>
+<p><strong>Eşref vakti</strong></p>
+<p>Müfettiş Voss’un pusulası akşamüstü ulaştı:</p>
+<p><em>Ilyra’nın bir arkadaşı var. Kömürsırtı. Eşref vaktinde hazır olun.</em></p>
+<p>Pusulanın altında adres bulunuyordu.</p>
+<p>Kömürsırtı’na giderken fabrika düdükleri duyuluyordu. Bacalardan çıkan duman alçak bulutların altında yayılmıştı. Yol kenarında işçiler yürüyordu; paltolarının omuzlarında kömür tozu birikmişti. Birinin sol elinde iki parmak eksikti. Kovasını kalan parmaklarıyla taşıyordu.</p>
+<p>Voss beni iki katlı bir işçi barakasının önünde bekliyordu. Merdivenler dardı. Üst kata çıktığımızda koridorun sonunda tek bir lamba yanıyordu. Voss üçüncü kapıya vurdu.</p>
+<p>Kapı birkaç parmak genişliğinde açıldı. Aralıktan bir kadın baktı. Yüzü inceydi, saçlarının bir kısmı beyazlamıştı. Yaşını otuz beş ile kırk arasında tahmin ettim.</p>
+<p class="dialogue">“Ne istiyorsunuz?”</p>
+<p class="dialogue dialogue-even">“Ilyra Fen hakkında konuşacağız.”</p>
+<p>Kadın kapıyı biraz daha açtı.</p>
+<p class="dialogue">“Onu nereden tanıyorsunuz?”</p>
+<p class="dialogue dialogue-even">“Ben Müfettiş Voss.”</p>
+<p>Kadın önce Voss’a, sonra bana baktı.</p>
+<p><q>“Ilyra öldü,”</q> dedi.</p>
+<p class="dialogue">“Biliyoruz.”</p>
+<p>Kapıyı açtı.</p>
+<p>Oda dardı. Bir masa, iki sandalye ve duvara dayalı küçük bir dolap vardı. Pencerenin altındaki sandalyenin üzerinde katlanmış bir battaniye ve yassı bir yastık duruyordu.</p>
+<p>Yatak yoktu.</p>
+<p>Kadın bize oturmamızı söyledi. Kendisi battaniyenin bulunduğu sandalyeye geçti ve yastığı yere koydu. Voss karşısına oturdu. Odada üçüncü bir sandalye yoktu; kapının yanında ayakta kaldım.</p>
+<p class="dialogue">“Elara Corven?”</p>
+<p class="dialogue dialogue-even">“Evet.”</p>
+<p class="dialogue">“Sükûnet Şifahanesi’nde bulundunuz mu?”</p>
+<p>Elara başını salladı.</p>
+<p class="dialogue">“Kaç yaşındaydınız?”</p>
+<p class="dialogue dialogue-even">“Bilmiyorum.”</p>
+<p class="dialogue">“Ne kadar kaldınız?”</p>
+<p class="dialogue dialogue-even">“Orada günleri saymazdık.”</p>
+<p class="dialogue">“Peki neyi sayardınız?”</p>
+<p>Elara ellerini dizlerinin üzerinde birleştirdi.</p>
+<p class="dialogue">“Bizi.”</p>
+<p>Voss cevap vermedi.</p>
+<p class="dialogue">“Her sabah sayarlardı. Akşam da. Bir eksik varsa yeniden başlarlardı.”</p>
+<p class="dialogue dialogue-even">“Adlarınızı kullanmazlar mıydı?”</p>
+<p class="dialogue">“Adımız yoktu.”</p>
+<p class="dialogue dialogue-even">“Size nasıl seslenirlerdi?”</p>
+<p class="dialogue">“Numarayla.”</p>
+<p>Elara konuşurken bana bakıyordu.</p>
+<p class="dialogue">“Dört öksürürdü. Geceleri daha çok. On bir ağlardı. Her gece ağlıyor. Sonra bir gün sesi kesiliyor.”</p>
+<p><q>“Çocuklardan ayrılanlar oldu mu?”</q> diye sordu Voss.</p>
+<p class="dialogue">“Elbette. Bazen bir aile gelirdi. Bazen kimse gelmezdi. Sabah kalkardık, bir yatak boş olurdu.”</p>
+<p class="dialogue dialogue-even">“Nereye gittiklerini söylerler miydi?”</p>
+<p class="dialogue">“Taburcu derlerdi.”</p>
+<p class="dialogue dialogue-even">“Ölenlere de mi?”</p>
+<p>Elara ilk kez gözlerini benden ayırdı.</p>
+<p class="dialogue">“Bir çocuk gittiğinde tahtasına bir şey yazarlardı. Bir aile aldıysa ailenin adını, kurşun kalemle. Öldüyse numarasını boyarlardı.”</p>
+<p class="dialogue dialogue-even">“Boyayı kim sürerdi?”</p>
+<p class="dialogue">“Büyükler.”</p>
+<p class="dialogue dialogue-even">“Hangi büyükler?”</p>
+<p class="dialogue">“Bilmiyorum. Sabah kalktığımızda tahta değişmiş olurdu.”</p>
+<p>Voss eldivenlerini düzeltti.</p>
+<p class="dialogue">“Yani kimin öldüğünü tahtadan anlardınız.”</p>
+<p class="dialogue dialogue-even">“Bize öyle söylerlerdi.”</p>
+<p>Elara pencereye döndü. Dışarıdan metal bir tekerleğin düzenli vuruşları duyuluyordu.</p>
+<p><q>“Ilyra hangi numaraydı?”</q> diye sordu Voss.</p>
+<p>Elara başını iki yana salladı.</p>
+<p class="dialogue">“Bilmiyorum. Sonra isimleri öğrendik. Bazılarınınkini.”</p>
+<p class="dialogue dialogue-even">“Yeniden görüştünüz mü?”</p>
+<p class="dialogue">“Bazen.”</p>
+<p class="dialogue dialogue-even">“Size neden ulaşmıştı?”</p>
+<p>Elara cevap vermeden önce bana baktı.</p>
+<p class="dialogue">“Siz doktor musunuz?”</p>
+<p class="dialogue dialogue-even">“Evet.”</p>
+<p class="dialogue">“Çocukken de doktor olmak ister miydiniz?”</p>
+<p class="dialogue dialogue-even">“Çocukluğumun büyük bölümünü hatırlamıyorum.”</p>
+<p class="dialogue">“Hatırladığınız bir şey vardır.”</p>
+<p class="dialogue dialogue-even">“Var.”</p>
+<p>Elara ellerini dizlerinden kaldırdı, birini diğerinin üzerine koydu.</p>
+<p class="dialogue">“Anlatır mısınız?”</p>
+<p class="dialogue dialogue-even">“Annem her akşam pencerenin önünde saçımı tarardı. Her tarakta bir sayı söylerdi. Doksan dokuza kadar. Yüzü hiç söylemezdi.”</p>
+<p>Elara kıpırdamadı. Voss ona bir soru yöneltmek üzere ağzını açtı; Elara elini kaldırdı.</p>
+<p class="dialogue">“Bu hikâyeyi bilirim.”</p>
+<p>Sesinin yüksekliği değişmemişti.</p>
+<p class="dialogue">“Yedi anlatırdı. Her gece. Aynı kelimelerle.”</p>
+<p><img class="engraving-dark" alt="Elara pencerenin önünde oturmuş Sorel’e bakıyor. Voss masanın öbür ucunda, Elara’nın yastığı ise çıplak döşemede duruyor." loading="lazy" decoding="async" width="1774" height="887" src="/taslak/pr/29/_astro/taburcu-elara.D7G_E7qa_Ziu30j.webp"></p>
+<p>Dışarıdaki tekerlek sesleri kesildi. Pencerenin altında birileri konuşmaya başladı. Elara ellerini yeniden dizlerine koydu.</p>
+<p class="dialogue">“Bize Yedi’nin öldüğünü söylemişlerdi.”</p>
+<p>Voss bana döndü. Sabah koğuşta sorduğu soruyu yeniden sormadı.</p>
+<p><strong>Eşref vaktini çeyrek geçe</strong></p>
+<p>Elara’nın konuşmasını tamamlamasını bekledim. Devam etmedi.</p>
+<p>Defterimi açtım. Çocukluğuma ilişkin anlattığım dört cümleyi yeniden yazdım ve sözcüklerin sırasını kontrol ettim.</p>
+<p>Her zamanki gibiydi.</p><footer class="byline">— Dr. A. Sorel</footer></article><nav class="reading-ending reading-chapters" aria-label="Tefrika bölümleri"><div><span class="eyebrow">Önceki bölüm</span><p><a href="/taslak/pr/29/tefrika/bos-bedenler/3/">Bölüm 3: Sükûnet</a></p></div><div><span class="eyebrow">Sonraki bölüm</span><p>Sonraki bölüm henüz yayımlanmadı.</p></div></nav><div class="reading-return"><a href="/taslak/pr/29/sayi/004/">← Sayı 004</a><a href="#reading-content">Makalenin başına ↑</a></div></main><footer>Doskvol Dedikoduları · Duyduğunuza inanmayın. Duymadıklarınızdan korkun.</footer></div></body></html>
