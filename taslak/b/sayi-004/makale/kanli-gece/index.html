@@ -1,0 +1,58 @@
+<!DOCTYPE html><html lang="tr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><script>
+  (() => {
+    const key = "doskvol-appearance";
+    const valid = value => ["day", "night", "device"].includes(value);
+    const media = window.matchMedia("(prefers-color-scheme: dark)");
+    let preference = "device";
+    try {
+      const saved = localStorage.getItem(key);
+      if (valid(saved)) preference = saved;
+    } catch {
+      // Private browsing may deny storage; the current page still works.
+    }
+    const paint = () => {
+      const dark =
+        preference === "night" || (preference === "device" && media.matches);
+      document.documentElement.dataset.theme = dark ? "dark" : "light";
+      document.querySelectorAll("[data-theme-choice]").forEach(button => {
+        button.setAttribute(
+          "aria-pressed",
+          String(button.dataset.themeChoice === preference)
+        );
+      });
+    };
+    paint();
+    document.addEventListener("DOMContentLoaded", paint, { once: true });
+    media.addEventListener("change", paint);
+    document.addEventListener("doskvol:theme", event => {
+      if (!valid(event.detail)) return;
+      preference = event.detail;
+      try {
+        localStorage.setItem(key, preference);
+      } catch {
+        // Private browsing may deny storage; the current page still works.
+      }
+      paint();
+    });
+    window.addEventListener("storage", event => {
+      if (event.key !== key && event.key !== null) return;
+      preference = valid(event.newValue) ? event.newValue : "device";
+      paint();
+    });
+  })();
+</script><link rel="icon" type="image/svg+xml" href="/taslak/b/sayi-004/favicon.svg"><meta name="robots" content="noindex, nofollow"><link rel="canonical" href="https://doskvol.ink/taslak/b/sayi-004/makale/kanli-gece/"><meta name="description" content="Kızıl Kuşaklar ile Yağkaraları arasında gitgide şiddetlenen çatışmalar, Kargaayağında Yağkaraları tarafından kontrol edilen kömür deposuna Kızıl Kuşakların yaptığı büyük baskın ile uç noktasına ulaştı. Yağkaraları arasında onlarca kayıptan bahsediliyor."><meta property="og:site_name" content="Doskvol Dedikoduları"><meta property="og:locale" content="tr_TR"><meta property="og:type" content="article"><meta property="og:title" content="Kanlı gece | Doskvol Dedikoduları"><meta property="og:description" content="Kızıl Kuşaklar ile Yağkaraları arasında gitgide şiddetlenen çatışmalar, Kargaayağında Yağkaraları tarafından kontrol edilen kömür deposuna Kızıl Kuşakların yaptığı büyük baskın ile uç noktasına ulaştı. Yağkaraları arasında onlarca kayıptan bahsediliyor."><meta property="og:url" content="https://doskvol.ink/taslak/b/sayi-004/makale/kanli-gece/"><meta property="og:image" content="https://doskvol.ink/taslak/b/sayi-004/_astro/kanli-gece.CVcCAhWo_Z1nIxrY.jpeg"><meta property="og:image:type" content="image/jpeg"><meta property="og:image:alt" content="Bir komşu kepenk aralığından bakarken kuşaklı kılıççılar, girişinde fenerler yanan kömür deposuna ilerliyor."><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="Kanlı gece | Doskvol Dedikoduları"><meta name="twitter:description" content="Kızıl Kuşaklar ile Yağkaraları arasında gitgide şiddetlenen çatışmalar, Kargaayağında Yağkaraları tarafından kontrol edilen kömür deposuna Kızıl Kuşakların yaptığı büyük baskın ile uç noktasına ulaştı. Yağkaraları arasında onlarca kayıptan bahsediliyor."><meta name="twitter:image" content="https://doskvol.ink/taslak/b/sayi-004/_astro/kanli-gece.CVcCAhWo_Z1nIxrY.jpeg"><meta name="twitter:image:alt" content="Bir komşu kepenk aralığından bakarken kuşaklı kılıççılar, girişinde fenerler yanan kömür deposuna ilerliyor."><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,600;0,6..72,700;1,6..72,400&display=swap" rel="stylesheet"><title>Kanlı gece | Doskvol Dedikoduları</title><link rel="stylesheet" href="/taslak/b/sayi-004/_astro/EditorialHead.B4lPX8nn.css"></head><body><a class="reading-skip" href="#reading-content">Makaleye geç</a><div class="paper reading-paper"><script type="module">document.querySelectorAll(`[data-theme-choice]`).forEach(e=>{e.addEventListener(`click`,()=>{document.dispatchEvent(new CustomEvent(`doskvol:theme`,{detail:e.dataset.themeChoice}))})});</script><header class="masthead"><aside class="weather-theme" aria-label="Gazetenin hava durumu ve görünümü"><div class="weather-caption">Doskvol’da hava</div><div class="weather-choices" role="group" aria-label="Görünüm tercihi"><button type="button" data-theme-choice="day" aria-pressed="false" title="Kırık güneş — açık görünüm"><img src="/taslak/b/sayi-004/weather-day.png" alt="" width="56" height="56" loading="eager"><span>Gündüz</span></button><button type="button" data-theme-choice="night" aria-pressed="false" title="Ay ve loş bacıları — koyu görünüm"><img src="/taslak/b/sayi-004/weather-night.png" alt="" width="56" height="56" loading="eager"><span>Gece</span></button><button type="button" data-theme-choice="device" aria-pressed="true" title="Hayaletli hava — cihazın tercihini izle"><img src="/taslak/b/sayi-004/weather-device.png" alt="" width="56" height="56" loading="eager"><span>Cihaz</span></button></div></aside><div class="masthead-title"><div class="eyebrow">Akoros’un bağımsız sesi · Doskvol</div><a class="masthead-name" href="/taslak/b/sayi-004/sayi/004/">Doskvol Dedikoduları</a><div class="tagline">Duyduğunuza inanmayın. Duymadıklarınızdan korkun.</div></div></header><main id="reading-content"><header class="reading-heading"><div class="eyebrow">Haberler</div><h1>Kanlı gece</h1><p class="reading-deck">Kızıl Kuşaklar ile Yağkaraları arasında gitgide şiddetlenen çatışmalar, Kargaayağında Yağkaraları tarafından kontrol edilen kömür deposuna Kızıl Kuşakların yaptığı büyük baskın ile uç noktasına ulaştı. Yağkaraları arasında onlarca kayıptan bahsediliyor.</p><div class="reading-meta"><span>Arvus Booker</span><a href="/taslak/b/sayi-004/takvim/">14 Kalivet 847</a><a href="/taslak/b/sayi-004/sayi/">Sayı 004</a></div></header><figure class="reading-figure"><img src="/taslak/b/sayi-004/_astro/kanli-gece.CVcCAhWo_1gB0f8.webp" srcset="/taslak/b/sayi-004/_astro/kanli-gece.CVcCAhWo_Z1TcB24.webp 480w, /taslak/b/sayi-004/_astro/kanli-gece.CVcCAhWo_Z29ChLR.webp 960w, /taslak/b/sayi-004/_astro/kanli-gece.CVcCAhWo_1pY50s.webp 1440w" alt="Bir komşu kepenk aralığından bakarken kuşaklı kılıççılar, girişinde fenerler yanan kömür deposuna ilerliyor." sizes="(max-width: 32rem) calc(100vw - 1.5rem), calc(92vw - 1rem)" loading="lazy" decoding="async" width="1774" height="887" class="editorial-engraving engraving-dark"><figcaption class="caption">Kül Yolu’ndaki eski kömür deposu, Yağkaralarının merkeziydi.</figcaption></figure><article class="reading-copy" aria-label="Kanlı gece"><p>Bir süredir <strong>Yağkaraları</strong> olarak da bilinen eski <strong>Lambacılar Loncası</strong> ve <strong>Kızıl Kuşak Iruvia Harp Sanatları Mektebi</strong> mensupları arasında süre gelen çatışmalar, Kargaayağı’nın cadde ve sokaklarına taşmış, defalarca tarafların kanı dökülmüştü. Kargaayağı sakinleri, iki taraftan birinin olduğu yere eninde sonunda diğerinin de geleceği ve kargaşa çıkacağını bilir olmuş ve birini gördüklerinde vebadan kaçar gibi uzaklaşır hale gelmişlerdi.</p>
+<p>Dün akşam vakti, Kızıl Kuşaklar’ın yaptığı baskın ile çatışmalar yepyeni bir boyut kazandı. Kargaayağı Kül yolu üzerinde, Yağkaralarının merkez olarak kullandığı eski kömür deposu, otuzdan fazla Kızıl Kuşaklı kılıç dövüşçüsünün baskınına uğradı. Baskında kan gövdeyi götürdü. Kül ve Kömür<sup><a href="#user-content-fn-1" id="user-content-fnref-1" data-footnote-ref="" aria-describedby="footnote-label">1</a></sup> vakitleri arasında Bellweather Krematoryumunun çanları defalarca çaldı. Ölülerin iki misli kadar daha yaralı olduğu söyleniyor.</p>
+<p>Yağkaraları’nın elebaşı <strong>Bazso Baz</strong>’a (48) yakın bir kaynağımız, baskında kendisinin de yaralandığını doğruladı. Ayrıca, öğrendiğımiz kadarıyla kendisi, Kızıl Kuşakların bu çapta bir baskını yapacak mali kaynağının olmadığını düşünüyormuş. Bunun kaynağını sağlayanı bulduğunda ise hesabını ayrıca sormaya and içmiş.</p>
+<p>Kızıl Kuşak mektebinin müdürü <strong>Mylera Klev</strong> (44) ise gazetemiz ile doğrudan konuştu.</p>
+<blockquote>
+<p>Bizim bu pespaye başıbozuklar ile bir münasebetimiz olamaz. Hadlerini aşıp okulumuzun işletmelerine göz diktiklerinde münasip cevabı aldılar zaten, ama dün geceki bahsi geçen olaylarda mektebimiz mensuplarının hiç bir katılımı yoktur. Okulumuz, Iruvia’nın kadim harp sanatlarını yaşatmak için kurulmuş, talebelerini her daim azami riayet ve disiplin çerçevesinde yetiştirmiş bir kurumdur. Bahsi geçen baskının yeraltı aleminin başka bir çetesi tarafından tebdil-i-kıyafet ifa edilip mesuliyetinin mektebimiz üzerine yıkılmak istendiği aşikardır.</p>
+</blockquote>
+<p>Kargaayağı karakol komutanı Komiser Penderyn ise bahsi geçen saatlerde sadece komşulardan bir gürültü şikayeti aldıklarını, devriye inikal ettiğinde gürültü kalmadığı için bir tedbire de gerek olmadığını ifade etti. Bölgedeki huzurevi nedeniyle ölüm çanı ve ruh muhafızı faaliyetinin mutat olduğunu da hatırlattı.</p>
+<p>Bütün bu vukuat zincirinin aynı günün gündüz saatlerinde Kargalar çetesi elebaşı <strong>Lyssa Erimax</strong>’ın bir düelloda öldürülmesi ile alakası olup olmadığı ise halen mum ışığına kavuşamamış bir sual.</p>
+<section data-footnotes="" class="footnotes"><h2 class="sr-only" id="footnote-label">Dipnotlar</h2>
+<ol>
+<li id="user-content-fn-1">
+<p><a href="../../takvim/">Doskvol yerel saati</a> <a href="#user-content-fnref-1" data-footnote-backref="" aria-label="1. dipnotun 1. referansına dön" class="data-footnote-backref">↩</a></p>
+</li>
+</ol>
+</section><footer class="byline">— Arvus Booker (Kargaayağı muhabiri)</footer></article><aside class="reading-ending"><div class="eyebrow">Bu sayıdaki tefrika</div><h2><a href="/taslak/b/sayi-004/tefrika/bos-bedenler/4/">Boş Bedenler</a></h2><p>Bölüm 4: Taburcu</p></aside><div class="reading-return"><a href="/taslak/b/sayi-004/sayi/004/">← Sayı 004</a><a href="#reading-content">Makalenin başına ↑</a></div></main><footer>Doskvol Dedikoduları · Duyduğunuza inanmayın. Duymadıklarınızdan korkun.</footer></div></body></html>
