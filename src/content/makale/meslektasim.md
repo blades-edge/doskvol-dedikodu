@@ -8,6 +8,9 @@ author:
 section: Dedikodular
 district: Rıhtım
 location: Mürekkep Sokağı
+cover: ../../assets/images/meslektasim.avif
+coverAlt: Yaşlı toptancı, bir eli merdiven korkuluğunda, yukarıdaki kapıya bakıyor. Katlanmış faturanın köşesi paltosundan görünüyor.
+coverCaption: Yaşlı toptancı muhasebe kapısına dönüp son kez baktı. “Yarın gelirim,” dedi.
 ---
 
 Geçen sayımızdaki duyuruyu okuyanlar, gazetemizin muhasebe işlerine bakan Bay Verlax Graxytzyks'in adını hatırlayacaktır. Telaffuz edemeyenleri mazur görürüm. Benim ilgimi ise adı değil, alacaklıların dörtte üçünü geri çevirebildiği iddiası çekti.
