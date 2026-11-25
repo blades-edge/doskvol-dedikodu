@@ -4,6 +4,9 @@ description: Arıkovanı'nın kraliçesi, öldürülen baş Karga Roric'in kanı
 author: [arvus-booker.json]
 section: Haberler
 district: Kargaayağı
+cover: ../../assets/images/sicak-intikam.avif
+coverAlt: Göz bantlı, bıyıklı Bell Gorman ifadesizce kalemleri kırıyor. Arkada Djera Maha ayakta dururken maskeli ruh muhafızları Lyssa Erimax’ın bedenini sedyeyle götürüyor.
+coverCaption: Düellonun ardından ruh muhafızları Lyssa’yı götürürken Bell Gorman ressamımızın kalemlerini kırdı.
 ---
 
 Kargalar, kısa süre içinde ikinci defa liderlerini kaybettiler. Dün (13 Kalivet) gerçekleşen bir düelloda, _Kraliçe arı_ adıyla da bilinen **Djera Maha**,(41) resmi bir düelloda Kargalar'ın çiçeği burnunda elebaşı **Lyssa Erimax**'ı(33) öldürdü. Kargaayağı'nda özel bir mekanda gerçekleşen düelloda her iki taraftan ikişer şahit ve kanun gereği bir ruh muhafızı mangası hazır bulundu.
