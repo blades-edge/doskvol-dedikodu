@@ -5,6 +5,9 @@ description: Av mevsimi öncesindeki yıllık bakımın ardından Kuzey Burnu Fe
 author:
   - vaurin-prichard.json
 section: Haberler
+cover: ../../assets/images/kuzey-burnu-feneri.avif
+coverAlt: Kayalık burundaki taş fenerin ışığı dalga sırtlarını aydınlatıyor. Ön planda kara suyun altında küçük yıldızlar seçiliyor.
+coverCaption: Kuzey Burnu Feneri, yıllık bakımın ardından Zifirdeniz’i yeniden aydınlattı.
 district: Aktaç
 location: Kuzey Burnu Feneri, Bowmore Köprüsü
 ---
