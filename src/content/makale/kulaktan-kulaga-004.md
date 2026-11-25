@@ -5,7 +5,11 @@ description: Bu hafta şehrin dört bir yanından kulağımıza gelenler. Doğru
 author:
   - aldo-brogan.json
 section: Dedikodular
+cover: ../../assets/images/kulaktan-kulaga-004.avif
+coverAlt: Barakanın eşiğinde bir çocuk iri bir köpeğe ekmek uzatıyor. Sokakta zincirleri tutan bakıcı omzunun üzerinden içeri bakıyor.
+coverCaption: Bozçamur’da bir çocuk yemeğini iri bir köpekle paylaşıyor.
 ---
+
 **Yarıktepe.** Baharın ilk mantar hasadı, şimdiye kadar görülmüş en iri mantarı getirmiş. Yarık Köprüsü'ndeki bir tezgâhta sergilenen mantara iki çiftçi ailesi birden sahip çıkınca köprüde kıyamet kopmuş; biri mantarın kendi tarlasından toplandığını, öteki komşusunun sınır taşını oynattığını ileri sürmüş. Kavga uzayıp geçit tıkandığında yaşlı bir çiftçi, "Şehirliler gelmeden paylaşaydınız şunu!" diye bağırmış. İki aile hâlâ tarlanın sınırını tartışırken mantarın çoktan bir lokantacıya satıldığı öğrenilmiş.
 
 **İpekyalı.** Sis Tepesi'ndeki bir kahvede iki filozof, bilginin kaynağı üzerine tartışırken biri ötekini düelloya davet etmiş. Silah seçme hakkını kullanan rakibi, iki fincan sıcak İruvya çayı istemiş; ertesi sabah tepenin ressamları, şairleri ve boş vakti bol düşünürleri kahvenin önüne doluşmuş. Ne düellonun nasıl yapıldığı ne de kimin galip geldiği konusunda bir açıklama var. Kahvecinin ise tek bir itirazı olmuş: "Kim kazandı bilmem. Fincanların parası ödenmedi, onu bilirim."
