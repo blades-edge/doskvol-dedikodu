@@ -9,6 +9,7 @@ section: Dedikodular
 district: Rıhtım
 location: Mürekkep Sokağı
 ---
+
 Geçen sayımızdaki duyuruyu okuyanlar, gazetemizin muhasebe işlerine bakan Bay Verlax Graxytzyks'in adını hatırlayacaktır. Telaffuz edemeyenleri mazur görürüm. Benim ilgimi ise adı değil, alacaklıların dörtte üçünü geri çevirebildiği iddiası çekti.
 
 Yıllarca defter tutmuş bir adamım. Bir meslektaşımı iş başında görmek istedim. Verlax beni kabul etti. Bir Pazar günü gazetemizin muhasebe dairesine uğradım.
@@ -25,33 +26,19 @@ Karşısına oturdum.
 
 Alacaklıların dörtte üçünü geri çevirdiği doğru muydu?
 
-Verlax ince defteri önüme koydu, yanına kalın defterlerden birini açtı. İncesinde kapısını çalanlar vardı: geliş tarihleri, yeniden başvurup başvurmadıkları, kaç kez geri döndükleri. Kalın olanda bütün alacaklar. Kalemimi çıkardım. Topladım, ayırdım, yeniden hesapladım.
-
-Dörtte üç.
-
-"Doğru," dedim.
+Verlax ince defteri önüme koydu, yanına kalın defterlerden birini açtı. İncesinde kapısını çalanlar vardı: geliş tarihleri, yeniden başvurup başvurmadıkları, kaç kez geri döndükleri. Kalın olanda bütün alacaklar. Kalemimi çıkardım. Topladım, ayırdım, yeniden hesapladım. Dörtte üç. "Doğru," dedim.
 
 "Biliyorum."
 
 Bunu söylerken gülümsemedi. Kavanozu bana doğru itti. Bir parça şeker aldım.
 
-İlk ziyaretçimiz bir mürekkep tüccarıydı. Paltosunun yakasında kurumuş siyah bir leke vardı. Oturmadan konuşmaya başladı. Verlax dinledi. Önündeki defteri açmadı.
+İlk ziyaretçimiz bir mürekkep tüccarıydı. Paltosunun yakasında kurumuş siyah bir leke vardı. Oturmadan konuşmaya başladı. Verlax dinledi. Önündeki defteri açmadı. Sonra birkaç cümle söyledi.
 
-Sonra birkaç cümle söyledi.
+Ne söylediğini burada aktarabilirim. Ödeme tarihinden, beklemenin makuliyetinden, karşılıklı anlayıştan söz etti. Bunları ben de vaktiyle söylerdim. Belki aynı sırayla, neredeyse aynı kelimelerle. Ama benim gırtlağımda tek ses vardı.
 
-Ne söylediğini burada aktarabilirim. Ödeme tarihinden, beklemenin makuliyetinden, karşılıklı anlayıştan söz etti. Bunları ben de vaktiyle söylerdim. Belki aynı sırayla, neredeyse aynı kelimelerle.
+Tüccar başını salladı, şapkasını aldı ve çıktı. Merdivene vardığında durdu. Bir eli korkuluğun üzerindeydi. Başını çevirip kapımıza baktı. Sonra inmeye devam etti. Verlax defterine küçük bir işaret koydu.
 
-Ama benim gırtlağımda tek ses vardı.
-
-Tüccar başını salladı, şapkasını aldı ve çıktı. Merdivene vardığında durdu. Bir eli korkuluğun üzerindeydi. Başını çevirip kapımıza baktı. Sonra inmeye devam etti.
-
-Verlax defterine küçük bir işaret koydu.
-
-Ardından kâğıtçı geldi. Daha az konuştu. Verlax onu da dinledi, sonra şeker kavanozunu uzattı. Adam bir parça aldı. Yemedi. Cebine koydu.
-
-"Teşekkür ederim," dedi.
-
-Kapı kapandı.
+Ardından kâğıtçı geldi. Daha az konuştu. Verlax onu da dinledi, sonra şeker kavanozunu uzattı. Adam bir parça aldı. Yemedi. Cebine koydu. "Teşekkür ederim," dedi. Kapı kapandı.
 
 "Bunların ikisi de ödeme almadan gitti," dedim.
 
@@ -63,25 +50,17 @@ Verlax kaleminin ucunu hokkaya batırdı. Deftere bir işaret daha koydu.
 
 Üçüncü ziyaretçinin gelmesini beklerken odadaki tek saatin tik taklarını dinledim. Verlax defterleriyle uğraşıyordu. Kalın olanlardan birini açtığında, sayfaların kenarlarının çok kez çevrilmekten karardığını gördüm. İnce defter ise yeni görünüyordu.
 
-Sonra yaşlı bir toptancı geldi.
-
-Üzerinde iyi günler görmüş, dirsekleri parlamış bir ceket vardı. Elindeki fatura o kadar çok katlanmıştı ki kâğıt artık kendi kendine açılmıyordu. Verlax onu görünce ayağa kalktı.
+Sonra yaşlı bir toptancı geldi. Üzerinde iyi günler görmüş, dirsekleri parlamış bir ceket vardı. Elindeki fatura o kadar çok katlanmıştı ki kâğıt artık kendi kendine açılmıyordu. Verlax onu görünce ayağa kalktı.
 
 "Hoş geldiniz."
 
-Yaşlı adam oturdu. Faturayı masanın üzerine bıraktı.
+Yaşlı adam oturdu. Faturayı masanın üzerine bıraktı. Verlax çay koydu. İki fincan. Birini adamın önüne sürdü.
 
-Verlax çay koydu. İki fincan. Birini adamın önüne sürdü.
-
-"Bu hafta?" diye sordu yaşlı adam.
-
-Verlax başını hafifçe eğdi.
+"Bu hafta?" diye sordu yaşlı adam. Verlax başını hafifçe eğdi.
 
 "Henüz değil."
 
-Adam çayından bir yudum aldı. Faturaya bakmadı. Verlax da dokunmadı. Kâğıt ikisinin arasında duruyordu.
-
-Bir süre sonra yaşlı adam kalktı. Faturasını aynı dikkatle katladı, iç cebine yerleştirdi ve çıktı.
+Adam çayından bir yudum aldı. Faturaya bakmadı. Verlax da dokunmadı. Kâğıt ikisinin arasında duruyordu. Bir süre sonra yaşlı adam kalktı. Faturasını aynı dikkatle katladı, iç cebine yerleştirdi ve çıktı.
 
 "Ne zamandır geliyor?" diye sordum.
 
@@ -99,9 +78,7 @@ Verlax bu kez bana baktı.
 
 "Buraya geliyor."
 
-Bunun soruma cevap olup olmadığını düşünürken çaydanlığın altındaki küçük ocağı söndürdü. Fincanları topladı. Yaşlı adamın fincanında çay kalmamıştı.
-
-Şekeri yememiştim. Parmaklarımın arasında çeviriyordum.
+Bunun soruma cevap olup olmadığını düşünürken çaydanlığın altındaki küçük ocağı söndürdü. Fincanları topladı. Yaşlı adamın fincanında çay kalmamıştı. Şekeri yememiştim. Parmaklarımın arasında çeviriyordum.
 
 "Peki siz?" dedi.
 
@@ -109,9 +86,7 @@ Bunun soruma cevap olup olmadığını düşünürken çaydanlığın altındaki
 
 "Siz hiç bir ödemeyi ertelediniz mi, Bay Merrow?"
 
-İki sesi bu kez birbirinden daha belirgin duydum. Sözcükler aynıydı. Biri soruyu bitirdiğinde öteki henüz son heceye varmamıştı.
-
-Şekeri masaya bıraktım.
+İki sesi bu kez birbirinden daha belirgin duydum. Sözcükler aynıydı. Biri soruyu bitirdiğinde öteki henüz son heceye varmamıştı. Şekeri masaya bıraktım.
 
 "Benim defterlerim başka türlü kapandı."
 
@@ -121,16 +96,8 @@ Verlax bir süre yüzüme baktı. Sonra şekeri kavanoza geri koydu.
 
 Bundan emin değildim.
 
-Ayrılırken ince defterin yine açık olduğunu gördüm. Verlax kalemini eline almıştı. Benim adımı yazıp yazmadığını görmedim.
+Ayrılırken ince defterin yine açık olduğunu gördüm. Verlax kalemini eline almıştı. Benim adımı yazıp yazmadığını görmedim. Merdivenin ilk sahanlığında yaşlı toptancıyı gördüm. Paltosunun düğmelerini ilikliyor, bir türlü aşağı inmiyordu. Faturanın köşesi iç cebinden görünüyordu.
 
-Merdivenin ilk sahanlığında yaşlı toptancıyı gördüm. Paltosunun düğmelerini ilikliyor, bir türlü aşağı inmiyordu. Faturanın köşesi iç cebinden görünüyordu.
-
-"Ödedi mi?" diye sordum.
-
-Başını iki yana salladı.
-
-Birlikte birkaç basamak indik. Sonra durdu, dönüp yukarıdaki kapıya baktı.
-
-"Yarın gelirim," dedi.
+"Ödedi mi?" diye sordum. Başını iki yana salladı. Birlikte birkaç basamak indik. Sonra durdu, dönüp yukarıdaki kapıya baktı. "Yarın gelirim," dedi.
 
 Kimse sormamıştı.
