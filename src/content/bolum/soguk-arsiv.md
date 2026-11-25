@@ -9,15 +9,16 @@ episode: 3
 author:
   - altinci-sandalye.json
 ---
-> *“Loncaya giren her demirdar, ruhundan bir parçayı arşive bırakır. Geri kalanını nereye bıraktığını kimse sormaz.”*
+
+> _“Loncaya giren her demirdar, ruhundan bir parçayı arşive bırakır. Geri kalanını nereye bıraktığını kimse sormaz.”_
 
 ### I. Masadaki Mektuplar
 
 Kargaayağı'ndaki eski dükkânın bodrumunda iki mektup bekliyordu. Biri sandığın üzerine düzgünce bırakılmış, diğeri masanın kenarına gelişigüzel iliştirilmişti. Üzerlerinde iki ayrı el yazısı vardı ve bırakılış biçimleri en az içerikleri kadar sahiplerini ele veriyordu.
 
-Yankı'nın mektubu daha uzundu. Bu hafta tayfayla birlikte olamayacağını, Altıkule'de, Yoren'in yanında bulunacağını bildiriyordu. Nedenini açıklamamış, kendisine ulaşmaya çalışmalarını da istememişti. *Gelmeyin.* Bu sözcüğün altında açıklama yoktu. Yankı'nın mektuplarındaki boşluklara alışmışlardı; Fısıltı uzun uzun anlatılması gereken şeyleri birkaç kelimeyle geçiştirir, kimsenin aklına gelmeyecek ayrıntılara ise gereğinden fazla yer ayırırdı.
+Yankı'nın mektubu daha uzundu. Bu hafta tayfayla birlikte olamayacağını, Altıkule'de, Yoren'in yanında bulunacağını bildiriyordu. Nedenini açıklamamış, kendisine ulaşmaya çalışmalarını da istememişti. _Gelmeyin._ Bu sözcüğün altında açıklama yoktu. Yankı'nın mektuplarındaki boşluklara alışmışlardı; Fısıltı uzun uzun anlatılması gereken şeyleri birkaç kelimeyle geçiştirir, kimsenin aklına gelmeyecek ayrıntılara ise gereğinden fazla yer ayırırdı.
 
-Aldo'ya Rıhtım'da verdiği söz hâlâ geçerliydi; ona göstereceği kâğıtlar sandığın üzerinde duruyordu. Kellen'ın Yeri'nde boğazından yaralanan adam hakkında soru sorulmasını istemiyordu. Ölüm çanı çalarsa kendisine haber gönderilmeliydi. Sandığın dibinde son bir Ruh Şişesi bulunduğunu da eklemişti. *Ruhlarla ilgili bir iş çıkarsa Quellyn'i bulun.* Mektup her zamanki gibi tek bir harfle bitiyordu: *Y.*
+Aldo'ya Rıhtım'da verdiği söz hâlâ geçerliydi; ona göstereceği kâğıtlar sandığın üzerinde duruyordu. Kellen'ın Yeri'nde boğazından yaralanan adam hakkında soru sorulmasını istemiyordu. Ölüm çanı çalarsa kendisine haber gönderilmeliydi. Sandığın dibinde son bir Ruh Şişesi bulunduğunu da eklemişti. _Ruhlarla ilgili bir iş çıkarsa Quellyn'i bulun._ Mektup her zamanki gibi tek bir harfle bitiyordu: _Y._
 
 Gümüş kâğıdı yerine bıraktı. Altıkule'de neler döndüğünü merak ediyordu. Ama Yankı'nın kendisine ulaşılmasını istemediği belliydi; üstelik Fısıltı'nın işlerine karışmanın ne tür sonuçlar doğurabileceğini İpekyalı'da öğrenmişti.
 
@@ -29,7 +30,7 @@ Hurda elini uzatıp kendisine ayrılan şişeyi aldı. “Bana güveniyor demek.
 
 “Yalnızca sana ayrılan şişe konusunda.”
 
-Hurda etiketi inceledi, ardından kapağın sağlamlığını kontrol etti. Sis'in mektubunun devamında kimsesiz çocuklardan söz ediliyordu. Onlarla ilgilenmiş, karınlarını doyurmuş, zaman zaman işlerine yardım etmişti. Aralarında işe yarayacak kadar sağlam çocuklar bulunduğunu, bir gün ihtiyaç duyulursa kendisine borçlu olduklarını hatırlatıyordu. Son cümlesi bir tavsiyeden çok uyarıya benziyordu: *Bensiz başınızı belaya sokmayın.*
+Hurda etiketi inceledi, ardından kapağın sağlamlığını kontrol etti. Sis'in mektubunun devamında kimsesiz çocuklardan söz ediliyordu. Onlarla ilgilenmiş, karınlarını doyurmuş, zaman zaman işlerine yardım etmişti. Aralarında işe yarayacak kadar sağlam çocuklar bulunduğunu, bir gün ihtiyaç duyulursa kendisine borçlu olduklarını hatırlatıyordu. Son cümlesi bir tavsiyeden çok uyarıya benziyordu: _Bensiz başınızı belaya sokmayın._
 
 Ayaz mektubu okuyunca hafifçe başını salladı. Sis'in bu sözleri yazarken yüzünde nasıl bir ifade bulunacağını tahmin edebiliyordu: biraz eğlenen, biraz da karşısındakine itiraz fırsatı bırakmayan o kendinden emin bakış. Şimdi o bakış yoktu. Yankı'nın sessizliği de yoktu.
 
@@ -63,13 +64,13 @@ Sis'in gönderdiği viskiyi eline aldı. Şişenin camında lambanın sarı ış
 
 ### III. Gecepazarı'nda Bir Ev
 
-Ayaz, Kaptan Milos'un hazinesini unutmamıştı. Boks salonlarında duyduğu söylentiler onu haftalardır Gecepazarı'na götürüyordu. Eski demirdarların hikâyeleri, unutulmuş seferler ve nerede saklandığı bilinmeyen bir servete dair anlatılar birbirine karışmıştı. Haftalar süren arayışın sonunda karşısına Talita'nın kapısı çıktı.
+Ayaz, Kaptan Milos'un hazinesini unutmamıştı. Boks salonlarında duyduğu söylentiler onu haftalardır Gecepazarı'na götürüyordu. Eski demirdarların hikâyeleri, unutulmuş seferler ve nerede saklandığı bilinmeyen bir servete dair anlatılar birbirine karışmıştı. Haftalar süren arayışın sonunda karşısına Talitha'nın kapısı çıktı.
 
 Emekli demirdar, Gecepazarı'nın kalabalığından biraz uzakta, yaşını belli eden bir evde yaşıyordu. Pencerelerinin önünde eskimiş perdeler vardı. Kapı eşiği, yıllarca girip çıkan ayakkabıların altında aşınmıştı.
 
-Ayaz, Gümüş ve Hurda içeri alındıklarında Talita önce üçünü dikkatle süzdü, ardından gözleri getirdikleri viskiye kaydı. Gümüş şişeyi masaya bıraktı. Sis'in dokunulmamasını istediği şişelerden biriydi ve bunu yapmaktan hoşnut değildi.
+Ayaz, Gümüş ve Hurda içeri alındıklarında Talitha önce üçünü dikkatle süzdü, ardından gözleri getirdikleri viskiye kaydı. Gümüş şişeyi masaya bıraktı. Sis'in dokunulmamasını istediği şişelerden biriydi ve bunu yapmaktan hoşnut değildi.
 
-Talita şişeyi eline alıp etiketini okudu. Yüzünde, uzun zaman önce tanıdığı biriyle yeniden karşılaşmış gibi bir ifade belirdi. “Bunu nereden buldunuz?”
+Talitha şişeyi eline alıp etiketini okudu. Yüzünde, uzun zaman önce tanıdığı biriyle yeniden karşılaşmış gibi bir ifade belirdi. “Bunu nereden buldunuz?”
 
 “Bir arkadaşımızın hediyesi,” dedi Gümüş.
 
@@ -77,7 +78,7 @@ Talita şişeyi eline alıp etiketini okudu. Yüzünde, uzun zaman önce tanıd�
 
 Gümüş gülümsedi. “Umarım tadını da beğenirsiniz.”
 
-Talita ilk kadehini acele etmeden içti, ardından kadehi yeniden doldurulmak üzere masaya bıraktı. Gümüş şişedeki miktarın azalışını izledi. *Değdi. Göreceğiz.*
+Talitha ilk kadehini acele etmeden içti, ardından kadehi yeniden doldurulmak üzere masaya bıraktı. Gümüş şişedeki miktarın azalışını izledi. _Değdi. Göreceğiz._
 
 Yaşlı kadın gençliğindeki seferleri anlatmaya başladığında sesi değişti. Kelimeleri yer yer birbirine karıştırıyordu ama demiryoluna ait ayrıntıları şaşırtıcı bir kesinlikle hatırlıyordu: bir vagonun hangi bağlantısının ne zaman gevşeyeceğini, kötü döşenmiş rayların çıkardığı sesi, yolculuğun kaçıncı gününde insanların konuşmaktan vazgeçtiğini. Konuşurken ellerini masanın üzerinde tutuyordu. Parmakları kalınlaşmış, eklemleri eğrilmişti. Derisindeki eski izlerin hangisini nerede edindiğini yalnızca kendisi biliyor olmalıydı.
 
@@ -85,25 +86,25 @@ Yaşlı kadın gençliğindeki seferleri anlatmaya başladığında sesi değiş
 
 Hurda odadaki eski metal eşyaları inceliyordu. Ayaz ise kadının ağzından çıkan her ayrıntıya dikkat kesilmişti. Konuşmayı Gümüş yönlendirdi. “Kaptan Milos'la birlikte çalıştığınızı söylediler.”
 
-“Çalıştım tabii. Gençtim o zaman. O ise son seferlerine çıkıyordu. İnsan bazı adamların ne zaman yorulduğunu anlayamaz. Milos öyleydi.” Talita uzaklara baktı. “Bir keresinde rayların ötesinde üç gece mahsur kalmıştık. İkinci gece—” Durdu. “Yok, o başka seferdi. Milos o sırada bizimle değildi.”
+“Çalıştım tabii. Gençtim o zaman. O ise son seferlerine çıkıyordu. İnsan bazı adamların ne zaman yorulduğunu anlayamaz. Milos öyleydi.” Talitha uzaklara baktı. “Bir keresinde rayların ötesinde üç gece mahsur kalmıştık. İkinci gece—” Durdu. “Yok, o başka seferdi. Milos o sırada bizimle değildi.”
 
 Kadehini kaldırdı. “Neyse. Demek hazineyi soruyorsunuz.”
 
-Ayaz doğruldu. Talita güldü. “Her gelen onu sorar. Kimi para der, kimi eski demirdarların sakladığı şeyler. Bazısı Milos'un haritalar bulduğunu söyler, bazısı da hiçbir şey bulmadığını.”
+Ayaz doğruldu. Talitha güldü. “Her gelen onu sorar. Kimi para der, kimi eski demirdarların sakladığı şeyler. Bazısı Milos'un haritalar bulduğunu söyler, bazısı da hiçbir şey bulmadığını.”
 
 “Peki siz neye inanıyorsunuz?” diye sordu Gümüş.
 
 “Ben onunla çalıştım, evlat. Bütün sırlarını bildiğimi söylemedim.” Kadehini parmaklarının arasında çevirdi. “Ben Milos'la sefere çıktım. Hazinesini görmedim.”
 
-Anlattığına göre Milos, birlikte çıktıkları seferden kısa süre sonra başka bir göreve gönderilmiş ve o seferden sağ dönmemişti. Bedeni geri getirilmişti. Fakat ruhu yoktu. Gümüş, kadının bu sözleri üzerine başını hafifçe çevirdi. Bakışları pencerenin yanındaki boşluğa kaydı, birkaç saniye orada kaldı, sonra yeniden Talita'ya döndü. Talita fark etmedi.
+Anlattığına göre Milos, birlikte çıktıkları seferden kısa süre sonra başka bir göreve gönderilmiş ve o seferden sağ dönmemişti. Bedeni geri getirilmişti. Fakat ruhu yoktu. Gümüş, kadının bu sözleri üzerine başını hafifçe çevirdi. Bakışları pencerenin yanındaki boşluğa kaydı, birkaç saniye orada kaldı, sonra yeniden Talitha'ya döndü. Talitha fark etmedi.
 
-Demirdarlar arasında Milos'un ruhunun kaçtığı söyleniyordu. Kimileri onun ölümdiyarında kaybolduğuna, kimileri bir şeyden kurtulmak için kendi isteğiyle uzaklaştığına inanıyordu. Talita bunlardan hangisinin doğru olduğunu bilmiyordu.
+Demirdarlar arasında Milos'un ruhunun kaçtığı söyleniyordu. Kimileri onun ölümdiyarında kaybolduğuna, kimileri bir şeyden kurtulmak için kendi isteğiyle uzaklaştığına inanıyordu. Talitha bunlardan hangisinin doğru olduğunu bilmiyordu.
 
 “Gelen beden boştu,” dedi. “Sefer battaniyesine sarmışlardı. Yüzü açıktı. Uyuyan bir adama benzemiyordu, evlat. İçindekiler toplanıp gitmiş bir eve benziyordu. Kapısı açık bırakılmış bir eve.” Kadehi dudaklarına götürdü, içmeden indirdi. “Sonra da imha ettiler.”
 
 “Ruh Muhafızları mı?” diye sordu Ayaz.
 
-Talita kısa, kuru bir kahkaha attı. “Muhafızlar mı? Bizim ölülerimize Muhafızlar gelmez, evlat. Lonca gelir. Rayların ötesinde yıllar geçirmiş bir ruh, sizin sokaklarınızdaki ruhlara benzemez.”
+Talitha kısa, kuru bir kahkaha attı. “Muhafızlar mı? Bizim ölülerimize Muhafızlar gelmez, evlat. Lonca gelir. Rayların ötesinde yıllar geçirmiş bir ruh, sizin sokaklarınızdaki ruhlara benzemez.”
 
 “Milos'un ruhu bulunamadı mı?”
 
@@ -111,11 +112,11 @@ Talita kısa, kuru bir kahkaha attı. “Muhafızlar mı? Bizim ölülerimize Mu
 
 Sessizlik oldu. Dışarıda, dar sokaktan geçen bir arabanın tekerlek sesi duyuldu. Gümüş kadehleri yeniden doldurdu. “Bir demirdarın ruhunu bulmanın başka yolu olabilir mi?”
 
-Talita bu kez hemen cevap vermedi. “Olabilir.”
+Talitha bu kez hemen cevap vermedi. “Olabilir.”
 
 Hurda başını kaldırdı. “Nasıl?”
 
-“Lonca kayıtları.” Talita kadehini eline aldı ama içmedi. “Her demirdardan, eğitimini tamamladığında bir numune alınır. Ruhundan. Usuldür. Loncaya girdin mi, senden geriye bir şey kalır.”
+“Lonca kayıtları.” Talitha kadehini eline aldı ama içmedi. “Her demirdardan, eğitimini tamamladığında bir numune alınır. Ruhundan. Usuldür. Loncaya girdin mi, senden geriye bir şey kalır.”
 
 “Bunlar nerede tutuluyor?” diye sordu Ayaz.
 
@@ -127,9 +128,9 @@ Gümüş'ün ilgisi artmıştı. “Yani Milos'un da bir numunesi olabilir.”
 
 “Arşive kimler girebilir?”
 
-Talita güldü. “Ben artık giremem.”
+Talitha güldü. “Ben artık giremem.”
 
-Ayaz önündeki bardağı bıraktı. Talita'nın söylediklerinde artık bir kapısı, duvarları ve kayıtları olan bir yer vardı. Milos'un ruhundan geriye kalan parça orada saklanıyordu.
+Ayaz önündeki bardağı bıraktı. Talitha'nın söylediklerinde artık bir kapısı, duvarları ve kayıtları olan bir yer vardı. Milos'un ruhundan geriye kalan parça orada saklanıyordu.
 
 ### IV. İçeride, Dışarıda
 
@@ -175,7 +176,7 @@ Kalemini havada tuttu, sonra elini toparlayıp demirdar kılığına uygun imzay
 
 Dışarıda üçü buluştuğunda Ayaz bileğini yokluyordu.
 
-“Vedat'a gitmen gerekiyor mu?” diye sordu Hurda.
+“Dr. Vedat'a gitmen gerekiyor mu?” diye sordu Hurda.
 
 “Hayır.”
 
@@ -283,7 +284,7 @@ Sözleri zaman zaman birbirine karışıyordu; eğitim yıllarından, kaybolan a
 
 Ayaz'ın dinleyişi değişti. Hayalet, Cloudspire ile South Point arasındaki hattan söz ediyordu. Rayların geçtiği yerde, faciadan önce kurulmuş bir kasabanın kalıntıları vardı; kasabanın ortasında da yıkık bir tapınak. Milos'un hazinesi oradaydı. En azından Milos öyle söylemişti. Ayaz not defterini çıkarıp her şeyi bir kez daha tekrar ettirdi. Bu kez bir söylentiyi değil, bir güzergâhı yazıyordu.
 
-Lizete konuşmanın ortasında başını çevirdi. “Birini daha çağırayım,” dedi ve arka raflara, Ayaz'ın biraz önce dolaştığı tarafa yürümeye başladı.
+Lizete konuşmanın ortasında başını çevirdi. “Garok'u çağırayım,” dedi ve arka raflara, Ayaz'ın biraz önce dolaştığı tarafa yürümeye başladı.
 
 Hurda fırsatı gördü. Soğutma düzeneğinin başından sessizce ayrılıp arşivcinin arkasındaki fihrist dolabına yanaştı. Çekmece beklediğinden ağırdı. Hafifçe çektiğinde içindeki kartlar öne kaydı ve bir an hepsi yere dökülecekmiş gibi oldu. Hurda çekmeceyi son anda geri itti. Kartlar yerlerinde kaldı; aradığı kayıt da.
 
@@ -368,5 +369,3 @@ Odadaki tek sandalye boş değildi.
 “Neden?”
 
 Gümüş cevap vermedi. O gece odasında kalamadı ve sabah olana kadar gözünü kırpmadı.
-
-*Üçüncü bölümün sonu.*

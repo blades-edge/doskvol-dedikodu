@@ -7,6 +7,7 @@ episode: 4
 author:
   - dr-a-sorel.json
 ---
+
 **Altıncı saat**
 
 Müfettiş Voss beni muayenehanemin önünde bıraktı. Akşam haber göndereceğini söyledi.
@@ -53,7 +54,7 @@ Bir çekmeceden iki anahtar çıkarıp yan yana koydu. Birinin dişleri daha gen
 
 Müfettiş Voss'un pusulası akşamüstü ulaştı:
 
-*Ilyra'nın bir arkadaşı var. Kömürsırtı. Eşref vaktinde hazır olun.*
+_Ilyra'nın bir arkadaşı var. Kömürsırtı. Eşref vaktinde hazır olun._
 
 Pusulanın altında adres bulunuyordu.
 
@@ -208,7 +209,3 @@ Elara'nın konuşmasını tamamlamasını bekledim. Devam etmedi.
 Defterimi açtım. Çocukluğuma ilişkin anlattığım dört cümleyi yeniden yazdım ve sözcüklerin sırasını kontrol ettim.
 
 Her zamanki gibiydi.
-
-* * *
-
-*Dördüncü bölümün sonu. Dr. Sorel'in vaka defteri bir sonraki sayıda devam edecek.*
