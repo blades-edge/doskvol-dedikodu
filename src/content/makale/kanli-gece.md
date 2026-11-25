@@ -8,6 +8,9 @@ description:
 author: [arvus-booker.json]
 section: Haberler
 district: Kargaayağı
+cover: ../../assets/images/kanli-gece.avif
+coverAlt: Bir komşu kepenk aralığından bakarken kuşaklı kılıççılar, girişinde fenerler yanan kömür deposuna ilerliyor.
+coverCaption: Kül Yolu’ndaki eski kömür deposu, Yağkaralarının merkeziydi.
 ---
 
 Bir süredir **Yağkaraları** olarak da bilinen eski **Lambacılar Loncası** ve **Kızıl Kuşak Iruvia Harp Sanatları Mektebi** mensupları arasında süre gelen çatışmalar, Kargaayağı'nın cadde ve sokaklarına taşmış, defalarca tarafların kanı dökülmüştü. Kargaayağı sakinleri, iki taraftan birinin olduğu yere eninde sonunda diğerinin de geleceği ve kargaşa çıkacağını bilir olmuş ve birini gördüklerinde vebadan kaçar gibi uzaklaşır hale gelmişlerdi.
