@@ -8,6 +8,9 @@ author:
 section: Dedikodular
 district: Kargaayağı
 location: Ironhook hapishanesi, Çavdar Sokağı
+cover: ../../assets/images/eve-donus-gunu.avif
+coverAlt: Bohçalı bir adam Ironhook’un kapısında tek başına duruyor. Solda bir aile kucaklaşıyor, sağda başka bir adam faytona biniyor. Arkada bir muhafız demir kapıyı kapatıyor.
+coverCaption: Ironhook’tan üç adam çıktı. İkisini birileri bekliyordu.
 ---
 
 Geçen hafta, Eve dönüş günü sabahı Ironhook'un kapısındaydım.
