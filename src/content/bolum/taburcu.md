@@ -8,7 +8,7 @@ author:
   - dr-a-sorel.json
 ---
 
-**Altıncı saat**
+#### Altıncı saat
 
 Müfettiş Voss beni muayenehanemin önünde bıraktı. Akşam haber göndereceğini söyledi.
 
@@ -52,11 +52,11 @@ Bir çekmeceden iki anahtar çıkarıp yan yana koydu. Birinin dişleri daha gen
 
 İnceleme ücretini ödedim, kâğıdı defterimin arasına yerleştirdim. Muayenehaneme döndüğümde ilk hastam bekliyordu.
 
-**Eşref vakti**
+#### Eşref vakti
 
 Müfettiş Voss'un pusulası akşamüstü ulaştı:
 
-_Ilyra'nın bir arkadaşı var. Kömürsırtı. Eşref vaktinde hazır olun._
+> Ilyra'nın bir arkadaşı var. Kömürsırtı. Eşref vaktinde hazır olun.
 
 Pusulanın altında adres bulunuyordu.
 
@@ -206,7 +206,7 @@ Dışarıdaki tekerlek sesleri kesildi. Pencerenin altında birileri konuşmaya 
 
 Voss bana döndü. Sabah koğuşta sorduğu soruyu yeniden sormadı.
 
-**Eşref vaktini çeyrek geçe**
+#### Eşref vaktini çeyrek geçe
 
 Elara'nın konuşmasını tamamlamasını bekledim. Devam etmedi.
 

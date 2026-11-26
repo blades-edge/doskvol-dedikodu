@@ -15,7 +15,7 @@ author:
 
 > _“Loncaya giren her demirdar, ruhundan bir parçayı arşive bırakır. Geri kalanını nereye bıraktığını kimse sormaz.”_
 
-### I. Masadaki Mektuplar
+## I. Masadaki Mektuplar
 
 Kargaayağı'ndaki eski dükkânın bodrumunda iki mektup bekliyordu. Biri sandığın üzerine düzgünce bırakılmış, diğeri masanın kenarına gelişigüzel iliştirilmişti. Üzerlerinde iki ayrı el yazısı vardı ve bırakılış biçimleri en az içerikleri kadar sahiplerini ele veriyordu.
 
@@ -41,7 +41,7 @@ Beş kişilik tayfadan geriye üç kişi kalmıştı. Yine de bodrum eskisinden 
 
 Yalnızca iki sandalye boştu.
 
-### II. Dönüş
+## II. Dönüş
 
 Gümüş birkaç gün önce kendi yolculuğundan dönmüştü. İpekyalı'daki soygundan sonra aldığı bir mektup onu geçmişine ilişkin bazı meselelerin peşine düşürmüştü. Nereye gittiğini, orada neler öğrendiğini anlatmadı. Yolculuğun onu değiştirdiğine dair bir açıklama da yapmadı.
 
@@ -65,7 +65,7 @@ Bu sırada Hurda da uzun süredir ertelediği bir işi bitiriyordu. İpekyalı s
 
 Sis'in gönderdiği viskiyi eline aldı. Şişenin camında lambanın sarı ışığı kırılıyordu. Kapağını açıp koklamayı düşündü, sonra vazgeçti. “Daha başarılı bir operasyon sonrasında.” Şişeyi güvenli bir yere kaldırdı. Bu kez kutlamak için gerçekten iyi bir neden bekleyecekti.
 
-### III. Gecepazarı'nda Bir Ev
+## III. Gecepazarı'nda Bir Ev
 
 Ayaz, Kaptan Milos'un hazinesini unutmamıştı. Boks salonlarında duyduğu söylentiler onu haftalardır Gecepazarı'na götürüyordu. Eski demirdarların hikâyeleri, unutulmuş seferler ve nerede saklandığı bilinmeyen bir servete dair anlatılar birbirine karışmıştı. Haftalar süren arayışın sonunda karşısına Talitha'nın kapısı çıktı.
 
@@ -137,7 +137,7 @@ Talitha güldü. “Ben artık giremem.”
 
 Ayaz önündeki bardağı bıraktı. Talitha'nın söylediklerinde artık bir kapısı, duvarları ve kayıtları olan bir yer vardı. Milos'un ruhundan geriye kalan parça orada saklanıyordu.
 
-### IV. İçeride, Dışarıda
+## IV. İçeride, Dışarıda
 
 Gaddoc İstasyonu'nun çevresinde sesler birbirine karışmaktan çok birbiriyle yarışırdı. Raylarda ilerleyen ağır tekerlekler, vagonların metal bağlantıları, yük taşıyan işçilerin bağırışları ve istasyonun derinliklerinden yükselen mekanik uğultu hiç kesilmiyordu. Demirdar Loncası'nın binası da bu kalabalığın bir parçasıydı.
 
@@ -189,7 +189,7 @@ Dışarıda üçü buluştuğunda Ayaz bileğini yokluyordu.
 
 Ayaz cevap vermedi, Kırağı'yı yanına çağırdı. Köpek bu kez geldi. Ama raylardan uzaklaşırken bir kez daha dönüp geriye baktı.
 
-### V. Işıklar Sönmeyince
+## V. Işıklar Sönmeyince
 
 Hurda planının işleyeceğinden emindi. Demirdar Loncası'nın elektrik beslemesi binanın dışındaki büyük regülatörlerden geçiyordu. Bunlardan birkaçına müdahale edilirse yük diğerlerine binecek, aşırı zorlanan sistem kendini kapatacaktı. En azından hesap buydu.
 
@@ -231,7 +231,7 @@ Gümüş kaşlarını kaldırdı. “Öyle mi?”
 
 Genç adam yön değiştirdi. Hurda, Ayaz'a baktı; Ayaz bir şey söylemedi. Arşivi bulmak için günlerdir uğraşıyorlardı. Genç görevli ise onları kendi ayağıyla oraya götürüyordu.
 
-### VI. Soğuk Oda
+## VI. Soğuk Oda
 
 Arşivin kapısı açıldığında yüzlerine kuru bir soğuk vurdu. Kış soğuğu değildi bu; uzun süre kapalı kalmış bir tabutun soğuğuydu. Üçü de duraksadı.
 
@@ -315,7 +315,7 @@ Hurda yerdeki kadına baktı. “Az kalsın üzülecektim.”
 
 Ayaz cevap vermedi.
 
-### VII. Son Bir Hamle
+## VII. Son Bir Hamle
 
 Ayak sesleri yaklaşıyordu. Hurda'nın gözü, soğutma düzeneğinin yanındaki duvarda kalın kabloların toplandığı pirinç kapaklı kutuya kaydı. Bu büyüklükte bir binada bir alarm hattı olmalıydı: bir yangın zili, bir tahliye düdüğü, odadaki herkesi kapıya koşturacak bir şey. Kapağı açtı. İçerideki bağlantılar beklediğinden sıkışıktı. Doğru teli ararken parmakları yanlışına değdi.
 
@@ -339,7 +339,7 @@ Hurda dolabı yeniden araladı ve şişeyi aldı. Gözyaşı şişesini andıran
 
 “Bulduk,” dedi. Orada kalmaları için artık hiçbir neden yoktu.
 
-### VIII. Yan Bakış
+## VIII. Yan Bakış
 
 Koridora çıktıklarında Ayaz hâlâ konuşuyordu, ama demirdarlardan birinin sabrı tükenmişti. Ayaz'ı cümlesinin ortasında bırakıp bir hışımla arşive doğru yürümeye başladı. Gümüş ile Hurda'nın yanından geçerken Gümüş'le göz göze geldi. Bakışı ters ve kabaydı; onu baştan aşağı süzdü, önemsiz bir eşyayı tartar gibi.
 
@@ -353,7 +353,7 @@ Koridorun köşesini döndükten kısa bir süre sonra arkalarından ağır bir 
 
 İstasyondan henüz fazla uzaklaşmamışlardı ki ölüm çanı çaldı. Ses kulaktan önce kemiklere ulaştı, ardından çanın ağır vuruşları sokak gürültüsünün üzerine çıktı. Ayaz başını kaldırdı. Hurda duraksadı. Gümüş yürümeyi sürdürdü. Çanın nereden yükseldiğini anlamak güç değildi. Gümüş ne yaptığını söylemedi.
 
-### IX. Evde Bekleyen
+## IX. Evde Bekleyen
 
 Kargaayağı'na vardıklarında hava çoktan kararmıştı. Sokakta yağmurun bıraktığı nem vardı; paslı kepenkler rüzgârla hafifçe titriyor, karşı kaldırımdaki elektroplazmik lamba düzensiz aralıklarla parlayıp taş zemindeki su birikintilerine mavimsi lekeler bırakıyordu.
 
