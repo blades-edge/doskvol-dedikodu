@@ -317,7 +317,13 @@ Ayaz cevap vermedi.
 
 ### VII. Son Bir Hamle
 
-Lizete kendine gelemeden Gümüş elini cebine attı ve Vecd Tozu'nun kutusunu açıp içindekileri odaya savurdu. İpekyalı'da Hurda'nın evraklara işlediği bu toz o gece Gümüş'ü de etkilemişti; bu kez de etkileyecekti ve Gümüş bunu biliyordu. İnce zerrecikler havaya karıştı. Genç görevlinin yüzündeki gerginlik gevşedi, Lizete'nin bakışları dalgınlaştı. Hurda da, Ayaz da, Gümüş'ün kendisi de bir anlığına söylenecek ilk söze teslim olmaya hazırdı.
+Ayak sesleri yaklaşıyordu. Hurda'nın gözü, soğutma düzeneğinin yanındaki duvarda kalın kabloların toplandığı pirinç kapaklı kutuya kaydı. Bu büyüklükte bir binada bir alarm hattı olmalıydı: bir yangın zili, bir tahliye düdüğü, odadaki herkesi kapıya koşturacak bir şey. Kapağı açtı. İçerideki bağlantılar beklediğinden sıkışıktı. Doğru teli ararken parmakları yanlışına değdi.
+
+Akım kolundan omzuna kadar tırmandı. Bir an bütün kasları kilitlendi; dişleri birbirine kenetlendi, burnuna yanık kıl kokusu doldu. Sonra kutudan geriye savruldu. Eli titriyordu, avucunun ortasında küçük, kararmış bir iz vardı. Alarm çalmamıştı.
+
+Hurda avucuna baktı. Kılık, arşiv, koridordaki ayak sesleri, rayların yanında yüzünü görmüş olan adam: hepsi aynı anda üstüne geliyordu ve hiçbiri, hâlâ parmaklarında karıncalanan akımdan daha gerçek görünmüyordu. _Başımıza ne gelirse gelsin,_ diye düşündü, _bir şekilde yırtıyoruz nasılsa._ Bu düşünce onu korkutmadı. Asıl tuhaf olan da buydu.
+
+Alarm çalmayınca, Lizete kendine gelemeden Gümüş elini cebine attı ve Vecd Tozu'nun kutusunu açıp içindekileri odaya savurdu. İpekyalı'da Hurda'nın evraklara işlediği bu toz o gece Gümüş'ü de etkilemişti; bu kez de etkileyecekti ve Gümüş bunu biliyordu. İnce zerrecikler havaya karıştı. Genç görevlinin yüzündeki gerginlik gevşedi, Lizete'nin bakışları dalgınlaştı. Hurda da, Ayaz da, Gümüş'ün kendisi de bir anlığına söylenecek ilk söze teslim olmaya hazırdı.
 
 O ilk sözü Gümüş söyledi. “Burası tehlikeli. Soğutma hattı bozuk, derhâl boşaltmamız gerekiyor!”
 
