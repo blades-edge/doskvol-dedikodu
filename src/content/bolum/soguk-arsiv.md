@@ -6,6 +6,9 @@ description: Gaddoc İstasyonu'ndaki Demirdar Loncası'nın alt katlarında, her
   çıkarken arkalarında bıraktıkları, yanlarına aldıklarından ağır olacak.
 series: doskvol-gunlukleri.json
 episode: 3
+cover: ../../assets/images/soguk-arsiv-soguk-oda.avif
+coverAlt: Numune kavanozlarının ardında Lizete demirdar hayaletleriyle konuşuyor, Ayaz yaşlı bir demirdarın söylediklerini defterine yazıyor.
+coverCaption: Soğuk arşivde ölü demirdarlar eski seferlerini anlatıyor.
 author:
   - altinci-sandalye.json
 ---
@@ -97,6 +100,8 @@ Ayaz doğruldu. Talitha güldü. “Her gelen onu sorar. Kimi para der, kimi esk
 “Ben onunla çalıştım, evlat. Bütün sırlarını bildiğimi söylemedim.” Kadehini parmaklarının arasında çevirdi. “Ben Milos'la sefere çıktım. Hazinesini görmedim.”
 
 Anlattığına göre Milos, birlikte çıktıkları seferden kısa süre sonra başka bir göreve gönderilmiş ve o seferden sağ dönmemişti. Bedeni geri getirilmişti. Fakat ruhu yoktu. Gümüş, kadının bu sözleri üzerine başını hafifçe çevirdi. Bakışları pencerenin yanındaki boşluğa kaydı, birkaç saniye orada kaldı, sonra yeniden Talitha'ya döndü. Talitha fark etmedi.
+
+![Talitha kadehini tutup konuşurken Ayaz öne eğilip onu dinliyor. Gümüş, eski perdenin yanındaki boşluğa bakıyor.](../../assets/images/soguk-arsiv-gecepazarinda-bir-ev.avif)
 
 Demirdarlar arasında Milos'un ruhunun kaçtığı söyleniyordu. Kimileri onun ölümdiyarında kaybolduğuna, kimileri bir şeyden kurtulmak için kendi isteğiyle uzaklaştığına inanıyordu. Talitha bunlardan hangisinin doğru olduğunu bilmiyordu.
 
@@ -284,6 +289,8 @@ Sözleri zaman zaman birbirine karışıyordu; eğitim yıllarından, kaybolan a
 
 Ayaz'ın dinleyişi değişti. Hayalet, Cloudspire ile South Point arasındaki hattan söz ediyordu. Rayların geçtiği yerde, faciadan önce kurulmuş bir kasabanın kalıntıları vardı; kasabanın ortasında da yıkık bir tapınak. Milos'un hazinesi oradaydı. En azından Milos öyle söylemişti. Ayaz not defterini çıkarıp her şeyi bir kez daha tekrar ettirdi. Bu kez bir söylentiyi değil, bir güzergâhı yazıyordu.
 
+![Numune kavanozlarının ardında Lizete demirdar hayaletleriyle konuşuyor, Ayaz yaşlı bir demirdarın söylediklerini defterine yazıyor.](../../assets/images/soguk-arsiv-soguk-oda.avif)
+
 Lizete konuşmanın ortasında başını çevirdi. “Garok'u çağırayım,” dedi ve arka raflara, Ayaz'ın biraz önce dolaştığı tarafa yürümeye başladı.
 
 Hurda fırsatı gördü. Soğutma düzeneğinin başından sessizce ayrılıp arşivcinin arkasındaki fihrist dolabına yanaştı. Çekmece beklediğinden ağırdı. Hafifçe çektiğinde içindeki kartlar öne kaydı ve bir an hepsi yere dökülecekmiş gibi oldu. Hurda çekmeceyi son anda geri itti. Kartlar yerlerinde kaldı; aradığı kayıt da.
@@ -369,3 +376,5 @@ Odadaki tek sandalye boş değildi.
 “Neden?”
 
 Gümüş cevap vermedi. O gece odasında kalamadı ve sabah olana kadar gözünü kırpmadı.
+
+![Gümüş, anahtar elinde kapıdan bakıyor. Tam teçhizatlı bir demirdarın hayaleti, kırağı tutmuş pencerenin yanındaki sandalyede oturuyor.](../../assets/images/soguk-arsiv-evde-bekleyen.avif)
