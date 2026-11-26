@@ -2,7 +2,7 @@
 title: Kanlı gece
 description:
   Kızıl Kuşaklar ile Yağkaraları arasında gitgide şiddetlenen çatışmalar,
-  Kargaayağında Yağkaraları tarafından kontrol edilen kömür deposuna Kızıl Kuşakların
+  Kargaayağı'nda Yağkaraları tarafından kontrol edilen kömür deposuna Kızıl Kuşakların
   yaptığı büyük baskın ile uç noktasına ulaştı. Yağkaraları arasında onlarca kayıptan
   bahsediliyor.
 author: [arvus-booker.json]
