@@ -1,0 +1,57 @@
+<!DOCTYPE html><html lang="tr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><script>
+  (() => {
+    const key = "doskvol-appearance";
+    const valid = value => ["day", "night", "device"].includes(value);
+    const media = window.matchMedia("(prefers-color-scheme: dark)");
+    let preference = "device";
+    try {
+      const saved = localStorage.getItem(key);
+      if (valid(saved)) preference = saved;
+    } catch {
+      // Private browsing may deny storage; the current page still works.
+    }
+    const paint = () => {
+      const dark =
+        preference === "night" || (preference === "device" && media.matches);
+      document.documentElement.dataset.theme = dark ? "dark" : "light";
+      document.querySelectorAll("[data-theme-choice]").forEach(button => {
+        button.setAttribute(
+          "aria-pressed",
+          String(button.dataset.themeChoice === preference)
+        );
+      });
+    };
+    paint();
+    document.addEventListener("DOMContentLoaded", paint, { once: true });
+    media.addEventListener("change", paint);
+    document.addEventListener("doskvol:theme", event => {
+      if (!valid(event.detail)) return;
+      preference = event.detail;
+      try {
+        localStorage.setItem(key, preference);
+      } catch {
+        // Private browsing may deny storage; the current page still works.
+      }
+      paint();
+    });
+    window.addEventListener("storage", event => {
+      if (event.key !== key && event.key !== null) return;
+      preference = valid(event.newValue) ? event.newValue : "device";
+      paint();
+    });
+  })();
+</script><link rel="icon" type="image/svg+xml" href="/taslak/b/editor/halil/favicon.svg"><meta name="robots" content="noindex, nofollow"><link rel="canonical" href="https://doskvol.ink/taslak/b/editor/halil/makale/strangford-tekzip/"><meta name="description" content="Strangford dosyasına ilişkin yazılarımız hakkında bir hukuk yazıhanesinden gelen mektubu, talep edildiği üzere olduğu gibi yayımlıyoruz."><meta property="og:site_name" content="Doskvol Dedikoduları"><meta property="og:locale" content="tr_TR"><meta property="og:type" content="article"><meta property="og:title" content="Strangford Evi adına tekzip | Doskvol Dedikoduları"><meta property="og:description" content="Strangford dosyasına ilişkin yazılarımız hakkında bir hukuk yazıhanesinden gelen mektubu, talep edildiği üzere olduğu gibi yayımlıyoruz."><meta property="og:url" content="https://doskvol.ink/taslak/b/editor/halil/makale/strangford-tekzip/"><meta property="og:image" content="https://doskvol.ink/taslak/b/editor/halil/_astro/doskvol-line-engraving.Dm_4yufi_ZQG2nm.jpeg"><meta property="og:image:type" content="image/jpeg"><meta property="og:image:alt" content><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="Strangford Evi adına tekzip | Doskvol Dedikoduları"><meta name="twitter:description" content="Strangford dosyasına ilişkin yazılarımız hakkında bir hukuk yazıhanesinden gelen mektubu, talep edildiği üzere olduğu gibi yayımlıyoruz."><meta name="twitter:image" content="https://doskvol.ink/taslak/b/editor/halil/_astro/doskvol-line-engraving.Dm_4yufi_ZQG2nm.jpeg"><meta name="twitter:image:alt" content><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,600;0,6..72,700;1,6..72,400&display=swap" rel="stylesheet"><title>Strangford Evi adına tekzip | Doskvol Dedikoduları</title><link rel="stylesheet" href="/taslak/b/editor/halil/_astro/EditorialHead.B4lPX8nn.css"></head><body><a class="reading-skip" href="#reading-content">Makaleye geç</a><div class="paper reading-paper"><script type="module">document.querySelectorAll(`[data-theme-choice]`).forEach(e=>{e.addEventListener(`click`,()=>{document.dispatchEvent(new CustomEvent(`doskvol:theme`,{detail:e.dataset.themeChoice}))})});</script><header class="masthead"><aside class="weather-theme" aria-label="Gazetenin hava durumu ve görünümü"><div class="weather-caption">Doskvol’da hava</div><div class="weather-choices" role="group" aria-label="Görünüm tercihi"><button type="button" data-theme-choice="day" aria-pressed="false" title="Kırık güneş — açık görünüm"><img src="/taslak/b/editor/halil/weather-day.png" alt="" width="56" height="56" loading="eager"><span>Gündüz</span></button><button type="button" data-theme-choice="night" aria-pressed="false" title="Ay ve loş bacıları — koyu görünüm"><img src="/taslak/b/editor/halil/weather-night.png" alt="" width="56" height="56" loading="eager"><span>Gece</span></button><button type="button" data-theme-choice="device" aria-pressed="true" title="Hayaletli hava — cihazın tercihini izle"><img src="/taslak/b/editor/halil/weather-device.png" alt="" width="56" height="56" loading="eager"><span>Cihaz</span></button></div></aside><div class="masthead-title"><div class="eyebrow">Akoros’un bağımsız sesi · Doskvol</div><a class="masthead-name" href="/taslak/b/editor/halil/sayi/005/">Doskvol Dedikoduları</a><div class="tagline">Duyduğunuza inanmayın. Duymadıklarınızdan korkun.</div></div></header><main id="reading-content"><header class="reading-heading"><div class="eyebrow">Haberler</div><h1>Strangford Evi adına tekzip</h1><p class="reading-deck">Strangford dosyasına ilişkin yazılarımız hakkında bir hukuk yazıhanesinden gelen mektubu, talep edildiği üzere olduğu gibi yayımlıyoruz.</p><div class="reading-meta"><span>Yazı İşleri</span><a href="/taslak/b/editor/halil/takvim/">21 Kalivet 847</a><a href="/taslak/b/editor/halil/sayi/">Sayı 005</a></div></header><article class="reading-copy" aria-label="Strangford Evi adına tekzip"><p><em>Aşağıdaki mektup Yazı İşleri’ne Kalivet’in 18’inde elden teslim edilmiştir. Gönderenin talebi üzerine olduğu gibi yayımlıyoruz.</em></p>
+<hr>
+<p><strong>Doskvol Dedikoduları Yazı İşleri Müdürlüğü’ne</strong></p>
+<p>Müvekkilim Strangford Evi adına yazıyorum.</p>
+<p>Gazetenizin Mendar ve Kalivet aylarında yayımlanan sayılarında, muhabiriniz V. Prichard imzasıyla müvekkilimin Yanıkçukur’daki imalathanelerine ilişkin bir dizi yazı yer almıştır. Müvekkilim, ilk yazıdan önce kendisine yöneltilen sorulara yazılı olarak cevap vermiş ve işletmelerinin yürürlükteki bütün kurallara uygun çalıştığını bildirmiştir. Bu cevap, yazılarınızda hak ettiği yeri bulmamıştır.</p>
+<p>Söz konusu yazılarda belgelerin kendisi okura gösterilmemiş, yalnızca muhabirinizin seçtiği ayrıntılar aktarılmıştır. Bir kaydın içinden çıkarılmış bir satır, o kaydın neyi belgelediğini göstermez. Belgelerde adı geçtiği bildirilen kişilerin sözleşmeleri, ait oldukları dönemin usulüne uygun olarak sona erdirilmiştir. Bu işlemlerin bütününü görmeden yapılan çıkarımlar kamuoyunda yanlış kanaatler oluşturmuştur.</p>
+<p>Yazılarda sözü edilen mühre ilişkin hususlar müvekkilimin değil, ilgili idarenin sorumluluğundadır. Bu konudaki soruların muhatabı müvekkilim değildir.</p>
+<p>Belgelerin gazetenize adsız bir zarfla ulaştırıldığını yine gazetenizden öğreniyoruz. Bu belgelerin, Şehir Meclisi’ndeki mevcut dengeyi değiştirmekte çıkarı bulunan çevrelerce derlenip gönderildiği kanaatindeyiz. Bir gazetenin, kaynağını bilmediği belgeler üzerine yazı yayımlaması, yayımlanan iddiaların ağırlığı ölçüsünde dikkat gerektirir.</p>
+<p>İşbu mektubun, söz konusu yazıların yayımlandığı sayfada ve aynı puntoyla yayımlanmasını talep ederiz.</p>
+<p>Müvekkilimin her türlü hukukî hakkı saklıdır.</p>
+<p>Av. Corvin Halloway
+Halloway ve Ortakları Hukuk Yazıhanesi, Nizamhane
+Kalivet’in 17’si, 847</p>
+<hr>
+<p><em>Muhabirimizin dosyası Yazı İşleri’ndedir.</em></p><footer class="byline">— Yazı İşleri</footer></article><div class="reading-return"><a href="/taslak/b/editor/halil/sayi/005/">← Sayı 005</a><a href="#reading-content">Makalenin başına ↑</a></div></main><footer>Doskvol Dedikoduları · Duyduğunuza inanmayın. Duymadıklarınızdan korkun.</footer></div></body></html>

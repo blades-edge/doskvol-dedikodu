@@ -1,0 +1,119 @@
+<!DOCTYPE html><html lang="tr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><script>
+  (() => {
+    const key = "doskvol-appearance";
+    const valid = value => ["day", "night", "device"].includes(value);
+    const media = window.matchMedia("(prefers-color-scheme: dark)");
+    let preference = "device";
+    try {
+      const saved = localStorage.getItem(key);
+      if (valid(saved)) preference = saved;
+    } catch {
+      // Private browsing may deny storage; the current page still works.
+    }
+    const paint = () => {
+      const dark =
+        preference === "night" || (preference === "device" && media.matches);
+      document.documentElement.dataset.theme = dark ? "dark" : "light";
+      document.querySelectorAll("[data-theme-choice]").forEach(button => {
+        button.setAttribute(
+          "aria-pressed",
+          String(button.dataset.themeChoice === preference)
+        );
+      });
+    };
+    paint();
+    document.addEventListener("DOMContentLoaded", paint, { once: true });
+    media.addEventListener("change", paint);
+    document.addEventListener("doskvol:theme", event => {
+      if (!valid(event.detail)) return;
+      preference = event.detail;
+      try {
+        localStorage.setItem(key, preference);
+      } catch {
+        // Private browsing may deny storage; the current page still works.
+      }
+      paint();
+    });
+    window.addEventListener("storage", event => {
+      if (event.key !== key && event.key !== null) return;
+      preference = valid(event.newValue) ? event.newValue : "device";
+      paint();
+    });
+  })();
+</script><link rel="icon" type="image/svg+xml" href="/taslak/b/editor/halil/favicon.svg"><meta name="robots" content="noindex, nofollow"><link rel="canonical" href="https://doskvol.ink/taslak/b/editor/halil/makale/bir-sisenin-itibari/"><meta name="description" content="Altıkule'de eski bir ailenin sofrasına davet edildim. Evin alt katları kiraya verilmiş, odaların çoğu kapatılmıştı. Fakat kimsenin açmaya yanaşmadığı bir şişe hâlâ yerini koruyordu."><meta property="og:site_name" content="Doskvol Dedikoduları"><meta property="og:locale" content="tr_TR"><meta property="og:type" content="article"><meta property="og:title" content="Bir şişenin itibarı | Doskvol Dedikoduları"><meta property="og:description" content="Altıkule'de eski bir ailenin sofrasına davet edildim. Evin alt katları kiraya verilmiş, odaların çoğu kapatılmıştı. Fakat kimsenin açmaya yanaşmadığı bir şişe hâlâ yerini koruyordu."><meta property="og:url" content="https://doskvol.ink/taslak/b/editor/halil/makale/bir-sisenin-itibari/"><meta property="og:image" content="https://doskvol.ink/taslak/b/editor/halil/_astro/doskvol-line-engraving.Dm_4yufi_ZQG2nm.jpeg"><meta property="og:image:type" content="image/jpeg"><meta property="og:image:alt" content><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="Bir şişenin itibarı | Doskvol Dedikoduları"><meta name="twitter:description" content="Altıkule'de eski bir ailenin sofrasına davet edildim. Evin alt katları kiraya verilmiş, odaların çoğu kapatılmıştı. Fakat kimsenin açmaya yanaşmadığı bir şişe hâlâ yerini koruyordu."><meta name="twitter:image" content="https://doskvol.ink/taslak/b/editor/halil/_astro/doskvol-line-engraving.Dm_4yufi_ZQG2nm.jpeg"><meta name="twitter:image:alt" content><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,600;0,6..72,700;1,6..72,400&display=swap" rel="stylesheet"><title>Bir şişenin itibarı | Doskvol Dedikoduları</title><link rel="stylesheet" href="/taslak/b/editor/halil/_astro/EditorialHead.B4lPX8nn.css"></head><body><a class="reading-skip" href="#reading-content">Makaleye geç</a><div class="paper reading-paper"><script type="module">document.querySelectorAll(`[data-theme-choice]`).forEach(e=>{e.addEventListener(`click`,()=>{document.dispatchEvent(new CustomEvent(`doskvol:theme`,{detail:e.dataset.themeChoice}))})});</script><header class="masthead"><aside class="weather-theme" aria-label="Gazetenin hava durumu ve görünümü"><div class="weather-caption">Doskvol’da hava</div><div class="weather-choices" role="group" aria-label="Görünüm tercihi"><button type="button" data-theme-choice="day" aria-pressed="false" title="Kırık güneş — açık görünüm"><img src="/taslak/b/editor/halil/weather-day.png" alt="" width="56" height="56" loading="eager"><span>Gündüz</span></button><button type="button" data-theme-choice="night" aria-pressed="false" title="Ay ve loş bacıları — koyu görünüm"><img src="/taslak/b/editor/halil/weather-night.png" alt="" width="56" height="56" loading="eager"><span>Gece</span></button><button type="button" data-theme-choice="device" aria-pressed="true" title="Hayaletli hava — cihazın tercihini izle"><img src="/taslak/b/editor/halil/weather-device.png" alt="" width="56" height="56" loading="eager"><span>Cihaz</span></button></div></aside><div class="masthead-title"><div class="eyebrow">Akoros’un bağımsız sesi · Doskvol</div><a class="masthead-name" href="/taslak/b/editor/halil/sayi/005/">Doskvol Dedikoduları</a><div class="tagline">Duyduğunuza inanmayın. Duymadıklarınızdan korkun.</div></div></header><main id="reading-content"><header class="reading-heading"><div class="eyebrow">Dedikodular</div><h1>Bir şişenin itibarı</h1><p class="reading-deck">Altıkule&#39;de eski bir ailenin sofrasına davet edildim. Evin alt katları kiraya verilmiş, odaların çoğu kapatılmıştı. Fakat kimsenin açmaya yanaşmadığı bir şişe hâlâ yerini koruyordu.</p><div class="reading-meta"><span>Gaspar Merrow</span><a href="/taslak/b/editor/halil/takvim/">21 Kalivet 847</a><a href="/taslak/b/editor/halil/sayi/">Sayı 005</a></div></header><article class="reading-copy" aria-label="Bir şişenin itibarı"><p>Altıkule’ye akşam yemeğine çağrılmak, insanın aklına ilk olarak iyi bir sofra getirmez. Hele davet, bir zamanlar şehrin soylularına ait olan eski kulelerden birindeyse. Bu binaların çoğunda artık soylulardan çok kiracılar oturuyor. Yine de davetiyeyi gönderen ailenin adını duyunca kabul ettim. Bir süredir haklarında pek az şey işitiyordum. Üstelik davetiyede akşam yemeği yazıyordu.</p>
+<p>Sokaklar karanlıktı. Kepenkler rüzgârla çarpıyor, boş binaların kapıları içeride biri varmış gibi gıcırdıyordu. Yanımdan geçen iki kadın göğüslerindeki ruhkıran muskalarını avuçlarına almıştı. Birinin bakışlarını takip edince karşı kaldırımdaki penceresiz binayı gördüm. Ben yürümeye devam ettim. Kulenin üst katlarında tek bir pencere yanıyordu.</p>
+<p>Kuleye eski bir yan kapıdan girdim. Bir zamanların geniş merdiveni ahşap bölmelerle daraltılmıştı. İlk katta açık bir kapının önünde çocuk ayakkabıları diziliydi. İçeriden soğan kavrulmasının kokusu geliyordu. Bir üst katta merdiven korkuluğuna çamaşır asılmış, iki gömlekle bir çarşaf geçişi neredeyse kapatmıştı. Eğilerek altlarından geçtim.</p>
+<p>Üçüncü kata vardığımda kiracıların kapıları sona erdi. Merdivenin geri kalanı taş döşeliydi. Duvarlarda eski aile portrelerinin yerini belli eden açık renkli dikdörtgenler duruyordu. Yukarıda beni yaşlı bir hizmetkâr karşıladı. Ceketimi aldı, eldivenlerimi dikkatle katladı ve yemek odasına götürdü.</p>
+<p>Ev sahibi beni ayakta bekliyordu. Yaşını söylemek güçtü; sesi genç kalmış, elleri yaşlanmıştı. Masada bir başka konuk, Gecepazarı’ndan geldiğini öğrendiğim bir tüccar oturuyordu. Adamın ceketi yeniydi. Gümüş saat zinciri yeleğinin üstünde, mumların ışığında parlıyordu.</p>
+<p>Sofraya baktım.</p>
+<p>Gümüş çatal ve kaşıklar gerçekti. Bıçaklardan ikisinin sapı fildişi, üçüncüsününki koyu renkli ahşaptı. Porselen tabakların kenarında aynı arma vardı; fakat birinin altın yaldızı neredeyse silinmişti. Mumlar yeniydi. Hiçbiri aynı boyda değildi.</p>
+<p>İlk olarak çorba geldi. Tadı yerindeydi. Biraz sulu olmakla birlikte terbiyesi iyi yapılmıştı. Ardından küçük porsiyonlar halinde Yarıktepe’nin nurlu tarlalarından gelme kızarmış kök sebzeler ve mantar soslu keçi eti sunuldu. Sostaki mantarlar taze değildi; kurutulup yeniden suya yatırılmışlardı. Kim yaptıysa iyi yatırmıştı. Hizmetkâr tabağımı değiştirmek için yanıma geldiğinde elindeki porseleni iki eliyle tutuyordu. Masaya bıraktığı tabak hafifçe sallandı. Altına katlanmış küçük bir bez yerleştirdi.</p>
+<p>Ev sahibi akşam boyunca kibarca konuştu. Bir zamanlar bu odada verilen davetlerden söz ederken neşeleniyor, konu bugünkü Altıkule’ye geldiğinde sözcüklerini daha dikkatli seçiyordu. Gecepazarlı konuğumuz ise dinlemeyi biliyordu. Özellikle mülklerden, eski mobilyalardan veya aile yadigârlarından söz açıldığında.</p>
+<p>Yemek bitince hizmetkâr sofrayı topladı.</p>
+<p>Ev sahibi ona başıyla işaret etti.</p>
+<p>Biraz sonra yaşlı adam elinde koyu renkli bir şişeyle döndü.</p>
+<p>Şişe uzunca, kalın camlı ve dar boyunluydu. Ağzında eski bir mühür bulunuyordu. Camın üzerinde toz vardı, fakat boynuna sarılmış ince bez temizdi. Hizmetkâr onu masaya koyarken altına yumuşak bir kumaş serdi.</p>
+<p>Üzerindeki etikette tanımadığım harfler vardı. Bazıları silinmiş, bazıları mürekkebin yayıldığı koyu lekelere dönüşmüştü.</p>
+<p>Ev sahibi arkasına yaslandı.</p>
+<p>“Büyükbabamın babasından kaldı,” dedi. “Ona da kendi babasından.”</p>
+<p>Tüccar öne eğildi.</p>
+<p>“Ne kadar eski?”</p>
+<p>“Ailemizde anlatıldığına göre felaketten önceki Skov kolonisinden kalma.”</p>
+<p>Adam etikete baktı.</p>
+<p>“Yazıyı okuyabiliyor musunuz?”</p>
+<p>“Hayır.”</p>
+<p>“Peki bunu nereden biliyorsunuz?”</p>
+<p>Ev sahibi şişenin yanındaki mumu biraz uzaklaştırdı.</p>
+<p>“Babam böyle söylerdi.”</p>
+<p>Tüccar başını salladı. Bu cevabı beğenip beğenmediğini anlayamadım.</p>
+<p>Ben şişeye yakından baktım. Camın üzerinde küçük kabarcıklar, dibinde koyu bir tortu seçiliyordu. Bunların şişenin yaşıyla mı, camın yapımıyla mı ilgili olduğunu söyleyemezdim. Mühür eskiydi.</p>
+<p>“Hiç açılmadı mı?” diye sordum.</p>
+<p>“Hayır.”</p>
+<p>“Peki açılınca içilecek bir şey çıkar mı?”</p>
+<p>Ev sahibi başını kaldırdı.</p>
+<p>Masada kısa bir sessizlik oldu.</p>
+<p>“Bu şişe içilmek için saklanmıyor, Bay Merrow.”</p>
+<p>Başıyla duvardaki portreyi gösterdi. Babasından, bu odada ağırlanan konuklardan söz etti. Tüccar dikkatle dinliyordu. Ben de dinledim.</p>
+<p>Bir süre sonra tüccar şişeyi satın almak istediğini söyledi.</p>
+<p>Teklif ettiği miktarı duyunca ev sahibinin önündeki boş tabağa baktım. Tabağın kenarındaki altın yaldız, hemen hemen bütünüyle aşınmıştı.</p>
+<p>“Satılık değil,” dedi ev sahibi.</p>
+<p>Tüccar bir an bekledi.</p>
+<p>“Teklifimi artırabilirim.”</p>
+<p>“Satılık değil.”</p>
+<p>“Anladım.”</p>
+<p>Bunu gerçekten anlamış gibi söylemedi. Fakat bir daha teklif etmedi.</p>
+<p>Ev sahibi şişeyi ailesinin koruyabildiği en eski eşyalardan biri olarak anlattı. Başka evlerden, başka odalardan ve artık kendilerinde bulunmayan bazı mobilyalardan söz etti. Hepsinin nerede olduğunu biliyordu. Bazılarını kimlerin satın aldığını da hatırlıyordu. Şişe ise hiçbir yere gitmemişti.</p>
+<p>Bu sırada hizmetkâr kapının yanında bekliyordu.</p>
+<p>Ev sahibi sözünü bitirince ona döndü.</p>
+<p>“Yerine kaldırabilirsiniz.”</p>
+<p>Yaşlı adam yaklaştı. Şişeyi iki eliyle kavradı. Kaldırmadan önce altındaki kumaşın bir köşesini düzeltti. Boynundaki bezi yeniden sardı. Bütün bunları ağır ağır değil, çok kez yapmış birinin rahatlığıyla yerine getirdi.</p>
+<p>Şişenin konulduğu nişi merak ettiğimi söyleyince ev sahibi kapının yanındaki küçük geçidi gösterdi. İçeri girmeme izin verdi.</p>
+<p>Niş, yemek odasının bitişiğindeki dar bir bölümdeydi. Çevresindeki duvar taşları soğuktu. Evin geri kalanında mum kullanılırken burada tek bir elektroplazmik lamba yanıyordu. Altında koyu ahşaptan yapılmış küçük bir raf, üzerinde şişenin bıraktığı yuvarlak iz bulunuyordu.</p>
+<p>Hizmetkâr şişeyi rafa yerleştirdi.</p>
+<p>“Uzun zamandır siz mi bakıyorsunuz?” diye sordum.</p>
+<p>“Evet, efendim.”</p>
+<p>“Hiç merak etmediniz mi?”</p>
+<p>Bana bakmadı. Şişeye bakmaya devam etti.</p>
+<p>“Beyefendinin babası da açmamıştı.”</p>
+<p>Ardından nişin önündeki küçük kapağı kapattı.</p>
+<p>Yemek odasına döndüğümde tüccar ayrılmaya hazırlanıyordu. Ev sahibi onu kapıya kadar geçirdi. Birkaç nazik söz söylendi. Yeniden görüşmekten bahsedildi. Tüccarın bir daha aynı teklifi yapıp yapmayacağını bilmiyorum.</p>
+<p>Ben de paltomu istedim.</p>
+<p>Yıllarca muhasebe tutarken malların saklanması için neler gerektiğini öğrendim. Depo tutulur, yer ayrılır, bekçi çalıştırılır.</p>
+<p>Yemek odasının kullanılmayan tarafında üstleri örtülü sandalyeler vardı. Koridorda iki kapının önüne ağır mobilyalar çekilmişti. Merdivenin başındaki duvar lambası yanmıyordu. Hizmetkâr paltomu getirirken başka bir odadan küçük bir mum almış, onu elinde taşıyordu.</p>
+<p>Aşağı inmeye başladım.</p>
+<p>Üçüncü katta taş basamaklar bitti. İkinci kattaki çamaşırlar hâlâ korkuluğa asılıydı. İlk kata indiğimde soğan kokusu yeniden geldi. Bu kez daha kuvvetliydi. Biraz da kızarmış ekmek kokusu karışmıştı.</p>
+<p>Kapı açıktı.</p>
+<p>İçeride, ocağın başında duran bir kadın tahta kaşıkla tavayı karıştırıyordu. Masanın çevresinde iki çocuk oturmuş, ekmek dilimlerini ellerinde tutuyordu. Kadın beni fark edince kaşığı bıraktı.</p>
+<p>“Yukarıdan mı geliyorsunuz?”</p>
+<p>“Evet.”</p>
+<p>“Yemek yediniz mi?”</p>
+<p>“Yedim, teşekkür ederim.”</p>
+<p>Kadın tavaya baktı.</p>
+<p>“Biraz soğan kaldı. Ekmek de var.”</p>
+<p>“Çok mu kızarttınız?” diye sordum.</p>
+<p>“Tam kıvamında.”</p>
+<p>İçeri girdim.</p>
+<p>Kadın ocaktan tavayı aldı, çocuklardan biri masada yer açtı. Bana bir dilim ekmek uzattılar. Üzerine sıcak soğan koydum.</p>
+<p>Kadın yeniden ocağa döndü.</p>
+<p>“Biraz daha var,” dedi.</p>
+<p>İkinci dilimi de istedim.</p><footer class="byline">— Gaspar Merrow (Gastronomi muhabiri)</footer></article><div class="reading-return"><a href="/taslak/b/editor/halil/sayi/005/">← Sayı 005</a><a href="#reading-content">Makalenin başına ↑</a></div></main><footer>Doskvol Dedikoduları · Duyduğunuza inanmayın. Duymadıklarınızdan korkun.</footer></div></body></html>

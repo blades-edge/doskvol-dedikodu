@@ -1,0 +1,122 @@
+<!DOCTYPE html><html lang="tr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><script>
+  (() => {
+    const key = "doskvol-appearance";
+    const valid = value => ["day", "night", "device"].includes(value);
+    const media = window.matchMedia("(prefers-color-scheme: dark)");
+    let preference = "device";
+    try {
+      const saved = localStorage.getItem(key);
+      if (valid(saved)) preference = saved;
+    } catch {
+      // Private browsing may deny storage; the current page still works.
+    }
+    const paint = () => {
+      const dark =
+        preference === "night" || (preference === "device" && media.matches);
+      document.documentElement.dataset.theme = dark ? "dark" : "light";
+      document.querySelectorAll("[data-theme-choice]").forEach(button => {
+        button.setAttribute(
+          "aria-pressed",
+          String(button.dataset.themeChoice === preference)
+        );
+      });
+    };
+    paint();
+    document.addEventListener("DOMContentLoaded", paint, { once: true });
+    media.addEventListener("change", paint);
+    document.addEventListener("doskvol:theme", event => {
+      if (!valid(event.detail)) return;
+      preference = event.detail;
+      try {
+        localStorage.setItem(key, preference);
+      } catch {
+        // Private browsing may deny storage; the current page still works.
+      }
+      paint();
+    });
+    window.addEventListener("storage", event => {
+      if (event.key !== key && event.key !== null) return;
+      preference = valid(event.newValue) ? event.newValue : "device";
+      paint();
+    });
+  })();
+</script><link rel="icon" type="image/svg+xml" href="/taslak/b/editor/halil/favicon.svg"><meta name="robots" content="noindex, nofollow"><link rel="canonical" href="https://doskvol.ink/taslak/b/editor/halil/makale/azmaran-dovmesi/"><meta name="description" content="Gazetemizin de bulunduğu Mürekkep Sokağı'ndaki bir meyhanede, bir genç kolundaki azmarân dövmesini gösterdi. Gece bitmeden Rıhtım'ın yarısı ona inanmayı bırakmıştı; diğer yarısı hiç inanmamıştı."><meta property="og:site_name" content="Doskvol Dedikoduları"><meta property="og:locale" content="tr_TR"><meta property="og:type" content="article"><meta property="og:title" content="Azmarân görmeden azmarân dövmesi | Doskvol Dedikoduları"><meta property="og:description" content="Gazetemizin de bulunduğu Mürekkep Sokağı'ndaki bir meyhanede, bir genç kolundaki azmarân dövmesini gösterdi. Gece bitmeden Rıhtım'ın yarısı ona inanmayı bırakmıştı; diğer yarısı hiç inanmamıştı."><meta property="og:url" content="https://doskvol.ink/taslak/b/editor/halil/makale/azmaran-dovmesi/"><meta property="og:image" content="https://doskvol.ink/taslak/b/editor/halil/_astro/doskvol-line-engraving.Dm_4yufi_ZQG2nm.jpeg"><meta property="og:image:type" content="image/jpeg"><meta property="og:image:alt" content><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="Azmarân görmeden azmarân dövmesi | Doskvol Dedikoduları"><meta name="twitter:description" content="Gazetemizin de bulunduğu Mürekkep Sokağı'ndaki bir meyhanede, bir genç kolundaki azmarân dövmesini gösterdi. Gece bitmeden Rıhtım'ın yarısı ona inanmayı bırakmıştı; diğer yarısı hiç inanmamıştı."><meta name="twitter:image" content="https://doskvol.ink/taslak/b/editor/halil/_astro/doskvol-line-engraving.Dm_4yufi_ZQG2nm.jpeg"><meta name="twitter:image:alt" content><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,600;0,6..72,700;1,6..72,400&display=swap" rel="stylesheet"><title>Azmarân görmeden azmarân dövmesi | Doskvol Dedikoduları</title><link rel="stylesheet" href="/taslak/b/editor/halil/_astro/EditorialHead.B4lPX8nn.css"></head><body><a class="reading-skip" href="#reading-content">Makaleye geç</a><div class="paper reading-paper"><script type="module">document.querySelectorAll(`[data-theme-choice]`).forEach(e=>{e.addEventListener(`click`,()=>{document.dispatchEvent(new CustomEvent(`doskvol:theme`,{detail:e.dataset.themeChoice}))})});</script><header class="masthead"><aside class="weather-theme" aria-label="Gazetenin hava durumu ve görünümü"><div class="weather-caption">Doskvol’da hava</div><div class="weather-choices" role="group" aria-label="Görünüm tercihi"><button type="button" data-theme-choice="day" aria-pressed="false" title="Kırık güneş — açık görünüm"><img src="/taslak/b/editor/halil/weather-day.png" alt="" width="56" height="56" loading="eager"><span>Gündüz</span></button><button type="button" data-theme-choice="night" aria-pressed="false" title="Ay ve loş bacıları — koyu görünüm"><img src="/taslak/b/editor/halil/weather-night.png" alt="" width="56" height="56" loading="eager"><span>Gece</span></button><button type="button" data-theme-choice="device" aria-pressed="true" title="Hayaletli hava — cihazın tercihini izle"><img src="/taslak/b/editor/halil/weather-device.png" alt="" width="56" height="56" loading="eager"><span>Cihaz</span></button></div></aside><div class="masthead-title"><div class="eyebrow">Akoros’un bağımsız sesi · Doskvol</div><a class="masthead-name" href="/taslak/b/editor/halil/sayi/005/">Doskvol Dedikoduları</a><div class="tagline">Duyduğunuza inanmayın. Duymadıklarınızdan korkun.</div></div></header><main id="reading-content"><header class="reading-heading"><div class="eyebrow">Dedikodular</div><h1>Azmarân görmeden azmarân dövmesi</h1><p class="reading-deck">Gazetemizin de bulunduğu Mürekkep Sokağı&#39;ndaki bir meyhanede, bir genç kolundaki azmarân dövmesini gösterdi. Gece bitmeden Rıhtım&#39;ın yarısı ona inanmayı bırakmıştı; diğer yarısı hiç inanmamıştı.</p><div class="reading-meta"><span>Aldo Brogan</span><a href="/taslak/b/editor/halil/takvim/">21 Kalivet 847</a><a href="/taslak/b/editor/halil/sayi/">Sayı 005</a></div></header><article class="reading-copy" aria-label="Azmarân görmeden azmarân dövmesi"><p>Mürekkep Sokağı’nda dövmecilerle gazeteciler komşudur. Aynı sokakta birileri deriye, birileri kâğıda mürekkep işler. Dövmelerin çıkarılması zordur; gazetelerinse ertesi hafta yenisi basılır. Gazetemizin kapısından çıkınca birkaç adımda meyhanelere ulaşırsınız. Ben de çoğu akşam öyle yaparım.</p>
+<p>Geçen hafta bunlardan birinde, genç bir adam masanın üzerine kolunu uzatmıştı.</p>
+<p>Gömleğinin yenini dirseğine kadar sıvamış, çevresindekilere dövmesini gösteriyordu. Siyah mürekkeple işlenmiş, sırtı dikenli, ağzı açık bir azmarân. Kuyruğu bileğinin iç tarafına doğru kıvrılıyordu.</p>
+<p>“Tris yaptı,” dedi genç.</p>
+<p>Masadakiler biraz daha yaklaştı.</p>
+<p>Tris’in adını Rıhtım’da bilmeyen azdır. Söylendiğine göre yalnızca azmarân görüp sağ kalmış kişilerin derisine mürekkep işler. Böyle bir dövmeyi taşımak, avcı gemilerinden sağ dönenlerin arasında itibar kazandırır.</p>
+<p>Tris’in dükkânı aynı sokaktaydı. Kimse kalkıp gitmedi. İçlerinden biri önüne bir kadeh koydu. Ardından bir başkası. Genç ikisini de geri çevirmedi.</p>
+<p>Bir süre sonra ayaktakiler de masanın çevresine toplandı. Genç konuşurken kolunu masadan kaldırmıyordu. Denizin karanlığından, geminin sallanışından, suyun altında hareket eden bir şeyin büyüklüğünden söz etti. Bir yerde ellerini iki yana açıp yaratığın genişliğini göstermeye çalıştı. Kollarını açınca dövmesi görünmez oldu. Hemen yeniden masaya koydu.</p>
+<p>O sırada yaşlı bir denizci yaklaştı.</p>
+<p>Adamın yüzünde rüzgârın ve tuzun bıraktığı derin çizgiler vardı. Üzerindeki ceket eskimişti. Masadakilerden biri ona yer açtı, fakat oturmadı.</p>
+<p>Gencin koluna baktı.</p>
+<p>“Hangi gemi?”</p>
+<p>Genç önce gülümsedi.</p>
+<p>“Avcı gemisiydi.”</p>
+<p>“Hangi gemi dedim sana, evlat. Azmarânın adını sormadım.”</p>
+<p>Genç bir isim söyledi.</p>
+<p>Yaşlı adam başını yana eğdi.</p>
+<p>“Kaptanı?”</p>
+<p>Bu kez cevap biraz gecikti.</p>
+<p>“Adını hatırlamıyorum.”</p>
+<p>“Gemiye binmişsin de kaptanı hatırlamıyorsun?”</p>
+<p>“Çok kalmadım.”</p>
+<p>“Ne vakit açıldınız?”</p>
+<p>Genç kadehini eline aldı. İçmedi.</p>
+<p>“Geçen av mevsiminde.”</p>
+<p>“Başında mı, sonunda mı?”</p>
+<p>“Ortasında.”</p>
+<p>Yaşlı denizci masanın kenarına iki parmağıyla vurdu.</p>
+<p>Genç artık gülümsemiyordu.</p>
+<p>“Gördüm işte. Gördüm.”</p>
+<p>“Nerede gördün?”</p>
+<p>“Denizde.”</p>
+<p>“Bre oğlum, denizin neresinde?”</p>
+<p>“Gemideydim dedim ya.”</p>
+<p>Masadakilerden biri güldü. Başkası dirseğiyle yanındakini dürttü. Yaşlı adam gülmedi.</p>
+<p>“Azmarân avına çıktığını söylüyorsun.”</p>
+<p>“Ben avladım demedim.”</p>
+<p>“O zaman ne dedin?”</p>
+<p>Genç kolunu masadan kaldırdı.</p>
+<p>“Ben gördüm dedim, avladım demedim.”</p>
+<p>Bir süre kimse konuşmadı.</p>
+<p>Rıhtım’da bir azmarân görmekle onu avlamak arasındaki farkı bilen çoktur. Tris’in dövme yaptığı kişiler için söylenen şart da avlamak değil, görüp sağ kalmaktır.</p>
+<p>Yaşlı denizci gencin koluna bir kez daha baktı.</p>
+<p>“Peki,” dedi.</p>
+<p>Tam döneceği sırada masanın öbür ucundan biri seslendi.</p>
+<p>“Seninkini görelim o vakit, ihtiyar.”</p>
+<p>Yaşlı adam durdu.</p>
+<p>“Ne?”</p>
+<p>“Dövmeni. Bu kadar sorgu sual ettin. Seninkini de görelim.”</p>
+<p>Adam ceketinin düğmesini açtı. Gömleğinin sağ yenini dirseğine kadar sıvadı.</p>
+<p>Kolunda dövme yoktu.</p>
+<p>Bileğinde eski, soluk bir yara izi vardı. Başka bir şey görünmüyordu.</p>
+<p>“Sen hiç görmedin mi yani?” diye sordu genç.</p>
+<p>Yaşlı adam yenini indirdi.</p>
+<p>“Gördüğümü bilmek bana yetti.”</p>
+<p>Az önce gülenler sustu. Yaşlı denizci kimseye bakmadan kapıya yürüdü.</p>
+<p>Genç de fazla kalmadı. Gömleğinin yenini indirdi, ceketini aldı. Çıkarken kolunu yeniden açmasını isteyen biri oldu. Duymamış gibi yaptı.</p>
+<p>Ertesi gün onu rıhtımda buldum.</p>
+<p>Bir yük iskelesinin yakınında, sırtını taş duvara vermiş oturuyordu. Yanında kimse yoktu. Beni tanıdı; meyhanede masanın yakınında durmuş, not almıştım.</p>
+<p>“Gazeteci sensin,” dedi.</p>
+<p>“Benim.”</p>
+<p>Biraz yana kayıp oturmam için yer açtı. Ayakta kaldım.</p>
+<p>“Dün gece olanları yazacak mısın?”</p>
+<p>“Bilmiyorum.”</p>
+<p>Koluna baktığımı fark etti. Gömleğinin yenini biraz daha aşağı çekti.</p>
+<p>“Tris’in dövmesi mi?” diye sordum.</p>
+<p>Bana cevap vermedi. Önündeki taşların arasına sıkışmış küçük bir tahta parçasını ayakkabısının ucuyla itti.</p>
+<p>“Bana herkes aynı şeyi sordu,” dedi.</p>
+<p>“Hangi gemide olduğunu mu?”</p>
+<p>Başını salladı.</p>
+<p>“Gördüm. Ama kimse ne gördüğümü sormadı.”</p>
+<p>Bir süre bekledim.</p>
+<p>O da bekledi.</p>
+<p>Sonra ayağa kalktı. Ceketini düzeltti, iskelenin öteki ucuna doğru yürüdü. Giderken kolunu yine göstermedi.</p>
+<p>Ertesi akşam aynı meyhaneye uğradım.</p>
+<p>Üç adam bir masanın başında oturuyordu. Üçünün de kolunda mürekkeple çizilmiş azmarânlar vardı. Biri avucunun içine kadar uzanıyordu. Bir başkasınınkinin kuyruğu ters tarafa kıvrılmıştı.</p>
+<p>Kollarını sırayla masaya koyup gösteriyor, gülüyorlardı. İçlerinden biri yaşlı denizcinin sesini taklit ederek gemisinin adını soruyordu. Öteki her defasında başka bir isim söylüyordu.</p>
+<p>Masadakiler kahkahaya boğuldu.</p>
+<p>Bir adam yan masadan kalkıp kendi koluna da bir azmarân çizdirmeye gitti. Meyhaneci, tezgâhın üzerine mürekkep damlatmamalarını söyledi.</p>
+<p>Genç adam o akşam gelmedi.</p><footer class="byline">— Aldo Brogan (Gaip muhabiri)</footer></article><div class="reading-return"><a href="/taslak/b/editor/halil/sayi/005/">← Sayı 005</a><a href="#reading-content">Makalenin başına ↑</a></div></main><footer>Doskvol Dedikoduları · Duyduğunuza inanmayın. Duymadıklarınızdan korkun.</footer></div></body></html>

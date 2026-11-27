@@ -1,0 +1,47 @@
+<!DOCTYPE html><html lang="tr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><script>
+  (() => {
+    const key = "doskvol-appearance";
+    const valid = value => ["day", "night", "device"].includes(value);
+    const media = window.matchMedia("(prefers-color-scheme: dark)");
+    let preference = "device";
+    try {
+      const saved = localStorage.getItem(key);
+      if (valid(saved)) preference = saved;
+    } catch {
+      // Private browsing may deny storage; the current page still works.
+    }
+    const paint = () => {
+      const dark =
+        preference === "night" || (preference === "device" && media.matches);
+      document.documentElement.dataset.theme = dark ? "dark" : "light";
+      document.querySelectorAll("[data-theme-choice]").forEach(button => {
+        button.setAttribute(
+          "aria-pressed",
+          String(button.dataset.themeChoice === preference)
+        );
+      });
+    };
+    paint();
+    document.addEventListener("DOMContentLoaded", paint, { once: true });
+    media.addEventListener("change", paint);
+    document.addEventListener("doskvol:theme", event => {
+      if (!valid(event.detail)) return;
+      preference = event.detail;
+      try {
+        localStorage.setItem(key, preference);
+      } catch {
+        // Private browsing may deny storage; the current page still works.
+      }
+      paint();
+    });
+    window.addEventListener("storage", event => {
+      if (event.key !== key && event.key !== null) return;
+      preference = valid(event.newValue) ? event.newValue : "device";
+      paint();
+    });
+  })();
+</script><link rel="icon" type="image/svg+xml" href="/taslak/b/editor/halil/favicon.svg"><meta name="robots" content="noindex, nofollow"><link rel="canonical" href="https://doskvol.ink/taslak/b/editor/halil/makale/kulaktan-kulaga-005/"><meta name="description" content="Bu hafta şehrin dört bir yanından kulağımıza gelenler. Doğruluğuna kefil değiliz; eğlencesine kefiliz."><meta property="og:site_name" content="Doskvol Dedikoduları"><meta property="og:locale" content="tr_TR"><meta property="og:type" content="article"><meta property="og:title" content="Kulaktan kulağa | Doskvol Dedikoduları"><meta property="og:description" content="Bu hafta şehrin dört bir yanından kulağımıza gelenler. Doğruluğuna kefil değiliz; eğlencesine kefiliz."><meta property="og:url" content="https://doskvol.ink/taslak/b/editor/halil/makale/kulaktan-kulaga-005/"><meta property="og:image" content="https://doskvol.ink/taslak/b/editor/halil/_astro/doskvol-line-engraving.Dm_4yufi_ZQG2nm.jpeg"><meta property="og:image:type" content="image/jpeg"><meta property="og:image:alt" content><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="Kulaktan kulağa | Doskvol Dedikoduları"><meta name="twitter:description" content="Bu hafta şehrin dört bir yanından kulağımıza gelenler. Doğruluğuna kefil değiliz; eğlencesine kefiliz."><meta name="twitter:image" content="https://doskvol.ink/taslak/b/editor/halil/_astro/doskvol-line-engraving.Dm_4yufi_ZQG2nm.jpeg"><meta name="twitter:image:alt" content><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,600;0,6..72,700;1,6..72,400&display=swap" rel="stylesheet"><title>Kulaktan kulağa | Doskvol Dedikoduları</title><link rel="stylesheet" href="/taslak/b/editor/halil/_astro/EditorialHead.B4lPX8nn.css"></head><body><a class="reading-skip" href="#reading-content">Makaleye geç</a><div class="paper reading-paper"><script type="module">document.querySelectorAll(`[data-theme-choice]`).forEach(e=>{e.addEventListener(`click`,()=>{document.dispatchEvent(new CustomEvent(`doskvol:theme`,{detail:e.dataset.themeChoice}))})});</script><header class="masthead"><aside class="weather-theme" aria-label="Gazetenin hava durumu ve görünümü"><div class="weather-caption">Doskvol’da hava</div><div class="weather-choices" role="group" aria-label="Görünüm tercihi"><button type="button" data-theme-choice="day" aria-pressed="false" title="Kırık güneş — açık görünüm"><img src="/taslak/b/editor/halil/weather-day.png" alt="" width="56" height="56" loading="eager"><span>Gündüz</span></button><button type="button" data-theme-choice="night" aria-pressed="false" title="Ay ve loş bacıları — koyu görünüm"><img src="/taslak/b/editor/halil/weather-night.png" alt="" width="56" height="56" loading="eager"><span>Gece</span></button><button type="button" data-theme-choice="device" aria-pressed="true" title="Hayaletli hava — cihazın tercihini izle"><img src="/taslak/b/editor/halil/weather-device.png" alt="" width="56" height="56" loading="eager"><span>Cihaz</span></button></div></aside><div class="masthead-title"><div class="eyebrow">Akoros’un bağımsız sesi · Doskvol</div><a class="masthead-name" href="/taslak/b/editor/halil/sayi/005/">Doskvol Dedikoduları</a><div class="tagline">Duyduğunuza inanmayın. Duymadıklarınızdan korkun.</div></div></header><main id="reading-content"><header class="reading-heading"><div class="eyebrow">Dedikodular</div><h1>Kulaktan kulağa</h1><p class="reading-deck">Bu hafta şehrin dört bir yanından kulağımıza gelenler. Doğruluğuna kefil değiliz; eğlencesine kefiliz.</p><div class="reading-meta"><span>Aldo Brogan</span><a href="/taslak/b/editor/halil/takvim/">21 Kalivet 847</a><a href="/taslak/b/editor/halil/sayi/">Sayı 005</a></div></header><article class="reading-copy" aria-label="Kulaktan kulağa"><p><strong>Nizamhane.</strong> Üniversitede kırk yılını dolduran bir kütüphane memuru için Nizam Duvarı’ndaki bir atölyeye mermer büst ısmarlanmış. Açılış töreninde kürsüye çıkan yetkili, merhumun hatırasını yaşatmaktan söz edince memur kalabalığın arkasından seslenmiş: “Henüz ölmedim, efendim.” Heykeltıraş cenaze anıtı sipariş edildiğini, üniversite ise emeklilik hediyesi istendiğini söylüyormuş. Memur tartışmaya katılmamış. Emekli olup olmayacağı sorulduğunda saatini çıkarıp bakmış: “Yarın kütüphane birinci saatte açılıyor.” Sonra büstün etrafında bir tur atmış ve burnunun biraz düzeltilmesini istemiş.</p>
+<p><strong>Kömürsırtı.</strong> Bir fabrikanın akşam düdüğü geçen hafta bir saat erken çalmış. İşçiler paydos edince karşı fabrikanın adamları da tezgâhlarını bırakmış; köşedeki çaycı kepenk indirmiş, ekmekçi kalan somunları toplamış. Sokak bir saat erken akşama dönmüş. Hatayı fark eden müdür herkesi geri çağırmış, fakat kimse dönmemiş. Ertesi gün düdük tam vaktinde çaldığında ise bu kez tek bir işçi bile yerinden kalkmamış. Müdür atölyeye inip vardiyanın bittiğini bizzat bildirmek zorunda kalmış. İşçilerden biri elindeki aleti bırakırken, “Eyvallah müdür, şimdi oldu,” demiş.</p>
+<p><strong>Gecepazarı.</strong> Karşılıklı tezgâh açan bir kestaneciyle tuzlu yılanbalığı satıcısı, müşteriyi kapmak için birbirinden yüksek yaygara koparmaya başlamış. İlk gece komşular söylenmiş, ikinci gece müşteriler siparişlerini birbirlerine duyuramamış. Üçüncü gece kestaneci sesini kaybetmeye başlayınca balıkçı zaferini ilan etmiş; fakat onun da sesi pek çıkmıyormuş. Derken bir seyyar satıcı ikisinin tam ortasına küçük tezgâhını kurmuş. Malı boğaz pastiliymiş. İlk müşterileri de iki komşusu olmuş. Pastilin tanesi üç pençik. Yeni satıcı tezgâhı kurduğundan beri sesini bir kez bile yükseltmemiş.</p>
+<p><strong>Billurtaş.</strong> Bir hanımefendinin kedisi, komşu malikânelerden kendi adına davetiyeler almaya başlamış. Kadife kurdeleli kedi davetlere sahibesi olmadan gidiyor, sunulan yemeklerin çoğunu koklayıp bırakıyormuş. Hanımefendi, kendisinin çağrılmadığı bir akşam kedinin dışarı çıkmasına izin vermemiş. Ertesi sabah kapıya çiçekler gelmiş; yanlarındaki kartta hanımefendinin değil, kedinin adı yazıyormuş. Evin uşağı şöyle demiş: “Hanımefendi davetiyelerin ayrı çekmecelerde saklanmasını emretti. Kedinin çekmecesi üstte, efendim.”</p>
+<p><strong>Yanıkçukur.</strong> Dar sokaklardan birinde, boş bir odanın ikinci kat penceresinde baharın başından beri bir çiçek açıyor. Doskvol’de nurlu enerji olmadan bitki yetiştirmek kolay iş değil; üstelik o odaya aylardır giren çıkan yok. Sokakta herkes çiçeği biliyor. Mahallenin veletleri geçerken başlarını kaldırıyor, sabah işe gidenler bir an durup bakıyor. Kimse suladığını söylemiyor, kimse sahiplenmiyor. Geçen gün odanın kapısına bir “KİRALIK” ilanı asılmış. Ertesi sabah ilanın altında, başka bir elle yazılmış ikinci bir kâğıt varmış: “ÇİÇEĞE DOKUNULMAYACAK.”</p><footer class="byline">— Aldo Brogan (Gaip muhabiri)</footer></article><div class="reading-return"><a href="/taslak/b/editor/halil/sayi/005/">← Sayı 005</a><a href="#reading-content">Makalenin başına ↑</a></div></main><footer>Doskvol Dedikoduları · Duyduğunuza inanmayın. Duymadıklarınızdan korkun.</footer></div></body></html>
