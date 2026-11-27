@@ -1,0 +1,61 @@
+<!DOCTYPE html><html lang="tr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><script>
+  (() => {
+    const key = "doskvol-appearance";
+    const valid = value => ["day", "night", "device"].includes(value);
+    const media = window.matchMedia("(prefers-color-scheme: dark)");
+    let preference = "device";
+    try {
+      const saved = localStorage.getItem(key);
+      if (valid(saved)) preference = saved;
+    } catch {
+      // Private browsing may deny storage; the current page still works.
+    }
+    const paint = () => {
+      const dark =
+        preference === "night" || (preference === "device" && media.matches);
+      document.documentElement.dataset.theme = dark ? "dark" : "light";
+      document.querySelectorAll("[data-theme-choice]").forEach(button => {
+        button.setAttribute(
+          "aria-pressed",
+          String(button.dataset.themeChoice === preference)
+        );
+      });
+    };
+    paint();
+    document.addEventListener("DOMContentLoaded", paint, { once: true });
+    media.addEventListener("change", paint);
+    document.addEventListener("doskvol:theme", event => {
+      if (!valid(event.detail)) return;
+      preference = event.detail;
+      try {
+        localStorage.setItem(key, preference);
+      } catch {
+        // Private browsing may deny storage; the current page still works.
+      }
+      paint();
+    });
+    window.addEventListener("storage", event => {
+      if (event.key !== key && event.key !== null) return;
+      preference = valid(event.newValue) ? event.newValue : "device";
+      paint();
+    });
+  })();
+</script><link rel="icon" type="image/svg+xml" href="/taslak/b/editor/halil/favicon.svg"><meta name="robots" content="noindex, nofollow"><link rel="canonical" href="https://doskvol.ink/taslak/b/editor/halil/makale/bir-civi-iki-komsu/"><meta name="description" content="Nizamhane'de görülen bir ortak duvar davası, bilirkişi incelemesine kadar ertelendi."><meta property="og:site_name" content="Doskvol Dedikoduları"><meta property="og:locale" content="tr_TR"><meta property="og:type" content="article"><meta property="og:title" content="Bir çivi, iki komşu | Doskvol Dedikoduları"><meta property="og:description" content="Nizamhane'de görülen bir ortak duvar davası, bilirkişi incelemesine kadar ertelendi."><meta property="og:url" content="https://doskvol.ink/taslak/b/editor/halil/makale/bir-civi-iki-komsu/"><meta property="og:image" content="https://doskvol.ink/taslak/b/editor/halil/_astro/doskvol-line-engraving.Dm_4yufi_ZQG2nm.jpeg"><meta property="og:image:type" content="image/jpeg"><meta property="og:image:alt" content><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="Bir çivi, iki komşu | Doskvol Dedikoduları"><meta name="twitter:description" content="Nizamhane'de görülen bir ortak duvar davası, bilirkişi incelemesine kadar ertelendi."><meta name="twitter:image" content="https://doskvol.ink/taslak/b/editor/halil/_astro/doskvol-line-engraving.Dm_4yufi_ZQG2nm.jpeg"><meta name="twitter:image:alt" content><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,600;0,6..72,700;1,6..72,400&display=swap" rel="stylesheet"><title>Bir çivi, iki komşu | Doskvol Dedikoduları</title><link rel="stylesheet" href="/taslak/b/editor/halil/_astro/EditorialHead.B4lPX8nn.css"></head><body><a class="reading-skip" href="#reading-content">Makaleye geç</a><div class="paper reading-paper"><script type="module">document.querySelectorAll(`[data-theme-choice]`).forEach(e=>{e.addEventListener(`click`,()=>{document.dispatchEvent(new CustomEvent(`doskvol:theme`,{detail:e.dataset.themeChoice}))})});</script><header class="masthead"><aside class="weather-theme" aria-label="Gazetenin hava durumu ve görünümü"><div class="weather-caption">Doskvol’da hava</div><div class="weather-choices" role="group" aria-label="Görünüm tercihi"><button type="button" data-theme-choice="day" aria-pressed="false" title="Kırık güneş — açık görünüm"><img src="/taslak/b/editor/halil/weather-day.png" alt="" width="56" height="56" loading="eager"><span>Gündüz</span></button><button type="button" data-theme-choice="night" aria-pressed="false" title="Ay ve loş bacıları — koyu görünüm"><img src="/taslak/b/editor/halil/weather-night.png" alt="" width="56" height="56" loading="eager"><span>Gece</span></button><button type="button" data-theme-choice="device" aria-pressed="true" title="Hayaletli hava — cihazın tercihini izle"><img src="/taslak/b/editor/halil/weather-device.png" alt="" width="56" height="56" loading="eager"><span>Cihaz</span></button></div></aside><div class="masthead-title"><div class="eyebrow">Akoros’un bağımsız sesi · Doskvol</div><a class="masthead-name" href="/taslak/b/editor/halil/sayi/005/">Doskvol Dedikoduları</a><div class="tagline">Duyduğunuza inanmayın. Duymadıklarınızdan korkun.</div></div></header><main id="reading-content"><header class="reading-heading"><div class="eyebrow">Haberler</div><h1>Bir çivi, iki komşu</h1><p class="reading-deck">Nizamhane&#39;de görülen bir ortak duvar davası, bilirkişi incelemesine kadar ertelendi.</p><div class="reading-meta"><span>Pell Ashby</span><a href="/taslak/b/editor/halil/takvim/">21 Kalivet 847</a><a href="/taslak/b/editor/halil/sayi/">Sayı 005</a></div></header><article class="reading-copy" aria-label="Bir çivi, iki komşu"><p><em>Gazetemize stajyer olarak katılan Pell Ashby’nin ilk haberi.</em></p>
+<p>Nizamhane mahkemelerinden birinde, Kalivet’in 19’unda iki komşu arasındaki ortak duvar davası görüldü. Davacı, komşusunun duvara çaktığı çivinin sıvayı çatlattığını ve duvarın zarar gördüğünü ileri sürdü. Davalı ise çiviyi yalnızca bir resim asmak için kullandığını, çatlağın çividen önce de duvarda bulunduğunu söyledi.</p>
+<p>Duruşma üçüncü saati çeyrek geçe başladı.</p>
+<p>Salon dikdörtgendi. Yargıç kürsüsü karşı duvarın önündeydi. Sağ tarafta iki masa, arkada dört sıra bulunuyordu. Pencereler yüksekteydi. Salona girenler önce mübaşirin yanına gidiyor, ardından gösterilen yerlere oturuyordu.</p>
+<p>Yargıç, davacının konuşmaya başlamasından dört dakika sonra saatine baktı. İkinci kez, davalının açıklaması sırasında baktı. Aradan on bir dakika geçmişti.</p>
+<p>Davacının bir avukatı vardı. Cübbesi düzgün dikilmişti; yakasında ince bir işlemeyle çevrelenmiş koyu renkli bir şerit bulunuyordu. Ayakkabılarının burunları ise aşınmıştı. Önündeki deri dosyayı masaya yerleştirdi, fakat duruşma boyunca açmadı. Konuşurken iki elini masanın üzerinde tutuyordu.</p>
+<p>Davalı tek başına gelmişti. Ceketinin sol dirseğinde bir yama vardı. Sağ elinde bir çivi tutuyordu. Yargıç kendisine söz verdiğinde çiviyi kaldırıp gösterdi. Bunun duvara çaktığı çivi olduğunu söyledi. Avukat, çivinin hangi derinliğe kadar çakıldığının önemli olduğunu belirtince davalı masadaki kâğıtlardan birini katlayarak yaklaşık bir uzunluk gösterdi.</p>
+<p>Yargıç kâğıdı masaya bırakmasını istedi.</p>
+<p>Duruşma kâtibi, konuşulanları büyük bir deftere yazıyordu. Davalının açıklaması sırasında iki kez durdu. İlkinde çivinin uzunluğunu, ikincisinde resmin ne kadar zamandır duvarda asılı olduğunu tekrar ettirdi. Yazarken başını pek kaldırmadı. Her sayfa dolduğunda mürekkebin kurumasını bekleyip ötekine geçti.</p>
+<p>Mübaşir kapının yanında duruyordu. Her isim çağırışından önce boğazını temizledi. Davalının adını ikinci kez çağırması gerektiğinde de aynı şeyi yaptı. Adam çoktan ayağa kalkmıştı.</p>
+<p>Arka sırada yaşlı bir kadın örgü örüyordu. Yanındaki boş sandalyeye küçük bir örgü çantası koymuştu. Mübaşir salona ilk girdiğinde kadını adıyla selamlamıştı. Kadın başını kaldırmadan karşılık verdi. Yargıç konuşurken şişlerini durduruyor, konuşma sona erince devam ediyordu.</p>
+<p>Kapıya yakın oturan bir adamın üzerinde koyu renkli, sade bir palto vardı. Ayağında Mavi Urbalıların kullandığı türden yüksek çizmeler bulunuyordu, ancak üniforma giymiyordu. Küçük bir deftere not aldı; davalı çiviyi kaldırdığında başını çevirip ona bakmadı.</p>
+<p>Ön sırada bir genç de not tutuyordu. Ceketinin iç cebinden rakip bir gazetenin katlanmış son sayısı görünüyordu. Avukat konuşurken hızlı yazdı, yargıç ara verdiğinde kaleminin ucunu değiştirdi. Duruşmanın bitmesini beklemeden kalktı. Mübaşire başıyla selam verip salondan ayrıldı.</p>
+<p>Örgü ören kadın onun boşalttığı ön sıradaki yere geçti.</p>
+<p>Davacının avukatı, duvardaki hasarın yerinde incelenmesini talep etti. Davalı, çatlağın yalnızca sıvada bulunduğunu söyleyerek çivisini yeniden gösterdi.</p>
+<p>İnceleme için bir bilirkişi görevlendirilmesine, çivinin o güne kadar delil olarak mahkemede kalmasına karar verildi.</p>
+<p>Duruşma sona erdiğinde davalı çiviyi cebine koyacak gibi oldu. Mübaşir kendisine seslendi. Adam durdu, çiviyi masaya bıraktı ve çıkışa yöneldi.</p>
+<p>Avukat dosyasını kolunun altına aldı. Kâtip son satırları tamamladı. Yaşlı kadın örgüsünü çantasına yerleştirip bitişik salona geçti.</p>
+<p>Dava, Kalivet’in 33’üne ertelendi.</p><footer class="byline">— Pell Ashby (Stajyer muhabir)</footer></article><div class="reading-return"><a href="/taslak/b/editor/halil/sayi/005/">← Sayı 005</a><a href="#reading-content">Makalenin başına ↑</a></div></main><footer>Doskvol Dedikoduları · Duyduğunuza inanmayın. Duymadıklarınızdan korkun.</footer></div></body></html>
