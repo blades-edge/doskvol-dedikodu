@@ -1,5 +1,5 @@
 ---
-title: Kulaktan kulağa
+title: "Kulaktan kulağa: Henüz ölmedim, efendim"
 description: Bu hafta şehrin dört bir yanından kulağımıza gelenler. Doğruluğuna
   kefil değiliz; eğlencesine kefiliz.
 author:
