@@ -1,0 +1,17 @@
+{
+  "number": 5,
+  "date": "2026-12-01",
+  "imperialDate": {
+    "day": 21,
+    "month": "Kalivet",
+    "year": 847
+  },
+  "price": "2 pençik",
+  "articles": [
+    "strangford-tekzip.md",
+    "azmaran-dovmesi.md",
+    "okur-mektubu-fener-sonukken.md",
+    "bir-sisenin-itibari.md",
+    "kulaktan-kulaga-005.md"
+  ]
+}
