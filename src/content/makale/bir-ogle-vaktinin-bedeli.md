@@ -2,14 +2,16 @@
 title: Bir öğle vaktinin bedeli
 description: Billurtaş'ta öğle güneşini hiç görmemiş bir ressamın tablosu
   satıldı. Alıcı fiyatından, konuklar renginden emin; ressam ise hiçbir şeyden.
-author: [gaspar-merrow]
+author:
+  - gaspar-merrow.json
 section: Dedikodular
 district: Billurtaş
 cover: ../../assets/images/bir-ogle-vaktinin-bedeli.avif
-coverAlt: Sergide bir kadın tablodaki güneşi işaret ediyor. Tabloda, tarlanın kenarında uzanan bir adam elini gözlerine siper etmiş.
-coverCaption: Billurtaş’taki sergide konuklar “Öğle Vakti” tablosundaki güneşin rengini tartışıyor.
+coverAlt: Sergide bir kadın tablodaki güneşi işaret ediyor. Tabloda, tarlanın
+  kenarında uzanan bir adam elini gözlerine siper etmiş.
+coverCaption: Billurtaş’taki sergide konuklar “Öğle Vakti” tablosundaki güneşin
+  rengini tartışıyor.
 ---
-
 Sanatla aramdaki ilişkiyi baştan itiraf edeyim. Bir tablonun değerini anlamak için önce çerçevesinin fiyatını sorarım. Ardından tuvali, boyayı ve ressamın kaç gece mum yaktığını hesaplarım. Geriye kalan kısma sanat denir; benim eski mesleğimde buna kâr derdik.
 
 Geçen hafta Billurtaş'ta bir sergiye davet edildim. Bu mevsim Nizam Duvarı dibindeki atölyelerin bir kısmı panoların ardında kaldığından, koloninin gençleri eserlerini Billurtaş'ın salonlarına taşımış. Salon her zamanki gibiydi: elektrik ışıkları, ipek, parfüm ve sanat hakkında konuşmayı resme bakmaktan daha çok seven insanlar. Yalnız bir tablonun önünde alışılmadık bir kalabalık vardı.
